@@ -1,0 +1,92 @@
+{
+  "1-1": [
+    { "t": "h", "v": "The Accounting Equation" },
+    { "t": "p", "v": "Every business transaction can be expressed using one fundamental equation that keeps financial records in balance." },
+    { "t": "f", "l": "THE ACCOUNTING EQUATION", "v": "Assets = Liabilities + Equity" },
+    { "t": "p", "v": "Assets are resources owned by the business (cash, inventory, equipment). Liabilities are what the business owes to outsiders (loans, accounts payable). Equity is the owners' residual interest — what's left after liabilities are subtracted from assets." },
+    { "t": "h", "v": "Components of the Equation" },
+    { "t": "b", "v": [
+      "Assets: Cash, Accounts Receivable, Inventory, Equipment, Buildings, Prepaid Expenses",
+      "Liabilities: Accounts Payable, Notes Payable, Accrued Expenses, Unearned Revenue",
+      "Equity: Common Stock, Retained Earnings, Additional Paid-In Capital"
+    ]},
+    { "t": "h", "v": "The Equation Always Stays in Balance" },
+    { "t": "p", "v": "Every transaction affects at least two accounts, but the equation always remains equal. This is the foundation of double-entry bookkeeping." },
+    { "t": "tbl", "h": ["Transaction", "Assets", "Liabilities", "Equity"], "r": [
+      ["Owner invests $10,000 cash", "+$10,000 (Cash)", "No change", "+$10,000 (Common Stock)"],
+      ["Buy equipment for $3,000 cash", "+$3,000 (Equipment) / −$3,000 (Cash)", "No change", "No change"],
+      ["Borrow $5,000 from bank", "+$5,000 (Cash)", "+$5,000 (Note Payable)", "No change"],
+      ["Earn $2,000 revenue on account", "+$2,000 (A/R)", "No change", "+$2,000 (Revenue → Equity)"]
+    ]},
+    { "t": "tip", "v": "On the FMAA exam, when a question gives you any two elements of the accounting equation, you can always calculate the third. If Assets = $80,000 and Liabilities = $35,000, then Equity = $45,000." },
+    { "t": "h", "v": "Expanded Equity Section" },
+    { "t": "f", "l": "EXPANDED EQUITY", "v": "Equity = Common Stock + Retained Earnings + Revenues − Expenses − Dividends" },
+    { "t": "p", "v": "Revenues increase equity; expenses and dividends decrease it. This expanded view connects the income statement to the balance sheet." }
+  ],
+
+  "1-2": [
+    { "t": "h", "v": "Debits and Credits — The Language of Accounting" },
+    { "t": "p", "v": "Every accounting entry has two sides: a debit (left side) and a credit (right side). The total debits must always equal total credits. This is double-entry bookkeeping." },
+    { "t": "f", "l": "GOLDEN RULE OF DEBITS & CREDITS", "v": "Total Debits = Total Credits (in every journal entry)" },
+    { "t": "h", "v": "Normal Balances" },
+    { "t": "tbl", "h": ["Account Type", "Increases With", "Decreases With", "Normal Balance"], "r": [
+      ["Assets", "Debit", "Credit", "Debit"],
+      ["Liabilities", "Credit", "Debit", "Credit"],
+      ["Equity (Owner's Capital)", "Credit", "Debit", "Credit"],
+      ["Revenue", "Credit", "Debit", "Credit"],
+      ["Expenses", "Debit", "Credit", "Debit"],
+      ["Dividends / Drawings", "Debit", "Credit", "Debit"]
+    ]},
+    { "t": "tip", "v": "Memory trick: Assets, Expenses, and Dividends have Debit normal balances — remember AED (like the UAE currency). Everything else (Liabilities, Equity, Revenue) has a Credit normal balance." },
+    { "t": "h", "v": "Example: Recording a Transaction" },
+    { "t": "p", "v": "A company receives $5,000 cash from a customer for services rendered." },
+    { "t": "s", "v": [
+      "Identify what increased: Cash (Asset) increased → Debit Cash $5,000",
+      "Identify what else changed: Revenue increased → Credit Service Revenue $5,000",
+      "Check: Debits ($5,000) = Credits ($5,000) ✓"
+    ]},
+    { "t": "h", "v": "Common Debit Entries" },
+    { "t": "b", "v": [
+      "Buying an asset (cash, equipment, inventory)",
+      "Paying an expense (rent, salaries, utilities)",
+      "Recording a loss",
+      "Distributing dividends to owners"
+    ]},
+    { "t": "h", "v": "Common Credit Entries" },
+    { "t": "b", "v": [
+      "Earning revenue from customers",
+      "Borrowing money (creating a liability)",
+      "Receiving investment from owners",
+      "Reducing an asset (paying cash)"
+    ]}
+  ],
+
+  "1-3": [
+    { "t": "h", "v": "Journals and Ledgers" },
+    { "t": "p", "v": "The accounting cycle begins with recording transactions in a journal, then posting those entries to the general ledger accounts." },
+    { "t": "h", "v": "The General Journal" },
+    { "t": "p", "v": "The journal is the book of original entry. Every transaction is first recorded here in chronological order showing the date, accounts debited and credited, and amounts." },
+    { "t": "f", "l": "JOURNAL ENTRY FORMAT", "v": "Date | Account (Debit) | Dr. Amount\n      | Account (Credit) | | Cr. Amount\n      | Explanation" },
+    { "t": "h", "v": "Example Journal Entries" },
+    { "t": "tbl", "h": ["Date", "Account", "Debit", "Credit"], "r": [
+      ["Jan 1", "Cash", "$10,000", ""],
+      ["", "Common Stock", "", "$10,000"],
+      ["", "(Owner invested cash)", "", ""],
+      ["Jan 5", "Rent Expense", "$1,200", ""],
+      ["", "Cash", "", "$1,200"],
+      ["", "(Paid monthly rent)", "", ""]
+    ]},
+    { "t": "h", "v": "The General Ledger" },
+    { "t": "p", "v": "After journalizing, entries are posted to the general ledger — a collection of individual T-accounts for every account used by the business. The T-account has debits on the left and credits on the right." },
+    { "t": "f", "l": "T-ACCOUNT STRUCTURE", "v": "      Account Name\n   Debit  |  Credit\n   -------|-------\n   (Left) | (Right)" },
+    { "t": "h", "v": "Posting Process" },
+    { "t": "s", "v": [
+      "Record the transaction in the general journal",
+      "Identify each account affected",
+      "Post the debit amount to the left side of the debit account's T-account",
+      "Post the credit amount to the right side of the credit account's T-account",
+      "Calculate the running balance for each account"
+    ]},
+    { "t": "tip", "v": "The FMAA exam may ask you to prepare a partial journal entry or identify what's missing. Always check that debits equal credits and that the accounts make logical sense for the transaction described." }
+  ]
+}
