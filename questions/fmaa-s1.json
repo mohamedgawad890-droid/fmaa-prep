@@ -1,0 +1,150 @@
+{
+  "1-1": [
+    {
+      "q": "The accounting equation states that Assets equal:",
+      "o": ["Revenue minus Expenses", "Liabilities plus Equity", "Cash plus Inventory", "Debits minus Credits"],
+      "a": 1,
+      "e": "The fundamental accounting equation is Assets = Liabilities + Equity. This equation must always remain in balance after every transaction."
+    },
+    {
+      "q": "A company has total assets of $120,000 and total liabilities of $45,000. What is the owners' equity?",
+      "o": ["$75,000", "$165,000", "$45,000", "$120,000"],
+      "a": 0,
+      "e": "Equity = Assets − Liabilities = $120,000 − $45,000 = $75,000. Rearranging the accounting equation gives us this formula."
+    },
+    {
+      "q": "When a company purchases equipment for cash, what happens to the accounting equation?",
+      "o": [
+        "Total assets increase; liabilities increase",
+        "Total assets decrease; equity decreases",
+        "One asset increases and another decreases; total assets unchanged",
+        "Assets increase; equity increases"
+      ],
+      "a": 2,
+      "e": "Buying equipment for cash is an asset exchange: Equipment (asset) increases and Cash (asset) decreases by the same amount. Total assets and the accounting equation remain unchanged."
+    },
+    {
+      "q": "Which of the following increases owners' equity?",
+      "o": ["Paying a dividend", "Incurring an expense", "Earning revenue", "Borrowing money from a bank"],
+      "a": 2,
+      "e": "Revenues increase owners' equity because they represent earnings that flow into retained earnings. Dividends and expenses decrease equity; borrowing increases liabilities, not equity."
+    },
+    {
+      "q": "A business borrows $20,000 from a bank. How does this affect the accounting equation?",
+      "o": [
+        "Assets increase $20,000; equity increases $20,000",
+        "Assets increase $20,000; liabilities increase $20,000",
+        "Liabilities increase $20,000; equity decreases $20,000",
+        "Assets decrease $20,000; liabilities decrease $20,000"
+      ],
+      "a": 1,
+      "e": "Borrowing increases Cash (an asset) by $20,000 and creates a Notes Payable (a liability) of $20,000. The equation stays balanced: both sides increase equally."
+    }
+  ],
+
+  "1-2": [
+    {
+      "q": "Which accounts have a normal DEBIT balance?",
+      "o": [
+        "Assets and Revenues",
+        "Liabilities and Equity",
+        "Assets and Expenses",
+        "Revenues and Equity"
+      ],
+      "a": 2,
+      "e": "Assets and Expenses have normal debit balances — they increase with debits. The memory trick is AED: Assets, Expenses, Dividends are all debit-normal. Liabilities, Equity, and Revenue have credit normal balances."
+    },
+    {
+      "q": "A company pays $2,500 cash for rent. The correct journal entry is:",
+      "o": [
+        "Debit Cash $2,500; Credit Rent Expense $2,500",
+        "Debit Rent Expense $2,500; Credit Cash $2,500",
+        "Debit Accounts Payable $2,500; Credit Cash $2,500",
+        "Debit Rent Expense $2,500; Credit Accounts Payable $2,500"
+      ],
+      "a": 1,
+      "e": "Rent Expense increases (debit) and Cash decreases (credit). Expenses have debit normal balances, so we debit Rent Expense. Cash is an asset that decreases with a credit."
+    },
+    {
+      "q": "A company earns $8,000 of service revenue on account (to be collected later). Which entry is correct?",
+      "o": [
+        "Debit Cash $8,000; Credit Service Revenue $8,000",
+        "Debit Service Revenue $8,000; Credit Accounts Receivable $8,000",
+        "Debit Accounts Receivable $8,000; Credit Service Revenue $8,000",
+        "Debit Accounts Payable $8,000; Credit Service Revenue $8,000"
+      ],
+      "a": 2,
+      "e": "Revenue earned on account creates an Accounts Receivable (asset, debit) and recognizes Service Revenue (credit). Cash is NOT debited because it hasn't been received yet."
+    },
+    {
+      "q": "When a liability is paid off with cash, the journal entry is:",
+      "o": [
+        "Debit Cash; Credit Liability",
+        "Debit Liability; Credit Cash",
+        "Debit Expense; Credit Cash",
+        "Debit Liability; Credit Revenue"
+      ],
+      "a": 1,
+      "e": "Paying off a liability reduces it (debit the liability) and reduces cash (credit cash). Liabilities decrease with debits; assets decrease with credits."
+    },
+    {
+      "q": "Which of the following is NOT a correct statement about debits and credits?",
+      "o": [
+        "Debits increase asset accounts",
+        "Credits increase liability accounts",
+        "Debits increase revenue accounts",
+        "Credits increase equity accounts"
+      ],
+      "a": 2,
+      "e": "Revenue accounts have CREDIT normal balances — they increase with credits, not debits. Debiting a revenue account would actually decrease it. The other three statements are all correct."
+    }
+  ],
+
+  "1-3": [
+    {
+      "q": "The book of original entry where transactions are first recorded is called the:",
+      "o": ["General Ledger", "Trial Balance", "General Journal", "Balance Sheet"],
+      "a": 2,
+      "e": "The General Journal is the book of original entry — every transaction is first recorded here chronologically before being posted to the general ledger."
+    },
+    {
+      "q": "After a journal entry is recorded, the next step in the accounting cycle is to:",
+      "o": [
+        "Prepare the trial balance",
+        "Post the entries to the general ledger",
+        "Prepare adjusting entries",
+        "Close the temporary accounts"
+      ],
+      "a": 1,
+      "e": "The accounting cycle goes: Journal → Post to Ledger → Trial Balance → Adjusting Entries → Adjusted Trial Balance → Financial Statements → Closing Entries. Posting to the ledger comes immediately after journalizing."
+    },
+    {
+      "q": "A T-account has its debits on the:",
+      "o": ["Right side", "Left side", "Top", "Bottom"],
+      "a": 1,
+      "e": "In a T-account, debits are always on the LEFT side and credits on the RIGHT side. The account name appears at the top."
+    },
+    {
+      "q": "A company posts a $5,000 debit to Salaries Expense. This means salaries expense has:",
+      "o": [
+        "Decreased by $5,000",
+        "Increased by $5,000",
+        "Been paid in cash",
+        "Been accrued but not paid"
+      ],
+      "a": 1,
+      "e": "Salaries Expense is an expense account with a normal debit balance. Debiting it increases the expense. Whether it's been paid or accrued depends on whether Cash or Salaries Payable was credited."
+    },
+    {
+      "q": "The purpose of posting journal entries to the general ledger is to:",
+      "o": [
+        "Ensure debits equal credits",
+        "Accumulate transaction data by account",
+        "Prepare financial statements directly",
+        "Record transactions in chronological order"
+      ],
+      "a": 1,
+      "e": "The ledger organizes all transactions by account, making it possible to see the running balance of each account (e.g., total cash, total accounts receivable). The journal records transactions chronologically; the ledger organizes them by account."
+    }
+  ]
+}
