@@ -1,7 +1,7 @@
 // FMAA Prep — Service Worker
 // Caches the app shell for offline use and handles auto-updates.
 
-const CACHE_NAME = 'fmaa-prep-v1';
+const CACHE_NAME = 'fmaa-prep-v2';
 
 // Files to cache on install (app shell)
 const PRECACHE_URLS = [
