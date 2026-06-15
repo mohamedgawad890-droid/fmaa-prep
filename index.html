@@ -934,10 +934,10 @@ function render(){
 }
 
 // ─── IMMEDIATE RENDER (prevents blank white screen) ──────────────────────────
-// Call render() right away so the loading spinner shows instantly.
+// Paint the loading screen directly via DOM — no Firebase dependency.
 // auth.onAuthStateChanged will call render() again once Firebase responds.
 document.addEventListener('DOMContentLoaded', function() {
-  // Paint loading screen immediately — no Firebase needed
+  // Show loading immediately without needing firebase to be ready
   const content = document.getElementById('content-area');
   const nav = document.getElementById('bottom-nav');
   const mb = document.getElementById('mobile-brand');
@@ -949,13 +949,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   if (nav) nav.style.display = 'none';
   if (mb) mb.style.display = 'none';
-  // Only call render() once firebase is confirmed available
+  // Only call full render() if firebase is already available (defer may delay it)
   if (typeof firebase !== 'undefined') {
     try { render(); } catch(e) { console.warn('Initial render failed:', e); }
   }
 });
 
-// Fallback: if auth never fires within 8 seconds, show login screen
+// Fallback: if auth never fires within 4 seconds, show login screen
 setTimeout(function() {
   if (STATE.tab === 'loading') {
     STATE.tab = localStorage.getItem('fmaa-visited') ? 'login' : 'onboarding';
