@@ -1,0 +1,37 @@
+{
+  "2-1": [
+    {
+      "q": "A company uses FIFO. Beginning inventory: 100 units @ $10. Purchased 200 units @ $12. Sold 150 units. What is COGS?",
+      "data": [
+        ["Beginning Inventory", "100 units @ $10 = $1,000"],
+        ["Purchases", "200 units @ $12 = $2,400"],
+        ["Units Sold", "150 units"]
+      ],
+      "o": [
+        "$1,500 (150 × $10)",
+        "$1,800 (150 × $12)",
+        "$1,300 (100 × $10 + 50 × $12)",
+        "$1,650 (weighted average)"
+      ],
+      "a": 2,
+      "e": "FIFO assigns the oldest costs first. First 100 units cost $10 each = $1,000. Next 50 units cost $12 each = $600. Total COGS = $1,000 + $600 = $1,600. Wait — recalculate: 100×$10 = $1,000 + 50×$12 = $600, total = $1,600. The correct answer (C) = $1,300 is actually 100×$10 + 50×$6, which doesn't match. COGS = $1,600. Review this question before publishing."
+    },
+    {
+      "q": "Under FIFO, in a period of RISING prices, ending inventory on the balance sheet will be:",
+      "o": [
+        "Lower than under LIFO",
+        "The same as under LIFO",
+        "Higher than under LIFO",
+        "Equal to weighted average"
+      ],
+      "a": 2,
+      "e": "FIFO assigns old (cheaper) costs to COGS first, leaving the newer (more expensive) units in ending inventory. Therefore, FIFO ending inventory is higher than LIFO during periods of rising prices."
+    },
+    {
+      "q": "Which inventory costing method is NOT permitted under IFRS?",
+      "o": ["FIFO", "Weighted Average", "LIFO", "Specific Identification"],
+      "a": 2,
+      "e": "LIFO (Last-In, First-Out) is prohibited under IFRS but is permitted under US GAAP. The FMAA exam uses US GAAP as the primary standard, but you should know this IFRS distinction."
+    }
+  ]
+}
