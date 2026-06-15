@@ -933,6 +933,21 @@ function render(){
   else stopQTimer();
 }
 
+// ─── IMMEDIATE RENDER (prevents blank white screen) ──────────────────────────
+// Call render() right away so the loading spinner shows instantly.
+// auth.onAuthStateChanged will call render() again once Firebase responds.
+document.addEventListener('DOMContentLoaded', function() {
+  try { render(); } catch(e) { console.warn('Initial render failed:', e); }
+});
+
+// Fallback: if auth never fires within 8 seconds, show login screen
+setTimeout(function() {
+  if (STATE.tab === 'loading') {
+    STATE.tab = localStorage.getItem('fmaa-visited') ? 'login' : 'onboarding';
+    try { render(); } catch(e) {}
+  }
+}, 8000);
+
 // ─── AUTH STATE LISTENER ──────────────────────────────────────────────────────
 auth.onAuthStateChanged(async(user)=>{
   if(user){
