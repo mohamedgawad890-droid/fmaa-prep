@@ -613,7 +613,7 @@ async function syncLeaderboard(){
 }
 
 // ─── UPLOAD & SHEET ──────────────────────────────────────────────────────────
-async function sendToSheet(data){try{await fetch('https://script.google.com/macros/s/AKfycbwwfDLTcBC70-zpLM0bySnOZN7XzReVVLXbE-_nJr_jFmIoRNRnBa2hw1P93iCI_tMscg/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch(e){console.log('Sheet sync error:',e);}}
+async function sendToSheet(data){try{await fetch('https://script.google.com/macros/s/AKfycbyE1RuXoTaxpo9n2L1OK8EvvA2_iX7OwkKqRkqxjHuSExYedn2lqthrSlAK0X7rTtxj/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch(e){console.log('Sheet sync error:',e);}}
 async function uploadToCloudinary(base64data){try{const res=await fetch(base64data);const blob=await res.blob();const fd=new FormData();fd.append('file',blob);fd.append('upload_preset',CLD_PRESET);const r=await fetch(`https://api.cloudinary.com/v1_1/${CLD_CLOUD}/image/upload`,{method:'POST',body:fd});const d=await r.json();return d.secure_url||null;}catch(e){console.log('Cloudinary error:',e);return null;}}
 
 // ─── RENDER SCREENS ───────────────────────────────────────────────────────────
