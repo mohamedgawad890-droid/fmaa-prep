@@ -615,12 +615,14 @@ async function syncLeaderboard(){
 // ─── UPLOAD & SHEET ──────────────────────────────────────────────────────────
 async function sendToSheet(data){
   try{
-    // no-cors mode only allows simple headers — Content-Type:application/json is blocked
-    // Sending raw JSON as text/plain body works fine; Apps Script reads e.postData.contents
+    // FormData with multipart/form-data IS allowed in no-cors mode
+    // Apps Script reads the payload via e.parameter.payload
+    const fd=new FormData();
+    fd.append('payload',JSON.stringify(data));
     await fetch('https://script.google.com/macros/s/AKfycbyE1RuXoTaxpo9n2L1OK8EvvA2_iX7OwkKqRkqxjHuSExYedn2lqthrSlAK0X7rTtxj/exec',{
       method:'POST',
       mode:'no-cors',
-      body:JSON.stringify(data)
+      body:fd
     });
   }catch(e){console.log('Sheet sync error:',e);}
 }
