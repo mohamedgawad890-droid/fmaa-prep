@@ -1,0 +1,21 @@
+{
+  "2-1": [
+    { "t": "h", "v": "Inventory Cost Flow Methods" },
+    { "t": "p", "v": "When a company buys identical inventory items at different prices, it must choose a cost flow assumption to determine which costs go to COGS and which remain in ending inventory." },
+    { "t": "h", "v": "The Three Methods" },
+    { "t": "b", "v": [
+      "FIFO (First-In, First-Out): The oldest costs are assigned to COGS first. Ending inventory reflects the most recent (highest) costs.",
+      "LIFO (Last-In, First-Out): The newest costs are assigned to COGS first. Ending inventory reflects the oldest (lowest) costs. Note: Not permitted under IFRS.",
+      "Weighted Average: One average cost is calculated for all units available for sale. This average is applied to both COGS and ending inventory."
+    ]},
+    { "t": "f", "l": "COST OF GOODS AVAILABLE FOR SALE", "v": "Beginning Inventory + Purchases = Cost of Goods Available for Sale" },
+    { "t": "f", "l": "COGS FORMULA", "v": "Cost of Goods Available for Sale − Ending Inventory = COGS" },
+    { "t": "h", "v": "FIFO vs LIFO vs Weighted Average — Impact" },
+    { "t": "tbl", "h": ["Method", "COGS (Rising Prices)", "Ending Inventory (Rising Prices)", "Net Income"], "r": [
+      ["FIFO", "Lowest", "Highest (recent costs)", "Highest"],
+      ["LIFO", "Highest", "Lowest (old costs)", "Lowest"],
+      ["Weighted Avg", "Middle", "Middle", "Middle"]
+    ]},
+    { "t": "tip", "v": "In a period of rising prices (inflation), FIFO produces higher net income and higher ending inventory on the balance sheet. LIFO produces lower taxable income (tax advantage) but is NOT allowed under IFRS — only US GAAP permits LIFO." }
+  ]
+}
