@@ -117,9 +117,9 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .quiz-opt-text{font-size:14px;color:#333;line-height:1.5;flex:1;padding-top:4px}
 @media(min-width:900px){#app{display:flex;flex-direction:row}.bottom-nav{order:-1}.content{flex:1}}
 </style>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js" defer></script>
 </head>
 <body>
 <div id="app">
@@ -937,7 +937,22 @@ function render(){
 // Call render() right away so the loading spinner shows instantly.
 // auth.onAuthStateChanged will call render() again once Firebase responds.
 document.addEventListener('DOMContentLoaded', function() {
-  try { render(); } catch(e) { console.warn('Initial render failed:', e); }
+  // Paint loading screen immediately — no Firebase needed
+  const content = document.getElementById('content-area');
+  const nav = document.getElementById('bottom-nav');
+  const mb = document.getElementById('mobile-brand');
+  if (content) {
+    content.innerHTML = '<div style="flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px"><div style="font-size:40px">📊</div><div style="font-size:16px;font-weight:500;color:#1A5276">FMAA Prep</div><div style="font-size:13px;color:#aaa">Loading...</div></div>';
+    content.style.display = 'flex';
+    content.style.flexDirection = 'column';
+    content.style.overflow = 'auto';
+  }
+  if (nav) nav.style.display = 'none';
+  if (mb) mb.style.display = 'none';
+  // Only call render() once firebase is confirmed available
+  if (typeof firebase !== 'undefined') {
+    try { render(); } catch(e) { console.warn('Initial render failed:', e); }
+  }
 });
 
 // Fallback: if auth never fires within 8 seconds, show login screen
@@ -946,7 +961,7 @@ setTimeout(function() {
     STATE.tab = localStorage.getItem('fmaa-visited') ? 'login' : 'onboarding';
     try { render(); } catch(e) {}
   }
-}, 8000);
+}, 4000);
 
 // ─── AUTH STATE LISTENER ──────────────────────────────────────────────────────
 auth.onAuthStateChanged(async(user)=>{
