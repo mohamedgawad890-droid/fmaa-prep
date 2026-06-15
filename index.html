@@ -64,12 +64,12 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .ar-tip{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap;z-index:100;pointer-events:none}
 .ar-tip.show{display:block}
 .bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px}
-@media(min-width:900px){.bottom-nav{flex-direction:column;width:160px;padding:12px 8px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto}.desktop-brand{padding:8px 8px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:4px;display:flex;flex-direction:column;gap:8px}}
+@media(min-width:900px){.bottom-nav{flex-direction:column;width:200px;padding:12px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto}.desktop-brand{padding:8px 8px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:4px;display:flex;flex-direction:column;gap:8px}}
 .nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 2px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
 .nav-btn.active{color:#1A5276;background:#D6EAF8}
 .nav-btn span:last-child{font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .nav-icon{font-size:18px;line-height:1}
-@media(min-width:900px){.nav-btn{flex:none;flex-direction:row;justify-content:flex-start;gap:10px;padding:10px 12px}.nav-btn span:last-child{font-size:13px}}
+@media(min-width:900px){.nav-btn{flex:none;flex-direction:row;justify-content:flex-start;gap:10px;padding:11px 14px}.nav-btn span:last-child{font-size:14px}}
 .sub-nav{display:flex;gap:6px;padding:8px 16px;border-bottom:.5px solid #e0e0d8;overflow-x:auto;flex-shrink:0;scrollbar-width:none}
 .sub-nav::-webkit-scrollbar{display:none}
 .sub-nav-btn{flex-shrink:0;padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;border:.5px solid #d0d0d0;background:#f5f5f0;color:#555;white-space:nowrap;font-weight:400}
@@ -116,6 +116,25 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .quiz-opt-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;border:.5px solid #bbb;background:#fff}
 .quiz-opt-text{font-size:14px;color:#333;line-height:1.5;flex:1;padding-top:4px}
 @media(min-width:900px){#app{display:flex;flex-direction:row}.bottom-nav{order:-1}.content{flex:1}}
+.profile-hero{background:linear-gradient(160deg,#1A5276,#2980B9);padding:28px 20px 22px;text-align:center;flex-shrink:0}
+.profile-img{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.8);margin:0 auto 14px;display:block}
+.profile-name{font-size:20px;font-weight:600;color:#fff;margin-bottom:4px}
+.profile-subtitle{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:12px}
+.profile-creds{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:14px}
+.cred-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:4px 12px;font-size:12px;color:#fff;font-weight:500}
+.welcome-box{background:#EBF5FB;border-left:3px solid #1A5276;border-radius:10px;padding:12px 16px;margin-bottom:10px;font-size:14px;color:#333;line-height:1.6}
+.action-step{display:flex;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:.5px solid #f0f0eb}
+.action-step:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.action-num{width:28px;height:28px;border-radius:50%;background:#1A5276;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;margin-top:2px}
+.action-content h4{font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:4px}
+.action-content p{font-size:12px;color:#666;line-height:1.55}
+.window-card{display:flex;align-items:center;gap:12px;background:#D6EAF8;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.part-card{border:.5px solid #e0e0d8;border-radius:12px;overflow:hidden;margin-bottom:10px}
+.part-header{padding:12px 14px;display:flex;align-items:center;justify-content:space-between}
+.part-topics{padding:10px 14px}
+.part-topic{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:.5px solid rgba(0,0,0,.06);font-size:13px}
+.part-topic:last-child{border-bottom:none}
+.info-p{font-size:14px;color:#555;line-height:1.65}
 </style>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
@@ -131,11 +150,11 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
   <div class="install-banner" id="install-banner">
     <div class="install-banner-icon">📲</div>
     <div class="install-banner-info">
-      <div class="install-banner-title">ثبّت تطبيق FMAA Prep على موبايلك</div>
+      <div class="install-banner-title">قم بتحميل البرنامج علي موبايلك او اللاب توب</div>
       <div class="install-banner-sub">يشتغل بدون نت · أسرع · زي أي تطبيق عادي</div>
     </div>
     <div class="install-banner-actions">
-      <button class="install-banner-btn" onclick="installApp()">تثبيت</button>
+      <button class="install-banner-btn" onclick="installApp()">تحميل</button>
       <button class="install-banner-dismiss" onclick="dismissInstallBanner()" title="إغلاق">×</button>
     </div>
   </div>
@@ -603,16 +622,277 @@ function renderLoading(){return`<div style="flex:1;display:flex;align-items:cent
 
 function renderOnboarding(){localStorage.setItem('fmaa-visited','1');return`<div style="flex:1;display:flex;flex-direction:column;padding:32px 24px;background:linear-gradient(160deg,#1A5276,#2980B9)"><div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px"><div style="font-size:64px">📊</div><h1 style="font-size:24px;font-weight:700;color:#fff">FMAA Prep</h1><p style="font-size:15px;color:rgba(255,255,255,.85);line-height:1.6;max-width:300px">Financial &amp; Managerial Accounting Associate — Exam Preparation</p><div style="background:rgba(255,255,255,.15);border-radius:12px;padding:14px 20px;text-align:left;width:100%;max-width:320px"><div style="font-size:12px;font-weight:600;color:rgba(255,255,255,.7);letter-spacing:.5px;margin-bottom:10px">EXAM OVERVIEW</div>${[['📊','Section A — General Accounting','60% of exam · 18 lessons'],['📋','Section B — Financial Statements','40% of exam · 17 lessons']].map(([icon,title,sub])=>`<div style="display:flex;gap:10px;margin-bottom:8px;align-items:flex-start"><span style="font-size:18px">${icon}</span><div><div style="font-size:13px;font-weight:500;color:#fff">${title}</div><div style="font-size:11px;color:rgba(255,255,255,.65)">${sub}</div></div></div>`).join('')}</div></div><button onclick="STATE.tab='login';render()" style="width:100%;padding:15px;border-radius:12px;border:none;background:#fff;color:#1A5276;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:12px">Get Started →</button><button onclick="STATE.tab='login';render()" style="width:100%;padding:13px;border-radius:12px;border:.5px solid rgba(255,255,255,.3);background:transparent;color:rgba(255,255,255,.85);font-size:14px;cursor:pointer;font-family:inherit">Already have an account? Log in</button></div>`;}
 
-function renderLogin(){const isLogin=STATE.authScreen==='login';return`<div style="flex:1;display:flex;flex-direction:column;padding:32px 24px;align-items:center;justify-content:center"><div style="font-size:40px;margin-bottom:12px">📊</div><h1 style="font-size:22px;font-weight:600;color:#1A5276;margin-bottom:4px">FMAA Prep</h1><p style="font-size:13px;color:#888;margin-bottom:28px">${isLogin?'Welcome back! Log in to continue.':'Create your account to get started.'}</p>${STATE.authError?`<div style="background:#FCEBEB;border:1px solid #E24B4A;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#791F1F;width:100%;max-width:360px">${esc(STATE.authError)}</div>`:''}<div style="width:100%;max-width:360px"><div style="margin-bottom:10px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Email</label><input id="auth-email" type="email" placeholder="your@email.com" style="width:100%;padding:12px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a" autocomplete="email"></div><div style="margin-bottom:20px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Password</label><input id="auth-pw" type="password" placeholder="••••••••" style="width:100%;padding:12px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a" autocomplete="${isLogin?'current-password':'new-password'}" onkeydown="if(event.key==='Enter')${isLogin?'login()':'signup()'}"></div><button onclick="${isLogin?'login()':'signup()'}" ${STATE.authLoading?'disabled':''} style="width:100%;padding:14px;border-radius:10px;border:none;background:${STATE.authLoading?'#888':'#1A5276'};color:#fff;font-size:15px;font-weight:600;cursor:${STATE.authLoading?'default':'pointer'};font-family:inherit;margin-bottom:12px">${STATE.authLoading?'⏳ Please wait...':isLogin?'Log In':'Create Account'}</button><button onclick="STATE.authScreen='${isLogin?'signup':'login'}';STATE.authError='';render()" style="width:100%;padding:12px;border-radius:10px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:14px;cursor:pointer;font-family:inherit">${isLogin?'Don\'t have an account? Sign Up':'Already have an account? Log In'}</button></div></div>`;}
+function renderLogin(){const isLogin=STATE.authScreen==='login';return`<div style="flex:1;display:flex;flex-direction:column;padding:32px 24px;align-items:center;justify-content:center"><img src="./gawad-avatar.webp" alt="Gawad" style="width:78px;height:78px;border-radius:50%;object-fit:cover;border:3px solid #D6EAF8;margin-bottom:14px;box-shadow:0 4px 20px rgba(26,82,118,.2)"><h1 style="font-size:21px;font-weight:700;color:#1A5276;margin-bottom:4px">FMAA Prep By Gawad</h1><div style="font-size:11px;color:#aaa;letter-spacing:.6px;text-transform:uppercase;margin-bottom:12px">Financial &amp; Managerial Accounting</div>${isLogin?'<p style="font-size:17px;font-weight:500;color:#333;margin-bottom:3px">Welcome 👋</p><p style="font-size:13px;color:#888;margin-bottom:26px">Log in to continue</p>':'<p style="font-size:13px;color:#888;margin-bottom:28px">Create your account to get started.</p>'}${STATE.authError?`<div style="background:#FCEBEB;border:1px solid #E24B4A;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#791F1F;width:100%;max-width:360px">${esc(STATE.authError)}</div>`:''}<div style="width:100%;max-width:360px"><div style="margin-bottom:10px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Email</label><input id="auth-email" type="email" placeholder="your@email.com" style="width:100%;padding:12px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a" autocomplete="email"></div><div style="margin-bottom:20px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Password</label><input id="auth-pw" type="password" placeholder="••••••••" style="width:100%;padding:12px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a" autocomplete="${isLogin?'current-password':'new-password'}" onkeydown="if(event.key==='Enter')${isLogin?'login()':'signup()'}"></div><button onclick="${isLogin?'login()':'signup()'}" ${STATE.authLoading?'disabled':''} style="width:100%;padding:14px;border-radius:10px;border:none;background:${STATE.authLoading?'#888':'#1A5276'};color:#fff;font-size:15px;font-weight:600;cursor:${STATE.authLoading?'default':'pointer'};font-family:inherit;margin-bottom:12px">${STATE.authLoading?'⏳ Please wait...':isLogin?'Log In':'Create Account'}</button><button onclick="STATE.authScreen='${isLogin?'signup':'login'}';STATE.authError='';render()" style="width:100%;padding:12px;border-radius:10px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:14px;cursor:pointer;font-family:inherit">${isLogin?'Don\'t have an account? Sign Up':'Already have an account? Log In'}</button></div></div>`;}
 
-function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAcc();const streak=getStudyStreak();return`<div class="sh"><h2>About FMAA</h2><p>Institute of Certified Management Accountants</p></div><div class="scroll-area pad" style="padding-top:14px">${st&&st.name?`<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px;display:flex;align-items:center;gap:12px"><div style="width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(255,255,255,.4)">${safePhotoURL(st.photo)?`<img src="${safePhotoURL(st.photo)}" style="width:100%;height:100%;object-fit:cover">`:`<div style="width:100%;height:100%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff">${st.name.charAt(0).toUpperCase()}</div>`}</div><div style="min-width:0"><div style="font-size:16px;font-weight:500;color:#fff">${esc(st.name)}</div><div style="font-size:12px;color:rgba(255,255,255,.75);margin-top:2px">${pct}% complete · ${acc}% accuracy · ${streak}🔥</div></div></div>`:''}<div class="info-section"><div class="info-title">🎓 WHAT IS THE FMAA?</div><div class="card"><div style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px">The <strong>Financial &amp; Managerial Accounting Associate (FMAA)</strong> is a foundational certification by the ICMA validating core accounting and financial reporting skills.</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">${[['🏛️','Issuer','ICMA'],['📝','Format','MCQ Exam'],['⏱️','Duration','2 Hours'],['✅','Passing','70% or higher'],['📚','Study','60–80 hours'],['🌍','Mode','Online']].map(([icon,lbl,val])=>`<div style="background:#f5f5f0;border-radius:8px;padding:10px"><div style="font-size:10px;color:#888;margin-bottom:3px">${lbl}</div><div style="font-size:12px;font-weight:500">${icon} ${val}</div></div>`).join('')}</div></div></div><div class="info-section"><div class="info-title">📊 EXAM SECTIONS</div>${S.map(sec=>`<div class="card" style="border-color:${sec.text}30;margin-bottom:10px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:36px;height:36px;border-radius:10px;background:${sec.bg};display:flex;align-items:center;justify-content:center;font-size:18px">${sec.emoji}</div><div><div style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:12px;color:${sec.text};font-weight:500;margin-top:1px">${sec.weight}% of exam · ${sec.lessons.length} lessons</div></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;overflow:hidden"><div style="height:100%;width:${Math.round(sec.lessons.filter(l=>lessonDone(l.id)).length/sec.lessons.length*100)}%;background:${sec.bar};border-radius:2px"></div></div></div>`).join('')}</div><button class="btn" onclick="navTo('study')" style="background:#1A5276;font-size:15px">Start Studying Now →</button><button onclick="logout()" style="width:100%;margin-top:10px;padding:12px;border-radius:10px;border:.5px solid #e0e0d8;background:transparent;color:#aaa;font-size:13px;cursor:pointer;font-family:inherit">Logout</button><div style="height:24px"></div></div>`;}
+function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAcc();const streak=getStudyStreak();
+  return`${renderSubNav(SUB_ME,'intro')}<div class="scroll-area">
+    <div class="profile-hero">
+      <img src="./gawad-avatar.webp" class="profile-img" alt="Mohamed Abdelgawad">
+      <div class="profile-name">Mohamed Abdelgawad</div>
+      <div class="profile-subtitle">CFO | Finance Educator | FMAA Instructor</div>
+      <div class="profile-creds">
+        <span class="cred-badge">CMA</span>
+        <span class="cred-badge">DBA</span>
+        <span class="cred-badge">MBA</span>
+        <span class="cred-badge">TOT</span>
+        <span class="cred-badge">20 Years Experience</span>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:4px">
+        <a href="tel:+201019641390" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">📞</span><span style="font-size:11px;font-weight:500">Call</span></a>
+        <a href="https://wa.me/201019641390" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">💬</span><span style="font-size:11px;font-weight:500">WhatsApp</span></a>
+        <a href="mailto:Mohamed.Gawad890@gmail.com" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">✉️</span><span style="font-size:11px;font-weight:500">Email</span></a>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap">
+        <a href="https://www.facebook.com/profile.php?id=61550958763803" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">📘</span><span style="font-size:11px;font-weight:500">Facebook</span></a>
+        <a href="https://www.facebook.com/share/1BSdcgufdL/?mibextid=wwXIfr" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">👥</span><span style="font-size:11px;font-weight:500">FB Group</span></a>
+        <a href="https://www.linkedin.com/in/mohamed-abdelgawad890" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">💼</span><span style="font-size:11px;font-weight:500">LinkedIn</span></a>
+        <a href="https://www.instagram.com/mohamed_abdelgawad_cma/" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">📸</span><span style="font-size:11px;font-weight:500">Instagram</span></a>
+        <a href="https://www.tiktok.com/@mohamed.abdelgawa" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">🎵</span><span style="font-size:11px;font-weight:500">TikTok</span></a>
+        <a href="https://www.youtube.com/@mohamedabdelgawad5691" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;text-decoration:none;color:#fff;min-width:80px"><span style="font-size:22px">▶️</span><span style="font-size:11px;font-weight:500">YouTube</span></a>
+      </div>
+    </div>
+    <div class="pad" style="padding-top:16px">
 
-function renderRegister(){const st=loadStudent();const COUNTRIES=['Egypt','Saudi Arabia','UAE','Kuwait','Qatar','Bahrain','Oman','Jordan','Lebanon','Iraq','Libya','Tunisia','Algeria','Morocco','Sudan','Other'];const LEVELS=['Complete Beginner','Some Accounting Background','Finance Professional','CPA/ACCA Holder','Other'];const GOALS=['Pass FMAA Exam','Career Change into Accounting','Improve Accounting Knowledge','Promotion/Salary Increase','Personal Development'];const isComplete=!!(st&&st.name&&st.mobile);const fval=(k)=>st?esc(st[k]||''):'';const fsel=(k,v)=>st&&st[k]===v?'selected':'';return`${renderSubNav([{id:'intro',icon:'🏠',label:'Home'},{id:'register',icon:'🎓',label:'Profile'}],'register')}<div class="sh"><h2>My Profile</h2><p>${isComplete?'Profile complete — tap any field to update':'Complete your profile to get started'}</p></div><div class="scroll-area pad" style="padding-top:14px">${!isComplete?`<div class="profile-nudge"><span style="font-size:22px;flex-shrink:0">👋</span><div class="profile-nudge-text"><strong>Complete your profile</strong> to unlock all features.</div></div>`:''}<div class="info-title" style="font-size:14px;margin-bottom:10px">👤 Personal Info <span style="font-size:11px;color:#A32D2D;font-weight:400">· name &amp; mobile required</span></div><div class="card" style="margin-bottom:14px"><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Profile Photo</label><div style="display:flex;align-items:center;gap:14px"><div id="photo-preview" onclick="document.getElementById('f-photo').click()" style="width:70px;height:70px;border-radius:50%;border:2px dashed #d0d0d0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;overflow:hidden;background:#f5f5f0">${st&&safePhotoURL(st.photo)?`<img src="${safePhotoURL(st.photo)}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:`<span style="font-size:22px">📷</span>`}</div><button onclick="document.getElementById('f-photo').click()" style="padding:7px 14px;border-radius:8px;border:.5px solid #1A5276;background:#D6EAF8;color:#154360;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Choose Photo</button></div><input type="file" id="f-photo" accept="image/*" style="display:none" onchange="handlePhoto(this)"></div><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Full Name *</label><input id="f-name" type="text" value="${fval('name')}" placeholder="Your full name" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px"><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Mobile *</label><input id="f-mobile" type="tel" value="${fval('mobile')}" placeholder="+20..." style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Country</label><select id="f-country" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"><option value="">Select...</option>${COUNTRIES.map(c=>`<option value="${c}" ${fsel('country',c)}>${c}</option>`).join('')}</select></div></div><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Email</label><input id="f-email" type="email" value="${(st&&st.email)?esc(st.email):(STATE.user&&STATE.user.email?esc(STATE.user.email):'')}" placeholder="your@email.com" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div></div><div class="info-title" style="font-size:14px;margin-bottom:10px">📊 Study Profile <span style="font-size:11px;color:#888;font-weight:400">· optional</span></div><div class="card" style="margin-bottom:14px"><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Accounting level</label><select id="f-level" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"><option value="">Select...</option>${LEVELS.map(l=>`<option value="${l}" ${fsel('level',l)}>${l}</option>`).join('')}</select></div><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Goal</label><select id="f-goal" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"><option value="">Select...</option>${GOALS.map(g=>`<option value="${g}" ${fsel('goal',g)}>${g}</option>`).join('')}</select></div><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Target exam date</label><input id="f-examdate" type="month" value="${fval('examdate')}" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div></div><button onclick="submitProfile()" class="btn" style="background:#1A5276;color:#fff;font-size:15px;margin-bottom:8px">${isComplete?'Update My Profile ✓':'Complete Profile →'}</button><div style="height:20px"></div></div>`;}
+      <!-- WELCOME -->
+      <div class="info-section">
+        <div class="welcome-box">Welcome to FMAA Prep! 🎓 Great to meet you! I'm your FMAA instructor. I've helped students from complete beginners to finance professionals master accounting fundamentals — and I know exactly what it takes to pass this exam. Let's get you certified together!</div>
+        ${(()=>{if(!st||!st.examdate)return'';const d=new Date(st.examdate+'-01');const today=new Date();const diff=Math.ceil((d-today)/(1000*60*60*24));if(diff<=0)return'';return`<div style="display:flex;gap:8px;margin-bottom:10px"><div style="flex:1;background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px"><span style="font-size:24px">📅</span><div><div style="font-size:11px;color:rgba(255,255,255,.75)">Exam countdown</div><div style="font-size:18px;font-weight:500;color:#fff">${diff} days</div></div></div><div style="flex:1;background:linear-gradient(135deg,#1E6B3B,#27AE60);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px"><span style="font-size:24px">🔥</span><div><div style="font-size:11px;color:rgba(255,255,255,.75)">Study streak</div><div style="font-size:18px;font-weight:500;color:#fff">${streak} day${streak===1?'':'s'}</div></div></div></div>`;})()}
+        <div style="background:#f5f5f0;border-radius:10px;padding:14px 16px;font-size:13px;color:#555;line-height:1.6"><strong style="color:#1a1a1a">About me:</strong> I'm currently CFO, with 20 years of experience in Accounting, Inventory Management, Cost Accounting, Financial Planning &amp; Controlling, Forecasting &amp; Budgeting, and Data Analysis.</div>
+      </div>
+
+      <!-- WHAT IS IMA -->
+      <div class="info-section">
+        <div class="info-title">🏛️ What is IMA?</div>
+        <div class="card" style="margin-bottom:0">
+          <p class="lp">The <strong>Institute of Management Accountants (IMA)</strong> is one of the largest and most respected associations for finance and accounting professionals worldwide.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <tr><td style="font-weight:500;color:#1a1a1a;width:40%">Founded</td><td>1919</td></tr>
+            <tr><td style="font-weight:500;color:#1a1a1a">Members</td><td>140,000+ in 150+ countries</td></tr>
+            <tr><td style="font-weight:500;color:#1a1a1a">Headquarters</td><td>Montvale, New Jersey, USA</td></tr>
+            <tr><td style="font-weight:500;color:#1a1a1a">Mission</td><td>Advance the profession of management accounting globally</td></tr>
+            <tr><td style="font-weight:500;color:#1a1a1a">Website</td><td>imanet.org</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- WHAT IS FMAA -->
+      <div class="info-section">
+        <div class="info-title">🎯 What is the FMAA?</div>
+        <div class="card" style="margin-bottom:10px">
+          <p class="lp">The <strong>Financial &amp; Managerial Accounting Associate (FMAA)</strong> is IMA's entry-level certification validating core accounting and financial reporting skills — the ideal starting point for anyone building a finance career.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+            <div style="background:#D6EAF8;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#1A5276;margin-bottom:4px">Recognition</div><div style="font-size:13px;font-weight:500;color:#154360">Global</div></div>
+            <div style="background:#D5F5E3;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#1E8449;margin-bottom:4px">Issued by</div><div style="font-size:13px;font-weight:500;color:#186A3B">IMA</div></div>
+            <div style="background:#FAEEDA;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#854F0B;margin-bottom:4px">Exam Parts</div><div style="font-size:13px;font-weight:500;color:#633806">1 Exam</div></div>
+            <div style="background:#F4ECF7;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#7D3C98;margin-bottom:4px">Level</div><div style="font-size:13px;font-weight:500;color:#6C3483">Entry Level</div></div>
+          </div>
+        </div>
+        <div class="tip"><div class="tip-lbl">WHY FMAA?</div><div class="tip-txt">The FMAA is perfect if you're starting your accounting career, switching to finance, or want a globally recognized credential to validate your fundamentals. It's also the ideal stepping stone before pursuing the full CMA designation. IMA members with certifications earn significantly more than non-certified peers.</div></div>
+      </div>
+
+      <!-- FMAA CONTENT & STRUCTURE -->
+      <div class="info-section">
+        <div class="info-title">📚 FMAA Exam — Content &amp; Structure</div>
+        <div class="part-card" style="margin-bottom:10px">
+          <div class="part-header" style="background:#1A5276">
+            <div><div style="font-size:13px;font-weight:500;color:#fff">Section A</div><div style="font-size:11px;color:rgba(255,255,255,.75);margin-top:1px">General Accounting &amp; Financial Management</div></div>
+            <span style="background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px">60% · 18 Lessons</span>
+          </div>
+          <div class="part-topics" style="background:#D6EAF8">
+            ${[['Accounting Equation &amp; Financial Position','Foundation'],['Debits, Credits &amp; Double-Entry System','Core skill'],['Journals, Ledgers &amp; Trial Balance','Recording'],['Adjusting &amp; Closing Entries','Period-end'],['Principles of Internal Controls','Governance'],['Cash Controls &amp; Bank Reconciliations','Cash mgmt'],['Petty Cash &amp; Cash Forecasting','Cash mgmt'],['Accounts Receivable &amp; Notes Receivable','Assets'],['Estimating Uncollectible Accounts','Allowance method'],['Accounts Payable &amp; Accrued Liabilities','Liabilities']].map(([t,w])=>`<div class="part-topic"><span style="color:#154360">${t}</span><span style="font-weight:500;color:#1A5276;background:rgba(26,82,118,.12);padding:2px 8px;border-radius:10px;font-size:11px">${w}</span></div>`).join('')}
+          </div>
+        </div>
+        <div class="part-card">
+          <div class="part-header" style="background:#1E8449">
+            <div><div style="font-size:13px;font-weight:500;color:#fff">Section B</div><div style="font-size:11px;color:rgba(255,255,255,.75);margin-top:1px">Financial Statement Preparation &amp; Analysis</div></div>
+            <span style="background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px">40% · 17 Lessons</span>
+          </div>
+          <div class="part-topics" style="background:#D5F5E3">
+            ${[['Inventory — FIFO, LIFO &amp; Weighted Average','Valuation'],['Inventory — LCM &amp; Net Realizable Value','Valuation'],['Property, Plant &amp; Equipment','Long-term assets'],['PP&amp;E Disposals, Exchanges &amp; Impairment','Derecognition'],['Intangible Assets &amp; Goodwill','Non-physical assets'],['Current &amp; Long-Term Liabilities','Obligations'],['Bonds Payable &amp; Long-Term Debt','Financing'],['Revenue Recognition — ASC 606','5-step model'],['Common &amp; Preferred Stock','Equity'],['Dividends, Treasury Stock &amp; Retained Earnings','Equity'],['Liquidity, Solvency &amp; Profitability Ratios','Analysis'],['Efficiency Ratios &amp; Horizontal/Vertical Analysis','Analysis']].map(([t,w])=>`<div class="part-topic"><span style="color:#186A3B">${t}</span><span style="font-weight:500;color:#1E8449;background:rgba(30,132,73,.12);padding:2px 8px;border-radius:10px;font-size:11px">${w}</span></div>`).join('')}
+          </div>
+        </div>
+      </div>
+
+      <!-- SCORING -->
+      <div class="info-section">
+        <div class="info-title">📝 Exam Structure &amp; Scoring</div>
+        <div class="card" style="margin-bottom:10px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
+            <div style="background:#D6EAF8;border-radius:10px;padding:12px;text-align:center"><div style="font-size:11px;color:#1A5276;margin-bottom:4px">Format</div><div style="font-size:20px;font-weight:500;color:#154360">MCQ</div><div style="font-size:11px;color:#1A5276">Multiple Choice Only</div><div style="font-size:11px;color:#1A5276;margin-top:3px;font-weight:500">100% of score</div></div>
+            <div style="background:#D5F5E3;border-radius:10px;padding:12px;text-align:center"><div style="font-size:11px;color:#1E8449;margin-bottom:4px">Duration</div><div style="font-size:20px;font-weight:500;color:#186A3B">2 hrs</div><div style="font-size:11px;color:#1E8449">Online exam</div><div style="font-size:11px;color:#1E8449;margin-top:3px;font-weight:500">Anytime access</div></div>
+          </div>
+          <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:13px"><span style="color:#555">Total Questions</span><span style="font-weight:500">~50–75 MCQs</span></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:13px"><span style="color:#555">Passing Score</span><span style="font-weight:500;color:#186A3B">70% or higher</span></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:13px"><span style="color:#555">Delivery</span><span style="font-weight:500">Online — remotely proctored</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:#555">Retake Policy</span><span style="font-weight:500">Unlimited retakes (fee applies)</span></div>
+          </div>
+        </div>
+        <div class="tip"><div class="tip-lbl">IMPORTANT</div><div class="tip-txt">The FMAA is a pure MCQ exam — no essays, no case studies. This means focused MCQ practice is the most effective preparation strategy. Use the Practice tab daily and aim for 70%+ accuracy before scheduling your exam.</div></div>
+      </div>
+
+      <!-- EXAM WINDOWS -->
+      <div class="info-section">
+        <div class="info-title">📅 Exam Windows Each Year</div>
+        <div style="margin-bottom:10px">
+          ${[['January – February','Window 1','Register by Jan 15'],['May – June','Window 2','Register by May 15'],['September – October','Window 3','Register by Sep 15']].map(([months,win,note],i)=>`<div class="window-card"><div style="width:36px;height:36px;border-radius:50%;background:#1A5276;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;flex-shrink:0">${i+1}</div><div><div style="font-size:14px;font-weight:500;color:#154360">${months}</div><div style="font-size:12px;color:#555;margin-top:2px">${win} · ${note}</div></div></div>`).join('')}
+        </div>
+        <div style="background:#f5f5f0;border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:12px;color:#555;line-height:1.6"><strong style="color:#1a1a1a">Key info:</strong> The FMAA can be taken online at any time within an open testing window. You can retake if needed — there's no limit on attempts. Check <strong>imanet.org</strong> for current window dates.</div>
+        <div class="tip"><div class="tip-lbl">MY ADVICE</div><div class="tip-txt">Register for your exam window BEFORE you finish studying. A real deadline changes your focus completely. Aim to sit the exam in your 3rd or 4th month of study — the pressure pushes you to finish strong!</div></div>
+      </div>
+
+      <!-- CERTIFICATE COST -->
+      <div class="info-section">
+        <div class="info-title">💵 Certificate Cost Breakdown</div>
+        <div class="card" style="margin-bottom:0;padding:14px 16px">
+          <div style="font-size:11px;font-weight:600;color:#888;margin-bottom:12px;letter-spacing:.5px">ALL FIGURES IN USD · CHECK IMANET.ORG FOR CURRENT PRICING</div>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;font-size:13px">
+              <thead><tr style="border-bottom:1px solid #e0e0d8">
+                <th style="text-align:left;padding:7px 4px;font-size:11px;color:#888;font-weight:600">Item</th>
+                <th style="text-align:right;padding:7px 6px;font-size:11px;color:#186A3B;font-weight:600">Student</th>
+                <th style="text-align:right;padding:7px 6px;font-size:11px;color:#1A5276;font-weight:600">Professional</th>
+              </tr></thead>
+              <tbody>
+                <tr style="border-bottom:.5px solid #f0f0eb"><td style="text-align:left;padding:8px 4px;color:#555">IMA Annual Membership</td><td style="text-align:right;padding:8px 6px;font-weight:500;color:#186A3B">39</td><td style="text-align:right;padding:8px 6px;font-weight:500">270</td></tr>
+                <tr style="border-bottom:.5px solid #f0f0eb"><td style="text-align:left;padding:8px 4px;color:#555">FMAA Exam Fee</td><td style="text-align:right;padding:8px 6px;font-weight:500;color:#186A3B">149</td><td style="text-align:right;padding:8px 6px;font-weight:500">299</td></tr>
+                <tr style="background:#D6EAF8"><td style="text-align:left;padding:9px 4px;font-weight:600;color:#154360">Total to Get Certified</td><td style="text-align:right;padding:9px 6px;font-weight:700;color:#186A3B">188</td><td style="text-align:right;padding:9px 6px;font-weight:700;color:#1A5276">569</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="font-size:11px;color:#999;margin-top:12px;line-height:1.55;border-top:.5px solid #f0f0eb;padding-top:10px">Figures are approximate and subject to change. IMA Student membership requires enrollment proof. Visit <strong>imanet.org/fmaa</strong> for official current pricing and eligibility.</div>
+        </div>
+      </div>
+
+      <!-- STUDY PLAN -->
+      <div class="info-section">
+        <div class="info-title">📖 FMAA Study Plan</div>
+        <div class="card" style="margin-bottom:10px">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px">
+            <div style="text-align:center;background:#f5f5f0;border-radius:8px;padding:10px"><div style="font-size:20px;font-weight:500;color:#1A5276">4</div><div style="font-size:11px;color:#888">Months</div></div>
+            <div style="text-align:center;background:#f5f5f0;border-radius:8px;padding:10px"><div style="font-size:20px;font-weight:500;color:#1A5276">8</div><div style="font-size:11px;color:#888">Hrs/Week</div></div>
+            <div style="text-align:center;background:#f5f5f0;border-radius:8px;padding:10px"><div style="font-size:20px;font-weight:500;color:#1A5276">~70</div><div style="font-size:11px;color:#888">Total Hrs</div></div>
+          </div>
+          ${[['Month 1','Section A — Accounting Cycle (Lessons 1-1 to 1-6)','Accounting equation, debits &amp; credits, journals, ledger, trial balance, adjusting &amp; closing entries'],['Month 2','Section A — Controls, Cash &amp; Receivables (Lessons 1-7 to 1-15)','Internal controls, cash safeguarding, bank reconciliations, petty cash, accounts receivable, notes receivable'],['Month 3','Section A Finish + Section B Start (Lessons 1-16 to 2-8)','Accounts payable, accrued liabilities, inventory (FIFO/LIFO/WA), PP&amp;E, intangibles, liabilities &amp; bonds'],['Month 4','Section B Finish + Full Review (Lessons 2-9 to 2-17)','Revenue recognition (ASC 606), stockholders equity, all financial ratios, horizontal &amp; vertical analysis — then full exam simulation']].map(([month,topic,details],i)=>`<div style="display:flex;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:${i<3?'.5px solid #e0e0d8':'none'}"><div style="width:28px;height:28px;border-radius:50%;background:#1A5276;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;margin-top:1px">${i+1}</div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a">${month}: ${topic}</div><div style="font-size:12px;color:#888;margin-top:3px;line-height:1.5">${details}</div></div></div>`).join('')}
+        </div>
+      </div>
+
+      <!-- ACTION PLAN -->
+      <div class="info-section">
+        <div class="info-title">🚀 My Action Plan Recommendation</div>
+        <div class="card" style="margin-bottom:0">
+          ${[['Join IMA &amp; Register for FMAA','Go to imanet.org, create an account, pay IMA membership, and register for the FMAA exam. This unlocks your exam access immediately.'],['Get the HOCK Study Materials','Use the HOCK FMAA Preparatory Program (2025 edition) — the same resource this app is built on. Study the theory, then reinforce with MCQs.'],['Follow the 4-Month Plan','Study 8 hours/week. Break it into daily 1–1.5 hour sessions. Consistency beats intensity — small daily progress compounds into exam success.'],['MCQs Are Your Best Friend','Do at least 15–20 MCQs per study session in the Practice tab. Review every wrong answer. Understand WHY the wrong answers are wrong.'],['Use This App Daily','Read lessons, take quizzes, track your progress, and use the Formula Bank for quick revision. Your streak builds momentum — keep it going!'],['Schedule Your Exam by Month 3','Having a real exam date changes everything. Book it before you feel 100% ready — the deadline will push you to finish.'],['Review Weak Areas in Month 4','Use the Wrong Answers tab and Tracker to identify and focus on your weakest topics. Targeted review is 10× more effective than re-reading everything.'],['Pass and Celebrate! 🎉','You\'ve got this. I\'ve seen students from all backgrounds pass with the right plan and commitment. The FMAA is your first step to an amazing finance career!']].map(([title,desc],i)=>`<div class="action-step"><div class="action-num">${i+1}</div><div class="action-content"><h4>${title}</h4><p>${desc}</p></div></div>`).join('')}
+        </div>
+      </div>
+
+      <!-- AFTER YOU PASS -->
+      <div class="info-section">
+        <div class="info-title">🏅 After You Pass: Getting Certified</div>
+        <p class="info-p" style="margin-bottom:14px">Passing the FMAA exam is a great milestone — but there are a few steps to officially receive your certificate and use the FMAA designation.</p>
+        <div class="card" style="margin-bottom:0">
+          ${[['Keep your IMA membership active','You must remain an active IMA member to receive and maintain the FMAA credential.'],['Receive your digital certificate','IMA sends your official FMAA digital certificate once your exam results are confirmed. You can share it on LinkedIn and your resume immediately.'],['Add FMAA to your credentials','Use "FMAA" after your name in professional settings. It signals to employers your validated accounting foundation.'],['Consider the next step — CMA','The FMAA is the ideal stepping stone toward the full CMA (Certified Management Accountant) designation — the global gold standard in management accounting.'],['Maintain your credential','Stay current with IMA membership renewal and any continuing education requirements to keep your FMAA active and respected.']].map(([title,desc],i)=>`<div class="action-step"><div class="action-num">${i+1}</div><div class="action-content"><h4>${title}</h4><p>${desc}</p></div></div>`).join('')}
+        </div>
+        <div class="tip"><div class="tip-lbl">TIP</div><div class="tip-txt">Add your FMAA to LinkedIn as soon as you pass — before you even receive the certificate. Recruiters notice new credentials immediately, and it opens doors to accounting and finance job interviews fast.</div></div>
+      </div>
+
+      <!-- INSTALL GUIDE -->
+      <div class="info-section">
+        <div class="info-title">📲 How to Install This App</div>
+        <p class="info-p" style="margin-bottom:14px">Install the app for <strong>offline access</strong>, faster loading, and a native app experience — no browser bar, no distractions.</p>
+        <div class="card" style="margin-bottom:10px;padding:0;overflow:hidden">
+          <div style="background:#e8f5e9;padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:.5px solid #c8e6c9"><span style="font-size:20px">🤖</span><div><div style="font-size:13px;font-weight:500;color:#1b5e20">Android — Chrome</div><div style="font-size:11px;color:#388e3c;margin-top:1px">Any Android phone or tablet</div></div></div>
+          <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px">
+            ${[['1','Look for the install banner','A banner appears at the bottom saying "قم بتحميل البرنامج" — tap <strong>تحميل</strong>.'],['2','Or tap the 3-dot menu ⋮','Open Chrome menu → tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.'],['3','Confirm in the popup','Tap <strong>Install</strong> in the dialog. The FMAA Prep icon will appear on your home screen. ✅']].map(([n,title,desc])=>`<div style="display:flex;gap:10px;align-items:flex-start"><div style="width:24px;height:24px;border-radius:50%;background:#34a853;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">${n}</div><div style="flex:1"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${title}</div><div style="font-size:12px;color:#666;margin-top:2px;line-height:1.55">${desc}</div></div></div>`).join('')}
+          </div>
+        </div>
+        <div class="card" style="margin-bottom:10px;padding:0;overflow:hidden">
+          <div style="background:#e3f0ff;padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:.5px solid #bbd7f7"><span style="font-size:20px">🍎</span><div><div style="font-size:13px;font-weight:500;color:#0d3c78">iPhone / iPad — Safari</div><div style="font-size:11px;color:#1565c0;margin-top:1px">Must use Safari — Chrome on iOS doesn't support install</div></div></div>
+          <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px">
+            ${[['1','Open the app in Safari','Copy the URL and open it in Safari — not Chrome or Firefox.'],['2','Tap the Share button','Tap the <strong>Share icon</strong> (box with arrow) at the bottom of the Safari toolbar.'],['3','Tap "Add to Home Screen"','Scroll down and tap <strong>Add to Home Screen</strong>.'],['4','Tap "Add" to confirm','The app name is pre-filled — tap <strong>Add</strong> in the top-right corner. ✅']].map(([n,title,desc])=>`<div style="display:flex;gap:10px;align-items:flex-start"><div style="width:24px;height:24px;border-radius:50%;background:#007aff;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">${n}</div><div style="flex:1"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${title}</div><div style="font-size:12px;color:#666;margin-top:2px;line-height:1.55">${desc}</div></div></div>`).join('')}
+          </div>
+          <div style="background:#fff8e1;padding:10px 14px;border-top:.5px solid #ffe082;display:flex;gap:8px;align-items:flex-start"><span style="font-size:14px;flex-shrink:0">⚠️</span><div style="font-size:11px;color:#e65100;line-height:1.5">On iPhone, <strong>Chrome does not support PWA installation</strong>. You must open the link in <strong>Safari</strong> for "Add to Home Screen" to work.</div></div>
+        </div>
+        <div class="card" style="margin-bottom:0;padding:0;overflow:hidden">
+          <div style="background:#f3e8ff;padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:.5px solid #d8b4fe"><span style="font-size:20px">💻</span><div><div style="font-size:13px;font-weight:500;color:#3b0764">Laptop / Desktop — Chrome or Edge</div><div style="font-size:11px;color:#7c3aed;margin-top:1px">Windows, Mac, Linux</div></div></div>
+          <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px">
+            ${[['1','Look for the install icon in the address bar','A small monitor icon <strong>⊕</strong> appears on the right of the address bar — click it.'],['2','Click "Install" in the popup','A dialog appears — click <strong>Install</strong>. The app opens in its own standalone window.'],['3','Or install from browser menu','Click <strong>⋮</strong> (Chrome) or <strong>···</strong> (Edge) → look for <strong>"Install FMAA Prep…"</strong>']].map(([n,title,desc])=>`<div style="display:flex;gap:10px;align-items:flex-start"><div style="width:24px;height:24px;border-radius:50%;background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">${n}</div><div style="flex:1"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${title}</div><div style="font-size:12px;color:#666;margin-top:2px;line-height:1.55">${desc}</div></div></div>`).join('')}
+          </div>
+          <div style="background:#f0fdf4;padding:10px 14px;border-top:.5px solid #bbf7d0;display:flex;gap:8px;align-items:flex-start"><span style="font-size:14px;flex-shrink:0">💡</span><div style="font-size:11px;color:#14532d;line-height:1.5">After installing, the app opens in a standalone window — no browser toolbar. Works offline and loads instantly.</div></div>
+        </div>
+      </div>
+
+      <button class="btn" onclick="navTo('study')" style="margin-top:6px;background:#1A5276;font-size:15px">Start Studying Now →</button>
+      <button onclick="logout()" style="width:100%;margin-top:10px;padding:12px;border-radius:10px;border:.5px solid #e0e0d8;background:transparent;color:#aaa;font-size:13px;cursor:pointer;font-family:inherit">Logout</button>
+      <div style="height:24px"></div>
+    </div>
+  </div>`;}
+
+function renderRegister(){const st=loadStudent();const COUNTRIES=['Egypt','Saudi Arabia','UAE','Kuwait','Qatar','Bahrain','Oman','Jordan','Lebanon','Iraq','Libya','Tunisia','Algeria','Morocco','Sudan','Other'];const LEVELS=['Complete Beginner','Some Accounting Background','Finance Professional','CPA/ACCA Holder','Other'];const GOALS=['Pass FMAA Exam','Career Change into Accounting','Improve Accounting Knowledge','Promotion/Salary Increase','Personal Development'];const isComplete=!!(st&&st.name&&st.mobile);const fval=(k)=>st?esc(st[k]||''):'';const fsel=(k,v)=>st&&st[k]===v?'selected':'';return`${renderSubNav(SUB_ME,'register')}<div class="sh"><h2>My Profile</h2><p>${isComplete?'Profile complete — tap any field to update':'Complete your profile to get started'}</p></div><div class="scroll-area pad" style="padding-top:14px">${!isComplete?`<div class="profile-nudge"><span style="font-size:22px;flex-shrink:0">👋</span><div class="profile-nudge-text"><strong>Complete your profile</strong> to unlock all features.</div></div>`:''}<div class="info-title" style="font-size:14px;margin-bottom:10px">👤 Personal Info <span style="font-size:11px;color:#A32D2D;font-weight:400">· name &amp; mobile required</span></div><div class="card" style="margin-bottom:14px"><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Profile Photo</label><div style="display:flex;align-items:center;gap:14px"><div id="photo-preview" onclick="document.getElementById('f-photo').click()" style="width:70px;height:70px;border-radius:50%;border:2px dashed #d0d0d0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;overflow:hidden;background:#f5f5f0">${st&&safePhotoURL(st.photo)?`<img src="${safePhotoURL(st.photo)}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:`<span style="font-size:22px">📷</span>`}</div><button onclick="document.getElementById('f-photo').click()" style="padding:7px 14px;border-radius:8px;border:.5px solid #1A5276;background:#D6EAF8;color:#154360;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Choose Photo</button></div><input type="file" id="f-photo" accept="image/*" style="display:none" onchange="handlePhoto(this)"></div><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Full Name *</label><input id="f-name" type="text" value="${fval('name')}" placeholder="Your full name" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px"><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Mobile *</label><input id="f-mobile" type="tel" value="${fval('mobile')}" placeholder="+20..." style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Country</label><select id="f-country" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"><option value="">Select...</option>${COUNTRIES.map(c=>`<option value="${c}" ${fsel('country',c)}>${c}</option>`).join('')}</select></div></div><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Email</label><input id="f-email" type="email" value="${(st&&st.email)?esc(st.email):(STATE.user&&STATE.user.email?esc(STATE.user.email):'')}" placeholder="your@email.com" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div></div><div class="info-title" style="font-size:14px;margin-bottom:10px">📊 Study Profile <span style="font-size:11px;color:#888;font-weight:400">· optional</span></div><div class="card" style="margin-bottom:14px"><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Accounting level</label><select id="f-level" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"><option value="">Select...</option>${LEVELS.map(l=>`<option value="${l}" ${fsel('level',l)}>${l}</option>`).join('')}</select></div><div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Goal</label><select id="f-goal" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"><option value="">Select...</option>${GOALS.map(g=>`<option value="${g}" ${fsel('goal',g)}>${g}</option>`).join('')}</select></div><div><label style="font-size:12px;color:#888;display:block;margin-bottom:5px">Target exam date</label><input id="f-examdate" type="month" value="${fval('examdate')}" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;color:#1a1a1a;background:#fafaf8"></div></div><button onclick="submitProfile()" class="btn" style="background:#1A5276;color:#fff;font-size:15px;margin-bottom:8px">${isComplete?'Update My Profile ✓':'Complete Profile →'}</button><div style="height:20px"></div></div>`;}
 
 function handlePhoto(input){const file=input.files[0];if(!file)return;if(file.size>2*1024*1024){showToast('Photo too large. Max 2MB.','error');input.value='';return;}const reader=new FileReader();reader.onload=function(e){const b64=e.target.result;const preview=document.getElementById('photo-preview');if(preview)preview.innerHTML=`<img src="${b64}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`;window._pendingPhoto=b64;};reader.readAsDataURL(file);}
 async function submitProfile(){const get=(id)=>document.getElementById(id)?.value?.trim()||'';const name=get('f-name'),mobile=get('f-mobile'),country=get('f-country'),email=get('f-email')||(STATE.user&&STATE.user.email)||'',level=get('f-level'),goal=get('f-goal'),examdate=get('f-examdate');if(!name){showModal({icon:'📋',title:'Name Required',body:'Please enter your full name.',type:'warning',confirmText:'OK'});return;}if(!mobile){showModal({icon:'📋',title:'Mobile Required',body:'Please enter your mobile number.',type:'warning',confirmText:'OK'});return;}let photoUrl=loadStudent()?.photo||'';if(window._pendingPhoto&&window._pendingPhoto.startsWith('data:')){try{const fd=new FormData();fd.append('file',window._pendingPhoto);fd.append('upload_preset',CLD_PRESET);const res=await fetch(`https://api.cloudinary.com/v1_1/${CLD_CLOUD}/image/upload`,{method:'POST',body:fd});const cldData=await res.json();if(cldData.secure_url)photoUrl=cldData.secure_url;else photoUrl=window._pendingPhoto;}catch(err){photoUrl=window._pendingPhoto;}window._pendingPhoto=null;}saveStudent({name,mobile,email,country,level,goal,examdate,photo:photoUrl,registeredAt:loadStudent()?.registeredAt||new Date().toISOString()});sendToSheet({name,mobile,email,country,level,goal,examdate,photo:photoUrl||'No Photo',app:'FMAA'});render();showModal({icon:'🎓',title:'Welcome!',body:"You're all set! Let's get to work. — Gawad",type:'success',confirmText:'Let\'s Go 🚀'});}
 
-function renderStudy(){
+// ─── FEEDBACK ────────────────────────────────────────────────────────────────
+function loadFeedbackFull(){try{const d=localStorage.getItem('fmaa-feedback-full-v1');return d?JSON.parse(d):{r1:0,r2:0,r3:0,r4:0,recommend:'',source:'',hardSection:'',contentWish:[],comments:'',improvements:''};}catch{return{r1:0,r2:0,r3:0,r4:0,recommend:'',source:'',hardSection:'',contentWish:[],comments:'',improvements:''};}}
+function saveFeedbackFull(d){try{localStorage.setItem('fmaa-feedback-full-v1',JSON.stringify(d));}catch{}if(STATE.user){db.collection('fmaa-feedback').doc(STATE.user.uid).set(d).catch(()=>{});}}
+function setStarRating(field,n){const fb=loadFeedbackFull();fb[field]=n;saveFeedbackFull(fb);[1,2,3,4,5].forEach(i=>{const el=document.getElementById('star-'+field+'-'+i);if(el){el.textContent=i<=n?'⭐':'☆';el.style.opacity=i<=n?'1':'0.3';}});}
+function toggleWish(val){const fb=loadFeedbackFull();if(!fb.contentWish)fb.contentWish=[];const idx=fb.contentWish.indexOf(val);if(idx>-1)fb.contentWish.splice(idx,1);else fb.contentWish.push(val);saveFeedbackFull(fb);const el=document.getElementById('wish-'+val.replace(/\s/g,'-'));if(el){el.style.background=fb.contentWish.includes(val)?'#1A5276':'#f5f5f0';el.style.color=fb.contentWish.includes(val)?'#fff':'#555';el.style.border=fb.contentWish.includes(val)?'1px solid #1A5276':'.5px solid #d0d0d0';}}
+function submitFeedback(){
+  const fb=loadFeedbackFull();
+  const get=id=>document.getElementById(id)?.value?.trim()||'';
+  const rec=document.querySelector('input[name="recommend"]:checked')?.value||'';
+  fb.recommend=rec;fb.source=get('fb-source');fb.hardSection=get('fb-hard');
+  fb.comments=get('fb-comments');fb.improvements=get('fb-improvements');
+  const missing=[];
+  if(!fb.r1||!fb.r2||!fb.r3||!fb.r4)missing.push('All star ratings');
+  if(!fb.recommend)missing.push('Recommendation');
+  if(!fb.source)missing.push('How you found the course');
+  if(!fb.hardSection)missing.push('Hardest section');
+  if(!fb.contentWish||fb.contentWish.length===0)missing.push('Content wishlist (select at least one)');
+  if(!fb.comments)missing.push('Comments');
+  if(!fb.improvements)missing.push('Areas of improvement');
+  if(missing.length>0){showModal({icon:'📋',title:'Almost There!',body:'Please complete the following before submitting:',list:missing,type:'warning',confirmText:'Got it'});return;}
+  saveFeedbackFull(fb);
+  const st=loadStudent();
+  sendToSheet({name:st?.name||'',mobile:st?.mobile||'',email:st?.email||'',country:st?.country||'',level:st?.level||'',goal:st?.goal||'',examdate:st?.examdate||'',rating_explanation:fb.r1,rating_difficulty:fb.r2,rating_clarity:fb.r3,rating_ux:fb.r4,recommend:fb.recommend,source:fb.source,hardSection:fb.hardSection,contentWish:(fb.contentWish||[]).join(', '),comments:fb.comments,improvements:fb.improvements,photo:st?.photo||'',app:'FMAA'});
+  showToast('Thank you for your feedback! 🎉','success');render();
+}
+
+// ─── RENDER FEEDBACK ─────────────────────────────────────────────────────────
+function renderFeedback(){
+  const fb=loadFeedbackFull();
+  const RATINGS=[{key:'r1',label:'Quality of explanation'},{key:'r2',label:'Difficulty of quiz questions'},{key:'r3',label:'Clarity of content'},{key:'r4',label:'Ease of use'}];
+  const WISHES=['Video explanations','More MCQs','Full practice exams','Formula sheets','Arabic content','Case studies','Mock exam timer','Downloadable PDF notes'];
+  const SECTIONS=['The Accounting Equation','Debits, Credits & Journals','Adjusting & Closing Entries','Bank Reconciliations','Accounts Receivable & Notes','Accounts Payable & Liabilities','Inventory Valuation (FIFO/LIFO/WA)','Property, Plant & Equipment','Bonds Payable & Long-Term Debt','Revenue Recognition (ASC 606)','Stockholders Equity','Financial Ratios & Analysis'];
+  const SOURCES=['Friend referral','LinkedIn','WhatsApp group','Google search','Facebook','YouTube','Other'];
+  const starRows=RATINGS.map(r=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:.5px solid #f0f0eb"><span style="font-size:13px;color:#555;flex:1">${r.label}</span><div style="display:flex;gap:4px">${[1,2,3,4,5].map(i=>`<span id="star-${r.key}-${i}" onclick="setStarRating('${r.key}',${i})" style="font-size:22px;cursor:pointer;opacity:${(fb[r.key]||0)>=i?1:0.3}">${(fb[r.key]||0)>=i?'⭐':'☆'}</span>`).join('')}</div></div>`).join('');
+  const wishBtns=WISHES.map(w=>{const active=(fb.contentWish||[]).includes(w);return`<button id="wish-${w.replace(/\s/g,'-')}" onclick="toggleWish('${w}')" style="padding:8px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:500;background:${active?'#1A5276':'#f5f5f0'};color:${active?'#fff':'#555'};border:${active?'1px solid #1A5276':'.5px solid #d0d0d0'}">${w}</button>`;}).join('');
+  const isSubmitted=fb.comments&&fb.recommend&&fb.source&&fb.hardSection&&fb.r1&&fb.r2&&fb.r3&&fb.r4;
+  return`${renderSubNav(SUB_ME,'feedback')}<div class="sh"><h2>Feedback & Suggestions</h2><p>Your feedback helps improve the course for everyone</p></div>
+  <div class="scroll-area pad" style="padding-top:14px">
+    ${isSubmitted?`<div style="background:#EAF3DE;border:1px solid #1E844940;border-radius:12px;padding:12px 16px;margin-bottom:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">✅</span><div><div style="font-size:13px;font-weight:500;color:#186A3B">Feedback submitted — thank you!</div><div style="font-size:12px;color:#1E8449;margin-top:2px">You can update your feedback anytime below.</div></div></div>`:''}
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">⭐ Rate the Course <span style="font-size:11px;color:#A32D2D;font-weight:400">· required</span></div>
+    <div class="card" style="margin-bottom:14px">${starRows}</div>
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">👍 Would you recommend this course? <span style="font-size:11px;color:#A32D2D;font-weight:400">· required</span></div>
+    <div class="card" style="margin-bottom:14px"><div style="display:flex;flex-direction:column;gap:8px">
+      ${[['yes100','Yes, 100%!','#EAF3DE','#186A3B','#1E8449'],['yes','Yes, most likely','#f5f5f0','#1a1a1a','#d0d0d0'],['maybe','Maybe','#FAEEDA','#854F0B','#EF9F27'],['no','Not yet','#FCEBEB','#791F1F','#E24B4A']].map(([val,lbl,bg,tc,bc])=>`<label style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;background:${fb.recommend===val?bg:'#f8f8f6'};border:.5px solid ${fb.recommend===val?bc:'#e0e0d8'};cursor:pointer"><input type="radio" name="recommend" value="${val}" ${fb.recommend===val?'checked':''} style="flex-shrink:0" onchange="const f=loadFeedbackFull();f.recommend='${val}';saveFeedbackFull(f);render()"><span style="font-size:13px;color:${fb.recommend===val?tc:'#555'};font-weight:${fb.recommend===val?'500':'400'}">${lbl}</span></label>`).join('')}
+    </div></div>
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">🔍 How did you find this course? <span style="font-size:11px;color:#A32D2D;font-weight:400">· required</span></div>
+    <div class="card" style="margin-bottom:14px"><select id="fb-source" onchange="const f=loadFeedbackFull();f.source=this.value;saveFeedbackFull(f)" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a"><option value="">Select...</option>${SOURCES.map(s=>`<option value="${s}" ${fb.source===s?'selected':''}>${s}</option>`).join('')}</select></div>
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">😓 Hardest section for you? <span style="font-size:11px;color:#A32D2D;font-weight:400">· required</span></div>
+    <div class="card" style="margin-bottom:14px"><select id="fb-hard" onchange="const f=loadFeedbackFull();f.hardSection=this.value;saveFeedbackFull(f)" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a"><option value="">Select section...</option>${SECTIONS.map(s=>`<option value="${s}" ${fb.hardSection===s?'selected':''}>${s}</option>`).join('')}</select></div>
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">🎯 What content would you like added? <span style="font-size:11px;color:#A32D2D;font-weight:400">· select at least one</span></div>
+    <div class="card" style="margin-bottom:14px"><div style="display:flex;flex-wrap:wrap;gap:8px">${wishBtns}</div></div>
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">💬 Comments & Overall Feedback <span style="font-size:11px;color:#A32D2D;font-weight:400">· required</span></div>
+    <div class="card" style="margin-bottom:14px"><textarea id="fb-comments" rows="4" placeholder="Share your thoughts about the course, content, instructor, and your learning experience..." style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a;resize:none;line-height:1.5">${fb.comments||''}</textarea></div>
+    <div class="info-title" style="font-size:14px;margin-bottom:10px">🔧 Areas of Improvement <span style="font-size:11px;color:#A32D2D;font-weight:400">· required</span></div>
+    <div class="card" style="margin-bottom:14px"><textarea id="fb-improvements" rows="4" placeholder="What can be added or improved? More examples? Better explanations for specific topics?" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a;resize:none;line-height:1.5">${fb.improvements||''}</textarea></div>
+    <button onclick="submitFeedback()" class="btn" style="background:#1A5276;color:#fff;font-size:15px;margin-bottom:8px">${isSubmitted?'Update Feedback ✓':'Submit Feedback →'}</button>
+    <div style="height:20px"></div>
+  </div>`;
+}
+
+
   const{progress}=STATE;
   if(STATE.lessonId!==null){
     let sec=sect(STATE.sectId);if(!sec)sec=S.find(s=>s.lessons.some(l=>l.id===STATE.lessonId));
@@ -856,6 +1136,13 @@ function renderQuestionDetail(){
 // ─── SUB-NAV HELPER ───────────────────────────────────────────────────────────
 function renderSubNav(items,activeId){return`<div class="sub-nav">${items.map(it=>`<button class="sub-nav-btn${activeId===it.id?' active':''}" onclick="navTo('${it.id}')">${it.icon} ${it.label}</button>`).join('')}</div>`;}
 
+// ─── SUB-NAV GROUPS ───────────────────────────────────────────────────────────
+const SUB_ME=[
+  {id:'intro',    icon:'🏠', label:'Home'},
+  {id:'register', icon:'🎓', label:'Profile'},
+  {id:'feedback', icon:'⭐', label:'Feedback'}
+];
+
 // ─── TABS, NAV & MAIN RENDER ──────────────────────────────────────────────────
 const TABS=[
   {id:'intro',           label:'About',    icon:'👤'},
@@ -876,7 +1163,7 @@ function activeNavTab(){
   if(t==='formula-bank')return'formula-bank';
   if(t==='search')return'search';
   if(t==='community'||t==='question-detail')return'community';
-  if(t==='intro'||t==='register')return'intro';
+  if(t==='intro'||t==='register'||t==='feedback')return'intro';
   return t;
 }
 async function navTo(tab){
@@ -909,6 +1196,7 @@ function render(){
     case'community':html=renderCommunity();break;
     case'question-detail':html=renderQuestionDetail();break;
     case'formula-bank':html=renderFormulaBank();break;
+    case'feedback':html=renderFeedback();break;
     default:html=renderIntro();
   }
   content.innerHTML=html;
