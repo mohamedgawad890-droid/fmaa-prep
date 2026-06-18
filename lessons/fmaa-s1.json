@@ -1,92 +1,199 @@
 {
   "1-1": [
-    { "t": "h", "v": "The Accounting Equation" },
-    { "t": "p", "v": "Every business transaction can be expressed using one fundamental equation that keeps financial records in balance." },
-    { "t": "f", "l": "THE ACCOUNTING EQUATION", "v": "Assets = Liabilities + Equity" },
-    { "t": "p", "v": "Assets are resources owned by the business (cash, inventory, equipment). Liabilities are what the business owes to outsiders (loans, accounts payable). Equity is the owners' residual interest — what's left after liabilities are subtracted from assets." },
-    { "t": "h", "v": "Components of the Equation" },
-    { "t": "b", "v": [
-      "Assets: Cash, Accounts Receivable, Inventory, Equipment, Buildings, Prepaid Expenses",
-      "Liabilities: Accounts Payable, Notes Payable, Accrued Expenses, Unearned Revenue",
-      "Equity: Common Stock, Retained Earnings, Additional Paid-In Capital"
-    ]},
-    { "t": "h", "v": "The Equation Always Stays in Balance" },
-    { "t": "p", "v": "Every transaction affects at least two accounts, but the equation always remains equal. This is the foundation of double-entry bookkeeping." },
-    { "t": "tbl", "h": ["Transaction", "Assets", "Liabilities", "Equity"], "r": [
-      ["Owner invests $10,000 cash", "+$10,000 (Cash)", "No change", "+$10,000 (Common Stock)"],
-      ["Buy equipment for $3,000 cash", "+$3,000 (Equipment) / −$3,000 (Cash)", "No change", "No change"],
-      ["Borrow $5,000 from bank", "+$5,000 (Cash)", "+$5,000 (Note Payable)", "No change"],
-      ["Earn $2,000 revenue on account", "+$2,000 (A/R)", "No change", "+$2,000 (Revenue → Equity)"]
-    ]},
-    { "t": "tip", "v": "On the FMAA exam, when a question gives you any two elements of the accounting equation, you can always calculate the third. If Assets = $80,000 and Liabilities = $35,000, then Equity = $45,000." },
-    { "t": "h", "v": "Expanded Equity Section" },
-    { "t": "f", "l": "EXPANDED EQUITY", "v": "Equity = Common Stock + Retained Earnings + Revenues − Expenses − Dividends" },
-    { "t": "p", "v": "Revenues increase equity; expenses and dividends decrease it. This expanded view connects the income statement to the balance sheet." }
+    {"t":"h","v":"Financial vs. Management Accounting"},
+    {"t":"p","v":"Financial accounting measures the financial performance of an organization using Generally Accepted Accounting Principles (GAAP) to prepare financial statements for external stakeholders — owners, lenders, suppliers, and regulators such as the SEC and IRS. It is primarily concerned with historical reporting."},
+    {"t":"p","v":"Management accounting is the identification, measurement, analysis, and communication of financial and non-financial information used by internal decision makers to plan, evaluate, and control the entity. Because it is for internal use, it need not conform to GAAP and has a much larger scope than financial accounting."},
+    {"t":"tip","v":"In the U.S., GAAP is set by the FASB (in its Accounting Standards Codification). International standards (IFRS) are set by the IASB. Know which body sets which standards."},
+    {"t":"h","v":"Types of Business Enterprises"},
+    {"t":"b","v":["Sole Proprietorship — one owner, unincorporated; owner pays personal income tax on profits and is personally liable.","Corporation — a separate legal entity from its owners; its key feature is limited liability for shareholders.","Private Company — issues stock but shares do not trade on public exchanges; avoids strict SEC filing requirements.","Public Company — shares trade freely on exchanges; subject to SEC reporting requirements.","Partnership — two or more parties operate a business and share profits and liabilities.","Joint Venture — two companies agree to work together toward specific goals while keeping their independence.","Nonprofit Organization — granted tax-exempt status because it furthers a social cause; pays no tax on donations or fundraising."]},
+    {"t":"h","v":"Cash vs. Accrual Basis"},
+    {"t":"p","v":"Under the cash basis, revenues are recognized when cash is received and expenses when cash is paid. Under the accrual basis, revenue is recognized when the performance obligation is satisfied and the customer obtains control of the asset, and expenses are recognized in the same period as the related revenue (the matching principle). GAAP requires the accrual basis."},
+    {"t":"h","v":"Key Accounting Principles"},
+    {"t":"b","v":["Matching (Expense Recognition) — expenses are recognized in the same period as the revenues they helped generate.","Consistency — the same methods are used for the same items from period to period so results are comparable.","Conservatism — recognize revenues only when reasonably certain but expenses when probable; no longer recommended by the FASB but still noted by the ICMA, especially for revenue recognition."]},
+    {"t":"p","v":"An accrual is revenue earned but not yet received, or a cost incurred but not yet paid. A deferral is a revenue received but not yet earned (a liability), or an expense paid but not yet incurred (an asset). Depreciation allocates the cost of a tangible asset over its useful life; amortization does the same for intangible assets."},
+    {"t":"h","v":"The Elements & Account Types"},
+    {"t":"p","v":"The elements of the financial statements are assets (what is owned), liabilities (what is owed), equity (the owners' residual interest), and the components of comprehensive income: revenues, expenses, gains, and losses. Equity increases with owner investments, revenues, and gains; it decreases with expenses, losses, and distributions to owners."},
+    {"t":"tip","v":"Permanent (balance sheet) accounts — assets, liabilities, and equity — carry their balances forward and are never reset. Temporary (income statement) accounts — revenues, gains, expenses, losses, plus Dividends and Income Summary — are closed to Retained Earnings at year-end, resetting them to zero."},
+    {"t":"p","v":"A contra account carries a balance opposite to the account it offsets. The Dividends account is a contra-equity account closed to Retained Earnings at year-end. Retained Earnings is the accumulated net income since the company began, less all distributions to owners."}
   ],
-
   "1-2": [
-    { "t": "h", "v": "Debits and Credits — The Language of Accounting" },
-    { "t": "p", "v": "Every accounting entry has two sides: a debit (left side) and a credit (right side). The total debits must always equal total credits. This is double-entry bookkeeping." },
-    { "t": "f", "l": "GOLDEN RULE OF DEBITS & CREDITS", "v": "Total Debits = Total Credits (in every journal entry)" },
-    { "t": "h", "v": "Normal Balances" },
-    { "t": "tbl", "h": ["Account Type", "Increases With", "Decreases With", "Normal Balance"], "r": [
-      ["Assets", "Debit", "Credit", "Debit"],
-      ["Liabilities", "Credit", "Debit", "Credit"],
-      ["Equity (Owner's Capital)", "Credit", "Debit", "Credit"],
-      ["Revenue", "Credit", "Debit", "Credit"],
-      ["Expenses", "Debit", "Credit", "Debit"],
-      ["Dividends / Drawings", "Debit", "Credit", "Debit"]
-    ]},
-    { "t": "tip", "v": "Memory trick: Assets, Expenses, and Dividends have Debit normal balances — remember AED (like the UAE currency). Everything else (Liabilities, Equity, Revenue) has a Credit normal balance." },
-    { "t": "h", "v": "Example: Recording a Transaction" },
-    { "t": "p", "v": "A company receives $5,000 cash from a customer for services rendered." },
-    { "t": "s", "v": [
-      "Identify what increased: Cash (Asset) increased → Debit Cash $5,000",
-      "Identify what else changed: Revenue increased → Credit Service Revenue $5,000",
-      "Check: Debits ($5,000) = Credits ($5,000) ✓"
-    ]},
-    { "t": "h", "v": "Common Debit Entries" },
-    { "t": "b", "v": [
-      "Buying an asset (cash, equipment, inventory)",
-      "Paying an expense (rent, salaries, utilities)",
-      "Recording a loss",
-      "Distributing dividends to owners"
-    ]},
-    { "t": "h", "v": "Common Credit Entries" },
-    { "t": "b", "v": [
-      "Earning revenue from customers",
-      "Borrowing money (creating a liability)",
-      "Receiving investment from owners",
-      "Reducing an asset (paying cash)"
-    ]}
+    {"t":"h","v":"Double-Entry Bookkeeping"},
+    {"t":"p","v":"Bookkeeping is the process of recording financial events in the accounting system. Double-entry bookkeeping is the basis of all accounting: every transaction changes the balance of at least two ledger accounts so that the accounting equation always stays in balance."},
+    {"t":"f","l":"THE ACCOUNTING EQUATION","v":"Assets = Liabilities + Equity"},
+    {"t":"p","v":"The equation must always balance because the two sides are two views of the same position: assets show the resources the business owns, while liabilities and equity show the sources of those resources. The total of entries affecting the left side (assets) must always equal the total of entries affecting the right side (liabilities and equity)."},
+    {"t":"h","v":"Bookkeeping vs. Accounting"},
+    {"t":"p","v":"Bookkeeping is the recording of transactions — the early steps of the accounting cycle. Accounting is broader: it includes designing accounting systems, preparing and auditing financial statements, cost studies, forecasts, tax work, and interpreting information to support business decisions. An understanding of double-entry bookkeeping is the foundation for all of accounting."},
+    {"t":"p","v":"Most organizations use an automated Accounting Information System (AIS), which can create many transactions automatically, but the underlying double-entry logic still governs how every transaction is recorded."}
   ],
-
   "1-3": [
-    { "t": "h", "v": "Journals and Ledgers" },
-    { "t": "p", "v": "The accounting cycle begins with recording transactions in a journal, then posting those entries to the general ledger accounts." },
-    { "t": "h", "v": "The General Journal" },
-    { "t": "p", "v": "The journal is the book of original entry. Every transaction is first recorded here in chronological order showing the date, accounts debited and credited, and amounts." },
-    { "t": "f", "l": "JOURNAL ENTRY FORMAT", "v": "Date | Account (Debit) | Dr. Amount\n      | Account (Credit) | | Cr. Amount\n      | Explanation" },
-    { "t": "h", "v": "Example Journal Entries" },
-    { "t": "tbl", "h": ["Date", "Account", "Debit", "Credit"], "r": [
-      ["Jan 1", "Cash", "$10,000", ""],
-      ["", "Common Stock", "", "$10,000"],
-      ["", "(Owner invested cash)", "", ""],
-      ["Jan 5", "Rent Expense", "$1,200", ""],
-      ["", "Cash", "", "$1,200"],
-      ["", "(Paid monthly rent)", "", ""]
-    ]},
-    { "t": "h", "v": "The General Ledger" },
-    { "t": "p", "v": "After journalizing, entries are posted to the general ledger — a collection of individual T-accounts for every account used by the business. The T-account has debits on the left and credits on the right." },
-    { "t": "f", "l": "T-ACCOUNT STRUCTURE", "v": "      Account Name\n   Debit  |  Credit\n   -------|-------\n   (Left) | (Right)" },
-    { "t": "h", "v": "Posting Process" },
-    { "t": "s", "v": [
-      "Record the transaction in the general journal",
-      "Identify each account affected",
-      "Post the debit amount to the left side of the debit account's T-account",
-      "Post the credit amount to the right side of the credit account's T-account",
-      "Calculate the running balance for each account"
-    ]},
-    { "t": "tip", "v": "The FMAA exam may ask you to prepare a partial journal entry or identify what's missing. Always check that debits equal credits and that the accounts make logical sense for the transaction described." }
+    {"t":"h","v":"T-Accounts: Debits and Credits"},
+    {"t":"p","v":"A T-account is a ledger account in simplified form, named for its resemblance to the letter T. It is used to analyze transactions. The rule never changes: debits are always recorded on the left side and credits are always recorded on the right side."},
+    {"t":"tip","v":"Debits on the LEFT, credits on the RIGHT — always. Debits increase assets and expenses; credits increase liabilities, equity, and revenue. For every transaction, total debits must equal total credits."},
+    {"t":"h","v":"The Accounting Cycle: Steps 1–3"},
+    {"t":"s","v":["Step 1 — Identify and analyze events to be recorded, based on source documents (sales invoices, time sheets, purchase orders, receiving reports) that provide evidence the event took place.","Step 2 — Journalize transactions in the General Journal: a permanent, chronological record showing the date, the accounts debited and credited, the amounts, and an explanation.","Step 3 — Post the individual debits and credits from each journal entry to the appropriate ledger accounts and update each account's running balance."]},
+    {"t":"p","v":"A transaction recorded in the General Journal is a journal entry. A journal entry that debits and/or credits more than one account is a compound journal entry — and the total debits must still equal the total credits. Recording transactions in the journal first helps catch errors, because the offsetting debits and credits appear together."},
+    {"t":"tip","v":"Account names and numbers used in the General Journal must exactly match the Chart of Accounts. When posting, debit amounts go in the left money column and credit amounts in the right; balances are marked Dr or Cr."}
+  ],
+  "1-4": [
+    {"t":"h","v":"Worked Example: A New Business"},
+    {"t":"p","v":"This unit works through the opening transactions of Greenworks Distribution Company. Accounts are arranged by type in the Chart of Accounts in the order Assets, Liabilities, then Equity."},
+    {"t":"h","v":"Issuing Stock Above Par"},
+    {"t":"p","v":"Issued 50,000 shares of $1.00 par value stock at $10 per share for $500,000 cash. Cash (an asset) is debited $500,000. Common Stock is credited for the par value, $50,000 (50,000 × $1.00), and the excess of $450,000 is credited to Additional Paid-in Capital. This is a compound entry (one debit, two credits)."},
+    {"t":"tbl","h":["Account","Debit","Credit"],"r":[["Cash","500,000",""],["Common Stock","","50,000"],["Additional Paid-in Capital","","450,000"]]},
+    {"t":"tip","v":"Par value is the floor price below which stock may not be sold in an initial offering, so it is set very low. Stock almost always sells above par; the excess goes to Additional Paid-in Capital — not to Common Stock."},
+    {"t":"h","v":"Exchanging One Asset for Others"},
+    {"t":"p","v":"Purchased land ($100,000) and a building ($200,000) for $300,000 cash. Land and Buildings (assets) are debited; Cash (an asset) is credited $300,000. Because all changes occur within assets, total assets, liabilities, and equity are unchanged."},
+    {"t":"p","v":"Selling 25% of the land for $25,000 cash at its cost produces no gain or loss: debit Cash $25,000, credit Land $25,000. Purchasing furniture and equipment on credit for $55,000 debits Furniture & Equipment (asset) and credits Accounts Payable (liability)."}
+  ],
+  "1-5": [
+    {"t":"h","v":"The Unadjusted Trial Balance"},
+    {"t":"p","v":"Step 4 of the accounting cycle is preparing the unadjusted trial balance. After transactions are posted, the balance of every ledger account is listed in a trial balance — debit balances in one column and credit balances in another — to check that total debits equal total credits."},
+    {"t":"tip","v":"A balanced trial balance proves only that total debits equal total credits. It does NOT prove the books are error-free: a transaction omitted entirely, posted to the wrong account, or recorded twice can still leave the trial balance in balance."},
+    {"t":"h","v":"Purpose and Limitations"},
+    {"t":"b","v":["Confirms the mathematical equality of debits and credits before financial statements are prepared.","Provides a single list of all account balances as a starting point for adjusting entries.","Will not detect: a transaction left out completely, an entry posted to the wrong account of the same type, or an entire transaction recorded twice."]}
+  ],
+  "1-6": [
+    {"t":"h","v":"Comprehensive Income Defined"},
+    {"t":"p","v":"Comprehensive income is the change in equity (net assets) of a business during a period from all transactions and events except investments by owners and distributions to owners. Operating profitably increases equity; operating at a loss decreases it. Earnings are not necessarily available as cash — profits may be tied up in inventory, equipment, or other assets."},
+    {"t":"f","l":"COMPREHENSIVE INCOME","v":"Comprehensive Income = Net Income + Other Comprehensive Income"},
+    {"t":"h","v":"Two Routes to Equity"},
+    {"t":"b","v":["Net income (or net loss) — most revenues, expenses, gains, and losses are reported on the income statement and reach equity through the Retained Earnings account in the year-end close.","Other Comprehensive Income (OCI) — certain items specified by the accounting standards bypass the income statement and are recorded directly in equity, in the Accumulated Other Comprehensive Income (AOCI) account on the balance sheet."]},
+    {"t":"h","v":"Debits & Credits to Income Statement Accounts"},
+    {"t":"p","v":"Because income statement accounts provide the detail behind changes in equity, their debit/credit behavior follows equity. A credit increases net income and equity (more revenue/gain, or less expense/loss). A debit decreases net income and equity (more expense/loss, or less revenue/gain)."},
+    {"t":"tbl","h":["Account Type","Normal Balance","Increased By"],"r":[["Asset","Debit","Debits"],["Liability","Credit","Credits"],["Equity","Credit","Credits"],["Revenue / Gain","Credit","Credits"],["Expense / Loss","Debit","Debits"]]},
+    {"t":"tip","v":"Revenues and gains increase equity, so they are increased by credits. Expenses and losses decrease equity, so they are increased by debits. Memorize this normal-balance table — it underlies every journal entry."}
+  ],
+  "1-7": [
+    {"t":"h","v":"Control Accounts & Subsidiary Ledgers"},
+    {"t":"p","v":"Some ledger accounts compile transactions for many entities — for example, Accounts Payable holds the total owed to all suppliers. To track each one separately without an impossibly large ledger, a separate account is kept for each supplier in a subsidiary ledger. The individual accounts are subsidiary (sub-ledger) accounts, and the summary account in the general ledger is the control (controlling) account."},
+    {"t":"f","l":"THE KEY RELATIONSHIP","v":"Sum of subsidiary ledger balances = Control account balance"},
+    {"t":"b","v":["Accounts Receivable — control account; one sub-ledger account per customer.","Accounts Payable — control account; one sub-ledger account per supplier.","Inventory — control account; one sub-ledger account per inventory item (units + cost).","Furniture & Equipment — control account; one sub-ledger account per asset, with a matching Accumulated Depreciation control account."]},
+    {"t":"p","v":"The general ledger is the group of accounts (including the control accounts) used to prepare reports, kept separate from the subsidiary ledgers. In an automated system the sub-ledgers and control accounts update simultaneously, but they must still be reconciled regularly because errors occur — for example, an adjusting entry posted to the control account but not the sub-ledger."},
+    {"t":"tip","v":"Regularly reconcile each control account to the total of its subsidiary ledger, and investigate any difference. A control account total should always equal the sum of its sub-ledger account balances."}
+  ],
+  "1-8": [
+    {"t":"h","v":"Recording Revenue & Expenses"},
+    {"t":"p","v":"Net income flows to equity through Retained Earnings, so every entry that affects net income must also affect a balance sheet account to keep the equation in balance. In practice, each income-statement entry is paired with a balance-sheet entry."},
+    {"t":"h","v":"Revenue"},
+    {"t":"p","v":"Revenue is generally recognized when the customer obtains control of the asset. The seller debits the asset received — Cash for a cash sale, or Accounts Receivable if payment will come later — and credits the appropriate revenue account. Either way, assets increase and equity increases."},
+    {"t":"h","v":"Expenses"},
+    {"t":"p","v":"An expense is recognized when a liability is incurred in providing goods or services and when the related revenue is recognized — the matching principle. Expenses can be recognized in three ways:"},
+    {"t":"s","v":["Cause and effect — match the expense directly to the revenue it generated (e.g., cost of goods sold when the item is sold).","Systematic and rational allocation — spread a cost over the periods that benefit (e.g., depreciation).","Immediate recognition — expense it at once if it provides no future benefit."]}
+  ],
+  "1-9": [
+    {"t":"h","v":"Investing & Financing Transactions"},
+    {"t":"p","v":"Investing transactions put excess cash to work at low risk — e.g., moving $100,000 into a money market deposit account (MMDA), which is classified as a cash equivalent on the balance sheet. Financing transactions raise funds — e.g., buying equipment with a down payment plus a multi-year term loan recorded as long-term debt."},
+    {"t":"h","v":"Interest Calculations"},
+    {"t":"f","l":"SIMPLE INTEREST (DAILY)","v":"Interest = Principal × Annual Rate ÷ 365 × Days"},
+    {"t":"p","v":"Interest earned on an investment is interest revenue (debit Cash/Cash Equivalents, credit Interest Revenue). Interest on a loan is interest expense (debit Interest Expense, credit Cash or Interest Payable). A loan payment splits between a debit to Long-Term Debt (principal) and a debit to Interest Expense."},
+    {"t":"h","v":"Prepaids, Deferrals & Dividends"},
+    {"t":"b","v":["Prepaid expense — paying in advance (e.g., a one-year insurance premium) is debited to Prepaid Expense, an asset, then expensed over the policy period.","Deferred revenue — cash received before delivery is credited to a liability (Deferred Revenue / Contract Liabilities) and recognized as revenue once the obligation is performed.","Dividends — a declared cash dividend is NOT an expense and does not affect net income; it reduces equity. Debit the Dividends contra-equity account (or Retained Earnings directly) and credit Dividends Payable; pay later by debiting Dividends Payable and crediting Cash."]},
+    {"t":"tip","v":"A dividend declaration creates a liability and reduces equity — it never touches the income statement. Watch for exam questions that try to treat dividends as an expense."}
+  ],
+  "1-10": [
+    {"t":"h","v":"Why Adjusting Entries Exist"},
+    {"t":"p","v":"Financial reporting is divided into equal accounting periods so results can be compared. For statements to be accurate, a precise cutoff is needed at period-end: the balance sheet must show all assets and liabilities as of the last day, and the income statement must include only the revenues and expenses of that period. Step 5 of the accounting cycle is making the adjusting entries that achieve this. Adjusting entries usually have no external source document — only a supporting worksheet."},
+    {"t":"h","v":"The Two Driving Principles"},
+    {"t":"p","v":"The revenue recognition principle requires revenue to be recognized when the performance obligation is satisfied (the customer obtains control). The matching (expense recognition) principle requires expenses to be recognized via cause and effect, systematic and rational allocation, or immediate recognition."},
+    {"t":"h","v":"The Common Adjusting Entries"},
+    {"t":"b","v":["Depreciation — allocate a fixed asset's capitalized cost over its life: debit Depreciation Expense, credit Accumulated Depreciation (a contra-asset).","Deferred revenue (contract liabilities) — recognize previously-collected amounts as revenue once earned.","Accrued expenses — costs incurred but not yet billed (utilities, interest, income taxes): debit the expense, credit a payable.","Deferred expenses — prepaids whose benefit is now being used up: debit the expense, credit the prepaid asset.","Accrued revenues — revenue earned but not yet billed or received.","Asset valuation adjustments — restate assets/liabilities to their correct values."]},
+    {"t":"tip","v":"Accumulated Depreciation is a contra-asset: it sits in the asset section but carries a credit balance and is subtracted from the asset's cost to give book value. Land is never depreciated because it does not wear out."}
+  ],
+  "1-11": [
+    {"t":"h","v":"Worked Adjusting Entries"},
+    {"t":"p","v":"At period-end a company typically records several adjustments. In the Greenworks example these are: depreciation of the building, furniture, and equipment; expensing the used-up portion of prepaid insurance; accruing utilities used but not yet billed; and accruing income tax for the year."},
+    {"t":"b","v":["Depreciation — debit Depreciation Expense for the combined amount; credit each Accumulated Depreciation account (a contra-asset) by asset type. Land is excluded.","Prepaid expense — debit the relevant expense, credit Prepaid Expense (an asset) for the portion consumed.","Accrued utilities — debit Utilities Expense, credit Accounts Payable for the estimated amount used but not yet invoiced.","Accrued income tax — debit Income Tax Expense, credit Income Taxes Payable for the year's estimated tax."]},
+    {"t":"h","v":"Accounting Cycle: Steps 6 & 7"},
+    {"t":"s","v":["Step 6 — Prepare an adjusted trial balance: the same as the unadjusted version but reflecting all adjusting entries; review it carefully and correct any errors.","Step 7 — Prepare the financial statements from the adjusted trial balance."]},
+    {"t":"tip","v":"On the balance sheet, fixed assets appear net of depreciation (cost − accumulated depreciation). The retained earnings figure shown reflects the post-close position: net income less dividends declared."}
+  ],
+  "1-12": [
+    {"t":"h","v":"The Year-End Close (Step 8)"},
+    {"t":"p","v":"Closing a temporary account means resetting its balance to zero as of the closing date. The temporary (temporary-equity) accounts — revenue, gain, expense, and loss accounts, plus the Dividends and Income Summary accounts — are closed by transferring their balances to Retained Earnings. Permanent (balance sheet) accounts are never closed; their balances carry forward year to year."},
+    {"t":"h","v":"The Closing Process"},
+    {"t":"s","v":["Close every income statement account into the Income Summary account (debit the credit-balance accounts, credit the debit-balance accounts).","Verify the Income Summary balance equals net income (credit balance) or net loss (debit balance) from the income statement.","Close Income Summary to Retained Earnings: if it has a credit balance, debit Income Summary and credit Retained Earnings (and vice versa for a loss).","If a separate Dividends account was used, close it directly to Retained Earnings — credit Dividends, debit Retained Earnings.","Prepare a post-closing trial balance to confirm all temporary accounts are zero and debits equal credits."]},
+    {"t":"tip","v":"Income Summary is a temporary holding account — not an asset, liability, equity, revenue, or expense account. It is used only during closing as a control check that the net income transferred to equity matches the income statement. Dividends bypass Income Summary because they are not an expense."}
+  ],
+  "1-13": [
+    {"t":"h","v":"The Eight-Step Accounting Cycle"},
+    {"t":"s","v":["Identify and analyze financial events.","Record transactions in the General Journal.","Post to ledger (and sub-ledger) accounts.","Prepare the unadjusted trial balance.","Make adjusting entries.","Prepare the adjusted trial balance.","Prepare the financial statements.","Post closing entries, then prepare the post-closing trial balance."]},
+    {"t":"h","v":"Reversing Entries"},
+    {"t":"p","v":"When an expense or revenue is accrued at period-end and the related invoice will later be processed normally, the accrued amount risks being counted twice. To prevent this, a reversing entry is posted on the first day of the next period that reverses the accrual. This step happens in the following period, so it sits outside the eight-step cycle."},
+    {"t":"p","v":"Example: $465 of June utilities is accrued (debit Utilities Expense, credit Accounts Payable). On July 1 it is reversed (debit Accounts Payable, credit Utilities Expense $465). When the full $750 bill arrives in July it is recorded normally (debit Utilities Expense $750, credit Accounts Payable). The net July expense is correctly $750 − $465 = $285."},
+    {"t":"tip","v":"Reversing entries are an optional convenience: they let the bookkeeper record the later invoice the normal way without double-counting the accrual. Only accruals that will later be processed as a routine transaction need them."}
+  ],
+  "1-14": [
+    {"t":"h","v":"Users of Financial Information"},
+    {"t":"p","v":"Financial statements serve investors, lenders, and other creditors deciding whether to buy, sell, or hold debt or equity and whether to extend credit. Users are classified along two dimensions: direct vs. indirect (direct users such as investors and creditors are affected by results; indirect users such as analysts represent them) and internal vs. external (managers decide from inside; investors, lenders, and regulators decide from outside)."},
+    {"t":"h","v":"The Six Elements"},
+    {"t":"b","v":["Assets — present rights to economic benefit (what is owned).","Liabilities — present obligations to transfer economic benefit (what is owed).","Equity (net assets) — the residual interest after liabilities are deducted from assets.","Comprehensive income and its components — revenues, expenses, gains, losses.","Investments by owners.","Distributions to owners."]},
+    {"t":"h","v":"The Four Financial Statements"},
+    {"t":"s","v":["Balance Sheet (Statement of Financial Position) — assets, liabilities, and equity at a point in time.","Income Statement (Statement of Comprehensive Income) — results of operations over a period.","Statement of Changes in Stockholders' Equity — movements in equity for the period.","Statement of Cash Flows — cash inflows and outflows for the period."]},
+    {"t":"tip","v":"The balance sheet is a snapshot at a point in time (permanent accounts, cumulative balances). The income statement is like a movie covering a period of time (temporary accounts that reset to zero each year)."},
+    {"t":"h","v":"Classified Balance Sheet"},
+    {"t":"p","v":"Assets and liabilities are split into current and non-current. Current assets are cash and items expected to be realized in cash or used up within one year or the operating cycle. Current liabilities will be settled within that same span using current assets or by creating other current liabilities. Everything else is non-current. This classification lets users assess liquidity (how soon assets become cash) and solvency (ability to meet long-term obligations)."},
+    {"t":"h","v":"Multiple-Step Income Statement"},
+    {"t":"f","l":"GROSS PROFIT","v":"Gross Profit = Sales Revenue − Cost of Goods Sold"},
+    {"t":"p","v":"A multiple-step income statement subtotals gross profit, then deducts operating expenses to reach operating income, before other items and taxes. Gross profit (as an amount and as a percentage of sales) is a key profitability measure: it must be large enough to cover selling, general, and administrative expenses. The financial statements articulate — net income flows into retained earnings on the balance sheet, and the statements tie together through the notes."}
+  ],
+  "1-15": [
+    {"t":"h","v":"Purpose of the Statement of Cash Flows"},
+    {"t":"p","v":"The Statement of Cash Flows (SCF) reports the cash receipts and cash payments of a company during the period. Here \"cash\" means the combined total of cash, cash equivalents, restricted cash, and restricted cash equivalents. It helps users assess the ability to generate future cash flows, meet obligations and pay dividends, and understand why net income differs from cash flow."},
+    {"t":"h","v":"The Three Categories"},
+    {"t":"b","v":["Operating — cash from customers, interest and dividends received, interest paid, payments to suppliers and employees, and income taxes paid.","Investing — purchase and sale of property, plant, and equipment, and the purchase and sale of most debt and equity investments.","Financing — proceeds from issuing stock, borrowing and repaying debt (loans, bonds, notes), cash dividends paid to owners, and purchases of treasury stock."]},
+    {"t":"tip","v":"Watch the classic traps: dividends PAID are financing, but dividends RECEIVED are operating; interest paid and interest received are both operating. The three categories must sum to the net increase or decrease in cash for the period."},
+    {"t":"h","v":"Direct vs. Indirect Method"},
+    {"t":"p","v":"Both are allowed under U.S. GAAP and differ only in the operating activities section. The direct method adjusts each income statement line to a cash figure (e.g., cash collected from customers). The indirect method starts with net income and adjusts it back to cash."},
+    {"t":"s","v":["Start with net income.","Add back non-cash expenses such as depreciation and amortization (they reduced net income but used no cash).","Remove gains/losses tied to investing or financing activities.","Adjust for changes in working capital — receivables, inventory, payables, and other current accounts."]},
+    {"t":"tip","v":"Under the indirect method, an increase in a current asset (e.g., receivables) is subtracted from net income, and an increase in a current liability (e.g., payables) is added. If the indirect method is used, the cash paid for interest and for income taxes must be disclosed separately."}
+  ],
+  "1-16": [
+    {"t":"h","v":"What Internal Control Is"},
+    {"t":"p","v":"Internal control (per the COSO framework) is a process — effected by the board, management, and other personnel — designed to provide reasonable assurance about achieving objectives in three categories: operations (effective, efficient operations and safeguarding assets), reporting (reliable reporting), and compliance (with laws and regulations)."},
+    {"t":"b","v":["It is a process, not a one-time event — it is ongoing.","It is carried out by people, not just policy manuals.","It provides only reasonable, not absolute, assurance.","Its cost should not exceed the expected benefit.","It must be flexible enough to fit the entity's structure."]},
+    {"t":"h","v":"Internal Control Risk"},
+    {"t":"p","v":"Internal control risk is the risk that the system fails to achieve its objectives. Even a well-designed system gives only reasonable assurance because of human error, collusion among employees, management override, and controls becoming outdated without ongoing monitoring."},
+    {"t":"h","v":"Segregation of Duties"},
+    {"t":"p","v":"No single person should control a whole process. Four functions should be handled by different people:"},
+    {"t":"s","v":["Authorizing a transaction.","Recording the transaction.","Custody of the related assets.","Periodic reconciliation (an independent check)."]},
+    {"t":"tip","v":"Segregation of duties reduces fraud and error but does NOT eliminate it: two or more people can collude to defeat the controls. Safeguarding assets adds physical controls (locked/guarded areas, periodic counts) and software controls (passwords, user authentication, logical access)."}
+  ],
+  "1-17": [
+    {"t":"h","v":"Working Capital Management"},
+    {"t":"p","v":"Working capital management is keeping enough cash and liquidity to pay liabilities as they come due, without holding so much in low-return current assets that profitability suffers. The liquidity a company needs depends on the length of its operating cycle."},
+    {"t":"f","l":"NET WORKING CAPITAL","v":"Net Working Capital = Current Assets − Current Liabilities"},
+    {"t":"h","v":"The Operating Cycle & Cash Cycle"},
+    {"t":"f","l":"OPERATING CYCLE","v":"Operating Cycle = Days' Sales in Receivables + Days' Sales in Inventory"},
+    {"t":"f","l":"CASH (CONVERSION) CYCLE","v":"Cash Cycle = Operating Cycle − Days' Purchases in Accounts Payable"},
+    {"t":"p","v":"The operating cycle is the time from acquiring inventory to collecting cash from its sale. The cash cycle is the time from paying for inventory to collecting cash — it strips out the days of \"free\" financing the company gets from its own suppliers. Example: inventory age 120 days + receivables age 40 days = 160-day operating cycle; less 100 days of payables = a 60-day cash cycle."},
+    {"t":"tip","v":"A shorter cash cycle frees up cash. A negative cash cycle (collecting from customers before paying suppliers) is a very favorable position. Permanent working capital is the minimum always needed; temporary working capital is the seasonal increase that later reverts."}
+  ],
+  "1-18": [
+    {"t":"h","v":"Why Companies Hold Cash"},
+    {"t":"s","v":["Transactions motive — cash as a medium of exchange to pay for ordinary business operations.","Precautionary motive — a liquidity buffer for unexpected needs.","Speculative motive — cash on hand to seize good opportunities quickly (e.g., discounted inventory)."]},
+    {"t":"h","v":"Float"},
+    {"t":"p","v":"Float is the delay between when a payment is initiated and when the cash actually changes hands in the bank. The two day-to-day cash goals are to speed up collections (reduce collection float) and slow down disbursements (increase disbursement float). Both collection and disbursement float consist of mail float, operational (processing) float, and clearing float."},
+    {"t":"b","v":["Speed collections — use electronic funds transfer (EFT), wire transfers, lockboxes, and discounts for early payment.","Slow disbursements — pay as close to the deadline as possible, unless taking an early-payment discount is worthwhile."]},
+    {"t":"tip","v":"Credit terms like \"2/10, net 30\" mean a 2% discount if paid within 10 days, otherwise the full amount is due in 30 days. Pay within the discount period when the discount beats the cost of the funds."}
+  ],
+  "1-19": [
+    {"t":"h","v":"Managing Accounts Receivable: Credit Policy"},
+    {"t":"p","v":"Most firms must extend credit to compete. A company's credit policy has three levers, and tightening or loosening any of them shifts the trade-off between sales volume and the costs of carrying receivables (collection costs, foregone interest, and credit losses)."},
+    {"t":"s","v":["Credit standards — how creditworthy a customer must be to receive credit.","Credit terms — the payment period, any early-payment discount, and any late-payment penalty.","Collection efforts — time and money spent pursuing past-due accounts before writing them off."]},
+    {"t":"p","v":"Looser credit policy: higher sales but higher receivable balances, more credit losses, and higher collection costs. Stricter policy: the opposite. Factoring sells receivables to a factor for immediate cash — with recourse (seller keeps default risk) or without recourse (factor assumes the risk, for a higher fee)."},
+    {"t":"h","v":"Managing Accounts Payable"},
+    {"t":"p","v":"On the payables side, disbursement float can be used to retain cash longer, but the early-payment discount usually wins. The cost of forgoing a discount can be approximated:"},
+    {"t":"f","l":"COST OF NOT TAKING A DISCOUNT","v":"[365 ÷ (Total Period − Discount Period)] × [Discount% ÷ (100% − Discount%)]"},
+    {"t":"tip","v":"This annualized cost is usually high (often 30%+ for 2/10, net 30), which is why taking the discount almost always beats holding the cash. Use 365 days as the default unless a question states otherwise."}
+  ],
+  "1-20": [
+    {"t":"h","v":"Why Hold Inventory"},
+    {"t":"p","v":"For sellers and manufacturers, inventory is often the largest item on the balance sheet, so small cost changes have a big profit impact. A manufacturer carries three inventory types:"},
+    {"t":"b","v":["Finished goods — completed units available for sale, so orders can be filled.","Raw materials — inputs held so production isn't dependent on buying exactly as needed.","Work-in-process — units partway through manufacturing."]},
+    {"t":"h","v":"The Costs of Inventory"},
+    {"t":"s","v":["Purchasing costs — the cost of the inventory itself plus shipping-in.","Carrying costs — storage, insurance, taxes, obsolescence, spoilage, theft, and the opportunity cost of capital tied up in inventory.","Ordering costs — placing, receiving, inspecting, and recording each order.","Stockout costs — lost sales, rush shipping, and lost customer goodwill when inventory isn't available.","Shrinkage — the gap between recorded and physically-counted inventory, from theft or recording errors."]},
+    {"t":"h","v":"Lead Time, Safety Stock & Reorder Point"},
+    {"t":"p","v":"Lead time is the wait between placing an order and receiving it — longer lead time raises stockout risk. Safety stock is the buffer kept on hand to absorb delays or demand spikes; the right level depends on demand variability, lead-time variability, and the cost of a stockout. The reorder point is the inventory level that triggers a new order."},
+    {"t":"tip","v":"Inventory management is a balancing act: too little inventory causes stockouts and lost sales, while too much ties up cash and piles on carrying costs. The goal is to minimize total inventory cost, not any single cost category."}
   ]
 }
