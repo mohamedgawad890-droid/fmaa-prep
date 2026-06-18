@@ -455,7 +455,7 @@ async function ensureLessons(sectionId){
   try{const res=await fetch('./lessons/fmaa-s'+sid+'.json');if(!res.ok)throw new Error('HTTP '+res.status);const data=await res.json();const sec=S.find(s=>String(s.id)===sid);if(sec){sec.lessons.forEach(l=>{if(data[l.id])l.blocks=data[l.id];});}LESSON_CACHE[sid]=true;}
   catch(e){console.error('Failed to load lessons for section '+sid,e);}
 }
-async function prewarmLessons(){try{await Promise.all([1].map(i=>ensureLessons(i)));}catch(e){}}
+async function prewarmLessons(){try{await Promise.all([1,2,3,4,5].map(i=>ensureLessons(i)));}catch(e){}}
 setTimeout(prewarmLessons,4000);
 const QUIZ_CACHE={};
 async function ensureQuizzes(sectionId){
