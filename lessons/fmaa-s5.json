@@ -1,0 +1,23 @@
+{
+  "5-1": [
+    {"t":"h","v":"What Ethics Is"},
+    {"t":"p","v":"Ethics is the set of moral principles or values that drives an individual's behavior and decisions — the standards of conduct that originate from a group or society. It is often defined as the application of values to decision making, where those values include honesty, fairness, responsibility, respect, and compassion. Professional ethics on the FMAA is tested in two arenas: business ethics, and the ethical considerations specific to management accounting and finance professionals."},
+    {"t":"h","v":"Business Ethics"},
+    {"t":"p","v":"Business ethics is both a field of study (analyzing whether organizational practices are acceptable) and a code of conduct guiding how a business behaves. It is a systematic study of the principles, values, and norms guiding an organization:"},
+    {"t":"b","v":["Principles — firm boundaries for behavior that should not be violated, such as human rights and fundamentals of justice; they often form the basis for rules.","Values — socially enforced beliefs and ideals, such as teamwork, trust, and integrity.","Norms — standards of behavior judged proper and acceptable."]},
+    {"t":"h","v":"Key Ethical Issues"},
+    {"t":"p","v":"Ethics should be formally built into the organization's culture through a code of conduct, reinforced by the tone set by management (\"tone at the top\"). Common issues include conflicts of interest, whistleblowing, and social responsibility (how the entity relates to its communities, the environment, and society)."},
+    {"t":"tip","v":"A conflict of interest arises when an individual's personal interest could improperly influence their professional judgment or duty. A whistleblower is a person who reports wrongdoing or corruption. The exam may ask you to classify an item as a principle, a value, or a norm — know the distinction."}
+  ],
+  "5-2": [
+    {"t":"h","v":"The IMA Statement of Ethical Professional Practice"},
+    {"t":"p","v":"The Institute of Management Accountants (IMA) codifies professional ethics in its Statement of Ethical Professional Practice. Members must not commit, nor condone others committing, acts contrary to it. The Statement has two layers — overarching principles and specific standards — and the exam expects you to know which is which."},
+    {"t":"h","v":"The Four Overarching Principles"},
+    {"t":"b","v":["Honesty — truthfulness and trustworthiness.","Fairness — acting impartially, free from bias or injustice.","Objectivity — basing judgments on an established set of criteria, unbiased.","Responsibility — being accountable for one's actions and obligations."]},
+    {"t":"h","v":"The Four Standards"},
+    {"t":"s","v":["Competence — maintaining the skill, knowledge, and qualifications to do the job, including keeping up with changes in laws, regulations, and standards (e.g., new GAAP/IFRS).","Confidentiality — keeping information confidential unless disclosure is authorized or legally required, and never using it for unethical or illegal advantage.","Integrity — avoiding conflicts of interest, refraining from conduct that discredits the profession.","Credibility — communicating information fairly and objectively, disclosing all relevant information."]},
+    {"t":"h","v":"Resolving Ethical Conflicts"},
+    {"t":"s","v":["First follow the organization's established policies for resolving the conflict.","If unresolved, discuss the issue with the immediate supervisor — unless the supervisor is involved, in which case go to the next higher level.","Contact the IMA Ethics Helpline for confidential guidance.","Consult your own attorney about your legal rights and obligations."]},
+    {"t":"tip","v":"Principles vs. standards is the classic trap: Honesty, Fairness, Objectivity, Responsibility are PRINCIPLES; Competence, Confidentiality, Integrity, Credibility are STANDARDS. They overlap — for example, a credibility issue often involves competence too, so cite both. When resolving a conflict, escalating to a supervisor who is themselves involved is never the right step — go one level higher."}
+  ]
+}

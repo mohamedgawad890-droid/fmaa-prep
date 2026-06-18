@@ -1,0 +1,30 @@
+{
+  "3-1": [
+    {"t":"h","v":"What a Budget Is"},
+    {"t":"p","v":"A budget is developed in advance of the period it covers, based on forecasts and assumptions. It is primarily a planning tool and guideline — not a device to restrict what can be done. Planning, budgeting, and performance evaluation are interrelated and inseparable: planning sets the goals, the budget quantifies them, and performance evaluation compares actual results against the budget. The terms profit plan and budget are used interchangeably."},
+    {"t":"h","v":"Advantages of Budgets"},
+    {"t":"b","v":["Force managers to plan ahead and set goals.","Provide a framework for measuring performance (the current budget is a better benchmark than last year's results).","Promote coordination and communication across departments.","Allocate organizational resources efficiently.","Provide a means of controlling operations and checking progress toward goals."]},
+    {"t":"h","v":"Methods of Developing a Budget"},
+    {"t":"b","v":["Participative — built bottom-up; the people affected help prepare it, so they own it and are more committed.","Authoritative — built top-down; senior management prepares it.","Consultative — a compromise: senior management seeks input from lower levels, then sets the budget."]},
+    {"t":"tip","v":"Budgetary slack is deliberately setting targets too easy to achieve, which is why performance shouldn't be judged against the current budget alone (also use industry and prior-year comparisons). A good budget target is demanding but achievable, and should motivate rather than punish. Differences between actual results and the budget are called variances."}
+  ],
+  "3-2": [
+    {"t":"h","v":"The Master (Annual) Budget"},
+    {"t":"p","v":"The master budget — also called the comprehensive budget — is the culmination of the budgeting process: a full set of budgeted financial statements and the supporting schedules. It is a static budget, prepared for a single planned level of activity."},
+    {"t":"h","v":"Static vs. Flexible Budgets"},
+    {"t":"p","v":"Because the master budget is static, when actual volume differs from planned volume, part of every variance is simply caused by that volume difference. A flexible budget fixes this: it takes the budgeted variable revenues and costs per unit and applies them to the actual level of activity. Prepared after the actual activity level is known, it answers \"what should the budget have been at the volume we actually hit?\" — isolating the variances that are not caused by volume."},
+    {"t":"h","v":"Other Budgeting Approaches"},
+    {"t":"b","v":["Incremental budgeting — starts from the prior period's budget and adjusts up or down.","Zero-based budgeting (ZBB) — every item must be justified from zero each period, regardless of prior budgets.","Project budgeting — budgets built around specific projects rather than ongoing operations.","Continuous (rolling) budgets — as one period ends, a new period is added, keeping a constant budget horizon."]},
+    {"t":"tip","v":"A flexible budget is used alongside the master budget, not instead of it. The master budget measures the volume effect; the flexible budget strips volume out so management can see efficiency and price variances on their own."}
+  ],
+  "3-3": [
+    {"t":"h","v":"The Master Budget Structure"},
+    {"t":"p","v":"The master budget has two parts: the Operating Budget (the budgeted income statement and everything that supports it) and the Financial Budget (capital expenditures, cash, and the budgeted balance sheet). Each schedule depends on earlier ones, so they must be built in sequence."},
+    {"t":"h","v":"The Operating Budget — In Order"},
+    {"t":"s","v":["Sales Budget — prepared FIRST; it drives every other budget.","Production Budget — how many units must be made to meet sales and target inventory.","Direct Materials Usage & Purchases Budgets.","Direct Labor Usage Budget.","Manufacturing Overhead Budget.","Ending Inventories Budgets (finished goods and direct materials).","Budgeted Cost of Goods Manufactured, then Budgeted Cost of Goods Sold.","Budgeted Income Statement."]},
+    {"t":"f","l":"PRODUCTION BUDGET","v":"Units to Produce = Budgeted Sales + Desired Ending FG Inventory − Beginning FG Inventory"},
+    {"t":"h","v":"The Financial Budget"},
+    {"t":"b","v":["Capital Expenditures Budget — long-term spending on PP&E; planned years ahead and folded into the budget year.","Cash Budget — expected cash receipts and disbursements, used to manage liquidity.","Budgeted Balance Sheet — the projected end-of-period financial position."]},
+    {"t":"tip","v":"Exam questions often hinge on the order of preparation. The Sales Budget must come first because production, materials, labor, and the cash budget all flow from it. The production budget formula rearranges the COGS logic: start from sales, add desired ending inventory, subtract what's already on hand."}
+  ]
+}

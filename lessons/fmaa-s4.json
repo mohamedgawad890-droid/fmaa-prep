@@ -1,0 +1,62 @@
+{
+  "4-1": [
+    {"t":"h","v":"Cost Behavior"},
+    {"t":"p","v":"Costs are classified by how they respond to changes in activity within the relevant range — the range of activity over which the assumed cost behavior holds."},
+    {"t":"tbl","h":["Cost Type","Total Cost","Per-Unit Cost"],"r":[["Variable","Changes with activity","Stays constant"],["Fixed","Stays constant","Changes (falls as volume rises)"],["Mixed","Has both components","Has both components"]]},
+    {"t":"p","v":"Variable costs (e.g., direct materials, direct labor) are incurred only when activity occurs. Fixed costs (e.g., factory rent, equipment depreciation, supervisor salaries) stay constant in total within the relevant range. Mixed costs combine both: a semi-variable cost is a fixed base plus a variable amount (e.g., base salary plus commission), while a semi-fixed (step) cost jumps up in steps as activity crosses small ranges."},
+    {"t":"f","l":"UNIT CONTRIBUTION","v":"Unit Contribution = Selling Price per Unit − Unit Variable Costs"},
+    {"t":"tip","v":"If a volume change stays within the relevant range, total fixed cost does not change — assume this unless a question says otherwise. Over a long enough horizon, all costs behave like variable costs."},
+    {"t":"h","v":"Cost Measurement Methods"},
+    {"t":"b","v":["Standard costing — uses predetermined standard costs for materials, labor, and overhead; emphasizes flexible budgeting and variance analysis.","Normal costing — uses actual direct materials and labor but applies overhead with a predetermined rate.","Actual costing — uses actual amounts for all three cost elements."]},
+    {"t":"h","v":"Absorption vs. Variable Costing"},
+    {"t":"p","v":"Under absorption costing, fixed manufacturing overhead is a product (inventoriable) cost that attaches to units and is expensed only when the units are sold. Under variable costing, fixed manufacturing overhead is treated as a period cost and expensed in full as incurred. As a result, absorption-costing income moves with production volume, while variable-costing income moves with sales volume. Costs are accumulated using either process costing (homogeneous, continuous output) or job-order costing (distinct jobs or batches)."}
+  ],
+  "4-2": [
+    {"t":"h","v":"Variable & Fixed Overhead"},
+    {"t":"p","v":"Overhead is the indirect cost of production that can't be traced to a single unit. Variable overhead changes in total with activity (constant per unit); fixed overhead stays constant in total within the relevant range. Under absorption costing, fixed overhead is a necessary, inventoriable cost of production."},
+    {"t":"h","v":"Applying Overhead"},
+    {"t":"f","l":"PREDETERMINED OVERHEAD RATE","v":"Estimated Total Overhead ÷ Estimated Total Allocation Base"},
+    {"t":"f","l":"APPLIED OVERHEAD","v":"Predetermined Rate × Actual (or Standard) Activity Base"},
+    {"t":"p","v":"Overhead is grouped into cost pools and assigned to products using an allocation base — direct labor hours, machine hours, or another driver that best reflects what causes the cost (e.g., product weight). In an automated plant, machine hours are usually a better base than labor hours. Fixed and variable overhead may share one pool or be allocated separately."},
+    {"t":"h","v":"Over- and Under-Applied Overhead"},
+    {"t":"p","v":"Because the rate is set in advance, applied overhead rarely equals actual overhead. If applied exceeds actual, overhead is over-applied; if actual exceeds applied, it is under-applied. The difference is adjusted at period-end. Allocation can be done plant-wide (one rate) or by department (a rate per department)."},
+    {"t":"tip","v":"The predetermined rate uses ESTIMATED figures set before the period; applied overhead then uses the ACTUAL (or standard) activity level during the period. The gap between applied and actual overhead is the over- or under-applied amount."}
+  ],
+  "4-3": [
+    {"t":"h","v":"Variance Analysis"},
+    {"t":"p","v":"Variance analysis compares actual results to budgeted (standard) amounts so management can investigate the causes. It enables management by exception — only significant variances are escalated for attention."},
+    {"t":"h","v":"Splitting the Static Budget Variance"},
+    {"t":"f","l":"FLEXIBLE BUDGET VARIANCE","v":"Actual Results − Flexible Budget Amount"},
+    {"t":"f","l":"SALES VOLUME VARIANCE","v":"Flexible Budget Amount − Static Budget Amount"},
+    {"t":"p","v":"For each line, the flexible budget variance plus the sales volume variance equals the total static budget variance. The sales volume variance captures the part caused purely by selling a different number of units than planned; the flexible budget variance captures everything else (price and efficiency)."},
+    {"t":"h","v":"Manufacturing Input Variances"},
+    {"t":"p","v":"The total variance for a direct input (materials or labor) is the flexible budget variance, and it splits into a price component and a quantity component. AP = actual price, SP = standard price, AQ = actual quantity, SQ = standard quantity allowed for actual output."},
+    {"t":"f","l":"PRICE (RATE) VARIANCE","v":"(AP − SP) × AQ"},
+    {"t":"f","l":"QUANTITY (EFFICIENCY / USAGE) VARIANCE","v":"(AQ − SQ) × SP"},
+    {"t":"p","v":"Price + Quantity = Total variance. For materials these are the price and quantity (usage) variances; for labor they are the rate and efficiency variances — same structure, different names. The standard quantity is always the amount allowed for the ACTUAL output, not the planned output."},
+    {"t":"tip","v":"For a cost variance, a POSITIVE result is unfavorable (you spent more than standard) and a NEGATIVE result is favorable. Example: using 290 sq. meters when 250 were allowed at a $5 standard price gives a (290 − 250) × $5 = $200 unfavorable quantity variance."}
+  ],
+  "4-4": [
+    {"t":"h","v":"Profitability Analysis"},
+    {"t":"p","v":"Customer profitability analysis measures the profit earned from an individual customer or group, supporting targeted marketing and pricing. Product profitability analysis does the same by product line. Both reveal where a company truly makes — or loses — money."},
+    {"t":"h","v":"Segment Performance: ROI & Residual Income"},
+    {"t":"p","v":"The two primary measures of a segment's financial performance are Return on Investment (ROI) and Residual Income (RI). ROI is the key measure for an investment center — it expresses profit as a percentage of the assets invested."},
+    {"t":"f","l":"RETURN ON INVESTMENT (ROI)","v":"ROI = Operating Income ÷ Investment (Operating Assets)"},
+    {"t":"f","l":"RESIDUAL INCOME (RI)","v":"RI = Operating Income − (Required Rate of Return × Investment)"},
+    {"t":"p","v":"The required rate of return (the hurdle rate) is the minimum acceptable return — generally the company's weighted-average cost of capital (WACC), raised for higher-risk segments. As a decision tool, a project is acceptable if its ROI exceeds the hurdle rate."},
+    {"t":"tip","v":"ROI is a percentage, so it can wrongly lead a high-ROI manager to reject a good project that would lower their average. Residual Income is a dollar amount that avoids this: any project earning above the hurdle rate adds positive RI and should be accepted."}
+  ],
+  "4-5": [
+    {"t":"h","v":"Cost-Volume-Profit (CVP) Analysis"},
+    {"t":"p","v":"CVP analysis, also called breakeven analysis, is a short-run tool that examines the relationship among selling price, volume, costs, and profit. It rests on simplifying assumptions: all costs are either fixed or variable (no mixed costs), fixed costs stay constant within the relevant range, unit variable cost and unit selling price stay constant, and the sales mix is constant."},
+    {"t":"h","v":"Contribution Margin"},
+    {"t":"f","l":"UNIT CONTRIBUTION MARGIN","v":"Selling Price per Unit − Variable Cost per Unit"},
+    {"t":"p","v":"Contribution margin is the revenue left after variable costs, available to cover fixed costs. Total contribution margin equals unit CM × units sold, or total revenue − total variable costs. Once fixed costs are covered, each additional unit's contribution margin flows straight to operating income."},
+    {"t":"h","v":"Breakeven & Target Profit"},
+    {"t":"f","l":"BREAKEVEN VOLUME (UNITS)","v":"Fixed Costs ÷ Unit Contribution Margin"},
+    {"t":"f","l":"TARGET-PROFIT VOLUME (UNITS)","v":"(Fixed Costs + Target Profit) ÷ Unit Contribution Margin"},
+    {"t":"h","v":"Relevant Information for Decisions"},
+    {"t":"p","v":"Relevant costs and revenues are those that are in the future and differ between alternatives. Sunk costs (already incurred, unchangeable) are never relevant. An opportunity cost — the benefit forgone by choosing one option over another — is relevant. Marginal (incremental) revenue and cost are the changes in total revenue and cost from one more unit of activity."},
+    {"t":"tip","v":"In any decision, ignore sunk costs and focus only on what changes between the options. Breakeven is just the special case of the target-profit formula where target profit is zero."}
+  ]
+}

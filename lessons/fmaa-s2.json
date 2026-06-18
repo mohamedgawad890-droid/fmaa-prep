@@ -1,21 +1,90 @@
 {
   "2-1": [
-    { "t": "h", "v": "Inventory Cost Flow Methods" },
-    { "t": "p", "v": "When a company buys identical inventory items at different prices, it must choose a cost flow assumption to determine which costs go to COGS and which remain in ending inventory." },
-    { "t": "h", "v": "The Three Methods" },
-    { "t": "b", "v": [
-      "FIFO (First-In, First-Out): The oldest costs are assigned to COGS first. Ending inventory reflects the most recent (highest) costs.",
-      "LIFO (Last-In, First-Out): The newest costs are assigned to COGS first. Ending inventory reflects the oldest (lowest) costs. Note: Not permitted under IFRS.",
-      "Weighted Average: One average cost is calculated for all units available for sale. This average is applied to both COGS and ending inventory."
-    ]},
-    { "t": "f", "l": "COST OF GOODS AVAILABLE FOR SALE", "v": "Beginning Inventory + Purchases = Cost of Goods Available for Sale" },
-    { "t": "f", "l": "COGS FORMULA", "v": "Cost of Goods Available for Sale − Ending Inventory = COGS" },
-    { "t": "h", "v": "FIFO vs LIFO vs Weighted Average — Impact" },
-    { "t": "tbl", "h": ["Method", "COGS (Rising Prices)", "Ending Inventory (Rising Prices)", "Net Income"], "r": [
-      ["FIFO", "Lowest", "Highest (recent costs)", "Highest"],
-      ["LIFO", "Highest", "Lowest (old costs)", "Lowest"],
-      ["Weighted Avg", "Middle", "Middle", "Middle"]
-    ]},
-    { "t": "tip", "v": "In a period of rising prices (inflation), FIFO produces higher net income and higher ending inventory on the balance sheet. LIFO produces lower taxable income (tax advantage) but is NOT allowed under IFRS — only US GAAP permits LIFO." }
+    {"t":"h","v":"Valuation of Accounts Receivable"},
+    {"t":"p","v":"Receivables are reported at their net realizable value — the amount the company expects to actually collect. Because some receivables will never be collected, a valuation (contra-asset) account, Allowance for Credit Losses, is netted against gross receivables on the balance sheet, similar to how accumulated depreciation reduces fixed assets."},
+    {"t":"p","v":"At each reporting date the estimate is updated: debit Credit Loss Expense and credit the Allowance for Credit Losses. The expense is commonly estimated as a percentage of credit sales for the period. The expected loss is \"held\" in the allowance account until the company knows which specific accounts to write off."},
+    {"t":"h","v":"Inventory Valuation & COGS"},
+    {"t":"f","l":"COST OF GOODS SOLD","v":"COGS = Beginning Inventory + Purchases − Ending Inventory"},
+    {"t":"p","v":"Every unit available during the period is either sold (COGS) or still on hand (ending inventory), so valuing inventory directly drives the profit calculation."},
+    {"t":"h","v":"Cost Flow Assumptions: FIFO vs. LIFO"},
+    {"t":"b","v":["FIFO (First-In, First-Out) — the earliest units are assumed sold first, leaving the newest costs in ending inventory.","LIFO (Last-In, First-Out) — the most recent units are assumed sold first, leaving the oldest costs in ending inventory. LIFO is prohibited under IFRS."]},
+    {"t":"tip","v":"In a period of RISING prices: FIFO gives a higher ending inventory, lower COGS, and higher net income; LIFO gives a lower ending inventory, higher COGS, and lower net income. The FMAA exam tests only FIFO and LIFO."},
+    {"t":"h","v":"Property, Plant & Equipment"},
+    {"t":"p","v":"Fixed assets are long-term, physical assets used in operations (not for resale) and are usually depreciated. Depreciation is the systematic and rational allocation of an asset's cost over its useful life, matching the cost to the periods that benefit. Book value = cost − accumulated depreciation; the original cost stays unchanged until disposal."},
+    {"t":"f","l":"STRAIGHT-LINE DEPRECIATION","v":"(Cost − Salvage Value) ÷ Estimated Useful Life"},
+    {"t":"f","l":"DOUBLE DECLINING BALANCE","v":"(2 × Straight-Line Rate) × Beginning-of-Year Net Book Value"},
+    {"t":"p","v":"The depreciable base is cost minus salvage value. Straight-line spreads an equal amount each year. Double declining balance (DDB) is an accelerated method: it applies twice the straight-line rate to the declining book value and ignores salvage until the end (book value is not depreciated below salvage)."},
+    {"t":"tip","v":"Land is never depreciated — its useful life is unlimited. Straight-line is the simplest method; DDB front-loads depreciation into the early years."}
+  ],
+  "2-2": [
+    {"t":"h","v":"The Revenue Recognition Principle"},
+    {"t":"p","v":"Revenue is recognized in the period in which the performance obligation is satisfied — that is, when the customer obtains control of the good or service — in an amount reflecting the consideration the company expects to receive. The standard is principles-based, not rules-based."},
+    {"t":"h","v":"The Five-Step Model"},
+    {"t":"s","v":["Identify the contract with the customer.","Identify the separate performance obligations in the contract.","Determine the transaction price.","Allocate the transaction price to the separate performance obligations.","Recognize revenue when (or as) each performance obligation is satisfied."]},
+    {"t":"tip","v":"Not every transaction needs all five steps, and they need not be applied strictly in order. For a simple cash sale, control transfers and revenue is recognized immediately. Complex cases (long-term construction, multi-service contracts) are beyond the FMAA scope."},
+    {"t":"h","v":"Expense Recognition"},
+    {"t":"p","v":"The matching principle ties expense recognition to the revenue it helped generate: expenses are recognized when the work or product contributes to revenue in the period. Gains and losses — including those on the disposal of fixed assets — are recognized when the related transaction occurs."}
+  ],
+  "2-3": [
+    {"t":"h","v":"Components of Stockholders' Equity"},
+    {"t":"p","v":"The corporate balance sheet splits owners' equity into two main classifications: contributed (paid-in) capital and retained earnings. Contributed capital is what investors paid in; retained earnings are the undistributed profits reinvested in the company."},
+    {"t":"h","v":"Common & Preferred Stock"},
+    {"t":"p","v":"Corporations may issue common stock (basic ownership with voting rights and a residual claim) and preferred stock (priority over common for dividends and liquidation, usually without voting rights)."},
+    {"t":"f","l":"ISSUING STOCK ABOVE PAR","v":"Cash = (Par Value × Shares) credited to Common Stock + Excess credited to APIC"},
+    {"t":"p","v":"Par value is a small stated value per share representing the company's legal (stated) capital, which generally cannot be distributed as dividends — which is why par is set low. When shares are issued, par value is credited to Common Stock and the excess to Additional Paid-In Capital (APIC)."},
+    {"t":"tip","v":"Treasury stock is the company's own previously-issued shares that it has repurchased; it is a contra-equity account that reduces total equity. Retained earnings rise with net income and fall with dividends declared."}
+  ],
+  "2-4": [
+    {"t":"h","v":"Comparative Financial Statement Analysis"},
+    {"t":"p","v":"To compare companies or periods of different sizes, each financial statement item can be expressed as a percentage of a relevant base rather than as a raw dollar amount. This comes in two forms: vertical and horizontal analysis."},
+    {"t":"h","v":"Vertical (Common-Size) Analysis"},
+    {"t":"b","v":["Income statement — each line is stated as a percentage of sales revenue (e.g., selling expense as a percent of sales).","Balance sheet — each line is stated as a percentage of total assets (e.g., cash as a percent of total assets)."]},
+    {"t":"p","v":"Vertical common-size statements show the internal composition of a single period, making it easy to compare the structure of two differently-sized companies side by side."},
+    {"t":"h","v":"Horizontal (Trend) Analysis"},
+    {"t":"p","v":"Horizontal analysis, also called common-base-year analysis, compares each item across multiple periods — expressing later periods relative to a base year — to reveal growth trends and changes over time."},
+    {"t":"tip","v":"Vertical = composition within one period (a snapshot of proportions). Horizontal = change across periods (a trend over time). Both convert dollars to percentages so size differences don't distort the comparison."}
+  ],
+  "2-5": [
+    {"t":"h","v":"Liquidity Ratios"},
+    {"t":"p","v":"Liquidity ratios measure a company's ability to pay its short-term obligations as they come due. The more conservative the financing policy, the higher the current ratio and working capital a company will hold."},
+    {"t":"f","l":"CURRENT RATIO","v":"Current Assets ÷ Current Liabilities"},
+    {"t":"f","l":"QUICK (ACID-TEST) RATIO","v":"(Cash + Marketable Securities + Net Receivables) ÷ Current Liabilities"},
+    {"t":"f","l":"CASH RATIO","v":"(Cash + Marketable Securities) ÷ Current Liabilities"},
+    {"t":"f","l":"CASH FLOW RATIO","v":"Operating Cash Flow ÷ Period-End Current Liabilities"},
+    {"t":"f","l":"NET WORKING CAPITAL RATIO","v":"(Current Assets − Current Liabilities) ÷ Total Assets"},
+    {"t":"tip","v":"Benchmarks: current ratio 2:1, quick ratio 1:1, annualized cash flow ratio 0.40+. The quick ratio excludes inventory (it must be replaced to keep operating, and it's two steps from cash) and prepaids, but includes receivables (one step from cash, and factorable)."}
+  ],
+  "2-6": [
+    {"t":"h","v":"Leverage & Solvency"},
+    {"t":"p","v":"Where liquidity is paying short-term obligations from current assets, solvency is paying long-term obligations from earnings. Financial leverage is using debt to amplify returns; interest is a fixed charge that must be paid regardless of profits, which raises risk."},
+    {"t":"h","v":"Capital Structure Ratios"},
+    {"t":"f","l":"DEBT TO EQUITY","v":"Total Liabilities ÷ Total Equity"},
+    {"t":"f","l":"LONG-TERM DEBT TO EQUITY","v":"(Total Debt − Current Liabilities) ÷ Total Equity"},
+    {"t":"f","l":"DEBT TO TOTAL ASSETS","v":"Total Liabilities ÷ Total Assets"},
+    {"t":"h","v":"Earnings Coverage"},
+    {"t":"f","l":"INTEREST COVERAGE (TIMES INTEREST EARNED)","v":"EBIT ÷ Interest Expense"},
+    {"t":"tip","v":"Capital-structure ratios show how much financing is debt; coverage ratios show whether earnings can service it. Times Interest Earned above 3.0 is excellent; at 1.5 or below, default risk rises sharply. A debt-to-equity around 2:1 or higher warrants deeper analysis."}
+  ],
+  "2-7": [
+    {"t":"h","v":"Activity (Efficiency) Ratios"},
+    {"t":"p","v":"Activity ratios show how efficiently a company manages receivables, inventory, and payables. A turnover ratio counts how many times an item is used up and replaced in a year; the matching \"days\" figure converts that into the average number of days in that stage."},
+    {"t":"f","l":"RECEIVABLES TURNOVER","v":"Net Annual Credit Sales ÷ Average Gross Accounts Receivable"},
+    {"t":"f","l":"DAYS' SALES IN RECEIVABLES","v":"365 ÷ Receivables Turnover"},
+    {"t":"f","l":"INVENTORY TURNOVER","v":"Annual COGS ÷ Average Inventory"},
+    {"t":"f","l":"DAYS' INVENTORY","v":"365 ÷ Inventory Turnover"},
+    {"t":"f","l":"PAYABLES TURNOVER","v":"Annual Credit Purchases ÷ Average Accounts Payable"},
+    {"t":"f","l":"DAYS' PAYABLES","v":"365 ÷ Payables Turnover"},
+    {"t":"tip","v":"A higher receivables turnover (shorter collection period) is good — cash comes in faster. These feed directly into Section A's cycles: Operating Cycle = Days' Receivables + Days' Inventory, and Cash Cycle subtracts Days' Payables. Use 365 days unless told otherwise."}
+  ],
+  "2-8": [
+    {"t":"h","v":"Profitability Ratios"},
+    {"t":"p","v":"Margin ratios show how much of each sales dollar survives at successive levels of the income statement; return ratios show how much profit the company generates from its assets and from owners' investment."},
+    {"t":"f","l":"GROSS PROFIT MARGIN","v":"(Net Sales − COGS) ÷ Net Sales"},
+    {"t":"f","l":"OPERATING PROFIT MARGIN","v":"Operating Income ÷ Net Sales"},
+    {"t":"f","l":"NET PROFIT MARGIN","v":"Net Income ÷ Net Sales"},
+    {"t":"f","l":"RETURN ON ASSETS (ROA)","v":"Net Income ÷ Average Total Assets"},
+    {"t":"f","l":"RETURN ON EQUITY (ROE)","v":"Net Income ÷ Average Stockholders' Equity"},
+    {"t":"f","l":"EARNINGS PER SHARE (EPS)","v":"(Net Income − Preferred Dividends) ÷ Weighted-Average Common Shares"},
+    {"t":"tip","v":"The gap between gross margin and operating margin is the SG&A burden; the gap between operating margin and net margin is mainly interest and taxes. ROA measures how well assets generate profit; ROE measures the return earned on owners' investment. \"Average\" balances use the average of beginning and ending amounts."}
   ]
 }
