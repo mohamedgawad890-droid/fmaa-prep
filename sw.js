@@ -1,13 +1,14 @@
 // FMAA Prep — Service Worker
 // Caches the app shell for offline use and handles auto-updates.
 
-const CACHE_NAME = 'fmaa-prep-v3';
+const CACHE_NAME = 'fmaa-prep-v4';
 
 // Files to cache on install (app shell)
 const PRECACHE_URLS = [
   './',
   './index.html',
   './manifest.json',
+  './dictionary.json',
   './icon-192.png',
   './icon-512.png',
   './gawad-avatar.webp',
@@ -91,7 +92,7 @@ self.addEventListener('fetch', event => {
   }
 
   // ── Lesson and quiz JSON → network-first, fall back to cache ─────────────────
-  if (url.pathname.includes('/lessons/') || url.pathname.includes('/questions/')) {
+  if (url.pathname.includes('/lessons/') || url.pathname.includes('/questions/') || url.pathname.endsWith('/dictionary.json')) {
     event.respondWith(
       fetch(req)
         .then(response => {
