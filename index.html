@@ -102,7 +102,6 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .info-title{font-size:13px;font-weight:600;color:#888;letter-spacing:.5px;margin-bottom:8px}
 .profile-nudge{display:flex;gap:12px;align-items:flex-start;background:#FFF8E7;border:1px solid #F6D860;border-radius:10px;padding:12px 14px;margin-bottom:14px}
 .profile-nudge-text{flex:1;font-size:13px;color:#555;line-height:1.5}
-.profile-nudge-btn{flex-shrink:0;padding:6px 12px;border-radius:8px;border:none;background:#1A5276;color:#fff;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;margin-top:2px}
 .toast-item{animation:slideUp .2s ease}
 .toast-item.removing{animation:fadeOut .25s ease forwards}
 @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
@@ -199,8 +198,6 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 </div>
 <script>
 // ─── FIREBASE ────────────────────────────────────────────────────────────────
-// ACTION REQUIRED: Replace with your FMAA Firebase project config
-// Find it in Firebase Console → Project Settings → Your Apps → Web App
 const INSTRUCTOR_UID = 'VxfphLMf9UZoWUDvTusVyXh3U1S2';
 window.onerror=function(msg,src,line,col,err){
   try{console.error('[App error]',msg,(src||'')+':'+line+':'+col,err);}catch(_){}
@@ -368,7 +365,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false}};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -463,9 +460,14 @@ async function ensureQuizzes(sectionId){
   try{const res=await fetch('./questions/fmaa-s'+sid+'.json');if(!res.ok)throw new Error('HTTP '+res.status);const data=await res.json();const sec=S.find(s=>String(s.id)===sid);if(sec){sec.lessons.forEach(l=>{if(data[l.id])l.quizzes=data[l.id];});}QUIZ_CACHE[sid]=true;}
   catch(e){console.error('Failed to load quizzes for section '+sid,e);}
 }
-async function prewarmQuizzes(){try{await Promise.all([1].map(i=>ensureQuizzes(i)));}catch(e){}}
+async function prewarmQuizzes(){try{await Promise.all([1,2,3,4,5].map(i=>ensureQuizzes(i)));}catch(e){}}
 setTimeout(prewarmQuizzes,6000);
 
+// ─── LESSON LIST HELPER ──────────────────────────────────────────────────────
+function renderLessonListHTML(sec,prog){
+  const items=sec.lessons.map((l,i)=>{const done=lessonDone(l.id);const lsc=(prog.lessonScores||{})[l.id];const qpct=lsc?Math.round(lsc.correct/lsc.total*100):null;return`<div style="background:${done?sec.bg:'#f8f8f6'};margin-bottom:8px;border-radius:10px;border:.5px solid ${done?sec.text+'30':'#e0e0d8'}"><div style="display:flex;align-items:center;gap:10px;padding:10px 12px"><div style="width:28px;height:28px;border-radius:50%;background:${done?sec.bar:'#e5e5e0'};display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0;font-weight:600">${done?'✓':i+1}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:13px;font-weight:500;color:${done?sec.strong:'#1a1a1a'}">${i+1}. ${esc(l.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${l.dur}${lsc?` · ${qpct>=70?'✅':'🔴'} ${lsc.correct}/${lsc.total} (${qpct}%)`:' · Quiz not attempted'}</div></div><div style="display:flex;gap:6px;flex-shrink:0"><button onclick="event.stopPropagation();studyGo(${sec.id},'${l.id}')" style="width:36px;height:36px;border-radius:9px;border:.5px solid ${sec.text}30;background:${done?sec.bar:'#fff'};color:${done?'#fff':sec.strong};font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">📖</button><button onclick="event.stopPropagation();doLessonQuiz('${l.id}')" style="width:36px;height:36px;border-radius:9px;border:.5px solid ${lsc?(qpct>=70?'#1E844940':'#E24B4A40'):'#1A527640'};background:${lsc?(qpct>=70?'#D5F5E3':'#FCEBEB'):'#D6EAF8'};color:${lsc?(qpct>=70?'#186A3B':'#A32D2D'):'#1A5276'};font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">🎯</button></div></div></div>`;}).join('');
+  return`<div style="margin-top:10px;border-top:.5px solid ${sec.text}20;padding-top:10px"><div style="font-size:11px;font-weight:500;color:${sec.text};margin-bottom:8px;letter-spacing:.5px">LESSONS &amp; QUIZZES</div>${items}</div>`;
+}
 // ─── STUDY NAVIGATION ─────────────────────────────────────────────────────────
 function studyGo(sectId,lessonId){
   if(STATE.lessonId&&!lessonId)endStudyTimer();
@@ -484,10 +486,7 @@ function toggleSection(secId){
   else{
     const sec=S.find(s=>s.id===secId);if(!sec){render();return;}
     const prog=STATE.progress;
-    const html=sec.lessons.map((l,i)=>{const done=lessonDone(l.id);const lsc=(prog.lessonScores||{})[l.id];const qpct=lsc?Math.round(lsc.correct/lsc.total*100):null;
-    return`<div style="background:${done?sec.bg:'#f8f8f6'};margin-bottom:8px;border-radius:10px;border:.5px solid ${done?sec.text+'30':'#e0e0d8'}"><div style="display:flex;align-items:center;gap:10px;padding:10px 12px"><div style="width:28px;height:28px;border-radius:50%;background:${done?sec.bar:'#e5e5e0'};display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0;font-weight:600">${done?'✓':i+1}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:13px;font-weight:500;color:${done?sec.strong:'#1a1a1a'}">${i+1}. ${esc(l.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${l.dur}${lsc?` · ${qpct>=70?'✅':'🔴'} ${lsc.correct}/${lsc.total} (${qpct}%)`:' · Quiz not attempted'}</div></div><div style="display:flex;gap:6px;flex-shrink:0"><button onclick="event.stopPropagation();studyGo(${sec.id},'${l.id}')" style="width:36px;height:36px;border-radius:9px;border:.5px solid ${sec.text}30;background:${done?sec.bar:'#fff'};color:${done?'#fff':sec.strong};font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">📖</button><button onclick="event.stopPropagation();doLessonQuiz('${l.id}')" style="width:36px;height:36px;border-radius:9px;border:.5px solid ${lsc?(qpct>=70?'#1E844940':'#E24B4A40'):'#1A527640'};background:${lsc?(qpct>=70?'#D5F5E3':'#FCEBEB'):'#D6EAF8'};color:${lsc?(qpct>=70?'#186A3B':'#A32D2D'):'#1A5276'};font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">🎯</button></div></div></div>`;
-    }).join('');
-    listEl.innerHTML=`<div style="margin-top:10px;border-top:.5px solid ${sec.text}20;padding-top:10px"><div style="font-size:11px;font-weight:500;color:${sec.text};margin-bottom:8px;letter-spacing:.5px">LESSONS & QUIZZES</div>${html}</div>`;
+    listEl.innerHTML=renderLessonListHTML(sec,prog);
     listEl.style.display='block';if(iconEl)iconEl.style.transform='rotate(90deg)';
   }
 }
@@ -751,19 +750,19 @@ function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAc
             ['SU 27','B.3. Activity Ratios'],
             ['SU 28','B.3. Profitability Ratios']
           ]},
-          {id:'C',name:'Planning &amp; Budgeting',pct:'20%',units:3,bar:'#7D3C98',bg:'#E8DAEF',strong:'#6C3483',topics:[
+          {id:'C',name:'Planning &amp; Budgeting',pct:'20%',units:3,bar:'#B9770E',bg:'#FAEEDA',strong:'#7E5109',topics:[
             ['SU 29','C.1. Budgeting Concepts'],
             ['SU 30','C.2. Budgeting Methodologies'],
             ['SU 31','C.3. Annual Operating Plan &amp; Supporting Schedules']
           ]},
-          {id:'D',name:'Cost Management &amp; Performance Metrics',pct:'20%',units:5,bar:'#BA4A00',bg:'#FAE5D3',strong:'#A04000',topics:[
+          {id:'D',name:'Cost Management &amp; Performance Metrics',pct:'20%',units:5,bar:'#884EA0',bg:'#F4ECF7',strong:'#6C3483',topics:[
             ['SU 32','D.1. Cost Measurement Concepts'],
             ['SU 33','D.2. Variable and Fixed Overhead Expenses'],
             ['SU 34','D.3. Cost and Variance Measures'],
             ['SU 35','D.4. Performance Measurement'],
             ['SU 36','D.5. Cost Information for Decision Making']
           ]},
-          {id:'E',name:'Professional Ethics',pct:'10%',units:2,bar:'#2E4053',bg:'#D5D8DC',strong:'#212F3D',topics:[
+          {id:'E',name:'Professional Ethics',pct:'10%',units:2,bar:'#CB4335',bg:'#FADBD8',strong:'#943126',topics:[
             ['SU 37','E.1. Business Ethics'],
             ['SU 38','E.2. Ethical Considerations for Accountants in Business']
           ]}
@@ -975,7 +974,7 @@ function renderStudy(){
   const sectCards=S.map(sec=>{
     const lessonsDone=sec.lessons.filter(l=>lessonDone(l.id)).length;const sp=Math.round(lessonsDone/sec.lessons.length*100);
     const secQuizDone=sec.lessons.filter(l=>progress.lessonScores?.[l.id]).length;const isOpen=STATE.sectId===sec.id;
-    const ll=isOpen?`<div style="margin-top:10px;border-top:.5px solid ${sec.text}20;padding-top:10px"><div style="font-size:11px;font-weight:500;color:${sec.text};margin-bottom:8px;letter-spacing:.5px">LESSONS &amp; QUIZZES</div>${sec.lessons.map((l,i)=>{const done=lessonDone(l.id);const lsc=(progress.lessonScores||{})[l.id];const qpct=lsc?Math.round(lsc.correct/lsc.total*100):null;return`<div style="background:${done?sec.bg:'#f8f8f6'};margin-bottom:8px;border-radius:10px;border:.5px solid ${done?sec.text+'30':'#e0e0d8'}"><div style="display:flex;align-items:center;gap:10px;padding:10px 12px"><div style="width:28px;height:28px;border-radius:50%;background:${done?sec.bar:'#e5e5e0'};display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0;font-weight:600">${done?'✓':i+1}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:13px;font-weight:500;color:${done?sec.strong:'#1a1a1a'}">${i+1}. ${esc(l.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${l.dur}${lsc?` · ${qpct>=70?'✅':'🔴'} ${lsc.correct}/${lsc.total} (${qpct}%)`:' · Quiz not attempted'}</div></div><div style="display:flex;gap:6px;flex-shrink:0"><button onclick="event.stopPropagation();studyGo(${sec.id},'${l.id}')" style="width:36px;height:36px;border-radius:9px;border:.5px solid ${sec.text}30;background:${done?sec.bar:'#fff'};color:${done?'#fff':sec.strong};font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">📖</button><button onclick="event.stopPropagation();doLessonQuiz('${l.id}')" style="width:36px;height:36px;border-radius:9px;border:.5px solid ${lsc?(qpct>=70?'#1E844940':'#E24B4A40'):'#1A527640'};background:${lsc?(qpct>=70?'#D5F5E3':'#FCEBEB'):'#D6EAF8'};color:${lsc?(qpct>=70?'#186A3B':'#A32D2D'):'#1A5276'};font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">🎯</button></div></div></div>`;}).join('')}</div>`:'';
+    const ll=isOpen?renderLessonListHTML(sec,progress):'';
     return`<div id="sec-card-${sec.id}" class="card" style="cursor:pointer;border-color:${isOpen?sec.text+'60':'#e0e0d8'};border-width:${isOpen?'1px':'.5px'}" onclick="toggleSection(${sec.id})"><div style="display:flex;align-items:center;gap:10px"><div class="sect-icon" style="background:${sec.bg}">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${sec.weight}% of exam · ${lessonsDone}/${sec.lessons.length} lessons · ${secQuizDone}/${sec.lessons.length} quizzes</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0"><span class="badge" style="background:${sec.bg};color:${sec.strong}">${sp}%</span><span id="sec-icon-${sec.id}" style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isOpen?'90deg':'0deg'})">›</span></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:10px;overflow:hidden"><div style="height:100%;width:${sp}%;background:${sec.bar};border-radius:2px"></div></div><div id="sec-lessons-${sec.id}" style="${isOpen?'':'display:none'}">${ll}</div></div>`;
   }).join('');
   return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px"><div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
@@ -1272,7 +1271,6 @@ function loadMockResults(){try{const d=localStorage.getItem('fmaa-mock-v1');retu
 function saveMockResult(result){try{const history=loadMockResults();history.unshift(result);localStorage.setItem('fmaa-mock-v1',JSON.stringify(history.slice(0,5)));}catch{}}
 function mockShuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function mockFmtTime(s){const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60;if(h>0)return`${h}:${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;return`${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;}
-if(!STATE.mockExam)STATE.mockExam={status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false};
 function mockClearTimers(){if(STATE.mockExam.mcqInterval){clearInterval(STATE.mockExam.mcqInterval);STATE.mockExam.mcqInterval=null;}}
 function mockSelectMCQ(){const totalW=S.reduce((a,s)=>a+(s.weight||0),0)||1;const qs=[];S.forEach(sec=>{let pool=[];sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight}));});pool=mockShuffle(pool);const take=Math.round((sec.weight/totalW)*MOCK_TARGET);qs.push(...pool.slice(0,take));});return mockShuffle(qs).slice(0,MOCK_TARGET);}
 async function startMockExam(){STATE.mockExam.status='loading';render();for(const sec of S)await ensureQuizzes(sec.id);const mcqQ=mockSelectMCQ();if(mcqQ.length===0){showToast('No quiz questions are loaded yet for the mock exam. Check back once the question banks are added.','info');STATE.mockExam.status='idle';render();return;}STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false};render();STATE.mockExam.mcqInterval=setInterval(()=>{if(STATE.tab!=='mock-exam'){mockClearTimers();return;}STATE.mockExam.mcqTime--;const tel=document.getElementById('mock-timer');if(tel){tel.textContent=mockFmtTime(STATE.mockExam.mcqTime);tel.style.color=STATE.mockExam.mcqTime<300?'#E24B4A':'#1a1a1a';}mockUpdateNav();if(STATE.mockExam.mcqTime<=0){clearInterval(STATE.mockExam.mcqInterval);STATE.mockExam.mcqInterval=null;mockSubmitMCQ(true);}},1000);}
