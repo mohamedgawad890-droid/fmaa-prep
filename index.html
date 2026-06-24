@@ -528,7 +528,7 @@ async function doLessonQuiz(lessonId){
   await ensureQuizzes(sec.id);
   const lesson=sec.lessons.find(l=>l.id===lessonId);
   if(!lesson||!lesson.quizzes||lesson.quizzes.length===0){showToast('Quiz for this lesson is being prepared. Check back soon!','info');return;}
-  const questions=shuffle([...lesson.quizzes]).slice(0,20);
+  const questions=shuffle([...lesson.quizzes]).slice(0,15);
   STATE.quizState={sId:sec.id,lessonId,questions,idx:0,selected:null,answers:[],isRetry:false,quizStartTime:Date.now(),qTimerStart:Date.now(),qTimerElapsed:null,questionTimes:[]};
   startStudyTimer('quiz-'+lessonId);STATE.tab='quiz-session';render();
 }
