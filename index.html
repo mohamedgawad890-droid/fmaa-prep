@@ -65,7 +65,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .ar-tip{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap;z-index:100;pointer-events:none}
 .ar-tip.show{display:block}
 .bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px}
-@media(min-width:900px){.bottom-nav{flex-direction:column;width:200px;min-width:200px;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto;flex:0 0 200px;align-self:stretch}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
+@media(min-width:900px){.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
 .nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 2px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
 .nav-btn.active{color:#1A5276;background:#EBF5FB}
 .nav-btn span:last-child{font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
@@ -115,7 +115,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .quiz-opt{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;margin-bottom:8px;border:.5px solid #e0e0d8;background:#f8f8f6;transition:background .1s}
 .quiz-opt-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;border:.5px solid #bbb;background:#fff}
 .quiz-opt-text{font-size:14px;color:#333;line-height:1.5;flex:1;padding-top:4px}
-@media(min-width:900px){#app{display:flex;flex-direction:row;overflow:hidden;align-items:stretch;height:100%}.bottom-nav{order:-1;flex-shrink:0;display:flex;flex-direction:column}.content{flex:1;min-width:0;overflow:hidden}}
+@media(min-width:900px){#app{flex-direction:row;align-items:stretch;height:100%;overflow:hidden}.bottom-nav{order:-1;flex:0 0 200px;width:200px;flex-direction:column;height:100%;align-self:stretch;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto}.content{flex:1;min-width:0;overflow:hidden}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
 .profile-hero{background:linear-gradient(160deg,#1A5276,#2980B9);padding:20px 20px 16px;text-align:center;flex-shrink:0}
 .profile-img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid rgba(255,255,255,.8);margin:0 auto 12px;display:block}
 .profile-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:4px}
@@ -1154,17 +1154,18 @@ function renderFormulaBank(){
 
 function renderSearch(){
   const q=STATE.searchQ;
+  return`<div class="sh"><h2>Search</h2><p>Find any lesson quickly</p></div>
+  <div style="padding:10px 16px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><input id="search-input" dir="ltr" type="text" placeholder="Search lessons..." value="${esc(q)}" oninput="STATE.searchQ=this.value;updateSearchResults()" style="width:100%;padding:10px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a;direction:ltr;text-align:left;unicode-bidi:plaintext"></div>
+  <div class="scroll-area pad" id="search-results" style="padding-top:14px">${searchResultsHTML(q)}</div>`;}
+function searchResultsHTML(q){
   const ql=q.toLowerCase();
   function blockText(blocks){if(!blocks||!blocks.length)return'';return blocks.map(b=>{if(!b)return'';if(typeof b.v==='string')return b.v;if(Array.isArray(b.v))return b.v.join(' ');if(b.h)return b.h;if(b.r)return b.r.flat().join(' ');return'';}).join(' ');}
   const results=q.length>=2?S.flatMap(sec=>sec.lessons.filter(l=>{const inTitle=l.title.toLowerCase().includes(ql);const inSecTitle=sec.title.toLowerCase().includes(ql);const inBlocks=l.blocks&&l.blocks.length>0&&blockText(l.blocks).toLowerCase().includes(ql);return inTitle||inSecTitle||inBlocks;}).map(l=>({...l,sec}))):[];
-  return`<div class="sh"><h2>Search</h2><p>Find any lesson quickly</p></div>
-  <div style="padding:10px 16px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><input id="search-input" dir="ltr" type="text" placeholder="Search lessons..." value="${esc(q)}" oninput="STATE.searchQ=this.value;render()" style="width:100%;padding:10px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a"></div>
-  <div class="scroll-area pad" style="padding-top:14px">
-    ${q.length<2?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">🔍</div><div>Type at least 2 characters</div></div>`
+  return `${q.length<2?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">🔍</div><div>Type at least 2 characters</div></div>`
     :results.length===0?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">😕</div><div>No results for "${esc(q)}"</div><div style="font-size:12px;margin-top:8px;color:#bbb">Try opening sections first to load their content, then search again.</div></div>`
     :results.map(l=>{const done=lessonDone(l.id);return`<div class="card" style="cursor:pointer;border-color:${done?l.sec.text+'30':'#e0e0d8'}" onclick="STATE.tab='study';studyGo(${l.sec.id},'${l.id}')"><div class="row"><div class="sect-icon" style="background:${l.sec.bg}">${l.sec.emoji}</div><div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500">${esc(l.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${esc(l.sec.title)} · ${l.dur}${done?' · ✅':''}</div></div><span style="color:#bbb;font-size:18px">›</span></div></div>`;}).join('')}
-    <div style="height:20px"></div>
-  </div>`;}
+    <div style="height:20px"></div>`;}
+function updateSearchResults(){const c=document.getElementById('search-results');if(c)c.innerHTML=searchResultsHTML(STATE.searchQ);}
 
 function toggleTrackerSect(id){const i=STATE.trackerOpenSects.indexOf(id);if(i>=0)STATE.trackerOpenSects.splice(i,1);else STATE.trackerOpenSects.push(id);render();}
 function renderTracker(){
@@ -1207,7 +1208,7 @@ function renderLeaderboard(){
 
 function renderCommunity(){
   const SECTS=[['all','All'],['General Accounting & Financial Management','Section A — General Accounting & Financial Management'],['Financial Statement Preparation & Analysis','Section B — Financial Statement Preparation & Analysis'],['Planning & Budgeting','Section C — Planning & Budgeting'],['Cost Management & Performance Metrics','Section D — Cost Management & Performance Metrics'],['Professional Ethics','Section E — Professional Ethics']];
-  const filterBtns=SECTS.map(([val,label])=>{const active=STATE.communityFilter===val;return`<button onclick="STATE.communityFilter='${val.replace(/'/g,"\\'")}';render()" style="padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;white-space:nowrap;font-weight:${active?'500':'400'};background:${active?'#1A5276':'#f5f5f0'};color:${active?'#fff':'#555'};border:${active?'1px solid #1A5276':'.5px solid #d0d0d0'}">${label}</button>`;}).join('');
+  const filterBtns=SECTS.map(([val,label])=>{const active=STATE.communityFilter===val;return`<button onclick="STATE.communityFilter='${val.replace(/'/g,"\\'")}';render()" style="flex-shrink:0;padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;white-space:nowrap;font-weight:${active?'500':'400'};background:${active?'#1A5276':'#f5f5f0'};color:${active?'#fff':'#555'};border:${active?'1px solid #1A5276':'.5px solid #d0d0d0'}">${label}</button>`;}).join('');
   const questions=STATE.communityFilter==='all'?STATE.communityQuestions:STATE.communityQuestions.filter(q=>q.section===STATE.communityFilter);
   const qCards=questions.length===0?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">💬</div><div style="font-size:15px;font-weight:500;margin-bottom:6px">No questions yet</div><div style="font-size:13px">Be the first to ask!</div></div>`
     :questions.map(q=>{const upvoted=(q.upvotes||[]).includes(STATE.user?.uid);const isOwner=STATE.user?.uid===q.authorId;
@@ -1402,7 +1403,7 @@ function render(){
   if(STATE.tab===_prevTab&&_savedScroll>0){const nsa=content.querySelector('.scroll-area');if(nsa)nsa.scrollTop=_savedScroll;}
   render._lastTab=STATE.tab;
   if(STATE.tab==='study'&&STATE.lessonId){setTimeout(()=>syncNoteFromCloud(STATE.lessonId),0);}
-  if(STATE.tab==='search'){setTimeout(()=>{const inp=document.getElementById('search-input');if(inp)inp.focus();},50);if(!STATE._searchPrewarmed){STATE._searchPrewarmed=true;prewarmLessons().then(()=>{if(STATE.tab==='search'&&STATE.searchQ.length>=2)render();});}}
+  if(STATE.tab==='search'){setTimeout(()=>{const inp=document.getElementById('search-input');if(inp)inp.focus();},50);if(!STATE._searchPrewarmed){STATE._searchPrewarmed=true;prewarmLessons().then(()=>{if(STATE.tab==='search'&&STATE.searchQ.length>=2)updateSearchResults();});}}
   if(STATE.tab==='dictionary'){if(!STATE.dictLoaded)setTimeout(ensureDictionary,0);setTimeout(()=>{const i=document.getElementById('dict-input');if(i)i.focus();},50);}
   if(STATE.tab==='onboarding'){try{localStorage.setItem('fmaa-visited','1');}catch{}}
   if(STATE.tab==='leaderboard'&&!STATE.leaderboardLoaded)setTimeout(loadLeaderboard,0);
