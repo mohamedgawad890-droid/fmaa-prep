@@ -65,7 +65,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .ar-tip{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap;z-index:100;pointer-events:none}
 .ar-tip.show{display:block}
 .bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px}
-@media(min-width:900px){.bottom-nav{flex-direction:column;width:200px;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
+@media(min-width:900px){.bottom-nav{flex-direction:column;width:200px;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto;align-self:stretch;height:100%}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
 .nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 2px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
 .nav-btn.active{color:#1A5276;background:#EBF5FB}
 .nav-btn span:last-child{font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
@@ -298,7 +298,7 @@ function mergeProgress(a,b){
   const ls={...(a.lessonScores||{})};
   const bls=b.lessonScores||{};
   for(const k in bls){const cur=ls[k],inc=bls[k];if(!cur){ls[k]=inc;continue;}const accCur=cur.total?cur.correct/cur.total:0,accInc=inc.total?inc.correct/inc.total:0;ls[k]=(accInc>accCur||(accInc===accCur&&(inc.total||0)>(cur.total||0)))?inc:cur;}
-  return{done,lessonScores:ls,mcqTotal:Math.max(a.mcqTotal||0,b.mcqTotal||0),mcqRight:Math.max(a.mcqRight||0,b.mcqRight||0)};
+  return{done,lessonScores:ls,mcqTotal:(a.mcqTotal||0)+(b.mcqTotal||0),mcqRight:(a.mcqRight||0)+(b.mcqRight||0)};
 }
 function loadLessonNote(lid){try{return localStorage.getItem('fmaa-note-'+lid)||'';}catch{return'';}}
 let _noteDebounce={};
@@ -307,9 +307,12 @@ function saveLessonNote(lid,val){
   clearTimeout(_noteDebounce[lid]);
   _noteDebounce[lid]=setTimeout(()=>{if(STATE.user&&db){db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid).set({text:val,updatedAt:firebase.firestore.FieldValue.serverTimestamp()}).catch(()=>{});}},1500);
 }
+const _noteSynced={};
 async function syncNoteFromCloud(lid){
   if(!STATE.user||!db)return;
-  try{const doc=await db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid).get();if(doc.exists){const cloud=doc.data().text||'';try{localStorage.setItem('fmaa-note-'+lid,cloud);}catch{}const el=document.getElementById('lesson-notes-'+lid);if(el&&el.value!==cloud)el.value=cloud;}}catch{}
+  if(_noteSynced[lid])return;
+  _noteSynced[lid]=true;
+  try{const doc=await db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid).get();if(doc.exists){const cloud=doc.data().text||'';try{localStorage.setItem('fmaa-note-'+lid,cloud);}catch{}const el=document.getElementById('lesson-notes-'+lid);if(el&&el.value!==cloud)el.value=cloud;}}catch{_noteSynced[lid]=false;}
 }
 function loadStreak(){try{const d=localStorage.getItem('fmaa-streak-v1');return d?JSON.parse(d):{count:0,lastDate:''};}catch{return{count:0,lastDate:''};}}
 function saveStreak(s){try{localStorage.setItem('fmaa-streak-v1',JSON.stringify(s));}catch{}}
@@ -592,7 +595,7 @@ async function loadQuestions(append=false){
     const pageDocs=docs.slice(0,COMMUNITY_PAGE);if(pageDocs.length)STATE.communityLastDoc=pageDocs[pageDocs.length-1];
     const mapped=pageDocs.map(d=>({id:d.id,...d.data()}));STATE.communityQuestions=append?STATE.communityQuestions.concat(mapped):mapped;
   }catch(e){console.error('Community load error:',e);showToast('Could not load questions.','error');}
-  STATE.communityLoading=false;STATE.communityLoaded=true;render();
+  STATE.communityLoading=false;STATE.communityLoaded=true;STATE.communityLastLoadTime=Date.now();render();
 }
 async function loadMoreQuestions(){await loadQuestions(true);}
 async function loadReplies(qId){try{const snap=await db.collection('fmaa-questions').doc(qId).collection('replies').orderBy('createdAt','asc').get();STATE.questionReplies=snap.docs.map(d=>({id:d.id,...d.data()}));render();}catch(e){console.log('Load replies error:',e);}}
@@ -1005,7 +1008,7 @@ function renderQuizModeSelect(){
   return`${renderSubNav(SUB_PRACTICE,'quiz-mode-select')}<div class="sh"><h2>Practice Mode</h2><p>Choose a quiz type to practice</p></div>
   <div class="scroll-area pad" style="padding-top:14px">
     <div onclick="navTo('mock-exam')" style="cursor:pointer;background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px;display:flex;align-items:center;gap:14px"><div style="font-size:30px">🏆</div><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:700;color:#fff">Full Mock Exam</div><div style="font-size:12px;color:rgba(255,255,255,.85);margin-top:2px">80 MCQs · 2 hours · exam simulation</div></div><div style="font-size:20px;color:rgba(255,255,255,.7)">›</div></div>
-    <div class="card" style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:12px">🎯 By Section</div>${S.map(sec=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:32px;height:32px;border-radius:8px;background:${sec.bg};display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:13px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888">${sec.weight}% of exam</div></div><button onclick="startQuizMode(${sec.id},20)" style="padding:8px 14px;border-radius:8px;border:none;background:${sec.bg};color:${sec.strong};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;flex-shrink:0">20 MCQs</button></div>`).join('')}</div>
+    <div class="card" style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:12px">🎯 By Section</div>${S.map(sec=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:32px;height:32px;border-radius:8px;background:${sec.bg};display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:13px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888">${sec.weight}% of exam</div></div><button onclick="startQuizMode(${sec.id},50)" style="padding:8px 14px;border-radius:8px;border:none;background:${sec.bg};color:${sec.strong};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;flex-shrink:0">50 MCQs</button></div>`).join('')}</div>
     <div class="card" style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:8px">📚 Mixed Practice</div><div style="font-size:13px;color:#888;margin-bottom:12px">Mix from all sections — great for exam simulation.</div><div style="display:flex;gap:8px"><button onclick="startQuizMode(null,30)" style="flex:1;padding:11px;border-radius:8px;border:none;background:#D6EAF8;color:#154360;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">30 MCQs</button><button onclick="startQuizMode(null,50)" style="flex:1;padding:11px;border-radius:8px;border:none;background:#D6EAF8;color:#154360;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">50 MCQs</button><button onclick="startQuizMode(null,100)" style="flex:1;padding:11px;border-radius:8px;border:none;background:#1A5276;color:#fff;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">100 MCQs</button></div></div>
     <button onclick="navTo('wrong-answers')" style="width:100%;padding:13px;border-radius:10px;border:1px solid #E24B4A40;background:#FCEBEB;color:#791F1F;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">❌ Review Wrong Answers</button>
     <div style="height:20px"></div>
@@ -1151,12 +1154,14 @@ function renderFormulaBank(){
 
 function renderSearch(){
   const q=STATE.searchQ;
-  const results=q.length>=2?S.flatMap(sec=>sec.lessons.filter(l=>l.title.toLowerCase().includes(q.toLowerCase())||l.id.toLowerCase().includes(q.toLowerCase())).map(l=>({...l,sec}))):[];
+  const ql=q.toLowerCase();
+  function blockText(blocks){if(!blocks||!blocks.length)return'';return blocks.map(b=>{if(!b)return'';if(typeof b.v==='string')return b.v;if(Array.isArray(b.v))return b.v.join(' ');if(b.h)return b.h;if(b.r)return b.r.flat().join(' ');return'';}).join(' ');}
+  const results=q.length>=2?S.flatMap(sec=>sec.lessons.filter(l=>{const inTitle=l.title.toLowerCase().includes(ql);const inSecTitle=sec.title.toLowerCase().includes(ql);const inBlocks=l.blocks&&l.blocks.length>0&&blockText(l.blocks).toLowerCase().includes(ql);return inTitle||inSecTitle||inBlocks;}).map(l=>({...l,sec}))):[];
   return`<div class="sh"><h2>Search</h2><p>Find any lesson quickly</p></div>
   <div style="padding:10px 16px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><input id="search-input" type="text" placeholder="Search lessons..." value="${esc(q)}" oninput="STATE.searchQ=this.value;render()" style="width:100%;padding:10px 14px;border-radius:10px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a"></div>
   <div class="scroll-area pad" style="padding-top:14px">
     ${q.length<2?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">🔍</div><div>Type at least 2 characters</div></div>`
-    :results.length===0?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">😕</div><div>No results for "${esc(q)}"</div></div>`
+    :results.length===0?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">😕</div><div>No results for "${esc(q)}"</div><div style="font-size:12px;margin-top:8px;color:#bbb">Try opening sections first to load their content, then search again.</div></div>`
     :results.map(l=>{const done=lessonDone(l.id);return`<div class="card" style="cursor:pointer;border-color:${done?l.sec.text+'30':'#e0e0d8'}" onclick="STATE.tab='study';studyGo(${l.sec.id},'${l.id}')"><div class="row"><div class="sect-icon" style="background:${l.sec.bg}">${l.sec.emoji}</div><div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500">${esc(l.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${esc(l.sec.title)} · ${l.dur}${done?' · ✅':''}</div></div><span style="color:#bbb;font-size:18px">›</span></div></div>`;}).join('')}
     <div style="height:20px"></div>
   </div>`;}
@@ -1201,7 +1206,7 @@ function renderLeaderboard(){
   </div>`;}
 
 function renderCommunity(){
-  const SECTS=[['all','All'],['General Accounting & Financial Management','Sec A'],['Financial Statement Preparation & Analysis','Sec B'],['Planning & Budgeting','Sec C'],['Cost Management & Performance Metrics','Sec D'],['Professional Ethics','Sec E']];
+  const SECTS=[['all','All'],['General Accounting & Financial Management','Section A — General Accounting & Financial Management'],['Financial Statement Preparation & Analysis','Section B — Financial Statement Preparation & Analysis'],['Planning & Budgeting','Section C — Planning & Budgeting'],['Cost Management & Performance Metrics','Section D — Cost Management & Performance Metrics'],['Professional Ethics','Section E — Professional Ethics']];
   const filterBtns=SECTS.map(([val,label])=>{const active=STATE.communityFilter===val;return`<button onclick="STATE.communityFilter='${val.replace(/'/g,"\\'")}';render()" style="padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;white-space:nowrap;font-weight:${active?'500':'400'};background:${active?'#1A5276':'#f5f5f0'};color:${active?'#fff':'#555'};border:${active?'1px solid #1A5276':'.5px solid #d0d0d0'}">${label}</button>`;}).join('');
   const questions=STATE.communityFilter==='all'?STATE.communityQuestions:STATE.communityQuestions.filter(q=>q.section===STATE.communityFilter);
   const qCards=questions.length===0?`<div style="text-align:center;padding:40px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">💬</div><div style="font-size:15px;font-weight:500;margin-bottom:6px">No questions yet</div><div style="font-size:13px">Be the first to ask!</div></div>`
@@ -1350,7 +1355,7 @@ async function navTo(tab){
   if(STATE.mockExam&&STATE.mockExam.status==='mcq'&&tab!=='mock-exam'){mockClearTimers();STATE.mockExam.status='idle';}
   if(!STATE.user&&tab!=='login'&&tab!=='loading'&&tab!=='onboarding'){STATE.tab='login';render();return;}
   STATE.showProfileWarning=false;
-  if(tab==='community'){STATE.communityLoaded=false;}
+  if(tab==='community'){const now=Date.now();if(!STATE.communityLastLoadTime||now-STATE.communityLastLoadTime>60000){STATE.communityLoaded=false;}}
   if(tab==='register'&&STATE.user){syncStudentFromCloud().catch(()=>{});}
   STATE.tab=tab;render();
 }
@@ -1397,7 +1402,7 @@ function render(){
   if(STATE.tab===_prevTab&&_savedScroll>0){const nsa=content.querySelector('.scroll-area');if(nsa)nsa.scrollTop=_savedScroll;}
   render._lastTab=STATE.tab;
   if(STATE.tab==='study'&&STATE.lessonId){setTimeout(()=>syncNoteFromCloud(STATE.lessonId),0);}
-  if(STATE.tab==='search'){setTimeout(()=>{const inp=document.getElementById('search-input');if(inp)inp.focus();},50);}
+  if(STATE.tab==='search'){setTimeout(()=>{const inp=document.getElementById('search-input');if(inp)inp.focus();},50);if(!STATE._searchPrewarmed){STATE._searchPrewarmed=true;prewarmLessons().then(()=>{if(STATE.tab==='search'&&STATE.searchQ.length>=2)render();});}}
   if(STATE.tab==='dictionary'){if(!STATE.dictLoaded)setTimeout(ensureDictionary,0);setTimeout(()=>{const i=document.getElementById('dict-input');if(i)i.focus();},50);}
   if(STATE.tab==='onboarding'){try{localStorage.setItem('fmaa-visited','1');}catch{}}
   if(STATE.tab==='leaderboard'&&!STATE.leaderboardLoaded)setTimeout(loadLeaderboard,0);
