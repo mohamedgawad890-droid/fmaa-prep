@@ -368,7 +368,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -1073,16 +1073,74 @@ function renderQuizSession(){
     <div style="height:20px"></div>
   </div>`;}
 
+
+// ─── FULL QUESTION REVIEW ─────────────────────────────────────────────────────
+function renderQuestionReview(questions, answers, title){
+  // answers: array of {selected, correct} for lesson/mode quizzes
+  // OR for mock: mcqA object {idx: chosenOption}
+  const right = answers.filter(a=>a.correct).length;
+  const total = questions.length;
+  const pct = Math.round(right/total*100);
+  const col = pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';
+  const items = questions.map((q,i)=>{
+    const ans = answers[i];
+    const chosen = ans ? ans.selected : null;
+    const ok = ans ? ans.correct : false;
+    const timeTaken = q._timeTaken ? fmtTime(q._timeTaken) : null;
+    const opts = (q.o||[]).map((opt,oi)=>{
+      let bg='#f8f8f6', border='.5px solid #e8e8e0', tc='#444', fw='400';
+      if(oi===q.a){bg='#D5F5E3';border='1px solid #1E8449';tc='#186A3B';fw='600';}
+      if(chosen===oi&&oi!==q.a){bg='#FCEBEB';border='1px solid #E24B4A';tc='#791F1F';fw='600';}
+      const marker = oi===q.a?'✓':chosen===oi?'✗':String.fromCharCode(65+oi);
+      const markerBg = oi===q.a?'#1E8449':chosen===oi?'#E24B4A':'#e0e0d8';
+      const markerC = (oi===q.a||chosen===oi)?'#fff':'#666';
+      return `<div style="display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:8px;background:${bg};border:${border};margin-bottom:6px">
+        <span style="width:22px;height:22px;border-radius:50%;background:${markerBg};color:${markerC};font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">${marker}</span>
+        <span style="font-size:13px;color:${tc};font-weight:${fw};line-height:1.45">${esc(opt)}</span>
+      </div>`;
+    }).join('');
+    const expHtml = (chosen!==null&&chosen!==undefined)
+      ? `<div style="background:${ok?'#EAF3DE':'#FFF3CD'};border-radius:8px;padding:10px 12px;margin-top:8px">
+          <div style="font-size:10px;font-weight:700;color:${ok?'#186A3B':'#856404'};letter-spacing:.5px;margin-bottom:4px">${ok?'✅ CORRECT':'💡 EXPLANATION'}</div>
+          <div style="font-size:12px;color:#444;line-height:1.6">${esc(q.e||'')}</div>
+        </div>` : '';
+    const skippedNote = (chosen===null||chosen===undefined)
+      ? `<div style="font-size:12px;color:#888;font-style:italic;margin-top:4px">— Not answered</div>` : '';
+    return `<div style="background:#fff;border:.5px solid ${ok?'#1E844930':'#e0e0d8'};border-left:3px solid ${ok?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-bottom:10px">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px">
+        <div style="font-size:10px;font-weight:600;color:#888;letter-spacing:.5px">Q${i+1}${timeTaken?' · ⏱ '+timeTaken:''}</div>
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:${ok?'#D5F5E3':'#FCEBEB'};color:${ok?'#186A3B':'#A32D2D'};flex-shrink:0">${ok?'Correct':'Wrong'}</span>
+      </div>
+      <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px">${esc(q.q)}</div>
+      ${q.data&&q.data.length?`<table style="width:100%;border-collapse:collapse;margin:0 0 10px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:12px">${q.data.map(r=>`<tr><td style="padding:5px 8px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:5px 8px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('')}</table>`:''}
+      ${opts}${skippedNote}${expHtml}
+    </div>`;
+  }).join('');
+  return `<div style="padding:14px 16px 8px;border-bottom:.5px solid #e0e0d8;flex-shrink:0;display:flex;align-items:center;gap:10px">
+    <div style="flex:1"><div style="font-size:16px;font-weight:600">${esc(title||'Review')} — Full Review</div>
+    <div style="font-size:12px;color:#888;margin-top:2px">${right}/${total} correct · ${pct}%</div></div>
+    <span style="font-size:22px;font-weight:800;color:${col}">${pct}%</span>
+  </div>
+  <div class="scroll-area pad" style="padding-top:14px">${items}<div style="height:20px"></div></div>`;
+}
 function renderQuizResults(){
   const qs=STATE.quizState;if(!qs||!qs.done)return'';
   const right=qs.answers.filter(a=>a.correct).length;const total=qs.questions.length;const pct=Math.round(right/total*100);
   const col=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';
+  const sec=qs.sId?S.find(s=>s.id===qs.sId):null;
+  const lessonTitle=qs.lessonId?(sec?.lessons.find(l=>l.id===qs.lessonId)?.title||'Quiz'):'Wrong Answers';
+  const questionsWithTime=qs.questions.map((q,i)=>({...q,_timeTaken:(qs.questionTimes||[])[i]||null}));
+  const answersForReview=qs.answers.map(a=>({selected:a.selected,correct:a.correct}));
+  if(STATE._quizReviewMode){
+    return`<div class="bh"><button class="bh-back" onclick="STATE._quizReviewMode=false;render()">‹</button><div style="font-size:14px;font-weight:500">Back to Summary</div></div>
+    <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,answersForReview,lessonTitle)}</div>`;
+  }
   return`<div class="sh"><h2>Quiz Complete!</h2><p>${qs.isRetry?'Wrong Answers Review':'Quiz Results'}</p></div>
   <div class="scroll-area pad" style="padding-top:20px">
     <div style="text-align:center;margin-bottom:20px"><div style="font-size:52px;font-weight:800;color:${col}">${pct}%</div><div style="font-size:15px;font-weight:500;color:${col};margin-top:4px">${pct>=70?'Great job! 🎉':pct>=50?'Keep practicing! 📈':'More study needed 📚'}</div><div style="font-size:13px;color:#888;margin-top:4px">${right} correct out of ${total}</div></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:20px"><div style="background:#D5F5E3;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1E8449">${right}</div><div style="font-size:11px;color:#888">Correct</div></div><div style="background:#FCEBEB;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#E24B4A">${total-right}</div><div style="font-size:11px;color:#888">Wrong</div></div><div style="background:#D6EAF8;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1A5276">${total}</div><div style="font-size:11px;color:#888">Total</div></div></div>
-    ${qs.questions.map((q,i)=>{const ans=qs.answers[i];const ok=ans?.correct;return`<div style="background:${ok?'#D5F5E3':'#FCEBEB'};border-radius:10px;padding:12px;margin-bottom:8px"><div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:14px;flex-shrink:0">${ok?'✅':'❌'}</span><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:500;color:#1a1a1a;line-height:1.4;margin-bottom:4px">${esc(q.q.length>80?q.q.slice(0,80)+'…':q.q)}</div>${!ok?`<div style="font-size:12px;color:#555">Correct: ${esc(q.o[q.a])}</div><div style="font-size:12px;color:#888;margin-top:3px;line-height:1.5">${esc(q.e)}</div>`:''}</div></div></div>`;}).join('')}
-    <div style="display:flex;gap:10px;margin-top:14px"><button onclick="STATE.tab='quiz-mode-select';render()" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study')" style="flex:2;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px"><div style="background:#D5F5E3;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1E8449">${right}</div><div style="font-size:11px;color:#888">Correct</div></div><div style="background:#FCEBEB;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#E24B4A">${total-right}</div><div style="font-size:11px;color:#888">Wrong</div></div><div style="background:#D6EAF8;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1A5276">${total}</div><div style="font-size:11px;color:#888">Total</div></div></div>
+    <button onclick="STATE._quizReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
+    <div style="display:flex;gap:10px;margin-top:4px"><button onclick="STATE.tab='quiz-mode-select';STATE._quizReviewMode=false;render()" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study');STATE._quizReviewMode=false;" style="flex:2;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div>
     <div style="height:20px"></div>
   </div>`;}
 
@@ -1090,7 +1148,14 @@ function renderQuizMode(){
   const qm=STATE.quizMode;if(!qm||!qm.active)return renderQuizModeSelect();
   if(qm.done){
     const right=qm.answers.filter(a=>a.correct).length;const total=qm.questions.length;const pct=Math.round(right/total*100);const col=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';
-    return`<div class="sh"><h2>Practice Complete!</h2><p>${right}/${total} correct · ${pct}%</p></div><div class="scroll-area pad" style="padding-top:20px"><div style="text-align:center;margin-bottom:24px"><div style="font-size:52px;font-weight:800;color:${col}">${pct}%</div><div style="font-size:15px;font-weight:500;color:${col};margin-top:4px">${pct>=70?'Excellent! 🎉':pct>=50?'Keep going! 📈':'More practice needed 📚'}</div></div><div style="display:flex;gap:10px"><button onclick="STATE.quizMode={active:false};navTo('quiz-mode-select')" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study')" style="flex:2;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div><div style="height:20px"></div></div>`;
+    const questionsWithTime=qm.questions.map((q,i)=>({...q,_timeTaken:(qm.questionTimes||[])[i]||null}));
+    if(STATE._mcqReviewMode){
+      return`<div class="bh"><button class="bh-back" onclick="STATE._mcqReviewMode=false;render()">‹</button><div style="font-size:14px;font-weight:500">Back to Summary</div></div>
+      <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,qm.answers,'MCQ Practice')}</div>`;
+    }
+    return`<div class="sh"><h2>Practice Complete!</h2><p>${right}/${total} correct · ${pct}%</p></div><div class="scroll-area pad" style="padding-top:20px"><div style="text-align:center;margin-bottom:20px"><div style="font-size:52px;font-weight:800;color:${col}">${pct}%</div><div style="font-size:15px;font-weight:500;color:${col};margin-top:4px">${pct>=70?'Excellent! 🎉':pct>=50?'Keep going! 📈':'More practice needed 📚'}</div></div>
+    <button onclick="STATE._mcqReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
+    <div style="display:flex;gap:10px"><button onclick="STATE.quizMode={active:false};STATE._mcqReviewMode=false;navTo('quiz-mode-select')" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study');STATE._mcqReviewMode=false;" style="flex:2;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div><div style="height:20px"></div></div>`;
   }
   const q=qm.questions[qm.idx];const sel=qm.selected;const barW=Math.round(qm.idx/qm.questions.length*100);
   const opts=q.o.map((opt,i)=>{
@@ -1345,11 +1410,37 @@ function renderMockMCQContent(){const cont=document.getElementById('mock-mcq-con
 async function mockConfirmSubmitMCQ(){const total=STATE.mockExam.mcqQ.length;const answered=Object.keys(STATE.mockExam.mcqA).length;const unanswered=total-answered;const ok=await showModal({icon:unanswered>0?'\u26A0\uFE0F':'\uD83D\uDCCB',title:unanswered>0?`${unanswered} Question${unanswered>1?'s':''} Unanswered`:'Submit Exam?',body:unanswered>0?`You have ${unanswered} unanswered question${unanswered>1?'s':''}. You can still submit \u2014 unanswered questions count as wrong.`:'Submit all answers and see your results?',type:unanswered>0?'warning':'info',confirmText:'Submit',cancelText:'Go Back'});if(ok)mockSubmitMCQ(false);}
 function mockSubmitMCQ(autoSubmit){mockClearTimers();const{mcqQ,mcqA}=STATE.mockExam;let correct=0;const secScores={};const mockWrong=[];mcqQ.forEach((q,i)=>{if(!secScores[q.sid])secScores[q.sid]={correct:0,total:0,title:q.stitle,bar:q.sbar};secScores[q.sid].total++;if(mcqA[i]===q.a){correct++;secScores[q.sid].correct++;}else{mockWrong.push({q:q.q,o:q.o,a:q.a,e:q.e,wrongWhy:q.wrongWhy,data:q.data,sid:q.sid,stitle:q.stitle,sbar:q.sbar,_fromMock:true,_userAns:mcqA[i]!==undefined?mcqA[i]:null});}});// Save mock wrong answers to localStorage for Wrong Answers review
 try{const existing=JSON.parse(localStorage.getItem('fmaa-mock-wrong-v1')||'[]');const merged=[...mockWrong,...existing].slice(0,100);localStorage.setItem('fmaa-mock-wrong-v1',JSON.stringify(merged));}catch(e){}
-const attempted=mcqQ.length;const scoreDenom=MOCK_TARGET;const rawPct=Math.round(correct/scoreDenom*100);const scaled=Math.min(MOCK_SCALE,Math.round(correct/scoreDenom*MOCK_SCALE));const pass=scaled>=MOCK_PASS;STATE.mockExam.results={correct,total:attempted,scoreDenom,rawPct,scaled,pass,secScores};STATE.mockExam.status='results';saveMockResult({date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}),dateTs:Date.now(),correct,total:attempted,scoreDenom,rawPct,scaled,pass});updateStreak();render();}
-function renderMockExamScreen(){const me=STATE.mockExam;if(me.status==='idle'||me.status==='loading')return renderMockIntro();if(me.status==='mcq')return renderMockMCQ();if(me.status==='results')return renderMockResults();return renderMockIntro();}
+const attempted=mcqQ.length;const scoreDenom=MOCK_TARGET;const rawPct=Math.round(correct/scoreDenom*100);const scaled=Math.min(MOCK_SCALE,Math.round(correct/scoreDenom*MOCK_SCALE));const pass=scaled>=MOCK_PASS;STATE.mockExam.results={correct,total:attempted,scoreDenom,rawPct,scaled,pass,secScores};STATE.mockExam.status='results';saveMockResult({date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}),dateTs:Date.now(),correct,total:attempted,scoreDenom,rawPct,scaled,pass});
+  // Save group exam result to Firestore
+  if(STATE.mockExam.isGroupExam&&STATE.mockExam.groupExamId&&STATE.user&&db){
+    const _st=loadStudent();
+    db.collection('fmaa-exam-results').add({
+      examId:STATE.mockExam.groupExamId,examTitle:STATE.mockExam.groupExamTitle||'Group Exam',
+      groupCode:STATE.mockExam.groupExamGroupCode||'',
+      uid:STATE.user.uid,studentName:_st?.name||'Student',studentId:_st?.studentId||'',
+      correct,total:attempted,scoreDenom,rawPct,scaled,pass,secScores,
+      submittedAt:new Date().toISOString()
+    }).catch(e=>console.warn('Group result save error:',e));
+  }
+  updateStreak();render();}
+function renderMockExamScreen(){
+  const me=STATE.mockExam;
+  if(me.status==='results'&&STATE._mockReviewMode){
+    // Build answers array from mcqA object
+    const answersForReview=me.mcqQ.map((_,i)=>{const chosen=me.mcqA[i]!==undefined?me.mcqA[i]:null;return{selected:chosen,correct:chosen!==null&&chosen===me.mcqQ[i].a};});
+    const questionsWithTime=me.mcqQ.map(q=>({...q}));
+    return`<div class="bh"><button class="bh-back" onclick="STATE._mockReviewMode=false;render()">‹</button><div style="font-size:14px;font-weight:500">Back to Results</div></div>
+    <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,answersForReview,me.groupExamTitle||'Mock Exam')}</div>`;
+  }
+  if(me.status==='idle'||me.status==='loading')return renderMockIntro();
+  if(me.status==='mcq')return renderMockMCQ();
+  if(me.status==='results')return renderMockResults();
+  return renderMockIntro();
+}
 function renderMockIntro(){const loading=STATE.mockExam.status==='loading';const history=loadMockResults();const historyHTML=history.length===0?'':`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCC8 Your Attempt History</div>${history.map((r,i)=>{const col=r.pass?'#1E8449':r.scaled>=170?'#EF9F27':'#E24B4A';const bg=r.pass?'#D5F5E3':r.scaled>=170?'#FAEEDA':'#FCEBEB';return`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:${i<history.length-1?'.5px solid #f0f0eb':'none'}"><div style="width:50px;height:46px;border-radius:10px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:${col};flex-shrink:0">${r.scaled}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${r.pass?'\u2705 Pass estimate':'\u274C Below 200'}</div><div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.total} correct (${r.rawPct}%) \u00B7 ${r.date}</div></div>${i===0?`<span style="font-size:10px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px;font-weight:500">Latest</span>`:''}</div>`;}).join('')}</div>`;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:16px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83C\uDFC6 Mock Exam</div><div style="font-size:12px;color:#888;margin-top:3px">FMAA \u2014 Full Simulation</div></div><div style="flex:1;overflow-y:auto;padding:16px"><div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:16px;padding:20px;color:#fff;margin-bottom:16px;text-align:center"><div style="font-size:36px;margin-bottom:8px">\uD83D\uDCCB</div><div style="font-size:19px;font-weight:700;margin-bottom:4px">Full Exam Simulation</div><div style="font-size:13px;opacity:.85">Conditions as close to exam day as possible</div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#D6EAF8;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#154360">80</div><div style="font-size:11px;color:#555;margin-top:3px">MCQs</div></div><div style="background:#D5F5E3;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#186A3B">2 hrs</div><div style="font-size:11px;color:#555;margin-top:3px">Time limit</div></div><div style="background:#FAEEDA;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#854F0B">200</div><div style="font-size:11px;color:#555;margin-top:3px">Pass (of 300)</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCCA Question Distribution</div>${S.map(sec=>{const totalW=S.reduce((a,s)=>a+(s.weight||0),0)||1;const take=Math.round((sec.weight/totalW)*MOCK_TARGET);const pool=sec.lessons.reduce((a,l)=>a+(l.quizzes&&l.quizzes.length?l.quizzes.length:0),0);const poolOk=pool>=take;return`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:28px;height:28px;border-radius:8px;background:${sec.bar}20;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:500;color:#333">${esc(sec.title)}</div><div style="font-size:10px;color:${poolOk?'#888':'#E24B4A'};margin-top:1px">${pool} questions loaded</div></div><div style="font-size:13px;font-weight:700;color:${sec.bar}">~${take} Qs</div></div>`;}).join('')}</div>${historyHTML}<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:12px;padding:12px;margin-bottom:12px;font-size:13px;color:#633806;line-height:1.6">\u26A0\uFE0F <strong>Rules:</strong> Once you start, the timer runs. You can flag questions and move freely between them. Submit when done, or the exam auto-submits when time runs out.</div><div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:12px;padding:12px;margin-bottom:16px;font-size:12px;color:#154360;line-height:1.6">\u2139\uFE0F The score shown is an <strong>estimated</strong> scaled score (0\u2013300). The real FMAA exam uses statistical equating, so 200 does not equal a fixed percentage \u2014 treat this as practice guidance, not an official prediction.</div><button onclick="startMockExam()" ${loading?'disabled':''} style="width:100%;padding:15px;border-radius:12px;border:none;background:${loading?'#888':'#1A5276'};color:#fff;font-size:16px;font-weight:700;cursor:${loading?'default':'pointer'};font-family:inherit">${loading?'\u23F3 Loading questions...':'\uD83D\uDE80 Start Mock Exam'}</button></div></div>`;}
 function renderMockMCQ(){const q=STATE.mockExam.mcqQ[STATE.mockExam.mcqCurr];if(!q)return'';return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:10px 16px;border-bottom:.5px solid #e0e0d8;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:space-between"><div><div style="font-size:12px;font-weight:700;color:#555;letter-spacing:.5px">MOCK EXAM</div><div style="font-size:11px;color:#888">Question ${STATE.mockExam.mcqCurr+1} of ${STATE.mockExam.mcqQ.length}</div></div><div id="mock-timer" style="font-size:22px;font-weight:700;font-family:'Courier New',monospace;color:#1a1a1a">${mockFmtTime(STATE.mockExam.mcqTime)}</div><button onclick="mockConfirmSubmitMCQ()" style="padding:8px 14px;border-radius:8px;border:none;background:#1E8449;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Submit</button></div><div id="mock-mcq-content" style="display:flex;flex-direction:column;flex:1;overflow:hidden"></div></div>`;}
-function renderMockResults(){const{correct,total,scoreDenom,rawPct,scaled,pass,secScores}=STATE.mockExam.results;const col=pass?'#1E8449':scaled>=170?'#EF9F27':'#E24B4A';const msg=pass?'On Track to Pass \uD83C\uDF89':scaled>=170?'Borderline \u2014 Keep Practicing \uD83D\uDCC8':'Needs More Study \uD83D\uDCDA';const shortfall=scoreDenom&&total<scoreDenom;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:14px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83D\uDCCA Exam Results</div></div><div style="flex:1;overflow-y:auto;padding:16px;padding-bottom:80px"><div style="background:${col}15;border:1.5px solid ${col}40;border-radius:14px;padding:18px;text-align:center;margin-bottom:8px"><div style="font-size:42px;font-weight:800;color:${col}">${scaled}</div><div style="font-size:13px;color:#888;margin-top:-2px">estimated scaled score / 300</div><div style="font-size:15px;font-weight:600;color:${col};margin-top:8px">${msg}</div></div><div style="font-size:11px;color:#888;text-align:center;margin-bottom:${shortfall?'8px':'16px'};line-height:1.5">Pass mark is 200. This is an approximation \u2014 the real exam uses statistical equating.</div>${shortfall?`<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:8px;padding:9px 12px;margin-bottom:16px;font-size:12px;color:#633806;line-height:1.5">⚠️ This exam ran with ${total} of ${scoreDenom} questions. Score is calculated out of ${scoreDenom} — missing questions counted as wrong.</div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Correct</div><div style="font-size:22px;font-weight:700;color:#1A5276">${correct}/${scoreDenom||total}</div><div style="font-size:12px;color:#888">${rawPct}%</div></div><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Result</div><div style="font-size:22px;font-weight:700;color:${col}">${pass?'PASS':'FAIL'}</div><div style="font-size:12px;color:#888">${pass?'\u2265 200':'< 200'}</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:12px">Section Breakdown</div>${Object.entries(secScores).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([sid,sc])=>{const pct=sc.total?Math.round(sc.correct/sc.total*100):0;const c=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';return`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px"><span style="font-size:13px;color:#333">${esc(sc.title)}</span><span style="font-size:13px;font-weight:600;color:${c}">${sc.correct}/${sc.total} (${pct}%)</span></div><div style="height:6px;background:#f0f0eb;border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${c};border-radius:3px;transition:width .5s"></div></div></div>`;}).join('')}</div><div style="display:flex;gap:10px"><button onclick="STATE.mockExam={status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false};render();" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study')" style="flex:1;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div></div></div>`;}
+function renderMockResults(){const{correct,total,scoreDenom,rawPct,scaled,pass,secScores}=STATE.mockExam.results;const col=pass?'#1E8449':scaled>=170?'#EF9F27':'#E24B4A';const msg=pass?'On Track to Pass \uD83C\uDF89':scaled>=170?'Borderline \u2014 Keep Practicing \uD83D\uDCC8':'Needs More Study \uD83D\uDCDA';const shortfall=scoreDenom&&total<scoreDenom;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:14px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83D\uDCCA Exam Results</div></div><div style="flex:1;overflow-y:auto;padding:16px;padding-bottom:80px"><div style="background:${col}15;border:1.5px solid ${col}40;border-radius:14px;padding:18px;text-align:center;margin-bottom:8px"><div style="font-size:42px;font-weight:800;color:${col}">${scaled}</div><div style="font-size:13px;color:#888;margin-top:-2px">estimated scaled score / 300</div><div style="font-size:15px;font-weight:600;color:${col};margin-top:8px">${msg}</div></div><div style="font-size:11px;color:#888;text-align:center;margin-bottom:${shortfall?'8px':'16px'};line-height:1.5">Pass mark is 200. This is an approximation \u2014 the real exam uses statistical equating.</div>${shortfall?`<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:8px;padding:9px 12px;margin-bottom:16px;font-size:12px;color:#633806;line-height:1.5">⚠️ This exam ran with ${total} of ${scoreDenom} questions. Score is calculated out of ${scoreDenom} — missing questions counted as wrong.</div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Correct</div><div style="font-size:22px;font-weight:700;color:#1A5276">${correct}/${scoreDenom||total}</div><div style="font-size:12px;color:#888">${rawPct}%</div></div><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Result</div><div style="font-size:22px;font-weight:700;color:${col}">${pass?'PASS':'FAIL'}</div><div style="font-size:12px;color:#888">${pass?'\u2265 200':'< 200'}</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:12px">Section Breakdown</div>${Object.entries(secScores).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([sid,sc])=>{const pct=sc.total?Math.round(sc.correct/sc.total*100):0;const c=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';return`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px"><span style="font-size:13px;color:#333">${esc(sc.title)}</span><span style="font-size:13px;font-weight:600;color:${c}">${sc.correct}/${sc.total} (${pct}%)</span></div><div style="height:6px;background:#f0f0eb;border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${c};border-radius:3px;transition:width .5s"></div></div></div>`;}).join('')}</div><button onclick="STATE._mockReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
+<div style="display:flex;gap:10px"><button onclick="STATE.mockExam={status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false};STATE._mockReviewMode=false;render();" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study');STATE._mockReviewMode=false;" style="flex:1;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div></div></div>`;}
 // ════ END MOCK EXAM ════
 
 function openStudentModal(uid){
@@ -1394,11 +1485,12 @@ async function loadDashboard(){
   if(!isInstructor()||STATE.dashLoading)return;
   STATE.dashLoading=true;STATE.dashError=false;
   try{
-    const [studentsSnap,lbSnap,plansSnap,examsSnap]=await Promise.all([
+    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap]=await Promise.all([
       db.collection('fmaa-students').get(),
       db.collection('fmaa-leaderboard').get(),
       db.collection('fmaa-plans').get(),
-      db.collection('fmaa-exams').get()
+      db.collection('fmaa-exams').get(),
+      db.collection('fmaa-exam-results').get()
     ]);
     const lbMap={};
     lbSnap.docs.forEach(d=>{lbMap[d.id]=d.data();});
@@ -1410,6 +1502,7 @@ async function loadDashboard(){
     }).sort((a,b)=>b.lessons-a.lessons);
     STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
+    STATE.dashExamResults=resultsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.submittedAt>a.submittedAt?1:-1);
     STATE.dashLoaded=true;
   }catch(e){
     console.error('Dashboard load error:',e);
@@ -1507,7 +1600,7 @@ async function startGroupExam(examId){
   const mcqQ=pool.slice(0,exam.questionCount);
   if(!mcqQ.length){showToast('No questions loaded for this exam yet.','warning');STATE.mockExam.status='idle';render();return;}
   const secs=exam.durationMins*60;
-  STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title};
+  STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode};
   STATE.tab='mock-exam';render();
   STATE.mockExam.mcqInterval=setInterval(()=>{
     if(STATE.tab!=='mock-exam'){mockClearTimers();return;}
@@ -1524,6 +1617,7 @@ function renderDashboard(){
   const SUB_DASH=[
     {id:'students',icon:'\u{1F465}',label:'Students'},
     {id:'progress',icon:'\u{1F4C8}',label:'Progress'},
+    {id:'results',icon:'\u{1F4CA}',label:'Exam Results'},
     {id:'plan',icon:'\u{1F4C5}',label:'Weekly Plan'},
     {id:'exam',icon:'\u{1F3AF}',label:'Group Exam'},
   ];
@@ -1597,6 +1691,60 @@ function renderDashboard(){
       </div>`;
     }).join('');
     bodyHTML=`<div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No data yet.</div>`}</div>`;
+  } else if(tab==='results'){
+    const results=STATE.dashExamResults||[];
+    const exams=STATE.dashExams||[];
+    // Group results by examId
+    const byExam={};
+    results.forEach(r=>{if(!byExam[r.examId])byExam[r.examId]={examId:r.examId,examTitle:r.examTitle||'Exam',groupCode:r.groupCode||'',results:[]};byExam[r.examId].results.push(r);});
+    // Sort each exam's results by score desc
+    Object.values(byExam).forEach(e=>e.results.sort((a,b)=>b.scaled-a.scaled));
+    if(!results.length){
+      bodyHTML=`<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">📊</div><div style="font-size:14px">No exam results yet.</div><div style="font-size:12px;margin-top:6px">Results appear here after students complete a group exam.</div></div>`;
+    } else {
+      bodyHTML=Object.values(byExam).map(examGroup=>{
+        const ex=exams.find(e=>e.id===examGroup.examId);
+        const examDate=ex?new Date(ex.startAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'';
+        const rows=examGroup.results.map((r,i)=>{
+          const col=r.pass?'#1E8449':r.scaled>=170?'#EF9F27':'#E24B4A';
+          const bg=r.pass?'#D5F5E3':r.scaled>=170?'#FAEEDA':'#FCEBEB';
+          const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';
+          const secBreakdown=r.secScores?Object.entries(r.secScores).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([sid,sc])=>{
+            const pct=sc.total?Math.round(sc.correct/sc.total*100):0;
+            const c=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';
+            return`<span style="font-size:10px;background:#f0f0eb;color:${c};padding:1px 6px;border-radius:6px;font-weight:500">${esc(sc.title?.split('&')[0]?.trim()||'Sec '+sid)}: ${pct}%</span>`;
+          }).join(' '):'';
+          return`<div style="padding:10px 14px;border-bottom:.5px solid #f0f0eb">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:36px;height:36px;border-radius:8px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:${medal?'18':'14'}px;font-weight:700;color:${col};flex-shrink:0">${medal||r.scaled}</div>
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                  <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(r.studentName||'Student')}</span>
+                  ${r.studentId?`<span style="font-size:10px;background:#EBF5FB;color:#1A5276;padding:1px 6px;border-radius:8px;font-family:monospace">${esc(r.studentId)}</span>`:''}
+                  <span style="font-size:10px;background:${bg};color:${col};padding:1px 6px;border-radius:8px;font-weight:600">${r.pass?'PASS':'FAIL'}</span>
+                </div>
+                <div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.scoreDenom||r.total} correct (${r.rawPct}%) · scaled: ${r.scaled}/300</div>
+                ${secBreakdown?`<div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px">${secBreakdown}</div>`:''}
+              </div>
+              <div style="font-size:10px;color:#aaa;text-align:right;flex-shrink:0">${r.submittedAt?new Date(r.submittedAt).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}):''}</div>
+            </div>
+          </div>`;
+        }).join('');
+        return`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;margin:0 14px 14px;overflow:hidden">
+          <div style="padding:10px 14px;background:#f8f8f6;border-bottom:.5px solid #e0e0d8;display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:#1a1a1a">${esc(examGroup.examTitle)}</div>
+              <div style="font-size:11px;color:#888;margin-top:2px">${examGroup.groupCode?esc(examGroup.groupCode)+' · ':''} ${examDate} · ${examGroup.results.length} submission${examGroup.results.length!==1?'s':''}</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0">
+              <div style="font-size:12px;font-weight:600;color:#1E8449">${examGroup.results.filter(r=>r.pass).length} passed</div>
+              <div style="font-size:11px;color:#888">${examGroup.results.filter(r=>!r.pass).length} failed</div>
+            </div>
+          </div>
+          ${rows}
+        </div>`;
+      }).join('');
+    }
   } else if(tab==='plan'){
     const d=STATE.dashPlanDraft;
     const allUnits=S.flatMap(sec=>sec.lessons.map(l=>({id:l.id,title:l.title,secTitle:sec.title,bar:sec.bar,bg:sec.bg,strong:sec.strong})));
