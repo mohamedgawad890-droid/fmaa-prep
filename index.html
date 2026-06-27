@@ -368,7 +368,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null},dashPlans:[],dashExams:[],groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -974,13 +974,32 @@ function renderStudy(){
     <div style="height:20px"></div></div>`;
   }
   const doneCount=progress.done.length;const pct=getPct();const st=loadStudent();
+  // Group plan + exam banner
+  const gc=st&&st.groupCode?st.groupCode.toUpperCase():'';
+  const planBanner=(()=>{
+    if(!gc||!STATE.groupPlanLoaded)return'';
+    const p=STATE.groupPlan;if(!p)return'';
+    const unitTitles=p.units.map(uid=>{const l=S.flatMap(s=>s.lessons).find(x=>x.id===uid);return l?l.title:null;}).filter(Boolean);
+    return`<div style="background:#EBF5FB;border:1px solid #1A527640;border-radius:12px;padding:12px 14px;margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="font-size:16px">📅</span><div><div style="font-size:13px;font-weight:600;color:#154360">This Week: ${esc(p.weekLabel)}</div>${p.note?`<div style="font-size:11px;color:#1A5276;margin-top:1px">${esc(p.note)}</div>`:''}</div></div>${unitTitles.length?`<div style="display:flex;flex-wrap:wrap;gap:4px">${unitTitles.map(t=>`<span style="font-size:11px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px">${esc(t)}</span>`).join('')}</div>`:''}</div>`;
+  })();
+  const examBanner=(()=>{
+    if(!gc||!STATE.groupExamLoaded)return'';
+    const e=STATE.groupExam;if(!e)return'';
+    const now=new Date();const start=new Date(e.startAt);const end=new Date(e.endAt);
+    if(now>end)return'';
+    const isLive=now>=start;
+    const bg=isLive?'#FCEBEB':'#FAEEDA';const border=isLive?'#E24B4A':'#EF9F27';const tc=isLive?'#791F1F':'#633806';
+    const timeStr=isLive?`Ends ${end.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',day:'numeric',month:'short'})}`:
+      `Starts ${start.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',day:'numeric',month:'short'})}`;
+    return`<div style="background:${bg};border:1px solid ${border};border-radius:12px;padding:12px 14px;margin-bottom:10px"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><div><div style="font-size:13px;font-weight:600;color:${tc}">${isLive?'🔴 Live Exam':'⏳ Upcoming Exam'}: ${esc(e.title)}</div><div style="font-size:11px;color:${tc};margin-top:2px">${e.questionCount} questions · ${e.durationMins} min · ${timeStr}</div></div>${isLive?`<button onclick="startGroupExam('${e.id}')" style="padding:8px 14px;border-radius:8px;border:none;background:#E24B4A;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;flex-shrink:0">Start →</button>`:''}</div></div>`;
+  })();
   const sectCards=S.map(sec=>{
     const lessonsDone=sec.lessons.filter(l=>lessonDone(l.id)).length;const sp=Math.round(lessonsDone/sec.lessons.length*100);
     const secQuizDone=sec.lessons.filter(l=>progress.lessonScores?.[l.id]).length;const isOpen=STATE.sectId===sec.id;
     const ll=isOpen?renderLessonListHTML(sec,progress):'';
     return`<div id="sec-card-${sec.id}" class="card" style="cursor:pointer;border-color:${isOpen?sec.text+'60':'#e0e0d8'};border-width:${isOpen?'1px':'.5px'}" onclick="toggleSection(${sec.id})"><div style="display:flex;align-items:center;gap:10px"><div class="sect-icon" style="background:${sec.bg}">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${sec.weight}% of exam · ${lessonsDone}/${sec.lessons.length} lessons · ${secQuizDone}/${sec.lessons.length} quizzes</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0"><span class="badge" style="background:${sec.bg};color:${sec.strong}">${sp}%</span><span id="sec-icon-${sec.id}" style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isOpen?'90deg':'0deg'})">›</span></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:10px;overflow:hidden"><div style="height:100%;width:${sp}%;background:${sec.bar};border-radius:2px"></div></div><div id="sec-lessons-${sec.id}" style="${isOpen?'':'display:none'}">${ll}</div></div>`;
   }).join('');
-  return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px"><div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
+  return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
 }
 
 function renderProgress(){
@@ -1311,18 +1330,22 @@ async function loadDashboard(){
   if(!isInstructor()||STATE.dashLoading)return;
   STATE.dashLoading=true;STATE.dashError=false;
   try{
-    const [studentsSnap,lbSnap]=await Promise.all([
+    const [studentsSnap,lbSnap,plansSnap,examsSnap]=await Promise.all([
       db.collection('fmaa-students').get(),
-      db.collection('fmaa-leaderboard').get()
+      db.collection('fmaa-leaderboard').get(),
+      db.collection('fmaa-plans').get(),
+      db.collection('fmaa-exams').get()
     ]);
     const lbMap={};
     lbSnap.docs.forEach(d=>{lbMap[d.id]=d.data();});
     STATE.dashStudents=studentsSnap.docs.map(d=>{
       const sd=d.data();
       const lb=lbMap[d.id]||{};
-      const sid=d.id.slice(-6).toUpperCase();
-      return{uid:d.id,sid,name:sd.name||'—',email:sd.email||'—',country:sd.country||'—',examdate:sd.examdate||'',photo:sd.photo||'',lessons:lb.lessons||0,accuracy:lb.accuracy||0,mcqTotal:lb.mcqTotal||0,streak:lb.streak||0,updatedAt:lb.updatedAt||''};
+      const sid=sd.studentId||d.id.slice(-6).toUpperCase();
+      return{uid:d.id,sid,name:sd.name||'—',email:sd.email||'—',country:sd.country||'—',examdate:sd.examdate||'',photo:sd.photo||'',groupCode:sd.groupCode||'',lessons:lb.lessons||0,accuracy:lb.accuracy||0,mcqTotal:lb.mcqTotal||0,streak:lb.streak||0,updatedAt:lb.updatedAt||''};
     }).sort((a,b)=>b.lessons-a.lessons);
+    STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
+    STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashLoaded=true;
   }catch(e){
     console.error('Dashboard load error:',e);
@@ -1331,41 +1354,129 @@ async function loadDashboard(){
   STATE.dashLoading=false;
   if(STATE.tab==='dashboard')render();
 }
+// ─── PLAN & EXAM FUNCTIONS ───────────────────────────────────────────────────
+async function savePlan(){
+  const d=STATE.dashPlanDraft;
+  if(!d.groupCode.trim()||!d.weekLabel.trim()||!d.units.length){showToast('Fill in group code, week label, and at least one unit.','warning');return;}
+  try{
+    await db.collection('fmaa-plans').add({groupCode:d.groupCode.trim().toUpperCase(),weekLabel:d.weekLabel.trim(),units:d.units,note:d.note.trim(),createdAt:new Date().toISOString(),createdBy:STATE.user.uid});
+    showToast('Weekly plan published! ✅','success');
+    STATE.dashPlanDraft={groupCode:'',weekLabel:'',units:[],note:''};
+    STATE.dashLoaded=false;await loadDashboard();
+  }catch(e){showToast('Error saving plan: '+e.message,'error');}
+}
+async function deletePlan(id){
+  const ok=await showModal({icon:'🗑️',title:'Delete Plan?',body:'This will remove the weekly plan for all students in this group.',type:'danger',confirmText:'Delete',cancelText:'Cancel'});
+  if(!ok)return;
+  try{await db.collection('fmaa-plans').doc(id).delete();STATE.dashLoaded=false;await loadDashboard();}
+  catch(e){showToast('Error deleting plan.','error');}
+}
+function togglePlanUnit(lessonId){
+  const u=STATE.dashPlanDraft.units;
+  const idx=u.indexOf(lessonId);
+  if(idx>-1)u.splice(idx,1);else u.push(lessonId);
+  render();
+}
+async function saveExam(){
+  const d=STATE.dashExamDraft;
+  if(!d.groupCode.trim()||!d.title.trim()||!d.durationMins||!d.questionCount){showToast('Fill in all exam fields.','warning');return;}
+  const startTs=document.getElementById('exam-start')?.value;
+  const endTs=document.getElementById('exam-end')?.value;
+  if(!startTs||!endTs){showToast('Set start and end date/time.','warning');return;}
+  if(new Date(endTs)<=new Date(startTs)){showToast('End time must be after start time.','warning');return;}
+  try{
+    await db.collection('fmaa-exams').add({groupCode:d.groupCode.trim().toUpperCase(),title:d.title.trim(),durationMins:Number(d.durationMins),questionCount:Number(d.questionCount),sectionId:d.sectionId||null,startAt:new Date(startTs).toISOString(),endAt:new Date(endTs).toISOString(),createdAt:new Date().toISOString(),createdBy:STATE.user.uid});
+    showToast('Group exam created! 🎯','success');
+    STATE.dashExamDraft={groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null};
+    STATE.dashLoaded=false;await loadDashboard();
+  }catch(e){showToast('Error creating exam: '+e.message,'error');}
+}
+async function deleteExam(id){
+  const ok=await showModal({icon:'🗑️',title:'Delete Exam?',body:'Students will no longer see this exam.',type:'danger',confirmText:'Delete',cancelText:'Cancel'});
+  if(!ok)return;
+  try{await db.collection('fmaa-exams').doc(id).delete();STATE.dashLoaded=false;await loadDashboard();}
+  catch(e){showToast('Error deleting exam.','error');}
+}
+// Student-side: load active plan + exam for this student's group
+async function loadGroupContent(){
+  const st=loadStudent();if(!st||!st.groupCode)return;
+  const gc=st.groupCode.toUpperCase();
+  try{
+    const [planSnap,examSnap]=await Promise.all([
+      db.collection('fmaa-plans').where('groupCode','==',gc).orderBy('createdAt','desc').limit(1).get(),
+      db.collection('fmaa-exams').where('groupCode','==',gc).where('endAt','>',new Date().toISOString()).orderBy('endAt','asc').limit(1).get()
+    ]);
+    STATE.groupPlan=planSnap.empty?null:{id:planSnap.docs[0].id,...planSnap.docs[0].data()};
+    STATE.groupExam=examSnap.empty?null:{id:examSnap.docs[0].id,...examSnap.docs[0].data()};
+    STATE.groupPlanLoaded=true;STATE.groupExamLoaded=true;
+    if(STATE.tab==='study')render();
+  }catch(e){console.warn('Group content load error:',e);}
+}
+async function startGroupExam(examId){
+  if(!STATE.groupExam)return;
+  const exam=STATE.groupExam;
+  const now=new Date();
+  if(now<new Date(exam.startAt)){showToast('This exam has not started yet.','warning');return;}
+  if(now>new Date(exam.endAt)){showToast('This exam window has closed.','warning');return;}
+  STATE.mockExam.status='loading';render();
+  const sid=exam.sectionId;
+  if(sid)await ensureQuizzes(sid);else for(const s of S)await ensureQuizzes(s.id);
+  // Build question pool
+  let pool=[];
+  if(sid){const sec=S.find(s=>s.id===sid);if(sec)sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight}));});}
+  else{S.forEach(sec=>{sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight}));});});}
+  pool=mockShuffle(pool);
+  const mcqQ=pool.slice(0,exam.questionCount);
+  if(!mcqQ.length){showToast('No questions loaded for this exam yet.','warning');STATE.mockExam.status='idle';render();return;}
+  const secs=exam.durationMins*60;
+  STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title};
+  STATE.tab='mock-exam';render();
+  STATE.mockExam.mcqInterval=setInterval(()=>{
+    if(STATE.tab!=='mock-exam'){mockClearTimers();return;}
+    STATE.mockExam.mcqTime--;
+    const tel=document.getElementById('mock-timer');
+    if(tel){tel.textContent=mockFmtTime(STATE.mockExam.mcqTime);tel.style.color=STATE.mockExam.mcqTime<300?'#E24B4A':'#1a1a1a';}
+    mockUpdateNav();
+    if(STATE.mockExam.mcqTime<=0){clearInterval(STATE.mockExam.mcqInterval);STATE.mockExam.mcqInterval=null;mockSubmitMCQ(true);}
+  },1000);
+}
+
 function renderDashboard(){
   if(!isInstructor())return'';
   const SUB_DASH=[
-    {id:'students',icon:'👥',label:'Students'},
-    {id:'progress',icon:'📈',label:'Progress'},
+    {id:'students',icon:'\u{1F465}',label:'Students'},
+    {id:'progress',icon:'\u{1F4C8}',label:'Progress'},
+    {id:'plan',icon:'\u{1F4C5}',label:'Weekly Plan'},
+    {id:'exam',icon:'\u{1F3AF}',label:'Group Exam'},
   ];
   const tab=STATE.dashTab||'students';
   const students=STATE.dashStudents||[];
+  const gf=(STATE.dashGroupFilter||'').toUpperCase().trim();
   const q=(STATE.dashSearchQ||'').toLowerCase().trim();
-  const filtered=q?students.filter(s=>s.name.toLowerCase().includes(q)||s.email.toLowerCase().includes(q)||s.sid.toLowerCase().includes(q)||s.country.toLowerCase().includes(q)):students;
+  const groups=[...new Set(students.map(s=>s.groupCode).filter(Boolean))].sort();
+  let filtered=gf?students.filter(s=>s.groupCode===gf):students;
+  if(q)filtered=filtered.filter(s=>s.name.toLowerCase().includes(q)||s.email.toLowerCase().includes(q)||s.sid.toLowerCase().includes(q)||s.country.toLowerCase().includes(q));
 
   let bodyHTML='';
   if(STATE.dashError){
-    bodyHTML=`<div style="text-align:center;padding:60px 20px">
-      <div style="font-size:36px;margin-bottom:12px">⚠️</div>
-      <div style="font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:6px">Couldn't load student data</div>
-      <div style="font-size:13px;color:#888;margin-bottom:20px;line-height:1.6">This is likely a Firestore permissions issue.<br>Make sure the security rules allow the instructor UID to read<br><code style="font-size:11px;background:#f5f5f0;padding:2px 6px;border-radius:4px">fmaa-students</code> and <code style="font-size:11px;background:#f5f5f0;padding:2px 6px;border-radius:4px">fmaa-leaderboard</code>.</div>
-      <button onclick="STATE.dashError=false;STATE.dashLoaded=false;loadDashboard()" style="padding:11px 24px;border-radius:10px;border:none;background:#1A5276;color:#fff;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">🔄 Retry</button>
-    </div>`;
+    bodyHTML=`<div style="text-align:center;padding:60px 20px"><div style="font-size:36px;margin-bottom:12px">\u26A0\uFE0F</div><div style="font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:6px">Couldn't load data</div><div style="font-size:13px;color:#888;margin-bottom:20px;line-height:1.6">Check Firestore security rules then retry.</div><button onclick="STATE.dashError=false;STATE.dashLoaded=false;loadDashboard()" style="padding:11px 24px;border-radius:10px;border:none;background:#1A5276;color:#fff;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">\u{1F504} Retry</button></div>`;
   } else if(!STATE.dashLoaded&&STATE.dashLoading){
-    bodyHTML=`<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:32px;margin-bottom:12px">⏳</div><div style="font-size:14px">Loading students...</div></div>`;
+    bodyHTML=`<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:32px;margin-bottom:12px">\u23F3</div><div style="font-size:14px">Loading...</div></div>`;
   } else if(tab==='students'){
+    const groupFilter=groups.length?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><span style="font-size:11px;color:#888;align-self:center">Group:</span><button onclick="STATE.dashGroupFilter='';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${!gf?'#1A5276':'#d0d0d0'};background:${!gf?'#1A5276':'#f5f5f0'};color:${!gf?'#fff':'#555'}">All</button>${groups.map(g=>`<button onclick="STATE.dashGroupFilter='${g}';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${gf===g?'#1A5276':'#d0d0d0'};background:${gf===g?'#1A5276':'#f5f5f0'};color:${gf===g?'#fff':'#555'}">${esc(g)}</button>`).join('')}</div>`:'';
     const rows=filtered.map(s=>{
       const photo=s.photo&&s.photo.startsWith('https://res.cloudinary.com/')?`<img src="${esc(s.photo)}" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #D6EAF8">`:
         `<div style="width:32px;height:32px;border-radius:50%;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#1A5276;flex-shrink:0">${(s.name.charAt(0)||'?').toUpperCase()}</div>`;
-      const examLabel=s.examdate?`<span style="font-size:10px;background:#D5F5E3;color:#186A3B;padding:1px 6px;border-radius:8px;font-weight:500">📅 ${s.examdate}</span>`:'';
       return`<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid #f0f0eb">
         ${photo}
         <div style="flex:1;min-width:0">
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>
             <span style="font-size:10px;background:#EBF5FB;color:#1A5276;padding:1px 6px;border-radius:8px;font-weight:600;font-family:monospace">${s.sid}</span>
-            ${examLabel}
+            ${s.groupCode?`<span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 6px;border-radius:8px;font-weight:500">${esc(s.groupCode)}</span>`:''}
+            ${s.examdate?`<span style="font-size:10px;background:#D5F5E3;color:#186A3B;padding:1px 6px;border-radius:8px;font-weight:500">\u{1F4C5} ${s.examdate}</span>`:''}
           </div>
-          <div style="font-size:11px;color:#888;margin-top:2px">${esc(s.email)} · ${esc(s.country||'—')}</div>
+          <div style="font-size:11px;color:#888;margin-top:2px">${esc(s.email)} \u00B7 ${esc(s.country||'\u2014')}</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
           <div style="font-size:13px;font-weight:600;color:#1A5276">${s.lessons} lessons</div>
@@ -1376,26 +1487,30 @@ function renderDashboard(){
     bodyHTML=`
       <div style="padding:10px 14px;border-bottom:.5px solid #e0e0d8;background:#f8f8f6">
         <div style="position:relative">
-          <input id="dash-search" type="text" value="${esc(STATE.dashSearchQ||'')}" oninput="STATE.dashSearchQ=this.value;render()" placeholder="Search name, email, ID, country…" style="width:100%;padding:9px 12px 9px 36px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;color:#1a1a1a;box-sizing:border-box">
-          <span style="position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;pointer-events:none">🔍</span>
-          ${STATE.dashSearchQ?`<span onclick="STATE.dashSearchQ='';render()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:16px;cursor:pointer;color:#aaa">×</span>`:''}
+          <input id="dash-search" type="text" value="${esc(STATE.dashSearchQ||'')}" oninput="STATE.dashSearchQ=this.value;render()" placeholder="Search name, email, ID, country\u2026" style="width:100%;padding:9px 12px 9px 36px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;color:#1a1a1a;box-sizing:border-box">
+          <span style="position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;pointer-events:none">\u{1F50D}</span>
+          ${STATE.dashSearchQ?`<span onclick="STATE.dashSearchQ='';render()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:16px;cursor:pointer;color:#aaa">\u00D7</span>`:''}
         </div>
+        ${groupFilter}
         <div style="font-size:11px;color:#888;margin-top:6px">${filtered.length} of ${students.length} students</div>
       </div>
       <div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No students found.</div>`}</div>
-      <div style="padding:12px 14px;border-top:.5px solid #e0e0d8;display:flex;gap:8px">
-        <button onclick="STATE.dashLoaded=false;STATE.dashStudents=[];loadDashboard()" style="flex:1;padding:10px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;font-size:13px;cursor:pointer;font-family:inherit">🔄 Refresh</button>
+      <div style="padding:12px 14px;border-top:.5px solid #e0e0d8">
+        <button onclick="STATE.dashLoaded=false;STATE.dashStudents=[];loadDashboard()" style="width:100%;padding:10px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;font-size:13px;cursor:pointer;font-family:inherit">\u{1F504} Refresh</button>
       </div>`;
   } else if(tab==='progress'){
     const sorted=[...filtered].sort((a,b)=>b.lessons-a.lessons);
     const rows=sorted.map((s,i)=>{
-      const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';
+      const medal=i===0?'\u{1F947}':i===1?'\u{1F948}':i===2?'\u{1F949}':'';
       const accColor=s.accuracy>=70?'#1E8449':s.accuracy>=50?'#EF9F27':'#E24B4A';
       return`<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid #f0f0eb">
         <div style="width:28px;text-align:center;font-size:14px;flex-shrink:0">${medal||`<span style="font-size:12px;color:#aaa">${i+1}</span>`}</div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</div>
-          <div style="font-size:11px;color:#888;margin-top:1px">${s.mcqTotal} MCQs attempted · ${s.streak}🔥 streak</div>
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>
+            ${s.groupCode?`<span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 6px;border-radius:8px">${esc(s.groupCode)}</span>`:''}
+          </div>
+          <div style="font-size:11px;color:#888;margin-top:1px">${s.mcqTotal} MCQs \u00B7 ${s.streak}\u{1F525} streak</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
           <div style="font-size:13px;font-weight:600;color:#1A5276">${s.lessons}/${TOTAL_LESSONS}</div>
@@ -1404,15 +1519,57 @@ function renderDashboard(){
       </div>`;
     }).join('');
     bodyHTML=`<div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No data yet.</div>`}</div>`;
+  } else if(tab==='plan'){
+    const d=STATE.dashPlanDraft;
+    const allUnits=S.flatMap(sec=>sec.lessons.map(l=>({id:l.id,title:l.title,secTitle:sec.title,bar:sec.bar,bg:sec.bg,strong:sec.strong})));
+    const unitSelector=`<div style="max-height:220px;overflow-y:auto;border:.5px solid #d0d0d0;border-radius:8px;background:#fafaf8">${S.map(sec=>`<div><div style="font-size:10px;font-weight:600;color:${sec.text};padding:6px 10px 4px;background:${sec.bg};letter-spacing:.5px">${esc(sec.title)}</div>${sec.lessons.map(l=>{const sel=d.units.includes(l.id);return`<label style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:.5px solid #f0f0eb;cursor:pointer;background:${sel?sec.bg:'transparent'}"><input type="checkbox" ${sel?'checked':''} onchange="togglePlanUnit('${l.id}')" style="accent-color:${sec.bar};cursor:pointer;flex-shrink:0"><span style="font-size:12px;color:${sel?sec.strong:'#444'};font-weight:${sel?'500':'400'}">${esc(l.title)}</span></label>`;}).join('')}</div>`).join('')}</div>`;
+    const existing=(STATE.dashPlans||[]).map(p=>`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:10px;padding:12px 14px;margin-bottom:8px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px"><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:4px"><span style="font-size:13px;font-weight:600;color:#1a1a1a">${esc(p.weekLabel)}</span><span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 8px;border-radius:10px;font-weight:500">${esc(p.groupCode)}</span></div><div style="font-size:11px;color:#888">${p.units.length} unit${p.units.length!==1?'s':''} assigned${p.note?` \u00B7 "${esc(p.note.slice(0,40))}${p.note.length>40?'\u2026':''}"`:''}</div></div><button onclick="deletePlan('${p.id}')" style="padding:5px 10px;border-radius:6px;border:.5px solid #E24B4A40;background:#FCEBEB;color:#A32D2D;font-size:11px;cursor:pointer;font-family:inherit;flex-shrink:0">\u{1F5D1}\uFE0F</button></div></div>`).join('');
+    bodyHTML=`<div style="padding:14px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\u2795 Create Weekly Plan</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Group Code *</label><input id="plan-group" type="text" value="${esc(d.groupCode)}" oninput="STATE.dashPlanDraft.groupCode=this.value.toUpperCase();render()" placeholder="e.g. GRP1" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;text-transform:uppercase;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Week Label *</label><input id="plan-week" type="text" value="${esc(d.weekLabel)}" oninput="STATE.dashPlanDraft.weekLabel=this.value" placeholder="e.g. Week 1 \u2014 SU 1-3" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+      </div>
+      <div style="margin-bottom:10px"><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Select Units * <span style="color:#1A5276">(${d.units.length} selected)</span></label>${unitSelector}</div>
+      <div style="margin-bottom:12px"><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Note to students (optional)</label><input type="text" value="${esc(d.note)}" oninput="STATE.dashPlanDraft.note=this.value" placeholder="e.g. Focus on journal entries \u2014 quiz on Tuesday" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+      <button onclick="savePlan()" style="width:100%;padding:11px;border-radius:10px;border:none;background:#1A5276;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit">\u{1F4C5} Publish Plan</button>
+      ${existing?`<div style="margin-top:16px"><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">EXISTING PLANS</div>${existing}</div>`:''}
+    </div>`;
+  } else if(tab==='exam'){
+    const d=STATE.dashExamDraft;
+    const existing=(STATE.dashExams||[]).map(e=>{
+      const now=new Date();const start=new Date(e.startAt);const end=new Date(e.endAt);
+      const status=now<start?'\u23F3 Upcoming':now>end?'\u2705 Closed':'\u{1F534} Live';
+      const statusBg=now<start?'#FAEEDA':now>end?'#D5F5E3':'#FCEBEB';
+      const statusColor=now<start?'#633806':now>end?'#186A3B':'#A32D2D';
+      return`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:10px;padding:12px 14px;margin-bottom:8px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px"><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:4px"><span style="font-size:13px;font-weight:600;color:#1a1a1a">${esc(e.title)}</span><span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 8px;border-radius:10px;font-weight:500">${esc(e.groupCode)}</span><span style="font-size:10px;background:${statusBg};color:${statusColor};padding:1px 8px;border-radius:10px;font-weight:500">${status}</span></div><div style="font-size:11px;color:#888">${e.questionCount} Qs \u00B7 ${e.durationMins} min \u00B7 ${new Date(e.startAt).toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})} \u2192 ${new Date(e.endAt).toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</div></div><button onclick="deleteExam('${e.id}')" style="padding:5px 10px;border-radius:6px;border:.5px solid #E24B4A40;background:#FCEBEB;color:#A32D2D;font-size:11px;cursor:pointer;font-family:inherit;flex-shrink:0">\u{1F5D1}\uFE0F</button></div></div>`;
+    }).join('');
+    const sectionOpts=`<option value="">All sections (mixed)</option>${S.map(s=>`<option value="${s.id}" ${d.sectionId==s.id?'selected':''}>${esc(s.title)}</option>`).join('')}`;
+    bodyHTML=`<div style="padding:14px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\u2795 Create Group Exam</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Group Code *</label><input type="text" value="${esc(d.groupCode)}" oninput="STATE.dashExamDraft.groupCode=this.value.toUpperCase();render()" placeholder="e.g. GRP1" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;text-transform:uppercase;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Exam Title *</label><input type="text" value="${esc(d.title)}" oninput="STATE.dashExamDraft.title=this.value" placeholder="e.g. Week 1 Quiz" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Questions *</label><input type="number" min="5" max="100" value="${d.questionCount}" oninput="STATE.dashExamDraft.questionCount=Number(this.value)" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Duration (min) *</label><input type="number" min="5" max="240" value="${d.durationMins}" oninput="STATE.dashExamDraft.durationMins=Number(this.value)" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+      </div>
+      <div style="margin-bottom:10px"><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Section (optional)</label><select onchange="STATE.dashExamDraft.sectionId=this.value?Number(this.value):null" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff">${sectionOpts}</select></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Start date &amp; time *</label><input type="datetime-local" id="exam-start" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">End date &amp; time *</label><input type="datetime-local" id="exam-end" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+      </div>
+      <button onclick="saveExam()" style="width:100%;padding:11px;border-radius:10px;border:none;background:#1E8449;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit">\u{1F3AF} Create Exam</button>
+      ${existing?`<div style="margin-top:16px"><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">EXISTING EXAMS</div>${existing}</div>`:''}
+    </div>`;
   }
 
-  const subNavHTML=`<div style="display:flex;gap:6px;padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#fff">
-    ${SUB_DASH.map(t=>`<button onclick="STATE.dashTab='${t.id}';render()" style="padding:6px 14px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;border:.5px solid ${tab===t.id?'#1A5276':'#d0d0d0'};background:${tab===t.id?'#1A5276':'#f5f5f0'};color:${tab===t.id?'#fff':'#555'};font-weight:${tab===t.id?'500':'400'}">${t.icon} ${t.label}</button>`).join('')}
-    <div style="flex:1"></div>
-    <span style="font-size:11px;color:#aaa;align-self:center">${students.length} total</span>
+  const subNavHTML=`<div style="display:flex;gap:6px;padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#fff;overflow-x:auto;flex-shrink:0;scrollbar-width:none">
+    ${SUB_DASH.map(t=>`<button onclick="STATE.dashTab='${t.id}';render()" style="padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;border:.5px solid ${tab===t.id?'#1A5276':'#d0d0d0'};background:${tab===t.id?'#1A5276':'#f5f5f0'};color:${tab===t.id?'#fff':'#555'};font-weight:${tab===t.id?'500':'400'};white-space:nowrap;flex-shrink:0">${t.icon} ${t.label}</button>`).join('')}
+    <div style="flex:1;min-width:8px"></div>
+    <span style="font-size:11px;color:#aaa;align-self:center;flex-shrink:0">${students.length} students</span>
   </div>`;
 
-  return`<div class="sh"><h2>🛡️ Instructor Dashboard</h2><p>Student overview · FMAA Prep</p></div>
+  return`<div class="sh"><h2>\u{1F6E1}\uFE0F Instructor Dashboard</h2><p>Student overview \u00B7 FMAA Prep</p></div>
   ${subNavHTML}
   <div class="scroll-area">${bodyHTML}<div style="height:20px"></div></div>`;
 }
@@ -1523,6 +1680,7 @@ function render(){
   if(STATE.tab==='leaderboard'&&!STATE.leaderboardLoaded)setTimeout(loadLeaderboard,0);
   if(STATE.tab==='community'&&!STATE.communityLoaded&&!STATE.communityLoading&&!STATE.showAskForm)setTimeout(loadQuestions,0);
   if(STATE.tab==='dashboard'&&!STATE.dashLoaded&&!STATE.dashLoading&&!STATE.dashError)setTimeout(loadDashboard,0);
+  if(STATE.tab==='study'&&!STATE.lessonId&&!STATE.groupPlanLoaded&&!isInstructor()){const _st=loadStudent();if(_st&&_st.groupCode)setTimeout(loadGroupContent,0);}
   content.style.display='flex';content.style.flexDirection='column';content.style.overflow='auto';
   if(STATE.tab==='mock-exam'){content.style.overflow='hidden';if(STATE.mockExam.status==='mcq')setTimeout(()=>renderMockMCQContent(),0);}
   const _mb=document.getElementById('mobile-brand');
