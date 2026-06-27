@@ -115,7 +115,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .quiz-opt{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;margin-bottom:8px;border:.5px solid #e0e0d8;background:#f8f8f6;transition:background .1s}
 .quiz-opt-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;border:.5px solid #bbb;background:#fff}
 .quiz-opt-text{font-size:14px;color:#333;line-height:1.5;flex:1;padding-top:4px}
-@media(min-width:900px){#app{flex-direction:row;align-items:stretch;height:100vh;height:100dvh;overflow:hidden}.bottom-nav{position:fixed;top:0;left:0;bottom:0;width:200px;flex-direction:column;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto;z-index:100}.content{flex:1;min-width:0;height:100vh;height:100dvh;overflow:hidden;margin-left:200px}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
+@media(min-width:900px){#app{flex-direction:row;align-items:stretch;height:100vh;height:100dvh;overflow:hidden}.bottom-nav{position:fixed;top:0;left:max(0px,calc(50vw - 850px));bottom:0;width:200px;flex-direction:column;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto;z-index:100}.content{flex:1;min-width:0;height:100vh;height:100dvh;overflow:hidden;margin-left:200px}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
 .profile-hero{background:linear-gradient(160deg,#1A5276,#2980B9);padding:20px 20px 16px;text-align:center;flex-shrink:0}
 .profile-img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid rgba(255,255,255,.8);margin:0 auto 12px;display:block}
 .profile-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:4px}
@@ -368,7 +368,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:''};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -1309,7 +1309,7 @@ function renderMockResults(){const{correct,total,scoreDenom,rawPct,scaled,pass,s
 // ─── INSTRUCTOR DASHBOARD ────────────────────────────────────────────────────
 async function loadDashboard(){
   if(!isInstructor()||STATE.dashLoading)return;
-  STATE.dashLoading=true;
+  STATE.dashLoading=true;STATE.dashError=false;
   try{
     const [studentsSnap,lbSnap]=await Promise.all([
       db.collection('fmaa-students').get(),
@@ -1324,7 +1324,10 @@ async function loadDashboard(){
       return{uid:d.id,sid,name:sd.name||'—',email:sd.email||'—',country:sd.country||'—',examdate:sd.examdate||'',photo:sd.photo||'',lessons:lb.lessons||0,accuracy:lb.accuracy||0,mcqTotal:lb.mcqTotal||0,streak:lb.streak||0,updatedAt:lb.updatedAt||''};
     }).sort((a,b)=>b.lessons-a.lessons);
     STATE.dashLoaded=true;
-  }catch(e){console.error('Dashboard load error:',e);showToast('Error loading dashboard data.','error');}
+  }catch(e){
+    console.error('Dashboard load error:',e);
+    STATE.dashError=true;
+  }
   STATE.dashLoading=false;
   if(STATE.tab==='dashboard')render();
 }
@@ -1340,7 +1343,14 @@ function renderDashboard(){
   const filtered=q?students.filter(s=>s.name.toLowerCase().includes(q)||s.email.toLowerCase().includes(q)||s.sid.toLowerCase().includes(q)||s.country.toLowerCase().includes(q)):students;
 
   let bodyHTML='';
-  if(!STATE.dashLoaded&&STATE.dashLoading){
+  if(STATE.dashError){
+    bodyHTML=`<div style="text-align:center;padding:60px 20px">
+      <div style="font-size:36px;margin-bottom:12px">⚠️</div>
+      <div style="font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:6px">Couldn't load student data</div>
+      <div style="font-size:13px;color:#888;margin-bottom:20px;line-height:1.6">This is likely a Firestore permissions issue.<br>Make sure the security rules allow the instructor UID to read<br><code style="font-size:11px;background:#f5f5f0;padding:2px 6px;border-radius:4px">fmaa-students</code> and <code style="font-size:11px;background:#f5f5f0;padding:2px 6px;border-radius:4px">fmaa-leaderboard</code>.</div>
+      <button onclick="STATE.dashError=false;STATE.dashLoaded=false;loadDashboard()" style="padding:11px 24px;border-radius:10px;border:none;background:#1A5276;color:#fff;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">🔄 Retry</button>
+    </div>`;
+  } else if(!STATE.dashLoaded&&STATE.dashLoading){
     bodyHTML=`<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:32px;margin-bottom:12px">⏳</div><div style="font-size:14px">Loading students...</div></div>`;
   } else if(tab==='students'){
     const rows=filtered.map(s=>{
@@ -1512,7 +1522,7 @@ function render(){
   if(STATE.tab==='onboarding'){try{localStorage.setItem('fmaa-visited','1');}catch{}}
   if(STATE.tab==='leaderboard'&&!STATE.leaderboardLoaded)setTimeout(loadLeaderboard,0);
   if(STATE.tab==='community'&&!STATE.communityLoaded&&!STATE.communityLoading&&!STATE.showAskForm)setTimeout(loadQuestions,0);
-  if(STATE.tab==='dashboard'&&!STATE.dashLoaded&&!STATE.dashLoading)setTimeout(loadDashboard,0);
+  if(STATE.tab==='dashboard'&&!STATE.dashLoaded&&!STATE.dashLoading&&!STATE.dashError)setTimeout(loadDashboard,0);
   content.style.display='flex';content.style.flexDirection='column';content.style.overflow='auto';
   if(STATE.tab==='mock-exam'){content.style.overflow='hidden';if(STATE.mockExam.status==='mcq')setTimeout(()=>renderMockMCQContent(),0);}
   const _mb=document.getElementById('mobile-brand');
