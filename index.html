@@ -1604,8 +1604,17 @@ async function checkInToLecture(){
   const st=loadStudent();
   const btn=document.getElementById('checkin-btn');
   if(btn){btn.disabled=true;btn.textContent='Checking in...';}
+  if(STATE.lectureCheckedIn){closeLecturePopup();return;}
   try{
-    await db.collection('fmaa-attendance').add({
+    // Deterministic doc ID = lectureId + uid -> physically impossible to duplicate
+    const docId=lec.id+'_'+STATE.user.uid;
+    const ref=db.collection('fmaa-attendance').doc(docId);
+    const existing=await ref.get();
+    if(existing.exists){
+      STATE.lectureCheckedIn=true;closeLecturePopup();
+      showToast('You already checked in for this lecture ✅','info');return;
+    }
+    await ref.set({
       lectureId:lec.id,lectureTitle:lec.title,groupCode:lec.groupCode,
       uid:STATE.user.uid,studentName:st?.name||'Student',
       studentId:st?.studentId||'',email:st?.email||'',
@@ -1628,10 +1637,19 @@ async function submitLectureFeedback(){
   const r2=STATE._lectureRating2||0;
   const comment=(document.getElementById('lf-comment')?.value||'').trim();
   if(!r1||!r2){showToast('Please rate both categories.','warning');return;}
+  if(STATE.lectureFeedbackDone){closeFeedbackPopup();return;}
   const btn=document.getElementById('lf-submit-btn');
   if(btn){btn.disabled=true;btn.textContent='Submitting...';}
   try{
-    await db.collection('fmaa-lecture-feedback').add({
+    // Deterministic doc ID = lectureId + uid -> one feedback per student per lecture
+    const docId=lec.id+'_'+STATE.user.uid;
+    const ref=db.collection('fmaa-lecture-feedback').doc(docId);
+    const existing=await ref.get();
+    if(existing.exists){
+      STATE.lectureFeedbackDone=true;closeFeedbackPopup();
+      showToast('You already submitted feedback for this lecture ✅','info');return;
+    }
+    await ref.set({
       lectureId:lec.id,lectureTitle:lec.title,groupCode:lec.groupCode,
       uid:STATE.user.uid,studentName:st?.name||'Student',
       studentId:st?.studentId||'',
@@ -1649,12 +1667,15 @@ async function submitLectureFeedback(){
 
 // ── Popup display logic ───────────────────────────────────────────────────
 function showLecturePopups(){
-  // Show check-in popup if: active lecture exists, not yet checked in, logged in student
-  if(STATE.activeLecture&&!STATE.lectureCheckedIn&&STATE.user&&!isInstructor()){
+  if(!STATE.user||isInstructor())return;
+  // Priority 1: check-in popup if there's an active check-in not yet done
+  if(STATE.activeLecture&&!STATE.lectureCheckedIn){
     renderCheckinPopup();
+    return;
   }
-  // Show feedback popup if: active feedback, not yet done, no checkin popup showing
-  else if(STATE.activeFeedback&&!STATE.lectureFeedbackDone&&STATE.user&&!isInstructor()){
+  // Priority 2: feedback popup if there's active feedback not yet given
+  // (shows even if check-in already done, or if there's no active check-in at all)
+  if(STATE.activeFeedback&&!STATE.lectureFeedbackDone){
     renderFeedbackPopup();
   }
 }
@@ -2297,7 +2318,7 @@ function render(){
   if(STATE.tab==='dashboard'&&!STATE.dashLoaded&&!STATE.dashLoading&&!STATE.dashError)setTimeout(loadDashboard,0);
   if(STATE.tab==='study'&&!STATE.lessonId&&!isInstructor()){const _st=loadStudent();if(_st&&_st.groupCode){if(!STATE.groupPlanLoaded||!STATE._groupContentLoadTime||Date.now()-STATE._groupContentLoadTime>120000){STATE._groupContentLoadTime=Date.now();setTimeout(loadGroupContent,0);}}}
   // Load active lecture/feedback for students (check once per session, refresh every 3 min)
-  if(!isInstructor()&&STATE.user&&STATE.tab!=='loading'&&STATE.tab!=='login'&&STATE.tab!=='onboarding'){if(!STATE.activeLectureLoaded||!STATE._lectureLoadTime||Date.now()-STATE._lectureLoadTime>180000){STATE._lectureLoadTime=Date.now();setTimeout(loadActiveLecture,0);}}
+  if(!isInstructor()&&STATE.user&&STATE.tab!=='loading'&&STATE.tab!=='login'&&STATE.tab!=='onboarding'){if(!STATE.activeLectureLoaded||!STATE._lectureLoadTime||Date.now()-STATE._lectureLoadTime>45000){STATE._lectureLoadTime=Date.now();setTimeout(loadActiveLecture,0);}}
   content.style.display='flex';content.style.flexDirection='column';content.style.overflow='auto';
   if(STATE.tab==='mock-exam'){content.style.overflow='hidden';if(STATE.mockExam.status==='mcq')setTimeout(()=>renderMockMCQContent(),0);}
   const _mb=document.getElementById('mobile-brand');
