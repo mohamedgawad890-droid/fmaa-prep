@@ -1819,15 +1819,13 @@ async function loadDashboard(){
   if(!isInstructor()||STATE.dashLoading)return;
   STATE.dashLoading=true;STATE.dashError=false;
   try{
-    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap,lecturesSnap,attendanceSnap,lFeedbackSnap]=await Promise.all([
+    // Core dashboard data — these must succeed
+    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap]=await Promise.all([
       db.collection('fmaa-students').get(),
       db.collection('fmaa-leaderboard').get(),
       db.collection('fmaa-plans').get(),
       db.collection('fmaa-exams').get(),
-      db.collection('fmaa-exam-results').get(),
-      db.collection('fmaa-lectures').get(),
-      db.collection('fmaa-attendance').get(),
-      db.collection('fmaa-lecture-feedback').get()
+      db.collection('fmaa-exam-results').get()
     ]);
     const lbMap={};
     lbSnap.docs.forEach(d=>{lbMap[d.id]=d.data();});
@@ -1840,10 +1838,23 @@ async function loadDashboard(){
     STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExamResults=resultsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.submittedAt>a.submittedAt?1:-1);
-    STATE.dashLectures=lecturesSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
-    STATE.dashAttendance=attendanceSnap.docs.map(d=>({id:d.id,...d.data()}));
-    STATE.dashLectureFeedback=lFeedbackSnap.docs.map(d=>({id:d.id,...d.data()}));
     STATE.dashLoaded=true;
+    // Lecture data — loaded separately so a failure here never breaks the dashboard
+    try{
+      const [lecturesSnap,attendanceSnap,lFeedbackSnap]=await Promise.all([
+        db.collection('fmaa-lectures').get(),
+        db.collection('fmaa-attendance').get(),
+        db.collection('fmaa-lecture-feedback').get()
+      ]);
+      STATE.dashLectures=lecturesSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
+      STATE.dashAttendance=attendanceSnap.docs.map(d=>({id:d.id,...d.data()}));
+      STATE.dashLectureFeedback=lFeedbackSnap.docs.map(d=>({id:d.id,...d.data()}));
+    }catch(lecErr){
+      console.warn('Lecture data load failed (dashboard still works):',lecErr);
+      STATE.dashLectures=STATE.dashLectures||[];
+      STATE.dashAttendance=STATE.dashAttendance||[];
+      STATE.dashLectureFeedback=STATE.dashLectureFeedback||[];
+    }
   }catch(e){
     console.error('Dashboard load error:',e);
     STATE.dashError=true;
