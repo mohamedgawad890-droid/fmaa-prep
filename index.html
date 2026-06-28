@@ -1825,7 +1825,7 @@ async function loadDashboard(){
       db.collection('fmaa-plans').get(),
       db.collection('fmaa-exams').get(),
       db.collection('fmaa-exam-results').get(),
-      db.collection('fmaa-lectures').orderBy('createdAt','desc').get(),
+      db.collection('fmaa-lectures').get(),
       db.collection('fmaa-attendance').get(),
       db.collection('fmaa-lecture-feedback').get()
     ]);
@@ -1840,7 +1840,7 @@ async function loadDashboard(){
     STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExamResults=resultsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.submittedAt>a.submittedAt?1:-1);
-    STATE.dashLectures=lecturesSnap.docs.map(d=>({id:d.id,...d.data()}));
+    STATE.dashLectures=lecturesSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashAttendance=attendanceSnap.docs.map(d=>({id:d.id,...d.data()}));
     STATE.dashLectureFeedback=lFeedbackSnap.docs.map(d=>({id:d.id,...d.data()}));
     STATE.dashLoaded=true;
