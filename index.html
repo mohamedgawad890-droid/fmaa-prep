@@ -368,7 +368,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -1502,17 +1502,332 @@ function updateDashStudentList(){
     return '<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:.5px solid #f0f0eb;cursor:pointer" onclick="openStudentModal('+"'" +s.uid+"'" +')">'+'<div style="width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:20px;color:#1A5276;border:2px solid #D6EAF8">'+photoHtml+'</div>'+'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-size:13px;font-weight:500;color:#1a1a1a">'+esc(s.name)+'</span>'+badges+'</div>'+'<div style="font-size:11px;color:#888;margin-top:2px">'+esc(s.email)+' &middot; '+esc(s.country||'')+'</div></div>'+'<div style="text-align:right;flex-shrink:0"><div style="font-size:13px;font-weight:600;color:#1A5276">'+s.lessons+' lessons</div><div style="font-size:11px;color:#888">'+s.accuracy+'% acc</div></div></div>';
   }).join('');
 }
+
+// ─── LECTURE ATTENDANCE & FEEDBACK ───────────────────────────────────────────
+
+// ── Instructor: create lecture ────────────────────────────────────────────────
+async function createLecture(){
+  const d=STATE.dashLectureDraft;
+  if(!d.title.trim()||!d.groupCode.trim()){showToast('Enter lecture title and group code.','warning');return;}
+  try{
+    await db.collection('fmaa-lectures').add({
+      title:d.title.trim(),groupCode:d.groupCode.trim().toUpperCase(),
+      checkinOpen:false,feedbackOpen:false,
+      feedbackDeadline:null,
+      createdAt:new Date().toISOString(),createdBy:STATE.user.uid
+    });
+    showToast('Lecture created! ✅','success');
+    STATE.dashLectureDraft={title:'',groupCode:''};
+    STATE.dashLoaded=false;await loadDashboard();
+  }catch(e){showToast('Error: '+e.message,'error');}
+}
+
+// ── Instructor: toggle check-in open/closed ────────────────────────────────
+async function toggleLectureCheckin(id,currentlyOpen){
+  try{
+    await db.collection('fmaa-lectures').doc(id).update({checkinOpen:!currentlyOpen});
+    STATE.dashLoaded=false;await loadDashboard();
+  }catch(e){showToast('Error: '+e.message,'error');}
+}
+
+// ── Instructor: open feedback window (1 week deadline) ────────────────────
+async function openLectureFeedback(id){
+  const deadline=new Date(Date.now()+7*24*60*60*1000).toISOString();
+  try{
+    await db.collection('fmaa-lectures').doc(id).update({feedbackOpen:true,feedbackDeadline:deadline});
+    STATE.dashLoaded=false;await loadDashboard();
+    showToast('Feedback window opened — closes in 1 week ✅','success');
+  }catch(e){showToast('Error: '+e.message,'error');}
+}
+
+// ── Instructor: close feedback window ────────────────────────────────────
+async function closeLectureFeedback(id){
+  try{
+    await db.collection('fmaa-lectures').doc(id).update({feedbackOpen:false});
+    STATE.dashLoaded=false;await loadDashboard();
+  }catch(e){showToast('Error: '+e.message,'error');}
+}
+
+// ── Instructor: delete lecture ────────────────────────────────────────────
+async function deleteLecture(id){
+  const ok=await showModal({icon:'🗑️',title:'Delete Lecture?',body:'This will remove the lecture record. Attendance and feedback data will remain.',type:'danger',confirmText:'Delete',cancelText:'Cancel'});
+  if(!ok)return;
+  try{await db.collection('fmaa-lectures').doc(id).delete();STATE.dashLoaded=false;await loadDashboard();}
+  catch(e){showToast('Error deleting lecture.','error');}
+}
+
+// ── Student: load active lecture/feedback for their group ─────────────────
+async function loadActiveLecture(){
+  if(STATE._lectureLoading)return;
+  const st=loadStudent();if(!st||!st.groupCode||!STATE.user)return;
+  STATE._lectureLoading=true;
+  const gc=st.groupCode.toUpperCase();
+  try{
+    // Load lectures for this group that have checkin or feedback open
+    const snap=await db.collection('fmaa-lectures')
+      .where('groupCode','==',gc).get();
+    const all=snap.docs.map(d=>({id:d.id,...d.data()}));
+
+    // Find active check-in lecture
+    const checkinLecture=all.find(l=>l.checkinOpen);
+    // Find active feedback lecture (open and within deadline)
+    const now=new Date().toISOString();
+    const feedbackLecture=all.find(l=>l.feedbackOpen&&(!l.feedbackDeadline||l.feedbackDeadline>now));
+
+    STATE.activeLecture=checkinLecture||null;
+    STATE.activeFeedback=feedbackLecture||null;
+    STATE.activeLectureLoaded=true;
+    STATE.activeFeedbackLoaded=true;
+
+    // Check if already checked in / gave feedback
+    if(checkinLecture){
+      const aSnap=await db.collection('fmaa-attendance')
+        .where('lectureId','==',checkinLecture.id)
+        .where('uid','==',STATE.user.uid).limit(1).get();
+      STATE.lectureCheckedIn=!aSnap.empty;
+    }
+    if(feedbackLecture){
+      const fSnap=await db.collection('fmaa-lecture-feedback')
+        .where('lectureId','==',feedbackLecture.id)
+        .where('uid','==',STATE.user.uid).limit(1).get();
+      STATE.lectureFeedbackDone=!fSnap.empty;
+    }
+  }catch(e){console.warn('Lecture load error:',e);}
+  STATE._lectureLoading=false;
+  // Show popups if needed
+  showLecturePopups();
+}
+
+// ── Student: check in ────────────────────────────────────────────────────
+async function checkInToLecture(){
+  const lec=STATE.activeLecture;if(!lec||!STATE.user)return;
+  const st=loadStudent();
+  const btn=document.getElementById('checkin-btn');
+  if(btn){btn.disabled=true;btn.textContent='Checking in...';}
+  try{
+    await db.collection('fmaa-attendance').add({
+      lectureId:lec.id,lectureTitle:lec.title,groupCode:lec.groupCode,
+      uid:STATE.user.uid,studentName:st?.name||'Student',
+      studentId:st?.studentId||'',email:st?.email||'',
+      checkedInAt:new Date().toISOString()
+    });
+    STATE.lectureCheckedIn=true;
+    closeLecturePopup();
+    showToast('Attendance recorded! ✅','success');
+  }catch(e){
+    showToast('Error checking in: '+e.message,'error');
+    if(btn){btn.disabled=false;btn.textContent='✋ I\'m Here!';}
+  }
+}
+
+// ── Student: submit lecture feedback ──────────────────────────────────────
+async function submitLectureFeedback(){
+  const lec=STATE.activeFeedback;if(!lec||!STATE.user)return;
+  const st=loadStudent();
+  const r1=STATE._lectureRating1||0;
+  const r2=STATE._lectureRating2||0;
+  const comment=(document.getElementById('lf-comment')?.value||'').trim();
+  if(!r1||!r2){showToast('Please rate both categories.','warning');return;}
+  const btn=document.getElementById('lf-submit-btn');
+  if(btn){btn.disabled=true;btn.textContent='Submitting...';}
+  try{
+    await db.collection('fmaa-lecture-feedback').add({
+      lectureId:lec.id,lectureTitle:lec.title,groupCode:lec.groupCode,
+      uid:STATE.user.uid,studentName:st?.name||'Student',
+      studentId:st?.studentId||'',
+      ratingOverall:r1,ratingClarity:r2,comment,
+      submittedAt:new Date().toISOString()
+    });
+    STATE.lectureFeedbackDone=true;
+    closeFeedbackPopup();
+    showToast('Feedback submitted! Thank you 🌟','success');
+  }catch(e){
+    showToast('Error submitting: '+e.message,'error');
+    if(btn){btn.disabled=false;btn.textContent='Submit Feedback';}
+  }
+}
+
+// ── Popup display logic ───────────────────────────────────────────────────
+function showLecturePopups(){
+  // Show check-in popup if: active lecture exists, not yet checked in, logged in student
+  if(STATE.activeLecture&&!STATE.lectureCheckedIn&&STATE.user&&!isInstructor()){
+    renderCheckinPopup();
+  }
+  // Show feedback popup if: active feedback, not yet done, no checkin popup showing
+  else if(STATE.activeFeedback&&!STATE.lectureFeedbackDone&&STATE.user&&!isInstructor()){
+    renderFeedbackPopup();
+  }
+}
+
+function renderCheckinPopup(){
+  if(document.getElementById('lecture-popup-overlay'))return;
+  const lec=STATE.activeLecture;
+  const overlay=document.createElement('div');
+  overlay.id='lecture-popup-overlay';
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:11000;display:flex;align-items:flex-end;justify-content:center;animation:fadeIn .2s ease';
+  overlay.innerHTML=`
+    <div style="background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:520px;padding:24px 24px 36px;animation:slideUp .25s ease">
+      <div style="width:40px;height:4px;background:#e0e0d8;border-radius:2px;margin:0 auto 20px"></div>
+      <div style="text-align:center;margin-bottom:20px">
+        <div style="font-size:48px;margin-bottom:10px">📍</div>
+        <div style="font-size:19px;font-weight:700;color:#1a1a1a;margin-bottom:6px">Lecture in Progress!</div>
+        <div style="font-size:14px;color:#1A5276;font-weight:500;background:#EBF5FB;border-radius:8px;padding:8px 14px;display:inline-block">${lec.title}</div>
+      </div>
+      <div style="font-size:13px;color:#888;text-align:center;margin-bottom:20px;line-height:1.6">Tap the button below to record your attendance.<br>You can only check in once per lecture.</div>
+      <button id="checkin-btn" onclick="checkInToLecture()" style="width:100%;padding:16px;border-radius:14px;border:none;background:linear-gradient(135deg,#1A5276,#2980B9);color:#fff;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.3px">✋ I'm Here!</button>
+      <button onclick="closeLecturePopup()" style="width:100%;margin-top:10px;padding:12px;border-radius:12px;border:.5px solid #e0e0d8;background:#fff;color:#aaa;font-size:13px;cursor:pointer;font-family:inherit">Remind me later</button>
+    </div>`;
+  document.body.appendChild(overlay);
+}
+
+function renderFeedbackPopup(){
+  if(document.getElementById('feedback-popup-overlay'))return;
+  const lec=STATE.activeFeedback;
+  STATE._lectureRating1=0;STATE._lectureRating2=0;
+  const deadline=lec.feedbackDeadline?new Date(lec.feedbackDeadline).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'';
+  const overlay=document.createElement('div');
+  overlay.id='feedback-popup-overlay';
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:11000;display:flex;align-items:flex-end;justify-content:center;animation:fadeIn .2s ease';
+  overlay.innerHTML=`
+    <div style="background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:520px;padding:24px 24px 36px;max-height:90vh;overflow-y:auto;animation:slideUp .25s ease">
+      <div style="width:40px;height:4px;background:#e0e0d8;border-radius:2px;margin:0 auto 20px"></div>
+      <div style="text-align:center;margin-bottom:18px">
+        <div style="font-size:40px;margin-bottom:8px">⭐</div>
+        <div style="font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px">Rate This Lecture</div>
+        <div style="font-size:13px;color:#1A5276;font-weight:500;background:#EBF5FB;border-radius:8px;padding:6px 12px;display:inline-block">${lec.title}</div>
+        ${deadline?`<div style="font-size:11px;color:#888;margin-top:8px">Feedback closes ${deadline}</div>`:''}
+      </div>
+      <div style="margin-bottom:16px">
+        <div style="font-size:13px;font-weight:600;color:#555;margin-bottom:8px">Overall lecture rating</div>
+        <div style="display:flex;gap:8px;justify-content:center">${[1,2,3,4,5].map(i=>`<span id="lf-star1-${i}" onclick="setLectureRating(1,${i})" style="font-size:32px;cursor:pointer;opacity:.3;transition:opacity .1s">⭐</span>`).join('')}</div>
+      </div>
+      <div style="margin-bottom:16px">
+        <div style="font-size:13px;font-weight:600;color:#555;margin-bottom:8px">Clarity of explanation</div>
+        <div style="display:flex;gap:8px;justify-content:center">${[1,2,3,4,5].map(i=>`<span id="lf-star2-${i}" onclick="setLectureRating(2,${i})" style="font-size:32px;cursor:pointer;opacity:.3;transition:opacity .1s">⭐</span>`).join('')}</div>
+      </div>
+      <div style="margin-bottom:18px">
+        <div style="font-size:13px;font-weight:600;color:#555;margin-bottom:8px">What was unclear? Any questions?</div>
+        <textarea id="lf-comment" rows="3" placeholder="Optional — write anything you want Gawad to know..." style="width:100%;padding:10px 12px;border-radius:10px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a;resize:none;line-height:1.5;box-sizing:border-box"></textarea>
+      </div>
+      <button id="lf-submit-btn" onclick="submitLectureFeedback()" style="width:100%;padding:15px;border-radius:14px;border:none;background:linear-gradient(135deg,#1E8449,#27AE60);color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit">Submit Feedback</button>
+      <button onclick="closeFeedbackPopup()" style="width:100%;margin-top:10px;padding:12px;border-radius:12px;border:.5px solid #e0e0d8;background:#fff;color:#aaa;font-size:13px;cursor:pointer;font-family:inherit">Maybe later</button>
+    </div>`;
+  document.body.appendChild(overlay);
+}
+
+function setLectureRating(which,val){
+  if(which===1){STATE._lectureRating1=val;[1,2,3,4,5].forEach(i=>{const el=document.getElementById('lf-star1-'+i);if(el)el.style.opacity=i<=val?'1':'0.3';});}
+  else{STATE._lectureRating2=val;[1,2,3,4,5].forEach(i=>{const el=document.getElementById('lf-star2-'+i);if(el)el.style.opacity=i<=val?'1':'0.3';});}
+}
+function closeLecturePopup(){const el=document.getElementById('lecture-popup-overlay');if(el)el.remove();}
+function closeFeedbackPopup(){const el=document.getElementById('feedback-popup-overlay');if(el)el.remove();}
+
+// ── Dashboard: render Lectures tab ────────────────────────────────────────
+function renderDashLectures(students,groups){
+  const lectures=STATE.dashLectures||[];
+  const attendance=STATE.dashAttendance||[];
+  const feedback=STATE.dashLectureFeedback||[];
+  const d=STATE.dashLectureDraft;
+
+  // Attendance count per lecture
+  const attMap={};attendance.forEach(a=>{if(!attMap[a.lectureId])attMap[a.lectureId]=0;attMap[a.lectureId]++;});
+  // Feedback count per lecture
+  const fbMap={};feedback.forEach(f=>{if(!fbMap[f.lectureId])fbMap[f.lectureId]=0;fbMap[f.lectureId]++;});
+  // Avg ratings per lecture
+  const ratingMap={};feedback.forEach(f=>{if(!ratingMap[f.lectureId])ratingMap[f.lectureId]={r1:0,r2:0,count:0};ratingMap[f.lectureId].r1+=f.ratingOverall||0;ratingMap[f.lectureId].r2+=f.ratingClarity||0;ratingMap[f.lectureId].count++;});
+
+  const lectureCards=lectures.length===0
+    ?'<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No lectures yet. Create your first one below.</div>'
+    :lectures.map(lec=>{
+      const attCount=attMap[lec.id]||0;
+      const fbCount=fbMap[lec.id]||0;
+      const rm=ratingMap[lec.id];
+      const avgOverall=rm&&rm.count?Math.round(rm.r1/rm.count*10)/10:null;
+      const avgClarity=rm&&rm.count?Math.round(rm.r2/rm.count*10)/10:null;
+      const now=new Date().toISOString();
+      const fbExpired=lec.feedbackDeadline&&lec.feedbackDeadline<now;
+      return`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:10px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px">
+          <div style="flex:1;min-width:0">
+            <div style="font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:4px">${esc(lec.title)}</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              <span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 8px;border-radius:10px;font-weight:500">${esc(lec.groupCode)}</span>
+              <span style="font-size:10px;background:${lec.checkinOpen?'#D5F5E3':'#f0f0eb'};color:${lec.checkinOpen?'#186A3B':'#888'};padding:1px 8px;border-radius:10px;font-weight:500">${lec.checkinOpen?'🟢 Check-in Open':'⚫ Check-in Closed'}</span>
+              <span style="font-size:10px;background:${lec.feedbackOpen&&!fbExpired?'#FAEEDA':'#f0f0eb'};color:${lec.feedbackOpen&&!fbExpired?'#854F0B':'#888'};padding:1px 8px;border-radius:10px;font-weight:500">${lec.feedbackOpen&&!fbExpired?'⭐ Feedback Open':fbExpired?'✅ Feedback Closed':'— Feedback Off'}</span>
+            </div>
+          </div>
+          <button onclick="deleteLecture('${lec.id}')" style="padding:5px 8px;border-radius:6px;border:.5px solid #E24B4A40;background:#FCEBEB;color:#A32D2D;font-size:11px;cursor:pointer;font-family:inherit;flex-shrink:0">🗑️</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:10px">
+          <div style="background:#EBF5FB;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#1A5276">${attCount}</div><div style="font-size:10px;color:#888">Present</div></div>
+          <div style="background:#f5f5f0;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">${fbCount}</div><div style="font-size:10px;color:#888">Feedback</div></div>
+          <div style="background:#FAEEDA;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#854F0B">${avgOverall?avgOverall+'⭐':'—'}</div><div style="font-size:10px;color:#888">Overall</div></div>
+          <div style="background:#D5F5E3;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#186A3B">${avgClarity?avgClarity+'⭐':'—'}</div><div style="font-size:10px;color:#888">Clarity</div></div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <button onclick="toggleLectureCheckin('${lec.id}',${lec.checkinOpen})" style="flex:1;padding:8px;border-radius:8px;border:none;background:${lec.checkinOpen?'#FCEBEB':'#D5F5E3'};color:${lec.checkinOpen?'#A32D2D':'#186A3B'};font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;min-width:110px">${lec.checkinOpen?'🔴 Close Check-in':'🟢 Open Check-in'}</button>
+          ${!lec.feedbackOpen||fbExpired?`<button onclick="openLectureFeedback('${lec.id}')" style="flex:1;padding:8px;border-radius:8px;border:none;background:#FAEEDA;color:#854F0B;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;min-width:110px">⭐ Open Feedback</button>`:`<button onclick="closeLectureFeedback('${lec.id}')" style="flex:1;padding:8px;border-radius:8px;border:none;background:#f0f0eb;color:#888;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;min-width:110px">Close Feedback</button>`}
+          <button onclick="showLectureAttendance('${lec.id}')" style="padding:8px 12px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;cursor:pointer;font-family:inherit">👥 List</button>
+        </div>
+      </div>`;
+    }).join('');
+
+  return`<div style="padding:14px">
+    <div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">📝 Create Lecture</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+      <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Lecture Title *</label><input type="text" value="${esc(d.title)}" oninput="STATE.dashLectureDraft.title=this.value" placeholder="e.g. Lecture 5 — SU 12" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+      <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Group Code *</label><input type="text" value="${esc(d.groupCode)}" oninput="STATE.dashLectureDraft.groupCode=this.value.toUpperCase()" placeholder="e.g. GRP1" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;text-transform:uppercase;box-sizing:border-box"></div>
+    </div>
+    <button onclick="createLecture()" style="width:100%;padding:11px;border-radius:10px;border:none;background:#1A5276;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:18px">📝 Create Lecture</button>
+    <div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL LECTURES (${lectures.length})</div>
+    ${lectureCards}
+  </div>`;
+}
+
+// ── Show attendance list modal ─────────────────────────────────────────────
+function showLectureAttendance(lectureId){
+  const lec=(STATE.dashLectures||[]).find(l=>l.id===lectureId);
+  const records=(STATE.dashAttendance||[]).filter(a=>a.lectureId===lectureId);
+  const fbRecords=(STATE.dashLectureFeedback||[]).filter(f=>f.lectureId===lectureId);
+  const overlay=document.createElement('div');
+  overlay.id='attendance-modal-overlay';
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:10500;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .15s ease';
+  overlay.onclick=function(e){if(e.target===overlay)overlay.remove();};
+  const rows=records.map(r=>{
+    const fb=fbRecords.find(f=>f.uid===r.uid);
+    const time=r.checkedInAt?new Date(r.checkedInAt).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}):'';
+    return`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:.5px solid #f0f0eb">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(r.studentName||'Student')}</div>
+        <div style="font-size:11px;color:#888">${esc(r.studentId||'')} · ${time}</div>
+      </div>
+      ${fb?`<div style="text-align:right;flex-shrink:0"><div style="font-size:11px;color:#854F0B">${fb.ratingOverall}⭐ / ${fb.ratingClarity}⭐</div>${fb.comment?`<div style="font-size:10px;color:#888;max-width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(fb.comment)}</div>`:''}</div>`:'<span style="font-size:10px;color:#bbb;flex-shrink:0">No feedback</span>'}
+    </div>`;
+  }).join('');
+  overlay.innerHTML=`<div style="background:#fff;border-radius:18px;width:100%;max-width:440px;max-height:85vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.25);animation:slideUp .2s ease">
+    <div style="background:linear-gradient(135deg,#1A5276,#2980B9);padding:18px 20px;border-radius:18px 18px 0 0;display:flex;align-items:center;justify-content:space-between">
+      <div><div style="font-size:16px;font-weight:700;color:#fff">${esc(lec?lec.title:'Lecture')}</div><div style="font-size:12px;color:rgba(255,255,255,.8);margin-top:2px">${records.length} present · ${fbRecords.length} feedback</div></div>
+      <button onclick="document.getElementById('attendance-modal-overlay').remove()" style="background:rgba(255,255,255,.2);border:none;color:#fff;font-size:20px;cursor:pointer;border-radius:8px;width:32px;height:32px;display:flex;align-items:center;justify-content:center">&times;</button>
+    </div>
+    <div style="padding:14px">${records.length?rows:'<div style="text-align:center;padding:30px;color:#aaa;font-size:13px">No students checked in yet.</div>'}</div>
+  </div>`;
+  document.body.appendChild(overlay);
+}
+
 // ─── INSTRUCTOR DASHBOARD ────────────────────────────────────────────────────
 async function loadDashboard(){
   if(!isInstructor()||STATE.dashLoading)return;
   STATE.dashLoading=true;STATE.dashError=false;
   try{
-    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap]=await Promise.all([
+    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap,lecturesSnap,attendanceSnap,lFeedbackSnap]=await Promise.all([
       db.collection('fmaa-students').get(),
       db.collection('fmaa-leaderboard').get(),
       db.collection('fmaa-plans').get(),
       db.collection('fmaa-exams').get(),
-      db.collection('fmaa-exam-results').get()
+      db.collection('fmaa-exam-results').get(),
+      db.collection('fmaa-lectures').orderBy('createdAt','desc').get(),
+      db.collection('fmaa-attendance').get(),
+      db.collection('fmaa-lecture-feedback').get()
     ]);
     const lbMap={};
     lbSnap.docs.forEach(d=>{lbMap[d.id]=d.data();});
@@ -1525,6 +1840,9 @@ async function loadDashboard(){
     STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExamResults=resultsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.submittedAt>a.submittedAt?1:-1);
+    STATE.dashLectures=lecturesSnap.docs.map(d=>({id:d.id,...d.data()}));
+    STATE.dashAttendance=attendanceSnap.docs.map(d=>({id:d.id,...d.data()}));
+    STATE.dashLectureFeedback=lFeedbackSnap.docs.map(d=>({id:d.id,...d.data()}));
     STATE.dashLoaded=true;
   }catch(e){
     console.error('Dashboard load error:',e);
@@ -1643,6 +1961,7 @@ function renderDashboard(){
     {id:'results',icon:'\u{1F4CA}',label:'Exam Results'},
     {id:'plan',icon:'\u{1F4C5}',label:'Weekly Plan'},
     {id:'exam',icon:'\u{1F3AF}',label:'Group Exam'},
+    {id:'lectures',icon:'\u{1F4DD}',label:'Lectures'},
   ];
   const tab=STATE.dashTab||'students';
   const students=STATE.dashStudents||[];
@@ -1841,6 +2160,8 @@ function renderDashboard(){
       <button onclick="saveExam()" style="width:100%;padding:11px;border-radius:10px;border:none;background:#1E8449;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit">\u{1F3AF} Create Exam</button>
       ${existing?`<div style="margin-top:16px"><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">EXISTING EXAMS</div>${existing}</div>`:''}
     </div>`;
+  } else if(tab==='lectures'){
+    bodyHTML=renderDashLectures(students,groups);
   }
 
   const subNavHTML=`<div style="display:flex;gap:6px;padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#fff;overflow-x:auto;flex-shrink:0;scrollbar-width:none">
@@ -1964,6 +2285,8 @@ function render(){
   if(STATE.tab==='community'&&!STATE.communityLoaded&&!STATE.communityLoading&&!STATE.showAskForm)setTimeout(loadQuestions,0);
   if(STATE.tab==='dashboard'&&!STATE.dashLoaded&&!STATE.dashLoading&&!STATE.dashError)setTimeout(loadDashboard,0);
   if(STATE.tab==='study'&&!STATE.lessonId&&!isInstructor()){const _st=loadStudent();if(_st&&_st.groupCode){if(!STATE.groupPlanLoaded||!STATE._groupContentLoadTime||Date.now()-STATE._groupContentLoadTime>120000){STATE._groupContentLoadTime=Date.now();setTimeout(loadGroupContent,0);}}}
+  // Load active lecture/feedback for students (check once per session, refresh every 3 min)
+  if(!isInstructor()&&STATE.user&&STATE.tab!=='loading'&&STATE.tab!=='login'&&STATE.tab!=='onboarding'){if(!STATE.activeLectureLoaded||!STATE._lectureLoadTime||Date.now()-STATE._lectureLoadTime>180000){STATE._lectureLoadTime=Date.now();setTimeout(loadActiveLecture,0);}}
   content.style.display='flex';content.style.flexDirection='column';content.style.overflow='auto';
   if(STATE.tab==='mock-exam'){content.style.overflow='hidden';if(STATE.mockExam.status==='mcq')setTimeout(()=>renderMockMCQContent(),0);}
   const _mb=document.getElementById('mobile-brand');
