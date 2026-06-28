@@ -368,7 +368,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -473,6 +473,8 @@ function renderLessonListHTML(sec,prog){
 }
 // ─── STUDY NAVIGATION ─────────────────────────────────────────────────────────
 function studyGo(sectId,lessonId){
+  // Profile gate: block if name+mobile not set (same check as navTo)
+  if(!isInstructor()){const _st=loadStudent();if(!_st||!_st.name||!_st.mobile){STATE.tab='register';STATE.showProfileWarning=true;render();return;}}
   if(STATE.lessonId&&!lessonId)endStudyTimer();
   if(lessonId)startStudyTimer('lesson-'+lessonId);
   STATE.sectId=sectId;STATE.lessonId=lessonId;
@@ -1617,6 +1619,7 @@ function renderDashboard(){
   const SUB_DASH=[
     {id:'students',icon:'\u{1F465}',label:'Students'},
     {id:'progress',icon:'\u{1F4C8}',label:'Progress'},
+    {id:'leaderboard',icon:'\u{1F3C6}',label:'Leaderboard'},
     {id:'results',icon:'\u{1F4CA}',label:'Exam Results'},
     {id:'plan',icon:'\u{1F4C5}',label:'Weekly Plan'},
     {id:'exam',icon:'\u{1F3AF}',label:'Group Exam'},
@@ -1637,10 +1640,9 @@ function renderDashboard(){
   } else if(tab==='students'){
     const groupFilter=groups.length?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><span style="font-size:11px;color:#888;align-self:center">Group:</span><button onclick="STATE.dashGroupFilter='';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${!gf?'#1A5276':'#d0d0d0'};background:${!gf?'#1A5276':'#f5f5f0'};color:${!gf?'#fff':'#555'}">All</button>${groups.map(g=>`<button onclick="STATE.dashGroupFilter='${g}';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${gf===g?'#1A5276':'#d0d0d0'};background:${gf===g?'#1A5276':'#f5f5f0'};color:${gf===g?'#fff':'#555'}">${esc(g)}</button>`).join('')}</div>`:'';
     const rows=filtered.map(s=>{
-      const photo=s.photo&&s.photo.startsWith('https://res.cloudinary.com/')?`<img src="${esc(s.photo)}" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #D6EAF8">`:
-        `<div style="width:32px;height:32px;border-radius:50%;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#1A5276;flex-shrink:0">${(s.name.charAt(0)||'?').toUpperCase()}</div>`;
-      return`<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid #f0f0eb">
-        ${photo}
+      const photoHtml=s.photo&&s.photo.startsWith('https://res.cloudinary.com/')?`<img src="${esc(s.photo)}" style="width:100%;height:100%;object-fit:cover;object-position:center 20%">`:`<span style="font-size:20px;font-weight:700;color:#1A5276">${esc((s.name||'?').charAt(0).toUpperCase())}</span>`;
+      return`<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:.5px solid #f0f0eb;cursor:pointer" onclick="openStudentModal('${s.uid}')">
+        <div style="width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#D6EAF8;display:flex;align-items:center;justify-content:center;border:2px solid #D6EAF8">${photoHtml}</div>
         <div style="flex:1;min-width:0">
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>
@@ -1664,17 +1666,22 @@ function renderDashboard(){
           ${STATE.dashSearchQ?`<span onclick="STATE.dashSearchQ='';render()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:16px;cursor:pointer;color:#aaa">\u00D7</span>`:''}
         </div>
         ${groupFilter}
-        <div style="font-size:11px;color:#888;margin-top:6px">${filtered.length} of ${students.length} students</div>
+        <div id="dash-student-count" style="font-size:11px;color:#888;margin-top:6px">${filtered.length} of ${students.length} students</div>
       </div>
-      <div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No students found.</div>`}</div>
+      <div id="dash-student-rows">${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No students found.</div>`}</div>
       <div style="padding:12px 14px;border-top:.5px solid #e0e0d8">
         <button onclick="STATE.dashLoaded=false;STATE.dashStudents=[];loadDashboard()" style="width:100%;padding:10px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;font-size:13px;cursor:pointer;font-family:inherit">\u{1F504} Refresh</button>
       </div>`;
   } else if(tab==='progress'){
-    const sorted=[...filtered].sort((a,b)=>b.lessons-a.lessons);
+    const progressGf=(STATE.dashProgressGroupFilter||'').toUpperCase().trim();
+    let progressFiltered=progressGf?students.filter(s=>s.groupCode===progressGf):students;
+    const sorted=[...progressFiltered].sort((a,b)=>b.lessons-a.lessons);
+    const progressGroupFilter=groups.length?`<div style="padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#f8f8f6;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:11px;color:#888">Group:</span><button onclick="STATE.dashProgressGroupFilter='';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${!progressGf?'#1A5276':'#d0d0d0'};background:${!progressGf?'#1A5276':'#f5f5f0'};color:${!progressGf?'#fff':'#555'}">All</button>${groups.map(g=>`<button onclick="STATE.dashProgressGroupFilter='${g}';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${progressGf===g?'#1A5276':'#d0d0d0'};background:${progressGf===g?'#1A5276':'#f5f5f0'};color:${progressGf===g?'#fff':'#555'}">${esc(g)}</button>`).join('')}</div>`:'';
     const rows=sorted.map((s,i)=>{
       const medal=i===0?'\u{1F947}':i===1?'\u{1F948}':i===2?'\u{1F949}':'';
       const accColor=s.accuracy>=70?'#1E8449':s.accuracy>=50?'#EF9F27':'#E24B4A';
+      const mcqDisplay=typeof s.mcqTotal==='number'&&s.mcqTotal<1000000?s.mcqTotal:0;
+      const streakDisplay=typeof s.streak==='number'&&s.streak<10000?s.streak:0;
       return`<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid #f0f0eb">
         <div style="width:28px;text-align:center;font-size:14px;flex-shrink:0">${medal||`<span style="font-size:12px;color:#aaa">${i+1}</span>`}</div>
         <div style="flex:1;min-width:0">
@@ -1682,7 +1689,7 @@ function renderDashboard(){
             <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>
             ${s.groupCode?`<span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 6px;border-radius:8px">${esc(s.groupCode)}</span>`:''}
           </div>
-          <div style="font-size:11px;color:#888;margin-top:1px">${s.mcqTotal} MCQs \u00B7 ${s.streak}\u{1F525} streak</div>
+          <div style="font-size:11px;color:#888;margin-top:1px">${mcqDisplay} MCQs \u00B7 ${streakDisplay}\u{1F525} streak</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
           <div style="font-size:13px;font-weight:600;color:#1A5276">${s.lessons}/${TOTAL_LESSONS}</div>
@@ -1690,7 +1697,34 @@ function renderDashboard(){
         </div>
       </div>`;
     }).join('');
-    bodyHTML=`<div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No data yet.</div>`}</div>`;
+    bodyHTML=`${progressGroupFilter}<div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No data yet.</div>`}</div>`;
+  } else if(tab==='leaderboard'){
+    const lbGf=(STATE.dashLbGroupFilter||'').toUpperCase().trim();
+    let lbFiltered=lbGf?students.filter(s=>s.groupCode===lbGf):students;
+    const lbSorted=[...lbFiltered].sort((a,b)=>b.lessons!==a.lessons?b.lessons-a.lessons:b.accuracy-a.accuracy);
+    const lbGroupFilter=groups.length?`<div style="padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#f8f8f6;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:11px;color:#888">Group:</span><button onclick="STATE.dashLbGroupFilter='';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${!lbGf?'#1A5276':'#d0d0d0'};background:${!lbGf?'#1A5276':'#f5f5f0'};color:${!lbGf?'#fff':'#555'}">All</button>${groups.map(g=>`<button onclick="STATE.dashLbGroupFilter='${g}';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${lbGf===g?'#1A5276':'#d0d0d0'};background:${lbGf===g?'#1A5276':'#f5f5f0'};color:${lbGf===g?'#fff':'#555'}">${esc(g)}</button>`).join('')}</div>`:'';
+    const lbRows=lbSorted.map((s,i)=>{
+      const medal=i===0?'\u{1F947}':i===1?'\u{1F948}':i===2?'\u{1F949}':'';
+      const accColor=s.accuracy>=70?'#1E8449':s.accuracy>=50?'#EF9F27':'#E24B4A';
+      const mcqDisplay=typeof s.mcqTotal==='number'&&s.mcqTotal<1000000?s.mcqTotal:0;
+      const photoHtml=s.photo&&s.photo.startsWith('https://res.cloudinary.com/')?`<img src="${esc(s.photo)}" style="width:100%;height:100%;object-fit:cover;object-position:center 20%">`:`<span style="font-size:16px;font-weight:700;color:#1A5276">${esc((s.name||'?').charAt(0).toUpperCase())}</span>`;
+      return`<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid #f0f0eb;cursor:pointer" onclick="openStudentModal('${s.uid}')">
+        <div style="width:28px;text-align:center;font-size:16px;flex-shrink:0">${medal||`<span style="font-size:12px;color:#aaa;font-weight:600">${i+1}</span>`}</div>
+        <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#D6EAF8;display:flex;align-items:center;justify-content:center;border:2px solid #D6EAF8">${photoHtml}</div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>
+            ${s.groupCode?`<span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 6px;border-radius:8px">${esc(s.groupCode)}</span>`:''}
+          </div>
+          <div style="font-size:11px;color:#888;margin-top:1px">${mcqDisplay} MCQs \u00B7 ${esc(s.country||'')}</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-size:13px;font-weight:600;color:#1A5276">${s.lessons}/${TOTAL_LESSONS}</div>
+          <div style="font-size:11px;font-weight:500;color:${accColor}">${s.accuracy}% acc</div>
+        </div>
+      </div>`;
+    }).join('');
+    bodyHTML=`${lbGroupFilter}${lbRows.length?`<div>${lbRows}</div>`:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No students yet.</div>`}`;
   } else if(tab==='results'){
     const results=STATE.dashExamResults||[];
     const exams=STATE.dashExams||[];
