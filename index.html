@@ -371,7 +371,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,_dictLoading:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,communityLastLoadTime:0,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false,_lectureLoadTime:0,_groupContentLoadTime:0,_searchPrewarmed:false,_lectureModalTab:'attendance'};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -405,7 +405,7 @@ function lessonDone(lid){return _getDoneSet().has(lid);}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function expFor(q,chosen){if(chosen!==null&&chosen!==q.a&&q.wrongWhy&&q.wrongWhy[chosen])return q.wrongWhy[chosen];return q.e;}
 function dataTableHTML(q){if(!q.data||!q.data.length)return'';const rows=q.data.map(r=>`<tr><td style="padding:6px 10px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('');return`<table style="width:100%;border-collapse:collapse;margin:0 0 16px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:13px">${rows}</table>`;}
-function safePhotoURL(u){if(typeof u!=='string')return'';return(/^https:\/\/res\.cloudinary\.com\//.test(u)||/^data:image\//.test(u))?u:'';}
+function safePhotoURL(u){if(typeof u!=='string')return'';return/^https:\/\/res\.cloudinary\.com\//.test(u)?u:'';}
 function getStudyStreak(){return loadStreak().count||0;}
 function timeAgo(iso){if(!iso)return'';try{const diff=Date.now()-new Date(iso).getTime();const m=Math.floor(diff/60000);if(m<1)return'just now';if(m<60)return`${m}m ago`;const h=Math.floor(m/60);if(h<24)return`${h}h ago`;const d=Math.floor(h/24);if(d<7)return`${d}d ago`;return new Date(iso).toLocaleDateString();}catch{return '';}}
 function isInstructor(){return STATE.user&&STATE.user.uid===INSTRUCTOR_UID;}
@@ -604,7 +604,7 @@ async function loadQuestions(append=false){
   if(!append){STATE.communityQuestions=[];STATE.communityLastDoc=null;STATE.communityHasMore=false;}
   try{
     let q=db.collection('fmaa-questions');
-    q=q.orderBy('createdAt','desc');
+    q=q.orderBy('createdAt','desc'); // NOTE: if a .where() filter is ever added here, a Firestore composite index will be required (createdAt + filter field). Use client-side filtering instead to avoid that.
     if(append&&STATE.communityLastDoc)q=q.startAfter(STATE.communityLastDoc);
     q=q.limit(COMMUNITY_PAGE+1);
     const snap=await q.get();const docs=snap.docs;STATE.communityHasMore=docs.length>COMMUNITY_PAGE;
@@ -1435,7 +1435,7 @@ function renderMockMCQContent(){const cont=document.getElementById('mock-mcq-con
   </div>`;mockUpdateNav();}
 async function mockConfirmSubmitMCQ(){const total=STATE.mockExam.mcqQ.length;const answered=Object.keys(STATE.mockExam.mcqA).length;const unanswered=total-answered;const ok=await showModal({icon:unanswered>0?'\u26A0\uFE0F':'\uD83D\uDCCB',title:unanswered>0?`${unanswered} Question${unanswered>1?'s':''} Unanswered`:'Submit Exam?',body:unanswered>0?`You have ${unanswered} unanswered question${unanswered>1?'s':''}. You can still submit \u2014 unanswered questions count as wrong.`:'Submit all answers and see your results?',type:unanswered>0?'warning':'info',confirmText:'Submit',cancelText:'Go Back'});if(ok)mockSubmitMCQ(false);}
 function mockSubmitMCQ(autoSubmit){mockClearTimers();const{mcqQ,mcqA}=STATE.mockExam;let correct=0;const secScores={};const mockWrong=[];mcqQ.forEach((q,i)=>{if(!secScores[q.sid])secScores[q.sid]={correct:0,total:0,title:q.stitle,bar:q.sbar};secScores[q.sid].total++;if(mcqA[i]===q.a){correct++;secScores[q.sid].correct++;}else{mockWrong.push({q:q.q,o:q.o,a:q.a,e:q.e,wrongWhy:q.wrongWhy,data:q.data,sid:q.sid,stitle:q.stitle,sbar:q.sbar,_fromMock:true,_userAns:mcqA[i]!==undefined?mcqA[i]:null});}});// Save mock wrong answers to localStorage for Wrong Answers review
-try{const existing=JSON.parse(localStorage.getItem('fmaa-mock-wrong-v1')||'[]');const merged=[...mockWrong,...existing].slice(0,100);localStorage.setItem('fmaa-mock-wrong-v1',JSON.stringify(merged));}catch(e){}
+try{const existing=JSON.parse(localStorage.getItem('fmaa-mock-wrong-v1')||'[]');const merged=[...mockWrong,...existing];const seen=new Set();const deduped=merged.filter(x=>{const key=x.q;if(seen.has(key))return false;seen.add(key);return true;}).slice(0,100);localStorage.setItem('fmaa-mock-wrong-v1',JSON.stringify(deduped));}catch(e){}
 const attempted=mcqQ.length;const scoreDenom=MOCK_TARGET;const rawPct=Math.round(correct/scoreDenom*100);const scaled=Math.min(MOCK_SCALE,Math.round(correct/scoreDenom*MOCK_SCALE));const pass=scaled>=MOCK_PASS;STATE.mockExam.results={correct,total:attempted,scoreDenom,rawPct,scaled,pass,secScores};STATE.mockExam.status='results';saveMockResult({date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}),dateTs:Date.now(),correct,total:attempted,scoreDenom,rawPct,scaled,pass});
   // Save group exam result to Firestore
   if(STATE.mockExam.isGroupExam&&STATE.mockExam.groupExamId&&STATE.user&&db){
@@ -1812,7 +1812,7 @@ function renderDashLectures(students,groups){
 
 // ── Show attendance list modal ─────────────────────────────────────────────
 function showLectureAttendance(lectureId){
-  STATE._lectureModalTab=STATE._lectureModalTab||'attendance';
+  STATE._lectureModalTab='attendance'; // always start on attendance tab when opening any lecture
   const lec=(STATE.dashLectures||[]).find(l=>l.id===lectureId);
   const records=(STATE.dashAttendance||[]).filter(a=>a.lectureId===lectureId);
   const fbRecords=(STATE.dashLectureFeedback||[]).filter(f=>f.lectureId===lectureId);
