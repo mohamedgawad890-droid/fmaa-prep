@@ -1631,6 +1631,8 @@ async function loadActiveLecture(){
 // ── Student: check in ────────────────────────────────────────────────────
 async function checkInToLecture(){
   const lec=STATE.activeLecture;if(!lec||!STATE.user)return;
+  const attendanceType=STATE._attendanceType||'';
+  if(!attendanceType){showToast('Please select Online or In-Person first.','warning');return;}
   const st=loadStudent();
   const btn=document.getElementById('checkin-btn');
   if(btn){btn.disabled=true;btn.textContent='Checking in...';}
@@ -1648,7 +1650,8 @@ async function checkInToLecture(){
       lectureId:lec.id,lectureTitle:lec.title,groupCode:lec.groupCode,
       uid:STATE.user.uid,studentName:st?.name||'Student',
       studentId:st?.studentId||'',email:st?.email||'',
-      checkedInAt:new Date().toISOString()
+      checkedInAt:new Date().toISOString(),
+      attendanceType:attendanceType
     });
     STATE.lectureCheckedIn=true;
     closeLecturePopup();
@@ -1724,11 +1727,49 @@ function renderCheckinPopup(){
         <div style="font-size:19px;font-weight:700;color:#1a1a1a;margin-bottom:6px">Lecture in Progress!</div>
         <div style="font-size:14px;color:#1A5276;font-weight:500;background:#EBF5FB;border-radius:8px;padding:8px 14px;display:inline-block">${lec.title}</div>
       </div>
-      <div style="font-size:13px;color:#888;text-align:center;margin-bottom:20px;line-height:1.6">Tap the button below to record your attendance.<br>You can only check in once per lecture.</div>
-      <button id="checkin-btn" onclick="checkInToLecture()" style="width:100%;padding:16px;border-radius:14px;border:none;background:linear-gradient(135deg,#1A5276,#2980B9);color:#fff;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.3px">✋ I'm Here!</button>
+      <div style="font-size:13px;color:#555;font-weight:600;margin-bottom:10px;text-align:center">How are you attending?</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
+        <label id="att-online-lbl" onclick="selectAttendanceType('online')" style="display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:12px;border:2px solid #e0e0d8;background:#f5f5f0;cursor:pointer;transition:all .15s">
+          <input type="radio" name="att-type" value="online" style="display:none">
+          <span style="font-size:22px">💻</span>
+          <span style="font-size:14px;font-weight:600;color:#555">Online</span>
+        </label>
+        <label id="att-offline-lbl" onclick="selectAttendanceType('offline')" style="display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:12px;border:2px solid #e0e0d8;background:#f5f5f0;cursor:pointer;transition:all .15s">
+          <input type="radio" name="att-type" value="offline" style="display:none">
+          <span style="font-size:22px">🏫</span>
+          <span style="font-size:14px;font-weight:600;color:#555">In-Person</span>
+        </label>
+      </div>
+      <div style="font-size:12px;color:#aaa;text-align:center;margin-bottom:16px;line-height:1.5">Select how you are attending, then tap the button below.<br>You can only check in once per lecture.</div>
+      <button id="checkin-btn" onclick="checkInToLecture()" disabled style="width:100%;padding:16px;border-radius:14px;border:none;background:#b0c4d8;color:#fff;font-size:17px;font-weight:700;cursor:not-allowed;font-family:inherit;letter-spacing:.3px;transition:all .2s">✋ I'm Here!</button>
       <button onclick="closeLecturePopup()" style="width:100%;margin-top:10px;padding:12px;border-radius:12px;border:.5px solid #e0e0d8;background:#fff;color:#aaa;font-size:13px;cursor:pointer;font-family:inherit">Remind me later</button>
     </div>`;
   document.body.appendChild(overlay);
+}
+
+function selectAttendanceType(type){
+  STATE._attendanceType=type;
+  const onlineLbl=document.getElementById('att-online-lbl');
+  const offlineLbl=document.getElementById('att-offline-lbl');
+  if(onlineLbl&&offlineLbl){
+    const activeStyle='border:2px solid #1A5276;background:#EBF5FB;';
+    const inactiveStyle='border:2px solid #e0e0d8;background:#f5f5f0;';
+    onlineLbl.style.cssText=onlineLbl.style.cssText.replace(/border:[^;]+;background:[^;]+;/,'');
+    offlineLbl.style.cssText=offlineLbl.style.cssText.replace(/border:[^;]+;background:[^;]+;/,'');
+    if(type==='online'){
+      onlineLbl.style.border='2px solid #1A5276';onlineLbl.style.background='#EBF5FB';
+      onlineLbl.querySelector('span:last-child').style.color='#154360';
+      offlineLbl.style.border='2px solid #e0e0d8';offlineLbl.style.background='#f5f5f0';
+      offlineLbl.querySelector('span:last-child').style.color='#555';
+    } else {
+      offlineLbl.style.border='2px solid #1A5276';offlineLbl.style.background='#EBF5FB';
+      offlineLbl.querySelector('span:last-child').style.color='#154360';
+      onlineLbl.style.border='2px solid #e0e0d8';onlineLbl.style.background='#f5f5f0';
+      onlineLbl.querySelector('span:last-child').style.color='#555';
+    }
+  }
+  const btn=document.getElementById('checkin-btn');
+  if(btn){btn.disabled=false;btn.style.background='linear-gradient(135deg,#1A5276,#2980B9)';btn.style.cursor='pointer';}
 }
 
 function renderFeedbackPopup(){
