@@ -27,8 +27,8 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .mobile-brand-img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid #D6EAF8;flex-shrink:0}
 .mobile-brand-title{font-size:14px;font-weight:600;color:#1A5276;letter-spacing:.3px}
 @media(min-width:900px){.mobile-brand{display:none!important}}
-.content{display:flex;flex-direction:column;flex:1;overflow:auto;position:relative}
-.scroll-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.content{display:flex;flex-direction:column;flex:1;overflow:auto;position:relative;overflow-x:hidden}
+.scroll-area{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 .pad{padding:0 16px}
 .sh{padding:16px 16px 10px;border-bottom:.5px solid #e0e0d8;flex-shrink:0}
 .sh h2{font-size:18px;font-weight:500;color:#1a1a1a}
@@ -69,10 +69,11 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .ar-tip.show{display:block}
 .bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px}
 @media(min-width:900px){.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
-.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 2px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
+.desktop-brand{display:none}
+.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:5px 1px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
 .nav-btn.active{color:#1A5276;background:#EBF5FB}
-.nav-btn span:last-child{font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-.nav-icon{font-size:18px;line-height:1}
+.nav-btn span:last-child{font-size:9px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.nav-icon{font-size:17px;line-height:1}
 @media(min-width:900px){.nav-btn{flex:none;flex-direction:row;justify-content:flex-start;gap:14px;padding:10px 12px}.nav-btn span:last-child{font-size:14px;letter-spacing:.1px}}.nav-icon-desktop-lg{font-size:22px!important}
 .sub-nav{display:flex;gap:6px;padding:8px 16px;border-bottom:.5px solid #e0e0d8;overflow-x:auto;flex-shrink:0;scrollbar-width:none}
 .sub-nav::-webkit-scrollbar{display:none}
@@ -371,7 +372,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,_dictLoading:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,communityLastLoadTime:0,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false,_lectureLoadTime:0,_groupContentLoadTime:0,_searchPrewarmed:false,_lectureModalTab:'attendance'};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -405,7 +406,7 @@ function lessonDone(lid){return _getDoneSet().has(lid);}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function expFor(q,chosen){if(chosen!==null&&chosen!==q.a&&q.wrongWhy&&q.wrongWhy[chosen])return q.wrongWhy[chosen];return q.e;}
 function dataTableHTML(q){if(!q.data||!q.data.length)return'';const rows=q.data.map(r=>`<tr><td style="padding:6px 10px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('');return`<table style="width:100%;border-collapse:collapse;margin:0 0 16px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:13px">${rows}</table>`;}
-function safePhotoURL(u){if(typeof u!=='string')return'';return/^https:\/\/res\.cloudinary\.com\//.test(u)?u:'';}
+function safePhotoURL(u){if(typeof u!=='string')return'';return(/^https:\/\/res\.cloudinary\.com\//.test(u)||/^data:image\//.test(u))?u:'';}
 function getStudyStreak(){return loadStreak().count||0;}
 function timeAgo(iso){if(!iso)return'';try{const diff=Date.now()-new Date(iso).getTime();const m=Math.floor(diff/60000);if(m<1)return'just now';if(m<60)return`${m}m ago`;const h=Math.floor(m/60);if(h<24)return`${h}h ago`;const d=Math.floor(h/24);if(d<7)return`${d}d ago`;return new Date(iso).toLocaleDateString();}catch{return '';}}
 function isInstructor(){return STATE.user&&STATE.user.uid===INSTRUCTOR_UID;}
@@ -604,7 +605,7 @@ async function loadQuestions(append=false){
   if(!append){STATE.communityQuestions=[];STATE.communityLastDoc=null;STATE.communityHasMore=false;}
   try{
     let q=db.collection('fmaa-questions');
-    q=q.orderBy('createdAt','desc'); // NOTE: if a .where() filter is ever added here, a Firestore composite index will be required (createdAt + filter field). Use client-side filtering instead to avoid that.
+    q=q.orderBy('createdAt','desc');
     if(append&&STATE.communityLastDoc)q=q.startAfter(STATE.communityLastDoc);
     q=q.limit(COMMUNITY_PAGE+1);
     const snap=await q.get();const docs=snap.docs;STATE.communityHasMore=docs.length>COMMUNITY_PAGE;
@@ -1033,7 +1034,7 @@ function renderStudy(){
     const ll=isOpen?renderLessonListHTML(sec,progress):'';
     return`<div id="sec-card-${sec.id}" class="card" style="cursor:pointer;border-color:${isOpen?sec.text+'60':'#e0e0d8'};border-width:${isOpen?'1px':'.5px'}" onclick="toggleSection(${sec.id})"><div style="display:flex;align-items:center;gap:10px"><div class="sect-icon" style="background:${sec.bg}">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${sec.weight}% of exam · ${lessonsDone}/${sec.lessons.length} lessons · ${secQuizDone}/${sec.lessons.length} quizzes</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0"><span class="badge" style="background:${sec.bg};color:${sec.strong}">${sp}%</span><span id="sec-icon-${sec.id}" style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isOpen?'90deg':'0deg'})">›</span></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:10px;overflow:hidden"><div style="height:100%;width:${sp}%;background:${sec.bar};border-radius:2px"></div></div><div id="sec-lessons-${sec.id}" style="${isOpen?'':'display:none'}">${ll}</div></div>`;
   }).join('');
-  return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
+  return`<div style="padding:0 16px;overflow-y:auto;overflow-x:hidden;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
 }
 
 function renderProgress(){
@@ -1435,7 +1436,7 @@ function renderMockMCQContent(){const cont=document.getElementById('mock-mcq-con
   </div>`;mockUpdateNav();}
 async function mockConfirmSubmitMCQ(){const total=STATE.mockExam.mcqQ.length;const answered=Object.keys(STATE.mockExam.mcqA).length;const unanswered=total-answered;const ok=await showModal({icon:unanswered>0?'\u26A0\uFE0F':'\uD83D\uDCCB',title:unanswered>0?`${unanswered} Question${unanswered>1?'s':''} Unanswered`:'Submit Exam?',body:unanswered>0?`You have ${unanswered} unanswered question${unanswered>1?'s':''}. You can still submit \u2014 unanswered questions count as wrong.`:'Submit all answers and see your results?',type:unanswered>0?'warning':'info',confirmText:'Submit',cancelText:'Go Back'});if(ok)mockSubmitMCQ(false);}
 function mockSubmitMCQ(autoSubmit){mockClearTimers();const{mcqQ,mcqA}=STATE.mockExam;let correct=0;const secScores={};const mockWrong=[];mcqQ.forEach((q,i)=>{if(!secScores[q.sid])secScores[q.sid]={correct:0,total:0,title:q.stitle,bar:q.sbar};secScores[q.sid].total++;if(mcqA[i]===q.a){correct++;secScores[q.sid].correct++;}else{mockWrong.push({q:q.q,o:q.o,a:q.a,e:q.e,wrongWhy:q.wrongWhy,data:q.data,sid:q.sid,stitle:q.stitle,sbar:q.sbar,_fromMock:true,_userAns:mcqA[i]!==undefined?mcqA[i]:null});}});// Save mock wrong answers to localStorage for Wrong Answers review
-try{const existing=JSON.parse(localStorage.getItem('fmaa-mock-wrong-v1')||'[]');const merged=[...mockWrong,...existing];const seen=new Set();const deduped=merged.filter(x=>{const key=x.q;if(seen.has(key))return false;seen.add(key);return true;}).slice(0,100);localStorage.setItem('fmaa-mock-wrong-v1',JSON.stringify(deduped));}catch(e){}
+try{const existing=JSON.parse(localStorage.getItem('fmaa-mock-wrong-v1')||'[]');const merged=[...mockWrong,...existing].slice(0,100);localStorage.setItem('fmaa-mock-wrong-v1',JSON.stringify(merged));}catch(e){}
 const attempted=mcqQ.length;const scoreDenom=MOCK_TARGET;const rawPct=Math.round(correct/scoreDenom*100);const scaled=Math.min(MOCK_SCALE,Math.round(correct/scoreDenom*MOCK_SCALE));const pass=scaled>=MOCK_PASS;STATE.mockExam.results={correct,total:attempted,scoreDenom,rawPct,scaled,pass,secScores};STATE.mockExam.status='results';saveMockResult({date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}),dateTs:Date.now(),correct,total:attempted,scoreDenom,rawPct,scaled,pass});
   // Save group exam result to Firestore
   if(STATE.mockExam.isGroupExam&&STATE.mockExam.groupExamId&&STATE.user&&db){
@@ -1812,7 +1813,7 @@ function renderDashLectures(students,groups){
 
 // ── Show attendance list modal ─────────────────────────────────────────────
 function showLectureAttendance(lectureId){
-  STATE._lectureModalTab='attendance'; // always start on attendance tab when opening any lecture
+  STATE._lectureModalTab=STATE._lectureModalTab||'attendance';
   const lec=(STATE.dashLectures||[]).find(l=>l.id===lectureId);
   const records=(STATE.dashAttendance||[]).filter(a=>a.lectureId===lectureId);
   const fbRecords=(STATE.dashLectureFeedback||[]).filter(f=>f.lectureId===lectureId);
