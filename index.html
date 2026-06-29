@@ -371,7 +371,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -1852,7 +1852,7 @@ function renderDashLectures(students,groups){
           <button onclick="deleteLecture('${lec.id}')" style="padding:5px 8px;border-radius:6px;border:.5px solid #E24B4A40;background:#FCEBEB;color:#A32D2D;font-size:11px;cursor:pointer;font-family:inherit;flex-shrink:0">🗑️</button>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:10px">
-          <div style="background:#EBF5FB;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#1A5276">${attCount}</div><div style="font-size:10px;color:#888">Present</div></div>
+${(()=>{const onlineCount=(STATE.dashAttendance||[]).filter(a=>a.lectureId===lec.id&&a.attendanceType==='online').length;const offlineCount=(STATE.dashAttendance||[]).filter(a=>a.lectureId===lec.id&&a.attendanceType==='offline').length;const unknownCount=attCount-onlineCount-offlineCount;return `<div style="background:#EBF5FB;border-radius:8px;padding:8px;text-align:center;grid-column:span 1"><div style="font-size:16px;font-weight:700;color:#1A5276">${attCount}</div><div style="font-size:10px;color:#888;margin-bottom:4px">Total Present</div><div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap">${onlineCount?`<span style="font-size:9px;background:#EBF5FB;color:#1A5276;border:.5px solid #AED6F1;padding:1px 5px;border-radius:6px">💻 ${onlineCount}</span>`:""}${offlineCount?`<span style="font-size:9px;background:#F4ECF7;color:#6C3483;border:.5px solid #D7BDE2;padding:1px 5px;border-radius:6px">🏫 ${offlineCount}</span>`:""}${unknownCount>0?`<span style="font-size:9px;background:#f5f5f0;color:#888;border:.5px solid #d0d0d0;padding:1px 5px;border-radius:6px">— ${unknownCount}</span>`:""}</div></div>`;})()}
           <div style="background:#f5f5f0;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">${fbCount}</div><div style="font-size:10px;color:#888">Feedback</div></div>
           <div style="background:#FAEEDA;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#854F0B">${avgOverall?avgOverall+'⭐':'—'}</div><div style="font-size:10px;color:#888">Overall</div></div>
           <div style="background:#D5F5E3;border-radius:8px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:700;color:#186A3B">${avgClarity?avgClarity+'⭐':'—'}</div><div style="font-size:10px;color:#888">Clarity</div></div>
@@ -1916,6 +1916,92 @@ function showLectureAttendance(lectureId){
 }
 
 // ─── INSTRUCTOR DASHBOARD ────────────────────────────────────────────────────
+function renderDashAttendanceRegister(students,groups){
+  const lectures=(STATE.dashLectures||[]).slice().sort((a,b)=>a.createdAt>b.createdAt?1:-1);
+  const attendance=STATE.dashAttendance||[];
+  const gf=(STATE.dashAttendanceGroupFilter||'').trim();
+  const filteredStudents=gf?students.filter(s=>s.groupCode===gf):students;
+  const filteredLectures=gf?lectures.filter(l=>l.groupCode===gf):lectures;
+
+  // Build lookup: lectureId+uid -> attendance record
+  const attLookup={};
+  attendance.forEach(a=>{ attLookup[(a.lectureId||'')+'|'+(a.uid||'')]= a; });
+
+  // Group filter buttons
+  const allGroups=[...new Set(students.map(s=>s.groupCode).filter(Boolean))].sort();
+  const groupFilters='<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">'
+    +'<button onclick="STATE.dashAttendanceGroupFilter=\'\';render()" style="padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;border:.5px solid '+(gf?'#d0d0d0':'#1A5276')+';background:'+(gf?'#f5f5f0':'#1A5276')+';color:'+(gf?'#555':'#fff')+';font-weight:'+(gf?'400':'500')+'">All</button>'
+    +allGroups.map(g=>'<button onclick="STATE.dashAttendanceGroupFilter=\''+g+'\';render()" style="padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer;font-family:inherit;border:.5px solid '+(gf===g?'#1A5276':'#d0d0d0')+';background:'+(gf===g?'#1A5276':'#f5f5f0')+';color:'+(gf===g?'#fff':'#555')+';font-weight:'+(gf===g?'500':'400')+'">'+(g)+'</button>').join('')
+    +'</div>';
+
+  if(filteredLectures.length===0){
+    return'<div style="padding:14px">'+groupFilters+'<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No lectures found'+(gf?' for '+gf:'')+'. Create lectures in the Lectures tab.</div></div>';
+  }
+
+  // Header row with lecture titles
+  const thStyle='min-width:80px;max-width:120px;padding:6px 8px;font-size:10px;font-weight:600;color:#1A5276;background:#EBF5FB;text-align:center;border-right:.5px solid #d0e8f5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:sticky;top:0;z-index:2';
+  const th1Style='min-width:150px;padding:6px 10px;font-size:10px;font-weight:600;color:#888;letter-spacing:.5px;background:#f5f5f0;border-right:.5px solid #e0e0d8;position:sticky;left:0;top:0;z-index:3';
+  const headerCells=filteredLectures.map(l=>'<th style="'+thStyle+'" title="'+l.title+'">'+l.title.slice(0,14)+(l.title.length>14?'…':'')+'</th>').join('');
+  const totalTh='<th style="min-width:60px;padding:6px 8px;font-size:10px;font-weight:600;color:#186A3B;background:#D5F5E3;text-align:center;position:sticky;top:0;z-index:2">Total</th>';
+
+  // Student rows
+  const tdBase='padding:7px 8px;text-align:center;border-right:.5px solid #f0f0eb;border-bottom:.5px solid #f0f0eb;font-size:12px;';
+  const rows=filteredStudents.map(s=>{
+    let presentCount=0;
+    const cells=filteredLectures.map(l=>{
+      const rec=attLookup[l.id+'|'+s.uid];
+      if(rec){
+        presentCount++;
+        const icon=rec.attendanceType==='online'?'💻':rec.attendanceType==='offline'?'🏫':'✓';
+        const bg=rec.attendanceType==='online'?'#EBF5FB':rec.attendanceType==='offline'?'#F4ECF7':'#D5F5E3';
+        return'<td style="'+tdBase+'background:'+bg+';color:#1a1a1a;font-weight:600">'+icon+'</td>';
+      }
+      return'<td style="'+tdBase+'background:#fff;color:#ddd">—</td>';
+    }).join('');
+    const pct=filteredLectures.length?Math.round(presentCount/filteredLectures.length*100):0;
+    const pctColor=pct>=80?'#186A3B':pct>=50?'#854F0B':'#A32D2D';
+    const pctBg=pct>=80?'#D5F5E3':pct>=50?'#FAEEDA':'#FCEBEB';
+    const nameCell='<td style="min-width:150px;padding:7px 10px;border-right:.5px solid #e0e0d8;border-bottom:.5px solid #f0f0eb;background:#fff;position:sticky;left:0;z-index:1">'
+      +'<div style="font-size:12px;font-weight:500;color:#1a1a1a">'+s.name+'</div>'
+      +'<div style="font-size:10px;color:#888">'+s.sid+(s.groupCode?' · '+s.groupCode:'')+'</div>'
+      +'</td>';
+    const totalCell='<td style="'+tdBase+'background:'+pctBg+';color:'+pctColor+';font-weight:700">'+presentCount+'/'+filteredLectures.length+'<div style="font-size:9px;font-weight:500">'+pct+'%</div></td>';
+    return'<tr>'+nameCell+cells+totalCell+'</tr>';
+  }).join('');
+
+  // Summary row
+  const summaryRow='<tr style="background:#f5f5f0">'
+    +'<td style="min-width:150px;padding:7px 10px;border-right:.5px solid #e0e0d8;font-size:11px;font-weight:600;color:#888;position:sticky;left:0;background:#f5f5f0;z-index:1">Total Check-ins</td>'
+    +filteredLectures.map(l=>{
+      const cnt=filteredStudents.filter(s=>attLookup[l.id+'|'+s.uid]).length;
+      return'<td style="'+tdBase+'background:#f5f5f0;font-weight:600;color:#1A5276">'+cnt+'</td>';
+    }).join('')
+    +'<td style="'+tdBase+'background:#f5f5f0"></td>'
+    +'</tr>';
+
+  const legend='<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;font-size:11px;color:#888;align-items:center">'
+    +'<span>Legend:</span>'
+    +'<span style="background:#EBF5FB;padding:2px 8px;border-radius:6px;color:#1A5276">💻 Online</span>'
+    +'<span style="background:#F4ECF7;padding:2px 8px;border-radius:6px;color:#6C3483">🏫 In-Person</span>'
+    +'<span style="background:#D5F5E3;padding:2px 8px;border-radius:6px;color:#186A3B">✓ Checked-in (no type)</span>'
+    +'<span style="background:#fff;border:.5px solid #e0e0d8;padding:2px 8px;border-radius:6px;color:#ddd">— Absent</span>'
+    +'</div>';
+
+  const tableHTML='<div style="overflow-x:auto;border:.5px solid #e0e0d8;border-radius:10px;max-height:60vh;overflow-y:auto">'
+    +'<table style="border-collapse:collapse;width:100%">'
+    +'<thead><tr><th style="min-width:150px;padding:6px 10px;font-size:10px;font-weight:600;color:#888;letter-spacing:.5px;background:#f5f5f0;border-right:.5px solid #e0e0d8;text-align:left;position:sticky;left:0;top:0;z-index:3">STUDENT</th>'+headerCells+totalTh+'</tr></thead>'
+    +'<tbody>'+rows+summaryRow+'</tbody>'
+    +'</table></div>';
+
+  return'<div style="padding:14px">'
+    +groupFilters
+    +'<div style="font-size:13px;color:#555;margin-bottom:10px">'
+    +filteredStudents.length+' student'+(filteredStudents.length!==1?'s':'')+' · '+filteredLectures.length+' lecture'+(filteredLectures.length!==1?'s':'')+(gf?' · '+gf:'')
+    +'</div>'
+    +legend
+    +tableHTML
+    +'</div>';
+}
 async function saveGroup(){
   const inp=document.getElementById('new-group-input');
   if(!inp)return;
@@ -2142,6 +2228,7 @@ function renderDashboard(){
     {id:'exam',icon:'\u{1F3AF}',label:'Group Exam'},
     {id:'lectures',icon:'\u{1F4DD}',label:'Lectures'},
     {id:'groups',icon:'\u{1F465}',label:'Groups'},
+    {id:'attendance',icon:'\u{1F4CB}',label:'Attendance'},
   ];
   const tab=STATE.dashTab||'students';
   const students=STATE.dashStudents||[];
@@ -2344,6 +2431,8 @@ function renderDashboard(){
     bodyHTML=renderDashLectures(students,groups);
   } else if(tab==='groups'){
     bodyHTML=renderDashGroups();
+  } else if(tab==='attendance'){
+    bodyHTML=renderDashAttendanceRegister(students,groups);
   }
 
   const subNavHTML=`<div style="display:flex;gap:6px;padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#fff;overflow-x:auto;flex-shrink:0;scrollbar-width:none">
