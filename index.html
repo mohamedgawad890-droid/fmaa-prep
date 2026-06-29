@@ -27,8 +27,8 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .mobile-brand-img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid #D6EAF8;flex-shrink:0}
 .mobile-brand-title{font-size:14px;font-weight:600;color:#1A5276;letter-spacing:.3px}
 @media(min-width:900px){.mobile-brand{display:none!important}}
-.content{display:flex;flex-direction:column;flex:1;overflow:auto;position:relative;overflow-x:hidden}
-.scroll-area{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+.content{display:flex;flex-direction:column;flex:1;overflow:auto;position:relative}
+.scroll-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .pad{padding:0 16px}
 .sh{padding:16px 16px 10px;border-bottom:.5px solid #e0e0d8;flex-shrink:0}
 .sh h2{font-size:18px;font-weight:500;color:#1a1a1a}
@@ -67,13 +67,14 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .ar-term{cursor:pointer;border-bottom:1px dashed #888;position:relative;display:inline}
 .ar-tip{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap;z-index:100;pointer-events:none}
 .ar-tip.show{display:block}
-.bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px}
-@media(min-width:900px){.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
+.bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none}
+.bottom-nav::-webkit-scrollbar{display:none}
 .desktop-brand{display:none}
-.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:5px 1px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
+@media(min-width:900px){.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
+.nav-btn{flex:0 0 auto;min-width:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;transition:background .15s}
 .nav-btn.active{color:#1A5276;background:#EBF5FB}
-.nav-btn span:last-child{font-size:9px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-.nav-icon{font-size:17px;line-height:1}
+.nav-btn span:last-child{font-size:10px;font-weight:500;white-space:nowrap;max-width:64px;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.nav-icon{font-size:18px;line-height:1}
 @media(min-width:900px){.nav-btn{flex:none;flex-direction:row;justify-content:flex-start;gap:14px;padding:10px 12px}.nav-btn span:last-child{font-size:14px;letter-spacing:.1px}}.nav-icon-desktop-lg{font-size:22px!important}
 .sub-nav{display:flex;gap:6px;padding:8px 16px;border-bottom:.5px solid #e0e0d8;overflow-x:auto;flex-shrink:0;scrollbar-width:none}
 .sub-nav::-webkit-scrollbar{display:none}
@@ -1034,7 +1035,7 @@ function renderStudy(){
     const ll=isOpen?renderLessonListHTML(sec,progress):'';
     return`<div id="sec-card-${sec.id}" class="card" style="cursor:pointer;border-color:${isOpen?sec.text+'60':'#e0e0d8'};border-width:${isOpen?'1px':'.5px'}" onclick="toggleSection(${sec.id})"><div style="display:flex;align-items:center;gap:10px"><div class="sect-icon" style="background:${sec.bg}">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${sec.weight}% of exam · ${lessonsDone}/${sec.lessons.length} lessons · ${secQuizDone}/${sec.lessons.length} quizzes</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0"><span class="badge" style="background:${sec.bg};color:${sec.strong}">${sp}%</span><span id="sec-icon-${sec.id}" style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isOpen?'90deg':'0deg'})">›</span></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:10px;overflow:hidden"><div style="height:100%;width:${sp}%;background:${sec.bar};border-radius:2px"></div></div><div id="sec-lessons-${sec.id}" style="${isOpen?'':'display:none'}">${ll}</div></div>`;
   }).join('');
-  return`<div style="padding:0 16px;overflow-y:auto;overflow-x:hidden;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
+  return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
 }
 
 function renderProgress(){
@@ -2344,6 +2345,8 @@ function render(){
       render._lastNavActive=active;
       const brandHeader=`<div class="desktop-brand" style="display:flex;align-items:center;justify-content:space-between;gap:10px"><div style="display:flex;align-items:center;gap:10px;min-width:0"><img src="./gawad-avatar.webp" alt="Gawad" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #D6EAF8"><div style="min-width:0"><div style="font-size:13px;font-weight:600;color:#1A5276;letter-spacing:.5px">FMAA Prep</div><div style="font-size:10px;color:#888;margin-top:1px">With Gawad</div></div></div>${!window.matchMedia("(display-mode: standalone)").matches?`<button onclick="installApp()" title="Install App" style="display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:8px;border:1px solid #d0d8e8;background:#D6EAF8;color:#1A5276;cursor:pointer;font-size:12px;font-weight:500;font-family:inherit;flex-shrink:0"><span style="font-size:14px">⬇</span><span>Install App</span></button>`:''}</div>`;
       nav.innerHTML=brandHeader+getNavTabs().map(t=>`<button class="nav-btn${t.id===active?' active':''}" onclick="navTo('${t.id}')"><span class="nav-icon">${t.icon}</span><span>${t.label}</span></button>`).join('');
+      // Auto-scroll active tab into view on mobile
+      setTimeout(()=>{const activeBtn=nav.querySelector('.nav-btn.active');if(activeBtn)activeBtn.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});},50);
     }
   }
   if(STATE.tab==='quiz-session'&&STATE.quizState&&STATE.quizState.selected===null){setTimeout(()=>startQTimer(()=>STATE.quizState.qTimerStart),20);}
