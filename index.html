@@ -452,7 +452,7 @@ function renderBlock(block,sec){
   switch(block.t){
     case'h':return`<div class="lh">${esc(block.v)}</div>`;
     case'p':return`<div class="lp">${highlightTerms(block.v)}</div>`;
-    case'f':return`<div class="formula" style="background:${bg};border:1px solid ${tx}30"><div class="formula-lbl" style="color:${tx}">${esc(block.l)}</div><div class="formula-txt" style="color:${st}">${esc(block.v)}</div></div>`;
+    case'f':return`<div class="formula" style="background:${bg};border:1px solid ${tx}30"><div class="formula-lbl" style="color:${tx}">${esc(block.l)}</div><div class="formula-txt" style="color:${st}">${esc(block.v).replace(/\n/g,'<br>')}</div></div>`;
     case'tip':return`<div class="tip"><div class="tip-lbl">EXAM TIP</div><div class="tip-txt">${highlightTerms(block.v)}</div></div>`;
     case'ex':return`<div class="ex-block"><div class="ex-lbl">📊 ${esc(block.l||'Worked Example')}</div><div class="ex-body">${esc(block.v).replace(/\n/g,'<br>')}</div></div>`;
     case'b':return`<ul class="blist">${block.v.map(i=>`<li><span style="color:${tx};font-weight:500;flex-shrink:0">•</span><span>${highlightTerms(i)}</span></li>`).join('')}</ul>`;
