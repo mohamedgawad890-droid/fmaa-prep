@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+window.__installPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Download FMAA Prep — Mohamed Abdelgawad</title>
+<meta name="theme-color" content="#1A5276">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f5f0;color:#1a1a1a}
+.wrap{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex;flex-direction:column}
+.hero{background:linear-gradient(160deg,#1A5276,#2980B9);padding:44px 24px 32px;text-align:center;flex-shrink:0}
+.hero img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid rgba(255,255,255,.8);margin-bottom:14px}
+.hero h1{font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}
+.hero p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.6;max-width:320px;margin:0 auto}
+.body{flex:1;padding:24px 20px 40px}
+.section-label{font-size:11px;font-weight:600;color:#888;letter-spacing:.6px;text-transform:uppercase;margin:0 0 12px}
+.card{border:.5px solid #e0e0d8;border-radius:14px;padding:18px;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.card-icon{width:46px;height:46px;border-radius:12px;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.card-info{flex:1;min-width:0}
+.card-info h3{font-size:15px;font-weight:600;color:#1a1a1a;margin-bottom:3px}
+.card-info p{font-size:12.5px;color:#888;line-height:1.5}
+.card-btn{flex-shrink:0;padding:10px 16px;border-radius:9px;border:none;background:#1A5276;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap}
+.card-btn:hover{opacity:.9}
+.card-btn[disabled]{opacity:.5;cursor:default}
+.status{font-size:11.5px;color:#1E8449;font-weight:600;margin-top:6px;display:none}
+.status.show{display:block}
+.steps{display:none;margin-top:14px;padding-top:14px;border-top:.5px solid #f0f0eb}
+.steps.show{display:block}
+.step{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.step:last-child{margin-bottom:0}
+.step-num{width:22px;height:22px;border-radius:50%;background:#1A5276;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px}
+.step-text{font-size:13px;color:#444;line-height:1.55}
+.card.column{flex-direction:column;align-items:stretch}
+.card.column .card-row{display:flex;align-items:center;gap:14px}
+.note{background:#FFFBEB;border:1px solid #F6D860;border-radius:10px;padding:12px 14px;margin-top:6px;font-size:12.5px;color:#856404;line-height:1.6}
+.footer-link{display:block;text-align:center;margin-top:18px;font-size:12.5px;color:#aaa}
+.footer-link a{color:#1A5276;font-weight:500;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <img src="./gawad-avatar.webp" alt="Mohamed Abdelgawad">
+    <h1>FMAA Prep By Gawad</h1>
+    <p>Get the app on your device — works offline, opens instantly, no App Store needed.</p>
+  </div>
+
+  <div class="body">
+    <div class="section-label">Choose your device</div>
+
+    <div class="card column" id="card-android">
+      <div class="card-row">
+        <div class="card-icon">🤖</div>
+        <div class="card-info">
+          <h3>Android</h3>
+          <p>One tap install via Chrome</p>
+        </div>
+        <button class="card-btn" id="btn-android" onclick="installNow('android')">Install</button>
+      </div>
+      <div class="status" id="status-android">✓ Installed — check your home screen</div>
+      <div class="steps" id="steps-android">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Open this page in <b>Chrome</b></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Tap the <b>⋮ menu</b> in the top right</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Tap <b>"Add to Home screen"</b> or <b>"Install app"</b></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Confirm — FMAA Prep appears on your home screen</div></div>
+      </div>
+    </div>
+
+    <div class="card column" id="card-windows">
+      <div class="card-row">
+        <div class="card-icon">🖥️</div>
+        <div class="card-info">
+          <h3>Windows</h3>
+          <p>One click install via Chrome or Edge</p>
+        </div>
+        <button class="card-btn" id="btn-windows" onclick="installNow('windows')">Install</button>
+      </div>
+      <div class="status" id="status-windows">✓ Installed — check your desktop / Start menu</div>
+      <div class="steps" id="steps-windows">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Open this page in <b>Chrome</b> or <b>Edge</b></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Click the <b>install icon ⊕</b> in the address bar (or the <b>⋮ menu → Install FMAA Prep</b>)</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Click <b>Install</b> in the popup</div></div>
+      </div>
+    </div>
+
+    <div class="card column" id="card-ios">
+      <div class="card-row">
+        <div class="card-icon">🍎</div>
+        <div class="card-info">
+          <h3>iPhone / iPad</h3>
+          <p>Add to Home Screen via Safari</p>
+        </div>
+        <button class="card-btn" onclick="toggleSteps('ios')">Show steps</button>
+      </div>
+      <div class="steps" id="steps-ios">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Open this page in <b>Safari</b> (not Chrome — Apple requires Safari)</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Tap the <b>Share</b> icon at the bottom 🔗</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Scroll down and tap <b>"Add to Home Screen"</b></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Tap <b>"Add"</b> — the app icon appears on your home screen</div></div>
+        <div class="note">⚠️ iPhone doesn't support a one-tap install — Apple only allows this manual Safari step.</div>
+      </div>
+    </div>
+
+    <div class="footer-link">Prefer to use it in the browser instead? <a href="https://mohamedgawad890-droid.github.io/fmaa-prep/">Open FMAA Prep</a></div>
+  </div>
+</div>
+
+<script>
+let deferredPrompt=window.__installPrompt||null;
+window.__onInstallReady=()=>{deferredPrompt=window.__installPrompt;updateAvailability();};
+window.addEventListener('appinstalled',()=>{deferredPrompt=null;window.__installPrompt=null;});
+
+function isAndroid(){return /android/i.test(navigator.userAgent);}
+function isWindows(){return /windows/i.test(navigator.userAgent);}
+
+function updateAvailability(){
+  // If beforeinstallprompt never fires (already installed, or unsupported browser like Safari),
+  // fall back to manual steps for that platform after a short grace period.
+}
+
+setTimeout(()=>{
+  if(!deferredPrompt){
+    if(isAndroid()) toggleSteps('android',true);
+    if(isWindows()) document.getElementById('btn-windows').onclick=()=>toggleSteps('windows');
+  }
+},1200);
+
+async function installNow(platform){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    const choice=await deferredPrompt.userChoice;
+    deferredPrompt=null;window.__installPrompt=null;
+    if(choice.outcome==='accepted'){
+      document.getElementById('status-'+platform).classList.add('show');
+      document.getElementById('btn-'+platform).disabled=true;
+      document.getElementById('btn-'+platform).textContent='Installed';
+    }
+    return;
+  }
+  toggleSteps(platform);
+}
+
+function toggleSteps(platform,forceOpen){
+  const el=document.getElementById('steps-'+platform);
+  if(!el)return;
+  if(forceOpen){el.classList.add('show');return;}
+  el.classList.toggle('show');
+}
+</script>
+</body>
+</html>
