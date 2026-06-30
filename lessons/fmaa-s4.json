@@ -99,6 +99,11 @@
       "v": "A step cost (semi-fixed cost) is fixed over a small range of activity, then jumps to a higher level. It moves upward in steps. Example: a hospital needs one nurse per 25 patients. At 1–25 patients, one nurse's salary is incurred. At 26–50, two nurses. At 51–75, three. Each jump is a step. This differs from a semi-variable cost, which increases smoothly from a fixed base; a step cost increases in sudden jumps."
     },
     {
+      "t": "ex",
+      "l": "Step Cost — Numeric Check",
+      "v": "Hospital staffing rule: 1 nurse per 25 patients, each nurse paid $4,000/month.\nAt 1–25 patients → 1 nurse → Total cost = $4,000 (cost per patient ranges from $160 at 25 patients down to $4,000 at 1 patient)\nAt 26–50 patients → 2 nurses → Total cost jumps to $8,000\nAt 51–75 patients → 3 nurses → Total cost jumps to $12,000\nWithin each band the cost is fixed (flat); crossing a threshold causes a step up — there is no smooth, gradual increase like a variable cost."
+    },
+    {
       "t": "h",
       "v": "All Three Side by Side"
     },
@@ -238,7 +243,7 @@
     {
       "t": "ex",
       "l": "Absorption vs Variable Costing — Income Difference",
-      "v": "Fixed factory overhead: $120,000. Units produced: 12,000. Units sold: 10,000.\nFixed OH per unit (absorption) = $120,000 ÷ 12,000 = $10/unit\n\nAbsorption: Fixed OH in COGS = 10,000 × $10 = $100,000. In ending inventory = 2,000 × $10 = $20,000.\nVariable: All $120,000 expensed this period regardless of how many sold.\n\nDifference in operating income = $20,000 (absorption income is $20,000 higher because\n$20,000 of fixed OH is deferred in ending inventory under absorption)."
+      "v": "Fixed factory overhead: $120,000. Units produced: 12,000. Units sold: 10,000.\nFixed OH per unit (absorption) = $120,000 ÷ 12,000 = $10/unit\n\nAbsorption: Fixed OH in COGS = 10,000 × $10 = $100,000. In ending inventory = 2,000 × $10 = $20,000.\nVariable: All $120,000 expensed this period regardless of how many sold.\n\nDifference in operating income = $20,000 (absorption income is $20,000 higher because $20,000 of fixed OH is deferred in ending inventory under absorption)."
     },
     {
       "t": "tip",
@@ -384,7 +389,7 @@
     {
       "t": "f",
       "l": "Predetermined Overhead Rate",
-      "v": "Predetermined Rate = Budgeted Manufacturing Overhead\n                     ÷ Budgeted Activity Level of Allocation Base\n\nAlso: Rate × Budgeted Activity Level = Budgeted Overhead (useful for working backward)"
+      "v": "Predetermined Rate = Budgeted Manufacturing Overhead\n÷ Budgeted Activity Level of Allocation Base\n\nAlso: Rate × Budgeted Activity Level = Budgeted Overhead (useful for working backward)"
     },
     {
       "t": "ex",
@@ -445,9 +450,56 @@
       "v": "Flexible Budget Variance = Actual Results − Flexible Budget Amount\nSales Volume Variance = Flexible Budget Amount − Static Budget Amount\nTotal Static Budget Variance = Flexible Budget Variance + Sales Volume Variance"
     },
     {
+      "t": "tbl",
+      "h": [
+        "",
+        "Actual",
+        "Flexible Budget",
+        "Static Budget"
+      ],
+      "r": [
+        [
+          "Units sold",
+          "20,000",
+          "20,000",
+          "24,000"
+        ],
+        [
+          "Revenues",
+          "$2,500,000",
+          "$2,400,000",
+          "$2,880,000"
+        ],
+        [
+          "Variable costs",
+          "$1,900,200",
+          "$1,760,000",
+          "$2,112,000"
+        ],
+        [
+          "Contribution margin",
+          "$599,800",
+          "$640,000",
+          "$768,000"
+        ],
+        [
+          "Fixed costs",
+          "$570,000",
+          "$552,000",
+          "$552,000"
+        ],
+        [
+          "Operating income",
+          "$29,800",
+          "$88,000",
+          "$216,000"
+        ]
+      ]
+    },
+    {
       "t": "ex",
-      "l": "Flexible Budget Variance Report",
-      "v": "Static budget prepared for 24,000 units. Actual sales = 20,000 units.\n\n                     Actual      Flexible    Static\nUnits sold           20,000       20,000      24,000\nRevenues         $2,500,000   $2,400,000  $2,880,000\nVariable costs   $1,900,200   $1,760,000  $2,112,000\nContrib. margin    $599,800     $640,000    $768,000\nFixed costs        $570,000     $552,000    $552,000\nOperating income    $29,800      $88,000    $216,000\n\nFlexible budget variance = $29,800 − $88,000 = −$58,200 Unfavorable\nSales volume variance = $88,000 − $216,000 = −$128,000 Unfavorable\nTotal static budget variance = −$186,200 Unfavorable"
+      "l": "Flexible Budget Variance — Calculations",
+      "v": "Static budget prepared for 24,000 units. Actual sales = 20,000 units (table above).\nFlexible budget variance = Actual − Flexible = $29,800 − $88,000 = −$58,200 UNFAVORABLE\nSales volume variance = Flexible − Static = $88,000 − $216,000 = −$128,000 UNFAVORABLE\nTotal static budget variance = −$186,200 UNFAVORABLE"
     },
     {
       "t": "tip",
@@ -464,7 +516,7 @@
     {
       "t": "f",
       "l": "Materials Variance Formulas",
-      "v": "Total Materials Variance = (AP × AQ) − (SP × SQ)\n\nQuantity Variance = (AQ − SQ) × SP\nPrice Variance    = (AP − SP) × AQ\n\nAP = Actual Price, SP = Standard Price\nAQ = Actual Quantity used, SQ = Standard Quantity allowed for actual output"
+      "v": "Total Materials Variance = (AP × AQ) − (SP × SQ)\n\nQuantity Variance = (AQ − SQ) × SP\nPrice Variance = (AP − SP) × AQ\n\nAP = Actual Price, SP = Standard Price\nAQ = Actual Quantity used, SQ = Standard Quantity allowed for actual output"
     },
     {
       "t": "ex",
@@ -495,7 +547,7 @@
     {
       "t": "f",
       "l": "Direct Labor Variance Formulas",
-      "v": "Total Labor Variance = (AR × AH) − (SR × SH)\n\nRate Variance      = (AR − SR) × AH\nEfficiency Variance = (AH − SH) × SR\n\nAR = Actual Rate, SR = Standard Rate\nAH = Actual Hours worked, SH = Standard Hours allowed for actual output"
+      "v": "Total Labor Variance = (AR × AH) − (SR × SH)\n\nRate Variance = (AR − SR) × AH\nEfficiency Variance = (AH − SH) × SR\n\nAR = Actual Rate, SR = Standard Rate\nAH = Actual Hours worked, SH = Standard Hours allowed for actual output"
     },
     {
       "t": "ex",
@@ -522,7 +574,7 @@
     {
       "t": "f",
       "l": "Fixed Overhead Variance Structure",
-      "v": "Total Fixed OH Variance     = Actual Fixed OH − Fixed OH Applied\n\nSpending Variance            = Actual Fixed OH − Budgeted Fixed OH\n(Was more or less spent than budgeted?)\n\nProduction-Volume Variance  = Budgeted Fixed OH − Fixed OH Applied\n(Was actual production more or less than the budgeted production level?)"
+      "v": "Total Fixed OH Variance = Actual Fixed OH − Fixed OH Applied\n\nSpending Variance = Actual Fixed OH − Budgeted Fixed OH\n(Was more or less spent than budgeted?)\n\nProduction-Volume Variance = Budgeted Fixed OH − Fixed OH Applied\n(Was actual production more or less than the budgeted production level?)"
     },
     {
       "t": "ex",
@@ -571,7 +623,7 @@
     {
       "t": "f",
       "l": "ROI Formula",
-      "v": "ROI = Operating Income of Business Unit ÷ Assets of Business Unit\n\nExpanded: ROI = (Income ÷ Sales) × (Sales ÷ Assets)\n             = Profit Margin × Asset Turnover"
+      "v": "ROI = Operating Income of Business Unit ÷ Assets of Business Unit\n\nExpanded: ROI = (Income ÷ Sales) × (Sales ÷ Assets)\n= Profit Margin × Asset Turnover"
     },
     {
       "t": "ex",
@@ -593,7 +645,7 @@
     {
       "t": "f",
       "l": "Residual Income Formula",
-      "v": "RI = Operating Income of Business Unit\n     − (Assets of Business Unit × Required Rate of Return)\n\nRequired Rate of Return is usually the company's WACC (weighted average cost of capital)\nor whatever rate management sets."
+      "v": "RI = Operating Income of Business Unit\n− (Assets of Business Unit × Required Rate of Return)\n\nRequired Rate of Return is usually the company's WACC (weighted average cost of capital)\nor whatever rate management sets."
     },
     {
       "t": "ex",
@@ -670,7 +722,7 @@
     {
       "t": "f",
       "l": "Contribution Margin Formulas",
-      "v": "Unit Contribution Margin (UCM) = Selling Price per Unit − Variable Cost per Unit\nTotal Contribution Margin = UCM × Units Sold\n   OR\nTotal Contribution Margin = Total Revenue − Total Variable Costs\n\nContribution Margin Ratio (CMR) = UCM ÷ Selling Price (expressed as %)"
+      "v": "Unit Contribution Margin (UCM) = Selling Price per Unit − Variable Cost per Unit\nTotal Contribution Margin = UCM × Units Sold\nOR\nTotal Contribution Margin = Total Revenue − Total Variable Costs\n\nContribution Margin Ratio (CMR) = UCM ÷ Selling Price (expressed as %)"
     },
     {
       "t": "ex",
