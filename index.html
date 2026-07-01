@@ -371,7 +371,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashResultsGroupFilter:'',dashResultsCollapsed:{},dashExamReview:null,dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false};
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
 const TERM_DICT={
@@ -394,7 +394,46 @@ const TERM_DICT={
   'Favorable Variance':'انحراف ملائم','Unfavorable Variance':'انحراف غير ملائم','Price Variance':'انحراف السعر','Quantity Variance':'انحراف الكمية','Labor Rate Variance':'انحراف معدل الأجر','Labor Efficiency Variance':'انحراف كفاءة العمل',
   'Spending Variance':'انحراف الإنفاق','Production Volume Variance':'انحراف حجم الإنتاج','Return on Investment':'العائد على الاستثمار','Residual Income':'الدخل المتبقي','Required Rate of Return':'معدل العائد المطلوب',
   'Sunk Cost':'التكلفة الغارقة','Opportunity Cost':'تكلفة الفرصة البديلة','Avoidable Cost':'التكلفة القابلة للتجنب','Unavoidable Cost':'التكلفة غير القابلة للتجنب','Differential Cost':'التكلفة التفاضلية','Incremental Cost':'التكلفة الإضافية',
-  'Marginal Cost':'التكلفة الحدية','Marginal Revenue':'الإيراد الحدي','Management by Exception':'الإدارة بالاستثناء','Variance Analysis':'تحليل الانحرافات','Customer Profitability':'ربحية العميل','Segment':'قطاع الأعمال'
+  'Marginal Cost':'التكلفة الحدية','Marginal Revenue':'الإيراد الحدي','Management by Exception':'الإدارة بالاستثناء','Variance Analysis':'تحليل الانحرافات','Customer Profitability':'ربحية العميل','Segment':'قطاع الأعمال',
+  // ── Section A additions ──
+  'Chart of Accounts':'دليل الحسابات','Double-Entry Accounting':'محاسبة القيد المزدوج','Source Document':'المستند المصدري','Posting':'الترحيل','Footing':'مجموع العمود','Cross-Referencing':'الإسناد المتقاطع','Nominal Account':'حساب اسمي','Real Account':'حساب حقيقي','Permanent Account':'حساب دائم','Temporary Account':'حساب مؤقت',
+  'Reversing Entry':'قيد عكسي','Post-Closing Trial Balance':'ميزان المراجعة بعد الإقفال','Contra Account':'حساب مقابل','Natural Balance':'الرصيد الطبيعي','Normal Balance':'الرصيد الاعتيادي','Ledger':'دفتر الأستاذ','Subsidiary Ledger':'دفتر الأستاذ المساعد','Control Account':'الحساب الضابط',
+  'Cash Equivalent':'مكافئ النقد','Petty Cash Fund':'صندوق المصروفات النثرية','Cash Over and Short':'زيادة أو نقص الصندوق','Imprest System':'نظام الاحتياطي الثابت','Electronic Funds Transfer':'التحويل الإلكتروني للأموال',
+  'Accounts Receivable Turnover':'معدل دوران الذمم المدينة','Days Sales Outstanding':'أيام بيع الذمم','Factoring':'تحويل الذمم','Direct Write-Off Method':'طريقة الشطب المباشر','Allowance Method':'طريقة المخصص',
+  'Periodic Inventory System':'نظام الجرد الدوري','Perpetual Inventory System':'نظام الجرد المستمر','Beginning Inventory':'مخزون أول المدة','Ending Inventory':'مخزون آخر المدة','Purchases':'المشتريات','Purchase Returns':'مردودات المشتريات','Purchase Discounts':'خصومات الشراء',
+  'Freight-In':'تكلفة الشحن الوارد','Freight-Out':'تكلفة الشحن الصادر','FOB Shipping Point':'تسليم نقطة الشحن','FOB Destination':'تسليم نقطة الوصول','Consignment':'البضاعة المأخوذة للبيع بالعمولة',
+  'Useful Life':'العمر الإنتاجي','Salvage Value':'القيمة المتبقية','Book Value Net':'صافي القيمة الدفترية','Capital Expenditure':'إنفاق رأسمالي','Revenue Expenditure':'إنفاق إيرادي','Gain on Disposal':'ربح التصرف في الأصل','Loss on Disposal':'خسارة التصرف في الأصل',
+  'Natural Resources':'الموارد الطبيعية','Depletion':'نضوب الموارد','Depletion Rate':'معدل النضوب','Research and Development':'البحث والتطوير','Patent':'براءة الاختراع','Copyright':'حق المؤلف','Trademark':'العلامة التجارية','Franchise':'حق الامتياز',
+  'Current Asset':'أصل متداول','Non-Current Asset':'أصل غير متداول','Current Liability':'التزام متداول','Non-Current Liability':'التزام غير متداول','Long-Term Debt':'الديون طويلة الأجل','Mortgage Payable':'قرض الرهن العقاري',
+  // ── Section B additions ──
+  'Classified Balance Sheet':'قائمة المركز المالي المصنفة','Multi-Step Income Statement':'قائمة الدخل متعددة الخطوات','Single-Step Income Statement':'قائمة الدخل ذات الخطوة الواحدة','Earnings Per Share':'ربحية السهم','Price-Earnings Ratio':'نسبة السعر إلى الأرباح','Dividend Yield':'عائد الأرباح الموزعة','Dividend Payout Ratio':'نسبة توزيع الأرباح',
+  'Horizontal Analysis':'التحليل الأفقي','Vertical Analysis':'التحليل الرأسي','Common-Size Statement':'القائمة المالية بالنسب المئوية','Trend Analysis':'تحليل الاتجاهات','Benchmarking':'المقارنة المعيارية',
+  'Acid-Test Ratio':'نسبة الاختبار الحمضي','Cash Ratio':'نسبة النقدية','Operating Cash Flow Ratio':'نسبة التدفق النقدي التشغيلي','Days Payable Outstanding':'أيام الدفع المستحقة','Days Inventory Outstanding':'أيام المخزون المستحقة','Cash Conversion Cycle':'دورة تحويل النقد',
+  'Times Interest Earned':'نسبة تغطية الفوائد','Debt Service Coverage':'تغطية خدمة الدين','Capitalization Ratio':'نسبة الرسملة','Equity Multiplier':'مضاعف حقوق الملكية','Financial Leverage':'الرافعة المالية',
+  'Operating Leverage':'الرافعة التشغيلية','Asset Turnover':'معدل دوران الأصول','Fixed Asset Turnover':'معدل دوران الأصول الثابتة','Net Asset Turnover':'معدل دوران صافي الأصول',
+  'Operating Profit Margin':'هامش الربح التشغيلي','EBITDA':'الأرباح قبل الفوائد والضرائب والإهلاك','Return on Capital Employed':'العائد على رأس المال المستخدم','DuPont Analysis':'تحليل دوبونت',
+  'Face Value':'القيمة الاسمية للسند','Carrying Value':'القيمة المحاسبية','Effective Interest Rate':'معدل الفائدة الفعلي','Stated Interest Rate':'معدل الفائدة المعلن','Market Rate':'معدل السوق','Amortization of Bond':'استهلاك السند',
+  'Treasury Stock Method':'طريقة أسهم الخزينة','Book Value Per Share':'القيمة الدفترية للسهم','Market Value Per Share':'القيمة السوقية للسهم','Stock Dividend':'توزيع أسهم مجانية','Cash Dividend':'توزيع أرباح نقدية',
+  'Operating Activities':'الأنشطة التشغيلية','Investing Activities':'الأنشطة الاستثمارية','Financing Activities':'أنشطة التمويل','Indirect Method':'الطريقة غير المباشرة','Direct Method':'الطريقة المباشرة','Free Cash Flow':'التدفق النقدي الحر',
+  // ── Section C additions ──
+  'Master Budget':'الموازنة الرئيسية','Operating Budget':'الموازنة التشغيلية','Financial Budget':'الموازنة المالية','Capital Budget':'الموازنة الرأسمالية','Cash Budget':'موازنة النقدية','Budgeted Balance Sheet':'الميزانية العمومية التقديرية',
+  'Sales Budget':'موازنة المبيعات','Production Budget':'موازنة الإنتاج','Direct Materials Budget':'موازنة المواد المباشرة','Direct Labor Budget':'موازنة العمالة المباشرة','Overhead Budget':'موازنة التكاليف غير المباشرة','Selling and Administrative Budget':'موازنة البيع والإدارة',
+  'Zero-Based Budgeting':'الموازنة على أساس الصفر','Activity-Based Budgeting':'الموازنة القائمة على الأنشطة','Incremental Budgeting':'الموازنة التراكمية','Rolling Budget':'الموازنة المتجددة','Continuous Budget':'الموازنة المستمرة',
+  'Budget Variance':'انحراف الموازنة','Budget Slack':'الفجوة الموازناتية','Participative Budgeting':'الموازنة التشاركية','Top-Down Budgeting':'الموازنة من أعلى إلى أسفل','Bottom-Up Budgeting':'الموازنة من أسفل إلى أعلى',
+  // ── Section D additions ──
+  'Joint Cost':'التكلفة المشتركة','By-Product':'المنتج الثانوي','Split-Off Point':'نقطة الانفصال','Net Realizable Value Method':'طريقة صافي القيمة القابلة للتحقق','Physical Units Method':'طريقة الوحدات الطبيعية',
+  'Equivalent Units':'الوحدات المكافئة','Weighted Average Method':'طريقة المتوسط المرجح','FIFO Method':'طريقة الوارد أولاً صادر أولاً','Cost of Production Report':'تقرير تكلفة الإنتاج','Department':'القسم الإنتاجي',
+  'Throughput Costing':'تكاليف الإنتاجية','Life-Cycle Costing':'التكاليف على مدى دورة الحياة','Target Costing':'التكلفة المستهدفة','Kaizen Costing':'تكلفة التحسين المستمر','Value Engineering':'هندسة القيمة',
+  'Transfer Price':'سعر التحويل الداخلي','Negotiated Transfer Price':'سعر التحويل التفاوضي','Market-Based Transfer Price':'سعر التحويل السوقي','Cost-Based Transfer Price':'سعر التحويل على أساس التكلفة',
+  'Balanced Scorecard':'بطاقة الأداء المتوازن','Key Performance Indicator':'مؤشر الأداء الرئيسي','Benchmarking':'المقارنة المعيارية','Economic Value Added':'القيمة الاقتصادية المضافة','Market Value Added':'القيمة السوقية المضافة',
+  'Make or Buy Decision':'قرار الصنع أو الشراء','Special Order':'الطلب الخاص','Product Mix Decision':'قرار مزيج المنتجات','Sell or Process Further':'البيع أو الإكمال','Segment Margin':'هامش القطاع','Traceable Fixed Cost':'التكلفة الثابتة القابلة للتتبع',
+  'Sensitivity Analysis':'تحليل الحساسية','Margin of Safety':'هامش الأمان','Degree of Operating Leverage':'درجة الرافعة التشغيلية','CVP Analysis':'تحليل التكلفة والحجم والربح',
+  // ── Section E additions ──
+  'IMA':'معهد محاسبي الإدارة','Code of Ethics':'مدونة الأخلاقيات','Integrity':'النزاهة','Objectivity':'الموضوعية','Confidentiality':'السرية','Competence':'الكفاءة المهنية',
+  'Conflict of Interest':'تعارض المصالح','Whistleblowing':'الإبلاغ عن المخالفات','Fiduciary Duty':'الواجب الائتماني','Due Diligence':'العناية الواجبة','Professional Skepticism':'الشك المهني',
+  'Corporate Governance':'حوكمة الشركات','Audit Committee':'لجنة المراجعة','Independent Auditor':'المدقق المستقل','Internal Auditor':'المدقق الداخلي','Sarbanes-Oxley Act':'قانون ساربينز-أوكسلي',
+  'Fraud':'الاحتيال','Embezzlement':'الاختلاس','Money Laundering':'غسيل الأموال','Bribery':'الرشوة','Whistleblower Protection':'حماية المبلغين عن المخالفات',
+  'Ethical Dilemma':'معضلة أخلاقية','Stakeholder':'أصحاب المصلحة','Corporate Social Responsibility':'المسؤولية الاجتماعية للشركات','Sustainability':'الاستدامة','Triple Bottom Line':'الخط السفلي الثلاثي'
 };
 
 // ─── DICTIONARY DATA ──────────────────────────────────────────────────────────
@@ -648,6 +687,30 @@ async function upvoteQuestion(qId,e){e.stopPropagation();const uid=STATE.user.ui
 async function deleteQuestion(qId,e){e.stopPropagation();const ok=await showModal({icon:'🗑️',title:'Delete Question?',body:'This will permanently remove the question and all replies.',type:'danger',confirmText:'Delete',cancelText:'Cancel'});if(!ok)return;try{const replies=await db.collection('fmaa-questions').doc(qId).collection('replies').get();const batch=db.batch();replies.docs.forEach(d=>batch.delete(d.ref));batch.delete(db.collection('fmaa-questions').doc(qId));await batch.commit();STATE.communityQuestions=STATE.communityQuestions.filter(q=>q.id!==qId);render();}catch(e){showToast('Error deleting question.','error');}}
 function openQuestion(q){STATE.questionDetail=q;STATE.tab='question-detail';STATE.questionReplies=[];render();loadReplies(q.id);}
 function openQuestionById(id){const q=STATE.communityQuestions.find(x=>x.id===id);if(q)openQuestion(q);}
+
+// ─── REPLY INTERACTIONS ─────────────────────────────────────────────────────
+async function replyVote(replyId,dir){
+  if(!STATE.questionDetail||!STATE.user)return;
+  const qId=STATE.questionDetail.id;const uid=STATE.user.uid;
+  const reply=STATE.questionReplies.find(r=>r.id===replyId);if(!reply)return;
+  const upvotes=[...(reply.upvotes||[])];const downvotes=[...(reply.downvotes||[])];
+  if(dir==='up'){const i=upvotes.indexOf(uid);if(i>-1)upvotes.splice(i,1);else{upvotes.push(uid);const di=downvotes.indexOf(uid);if(di>-1)downvotes.splice(di,1);}}
+  else{const i=downvotes.indexOf(uid);if(i>-1)downvotes.splice(i,1);else{downvotes.push(uid);const ui=upvotes.indexOf(uid);if(ui>-1)upvotes.splice(ui,1);}}
+  try{await db.collection('fmaa-questions').doc(qId).collection('replies').doc(replyId).update({upvotes,downvotes});reply.upvotes=upvotes;reply.downvotes=downvotes;render();}catch(e){showToast('Could not save vote.','error');}
+}
+async function toggleBestAnswer(replyId,currentlyBest){
+  if(!STATE.questionDetail||!STATE.user)return;
+  const qId=STATE.questionDetail.id;
+  try{
+    const batch=db.batch();
+    // Clear existing best answer(s)
+    STATE.questionReplies.forEach(r=>{if(r.isBestAnswer&&r.id!==replyId)batch.update(db.collection('fmaa-questions').doc(qId).collection('replies').doc(r.id),{isBestAnswer:false});});
+    batch.update(db.collection('fmaa-questions').doc(qId).collection('replies').doc(replyId),{isBestAnswer:!currentlyBest});
+    await batch.commit();
+    STATE.questionReplies.forEach(r=>{if(r.id===replyId)r.isBestAnswer=!currentlyBest;else r.isBestAnswer=false;});
+    render();
+  }catch(e){showToast('Could not update best answer.','error');}
+}
 
 // ─── LEADERBOARD ──────────────────────────────────────────────────────────────
 async function syncLeaderboard(){
@@ -1198,10 +1261,12 @@ function renderQuizResults(){
     return`<div class="bh"><button class="bh-back" onclick="STATE._quizReviewMode=false;render()">‹</button><div style="font-size:14px;font-weight:500">Back to Summary</div></div>
     <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,answersForReview,lessonTitle)}</div>`;
   }
+  const _qTotalMs=qs.quizStartTime?(Date.now()-qs.quizStartTime):((qs.questionTimes||[]).reduce((a,b)=>a+(b||0),0));const _qTotalTime=fmtTime(_qTotalMs);const _qAvg=total>0?fmtTime(Math.round(_qTotalMs/total)):'-';
   return`<div class="sh"><h2>Quiz Complete!</h2><p>${qs.isRetry?'Wrong Answers Review':'Quiz Results'}</p></div>
   <div class="scroll-area pad" style="padding-top:20px">
     <div style="text-align:center;margin-bottom:20px"><div style="font-size:52px;font-weight:800;color:${col}">${pct}%</div><div style="font-size:15px;font-weight:500;color:${col};margin-top:4px">${pct>=70?'Great job! 🎉':pct>=50?'Keep practicing! 📈':'More study needed 📚'}</div><div style="font-size:13px;color:#888;margin-top:4px">${right} correct out of ${total}</div></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px"><div style="background:#D5F5E3;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1E8449">${right}</div><div style="font-size:11px;color:#888">Correct</div></div><div style="background:#FCEBEB;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#E24B4A">${total-right}</div><div style="font-size:11px;color:#888">Wrong</div></div><div style="background:#D6EAF8;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1A5276">${total}</div><div style="font-size:11px;color:#888">Total</div></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px"><div style="background:#D5F5E3;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1E8449">${right}</div><div style="font-size:11px;color:#888">Correct</div></div><div style="background:#FCEBEB;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#E24B4A">${total-right}</div><div style="font-size:11px;color:#888">Wrong</div></div><div style="background:#D6EAF8;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1A5276">${total}</div><div style="font-size:11px;color:#888">Total</div></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px"><div style="background:#f5f5f0;border-radius:10px;padding:12px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">⏱ ${_qTotalTime}</div><div style="font-size:11px;color:#888;margin-top:2px">Total Time</div></div><div style="background:#f5f5f0;border-radius:10px;padding:12px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">~${_qAvg}</div><div style="font-size:11px;color:#888;margin-top:2px">Avg per Question</div></div></div>
     <button onclick="STATE._quizReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
     <div style="display:flex;gap:10px;margin-top:4px"><button onclick="STATE.tab='quiz-mode-select';STATE._quizReviewMode=false;render()" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study');STATE._quizReviewMode=false;" style="flex:2;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div>
     <div style="height:20px"></div>
@@ -1216,7 +1281,9 @@ function renderQuizMode(){
       return`<div class="bh"><button class="bh-back" onclick="STATE._mcqReviewMode=false;render()">‹</button><div style="font-size:14px;font-weight:500">Back to Summary</div></div>
       <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,qm.answers,'MCQ Practice')}</div>`;
     }
+    const _qmTotalMs=qm.quizStartTime?(Date.now()-qm.quizStartTime):((qm.questionTimes||[]).reduce((a,b)=>a+(b||0),0));const _qmTotalTime=fmtTime(_qmTotalMs);const _qmAvg=total>0?fmtTime(Math.round(_qmTotalMs/total)):'-';
     return`<div class="sh"><h2>Practice Complete!</h2><p>${right}/${total} correct · ${pct}%</p></div><div class="scroll-area pad" style="padding-top:20px"><div style="text-align:center;margin-bottom:20px"><div style="font-size:52px;font-weight:800;color:${col}">${pct}%</div><div style="font-size:15px;font-weight:500;color:${col};margin-top:4px">${pct>=70?'Excellent! 🎉':pct>=50?'Keep going! 📈':'More practice needed 📚'}</div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px"><div style="background:#f5f5f0;border-radius:10px;padding:12px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">⏱ ${_qmTotalTime}</div><div style="font-size:11px;color:#888;margin-top:2px">Total Time</div></div><div style="background:#f5f5f0;border-radius:10px;padding:12px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">~${_qmAvg}</div><div style="font-size:11px;color:#888;margin-top:2px">Avg per Question</div></div></div>
     <button onclick="STATE._mcqReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
     <div style="display:flex;gap:10px"><button onclick="STATE.quizMode={active:false};STATE._mcqReviewMode=false;navTo('quiz-mode-select')" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study');STATE._mcqReviewMode=false;" style="flex:2;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div><div style="height:20px"></div></div>`;
   }
@@ -1400,11 +1467,28 @@ function renderCommunity(){
 function renderQuestionDetail(){
   const q=STATE.questionDetail;if(!q)return renderCommunity();
   const replies=STATE.questionReplies;const best=replies.find(r=>r.isBestAnswer);const others=replies.filter(r=>!r.isBestAnswer);
-  const rc=(r)=>`<div class="card" style="margin-bottom:8px;${r.isBestAnswer?'border-color:#1E8449;border-width:1.5px':''}"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:12px;color:#1A5276">${safePhotoURL(r.authorPhoto)?`<img src="${safePhotoURL(r.authorPhoto)}" style="width:100%;height:100%;object-fit:cover">`:r.authorName?.charAt(0)||'?'}</div><div><div style="font-size:13px;font-weight:500">${esc(r.authorName||'Student')}</div><div style="font-size:11px;color:#888">${timeAgo(r.createdAt)}</div></div></div><div style="font-size:14px;color:#333;line-height:1.65;white-space:pre-wrap">${esc(r.body)}</div></div>`;
+  const q_owner=STATE.questionDetail?.authorId;
+  const rc=(r)=>{
+    const canMarkBest=STATE.user&&(STATE.user.uid===q_owner||isInstructor());
+    const upvoted=(r.upvotes||[]).includes(STATE.user?.uid);
+    const downvoted=(r.downvotes||[]).includes(STATE.user?.uid);
+    return`<div class="card" style="margin-bottom:8px;${r.isBestAnswer?'border-color:#1E8449;border-width:1.5px':''}">
+      ${r.isBestAnswer?'<div style="font-size:10px;font-weight:700;color:#186A3B;letter-spacing:.5px;margin-bottom:8px">✅ BEST ANSWER</div>':''}
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <div style="width:32px;height:32px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:12px;color:#1A5276">${safePhotoURL(r.authorPhoto)?`<img src="${safePhotoURL(r.authorPhoto)}" style="width:100%;height:100%;object-fit:cover">`:r.authorName?.charAt(0)||'?'}</div>
+        <div><div style="font-size:13px;font-weight:500">${esc(r.authorName||'Student')}</div><div style="font-size:11px;color:#888">${timeAgo(r.createdAt)}</div></div>
+      </div>
+      <div style="font-size:14px;color:#333;line-height:1.65;white-space:pre-wrap;margin-bottom:10px">${esc(r.body)}</div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:.5px solid #f0f0eb">
+        <button onclick="replyVote('${r.id}','up')" style="display:flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:.5px solid ${upvoted?'#1A5276':'#d0d0d0'};background:${upvoted?'#D6EAF8':'#f5f5f0'};color:${upvoted?'#154360':'#555'};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">👍 ${(r.upvotes||[]).length}</button>
+        <button onclick="replyVote('${r.id}','down')" style="display:flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:.5px solid ${downvoted?'#E24B4A':'#d0d0d0'};background:${downvoted?'#FCEBEB':'#f5f5f0'};color:${downvoted?'#A32D2D':'#555'};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">👎 ${(r.downvotes||[]).length}</button>
+        ${canMarkBest?`<button onclick="toggleBestAnswer('${r.id}',${r.isBestAnswer?'true':'false'})" style="margin-left:auto;padding:4px 10px;border-radius:8px;border:.5px solid ${r.isBestAnswer?'#1E8449':'#d0d0d0'};background:${r.isBestAnswer?'#D5F5E3':'#f5f5f0'};color:${r.isBestAnswer?'#186A3B':'#555'};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">${r.isBestAnswer?'✅ Best Answer':'Mark Best'}</button>`:''}
+      </div>
+    </div>`;};
   return`<div class="bh"><button class="bh-back" onclick="STATE.tab='community';STATE.questionDetail=null;render()">‹</button><div style="min-width:0"><div style="font-size:11px;color:#1A5276;font-weight:500">${esc(q.section||'General')}</div><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(q.title)}</div></div></div>
   <div class="scroll-area pad" style="padding-top:14px">
     <div class="card" style="margin-bottom:16px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><div style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#D6EAF8;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1A5276">${safePhotoURL(q.authorPhoto)?`<img src="${safePhotoURL(q.authorPhoto)}" style="width:100%;height:100%;object-fit:cover">`:q.authorName?.charAt(0)||'?'}</div><div><div style="font-size:13px;font-weight:500">${esc(q.authorName||'Student')}</div><div style="font-size:11px;color:#888">${timeAgo(q.createdAt)}</div></div></div><div style="font-size:15px;font-weight:500;line-height:1.5;margin-bottom:8px">${esc(q.title)}</div><div style="font-size:14px;color:#555;line-height:1.65;white-space:pre-wrap">${esc(q.body)}</div></div>
-    ${best?`<div style="font-size:12px;font-weight:500;color:#186A3B;margin-bottom:8px;letter-spacing:.5px">✅ BEST ANSWER</div>${rc(best)}`:''}
+    ${best?rc(best):''}
     ${others.length>0?`<div style="font-size:12px;font-weight:500;color:#888;margin-bottom:8px;letter-spacing:.5px">${others.length} REPL${others.length!==1?'IES':'Y'}</div>${others.map(rc).join('')}`:''}
     ${replies.length===0?`<div style="text-align:center;padding:20px;color:#aaa;font-size:13px">No replies yet — be the first to help!</div>`:''}
     <div style="background:#f8f8f6;border:.5px solid #e0e0d8;border-radius:10px;padding:14px;margin-top:6px"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Write a Reply</div><textarea id="reply-body" rows="3" oninput="STATE.draftReply=this.value" placeholder="Share your answer..." style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:14px;font-family:inherit;outline:none;background:#fff;color:#1a1a1a;resize:none;line-height:1.5;margin-bottom:10px">${esc(STATE.draftReply)}</textarea><button id="post-reply-btn" onclick="postReply('${q.id}')" class="btn" style="background:#1A5276;color:#fff;padding:11px">Post Reply</button></div>
@@ -1502,7 +1586,7 @@ function renderMockExamScreen(){
 }
 function renderMockIntro(){const loading=STATE.mockExam.status==='loading';const history=loadMockResults();const historyHTML=history.length===0?'':`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCC8 Your Attempt History</div>${history.map((r,i)=>{const col=r.pass?'#1E8449':r.scaled>=170?'#EF9F27':'#E24B4A';const bg=r.pass?'#D5F5E3':r.scaled>=170?'#FAEEDA':'#FCEBEB';return`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:${i<history.length-1?'.5px solid #f0f0eb':'none'}"><div style="width:50px;height:46px;border-radius:10px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:${col};flex-shrink:0">${r.scaled}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${r.pass?'\u2705 Pass estimate':'\u274C Below 200'}</div><div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.total} correct (${r.rawPct}%) \u00B7 ${r.date}</div></div>${i===0?`<span style="font-size:10px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px;font-weight:500">Latest</span>`:''}</div>`;}).join('')}</div>`;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:16px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83C\uDFC6 Mock Exam</div><div style="font-size:12px;color:#888;margin-top:3px">FMAA \u2014 Full Simulation</div></div><div style="flex:1;overflow-y:auto;padding:16px"><div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:16px;padding:20px;color:#fff;margin-bottom:16px;text-align:center"><div style="font-size:36px;margin-bottom:8px">\uD83D\uDCCB</div><div style="font-size:19px;font-weight:700;margin-bottom:4px">Full Exam Simulation</div><div style="font-size:13px;opacity:.85">Conditions as close to exam day as possible</div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#D6EAF8;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#154360">80</div><div style="font-size:11px;color:#555;margin-top:3px">MCQs</div></div><div style="background:#D5F5E3;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#186A3B">2 hrs</div><div style="font-size:11px;color:#555;margin-top:3px">Time limit</div></div><div style="background:#FAEEDA;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#854F0B">200</div><div style="font-size:11px;color:#555;margin-top:3px">Pass (of 300)</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCCA Question Distribution</div>${S.map(sec=>{const totalW=S.reduce((a,s)=>a+(s.weight||0),0)||1;const take=Math.round((sec.weight/totalW)*MOCK_TARGET);const pool=sec.lessons.reduce((a,l)=>a+(l.quizzes&&l.quizzes.length?l.quizzes.length:0),0);const poolOk=pool>=take;return`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:28px;height:28px;border-radius:8px;background:${sec.bar}20;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:500;color:#333">${esc(sec.title)}</div><div style="font-size:10px;color:${poolOk?'#888':'#E24B4A'};margin-top:1px">${pool} questions loaded</div></div><div style="font-size:13px;font-weight:700;color:${sec.bar}">~${take} Qs</div></div>`;}).join('')}</div>${historyHTML}<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:12px;padding:12px;margin-bottom:12px;font-size:13px;color:#633806;line-height:1.6">\u26A0\uFE0F <strong>Rules:</strong> Once you start, the timer runs. You can flag questions and move freely between them. Submit when done, or the exam auto-submits when time runs out.</div><div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:12px;padding:12px;margin-bottom:16px;font-size:12px;color:#154360;line-height:1.6">\u2139\uFE0F The score shown is an <strong>estimated</strong> scaled score (0\u2013300). The real FMAA exam uses statistical equating, so 200 does not equal a fixed percentage \u2014 treat this as practice guidance, not an official prediction.</div><button onclick="startMockExam()" ${loading?'disabled':''} style="width:100%;padding:15px;border-radius:12px;border:none;background:${loading?'#888':'#1A5276'};color:#fff;font-size:16px;font-weight:700;cursor:${loading?'default':'pointer'};font-family:inherit">${loading?'\u23F3 Loading questions...':'\uD83D\uDE80 Start Mock Exam'}</button></div></div>`;}
 function renderMockMCQ(){const q=STATE.mockExam.mcqQ[STATE.mockExam.mcqCurr];if(!q)return'';return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:10px 16px;border-bottom:.5px solid #e0e0d8;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:space-between"><div><div style="font-size:12px;font-weight:700;color:#555;letter-spacing:.5px">MOCK EXAM</div><div style="font-size:11px;color:#888">Question ${STATE.mockExam.mcqCurr+1} of ${STATE.mockExam.mcqQ.length}</div></div><div id="mock-timer" style="font-size:22px;font-weight:700;font-family:'Courier New',monospace;color:#1a1a1a">${mockFmtTime(STATE.mockExam.mcqTime)}</div><button onclick="mockConfirmSubmitMCQ()" style="padding:8px 14px;border-radius:8px;border:none;background:#1E8449;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Submit</button></div><div id="mock-mcq-content" style="display:flex;flex-direction:column;flex:1;overflow:hidden"></div></div>`;}
-function renderMockResults(){const{correct,total,scoreDenom,rawPct,scaled,pass,secScores}=STATE.mockExam.results;const col=pass?'#1E8449':scaled>=170?'#EF9F27':'#E24B4A';const msg=pass?'On Track to Pass \uD83C\uDF89':scaled>=170?'Borderline \u2014 Keep Practicing \uD83D\uDCC8':'Needs More Study \uD83D\uDCDA';const shortfall=scoreDenom&&total<scoreDenom;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:14px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83D\uDCCA Exam Results</div></div><div style="flex:1;overflow-y:auto;padding:16px;padding-bottom:80px"><div style="background:${col}15;border:1.5px solid ${col}40;border-radius:14px;padding:18px;text-align:center;margin-bottom:8px"><div style="font-size:42px;font-weight:800;color:${col}">${scaled}</div><div style="font-size:13px;color:#888;margin-top:-2px">estimated scaled score / 300</div><div style="font-size:15px;font-weight:600;color:${col};margin-top:8px">${msg}</div></div><div style="font-size:11px;color:#888;text-align:center;margin-bottom:${shortfall?'8px':'16px'};line-height:1.5">Pass mark is 200. This is an approximation \u2014 the real exam uses statistical equating.</div>${shortfall?`<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:8px;padding:9px 12px;margin-bottom:16px;font-size:12px;color:#633806;line-height:1.5">⚠️ This exam ran with ${total} of ${scoreDenom} questions. Score is calculated out of ${scoreDenom} — missing questions counted as wrong.</div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Correct</div><div style="font-size:22px;font-weight:700;color:#1A5276">${correct}/${scoreDenom||total}</div><div style="font-size:12px;color:#888">${rawPct}%</div></div><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Result</div><div style="font-size:22px;font-weight:700;color:${col}">${pass?'PASS':'FAIL'}</div><div style="font-size:12px;color:#888">${pass?'\u2265 200':'< 200'}</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:12px">Section Breakdown</div>${Object.entries(secScores).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([sid,sc])=>{const pct=sc.total?Math.round(sc.correct/sc.total*100):0;const c=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';return`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px"><span style="font-size:13px;color:#333">${esc(sc.title)}</span><span style="font-size:13px;font-weight:600;color:${c}">${sc.correct}/${sc.total} (${pct}%)</span></div><div style="height:6px;background:#f0f0eb;border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${c};border-radius:3px;transition:width .5s"></div></div></div>`;}).join('')}</div><button onclick="STATE._mockReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
+function renderMockResults(){const{correct,total,scoreDenom,rawPct,scaled,pass,secScores}=STATE.mockExam.results;const _mTotalSecs=MOCK_SECONDS-(STATE.mockExam.mcqTime||0);const _mTotalTime=fmtTime(_mTotalSecs*1000);const _mAvg=total>0?fmtTime(Math.round(_mTotalSecs*1000/total)):"-";const col=pass?'#1E8449':scaled>=170?'#EF9F27':'#E24B4A';const msg=pass?'On Track to Pass \uD83C\uDF89':scaled>=170?'Borderline \u2014 Keep Practicing \uD83D\uDCC8':'Needs More Study \uD83D\uDCDA';const shortfall=scoreDenom&&total<scoreDenom;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:14px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83D\uDCCA Exam Results</div></div><div style="flex:1;overflow-y:auto;padding:16px;padding-bottom:80px"><div style="background:${col}15;border:1.5px solid ${col}40;border-radius:14px;padding:18px;text-align:center;margin-bottom:8px"><div style="font-size:42px;font-weight:800;color:${col}">${scaled}</div><div style="font-size:13px;color:#888;margin-top:-2px">estimated scaled score / 300</div><div style="font-size:15px;font-weight:600;color:${col};margin-top:8px">${msg}</div></div><div style="font-size:11px;color:#888;text-align:center;margin-bottom:${shortfall?'8px':'16px'};line-height:1.5">Pass mark is 200. This is an approximation \u2014 the real exam uses statistical equating.</div>${shortfall?`<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:8px;padding:9px 12px;margin-bottom:16px;font-size:12px;color:#633806;line-height:1.5">⚠️ This exam ran with ${total} of ${scoreDenom} questions. Score is calculated out of ${scoreDenom} — missing questions counted as wrong.</div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px"><div style="background:#f5f5f0;border-radius:10px;padding:12px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">⏱ ${_mTotalTime}</div><div style="font-size:11px;color:#888;margin-top:2px">Total Time</div></div><div style="background:#f5f5f0;border-radius:10px;padding:12px;text-align:center"><div style="font-size:16px;font-weight:700;color:#555">~${_mAvg}</div><div style="font-size:11px;color:#888;margin-top:2px">Avg per Question</div></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Correct</div><div style="font-size:22px;font-weight:700;color:#1A5276">${correct}/${scoreDenom||total}</div><div style="font-size:12px;color:#888">${rawPct}%</div></div><div style="background:#f5f5f0;border-radius:12px;padding:14px;text-align:center"><div style="font-size:11px;color:#888;margin-bottom:4px">Result</div><div style="font-size:22px;font-weight:700;color:${col}">${pass?'PASS':'FAIL'}</div><div style="font-size:12px;color:#888">${pass?'\u2265 200':'< 200'}</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:12px">Section Breakdown</div>${Object.entries(secScores).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([sid,sc])=>{const pct=sc.total?Math.round(sc.correct/sc.total*100):0;const c=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';return`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px"><span style="font-size:13px;color:#333">${esc(sc.title)}</span><span style="font-size:13px;font-weight:600;color:${c}">${sc.correct}/${sc.total} (${pct}%)</span></div><div style="height:6px;background:#f0f0eb;border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${c};border-radius:3px;transition:width .5s"></div></div></div>`;}).join('')}</div><button onclick="STATE._mockReviewMode=true;render()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1A527640;background:#EBF5FB;color:#154360;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;margin-bottom:12px">📋 Review All Questions</button>
 <div style="display:flex;gap:10px"><button onclick="STATE.mockExam={status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false};STATE._mockReviewMode=false;render();" style="flex:1;padding:13px;border-radius:10px;border:.5px solid #d0d0d8;background:#fff;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit">Try Again</button><button onclick="navTo('study');STATE._mockReviewMode=false;" style="flex:1;padding:13px;border-radius:10px;border:none;background:#1A5276;color:#fff;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit">Back to Study</button></div></div></div>`;}
 // ════ END MOCK EXAM ════
 
@@ -1823,7 +1907,7 @@ function setLectureRating(which,val){
   if(which===1){STATE._lectureRating1=val;[1,2,3,4,5].forEach(i=>{const el=document.getElementById('lf-star1-'+i);if(el){el.style.opacity=i<=val?'1':'0.25';el.style.transform=i<=val?'scale(1.1)':'scale(1)';}});const chk=document.getElementById('lf-r1-check');if(chk)chk.textContent='✓ '+val+'/5';}
   else{STATE._lectureRating2=val;[1,2,3,4,5].forEach(i=>{const el=document.getElementById('lf-star2-'+i);if(el){el.style.opacity=i<=val?'1':'0.25';el.style.transform=i<=val?'scale(1.1)':'scale(1)';}});const chk=document.getElementById('lf-r2-check');if(chk)chk.textContent='✓ '+val+'/5';}
 }
-function closeLecturePopup(){const el=document.getElementById('lecture-popup-overlay');if(el)el.remove();}
+function closeLecturePopup(){const el=document.getElementById('lecture-popup-overlay');if(el)el.remove();STATE._attendanceType=null;}
 function closeFeedbackPopup(){const el=document.getElementById('feedback-popup-overlay');if(el)el.remove();}
 
 // ── Dashboard: render Lectures tab ────────────────────────────────────────
@@ -1949,10 +2033,28 @@ function renderDashAttendanceRegister(students,groups){
     return'<div style="padding:14px">'+groupFilters+'<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No lectures found'+(gf?' for '+gf:'')+'. Create lectures in the Lectures tab.</div></div>';
   }
 
+  // Per-lecture summary: online / offline / absent counts
+  const lecSummary={};
+  filteredLectures.forEach(l=>{
+    const online=(attendance.filter(a=>a.lectureId===l.id&&a.attendanceType==='online')).length;
+    const offline=(attendance.filter(a=>a.lectureId===l.id&&a.attendanceType==='offline')).length;
+    const total=attendance.filter(a=>a.lectureId===l.id).length;
+    const absent=filteredStudents.length-total;
+    lecSummary[l.id]={online,offline,total,absent};
+  });
+
   // Header row with lecture titles
   const thStyle='min-width:110px;max-width:160px;padding:6px 8px;font-size:10px;font-weight:600;color:#1A5276;background:#EBF5FB;text-align:center;border-right:.5px solid #d0e8f5;white-space:normal;word-break:break-word;line-height:1.3;position:sticky;top:0;z-index:2';
   const th1Style='min-width:150px;padding:6px 10px;font-size:10px;font-weight:600;color:#888;letter-spacing:.5px;background:#f5f5f0;border-right:.5px solid #e0e0d8;position:sticky;left:0;top:0;z-index:3';
-  const headerCells=filteredLectures.map(l=>'<th style="'+thStyle+'" title="'+l.title+'">'+l.title+'</th>').join('');
+  const headerCells=filteredLectures.map(l=>{
+    const s=lecSummary[l.id]||{online:0,offline:0,total:0,absent:0};
+    return'<th style="'+thStyle+'" title="'+l.title+'">'+l.title
+      +'<div style="display:flex;justify-content:center;gap:4px;flex-wrap:wrap;margin-top:5px">'
+      +(s.online?'<span style="font-size:9px;background:#D6EAF8;color:#1A5276;padding:1px 4px;border-radius:4px">💻'+s.online+'</span>':'')
+      +(s.offline?'<span style="font-size:9px;background:#EBD5F7;color:#6C3483;padding:1px 4px;border-radius:4px">🏫'+s.offline+'</span>':'')
+      +(s.absent?'<span style="font-size:9px;background:#FCEBEB;color:#A32D2D;padding:1px 4px;border-radius:4px">—'+s.absent+'</span>':'')
+      +'</div></th>';
+  }).join('');
   const totalTh='<th style="min-width:60px;padding:6px 8px;font-size:10px;font-weight:600;color:#186A3B;background:#D5F5E3;text-align:center;position:sticky;top:0;z-index:2">Total</th>';
 
   // Student rows
@@ -2127,6 +2229,20 @@ async function loadDashboard(){
   STATE.dashLoading=false;
   if(STATE.tab==='dashboard')render();
 }
+// ─── EXAM QUESTIONS REVIEW ──────────────────────────────────────────────────
+function openExamQuestionsReview(examId){
+  const exam=(STATE.dashExams||[]).find(e=>e.id===examId);
+  if(!exam||!exam.questionIds||!exam.questionIds.length){showToast('No question list stored for this exam.','info');return;}
+  // Build question objects from questionIds
+  const allLessons=S.flatMap(s=>s.lessons);
+  const questions=exam.questionIds.map(qid=>{
+    for(const sec of S){for(const l of sec.lessons){if(l.quizzes){const q=l.quizzes.find(q=>q.id===qid);if(q)return{...q,sid:sec.id};}}}
+    return null;
+  }).filter(Boolean);
+  STATE.dashExamReview={examId,title:exam.title||'Exam',groupCode:exam.groupCode||'',questions};
+  STATE.dashTab='results';render();
+}
+
 // ─── PLAN & EXAM FUNCTIONS ───────────────────────────────────────────────────
 async function savePlan(){
   const d=STATE.dashPlanDraft;
@@ -2164,8 +2280,21 @@ async function saveExam(){
   const endTs=document.getElementById('exam-end')?.value;
   if(!startTs||!endTs){showToast('Set start and end date/time.','warning');return;}
   if(new Date(endTs)<=new Date(startTs)){showToast('End time must be after start time.','warning');return;}
+  // Pre-build fixed question pool at creation time
+  let _examQuestionIds=null;
   try{
-    await db.collection('fmaa-exams').add({groupCode:d.groupCode.trim().toUpperCase(),title:d.title.trim(),durationMins:Number(d.durationMins),questionCount:Number(d.questionCount),units:d.units&&d.units.length?d.units:null,sectionId:null,startAt:new Date(startTs).toISOString(),endAt:new Date(endTs).toISOString(),createdAt:new Date().toISOString(),createdBy:STATE.user.uid});
+    const examUnits=d.units&&d.units.length?d.units:null;
+    const qCount=Number(d.questionCount);
+    await Promise.all([1,2,3,4,5].map(i=>ensureQuizzes(i)));
+    let pool=[];
+    if(examUnits){S.forEach(sec=>{sec.lessons.forEach(l=>{if(examUnits.includes(l.id)&&l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id}));});});}
+    else{S.forEach(sec=>{sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id}));});});}
+    pool=mockShuffle(pool);
+    const picked=pool.slice(0,qCount);
+    _examQuestionIds=picked.map(q=>q.id||q.q.slice(0,32)).filter(Boolean);
+  }catch(e){console.warn('Could not pre-build question pool:',e);}
+  try{
+    await db.collection('fmaa-exams').add({groupCode:d.groupCode.trim().toUpperCase(),title:d.title.trim(),durationMins:Number(d.durationMins),questionCount:Number(d.questionCount),units:d.units&&d.units.length?d.units:null,sectionId:null,startAt:new Date(startTs).toISOString(),endAt:new Date(endTs).toISOString(),createdAt:new Date().toISOString(),createdBy:STATE.user.uid,questionIds:_examQuestionIds||[]});
     showToast('Group exam created! 🎯','success');
     STATE.dashExamDraft={groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]};
     STATE.dashLoaded=false;await loadDashboard();
@@ -2212,8 +2341,18 @@ async function startGroupExam(examId){
   if(examUnits){S.forEach(sec=>{sec.lessons.forEach(l=>{if(examUnits.includes(l.id)&&l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight}));});});}
   else if(sid){const sec=S.find(s=>s.id===sid);if(sec)sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight}));});}
   else{S.forEach(sec=>{sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight}));});});}
-  pool=mockShuffle(pool);
-  const mcqQ=pool.slice(0,exam.questionCount);
+  // Use fixed question IDs if stored (guarantees same questions for all students)
+  let mcqQ;
+  if(exam.questionIds&&exam.questionIds.length){
+    const idSet=new Set(exam.questionIds);
+    const fixedPool=[];
+    S.forEach(sec=>{sec.lessons.forEach(l=>{if(l.quizzes)l.quizzes.forEach(q=>{const qid=q.id||q.q.slice(0,32);if(idSet.has(qid))fixedPool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight});});});});
+    // Sort by original order, then shuffle options per student only
+    mcqQ=exam.questionIds.map(qid=>fixedPool.find(q=>(q.id||q.q.slice(0,32))===qid)).filter(Boolean).map(shuffleQuestionOptions);
+  } else {
+    pool=mockShuffle(pool);
+    mcqQ=pool.slice(0,exam.questionCount).map(shuffleQuestionOptions);
+  }
   if(!mcqQ.length){showToast('No questions loaded for this exam yet.','warning');STATE.mockExam.status='idle';render();return;}
   const secs=exam.durationMins*60;
   STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode};
@@ -2343,6 +2482,30 @@ function renderDashboard(){
     }).join('');
     bodyHTML=`${lbGroupFilter}${lbRows.length?`<div>${lbRows}</div>`:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No students yet.</div>`}`;
   } else if(tab==='results'){
+    // Check if showing exam questions review
+    if(STATE.dashExamReview){
+      const rev=STATE.dashExamReview;
+      const qCards=rev.questions.map((q,i)=>{
+        const opts=q.o.map((opt,oi)=>{
+          const isCorrect=oi===q.a;
+          return`<div style="display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;background:${isCorrect?'#D5F5E3':'#f8f8f6'};border:${isCorrect?'1px solid #1E8449':'.5px solid #e0e0d8'};margin-bottom:5px">
+            <span style="width:20px;height:20px;border-radius:50%;background:${isCorrect?'#1E8449':'#e0e0d8'};color:${isCorrect?'#fff':'#666'};font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">${isCorrect?'✓':String.fromCharCode(65+oi)}</span>
+            <span style="font-size:13px;color:${isCorrect?'#186A3B':'#444'};font-weight:${isCorrect?'600':'400'};line-height:1.4">${esc(opt)}</span>
+          </div>`;}).join('');
+        const secInfo=S.find(s=>s.id===q.sid);
+        return`<div style="background:#fff;border:.5px solid #e0e0d8;border-left:3px solid ${secInfo?secInfo.bar:'#1A5276'};border-radius:10px;padding:12px 14px;margin-bottom:10px">
+          <div style="font-size:10px;font-weight:600;color:#888;letter-spacing:.5px;margin-bottom:6px">Q${i+1}${secInfo?' · '+esc(secInfo.title):''}</div>
+          <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px">${esc(q.q)}</div>
+          ${opts}
+          ${q.e?`<div style="background:#FFF8E7;border-radius:8px;padding:9px 12px;margin-top:8px"><div style="font-size:10px;font-weight:700;color:#856404;letter-spacing:.5px;margin-bottom:3px">💡 EXPLANATION</div><div style="font-size:12px;color:#444;line-height:1.6">${esc(q.e)}</div></div>`:''}
+        </div>`;
+      }).join('');
+      bodyHTML=`<div style="padding:12px 14px;border-bottom:.5px solid #e0e0d8;display:flex;align-items:center;gap:10px;background:#f8f8f6">
+        <button onclick="STATE.dashExamReview=null;render()" style="padding:6px 12px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;font-size:13px;cursor:pointer;font-family:inherit">‹ Back</button>
+        <div><div style="font-size:14px;font-weight:600;color:#1a1a1a">${esc(rev.title)}</div><div style="font-size:11px;color:#888">${rev.questions.length} questions · ${esc(rev.groupCode)}</div></div>
+      </div>
+      <div style="padding:14px;overflow-y:auto;flex:1">${qCards}<div style="height:20px"></div></div>`;
+    } else {
     const results=STATE.dashExamResults||[];
     const exams=STATE.dashExams||[];
     // Group results by examId
@@ -2350,52 +2513,62 @@ function renderDashboard(){
     results.forEach(r=>{if(!byExam[r.examId])byExam[r.examId]={examId:r.examId,examTitle:r.examTitle||'Exam',groupCode:r.groupCode||'',results:[]};byExam[r.examId].results.push(r);});
     // Sort each exam's results by score desc
     Object.values(byExam).forEach(e=>e.results.sort((a,b)=>b.scaled-a.scaled));
-    if(!results.length){
-      bodyHTML=`<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">📊</div><div style="font-size:14px">No exam results yet.</div><div style="font-size:12px;margin-top:6px">Results appear here after students complete a group exam.</div></div>`;
+    // Group filter
+    const rgf=(STATE.dashResultsGroupFilter||'').toUpperCase().trim();
+    const allResultGroups=[...new Set(Object.values(byExam).map(e=>e.groupCode).filter(Boolean))].sort();
+    const rgfBtns='<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"><span style="font-size:11px;color:#888;align-self:center">Group:</span><button onclick="STATE.dashResultsGroupFilter=\'\';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid '+(rgf?'#d0d0d0':'#1A5276')+';background:'+(rgf?'#f5f5f0':'#1A5276')+';color:'+(rgf?'#555':'#fff')+'">All</button>'+allResultGroups.map(g=>'<button onclick="STATE.dashResultsGroupFilter=\''+g+'\';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid '+(rgf===g?'#1A5276':'#d0d0d0')+';background:'+(rgf===g?'#1A5276':'#f5f5f0')+';color:'+(rgf===g?'#fff':'#555')+'">'+esc(g)+'</button>').join('')+'</div>';
+    const filteredExams=Object.values(byExam).filter(e=>!rgf||e.groupCode===rgf).sort((a,b)=>(b.results[0]?.submittedAt||'')>(a.results[0]?.submittedAt||'')?1:-1);
+    if(!results.length||!filteredExams.length){
+      bodyHTML=`<div style="padding:14px">${rgfBtns}<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">📊</div><div style="font-size:14px">No exam results yet.</div></div></div>`;
     } else {
-      bodyHTML=Object.values(byExam).map(examGroup=>{
-        const ex=exams.find(e=>e.id===examGroup.examId);
-        const examDate=ex?new Date(ex.startAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'';
-        const rows=examGroup.results.map((r,i)=>{
-          const col=r.pass?'#1E8449':r.scaled>=170?'#EF9F27':'#E24B4A';
+      const examBlocks=filteredExams.map(ex=>{
+        const passCount=ex.results.filter(r=>r.pass).length;
+        const failCount=ex.results.length-passCount;
+        const isCollapsed=STATE.dashResultsCollapsed[ex.examId]!==false;// default collapsed
+        const examObj=exams.find(e=>e.id===ex.examId);
+        const examDate=ex.results[0]?.submittedAt?new Date(ex.results[0].submittedAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'';
+        const studentRows=isCollapsed?'':ex.results.map((r,i)=>{
+          const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':String(i+1);
+          const col=r.pass?'#186A3B':r.scaled>=170?'#854F0B':'#A32D2D';
           const bg=r.pass?'#D5F5E3':r.scaled>=170?'#FAEEDA':'#FCEBEB';
-          const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';
-          const secBreakdown=r.secScores?Object.entries(r.secScores).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([sid,sc])=>{
-            const pct=sc.total?Math.round(sc.correct/sc.total*100):0;
-            const c=pct>=70?'#1E8449':pct>=50?'#EF9F27':'#E24B4A';
-            return`<span style="font-size:10px;background:#f0f0eb;color:${c};padding:1px 6px;border-radius:6px;font-weight:500">${esc(sc.title?.split('&')[0]?.trim()||'Sec '+sid)}: ${pct}%</span>`;
-          }).join(' '):'';
-          return`<div style="padding:10px 14px;border-bottom:.5px solid #f0f0eb">
-            <div style="display:flex;align-items:center;gap:10px">
-              <div style="width:36px;height:36px;border-radius:8px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:${medal?'18':'14'}px;font-weight:700;color:${col};flex-shrink:0">${medal||r.scaled}</div>
-              <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-                  <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(r.studentName||'Student')}</span>
-                  ${r.studentId?`<span style="font-size:10px;background:#EBF5FB;color:#1A5276;padding:1px 6px;border-radius:8px;font-family:monospace">${esc(r.studentId)}</span>`:''}
-                  <span style="font-size:10px;background:${bg};color:${col};padding:1px 6px;border-radius:8px;font-weight:600">${r.pass?'PASS':'FAIL'}</span>
-                </div>
-                <div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.scoreDenom||r.total} correct (${r.rawPct}%) · scaled: ${r.scaled}/300</div>
-                ${secBreakdown?`<div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px">${secBreakdown}</div>`:''}
+          const secBadges=r.secScores?Object.entries(r.secScores).map(([sid,sc])=>{const pct=sc.total?Math.round(sc.correct/sc.total*100):0;const secObj=S.find(s=>s.id===parseInt(sid));return`<span style="font-size:9px;background:${secObj?secObj.bg:'#f0f0eb'};color:${secObj?secObj.strong:'#555'};padding:1px 6px;border-radius:8px">${esc(sc.title)}: ${pct}%</span>`;}).join(''):'';
+          const time=r.submittedAt?new Date(r.submittedAt).toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit'}):'';
+          return`<div style="display:flex;align-items:flex-start;gap:10px;padding:9px 14px;border-bottom:.5px solid #f0f0eb">
+            <div style="width:28px;height:28px;border-radius:50%;background:${bg};display:flex;align-items:center;justify-content:center;font-size:${i<3?'14':'11'}px;font-weight:600;color:${col};flex-shrink:0">${medal}</div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(r.studentName||'Student')}</span>
+                <span style="font-size:10px;background:#EBF5FB;color:#1A5276;padding:1px 6px;border-radius:8px;font-family:monospace">${r.studentId||''}</span>
+                <span style="font-size:10px;background:${r.pass?'#D5F5E3':'#FCEBEB'};color:${r.pass?'#186A3B':'#A32D2D'};padding:1px 6px;border-radius:8px;font-weight:600">${r.pass?'PASS':'FAIL'}</span>
               </div>
-              <div style="font-size:10px;color:#aaa;text-align:right;flex-shrink:0">${r.submittedAt?new Date(r.submittedAt).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}):''}</div>
+              <div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.scoreDenom||r.total} correct (${r.rawPct}%) · scaled: ${r.scaled}/300</div>
+              ${secBadges?`<div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px">${secBadges}</div>`:''}
             </div>
+            <div style="text-align:right;flex-shrink:0;font-size:11px;color:#888">${time}</div>
           </div>`;
         }).join('');
-        return`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;margin:0 14px 14px;overflow:hidden">
-          <div style="padding:10px 14px;background:#f8f8f6;border-bottom:.5px solid #e0e0d8;display:flex;align-items:center;justify-content:space-between;gap:10px">
-            <div>
-              <div style="font-size:13px;font-weight:600;color:#1a1a1a">${esc(examGroup.examTitle)}</div>
-              <div style="font-size:11px;color:#888;margin-top:2px">${examGroup.groupCode?esc(examGroup.groupCode)+' · ':''} ${examDate} · ${examGroup.results.length} submission${examGroup.results.length!==1?'s':''}</div>
+        const reviewBtn=examObj&&examObj.questionIds&&examObj.questionIds.length?`<button onclick="openExamQuestionsReview('${ex.examId}')" style="padding:5px 10px;border-radius:6px;border:.5px solid #1A527640;background:#EBF5FB;color:#154360;font-size:11px;cursor:pointer;font-family:inherit">📋 Questions</button>`:'';
+        return`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;margin-bottom:10px;overflow:hidden">
+          <div onclick="STATE.dashResultsCollapsed['${ex.examId}']=${isCollapsed?'false':'true'};render()" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;background:#f8f8f6;border-bottom:${isCollapsed?'none':'.5px solid #e0e0d8'}">
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:14px;font-weight:600;color:#1a1a1a">${esc(ex.examTitle)}</span>
+                <span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 8px;border-radius:10px;font-weight:500">${esc(ex.groupCode)}</span>
+              </div>
+              <div style="font-size:11px;color:#888;margin-top:2px">${examDate} · ${ex.results.length} submissions</div>
             </div>
-            <div style="text-align:right;flex-shrink:0">
-              <div style="font-size:12px;font-weight:600;color:#1E8449">${examGroup.results.filter(r=>r.pass).length} passed</div>
-              <div style="font-size:11px;color:#888">${examGroup.results.filter(r=>!r.pass).length} failed</div>
+            <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+              <div style="text-align:right"><div style="font-size:12px;font-weight:600;color:#186A3B">${passCount} passed</div><div style="font-size:11px;color:#E24B4A">${failCount} failed</div></div>
+              ${reviewBtn}
+              <span style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isCollapsed?'0':'90'}deg)">›</span>
             </div>
           </div>
-          ${rows}
+          ${isCollapsed?'':studentRows}
         </div>`;
       }).join('');
+      bodyHTML=`<div style="padding:10px 14px">${rgfBtns}</div><div style="padding:0 14px 14px">${examBlocks}</div>`;
     }
+    } // end dashExamReview else
   } else if(tab==='plan'){
     const d=STATE.dashPlanDraft;
     const allUnits=S.flatMap(sec=>sec.lessons.map(l=>({id:l.id,title:l.title,secTitle:sec.title,bar:sec.bar,bg:sec.bg,strong:sec.strong})));
