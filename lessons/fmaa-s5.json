@@ -1,818 +1,246 @@
 {
   "5-1": [
     {
-      "q": "Jeremy Finch, CMA and Certified Fraud Examiner (CFE), is leader of a team reviewing the financial records of CyberRock Networks, a computer-services firm known for its complex accounting. Jeremy’s task is to assess the firm’s operational results, including a recent decline in cash flows despite an increase in reported operating income. Jeremy must also determine how the firm responds to its strict debt covenants. Lastly, Jeremy is to investigate executive management’s compensation packages, including stock options in the firm that are tied to reported profits. The stock options are believed to be quite generous. What is Jeremy specifically investigating?",
-      "o": [
-        "The cause of the recent decline in cash flows.",
-        "Whether executive management’s compensation packages are too generous in comparison with those of other firms in the industry.",
-        "Whether fraudulent financial reporting may be taking place.",
-        "A potential violation of the firm’s debt covenants that must be addressed."
-      ],
-      "a": 2,
-      "e": "The circumstances that Jeremy is investigating all represent “red flags,” or warning signs of possible fraudulent financial reporting taking place. An increase in reported profits while cash flows decline could indicate fraudulent transactions being recorded in order to increase reported net income. For example, period costs might have been capitalized as inventory, which would decrease expenses and increase operating income (but which could not mask a decline in cash flow). Debt covenants are requirements a borrower must maintain in order to remain within the terms of its borrowing agreements. If they are violated, the firm is in default on its debt, even if its payments are current, and it could be forced into bankruptcy by its lenders calling (requiring payment in full of) its loans. Examples of debt covenants are a required minimum current ratio, a required maximum debt to equity ratio, and so forth. Because of the potentially harsh consequences of violating the debt covenants, management has an incentive to falsify the financial statements in order to make it appear the firm is in compliance with the debt covenants, when it may not be in compliance—and especially so if the covenants are strict. The example in the preceding paragraph, of recording period costs as inventory, would not only improve operating income, it would also improve the ‫ م‬5:02 2024/‫‏‬8/‫‏‬19",
-      "wrongWhy": {
-        "0": "Jeremy Finch is not specifically investigating the cause of the recent decline in cash flows. Please see the correct answer explanation for more information.",
-        "1": "Jeremy Finch is not specifically investigating whether executive management’s compensation packages are too generous in comparison with those of other firms in the industry. Please see the correct answer explanation for more information.",
-        "3": "Jeremy Finch is not specifically investigating a potential violation of the firm's debt covenants. Please see the correct answer explanation for more information."
-      }
+      "t": "h",
+      "v": "Business Ethics — Foundations"
     },
     {
-      "q": "A fiduciary is a person or an entity that is entrusted to act in the best interests of and for the benefit of another entity or entities. An accountant’s fiduciary responsibility is, first, to act in the best interests of and for the benefit of",
-      "o": [
-        "his or her client and it is fulfilled by maintaining confidentiality no matter what.",
-        "the public interest and it is fulfilled by observing the principles in the accounting standards and in his or her professional code of conduct.",
-        "the management of the company or organization that employs him or her and it is fulfilled by following the employer’s instructions.",
-        "the accounting profession and it is fulfilled by maintaining membership in the relevant professional association or associations."
-      ],
-      "a": 1,
-      "e": "An accountant’s fiduciary responsibility is due first to the public interest and then to the accounting profession, and it is fulfilled by observing the principles in the accounting standards and in his or her professional code of conduct. Loyalty to a client or to the management of the company or organization employing the accountant should rank below loyalty to the public, to the accounting profession, to shareholders, and, if in public accounting, to an accounting or auditing firm that may be employing the accountant. An accountant is a professional who is answerable to the ethical codes of the profession. Legitimate confidences about business problems should be kept confidential, but maintaining confidentiality should not require a professional accountant to maintain silence if a misrepresentation is taking place.",
-      "wrongWhy": {
-        "0": "An accountant’s fiduciary responsibility is not to first act in the best interests of and for the benefit of his or her client, and it is not fulfilled by maintaining confidentiality no matter what. Please see the correct answer explanation for more information.",
-        "2": "An accountant’s fiduciary responsibility is not to first act in the best interests of and for the benefit of his or her employer, and it is not fulfilled by following the employer's instructions. Please see the correct answer explanation for more information.",
-        "3": "An accountant’s fiduciary responsibility is not to first act in the best interests of and for the benefit of the accounting profession, and it is not fulfilled by maintaining membership in the relevant professional association or associations. Please see the correct answer explanation for more information."
-      }
+      "t": "p",
+      "v": "Ethics is the set of moral principles and values that guide behavior. Business ethics analyzes organizational practices and values to determine whether they are acceptable. It operates within a framework of legal requirements, industry norms, company policies, and personal values."
     },
     {
-      "q": "As the Chief Financial Officer (CFO) of LuxeFurn Inc., Sarah has been presented with an attractive business opportunity to acquire a smaller competitor, CozyHome. This acquisition promises significant market expansion and cost synergies. However, during the due diligence process, she discovers accounting discrepancies in CozyHome’s financial statements which could be indicative of financial misconduct. Given the potential benefits of the acquisition but mindful of the discovered irregularities, what is the most appropriate action for Sarah to ensure she acts with integrity and due diligence?",
-      "o": [
-        "Proceed with the acquisition, addressing the financial discrepancies post-merger to avoid any disruptions in the market.",
-        "Postpone the acquisition decision and conduct a comprehensive audit of CozyHome’s financial statements to resolve the discrepancies.",
-        "Cancel the acquisition immediately based on the potential risks associated with the financial discrepancies.",
-        "Advise the board of directors to go ahead with the acquisition, but negotiate a lower price to account for the potential financial risks."
-      ],
-      "a": 1,
-      "e": "This option reflects both integrity and due diligence by acknowledging the potential risk from the discrepancies and addressing it directly before proceeding with the acquisition. Sarah’s responsibility to LuxeFurn Inc. and its stakeholders includes ensuring that the company makes informed decisions based on accurate information. Conducting a thorough audit not only demonstrates a commitment to ethical practices but also serves to protect LuxeFurn Inc. from unforeseen liabilities.",
-      "wrongWhy": {
-        "0": "Proceeding with the acquisition without fully investigating the discrepancies compromises Sarah’s integrity and does not reflect due diligence. This could expose LuxeFurn Inc. to significant unforeseen risks and potentially damage its reputation and financial stability if the discrepancies are indicative of deeper issues within CozyHome.",
-        "2": "While canceling the acquisition might seem like a cautious approach, making this decision immediately upon discovering discrepancies may be premature and could result in a missed opportunity. Due diligence requires a thorough investigation to understand the nature and extent of the discrepancies before making an informed decision.",
-        "3": "Advising the board to proceed with the acquisition at a lower price solely based on the discrepancies still ignores the due diligence process necessary to understand the risks involved fully. While negotiation is part of acquisition strategies, it should be based on comprehensive and accurate information, which can only be obtained through a detailed audit and investigation."
-      }
+      "t": "h",
+      "v": "3 Building Blocks of Business Ethics"
     },
     {
-      "q": "Conflicts of interest are obstacles to having integrity and to making ethical decisions. A conflict of interest is",
-      "o": [
-        "a situation in which disagreements and conflicts arise among colleagues.",
-        "an accountant's requirement to maintain confidentiality even if a misrepresentation is taking place.",
-        "any loyalty or concern on the part of a decision-maker that could cause their decisions to be not in the best interest of the those who are relying on their judgment.",
-        "a decision-making process in which the decision-maker defines right or acceptable behavior only in terms of its consequences for him- or herself."
-      ],
-      "a": 2,
-      "e": "A conflict of interest is any interest, loyalty, concern, or other feature in a situation that would tend to make a decision-maker’s independent judgment less reliable in that situation than it normally would be or that would influence the decision-maker to make a decision that may not be in the best interest of those who are relying on that judgment. If a decision-maker knows about a conflict of interest or even if the decision maker should have known about the conflict of interest but does not tell the party on behalf of whom he or she is exercising judgment, then the decision-maker is perpetrating a deception.",
-      "wrongWhy": {
-        "0": "A conflict of interest does not involve a situation in which disagreements and conflicts arise among colleagues. Please see the correct answer explanation for more information.",
-        "1": "Maintaining confidentiality should not require a professional accountant to maintain silence if misrepresentation is taking place, and the IMA Statement of Ethical Professional Practice does not require a member to maintain silence in that situation. Please see the correct answer explanation for more information.",
-        "3": "This is not the definition of a conflict of interest. This is the definition of egoism, a form of the moral philosophy teleology, in which an action is judged to be morally right if it produces a desired result and thus is focused on the consequences of the action. In an ethical decision-making situation, an egoist will choose the alternative that contributes most to his or her own self-interest. Though egoism is a moral philosophy, egoism is not an ethical principle."
-      }
+      "t": "b",
+      "v": [
+        "Principles: Specific boundaries for behavior that should not be violated — human rights, freedom of speech, fundamentals of justice. Principles are the basis for rules.",
+        "Values: Beliefs and ideals that are socially enforced. Examples: teamwork, trust, integrity. An individual's values reflect what they consider important.",
+        "Norms: Standards of behavior that are judged to be proper and acceptable in a society or profession."
+      ]
     },
     {
-      "q": "A scenario is presented where an internal audit at MedTech Solutions Inc. reveals that a procurement officer, Emily, has been favoring a particular supplier, BioEquip, despite there being more cost-effective options available. Emily's decision-making is questioned due to the recent discovery that she shares a close university affiliation with BioEquip’s sales director, and they have been seen at several alumni events together. Considering the four principles of Honesty, Fairness, Objectivity, and Responsibility, which of these principles is most directly at risk of being compromised in Emily's professional conduct?",
-      "o": [
-        "Fairness, since not all suppliers are given an equal opportunity to compete for MedTech Solutions Inc.'s business.",
-        "Honesty, because favoring a supplier suggests possible deception regarding the supplier’s benefits.",
-        "Objectivity, because a personal connection could impair Emily’s impartiality in choosing a supplier.",
-        "Responsibility, as Emily is not taking appropriate care in her role to provide the best outcome for her employer."
-      ],
-      "a": 2,
-      "e": "Objectivity requires that decisions be made based on unbiased judgment. Emily's personal connection with BioEquip’s sales director poses a risk to her ability to remain impartial, as it may unconsciously influence her supplier selection. This breach of objectivity could lead to a conflict of interest, compromising her professional judgment and possibly leading to decisions that are not in the best interest of MedTech Solutions Inc.",
-      "wrongWhy": {
-        "0": "Fairness is related to providing equal opportunities and being just. Although Emily’s actions may appear unfair to other suppliers, the primary concern here is her ability to stay unbiased, which is more about objectivity than fairness in this context. The fairness principle would be most directly compromised if Emily deliberately excluded other suppliers from the opportunity to bid.",
-        "1": "While honesty is a crucial principle, the scenario does not provide sufficient evidence to suggest that Emily has been deceptive. Honesty would be the correct answer if Emily had lied or misrepresented facts about the suppliers, which is not clearly indicated in the scenario provided.",
-        "3": "Responsibility involves fulfilling one's duties and being accountable. Although Emily’s actions could suggest a lack of responsibility, the scenario points more directly to an issue with her objectivity. Responsibility would be the most directly compromised principle if Emily failed to follow procurement policies."
-      }
+      "t": "h",
+      "v": "Key Business Ethics Concepts"
     },
     {
-      "q": "After a confidential executive meeting at OmniTech Inc., where sensitive financial restructuring plans were discussed, one of the managers, Elena, inadvertently mentioned specific details about potential layoffs during a call with an industry analyst. This information was not public and the analyst published the details in a popular tech blog, causing a significant drop in the company's stock price and widespread concern among employees. Which ethical standard did Elena breach?",
-      "o": [
-        "Confidentiality",
-        "Objectivity",
-        "Competence",
-        "Professional Behavior"
+      "t": "tbl",
+      "h": [
+        "Concept",
+        "Definition",
+        "Business Relevance"
       ],
-      "a": 0,
-      "e": "The ethical standard of Confidentiality requires individuals to keep information confidential except when disclosure is authorized or legally required. Elena's disclosure of sensitive information from an executive meeting to an industry analyst who then made it public is a direct breach of confidentiality. This information was proprietary to the company and should not have been shared, especially given its potential to affect stock prices and employee morale.",
-      "wrongWhy": {
-        "1": "Objectivity involves remaining unbiased in professional and business judgments. While it is an essential ethical standard, Elena's mistake was not related to a lack of impartiality but rather to the unauthorized sharing of confidential information.",
-        "2": "Competence involves maintaining an appropriate level of professional expertise and knowledge. Elena's mistake did not stem from a lack of professional knowledge or skills related to her job, but from sharing confidential information that should have remained within the company.",
-        "3": "Professional Behavior dictates that individuals should avoid any conduct that would discredit the profession. Although Elena's actions could be seen as unprofessional and did discredit OmniTech Inc., the most direct violation is of the confidentiality standard because it was the sharing of private company information that led to the issue."
-      }
+      "r": [
+        [
+          "Fairness",
+          "Acting free from bias, dishonesty, or injustice; equality, reciprocity, and optimization",
+          "Fair employee compensation, fair competitive practices, no discrimination"
+        ],
+        [
+          "Integrity",
+          "Adhering firmly to a code of values; consistency with principles even under pressure",
+          "Refusing to falsify records; disclosing conflicts of interest promptly"
+        ],
+        [
+          "Conflict of Interest",
+          "Situation where personal interests could compromise independent professional judgment",
+          "Auditor auditing a company where their spouse is CFO"
+        ],
+        [
+          "Corporate Governance",
+          "System of rules and practices by which a company is directed and controlled; aligns interests of shareholders, management, and other stakeholders",
+          "Board of directors oversight, executive compensation design"
+        ]
+      ]
     },
     {
-      "q": "Kevin, an accountant at FastGrowth Tech Inc., is instructed by his supervisor to record a significant sale of software to a client in the current quarter, even though the transaction is not expected to be finalized until the next quarter. This instruction is given to artificially inflate the company's earnings for the current quarter to meet financial targets. Kevin is aware that following this instruction would misrepresent the company's financial position. What is the most ethical first response to this situation for Kevin to have?",
-      "o": [
-        "Discuss his concerns directly with the supervisor, explaining the ethical implications and the potential risks to the company and stakeholders.",
-        "Ignore the supervisor's request and record the transaction in the correct quarter without consulting anyone.",
-        "Record the transaction as instructed but anonymously report the action to the company’s ethics hotline.",
-        "Follow the supervisor's instruction, prioritizing job security and the direct order from a superior."
-      ],
-      "a": 0,
-      "e": "This option aligns with ethical problem-solving and communication principles. By discussing his concerns with the supervisor, Kevin is attempting to resolve the issue internally and ethically, giving the supervisor the opportunity to reconsider the decision based on its ethical implications. This approach demonstrates Kevin's commitment to integrity and his responsibility to ensure accurate financial reporting, which is critical for the transparency and trustworthiness of the company’s financial statements.",
-      "wrongWhy": {
-        "1": "Ignoring the supervisor’s request and acting independently disregards the hierarchical structure of the company and may not be practical or effective in ensuring the issue is adequately addressed. It also misses an opportunity to educate and possibly correct unethical directives within the organization, potentially leaving the systemic problem unaddressed.",
-        "2": "While anonymously reporting the action is a step towards addressing the unethical behavior, it does not address the immediate issue of the transaction being recorded inaccurately. This option may also delay any potential resolution and does not provide the supervisor with an opportunity to rectify the situation before it escalates.",
-        "3": "Following the supervisor's instruction without question violates the ethical standards of integrity and credibility, as it involves knowingly misrepresenting the company's financial position. This choice prioritizes personal job security over ethical standards and the overall well-being of the company and its stakeholders."
-      }
+      "t": "h",
+      "v": "Types of Business Misconduct"
     },
     {
-      "q": "After a competitive bidding process, a company’s purchasing director awarded a contract to the lowest bidder, an organization in which she had a personal interest. Since the winning bidder had the lowest price, she did not disclose her relationship with the entity. In fact, she frequently highlighted the fact that the winning bidder had the most experience servicing contracts of this nature. Which one of the values of ethical decision making did the purchasing director violate?",
-      "o": [
-        "None, because a competitive bidding process was utilized.",
-        "Fairness, because she did not tell the truth about her relationship with the vendor.",
-        "Integrity, because her relationship with the bidder could have impaired her judgment.",
-        "Honesty, because she was not being truthful about the experience of the bidder."
-      ],
-      "a": 2,
-      "e": "Conflicts of interest are important obstacles to having integrity and making ethical decisions. A conflict of interest is any interest, loyalty, concern, or other feature in a situation that would tend to make a decision-maker’s independent judgment less reliable in that situation than it normally would be or that would influence the decision-maker to make a decision that may not be in the best interest of those who are relying on that judgment. The purchasing director had a conflict of interest because she had a personal interest in one of the bidders for the contract. Even though the winning bidder had the lowest price and may have also had the most experience servicing contracts of this nature, the purchasing director should have recused herself from the decision-making process because of her personal interest in one of the bidders.",
-      "wrongWhy": {
-        "0": "The purchasing director had a conflict of interest because she had a personal interest in one of the bidders for the contract. Even though the winning bidder had the lowest price and may have also had the most experience servicing contracts of this nature, the purchasing director should have recused herself from the decision-making process because of her personal interest in one of the bidders.",
-        "3": "From the information given, it is not possible to know whether or not the purchasing director was being truthful about the experience of the successful bidder. But whether she was or was not truthful about that is irrelevant. The purchasing director had a conflict of interest because she had a personal interest in one of the bidders for the contract. Even though the winning bidder had the lowest price and may have also had the most experience servicing contracts of this nature, the purchasing director should have recused herself from the decision-making process because of her personal interest in one of the bidders. Although the purchasing director did violate one of the rules of ethical decision making, \"honesty\" was not the rule she violated."
-      }
+      "t": "b",
+      "v": [
+        "Financial misconduct: taking inappropriate risks that harm stakeholders; falsifying financial statements; insider trading",
+        "Ponzi schemes: using new investor funds to pay earlier investors — no actual investment returns being generated",
+        "Intellectual property infringement: copyright, patent, trademark violations",
+        "Espionage: theft of proprietary information; manipulation of IT systems",
+        "Corruption: illegal gratuities, bribes, kickbacks, conflicts of interest in business dealings"
+      ]
     },
     {
-      "q": "The IMA Statement of Ethical Professional Practice identifies four overarching ethical principles. Which of the following is one of those principles?",
-      "o": [
-        "Profitability.",
-        "Honesty.",
-        "Efficiency.",
-        "Innovation."
-      ],
-      "a": 1,
-      "e": "The IMA Statement of Ethical Professional Practice identifies four overarching principles: Honesty, Fairness, Objectivity, and Responsibility. These principles guide the behavior of management accounting professionals.",
-      "wrongWhy": {
-        "0": "Profitability is a business goal, not one of the IMA's ethical principles.",
-        "2": "Efficiency is an operational goal, not one of the IMA's four ethical principles.",
-        "3": "Innovation is a business value but is not among the IMA's four overarching ethical principles."
-      }
+      "t": "ex",
+      "l": "Subprime Mortgage Crisis — Financial Misconduct Example",
+      "v": "Loan officers received commissions for originating loans with no clawback if borrowers defaulted.\n→ Officers had incentive to approve unqualified borrowers and encourage inflated appraisals.\n→ Home values rose unsustainably; when borrowers defaulted, values collapsed.\n→ Banks became insolvent; Federal Reserve/FDIC interventions required.\n\nEthics failures: (1) Conflicts of interest (commission structure rewarded quantity over quality)\n(2) Lack of integrity (knowingly approving unqualified borrowers)\n(3) Harm to stakeholders (homeowners, taxpayers, entire financial system)"
     },
     {
-      "q": "The IMA Statement of Ethical Professional Practice includes which of the following standards?",
-      "o": [
-        "Competence, Confidentiality, Integrity, and Credibility.",
-        "Honesty, Accuracy, Loyalty, and Transparency.",
-        "Reliability, Independence, Fairness, and Competence.",
-        "Accountability, Disclosure, Accuracy, and Integrity."
-      ],
-      "a": 0,
-      "e": "The IMA Statement of Ethical Professional Practice identifies four standards that management accountants must follow: Competence, Confidentiality, Integrity, and Credibility. Each standard has specific requirements.",
-      "wrongWhy": {
-        "1": "Honesty, Accuracy, Loyalty, and Transparency are not the four IMA standards. Honesty is an overarching principle, not a standard.",
-        "2": "Independence is a concept from auditing standards, not the IMA standards for management accountants.",
-        "3": "Disclosure and Accuracy are not listed as IMA standards. The four IMA standards are Competence, Confidentiality, Integrity, and Credibility."
-      }
+      "t": "h",
+      "v": "Stakeholder Theory vs Shareholder Theory"
     },
     {
-      "q": "Under the IMA's Competence standard, a management accountant is required to:",
-      "o": [
-        "Never share any company information with outside parties.",
-        "Maintain an appropriate level of professional expertise through continuous learning.",
-        "Avoid all conflicts of interest in professional activities.",
-        "Disclose all relevant information that could influence a user's understanding."
-      ],
-      "a": 1,
-      "e": "The Competence standard requires members to maintain professional knowledge and skills at the level required to ensure that their employer or clients receive competent professional service. This includes staying current with developments in the profession.",
-      "wrongWhy": {
-        "0": "Not sharing information describes the Confidentiality standard, not Competence.",
-        "2": "Avoiding conflicts of interest is part of the Integrity standard, not Competence.",
-        "3": "Disclosing relevant information is part of the Credibility standard, not Competence."
-      }
+      "t": "p",
+      "v": "Shareholder theory: the purpose of a corporation is to maximize value for shareholders. Stakeholder theory: corporations have obligations to ALL stakeholders — employees, customers, suppliers, communities, and the environment — not just shareholders. Modern corporate governance increasingly embraces the stakeholder view."
     },
     {
-      "q": "The fraud triangle consists of three elements. Which of the following correctly identifies all three?",
-      "o": [
-        "Pressure, Opportunity, and Rationalization.",
-        "Motive, Means, and Method.",
-        "Greed, Access, and Deception.",
-        "Incentive, Capability, and Negligence."
+      "t": "tbl",
+      "h": [
+        "Stakeholder",
+        "Primary Concern",
+        "Ethical Obligation"
       ],
-      "a": 0,
-      "e": "The fraud triangle, developed by criminologist Donald Cressey, identifies three conditions present in most fraud cases: Pressure (financial or personal motivation), Opportunity (ability to commit and conceal fraud), and Rationalization (justifying the behavior as acceptable).",
-      "wrongWhy": {
-        "1": "Motive, Means, and Method is a framework used in criminal investigations, not the fraud triangle.",
-        "2": "Greed, Access, and Deception do not describe the recognized fraud triangle components.",
-        "3": "Incentive and Capability are concepts used in some fraud frameworks, but the standard fraud triangle uses Pressure, Opportunity, and Rationalization."
-      }
+      "r": [
+        [
+          "Shareholders",
+          "Return on investment",
+          "Honest reporting; responsible capital allocation"
+        ],
+        [
+          "Employees",
+          "Fair wages, safe working conditions, job security",
+          "Non-discrimination; workplace safety; honest communication"
+        ],
+        [
+          "Customers",
+          "Safe products, honest advertising, fair prices",
+          "Product safety; no deceptive marketing"
+        ],
+        [
+          "Suppliers",
+          "Timely payment, fair contract terms",
+          "Honoring agreements; no abuse of market power"
+        ],
+        [
+          "Community/Environment",
+          "Clean environment, local economic impact",
+          "Environmental compliance; community investment"
+        ]
+      ]
     },
     {
-      "q": "An IMA member who discovers that a colleague is falsifying financial records should first:",
-      "o": [
-        "Report the colleague directly to law enforcement.",
-        "Ignore the issue if it is immaterial to the financial statements.",
-        "Follow the organization's established policies for resolving ethical conflicts.",
-        "Immediately resign from the organization."
-      ],
-      "a": 2,
-      "e": "The IMA guidance on resolving ethical conflicts recommends following the organization's established escalation procedures first — typically reporting to the immediate supervisor, then to higher management, the audit committee, or the board if necessary.",
-      "wrongWhy": {
-        "0": "Reporting directly to law enforcement is generally a last resort after internal channels have been exhausted, unless the misconduct involves illegal activity with imminent harm.",
-        "1": "Materiality does not excuse ethical violations. Falsifying records is a breach of integrity regardless of the amount.",
-        "3": "Resignation may ultimately be appropriate if the issue is unresolvable, but it should not be the first step. Internal escalation comes first."
-      }
-    },
-    {
-      "q": "The Confidentiality standard of the IMA Statement of Ethical Professional Practice requires management accountants to:",
-      "o": [
-        "Share financial information with any employee who requests it.",
-        "Refrain from disclosing confidential information unless legally or professionally obligated.",
-        "Report all confidential information to shareholders annually.",
-        "Keep all information confidential, even if asked to disclose it by a court order."
-      ],
-      "a": 1,
-      "e": "The Confidentiality standard requires members to keep company information confidential except when disclosure is authorized or legally required. Confidential information must not be used for personal gain or disclosed to unauthorized parties.",
-      "wrongWhy": {
-        "0": "Sharing confidential information with any employee who requests it would violate the Confidentiality standard.",
-        "2": "Confidential information is not routinely reported to shareholders — it is protected unless disclosure is legally required or properly authorized.",
-        "3": "A court order is a legal obligation that overrides confidentiality. The IMA standard permits disclosure when legally obligated."
-      }
-    },
-    {
-      "q": "Which of the following best describes ethical behavior under the IMA's Integrity standard?",
-      "o": [
-        "Performing all tasks with maximum speed and efficiency.",
-        "Avoiding actions that discredit the profession and refusing to participate in illegal activities.",
-        "Maintaining up-to-date technical knowledge in accounting.",
-        "Presenting all information in a way that is favorable to the company."
-      ],
-      "a": 1,
-      "e": "The Integrity standard requires management accountants to avoid actual or apparent conflicts of interest, refuse gifts that would influence judgment, refrain from subverting organizational goals, and refuse to participate in any activity that would discredit the profession.",
-      "wrongWhy": {
-        "0": "Speed and efficiency are operational goals, not the focus of the Integrity standard.",
-        "2": "Maintaining up-to-date knowledge is the Competence standard.",
-        "3": "Presenting information favorably rather than objectively would violate the Integrity and Credibility standards."
-      }
-    },
-    {
-      "q": "Under the IMA's Credibility standard, a management accountant must:",
-      "o": [
-        "Never communicate negative information to management.",
-        "Disclose all relevant information that could reasonably influence an intended user's understanding of the reports and analyses.",
-        "Certify that all financial statements are free from errors.",
-        "Maximize reported profits to satisfy investor expectations."
-      ],
-      "a": 1,
-      "e": "The Credibility standard requires members to communicate information fairly and objectively, disclose all relevant information that users need to make informed decisions, and disclose delays or deficiencies in information and processing.",
-      "wrongWhy": {
-        "0": "Withholding negative information would violate Credibility. Management accountants must communicate objectively, including unfavorable information.",
-        "2": "Certifying error-free statements is not part of the Credibility standard. Absolute perfection is not required — but fair and objective communication is.",
-        "3": "Maximizing profits at the expense of accuracy violates both Integrity and Credibility."
-      }
-    },
-    {
-      "q": "A management accountant is pressured by a supervisor to alter budget projections to show better results. The accountant should:",
-      "o": [
-        "Comply — following supervisor instructions is always the ethical course of action.",
-        "Alter the data only if the change is less than 5% of total revenue.",
-        "Refuse and escalate the issue through the organization's ethics channels.",
-        "Alter the data but document the supervisor's request in a personal file."
-      ],
-      "a": 2,
-      "e": "Being asked to falsify financial data is a clear ethical violation. The accountant should refuse and follow the IMA's ethical conflict resolution process — escalate to higher management, the audit committee, or seek external guidance if internal channels fail.",
-      "wrongWhy": {
-        "0": "Following a supervisor's instruction to falsify data violates the Integrity, Competence, and Credibility standards. Unethical instructions should not be followed.",
-        "1": "There is no materiality threshold that permits falsification. Altering data to mislead is unethical regardless of the amount.",
-        "3": "Documentation alone does not resolve the ethical violation. The accountant must refuse and escalate."
-      }
-    },
-    {
-      "q": "The term 'conflict of interest' in ethics refers to:",
-      "o": [
-        "A disagreement between two employees over a business decision.",
-        "A situation where a personal interest could improperly influence professional judgment.",
-        "A legal dispute between the company and a supplier.",
-        "Competing priorities between the finance and operations departments."
-      ],
-      "a": 1,
-      "e": "A conflict of interest exists when a person's private interests — financial, personal, or otherwise — could improperly influence their professional decision-making. The IMA Integrity standard requires members to communicate and manage conflicts of interest appropriately.",
-      "wrongWhy": {
-        "0": "A disagreement between employees is an interpersonal conflict, not an ethical conflict of interest.",
-        "2": "A legal dispute between the company and a supplier is a business dispute, not an ethical conflict of interest for an individual.",
-        "3": "Competing departmental priorities are an organizational challenge, not an individual ethical conflict of interest."
-      }
-    },
-    {
-      "q": "Which of the following is NOT a characteristic of a strong ethical culture in an organization?",
-      "o": [
-        "Clear code of conduct communicated to all employees.",
-        "Tone at the top — leadership demonstrating ethical behavior.",
-        "Retaliation against employees who report ethical violations.",
-        "Ethics training programs for all staff."
-      ],
-      "a": 2,
-      "e": "Retaliation against whistleblowers is a sign of a weak or toxic ethical culture — it discourages reporting of misconduct and perpetuates unethical behavior. Strong ethical cultures protect and encourage reporting of violations.",
-      "wrongWhy": {
-        "0": "A clear code of conduct is a foundation of a strong ethical culture.",
-        "1": "Tone at the top — leadership modeling ethical behavior — is one of the most important elements of a strong ethical culture.",
-        "3": "Ethics training ensures employees understand expectations and know how to handle ethical dilemmas."
-      }
-    },
-    {
-      "q": "An IMA member who cannot resolve an ethical conflict through internal channels should:",
-      "o": [
-        "Immediately disclose the matter to the media.",
-        "Seek legal advice or consult the IMA's confidential ethics hotline.",
-        "Alter the records to prevent further harm.",
-        "Do nothing and hope the situation resolves itself."
-      ],
-      "a": 1,
-      "e": "The IMA recommends that if internal escalation does not resolve the conflict, members may consult an attorney about legal obligations and rights, and may contact the IMA's confidential ethics hotline for guidance. Going to the media or taking unilateral action is generally not the appropriate first step.",
-      "wrongWhy": {
-        "0": "Disclosing to the media is generally inappropriate and may violate confidentiality obligations. Legal and professional guidance should be sought first.",
-        "2": "Altering records to prevent harm would itself be an ethical and legal violation.",
-        "3": "Doing nothing when facing an unresolved ethical violation is a passive failure that can make the member complicit in the wrongdoing."
-      }
+      "t": "tip",
+      "v": "The FMAA exam tests practical application of ethics concepts. When presented with a scenario, identify: (1) What principle/value is at stake? (2) Who are the affected stakeholders? (3) What action aligns with ethical principles and IMA standards?"
     }
   ],
   "5-2": [
     {
-      "q": "A manufacturing entity located in a sparsely populated region of the country has a policy of leaving its raw material inventory warehouse doors open during normal business hours to optimize workflow. The controller for the entity has just noticed that some raw material inventory is missing. Using the fraud triangle model, the controller has determined that the entity’s policy most likely increases the risk of fraud by",
-      "o": [
-        "incentivizing employees to commit the fraud.",
-        "assisting employees to perceive a financial need.",
-        "increasing the ease of rationalization of the fraudulent activity.",
-        "increasing the opportunity to commit the fraud."
-      ],
-      "a": 3,
-      "e": "The Fraud Triangle includes \"opportunity\" as a condition that must be present for an employee to commit a fraudulent act against an employer. The employee sees a way to use a position of trust with the employer to solve a financial problem and believes it can be done in such a way that there will be a low risk of getting caught. By leaving its raw material inventory warehouse doors open during business hours, the company is failing to protect its assets and is increasing the opportunity of employees to commit fraud. Physical protection measures should be in place that restrict access to assets such as inventory.",
-      "wrongWhy": {
-        "0": "Leaving its raw material inventory warehouse doors open during business hours does not incentivize employees to commit fraud. It does, however, increase the opportunity to commit fraud. Please see the correct answer explanation for more information.",
-        "1": "Leaving its raw material inventory warehouse doors open during business hours does not assist employees to perceive a financial need. It does, however, increase the opportunity to commit fraud. Please see the correct answer explanation for more information.",
-        "2": "Leaving its raw material inventory warehouse doors open during business hours does not increase the ease of rationalization of fraudulent activity among employees. It does, however, increase the opportunity to commit fraud. Please see the correct answer explanation for more information."
-      }
+      "t": "h",
+      "v": "IMA Statement of Ethical Professional Practice"
     },
     {
-      "q": "What are the four overarching ethical principles as expressed in the IMA Statement of Ethical Professional Practice (2017)?",
-      "o": [
-        "Honesty, Fairness, Objectivity and Responsibility",
-        "Competence, Confidentiality, Integrity and Credibility",
-        "Honesty, Integrity, Credibility and Competence",
-        "Honesty, Fairness, Impartiality and Credibility"
-      ],
-      "a": 0,
-      "e": "The four overarching ethical principles are Honesty, Fairness, Objectivity and Responsibility.",
-      "wrongWhy": {
-        "1": "These are the four standards of ethical conduct.",
-        "2": "One of these items is an overarching ethical principle, but the other three are standards of ethical conduct.",
-        "3": "Two of these, honesty and fairness, are overarching ethical principles. However, impartiality is one of the words that defines fairness, and credibility is a standard of ethical conduct, not an ethical principle."
-      }
+      "t": "p",
+      "v": "The Institute of Management Accountants (IMA) has established the Statement of Ethical Professional Practice. All IMA members must comply with both the overarching PRINCIPLES and the specific STANDARDS. Knowing which are principles and which are standards is tested on the exam."
     },
     {
-      "q": "Charlie Benwal was on a team that evaluated a potential acquisition. Both Benwal’s employer and the potential target are publicly-traded companies. A significant portion of Benwal’s personal investment portfolio is composed of the target company’s stock, which Benwal did not disclose. Based on IMA’s Statement of Ethical Professional Practice, Benwal would be in violation of which one of the following statements?",
-      "o": [
-        "Integrity.",
-        "Confidentiality.",
-        "Competence.",
-        "Credibility."
-      ],
-      "a": 0,
-      "e": "According to the Standard of Integrity in IMA’s Statement of Ethical Professional Practice, IMA members are to Mitigate actual conflicts of interest. Regularly communicate with business associates to avoid apparent conflicts of interest. Advise all parties of any potential conflicts of interest. Refrain from engaging in any conduct that would prejudice carrying out duties ethically. Abstain from engaging in or supporting any activity that might discredit the profession. Contribute to a positive ethical culture and place integrity of the profession above personal interests. Benwal had an actual conflict of interest because a significant portion of his personal investment portfolio is composed of the target company’s stock, and Benwal did not disclose that fact or recuse himself. Benwal should have disclosed the conflict of interest and recused himself from any participation in evaluating the target company as a potential acquisition.",
-      "wrongWhy": {
-        "1": "According to the Standard of Confidentiality in IMA’s Statement of Ethical Professional Practice, IMA members are to",
-        "2": "According to the Standard of Competence in IMA’s Statement of Ethical Professional Practice, IMA members are to Maintain an appropriate level of professional leadership and expertise by enhancing knowledge and skills. Perform professional duties in accordance with relevant laws, regulations, and technical standards. Provide decision support information and recommendations that are accurate, clear, concise, and timely. Recognize and help manage risk. Benwal did not violate the Standard of Competence.",
-        "3": "According to the Standard of Credibility in IMA’s Statement of Ethical Professional Practice, IMA members are to Communicate information fairly and objectively. Provide all relevant information that could reasonably be expected to influence an intended user’s understanding of the reports, analyses, or recommendations. Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law. Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance of an activity. Benwal did not violate the Standard of Credibility."
-      }
+      "t": "h",
+      "v": "IMA Ethical PRINCIPLES (4)"
     },
     {
-      "q": "What are the four standards of ethical conduct as expressed in the IMA Statement of Ethical Professional Practice (2017)?",
-      "o": [
-        "Competence, Confidentiality, Objectivity and Responsibility",
-        "Competence, Confidentiality, Integrity and Credibility",
-        "Honesty, Fairness, Objectivity and Responsibility",
-        "Fairness, Confidentiality, Integrity and Credibility"
+      "t": "tbl",
+      "h": [
+        "Principle",
+        "Definition"
       ],
-      "a": 1,
-      "e": "The four standards of ethical conduct are Competence, Confidentiality, Integrity and Credibility.",
-      "wrongWhy": {
-        "0": "Two of these are standards of ethical conduct, but two are overarching ethical principles.",
-        "2": "These are overarching ethical principles.",
-        "3": "Three of these are standards of ethical conduct, but one is an overarching ethical principle."
-      }
+      "r": [
+        [
+          "Honesty",
+          "Truthfulness and trustworthiness; telling the truth to the best of your knowledge; freedom from deceit or fraud"
+        ],
+        [
+          "Fairness",
+          "Acting impartially, free from bias, dishonesty, or injustice; being just, equitable, and impartial"
+        ],
+        [
+          "Objectivity",
+          "Basing judgment on an established set of criteria; unbiased; free from personal feelings or prejudice; decisions based on facts alone"
+        ],
+        [
+          "Responsibility",
+          "Performing an act or function completely and in a timely manner; being answerable or accountable for something within one's own power, control, or management"
+        ]
+      ]
     },
     {
-      "q": "Which of the following actions is not an appropriate course of action when encountering unethical issues or behavior, if your organization does not have established policies?",
-      "o": [
-        "Discuss the issue with your immediate supervisor or, if the supervisor appears to be involved, present the issue to the next level.",
-        "Contact the IMA's anonymous helpline to request how key elements of the IMA Statement of Ethical Professional Practice could be applied to the ethical issue.",
-        "Consult your own attorney to learn of any legal obligations, rights, and risks concerning the issue.",
-        "Communicate your concerns to the authorities or to persons outside the organization who may be interested parties."
-      ],
-      "a": 3,
-      "e": "Communication of problems to authorities or individuals not employed or engaged by the organization is not a course of action recommended by the IMA Statement of Ethical Professional Practice.",
-      "wrongWhy": {
-        "0": "Discussing the issue with your immediate supervisor or, if the supervisor appears to be involved, presenting the issue to the next level of management is a course of action to consider according to the IMA Statement of Ethical Professional Practice.",
-        "1": "Contacting the IMA's anonymous helpline to request how key elements of the IMA Statement of Ethical Professional Practice could be applied to the ethical issue is a course of action to consider.",
-        "2": "Consulting your own attorney to learn of any legal obligations, rights, and risks concerning the issue is a course of action to consider."
-      }
+      "t": "h",
+      "v": "IMA Ethical STANDARDS (4)"
     },
     {
-      "q": "Which of the following statements is a responsibility for an IMA member regarding the \"Integrity\" standard of ethical conduct?",
-      "o": [
-        "Refrain from engaging in any conduct that would prejudice carrying out duties ethically.",
-        "Provide all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations.",
-        "Perform professional duties in accordance with relevant laws, regulations, and technical standards.",
-        "To refrain from using confidential information for unethical or illegal advantage."
-      ],
-      "a": 0,
-      "e": "Each IMA member has the following responsibilities with respect to the \"Integrity\" standard of ethical conduct: 1. Mitigate actual conflicts of interest. Regularly communicate with business associates to avoid apparent conflicts of interest. Advise all parties of any potential conflicts. 2. Refrain from engaging in any conduct that would prejudice carrying out duties ethically. 3. Abstain from engaging in or supporting any activity that might discredit the profession. 4. Contribute to a positive ethical culture and place integrity of the profession above personal interests.",
-      "wrongWhy": {
-        "1": "This is one of the responsibilities for an IMA member regarding the \"Credibility\" standard of ethical conduct.",
-        "2": "This is one of the responsibilities for an IMA member regarding the \"Competence\" standard of ethical conduct.",
-        "3": "This is one of the responsibilities for an IMA member regarding the \"Confidentiality\" standard of ethical conduct."
-      }
+      "t": "h",
+      "v": "I. Competence"
     },
     {
-      "q": "Which of the following statements is not a responsibility for an IMA member regarding the \"Credibility\" standard of ethical conduct?",
-      "o": [
-        "To communicate information fairly and objectively.",
-        "To provide decision support information and recommendations that are accurate, clear, concise, and timely.",
-        "To provide all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations.",
-        "To report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law."
-      ],
-      "a": 1,
-      "e": "To provide decision support information and recommendations that are accurate, clear, concise, and timely is a responsibility of an IMA member with respect to the \"Competence\" standard of ethical conduct.",
-      "wrongWhy": {
-        "0": "With respect to the \"Credibility\" standard of ethical professional conduct, each IMA member has a responsibility to: 1. Communicate information fairly and objectively. 2. Provide all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations. 3. Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law. 4. Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance of an activity.",
-        "2": "With respect to the \"Credibility\" standard of ethical professional conduct, each IMA member has a responsibility to: 1. Communicate information fairly and objectively. 2. Provide all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations.",
-        "3": "With respect to the \"Credibility\" standard of ethical professional conduct, each IMA member has a responsibility to: 1. Communicate information fairly and objectively. 2. Provide all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations. 3. Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law. 4. Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance of an activity."
-      }
+      "t": "b",
+      "v": [
+        "Maintain appropriate level of professional leadership and expertise by enhancing knowledge and skills",
+        "Perform professional duties in accordance with relevant laws, regulations, and technical standards",
+        "Provide decision support information and recommendations that are accurate, clear, concise, and timely. Recognize and help manage risk"
+      ]
     },
     {
-      "q": "Which of the following statements is a responsibility for an IMA member regarding the \"Competence\" standard of ethical conduct?",
-      "o": [
-        "To perform professional duties in accordance with relevant laws, regulations, and technical standards.",
-        "To refrain from engaging in any conduct that would prejudice carrying out duties ethically.",
-        "Inform all relevant parties regarding appropriate use of confidential information. Monitor to ensure compliance.",
-        "To communicate information fairly and objectively."
-      ],
-      "a": 0,
-      "e": "With respect to the \"Competence\" standard of ethical professional conduct, each IMA member has a responsibility to 1. Maintain an appropriate level of professional leadership and expertise by enhancing knowledge and skills. 2. Perform professional duties in accordance with relevant laws, regulations, and technical standards. 3. Provide decision support information and recommendations that are accurate, clear, concise, and timely. Recognize and help manage risk.",
-      "wrongWhy": {
-        "1": "This is one of the responsibilities for an IMA member regarding the \"Integrity\" standard of ethical conduct.",
-        "2": "This is one of the responsibilities for an IMA member regarding the \"Confidentiality\" standard of ethical conduct.",
-        "3": "This is one of the responsibilities for an IMA member regarding the \"Credibility\" standard of ethical conduct."
-      }
+      "t": "h",
+      "v": "II. Confidentiality"
     },
     {
-      "q": "Maryann Johnson, controller of Teenware, Inc., a closely-held, private corporation, was standing in a long checkout line at her local Walmart when she received an urgent call on her cell phone from Michael Cole, CEO of Teenware. Cole was attending a weekend retreat with the members of the company’s board of directors, and the directors had some questions about the financial statements that Cole needed answers to right away. In an effort to accommodate Cole’s needs without losing her place in line, Johnson attempted to answer his questions as best she could. This was a violation of which standard in the IMA Statement of Ethical Professional Practice?",
-      "o": [
-        "Integrity.",
-        "Confidentiality.",
-        "Competence.",
-        "Credibility."
-      ],
-      "a": 1,
-      "e": "Confidentiality means safeguarding information and not disclosing anything to those who are not authorized to know it. Maryann Johnson’s actions were a violation of the confidentiality standard in the IMA Statement of Ethical Professional Practice. Financial information about a closely-held, private corporation is confidential. Johnson should have left the line and gone somewhere where she would have been able to speak without being overheard.",
-      "wrongWhy": {
-        "0": "Integrity involves adhering firmly to a code of ethics. This was not a violation of the standard of integrity. Please see the correct answer explanation for more information.",
-        "2": "Competence is the quality of having the required skill, knowledge, qualifications, and capacity to fulfill a particular job effectively. This was not a violation of the competence standard. Please see the correct answer explanation for more information.",
-        "3": "Credibility is the quality of being believable and trustworthy. This was not a violation of the standard of credibility. Please see the correct answer explanation for more information."
-      }
+      "t": "b",
+      "v": [
+        "Keep information confidential except when disclosure is authorized or legally required",
+        "Inform all relevant parties regarding appropriate use of confidential information; monitor to ensure compliance",
+        "Refrain from using confidential information for unethical or illegal advantage"
+      ]
     },
     {
-      "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Responsibility.\" \"Responsibility\" means",
-      "o": [
-        "performing an act or a function completely and in a timely manner; being answerable or accountable for something that is within your own power, control or management.",
-        "performing professional duties in accordance with relevant laws, regulations, and technical standards.",
-        "acting in an impartial manner.",
-        "protecting laptop computers, especially when they are taken off company premises."
-      ],
-      "a": 0,
-      "e": "This is the definition of \"Responsibility.\"",
-      "wrongWhy": {
-        "1": "This is one of the responsibilities for an IMA member with respect to the \"Competence\" standard of ethical conduct.",
-        "2": "This is the definition of \"Fairness.\"",
-        "3": "This is an example of ways to keep information confidential."
-      }
+      "t": "h",
+      "v": "III. Integrity"
     },
     {
-      "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Fairness.\" \"Fairness\" means",
-      "o": [
-        "communicating both good and bad news; not just telling your superiors what they want to hear.",
-        "basing a judgment on an established set of criteria; being free from personal feelings or prejudice, basing analyses and decisions on the facts alone.",
-        "communicating information fairly and objectively.",
-        "acting in an impartial manner and being free from bias, dishonesty, or injustice; being open-minded, tolerant and accepting."
-      ],
-      "a": 3,
-      "e": "This is the definition of \"Fairness.\"",
-      "wrongWhy": {
-        "0": "This is an example of ways to maintain integrity.",
-        "1": "This is the definition of \"Objectivity.\"",
-        "2": "This is one of the responsibilities for an IMA member with respect to the \"Credibility\" standard of ethical professional conduct."
-      }
+      "t": "b",
+      "v": [
+        "Mitigate actual conflicts of interest; regularly communicate with business associates to avoid apparent conflicts; advise all parties of any potential conflicts",
+        "Refrain from engaging in any conduct that would prejudice carrying out duties ethically",
+        "Abstain from engaging in or supporting any activity that might discredit the profession",
+        "Contribute to a positive ethical culture and place integrity of the profession above personal interests"
+      ]
     },
     {
-      "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Honesty.\" \"Honesty\" means",
-      "o": [
-        "fairness, straightforwardness of conduct; being upright, having integrity, being truthful, sincere, frank, and free from deceit or fraud.",
-        "refraining from engaging in any conduct that would prejudice carrying out duties ethically.",
-        "being answerable or accountable for something that is within one's own power, control or management.",
-        "reporting any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law."
-      ],
-      "a": 0,
-      "e": "This is the definition of \"Honesty.\"",
-      "wrongWhy": {
-        "1": "This is one of the responsibilities of an IMA member with respect to the \"Integrity\" standard of ethical professional conduct.",
-        "2": "This is the definition of \"Responsibility.\"",
-        "3": "This is one of the responsibilities of an IMA member with respect to the \"Credibility\" standard of ethical professional conduct."
-      }
+      "t": "h",
+      "v": "IV. Credibility"
     },
     {
-      "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Objectivity.\" \"Objectivity\" means",
-      "o": [
-        "fairness and straightforwardness of conduct.",
-        "performing an act or a function completely and in a timely manner.",
-        "acting in an impartial manner and being free from bias, dishonesty, or injustice; being open-minded, tolerant, and accepting.",
-        "basing a judgment on an established set of criteria."
-      ],
-      "a": 3,
-      "e": "\"Objectivity\" means basing a judgment on an established set of criteria. It is the state of being free from personal feelings or prejudice and basing analyses and decisions on the facts alone.",
-      "wrongWhy": {
-        "0": "This is the definition of \"Honesty.\"",
-        "1": "This is the definition of \"Responsibility.\"",
-        "2": "This is the definition of \"Fairness.\""
-      }
+      "t": "b",
+      "v": [
+        "Communicate information fairly and objectively",
+        "Provide all relevant information that could reasonably be expected to influence an intended user's understanding",
+        "Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law",
+        "Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance"
+      ]
     },
     {
-      "q": "A company has a strong internal control structure in its accounting department. It has a high degree of duty segregation, regular reconciliations, strict reviews, and comprehensive internal audits. A disgruntled fixed assets accountant has been contemplating the embezzlement of cash receipts processed by the accounts receivable department. The accountant plans to use these funds to sustain his gambling problem. Using the Fraud Triangle model, what is the best assessment of fraud risk for the company’s situation?",
-      "o": [
-        "Medium, because opportunity is absent.",
-        "Medium, because rationalization is absent.",
-        "Low, because both opportunity and rationalization are absent.",
-        "High, because pressure, opportunity, and rationalization are all present."
-      ],
-      "a": 0,
-      "e": "The three sides of the Fraud Triangle are pressure, opportunity, and rationalization. All three conditions need to be present for an employee to commit a fraudulent act against an employer. Pressure is present, because the employee has a gambling problem. Rationalization is present, because the employee is disgruntled and can rationalize the fraudulent act. However, because the company has a strong internal control structure in its accounting department, the disgruntled employee will not have much opportunity to commit a fraudulent act. The fraud risk for the company’s situation is not eliminated, but it is lowered by the strong internal control structure.",
-      "wrongWhy": {
-        "1": "The three sides of the Fraud Triangle are pressure, opportunity, and rationalization. All three conditions need to be present for an employee to commit a fraudulent act against an employer. Pressure is present, because the employee has a gambling problem. Because the company has a strong internal control structure in its accounting department, the disgruntled employee will not have much opportunity to commit a fraudulent act. However, rationalization is not absent. Because the employee is disgruntled, the employee can rationalize the fraudulent act.",
-        "3": "The three sides of the Fraud Triangle are pressure, opportunity, and rationalization. All three conditions need to be present for an employee to commit a fraudulent act against an employer. Pressure is present, because the employee has a gambling problem. Rationalization is present, because the employee is disgruntled and can rationalize the fraudulent act. However, because the company has a strong internal control structure in its accounting department, the disgruntled employee will not have much opportunity to commit a fraudulent act."
-      }
+      "t": "ex",
+      "l": "Which Standard? — Scenario Practice",
+      "v": "Scenario 1: A management accountant discovers the company's financial statements contain a material error. She is told to 'fix it quietly without disclosure.'\n→ Violated: CREDIBILITY (must report deficiencies) and INTEGRITY (refrain from prejudicial conduct)\n\nScenario 2: An accountant uses insider knowledge of an upcoming acquisition to trade company stock.\n→ Violated: CONFIDENTIALITY (using confidential info for personal advantage) and INTEGRITY\n\nScenario 3: A CFO prepares a budget using outdated industry data because learning the current data would take time.\n→ Violated: COMPETENCE (must maintain expertise; provide accurate, timely information)"
     },
     {
-      "q": "How can a management accountant use the Fraud Triangle to identify and manage the risk of fraud?",
-      "o": [
-        "The Fraud Triangle provides a model for explaining how persuasion, coercion, and conviction influence people to commit fraud.",
-        "The Fraud Triangle provides a SOX-compliant model for examining the company's internal control environment in terms of its risk of fraud.",
-        "The Fraud Triangle provides a model for explaining the pressures, rationalizations, and opportunities that influence people to commit fraud.",
-        "The Fraud Triangle provides a model for explaining the motives, means, and opportunities that influence people to commit fraud."
-      ],
-      "a": 2,
-      "e": "According to the Fraud Triangle model, three conditions need to be present for an employee to commit a fraudulent act against an employer. The three conditions are pressure, opportunity, and rationalization.",
-      "wrongWhy": {
-        "0": "The Fraud Triangle does not provide a model for explaining how persuasion, coercion, and conviction influence people to commit fraud.",
-        "1": "The Fraud Triangle does not provide a SOX-compliant model for examining the company’s internal control environment in terms of its risk of fraud.",
-        "3": "The Fraud Triangle does not provide a model for explaining the motives, means, and opportunities that influence people to commit fraud."
-      }
+      "t": "h",
+      "v": "Resolving Ethical Issues — The Escalation Process"
     },
     {
-      "q": "The quality of being truthful and free from deceit or fraud is the definition of",
-      "o": [
-        "fairness.",
-        "objectivity.",
-        "responsibility.",
-        "honesty."
-      ],
-      "a": 3,
-      "e": "Honesty is one of the overarching ethical principles according to the IMA Statement of Ethical Professional Practice. It means being upright, having integrity, truthfulness, sincerity, frankness, and freedom from deceit or fraud. The other overarching ethical principles in the Statement are fairness, objectivity, and responsibility. Fairness means being acting in an impartial manner and being free from bias, dishonesty, or injustice and being open-minded, tolerant, and accepting. Objectivity means basing a judgment on an established set of criteria, making decisions on the facts alone. Responsibility means performing an act or a function completely and in a timely manner and being answerable or accountable for something that is within one’s own power, control, or management.",
-      "wrongWhy": {
-        "0": "The quality of being truthful and free from deceit or fraud is not the definition of fairness. Fairness, one of the principles in the IMA Statement of Ethical Professional Practice, means acting in an impartial manner and being free from bias, dishonesty, or injustice. It requires a person to be just, equitable, and impartial. Please see the correct answer explanation for more information.",
-        "1": "The quality of being truthful and free from deceit or fraud is not the definition of objectivity. Objectivity, one of the principles in the IMA Statement of Ethical Professional Practice, means basing a judgment on an established set of criteria. It is the state of being unbiased, free from personal feelings or prejudice and basing analyses and decisions on the facts alone.",
-        "2": "The quality of being truthful and free from deceit or fraud is not the definition of responsibility. Responsibility, one of the principles in the IMA Statement of Ethical Professional Practice, means performing an act or a function completely and in a timely manner and being answerable or accountable for something that is within one’s own power, control, or management. Please see the correct answer explanation for more information."
-      }
+      "t": "b",
+      "v": [
+        "Step 1: Follow the organization's established ethics policies (anonymous reporting systems if available)",
+        "Step 2: If no policies exist, or the issue involves the supervisor: discuss with immediate supervisor (unless supervisor is implicated)",
+        "Step 3: If supervisor is involved: escalate to the next level of management",
+        "Step 4: Contact IMA's anonymous ethics helpline to request guidance on applying the Statement",
+        "Step 5: Consult personal attorney to understand legal obligations and protections",
+        "Last resort: If resolution is impossible and the situation is severe, consider dissociating from the organization"
+      ]
     },
     {
-      "q": "Which standard in the IMA Statement of Ethical Professional Practice states that IMA members should not engage in activities that might discredit the profession?",
-      "o": [
-        "Credibility.",
-        "Confidentiality.",
-        "Integrity.",
-        "Competence."
-      ],
-      "a": 2,
-      "e": "According to the IMA Statement of Ethical Professional Practice, the standard of integrity requires each IMA member to: 1. Mitigate actual conflicts of interest. Regularly communicate with business associates to avoid apparent conflicts of interest. Advise all parties of any potential conflicts of interest. 2. Refrain from engaging in any conduct that would prejudice carrying out duties ethically. 3. Abstain from engaging in or supporting any activity that might discredit the profession. 4. Contribute to a positive ethical culture and place integrity of the profession above personal interests.",
-      "wrongWhy": {
-        "0": "The standard of credibility in the IMA Statement of Ethical Professional Practice does not state that IMA members should not engage in activities that might discredit the profession. The standard of credibility requires each IMA member to: 1. Communicate information fairly and objectively. 2. Disclose all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations. 3. Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law. 4. Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance of an activity.",
-        "3": "The standard of competence in the IMA Statement of Ethical Professional Practice does not state that IMA members should not engage in activities that might discredit the profession. The standard of competence requires each IMA member to: 1. Maintain an appropriate level of professional leadership and expertise by enhancing knowledge and skills. 2. Perform professional duties in accordance with relevant laws, regulations, and technical standards. 3. Provide decision support information and recommendations that are accurate, clear, concise, and timely. Recognize and help manage risk."
-      }
+      "t": "tip",
+      "v": "The exam frequently tests the four PRINCIPLES (Honesty, Fairness, Objectivity, Responsibility) vs the four STANDARDS (Competence, Confidentiality, Integrity, Credibility). Principles are overarching VALUES. Standards are BEHAVIORAL REQUIREMENTS. Both must be followed. Failure to comply with standards may result in disciplinary action."
     },
     {
-      "q": "Of the following, which would be least likely to be a motivating factor for management to overstate net income?",
-      "o": [
-        "To remain in compliance with bond covenants.",
-        "To make the company more attractive for a possible merger.",
-        "To meet earnings expectations.",
-        "Negotiating a new employee labor contract."
-      ],
-      "a": 3,
-      "e": "In negotiating a labor contract, management would have an incentive to understate net income, not overstate it. Meeting earnings expectations, remaining in compliance with bond covenants, and a desire to make the company more attractive for a possible merger are all factors that could motivate management to overstate net income. Note that neither understating nor overstating net income is an acceptable practice. Both are examples of fraudulent financial reporting."
-    },
-    {
-      "q": "An accountant has discovered unethical conduct in his organization and fails to act because of fear of retaliation. He will be in violation of all of the following IMA ethical standards except",
-      "o": [
-        "refrain from using confidential information for unethical or illegal advantage.",
-        "provide all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations.",
-        "communicate information fairly and objectively.",
-        "refrain from engaging in any conduct that would prejudice carrying out of duties correctly."
-      ],
-      "a": 0,
-      "e": "In this situation, the accountant is not violating the standard of Confidentiality.",
-      "wrongWhy": {
-        "1": "Because the accountant failed to communicate the unethical conduct, the accountant has failed to provide all relevant information that could reasonably be expected to influence an intended user, which is required by the Credibility standard.",
-        "2": "Because the accountant failed to communicate the unethical conduct, the accountant has failed to communicate information fairly and objectively, which is required by the Credibility standard.",
-        "3": "By failing to communicate the unethical action, the accountant has violated the requirement to refrain from engaging in any conduct that would prejudice carrying out of duties correctly, which is required by the Integrity standard."
-      }
-    },
-    {
-      "q": "According to Donald R. Cressey in his book, Other People’s Money, three conditions must be present for a trusted employee to commit a fraudulent act against his or her employer. Which of the following conditions is not a component of Cressey’s “Fraud Triangle”?",
-      "o": [
-        "Opportunity",
-        "Ability to rationalize the act",
-        "Financial pressure",
-        "Belief that they will not be caught"
-      ],
-      "a": 3,
-      "e": "The three components of the Fraud Triangle are opportunity, the ability to rationalize the act, and financial pressure. A belief on the part of the employee that he or she will not be caught is not one of them."
-    },
-    {
-      "q": "An IMA member discovers a problem that could mislead users of the firm’s financial data and has informed his immediate superior. He should report the circumstances to the audit committee and/or the board of directors only if the immediate superior",
-      "o": [
-        "assures the member that the problem will be resolved.",
-        "reports the situation to her superior.",
-        "is the firm’s chief executive officer, and knows about the situation but refuses to correct it.",
-        "reports to the chief executive officer, and knows about the situation but refuses to correct it."
-      ],
-      "a": 2,
-      "e": "Ethical issues should usually be reported to the Member's immediate supervisor. If the immediate supervisor is the CEO and refuses to correct the situation, the Member can go to the audit committee and/or board of directors.",
-      "wrongWhy": {
-        "0": "Ethical issues should usually be reported to the Member's immediate supervisor. If the immediate supervisor assures the Member that they will resolve the problem, there is no need to communicate the issue to the audit committee and/or the board of directors. If in the future, it becomes apparent that the immediate supervisor did not resolve the situation, the Member should report this to the supervisor's supervisor.",
-        "1": "If the Member's immediate supervisor has reported the situation to their supervisor, there is no need for the Member to report the situation to the audit committee and/or board of directors.",
-        "3": "Ethical issues should usually be reported to the Member's immediate supervisor. If the immediate supervisor refuses to correct the situation, the Member should report the situation to their supervisor's supervisor. So, if the immediate supervisor reports to the CEO, the Member should report their supervisor's refusal to correct the situation to the CEO, and not to the audit committee or board of directors."
-      }
-    },
-    {
-      "q": "Which one of the following would be most effective in deterring the commission of fraud?",
-      "o": [
-        "Employee training, segregation of duties, and punishment for unethical behavior.",
-        "Policies of strong internal control and punishments for unethical behavior.",
-        "Policies of strong internal control, segregation of duties, and requiring employees to take vacations.",
-        "Hiring ethical employees, employee training, and segregation of duties."
-      ],
-      "a": 2,
-      "e": "Policies of strong internal control are essential, because if a company has weak internal controls, it is putting itself at risk for employee theft. Segregation of duties is one of the most important internal controls. It ensures that no individual is given so much responsibility that he or she is in a position to both perpetrate and conceal a fraud. Requiring vacations is also effective and important, because it gives other employees and managers access to what the vacationing employee has been doing. A person who is committing fraud doesn't want to be away from their job responsibilities, because they usually need to do something every day to keep the fraud covered up. If employees know they are required to be totally away from their workplace continuously for a certain amount of time every year, they will be less likely to embark upon a course of action that they know will require them to be there every day.",
-      "wrongWhy": {
-        "0": "Employee training is important for having a competent workforce, but it does not deter fraud. Punishment for unethical behavior is also not an effective deterrent to fraud. The punishment takes place after the unethical behavior takes place, so it has not prevented the unethical behavior. Furthermore, unethical behavior does not necessarily indicate fraud is taking place; and an employee who is committing fraud may appear to be the most ethical person on the staff.",
-        "1": "Punishment for unethical behavior is not an effective deterrent to fraud. The punishment takes place after the unethical behavior takes place, so it has not prevented the unethical behavior. Furthermore, unethical behavior does not necessarily indicate fraud is taking place; and an employee who is committing fraud may appear to be the most ethical person on the staff.",
-        "3": "Employers really cannot tell whether a potential employee is ethical or unethical, so hiring only ethical employees is an impossibility. Employee training is important for having a competent workforce, but it does not deter fraud."
-      }
-    },
-    {
-      "q": "Jim Reebok is the purchasing manager of a major retail company. Jim is also a CMA and IMA member. Recently, Jim has been accused of violating the IMA Statement of Ethical Professional Practice. The allegations put forth against Jim are: 1. Jim is Chair of a private company that supplies most of its goods to the major retailer for which Jim serves as purchasing manager and Jim makes the purchasing decisions relating to that supplier. 2. Jim’s company compensates its senior management with generous stock options. Jim recently exercised his options and was well compensated. 3. Jim recently gave a lecture on activity-based costing (ABC), and he received compensation for the lecture. Of the allegations mentioned, which ones are not a violation of the IMA Statement of Ethical Professional Practice?",
-      "o": [
-        "Allegations 1 and 3.",
-        "Allegations 1 and 2.",
-        "None.",
-        "Allegations 2 and 3."
-      ],
-      "a": 3,
-      "e": "Allegation 2 is not a violation of the IMA Statement of Ethical Professional Practice. Stock options are a popular way to compensate senior management, and exercising them is not an ethical violation. Allegation 3 is also not a violation of the IMA Statement of Ethical Professional Practice. Being compensated for a lecture is not a violation, since there was no apparent conflict of interest."
-    },
-    {
-      "q": "Andrew Babbitt is a management accountant at Ace Mining Corporation (AMC), a processor of ores and minerals. He learned that AMC had been disposing hazardous waste materials in a nearby residential landfill. Babbitt knew that the waste materials could pose a danger to the residents in the area and that there could be legal ramifications for disposing hazardous waste in a residential landfill. When Babbitt discussed the issue with his supervisor the next morning, he was told to ignore it. Due to the significance of the matter, Babbitt decided to discuss the matter with his attorney and then notified the appropriate authorities. In accordance with IMA’s Statement of Ethical Professional Practice, which one of the following is the correct evaluation of Babbitt’s decision to notify the authorities?",
-      "o": [
-        "Babbitt’s actions were inappropriate because they violated the confidentiality standard.",
-        "Babbitt’s actions were appropriate as an immediate action.",
-        "Babbitt’s actions were appropriate only if his attorney indicated that there was a clear violation of the law.",
-        "Babbitt’s actions were inappropriate because they involved insubordination."
-      ],
-      "a": 2,
-      "e": "If Babbitt did, in fact, discuss the matter with his attorney and if the attorney advised him that an illegal act had taken place, then it was appropriate for him to communicate with the appropriate authorities. However, if the attorney advised him that it was not an illegal act but only an unethical one, Babbitt should have reported it within the company, probably to the board of directors given the significance of the item.",
-      "wrongWhy": {
-        "0": "Notification of the authorities, in this case, is not an example of a violation of the confidentiality standard.",
-        "1": "The question says \"Babbitt decided to discuss the matter with his attorney and then notified the appropriate authorities.\" It does not say that he actually carried through with discussing the matter with his attorney. The only thing the question says he actually did was notifying the authorities. If Babbitt immediately communicated with the authorities without first discussing the matter with his attorney and determining that an illegal act had taken place, that was inappropriate.",
-        "3": "The notification of the authorities is not an example of insubordination."
-      }
-    },
-    {
-      "q": "IMA members are required to adhere to the IMA Statement of Ethical Professional Practice. According to the IMA Statement of Ethical Professional Practice, credibility",
-      "o": [
-        "involves adhering to the IMA Statement of Ethical Professional Practice.",
-        "is making sure you have the skills, knowledge, qualifications and capacity to do your job effectively.",
-        "involves not disclosing information to individuals who are not authorized to receive the information.",
-        "is communicating information fairly and objectively."
-      ],
-      "a": 3,
-      "e": "Credibility involves communicating information fairly and objectively. It also includes providing all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations, reporting any delays or deficiencies in information, and communicating professional limitations or other constraints that would preclude responsible judgment or successful performance of an activity.",
-      "wrongWhy": {
-        "0": "Credibility does not involve adhering to the IMA Statement of Ethical Professional Practice. Please see the correct answer explanation for more information.",
-        "1": "Credibility does not involve making sure you have the skills, knowledge, qualifications and capacity to do your job effectively. That is a description of the standard of competence. Please see the correct answer explanation for more information.",
-        "2": "Credibility does not involve not disclosing information to individuals who are not authorized to receive the information. That is a description of the standard of confidientiality. Please see the correct answer explanation for more information."
-      }
-    },
-    {
-      "q": "Shelly Smith, CMA, is the consumer electronics buyer for a major chain of department stores. His department’s gross profit margin is monitored by senior management on a quarterly basis. When Smith thinks he may have trouble making the gross profit goal for a quarter, he may claim unauthorized charge-backs on merchandise invoices from the manufacturer. A retailer may obtain specific authorization from the manufacturer to deduct (charge-back) from the invoice for damaged goods, goods returned by customers, mistakes in shipping, and similar specific reasons. In accordance with IMA’s Statement of Ethical Professional Practice, which one of the following statements is most correct?",
-      "o": [
-        "The unauthorized charge-backs do not violate IMA’s Statement, or any other ethics policy. At worst, the charge-backs will be reversed in a future period.",
-        "Smith is violating the Confidentiality standard by informing the manufacturer of the value and reason(s) for the charge-backs.",
-        "Smith is violating the Competence standard, because the Fair Trade Commission (FTC) has established regulations prohibiting charge-backs which are not approved by the vendor.",
-        "Smith is violating the Credibility standard by communicating erroneous information. The charge-back he claimed had not been approved by the manufacturer."
-      ],
-      "a": 3,
-      "e": "Smith has not “communicate(d) information fairly and objectively.”",
-      "wrongWhy": {
-        "0": "Unauthorized charge-backs violate the Statement’s standard on Credibility.",
-        "1": "Confidentiality is not violated: such disclosure is required.",
-        "2": "The FTC does not have jurisdiction in this area."
-      }
-    },
-    {
-      "q": "David Lynch, a CMA, works as a financial analyst for HighLevel Securities LLC. David plays soccer on HighLevel’s soccer team. Recently, the company’s team played the team of a rival firm. During the game, a serious altercation occurred between David and a player from the other team. David was at fault. Luckily, no one was seriously injured; however, the police were called and David was charged with a misdemeanor. Is David’s altercation and arrest a violation of the IMA Statement of Ethical Professional Practice standards concerning integrity and credibility?",
-      "o": [
-        "No, because no one was injured.",
-        "No, because a fight occurring during a soccer game is not a violation of the standards of integrity and credibility.",
-        "Yes, because David acted unprofessionally and was charged with a misdemeanor.",
-        "Yes, because David is bound by the IMA Statement of Ethical Professional Practice."
-      ],
-      "a": 1,
-      "e": "The IMA Statement of Ethical Professional Practice covers members’ behavior with respect to competence, confidentiality, integrity, and credibility. Getting involved in an altercation during a soccer game is an indication of poor judgment, poor impulse control, and poor anger management; but it would not constitute a violation of the integrity or credibility standards of the IMA Statement of Ethical Professional Practice. Integrity involves avoiding apparent conflicts of interest and mitigating actual conflicts of interest, refraining from conduct that would prejudice carrying out professional duties ethically, abstaining from any activity that might discredit the profession, contributing to a positive ethical culture, and placing integrity of the profession above personal interests. Credibility involves communicating information fairly and objectively, providing all relevant information that could reasonably be expected to influence an intended user's understanding of the reports, analyses, or recommendations being presented, reporting any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law, and communicating professional limitations or other constraints that would preclude responsible judgment or successful performance of an activity.",
-      "wrongWhy": {
-        "2": "The IMA Statement of Ethical Professional Practice covers members’ behavior with respect to competence, confidentiality, integrity, and credibility. Getting involved in an altercation during a soccer game is an indication of poor judgment, poor impulse control, and poor anger management; but it would not constitute a violation of the integrity or credibility standards of the IMA Statement of Ethical Professional Practice. Please see the correct answer explanation for more information.",
-        "3": "The IMA Statement of Ethical Professional Practice covers members’ behavior with respect to competence, confidentiality, integrity, and credibility. Getting involved in an altercation during a soccer game is an indication of poor judgment, poor impulse control, and poor anger management; but it would not constitute a violation of the integrity or credibility standards of the IMA Statement of Ethical Professional Practice. Please see the correct answer explanation for more information."
-      }
-    },
-    {
-      "q": "Mark Tian, a staff accountant, becomes aware of an off-balance sheet bank account where funds have been diverted with offsetting credits approved by his immediate supervisor. His immediate supervisor refuses to discuss it and suggests Tian forget about it. Which one of the following should be Tian’s next course of action in this circumstance?",
-      "o": [
-        "Communicate his concerns confidentially to the company’s independent auditor.",
-        "Discuss his concerns with the level of management above the immediate supervisor.",
-        "Put his concerns in writing to the immediate supervisor and copy the company’s independent auditor.",
-        "Communicate his concerns confidentially to the company’s external legal counsel."
-      ],
-      "a": 1,
-      "e": "According to “Resolving Ethical Issues” in then IMA Statement of Ethical Professional Practice, when an IMA member encounters an unethical issue, the resolution process could include a discussion with the member’s immediate supervisor. If it appears the supervisor is involved, the issue can be presented to the next level of management. In this situation, it appears the supervisor may be involved. Thus, Tian should discuss his concerns with the level of management above the immediate supervisor.",
-      "wrongWhy": {
-        "0": "This should not be Tian's next course of action in this situation.",
-        "2": "This should not be Tian's next course of action in this situation.",
-        "3": "This should not be Tian's next course of action in this situation."
-      }
-    },
-    {
-      "q": "Employee A observes that Employee B is improperly altering department records to meet month end goals. These records are for internal use only and do not impact the company's financial records. Employee A notifies her supervisor of the impropriety, and the supervisor advises Employee A that she instructed Employee B to alter the records and an adjustment would be made the subsequent month to correct the records. Employee A should",
-      "o": [
-        "follow the organization's established procedures for the resolution of such unethical issues.",
-        "do nothing since the supervisor authorized the behavior.",
-        "communicate the unethical behavior to external authorities.",
-        "advise the supervisor that her behavior was unethical and do not communicate the impropriety any further."
-      ],
-      "a": 0,
-      "e": "According to Resolving Ethical Issues in the IMA Statement of Ethical Professional Practice, when faced with unethical issues, IMA members should first follow their organization's established policies for the resolution of such issues.",
-      "wrongWhy": {
-        "1": "This action does not conform to the guidance in Resolving Ethical Issues in the IMA Statement of Ethical Professional Practice.",
-        "2": "This action does not conform to the guidance in Resolving Ethical Issues in the IMA Statement of Ethical Professional Practice.",
-        "3": "This action does not conform to the guidance in Resolving Ethical Issues in the IMA Statement of Ethical Professional Practice."
-      }
-    },
-    {
-      "q": "A company has a December 31 year end. Which one of the following options to increase net income during the last month of the company’s fiscal year would least likely result in a violation of the IMA Statement of Ethical Professional Practice?",
-      "o": [
-        "Postpone planned marketing expenditures until January.",
-        "Reduce the calculated allowance for credit losses and credit loss expenses.",
-        "Persuade suppliers to postpone billing until January 1.",
-        "Delay the year-end closing until January 4 to capture sales over the New Year’s holiday in the current year."
-      ],
-      "a": 0,
-      "e": "Postponing planned marketing expenditures until January would not violate the IMA Statement of Ethical Professional Practice. Marketing expenditures are discretionary expenses that are expensed when incurred. If an expense is not incurred during the current fiscal year, it is appropriate not to accrue it in the financial statements for the year. All of the other answer choices would violate the standards of competence and credibility in the IMA Statement of Ethical Professional Practice because they would involve violating generally accepted accounting principles. The Competence standard requires IMA members to perform their professional duties in accordance with relevant laws, regulations, and technical standards, so violating generally accepted accounting principles violates the Competence standard. The Credibility standard requires members to provide all relevant information that could reasonably be expected to influence an intended user’s understanding of the reports, analyses, or recommendations, and violating generally accepted accounting principles would violate the Credibility standard.",
-      "wrongWhy": {
-        "1": "This is not the action that would least likely result in a violation of the IMA Statement of Ethical Professional Practice.",
-        "2": "This is not the action that would least likely result in a violation of the IMA Statement of Ethical Professional Practice.",
-        "3": "This is not the action that would least likely result in a violation of the IMA Statement of Ethical Professional Practice."
-      }
-    },
-    {
-      "q": "Which one of the following ethics-related actions by management is least effective in encouraging acceptance by employees of an organization's code of conduct?",
-      "o": [
-        "Management follows ethical principles in decisions made on behalf of the organization.",
-        "Management appoints an ethics officer to monitor and report to management on employee compliance.",
-        "Management supports employees in adhering to ethics standards.",
-        "Management keeps promises and commitments made to employees, customers and vendors."
-      ],
-      "a": 1,
-      "e": "The existence of an ethics officer, monitoring employee actions and reporting to management on their compliance, is guaranteed to cause resentment among employees and will not encourage their acceptance of the organization's code of conduct.",
-      "wrongWhy": {
-        "0": "When management follows ethical principals in decisions made on behalf of the organization, it is providing leadership by example and creating an ethical organizational culture. Employees follow the lead of their managers. When they see their managers behaving ethically, they behave ethically. When they see their managers behaving unethically, they also behave unethically. The internal environment is the most important factor in encouraging ethical behavior on the part of employees.",
-        "2": "When management supports employees in adhering to ethical standards, they encourage ethical behavior on the part of the employees.",
-        "3": "When management keeps promises and commitments made to employees, customers and vendors, it is providing leadership by example and creating an ethical organizational culture. Employees follow the lead of their managers. When they see their managers behaving ethically, they behave ethically. When they see their managers behaving unethically, they also behave unethically. The internal environment is the most important factor in encouraging ethical behavior on the part of employees."
-      }
-    },
-    {
-      "q": "Elite Running Ltd has recently implemented a new evaluation process that bases bonuses primarily on the variance between budgeted and actual cost for cost centers. Individuals with budgeted to actual variances in excess of 20% will receive no bonus. Richard Banes oversees one cost center of Elite and is concerned that his bonus will be adversely impacted. He has a strong personal relationship with the controller, who is responsible for developing, reviewing, and approving budgets. He has asked the controller to accept his budget with estimated costs higher than would be reasonably expected for the next fiscal year. In appreciation for accepting these inflated costs, Banes offered the controller season tickets to the sport of his choice. Which one of the following standards of IMA’s Statement of Ethical Professional Practice is relevant?",
-      "o": [
-        "Integrity, if the controller accepts the tickets because acceptance would prejudice his ability to carry out his duties.",
-        "Confidentiality, if the controller fails to report the incident to the audit committee.",
-        "Competence, if the controller accepts the tickets because he has not performed his duties in accordance with established laws.",
-        "Credibility, if the controller shares Banes’ offer with another member of the management team."
-      ],
-      "a": 0,
-      "e": "The standard of integrity in IMA’s Statement of Ethical Professional Practice is relevant. Integrity involves adhering firmly to a code of values and not making compromises in matters of principle. The standard of integrity calls on IMA members to mitigate actual conflicts of interest and avoid apparent conflicts of interest. If the controller accepts the tickets, the controller's ability to carry out his duties will be impaired because of a conflict of interest. To maintain personal integrity, IMA members should reject gifts, favors, or anything else designed to influence behavior or imply a future obligation. In this scenario, the controller's obligation in exchange for the tickets would be to accept Richard Banes' budget with estimated costs higher than would reasonably be expected for the next fiscal year, in order to give Banes a better opportunity to produce actual results that are close to his budgeted amounts without having to cut back on his spending.",
-      "wrongWhy": {
-        "2": "The standard of competence in IMA’s Statement of Ethical Professional Practice is not relevant. Competence means having the required skill, knowledge, qualifications, and capacity to fulfill a particular job effectively. This situation does not involve a question of the controller's competence. See the correct answer explanation for more information.",
-        "3": "The standard of credibility in IMA’s Statement of Ethical Professional Practice is not relevant. Credibility is the quality of being believable and trustworthy. This situation does not involve a question of the controller's credibility. See the correct answer explanation for more information."
-      }
+      "t": "ex",
+      "l": "Principles vs Standards — Quick Test",
+      "v": "'Tell the truth and don't deceive' → HONESTY (principle)\n'Keep client data private' → CONFIDENTIALITY (standard)\n'Be answerable for your actions' → RESPONSIBILITY (principle)\n'Avoid conflicts of interest' → INTEGRITY (standard)\n'Stay current with GAAP changes' → COMPETENCE (standard)\n'Provide unbiased analysis' → OBJECTIVITY (principle)\n'Disclose limitations that affect your work' → CREDIBILITY (standard)"
     }
   ]
 }
