@@ -65,8 +65,8 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .tbl th{padding:8px 10px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.5px}
 .tbl td{padding:8px 10px;border-top:.5px solid #f0f0eb;color:#444;line-height:1.5}
 .ar-term{cursor:pointer;border-bottom:1px dashed #888;position:relative;display:inline}
-.ar-tip{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap;z-index:100;pointer-events:none}
-.ar-tip.show{display:block}
+.ar-tip{display:none}.ar-tip.show{display:block}
+#ar-popover{position:fixed;background:#1a1a1a;color:#fff;font-size:12px;padding:5px 10px;border-radius:8px;white-space:nowrap;z-index:99999;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.35);line-height:1.4;max-width:260px;white-space:normal;text-align:center;display:none}
 .bottom-nav{display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:.5px solid #e0e0d8;flex-shrink:0;gap:2px}
 @media(min-width:900px){.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
 .nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 2px;border:none;background:none;cursor:pointer;border-radius:10px;font-family:inherit;color:#888;min-width:0;transition:background .15s}
@@ -445,7 +445,32 @@ function highlightTerms(text){
   for(const term of terms){const ar=TERM_DICT[term];const re=new RegExp('\\b'+escRx(term)+'(?![^<]*>)','g');out=out.replace(re,`<span class="ar-term" onclick="toggleTip(this)">${term}<span class="ar-tip">${ar}</span></span>`);}
   return out;
 }
-function toggleTip(el){const tip=el.querySelector('.ar-tip');if(!tip)return;const wasOpen=tip.classList.contains('show');document.querySelectorAll('.ar-tip.show').forEach(t=>t.classList.remove('show'));if(!wasOpen)tip.classList.add('show');}
+function toggleTip(el){
+  // Get or create the global popover element
+  let pop=document.getElementById('ar-popover');
+  if(!pop){pop=document.createElement('div');pop.id='ar-popover';document.body.appendChild(pop);}
+  const tip=el.querySelector('.ar-tip');if(!tip)return;
+  const ar=tip.textContent||tip.innerText||'';
+  // If this term's popover is already showing, hide it
+  if(pop.style.display==='block'&&pop._srcEl===el){pop.style.display='none';pop._srcEl=null;return;}
+  pop.textContent=ar;pop._srcEl=el;
+  // Position relative to the clicked element
+  const rect=el.getBoundingClientRect();
+  pop.style.display='block';
+  const pw=pop.offsetWidth||160,ph=pop.offsetHeight||28;
+  const vw=window.innerWidth,vh=window.innerHeight;
+  let left=rect.left+rect.width/2-pw/2;
+  let top=rect.top-ph-8;
+  // Flip below if not enough room above
+  if(top<8)top=rect.bottom+8;
+  // Clamp horizontally
+  if(left<8)left=8;
+  if(left+pw>vw-8)left=vw-pw-8;
+  pop.style.left=left+'px';pop.style.top=top+'px';
+  // Auto-dismiss on next click anywhere
+  function dismiss(e){if(e.target!==el){pop.style.display='none';pop._srcEl=null;document.removeEventListener('click',dismiss,true);}}
+  setTimeout(()=>document.addEventListener('click',dismiss,true),10);
+}
 
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
 function sect(id){return S.find(s=>s.id===id);}
@@ -693,10 +718,22 @@ async function replyVote(replyId,dir){
   if(!STATE.questionDetail||!STATE.user)return;
   const qId=STATE.questionDetail.id;const uid=STATE.user.uid;
   const reply=STATE.questionReplies.find(r=>r.id===replyId);if(!reply)return;
+  // Prevent self-vote
+  if(reply.authorId===uid){showToast('You cannot vote on your own reply.','info');return;}
   const upvotes=[...(reply.upvotes||[])];const downvotes=[...(reply.downvotes||[])];
   if(dir==='up'){const i=upvotes.indexOf(uid);if(i>-1)upvotes.splice(i,1);else{upvotes.push(uid);const di=downvotes.indexOf(uid);if(di>-1)downvotes.splice(di,1);}}
   else{const i=downvotes.indexOf(uid);if(i>-1)downvotes.splice(i,1);else{downvotes.push(uid);const ui=upvotes.indexOf(uid);if(ui>-1)upvotes.splice(ui,1);}}
-  try{await db.collection('fmaa-questions').doc(qId).collection('replies').doc(replyId).update({upvotes,downvotes});reply.upvotes=upvotes;reply.downvotes=downvotes;render();}catch(e){showToast('Could not save vote.','error');}
+  // Optimistic update first
+  const prevUp=[...(reply.upvotes||[])];const prevDown=[...(reply.downvotes||[])];
+  reply.upvotes=upvotes;reply.downvotes=downvotes;render();
+  try{
+    await db.collection('fmaa-questions').doc(qId).collection('replies').doc(replyId).set({upvotes,downvotes},{merge:true});
+  }catch(e){
+    // Revert on failure
+    reply.upvotes=prevUp;reply.downvotes=prevDown;render();
+    showToast('Vote could not be saved. Check Firestore rules allow reply writes.','error',5000);
+    console.warn('replyVote error:',e);
+  }
 }
 async function toggleBestAnswer(replyId,currentlyBest){
   if(!STATE.questionDetail||!STATE.user)return;
