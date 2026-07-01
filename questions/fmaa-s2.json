@@ -1683,6 +1683,231 @@
         "2": "This is total current liabilities of $2,000,000 multiplied by 0.8, the quick ratio. This is not the correct way to calculate the level of inventory. Please see the correct answer explanation for more information.",
         "3": "This is total current liabilities of $2,000,000 minus net working capital of $300,000, multiplied by 0.8, the quick ratio. This is not the correct way to calculate the level of inventory. Please see the correct answer explanation for more information."
       }
+    },
+    {
+      "q": "The current ratio is calculated as:",
+      "o": [
+        "Total Assets ÷ Total Liabilities",
+        "Current Assets ÷ Current Liabilities",
+        "(Cash + AR) ÷ Current Liabilities",
+        "Operating Cash Flow ÷ Current Liabilities"
+      ],
+      "a": 1,
+      "e": "Current Ratio = Current Assets ÷ Current Liabilities. The standard benchmark is 2:1, meaning $2 of current assets for every $1 of current liabilities."
+    },
+    {
+      "q": "Which of the following is EXCLUDED from the numerator of the quick ratio?",
+      "o": [
+        "Cash and cash equivalents",
+        "Marketable securities classified as current assets",
+        "Accounts receivable",
+        "Inventory"
+      ],
+      "a": 3,
+      "e": "Inventory is excluded from the quick ratio because it requires two steps to become cash (sell + collect) and cannot always be quickly liquidated. Prepaid expenses are also excluded."
+    },
+    {
+      "q": "A company has: Cash $40,000 | AR $60,000 | Inventory $80,000 | Current Liabilities $100,000. What is the quick ratio?",
+      "o": [
+        "1.80",
+        "1.00",
+        "0.80",
+        "2.00"
+      ],
+      "a": 1,
+      "e": "Quick Ratio = (Cash + AR) ÷ Current Liabilities = ($40,000 + $60,000) ÷ $100,000 = $100,000 ÷ $100,000 = 1.00. Inventory is excluded."
+    },
+    {
+      "q": "The cash flow ratio uses which figure in the numerator?",
+      "o": [
+        "Cash and cash equivalents",
+        "Net income",
+        "Operating cash flow",
+        "Free cash flow"
+      ],
+      "a": 2,
+      "e": "Cash Flow Ratio = Operating Cash Flow ÷ Period-End Current Liabilities. It measures the company's ability to generate cash from operations to settle current obligations."
+    },
+    {
+      "q": "A company has a current ratio of 3.5. Which interpretation is MOST ACCURATE?",
+      "o": [
+        "The company has excellent short-term liquidity with no concerns",
+        "The high current ratio always indicates strong financial health",
+        "The ratio may indicate excess inventory or idle cash, which requires further investigation",
+        "The company cannot pay its current liabilities"
+      ],
+      "a": 2,
+      "e": "A high current ratio may indicate excess inventory (poor management) or excessive idle cash that is not being deployed productively. Ratios must be compared to industry averages — a ratio that is too high may indicate inefficiency."
+    },
+    {
+      "q": "The net working capital ratio is calculated as:",
+      "o": [
+        "Current Assets ÷ Total Assets",
+        "(Current Assets − Current Liabilities) ÷ Total Assets",
+        "Net Income ÷ Total Assets",
+        "Current Liabilities ÷ Total Assets"
+      ],
+      "a": 1,
+      "e": "NWC Ratio = (Current Assets − Current Liabilities) ÷ Total Assets. It measures the proportion of total assets represented by net working capital. A declining trend over time signals potential future financial difficulty."
+    },
+    {
+      "q": "Which liquidity ratio is MOST conservative (strictest measure of immediate liquidity)?",
+      "o": [
+        "Current ratio",
+        "Quick ratio",
+        "Cash ratio",
+        "Net working capital ratio"
+      ],
+      "a": 2,
+      "e": "The cash ratio uses only cash, cash equivalents, and marketable securities in the numerator — the most liquid assets. It is more conservative than the quick ratio (which includes AR) and the current ratio (which includes inventory)."
+    },
+    {
+      "q": "A company's cash flow ratio is 0.25. According to the standard benchmark, this indicates:",
+      "o": [
+        "Excellent cash generation from operations",
+        "Adequate cash flow coverage",
+        "Below the 0.40 standard — the company may struggle to pay current obligations from operating cash flow",
+        "The company is technically insolvent"
+      ],
+      "a": 2,
+      "e": "A cash flow ratio of 0.40 or higher is considered the standard for a healthy company. At 0.25, the company is generating insufficient operating cash flow relative to its current liabilities — it may need to borrow to pay current obligations."
+    },
+    {
+      "q": "Why are prepaid expenses excluded from the quick ratio?",
+      "o": [
+        "They are too small to be material",
+        "They are long-term assets",
+        "They cannot be converted to cash — if not paid in advance, they would require cash outflow",
+        "They are included in inventory"
+      ],
+      "a": 2,
+      "e": "Prepaid expenses are excluded because they cannot be liquidated (converted to cash). If the company had not prepaid them, the cash would have been needed to pay for them — they represent future economic benefit, not future cash inflow."
+    },
+    {
+      "q": "Current Assets = $500,000 | Current Liabilities = $200,000 | Total Assets = $1,500,000. What is the NWC ratio?",
+      "o": [
+        "0.333",
+        "0.200",
+        "0.167",
+        "2.500"
+      ],
+      "a": 2,
+      "e": "NWC Ratio = (CA − CL) ÷ Total Assets = ($500,000 − $200,000) ÷ $1,500,000 = $300,000 ÷ $1,500,000 = 0.20 or 20%."
+    },
+    {
+      "q": "The standard benchmark for the quick ratio is:",
+      "o": [
+        "2:1",
+        "0.40",
+        "1:1",
+        "3:1"
+      ],
+      "a": 2,
+      "e": "The standard benchmark for the quick ratio is 1:1, meaning $1 of quick assets (cash + marketable securities + net AR) for every $1 of current liabilities."
+    },
+    {
+      "q": "Which of the following would INCREASE the current ratio?",
+      "o": [
+        "Paying off accounts payable with cash",
+        "Purchasing inventory on credit",
+        "Taking out a long-term loan and using the proceeds to pay current liabilities",
+        "Declaring but not paying a cash dividend"
+      ],
+      "a": 2,
+      "e": "Taking out a long-term loan (increases cash, a current asset) and using proceeds to reduce current liabilities decreases the denominator more than the numerator when the current ratio is above 1:1, increasing it.",
+      "wrongWhy": {
+        "0": "Paying AP with cash reduces both current assets and current liabilities equally — the ratio changes if it was not exactly 1:1.",
+        "1": "Purchasing on credit increases both current assets and current liabilities — if ratio > 1:1, ratio decreases.",
+        "3": "Declaring a dividend creates a current liability (dividends payable) and reduces equity — decreases current ratio."
+      }
+    },
+    {
+      "q": "A company has negative net working capital. This means:",
+      "o": [
+        "The company is highly profitable",
+        "Current liabilities exceed current assets — a signal of serious short-term liquidity problems",
+        "The company has more long-term debt than equity",
+        "The current ratio is greater than 1:1"
+      ],
+      "a": 1,
+      "e": "Negative net working capital (current liabilities > current assets) indicates the company cannot cover its short-term obligations with current assets. While some businesses operate with negative NWC by design, it is generally a warning sign."
+    },
+    {
+      "q": "The cash flow ratio uses PERIOD-END current liabilities rather than average current liabilities because:",
+      "o": [
+        "Period-end is easier to calculate",
+        "Future cash flows will be required to pay current liabilities as of the balance sheet date",
+        "Average balances include historical data that may not be relevant",
+        "GAAP requires period-end balances for all ratios"
+      ],
+      "a": 1,
+      "e": "Period-end current liabilities represent the obligations outstanding on the balance sheet date — exactly what the operating cash flows must cover going forward. Average balances would include past-period liabilities that have already been paid."
+    },
+    {
+      "q": "Which of the following ratios would be MOST useful for a bank deciding whether to extend short-term credit to a company?",
+      "o": [
+        "Return on equity",
+        "Debt to equity ratio",
+        "Quick ratio or cash flow ratio",
+        "Net profit margin"
+      ],
+      "a": 2,
+      "e": "A bank extending short-term credit is primarily concerned with whether the company can repay within the short term. The quick ratio and cash flow ratio are most relevant because they measure short-term liquidity and ability to generate cash to service debt."
+    },
+    {
+      "q": "Cash = $25,000 | Marketable Securities = $15,000 | AR = $60,000 | Inventory = $100,000 | Prepaid = $5,000 | Current Liabilities = $80,000. What is the current ratio?",
+      "o": [
+        "1.25",
+        "1.31",
+        "2.56",
+        "1.94"
+      ],
+      "a": 2,
+      "e": "Current Assets = $25K + $15K + $60K + $100K + $5K = $205,000. Current Ratio = $205,000 ÷ $80,000 = 2.5625 ≈ 2.56."
+    },
+    {
+      "q": "Using the data in the previous question, what is the quick ratio?",
+      "o": [
+        "2.56",
+        "1.25",
+        "1.31",
+        "1.00"
+      ],
+      "a": 1,
+      "e": "Quick assets = Cash + Mkt Securities + AR = $25K + $15K + $60K = $100,000. Quick Ratio = $100,000 ÷ $80,000 = 1.25."
+    },
+    {
+      "q": "A declining trend in the current ratio over three years is MOST likely interpreted as:",
+      "o": [
+        "Improving efficiency in working capital management",
+        "Deteriorating short-term liquidity position",
+        "Improved profitability",
+        "Better inventory management"
+      ],
+      "a": 1,
+      "e": "A declining current ratio over time signals a deteriorating short-term liquidity position — the company's current assets are not growing as fast as its current liabilities. This could indicate accumulating short-term debt or declining sales."
+    },
+    {
+      "q": "Why are accounts receivable included in the quick ratio but inventory is NOT?",
+      "o": [
+        "AR is always larger than inventory",
+        "AR can usually be collected immediately or factored; inventory requires two steps (sell + collect) to become cash",
+        "Inventory is classified as a long-term asset",
+        "AR earns interest income"
+      ],
+      "a": 1,
+      "e": "AR is only one step from cash — collect it (or factor it). Inventory requires two steps: first sell it (creating AR), then collect the AR. This makes inventory less liquid than AR."
+    },
+    {
+      "q": "A company reports operating cash flow of $200,000 and period-end current liabilities of $400,000. What action does this suggest?",
+      "o": [
+        "The company has excellent cash coverage at 2:1",
+        "The cash flow ratio of 0.50 exceeds the 0.40 standard — adequate coverage",
+        "The cash flow ratio of 0.50 is below the 2:1 current ratio standard",
+        "The company is technically insolvent"
+      ],
+      "a": 1,
+      "e": "Cash Flow Ratio = $200,000 ÷ $400,000 = 0.50. This exceeds the 0.40 standard, indicating adequate operating cash generation to cover current obligations."
     }
   ],
   "2-6": [
@@ -2004,6 +2229,231 @@
         "2": "Liquidity is measured by current and quick ratios, not the debt-to-total assets ratio.",
         "3": "High leverage can amplify returns when performance is good, but a high debt ratio alone does not guarantee high shareholder returns."
       }
+    },
+    {
+      "q": "Solvency refers to:",
+      "o": [
+        "Ability to pay short-term liabilities with current assets",
+        "Ability to pay long-term obligations from earnings",
+        "Ability to generate gross profit",
+        "Ability to manage working capital efficiently"
+      ],
+      "a": 1,
+      "e": "Solvency is the ability to pay long-term obligations as they come due. It differs from liquidity, which focuses on short-term obligations."
+    },
+    {
+      "q": "The debt to equity ratio is calculated as:",
+      "o": [
+        "Total Liabilities ÷ Total Assets",
+        "Total Equity ÷ Total Liabilities",
+        "Total Liabilities ÷ Total Equity",
+        "Long-Term Debt ÷ Total Equity"
+      ],
+      "a": 2,
+      "e": "Debt to Equity = Total Liabilities ÷ Total Equity. A ratio of 2:1 means $2 of debt financing for every $1 of equity financing."
+    },
+    {
+      "q": "Total Liabilities = $600,000 | Current Liabilities = $150,000 | Total Equity = $300,000. What is the long-term debt to equity ratio?",
+      "o": [
+        "2.00",
+        "1.50",
+        "1.33",
+        "0.50"
+      ],
+      "a": 1,
+      "e": "LT Debt to Equity = (Total Debt − Current Liabilities) ÷ Total Equity = ($600K − $150K) ÷ $300K = $450K ÷ $300K = 1.50."
+    },
+    {
+      "q": "The Interest Coverage Ratio (Times Interest Earned) uses which figure in the numerator?",
+      "o": [
+        "Net income",
+        "Operating cash flow",
+        "Earnings Before Interest and Taxes (EBIT)",
+        "Gross profit"
+      ],
+      "a": 2,
+      "e": "Interest Coverage = EBIT ÷ Interest Expense. EBIT is used because interest is deductible before taxes — the company's pre-tax earnings are available to pay interest obligations."
+    },
+    {
+      "q": "An interest coverage ratio of 1.2 indicates:",
+      "o": [
+        "Excellent ability to cover interest payments",
+        "The company earns $1.20 for every $1 of interest, leaving very little cushion — heightened default risk",
+        "The company cannot cover its interest payments",
+        "EBIT equals 1.2 times total debt"
+      ],
+      "a": 1,
+      "e": "A ratio above 3.0 is considered excellent. At 1.2, the company earns only 20 cents above its interest obligation — any decline in EBIT could leave interest unpaid, creating significant default risk."
+    },
+    {
+      "q": "Which ratio measures the proportion of total assets financed by ALL creditors (including current liabilities)?",
+      "o": [
+        "Debt to equity ratio",
+        "Long-term debt to equity ratio",
+        "Debt to total assets ratio",
+        "Interest coverage ratio"
+      ],
+      "a": 2,
+      "e": "Debt to Total Assets = Total Liabilities ÷ Total Assets. It uses ALL liabilities in the numerator (including current liabilities like accounts payable), making it more conservative than ratios using only long-term debt."
+    },
+    {
+      "q": "Financial leverage refers to:",
+      "o": [
+        "Using fixed operating costs to magnify operating income",
+        "Using debt to magnify returns to equity holders",
+        "Using equity rather than debt to finance operations",
+        "Maintaining a conservative capital structure"
+      ],
+      "a": 1,
+      "e": "Financial leverage is the use of debt (which carries a fixed interest charge) to finance operations. When returns exceed the cost of debt, equity holders benefit — but losses are also magnified."
+    },
+    {
+      "q": "Total Liabilities = $900,000 | Total Assets = $1,500,000. What is the debt to total assets ratio?",
+      "o": [
+        "0.40",
+        "0.60",
+        "1.67",
+        "0.67"
+      ],
+      "a": 1,
+      "e": "Debt to Total Assets = $900,000 ÷ $1,500,000 = 0.60 (60% of assets financed by creditors)."
+    },
+    {
+      "q": "EBIT = $300,000 | Interest Expense = $50,000. What is the interest coverage ratio?",
+      "o": [
+        "0.17",
+        "6.00",
+        "5.00",
+        "6.00"
+      ],
+      "a": 1,
+      "e": "Interest Coverage = EBIT ÷ Interest Expense = $300,000 ÷ $50,000 = 6.0. This exceeds the 3.0 excellent benchmark — strong ability to service debt."
+    },
+    {
+      "q": "Why does the debt to total assets ratio include accounts payable in the numerator?",
+      "o": [
+        "Accounts payable bears interest",
+        "All liabilities create claims against assets, regardless of whether they bear interest",
+        "GAAP requires it",
+        "Accounts payable is the same as long-term debt"
+      ],
+      "a": 1,
+      "e": "The debt to total assets ratio uses ALL liabilities because all of them represent creditor claims against assets. Including all liabilities makes the ratio more conservative and conservative ratios are preferred by lenders."
+    },
+    {
+      "q": "An increase in financial leverage (more debt relative to equity) has what effect?",
+      "o": [
+        "Increases interest expense and financial risk; increases potential return to equity holders",
+        "Decreases interest expense; decreases risk",
+        "Has no effect on return to equity holders",
+        "Always improves solvency ratios"
+      ],
+      "a": 0,
+      "e": "More debt increases the fixed interest expense and financial risk (higher debt to equity ratio). However, if EBIT exceeds the cost of debt, the excess return flows entirely to equity holders — magnifying their return."
+    },
+    {
+      "q": "Which of the following would DECREASE the debt to equity ratio?",
+      "o": [
+        "Issuing new bonds payable",
+        "Purchasing equipment on credit",
+        "Issuing new common shares for cash",
+        "Declaring and paying a cash dividend"
+      ],
+      "a": 2,
+      "e": "Issuing shares increases equity (denominator) without increasing liabilities — this decreases the debt to equity ratio, improving the leverage position.",
+      "wrongWhy": {
+        "0": "Issuing bonds increases liabilities — worsens ratio.",
+        "1": "Purchasing on credit increases liabilities — worsens ratio.",
+        "3": "Cash dividend reduces equity — worsens ratio."
+      }
+    },
+    {
+      "q": "A company has a debt to total assets ratio of 0.70. This means:",
+      "o": [
+        "70% of assets are financed by equity",
+        "70% of assets are financed by creditors — high leverage",
+        "The company has $0.70 of debt for every dollar of equity",
+        "The company is bankrupt"
+      ],
+      "a": 1,
+      "e": "A ratio of 0.70 means 70% of the company's assets are financed by creditors and 30% by equity. This represents significant leverage — lenders face higher default risk."
+    },
+    {
+      "q": "The long-term debt to equity ratio measures only NON-CURRENT debt because:",
+      "o": [
+        "Current liabilities are excluded by GAAP standards",
+        "Current liabilities are already captured in short-term liquidity ratios; LT debt is the relevant long-term financing concern",
+        "Current liabilities do not affect solvency",
+        "Long-term debt is always larger than current liabilities"
+      ],
+      "a": 1,
+      "e": "The LT debt to equity ratio focuses specifically on long-term financing risk. Current liabilities (accounts payable, etc.) are already analyzed through liquidity ratios. The LT ratio isolates the long-term capital structure decision."
+    },
+    {
+      "q": "A debt to equity ratio of 0.1:1 indicates:",
+      "o": [
+        "Very high leverage — the company is at risk of default",
+        "Very low leverage — the company relies primarily on equity financing",
+        "The company has more equity than total assets",
+        "Inadequate return on equity"
+      ],
+      "a": 1,
+      "e": "A very low debt to equity ratio (like 0.1:1) means minimal debt relative to equity. This is conservative — low financial risk. However, if equity is very cheap capital is being under-utilized from a leverage perspective."
+    },
+    {
+      "q": "Earnings coverage ratios focus on a company's 'earning power' because:",
+      "o": [
+        "Earnings are always higher than cash flows",
+        "Long-term earnings are the source of cash to make interest and principal payments",
+        "GAAP requires earnings-based ratios",
+        "Earnings eliminate the need for working capital management"
+      ],
+      "a": 1,
+      "e": "Earnings (particularly long-term sustainable earnings) are the source of cash to service debt. If a company cannot generate adequate earnings, it will eventually be unable to pay interest and principal — regardless of short-term asset levels."
+    },
+    {
+      "q": "Total Liabilities = $400,000 | Total Equity = $200,000 | Total Assets = $600,000. Which statement is TRUE?",
+      "o": [
+        "Debt to equity = 0.50 | Debt to total assets = 0.33",
+        "Debt to equity = 2.00 | Debt to total assets = 0.67",
+        "Debt to equity = 0.50 | Debt to total assets = 0.67",
+        "Debt to equity = 2.00 | Debt to total assets = 0.33"
+      ],
+      "a": 1,
+      "e": "Debt/Equity = $400K ÷ $200K = 2.00. Debt/Assets = $400K ÷ $600K = 0.667. Note: Assets = Liabilities + Equity = $400K + $200K = $600K ✓"
+    },
+    {
+      "q": "When would operating leverage be relevant to solvency analysis?",
+      "o": [
+        "When the company has high variable costs",
+        "When the company has high fixed operating costs that magnify the effect of sales changes on EBIT",
+        "When analyzing the quick ratio",
+        "When evaluating accounts receivable management"
+      ],
+      "a": 1,
+      "e": "Operating leverage relates to fixed operating costs. High operating leverage means a given % change in sales produces a larger % change in EBIT — which directly affects interest coverage and debt-servicing ability."
+    },
+    {
+      "q": "An interest coverage ratio below 1.0 means:",
+      "o": [
+        "EBIT exceeds interest expense — good coverage",
+        "EBIT is exactly equal to interest expense",
+        "EBIT is LESS than interest expense — the company cannot fully cover its interest from operations",
+        "The company has no debt"
+      ],
+      "a": 2,
+      "e": "If the coverage ratio is below 1.0, EBIT < Interest Expense. The company is not generating enough operating earnings to pay its interest — it must use other sources (cash reserves, asset sales) or risk default."
+    },
+    {
+      "q": "Which leverage ratio would a bond investor MOST likely use to assess default risk?",
+      "o": [
+        "Current ratio",
+        "Net profit margin",
+        "Interest coverage ratio (times interest earned) and debt to total assets",
+        "Inventory turnover"
+      ],
+      "a": 2,
+      "e": "Bond investors care about the company's ability to make interest payments (interest coverage) and the overall debt burden relative to assets (debt to total assets). These two ratios directly measure debt repayment capacity."
     }
   ],
   "2-7": [
@@ -2434,6 +2884,226 @@
         "1": "The inventory turnover ratio is Cost of Goods Sold ÷ Average Inventory. This is Cost of Goods Sold ÷ Beginning Inventory.",
         "2": "The inventory turnover ratio is Cost of Goods Sold ÷ Average Inventory. This is Cost of Goods Sold ÷ Ending Inventory."
       }
+    },
+    {
+      "q": "The accounts receivable turnover ratio is calculated using:",
+      "o": [
+        "Total Sales ÷ Ending AR",
+        "Net Annual Credit Sales ÷ Average Gross AR",
+        "COGS ÷ Average AR",
+        "Net Income ÷ Average AR"
+      ],
+      "a": 1,
+      "e": "AR Turnover = Net Annual Credit Sales ÷ Average Gross AR. Net credit sales excludes cash sales and returns. Average AR = (Beginning AR + Ending AR) ÷ 2."
+    },
+    {
+      "q": "Days' Sales in Receivables of 45 days means:",
+      "o": [
+        "The company has 45 days of inventory on hand",
+        "Receivables turn over 45 times per year",
+        "On average, customers take 45 days to pay their bills",
+        "The company offers 45-day credit terms"
+      ],
+      "a": 2,
+      "e": "Days' Sales in Receivables (average collection period) = 365 ÷ AR Turnover. It represents the average number of days it takes to collect receivables after a sale is made."
+    },
+    {
+      "q": "Net Credit Sales = $1,800,000 | Beginning AR = $120,000 | Ending AR = $180,000. What is the AR turnover?",
+      "o": [
+        "12.0 times",
+        "15.0 times",
+        "10.0 times",
+        "18.0 times"
+      ],
+      "a": 0,
+      "e": "Average AR = ($120K + $180K) ÷ 2 = $150,000. AR Turnover = $1,800,000 ÷ $150,000 = 12.0 times."
+    },
+    {
+      "q": "Using the previous question's AR turnover of 12.0, what is the average collection period?",
+      "o": [
+        "12 days",
+        "30.4 days",
+        "36.5 days",
+        "15 days"
+      ],
+      "a": 1,
+      "e": "Days' Sales in Receivables = 365 ÷ AR Turnover = 365 ÷ 12.0 = 30.4 days."
+    },
+    {
+      "q": "The inventory turnover ratio uses COGS in the numerator (not sales) because:",
+      "o": [
+        "COGS is always higher than sales",
+        "Inventory is recorded at cost, so comparing it to the cost of goods sold gives a meaningful comparison",
+        "Sales revenue includes markup that inflates the ratio",
+        "GAAP requires the use of COGS"
+      ],
+      "a": 1,
+      "e": "Since inventory is carried at cost on the balance sheet, dividing by COGS (also at cost) gives a meaningful comparison of how many times the company 'turned over' its cost investment in inventory."
+    },
+    {
+      "q": "Annual COGS = $960,000 | Average Inventory = $80,000. What is days' sales in inventory?",
+      "o": [
+        "12.0 times",
+        "30.4 days",
+        "15.0 times",
+        "32.0 days"
+      ],
+      "a": 1,
+      "e": "Inventory Turnover = $960,000 ÷ $80,000 = 12.0 times. Days in Inventory = 365 ÷ 12.0 = 30.4 days."
+    },
+    {
+      "q": "A DECREASE in the accounts payable turnover ratio over time indicates:",
+      "o": [
+        "The company is paying suppliers more quickly",
+        "The company is paying suppliers more slowly — possible liquidity problem",
+        "The company has reduced purchases",
+        "The company has negotiated better payment terms"
+      ],
+      "a": 1,
+      "e": "A decreasing AP turnover means the company is taking longer to pay suppliers. This could indicate a deliberate strategy (stretching payments) or a liquidity problem (cannot pay on time)."
+    },
+    {
+      "q": "The Cash Conversion Cycle (CCC) is calculated as:",
+      "o": [
+        "Days in Inventory + Days in AR + Days in AP",
+        "Days in Inventory + Days in AR − Days in AP",
+        "Days in AR − Days in Inventory + Days in AP",
+        "Days in AR ÷ Days in Inventory × Days in AP"
+      ],
+      "a": 1,
+      "e": "CCC = Days in Inventory + Days in AR − Days in AP. It measures the net days cash is tied up in operations. Shorter CCC = more efficient working capital management."
+    },
+    {
+      "q": "A negative Cash Conversion Cycle is:",
+      "o": [
+        "Always a sign of financial distress",
+        "Possible and means the company collects cash before paying suppliers — very efficient",
+        "Mathematically impossible",
+        "An indicator of excessive leverage"
+      ],
+      "a": 1,
+      "e": "A negative CCC means the company receives cash from customers before it must pay suppliers. This is common in retail (sell for cash, pay suppliers on credit terms). Amazon and Dell have historically had negative CCCs."
+    },
+    {
+      "q": "Annual Credit Purchases = $720,000 | Average AP = $60,000. What is days' purchases in payables?",
+      "o": [
+        "12 times",
+        "30.4 days",
+        "30.4 times",
+        "12 days"
+      ],
+      "a": 1,
+      "e": "AP Turnover = $720,000 ÷ $60,000 = 12 times. Days in AP = 365 ÷ 12 = 30.4 days."
+    },
+    {
+      "q": "The Total Asset Turnover ratio measures:",
+      "o": [
+        "How many times total assets are replaced during the year",
+        "Sales revenue generated per dollar of average total assets",
+        "Total assets divided by total liabilities",
+        "Net income generated per dollar of total assets"
+      ],
+      "a": 1,
+      "e": "Total Asset Turnover = Sales ÷ Average Total Assets. It measures the overall efficiency of asset utilization — how much revenue is generated from each dollar invested in all assets."
+    },
+    {
+      "q": "Sales = $2,400,000 | Average Net PP&E = $800,000. What is fixed asset turnover?",
+      "o": [
+        "0.33",
+        "3.00",
+        "2.40",
+        "8.00"
+      ],
+      "a": 1,
+      "e": "Fixed Asset Turnover = Sales ÷ Average Net PP&E = $2,400,000 ÷ $800,000 = 3.0. The company generates $3 of revenue for every $1 invested in net fixed assets."
+    },
+    {
+      "q": "Why should average balances be used in activity ratio denominators when the numerator is an annual figure?",
+      "o": [
+        "Averages are easier to calculate",
+        "Average balances better represent the asset level throughout the full period that generated the annual revenue or cost figure",
+        "Year-end balances are not available",
+        "Averages eliminate seasonal fluctuations automatically"
+      ],
+      "a": 1,
+      "e": "Income statement figures (sales, COGS) represent flows over the entire year. Balance sheet figures are point-in-time snapshots. Using the average of beginning and ending balances better matches the asset level that was in place to generate the year's activity."
+    },
+    {
+      "q": "An increasing accounts receivable turnover ratio is generally:",
+      "o": [
+        "Unfavorable — customers are taking longer to pay",
+        "Favorable — receivables are being collected more rapidly",
+        "Neutral — it has no impact on cash flows",
+        "Unfavorable — the company is reducing credit sales"
+      ],
+      "a": 1,
+      "e": "A higher (increasing) AR turnover means receivables are being collected more rapidly — the company's cash conversion is accelerating, which is favorable for liquidity."
+    },
+    {
+      "q": "Days in Inventory = 45 | Days in AR = 30 | Days in AP = 50. What is the Cash Conversion Cycle?",
+      "o": [
+        "125 days",
+        "25 days",
+        "75 days",
+        "20 days"
+      ],
+      "a": 1,
+      "e": "CCC = Days in Inventory + Days in AR − Days in AP = 45 + 30 − 50 = 25 days."
+    },
+    {
+      "q": "Which of the following would IMPROVE (shorten) the Cash Conversion Cycle?",
+      "o": [
+        "Increasing days in inventory",
+        "Increasing the average collection period",
+        "Extending payment terms to suppliers",
+        "Reducing sales"
+      ],
+      "a": 2,
+      "e": "CCC = Days in Inventory + Days in AR − Days in AP. Increasing Days in AP (denominator increases) reduces the CCC. Extending supplier payment terms means the company holds onto cash longer before paying."
+    },
+    {
+      "q": "A company's average collection period is 60 days but its stated credit terms are net 30. This suggests:",
+      "o": [
+        "Excellent collection efficiency",
+        "Customers are paying on time",
+        "Possible collection problems, loose credit policy, or customer financial distress",
+        "The company should lengthen its credit terms to 60 days"
+      ],
+      "a": 2,
+      "e": "When the average collection period significantly exceeds stated credit terms, it indicates customers are not paying on time. Possible causes: poor collection efforts, overly liberal credit approvals, or customers in financial difficulty."
+    },
+    {
+      "q": "Which activity ratio uses NET FIXED ASSETS (after accumulated depreciation) rather than gross assets?",
+      "o": [
+        "Total Asset Turnover",
+        "Inventory Turnover",
+        "Fixed Asset Turnover",
+        "AR Turnover"
+      ],
+      "a": 2,
+      "e": "Fixed Asset Turnover = Sales ÷ Average NET PP&E. Net PP&E = Gross PP&E − Accumulated Depreciation. Using net fixed assets reflects the current book value of the assets being used to generate revenue."
+    },
+    {
+      "q": "Annual COGS = $500,000 | Beginning Inventory = $40,000 | Ending Inventory = $60,000. What is inventory turnover?",
+      "o": [
+        "10.0",
+        "8.33",
+        "12.5",
+        "9.09"
+      ],
+      "a": 0,
+      "e": "Average Inventory = ($40K + $60K) ÷ 2 = $50,000. Inventory Turnover = $500,000 ÷ $50,000 = 10.0 times."
+    },
+    {
+      "q": "A retail company shows much lower days-in-inventory than an aircraft manufacturer. This difference is PRIMARILY because:",
+      "o": [
+        "The retailer is more profitable",
+        "Product type determines the natural inventory cycle — fast-moving consumer goods vs. complex long-cycle manufacturing",
+        "The retailer uses FIFO while the manufacturer uses LIFO",
+        "The retailer has less total assets"
+      ],
+      "a": 1,
+      "e": "Industry context is critical. A grocery retailer turns inventory every few days; an aircraft manufacturer may take years per unit. Activity ratios must be compared within the same industry to be meaningful."
     }
   ],
   "2-8": [
@@ -2755,6 +3425,229 @@
         "1": "Decreasing net income reduces the numerator — ROE decreases.",
         "3": "Increasing equity-financed assets raises the equity base (denominator) — ROE decreases if net income does not grow proportionally."
       }
+    },
+    {
+      "q": "Gross Profit Margin = Gross Profit ÷ Net Sales Revenue. If net sales = $500,000 and COGS = $350,000, what is the gross profit margin?",
+      "o": [
+        "70%",
+        "35%",
+        "30%",
+        "65%"
+      ],
+      "a": 2,
+      "e": "Gross Profit = $500,000 − $350,000 = $150,000. Gross Profit Margin = $150,000 ÷ $500,000 = 30%."
+    },
+    {
+      "q": "The difference between the gross profit margin and the operating profit margin represents:",
+      "o": [
+        "Interest expense as a percentage of sales",
+        "SG&A expenses as a percentage of sales",
+        "Income tax as a percentage of sales",
+        "Non-operating items as a percentage of sales"
+      ],
+      "a": 1,
+      "e": "Operating Profit Margin = Gross Profit Margin − (SG&A ÷ Sales). The gap between the two margins equals SG&A as a percentage of net sales revenue."
+    },
+    {
+      "q": "Net Sales = $800,000 | COGS = $500,000 | Operating Expenses = $150,000 | Interest = $20,000 | Taxes = $26,000 | Net Income = $104,000. What is the operating profit margin?",
+      "o": [
+        "13.0%",
+        "18.75%",
+        "15.0%",
+        "12.5%"
+      ],
+      "a": 1,
+      "e": "Operating Income = $800,000 − $500,000 − $150,000 = $150,000. Operating Profit Margin = $150,000 ÷ $800,000 = 18.75%."
+    },
+    {
+      "q": "Using the previous question, what is the net profit margin?",
+      "o": [
+        "18.75%",
+        "15.0%",
+        "13.0%",
+        "12.5%"
+      ],
+      "a": 2,
+      "e": "Net Profit Margin = Net Income ÷ Sales = $104,000 ÷ $800,000 = 13.0%."
+    },
+    {
+      "q": "Return on Assets (ROA) is calculated using AVERAGE total assets because:",
+      "o": [
+        "Year-end assets are always larger than beginning assets",
+        "Net income is earned over the full year; the average asset base better represents assets deployed to earn that income",
+        "GAAP prohibits use of year-end balances",
+        "Average assets are always equal to total equity"
+      ],
+      "a": 1,
+      "e": "Net income (an income statement flow) covers the full year, while total assets (balance sheet) is a point-in-time figure. Using the average of beginning and ending assets better represents the asset base that generated the year's income."
+    },
+    {
+      "q": "Net Income = $180,000 | Beginning Assets = $1,200,000 | Ending Assets = $1,600,000. What is ROA?",
+      "o": [
+        "15.0%",
+        "11.25%",
+        "12.86%",
+        "18.0%"
+      ],
+      "a": 2,
+      "e": "Average Assets = ($1,200,000 + $1,600,000) ÷ 2 = $1,400,000. ROA = $180,000 ÷ $1,400,000 = 12.86%."
+    },
+    {
+      "q": "Return on Common Equity differs from Return on Equity because:",
+      "o": [
+        "It uses net income after taxes",
+        "It subtracts preferred dividends from net income in the numerator and uses only common equity in the denominator",
+        "It is calculated on a per-share basis",
+        "It uses gross profit instead of net income"
+      ],
+      "a": 1,
+      "e": "Return on Common Equity = (Net Income − Preferred Dividends) ÷ Average Common Equity. This isolates the return attributable to common shareholders only, excluding the preferred shareholders' claims."
+    },
+    {
+      "q": "A company's ROE is higher than its ROA. This is MOST LIKELY because:",
+      "o": [
+        "The company has no debt",
+        "The company uses financial leverage — debt amplifies returns to equity holders",
+        "The company has high operating expenses",
+        "The company's assets are all fixed assets"
+      ],
+      "a": 1,
+      "e": "Financial leverage (using debt) amplifies ROE relative to ROA. Debt holders receive only their fixed interest payment — any excess return flows to equity holders, making ROE > ROA for leveraged companies."
+    },
+    {
+      "q": "Gross profit margin has remained stable, but net profit margin has been declining for 3 years. What does this suggest?",
+      "o": [
+        "COGS is increasing relative to sales",
+        "Non-operating costs (interest expense, taxes) or SG&A expenses are increasing relative to sales",
+        "The company's revenue is declining",
+        "Inventory management is deteriorating"
+      ],
+      "a": 1,
+      "e": "Stable gross margin means COGS/Sales is unchanged. Declining net margin means the gap between operating income and net income is widening — caused by increasing interest expense (more debt), rising SG&A, or higher taxes."
+    },
+    {
+      "q": "Net Sales = $1,000,000 | Beginning Equity = $300,000 | Ending Equity = $500,000 | Net Income = $80,000 | Preferred Dividends = $10,000. What is Return on Common Equity?",
+      "o": [
+        "26.7%",
+        "17.5%",
+        "20.0%",
+        "8.0%"
+      ],
+      "a": 0,
+      "e": "Average Common Equity = ($300K + $500K) ÷ 2 = $400,000. Return on Common Equity = ($80,000 − $10,000) ÷ $400,000 = $70,000 ÷ $400,000 = 17.5%.",
+      "wrongWhy": {
+        "0": "17.5% is correct — see above calculation."
+      }
+    },
+    {
+      "q": "Average Common Equity = $400,000 | Net Income = $80,000 | Preferred Dividends = $10,000. What is Return on Common Equity?",
+      "o": [
+        "20.0%",
+        "17.5%",
+        "22.5%",
+        "8.0%"
+      ],
+      "a": 1,
+      "e": "Return on Common Equity = (Net Income − Preferred Dividends) ÷ Average Common Equity = ($80,000 − $10,000) ÷ $400,000 = $70,000 ÷ $400,000 = 17.5%."
+    },
+    {
+      "q": "Which profitability ratio is described as 'probably the most widely recognized measure of company performance'?",
+      "o": [
+        "Gross profit margin",
+        "Net profit margin",
+        "Return on Assets (ROA)",
+        "Return on Equity (ROE)"
+      ],
+      "a": 2,
+      "e": "Return on Assets (ROA) is described by HOCK as probably the most widely recognized measure of company performance. It measures how much return the company earns on the capital invested in its assets."
+    },
+    {
+      "q": "A company has Net Sales of $2,000,000 and a gross profit margin of 40%. What is COGS?",
+      "o": [
+        "$800,000",
+        "$1,200,000",
+        "$1,600,000",
+        "$2,800,000"
+      ],
+      "a": 1,
+      "e": "Gross Profit = 40% × $2,000,000 = $800,000. COGS = Net Sales − Gross Profit = $2,000,000 − $800,000 = $1,200,000."
+    },
+    {
+      "q": "Operating Profit Margin = EBIT ÷ Net Sales. Why is EBIT used rather than net income?",
+      "o": [
+        "EBIT is always larger than net income",
+        "Operating margin measures only the performance of core operations, excluding financing decisions (interest) and tax effects",
+        "GAAP requires EBIT for operating margin",
+        "EBIT includes non-operating income"
+      ],
+      "a": 1,
+      "e": "EBIT reflects the profitability of the company's core business operations before the effects of how operations are financed (interest expense) and tax policy. This allows comparison of operational efficiency across companies with different capital structures or tax situations."
+    },
+    {
+      "q": "Which of the following would cause ROA to INCREASE?",
+      "o": [
+        "Acquiring additional fixed assets with no change in net income",
+        "Increasing total assets while net income stays the same",
+        "Reducing total assets while maintaining the same net income",
+        "Issuing additional common shares"
+      ],
+      "a": 2,
+      "e": "ROA = Net Income ÷ Average Total Assets. If total assets decrease while net income stays the same, ROA increases — the company is generating the same profit from a smaller asset base (more efficient)."
+    },
+    {
+      "q": "Net Sales Revenue is defined as:",
+      "o": [
+        "Gross sales plus returns and allowances",
+        "Gross sales minus sales discounts and sales returns and allowances",
+        "Operating income before taxes",
+        "Total revenue including non-operating items"
+      ],
+      "a": 1,
+      "e": "Net Sales Revenue = Gross Sales − Sales Discounts − Sales Returns and Allowances. If only 'Sales' is given in a problem without further detail, it can be assumed to represent Net Sales Revenue."
+    },
+    {
+      "q": "A company's gross profit margin is 35% and operating profit margin is 15%. What percentage of net sales is represented by SG&A?",
+      "o": [
+        "15%",
+        "20%",
+        "35%",
+        "50%"
+      ],
+      "a": 1,
+      "e": "The gap between gross margin (35%) and operating margin (15%) = 20% — this represents SG&A expenses as a percentage of net sales."
+    },
+    {
+      "q": "Return on Equity for a company with no preferred stock equals:",
+      "o": [
+        "Net Income ÷ Average Total Assets",
+        "Net Income ÷ Average Total Equity",
+        "Net Income ÷ Total Common Shares Outstanding",
+        "EBIT ÷ Average Total Equity"
+      ],
+      "a": 1,
+      "e": "When there is no preferred stock, Return on Equity = Return on Common Equity = Net Income ÷ Average Total Equity. The preferred dividend adjustment is not needed."
+    },
+    {
+      "q": "Net Income = $120,000 | Average Total Assets = $1,000,000 | Average Total Equity = $400,000. Which statement is TRUE?",
+      "o": [
+        "ROA = 12% | ROE = 30% | ROE > ROA because of financial leverage",
+        "ROA = 12% | ROE = 12% | Both are equal",
+        "ROA = 30% | ROE = 12% | ROA > ROE",
+        "ROA = 8% | ROE = 30%"
+      ],
+      "a": 0,
+      "e": "ROA = $120,000 ÷ $1,000,000 = 12%. ROE = $120,000 ÷ $400,000 = 30%. ROE > ROA because the company is leveraged — the $600K of debt ($1M assets − $400K equity) magnifies returns to equity holders."
+    },
+    {
+      "q": "When comparing profitability ratios between two companies, which condition is MOST important to ensure valid comparison?",
+      "o": [
+        "Both companies must be the same size",
+        "Both companies should be in the same industry and use similar accounting methods",
+        "Both companies must be publicly traded",
+        "Both companies must have the same fiscal year-end"
+      ],
+      "a": 1,
+      "e": "Profitability ratios vary significantly by industry — a 5% net margin is excellent in grocery retail but poor in software. Companies should also use similar accounting methods (same inventory method, depreciation method) for meaningful comparison."
     }
   ]
 }

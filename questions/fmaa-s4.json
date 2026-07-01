@@ -2290,6 +2290,116 @@
         "1": "The fixed overhead production-volume variance is not a comparison of actual costs to planned costs. It is instead a measure of capacity utilization.",
         "3": "The fixed overhead production-volume variance is a measure of capacity utilization. More produced than planned will result in a favorable variance, not an unfavorable variance."
       }
+    },
+    {
+      "q": "The fixed overhead spending variance measures:",
+      "o": [
+        "Whether actual production volume met the planned denominator volume",
+        "Whether actual fixed overhead costs exceeded or fell short of the budgeted fixed overhead amount",
+        "Whether variable overhead was applied correctly",
+        "The efficiency of labor in using overhead resources"
+      ],
+      "a": 1,
+      "e": "Spending Variance = Actual Fixed OH − Budgeted Fixed OH. It asks: did we spend more or less than we planned on fixed overhead costs (rent, depreciation, supervisors' salaries)?"
+    },
+    {
+      "q": "The fixed overhead production-volume variance measures:",
+      "o": [
+        "Whether actual fixed costs exceeded budget",
+        "Whether actual production volume matched the denominator volume used to set the predetermined rate",
+        "Whether variable overhead rates were accurate",
+        "Direct labor efficiency in the period"
+      ],
+      "a": 1,
+      "e": "Production-Volume Variance = Budgeted Fixed OH − Fixed OH Applied. It measures whether actual production matched the denominator volume. It has NO connection to actual costs incurred — it is a capacity utilization measure."
+    },
+    {
+      "q": "Budgeted Fixed OH = $180,000 | Actual Fixed OH = $195,000 | Actual Production = 9,000 units | Budgeted units = 10,000. What is the fixed overhead spending variance?",
+      "o": [
+        "$18,000 Favorable",
+        "$15,000 Unfavorable",
+        "$3,000 Favorable",
+        "$15,000 Favorable"
+      ],
+      "a": 1,
+      "e": "Spending Variance = Actual − Budgeted = $195,000 − $180,000 = $15,000 Unfavorable (actual costs exceeded budget)."
+    },
+    {
+      "q": "Using the previous question data (Budgeted OH = $180,000, Budgeted units = 10,000, Actual production = 9,000), what is the fixed overhead production-volume variance?",
+      "o": [
+        "$18,000 Favorable",
+        "$15,000 Unfavorable",
+        "$18,000 Unfavorable",
+        "$15,000 Favorable"
+      ],
+      "a": 2,
+      "e": "Predetermined rate = $180,000 ÷ 10,000 = $18 per unit. Fixed OH Applied = 9,000 × $18 = $162,000. Production-Volume Variance = Budgeted $180,000 − Applied $162,000 = $18,000 Unfavorable (produced less than denominator volume — under-utilized capacity)."
+    },
+    {
+      "q": "Which of the following statements about the fixed overhead production-volume variance is TRUE?",
+      "o": [
+        "It reflects whether actual fixed costs were controlled effectively",
+        "It is always favorable when production exceeds the denominator volume",
+        "It involves comparing actual costs to budgeted costs",
+        "It measures capacity utilization — there is NO efficiency variance for fixed overhead"
+      ],
+      "a": 3,
+      "e": "The production-volume variance is a capacity utilization measure, not a cost control measure. There is NO fixed overhead efficiency variance — efficiency applies only to variable inputs (materials, labor). Fixed overhead has only two sub-variances: spending and production-volume."
+    },
+    {
+      "q": "An UNFAVORABLE fixed overhead production-volume variance indicates:",
+      "o": [
+        "Actual fixed costs were higher than budgeted",
+        "Actual production was GREATER than the denominator volume used to set the rate",
+        "Actual production was LESS than the denominator volume — overhead was under-absorbed",
+        "The predetermined overhead rate was calculated incorrectly"
+      ],
+      "a": 2,
+      "e": "Unfavorable production-volume variance = Budgeted OH > Applied OH. This happens when actual production < denominator volume. Less production means fixed overhead was spread over fewer units — some overhead was 'under-absorbed.'"
+    },
+    {
+      "q": "Predetermined Fixed OH Rate = $25/unit | Budgeted Units = 8,000 | Actual Units Produced = 9,200. What is the production-volume variance?",
+      "o": [
+        "$30,000 Favorable",
+        "$30,000 Unfavorable",
+        "$23,000 Favorable",
+        "$25,000 Favorable"
+      ],
+      "a": 0,
+      "e": "Budgeted Fixed OH = $25 × 8,000 = $200,000. Applied = $25 × 9,200 = $230,000. Production-Volume Variance = Budgeted $200,000 − Applied $230,000 = −$30,000 = $30,000 FAVORABLE (produced more than planned — overhead over-absorbed)."
+    },
+    {
+      "q": "An unfavorable fixed overhead SPENDING variance could be caused by:",
+      "o": [
+        "Producing fewer units than the denominator volume",
+        "Producing more units than planned",
+        "An increase in factory rent or supervisor salaries",
+        "A decrease in the predetermined overhead rate"
+      ],
+      "a": 2,
+      "e": "Spending variance causes: any change in ACTUAL fixed overhead amounts. Unfavorable causes: new equipment (higher depreciation), rent increases, insurance premium increases, higher supervisory salaries."
+    },
+    {
+      "q": "The sum of the fixed overhead spending variance and the production-volume variance equals:",
+      "o": [
+        "The variable overhead variance",
+        "The total direct labor variance",
+        "The total fixed overhead variance",
+        "The flexible budget variance"
+      ],
+      "a": 2,
+      "e": "Total Fixed OH Variance = Actual Fixed OH − Fixed OH Applied = (Spending Variance) + (Production-Volume Variance). The two sub-variances sum to the total fixed overhead variance."
+    },
+    {
+      "q": "Why is there NO fixed overhead efficiency variance?",
+      "o": [
+        "Fixed overhead is always fully absorbed",
+        "Fixed overhead is a lump sum that does not change with how efficiently labor or machines operate — efficiency is irrelevant to a fixed cost",
+        "Fixed overhead is not included in standard costing",
+        "The efficiency variance is combined with the spending variance for fixed costs"
+      ],
+      "a": 1,
+      "e": "An efficiency variance measures whether the input used per unit of output was above or below standard. Since fixed costs are the same total amount regardless of production efficiency, efficiency has no impact on fixed overhead cost — hence no efficiency variance exists."
     }
   ],
   "4-4": [
@@ -2784,6 +2894,116 @@
         "1": "Return on assets does not take into account the imputed interest rate on the assets of the investment center. See the correct answer for a complete explanation.",
         "2": "Return on investment is calculated as income divided by the invested amount. There is no deduction of an imputed interest rate in the calculation of return on investment."
       }
+    },
+    {
+      "q": "Which performance metric is MORE LIKELY to cause goal incongruence between division managers and the company?",
+      "o": [
+        "Residual Income (RI)",
+        "Return on Investment (ROI)",
+        "Contribution margin",
+        "Operating income"
+      ],
+      "a": 1,
+      "e": "ROI creates goal incongruence because a manager with high current ROI will reject projects with positive RI if those projects' ROI is below the division's current average — even though the project benefits the company."
+    },
+    {
+      "q": "Division A has current ROI of 20%. A new project has ROI of 16%. The company's required rate of return is 10%. What will the division manager do if evaluated on ROI?",
+      "o": [
+        "Accept the project because the project's ROI (16%) exceeds the hurdle rate (10%)",
+        "Reject the project because the project's ROI (16%) is below the division's current ROI (20%)",
+        "Be indifferent between accepting and rejecting",
+        "Accept the project because it increases net income"
+      ],
+      "a": 1,
+      "e": "A ROI-evaluated manager will reject this project because accepting it would REDUCE the division's overall ROI from 20% toward 16%. However, the company SHOULD accept it because 16% > 10% required rate — this is the goal incongruence problem."
+    },
+    {
+      "q": "What is the Residual Income for a division with Operating Income of $500,000, total assets of $3,000,000, and a required rate of return of 12%?",
+      "o": [
+        "$500,000",
+        "$140,000",
+        "$360,000",
+        "$60,000"
+      ],
+      "a": 1,
+      "e": "RI = Operating Income − (Assets × Required Rate) = $500,000 − ($3,000,000 × 12%) = $500,000 − $360,000 = $140,000."
+    },
+    {
+      "q": "A division reports negative Residual Income. This means:",
+      "o": [
+        "The division is operating at a net loss",
+        "The division's operating income is less than the required return on its invested assets — but it may still be profitable",
+        "The division should be shut down immediately",
+        "The required rate of return is incorrectly set"
+      ],
+      "a": 1,
+      "e": "Negative RI means Operating Income < (Assets × Required Rate). The division IS earning a profit, but not enough to cover the opportunity cost of the capital invested. This is different from a net loss."
+    },
+    {
+      "q": "Residual Income SOLVES the goal incongruence problem of ROI because:",
+      "o": [
+        "RI always produces a higher number than ROI",
+        "A manager evaluated on RI will accept any project with POSITIVE RI, regardless of the division's current ROI",
+        "RI is easier to calculate than ROI",
+        "RI ignores the cost of capital"
+      ],
+      "a": 1,
+      "e": "Under RI, a project is accepted if its RI > 0, which means its return > required rate. This aligns the manager's incentive with the company's: any project that exceeds the hurdle rate should be accepted."
+    },
+    {
+      "q": "The required rate of return used in Residual Income is set by:",
+      "o": [
+        "The division manager",
+        "The external auditors",
+        "Senior management of the company",
+        "Industry regulators"
+      ],
+      "a": 2,
+      "e": "Senior management sets the required rate of return. It may equal the company's WACC, or it may be set higher for riskier segments/projects. If WACC is given in a problem and no other rate is specified, use WACC."
+    },
+    {
+      "q": "ROI = Operating Income ÷ Assets. Division B has assets of $2,000,000 and operating income of $300,000. What is Division B's ROI?",
+      "o": [
+        "6.7%",
+        "15.0%",
+        "13.3%",
+        "20.0%"
+      ],
+      "a": 1,
+      "e": "ROI = $300,000 ÷ $2,000,000 = 0.15 = 15%."
+    },
+    {
+      "q": "Using the previous question: The company's required rate of return is 10%. What is Division B's Residual Income?",
+      "o": [
+        "$100,000",
+        "$200,000",
+        "$300,000",
+        "$150,000"
+      ],
+      "a": 0,
+      "e": "RI = Operating Income − (Assets × Required Rate) = $300,000 − ($2,000,000 × 10%) = $300,000 − $200,000 = $100,000."
+    },
+    {
+      "q": "A project is proposed with additional operating income of $60,000 and additional investment of $400,000. The company's required rate of return is 12%. Should the project be accepted based on RI analysis?",
+      "o": [
+        "No — RI is negative: $60,000 − ($400,000 × 12%) = $60,000 − $48,000 = $12,000 positive, so yes",
+        "Yes — RI = $60,000 − $48,000 = $12,000 positive",
+        "No — the project ROI of 15% is too low",
+        "Cannot determine without knowing current division ROI"
+      ],
+      "a": 1,
+      "e": "Project RI = $60,000 − ($400,000 × 12%) = $60,000 − $48,000 = +$12,000. Positive RI → accept. The project earns more than the required return, creating value for the company."
+    },
+    {
+      "q": "Which of the following is a LIMITATION of ROI as a performance measure?",
+      "o": [
+        "ROI is difficult to calculate",
+        "ROI encourages managers to keep division assets as low as possible, potentially avoiding beneficial investments",
+        "ROI always overstates division performance",
+        "ROI cannot be compared across divisions"
+      ],
+      "a": 1,
+      "e": "ROI can encourage managers to minimize assets to inflate their ratio — even rejecting value-creating investments if they would reduce division ROI below its current level. This is the goal incongruence limitation."
     }
   ],
   "4-5": [

@@ -735,6 +735,226 @@
         "1": "The use of budgetary slack does not increase the ability to identify potential budget weaknesses. Budgetary slack exists when budgeted revenues are understated or budgeted expenses are overstated. Since the budgetary slack distorts a real attainable level of performance it is difficult to identify potential budget weaknesses.",
         "2": "The use of budgetary slack does not increase the probability that budgets will not be achieved--just the opposite. When a budget is easily achieved, it is said to have budgetary slack in it. When budgetary slack exists, either budgeted revenues are understated or budgeted expenses are overstated, or both. Thus, budgetary slack increases the probability that budgets will be achieved."
       }
+    },
+    {
+      "q": "Which of the following BEST describes the primary purpose of a budget?",
+      "o": [
+        "To restrict spending",
+        "To punish managers who overspend",
+        "A quantitative expression of management's plan that provides direction, coordination, and control",
+        "A historical record of past financial performance"
+      ],
+      "a": 2,
+      "e": "A budget is a formal quantitative expression of management's plans for a future period. It is a planning and coordinating tool — not a restriction or punishment mechanism."
+    },
+    {
+      "q": "Budgetary slack is defined as:",
+      "o": [
+        "The difference between actual and budgeted costs",
+        "The practice of underestimating revenues and overestimating costs to build a comfortable cushion",
+        "The time required to prepare the master budget",
+        "Unspent budget amounts returned to central management"
+      ],
+      "a": 1,
+      "e": "Budgetary slack is built in by managers who will be evaluated against their budgets. By underestimating revenues and overestimating costs, they make the budget easier to achieve — creating a 'cushion.'"
+    },
+    {
+      "q": "Which of the four types of responsibility centers is evaluated using BOTH revenues AND costs?",
+      "o": [
+        "Cost center",
+        "Revenue center",
+        "Profit center",
+        "Investment center"
+      ],
+      "a": 2,
+      "e": "A profit center manager controls both revenues and costs, and performance is measured by segment profit or contribution margin. An investment center adds asset management to this."
+    },
+    {
+      "q": "A rolling (continuous) budget is characterized by:",
+      "o": [
+        "Being prepared only once at the beginning of the fiscal year",
+        "Always covering a fixed future horizon — a new period is added as each period is completed",
+        "Starting from zero each period with full cost justification",
+        "Being based on last year's actuals plus a fixed percentage increase"
+      ],
+      "a": 1,
+      "e": "A rolling budget always looks forward the same number of periods. Each period, the most recently completed period is dropped from the plan and a new period is added at the end — keeping the planning horizon constant."
+    },
+    {
+      "q": "Budgetary slack HARMS the organization by:",
+      "o": [
+        "Encouraging accurate forecasting",
+        "Misrepresenting profit potential and leading to poor resource allocation across departments",
+        "Reducing the time needed for budget preparation",
+        "Ensuring managers always meet their targets"
+      ],
+      "a": 1,
+      "e": "Slack distorts the true financial picture. If one department understates revenues, the production department may under-plan capacity. If costs are overstated, resources are allocated inefficiently across the company."
+    },
+    {
+      "q": "A manager is responsible only for costs that occur WITHIN their department and which they have authority to approve. These are called:",
+      "o": [
+        "Fixed costs",
+        "Allocated costs",
+        "Non-controllable costs",
+        "Controllable costs"
+      ],
+      "a": 3,
+      "e": "Controllable costs are costs for which the manager has authority to make spending decisions. Managers should be evaluated only on variances related to controllable costs — holding them responsible for non-controllable costs (like corporate overhead allocations) is unfair."
+    },
+    {
+      "q": "Which budget development method involves ALL employees affected by the budget in its preparation?",
+      "o": [
+        "Authoritative (top-down) budgeting",
+        "Consultative budgeting",
+        "Participative (bottom-up) budgeting",
+        "Zero-based budgeting"
+      ],
+      "a": 2,
+      "e": "Participative budgeting involves all affected people — including lower-level employees — in development. It produces more accurate budgets (people closest to operations have better knowledge) and stronger commitment to achieving targets."
+    },
+    {
+      "q": "A division manager's salary is budgeted in her division's budget. It appears on her variance report as a non-controllable cost. This treatment is correct because:",
+      "o": [
+        "Division managers always control their own salaries",
+        "Her salary is decided at a higher organizational level — she cannot control it",
+        "Non-controllable costs should be excluded from all reports",
+        "This cost should be allocated to a cost center instead"
+      ],
+      "a": 1,
+      "e": "The manager's salary is set by senior management — the manager cannot control it. While it appears on her report for completeness, she should not be held responsible for variances in non-controllable costs."
+    },
+    {
+      "q": "Characteristics of SUCCESSFUL budgeting processes include all of the following EXCEPT:",
+      "o": [
+        "Top management actively supports and believes in the budget",
+        "The budget is used primarily as a tool to punish managers who miss targets",
+        "Department managers participate in preparing their own budgets",
+        "The budget is linked to the company's strategic plan"
+      ],
+      "a": 1,
+      "e": "Using the budget primarily to assign blame or punish managers is a characteristic of UNSUCCESSFUL budgeting. Successful budgeting requires the budget to be seen as a planning and coordination tool, not a taskmaster."
+    },
+    {
+      "q": "The 7-stage planning and budgeting process begins with management developing the strategic plan and ends with:",
+      "o": [
+        "Approval of the master budget",
+        "Monthly comparison of actual to budgeted results, triggering variances investigation",
+        "Changed conditions feeding into the next period's planning cycle",
+        "Preparation of the cash budget"
+      ],
+      "a": 2,
+      "e": "The process is cyclical. After actual results are compared to budget and variances are investigated, the changed conditions and lessons learned feed back into the planning process for the next period — completing the cycle."
+    },
+    {
+      "q": "Goal congruence in budgeting means:",
+      "o": [
+        "All budgets are prepared using the same accounting methods",
+        "Individual managers' goals are aligned with the goals of the whole organization",
+        "All variance reports use the same format",
+        "Budgets are approved by both management and the board"
+      ],
+      "a": 1,
+      "e": "Goal congruence is achieved when what is best for the individual manager is also best for the organization. A key challenge is preventing managers from taking actions that benefit their division but harm the company overall."
+    },
+    {
+      "q": "An Investment Center manager is evaluated on:",
+      "o": [
+        "Costs only",
+        "Revenues only",
+        "Both revenues and costs",
+        "Revenues, costs, AND assets employed (ROI or Residual Income)"
+      ],
+      "a": 3,
+      "e": "An investment center manager controls revenues, costs, AND the assets deployed in the division. Performance is measured by ROI (Return on Investment) or Residual Income — both of which incorporate the asset base."
+    },
+    {
+      "q": "Which of the following is a way to REDUCE budgetary slack?",
+      "o": [
+        "Evaluate managers solely on whether they meet their budget targets",
+        "Reward managers based on the accuracy of their forecasts relative to actual results",
+        "Increase the number of budget approval levels",
+        "Allow managers to set budgets without senior management review"
+      ],
+      "a": 1,
+      "e": "Rewarding accuracy (not just beating the budget) removes the incentive to build slack. If managers are rewarded for accurate forecasting rather than for outperforming an easy target, they have reason to budget honestly."
+    },
+    {
+      "q": "Which of the following is classified as a REVENUE CENTER?",
+      "o": [
+        "A manufacturing plant that controls only its production costs",
+        "A sales department evaluated on sales revenues generated",
+        "A division that controls both revenues and costs and is measured by segment profit",
+        "A corporate division evaluated on ROI"
+      ],
+      "a": 1,
+      "e": "A revenue center manager controls revenues only (not costs). Performance is measured by actual vs. budgeted revenues. A sales territory is a typical example."
+    },
+    {
+      "q": "The advantage of an AUTHORITATIVE (top-down) budget is that it:",
+      "o": [
+        "Produces the most accurate cost estimates",
+        "Ensures greater buy-in from lower-level managers",
+        "Ensures alignment with corporate strategy since senior management sets all targets",
+        "Creates more motivation for managers to achieve targets"
+      ],
+      "a": 2,
+      "e": "Top-down budgets are set by senior management, ensuring they reflect strategic priorities. However, they risk lower accuracy (management may not know operational details) and lower commitment from affected managers."
+    },
+    {
+      "q": "A company uses a 12-month rolling budget. At the end of October, which month is ADDED to the budget?",
+      "o": [
+        "January of next year",
+        "October of next year",
+        "November of next year",
+        "December of next year"
+      ],
+      "a": 1,
+      "e": "When October is completed, it is dropped from the budget and October of the FOLLOWING year is added — keeping a 12-month forward horizon. If we are at end of October Year 1, we add October Year 2."
+    },
+    {
+      "q": "All of the following are advantages of budgeting EXCEPT:",
+      "o": [
+        "Promotes coordination among departments",
+        "Provides a framework for measuring performance",
+        "Always produces accurate forecasts of future conditions",
+        "Provides direction and motivation for achieving goals"
+      ],
+      "a": 2,
+      "e": "Budgets are based on estimates and assumptions — they do NOT guarantee accurate forecasts of the future. Unexpected events (recessions, competition, technology changes) can make budgets obsolete. This is a limitation, not an advantage."
+    },
+    {
+      "q": "The primary reason that performance should NOT be compared ONLY against the current budget is:",
+      "o": [
+        "The current budget is always wrong",
+        "Lower-level managers may set budgets that are too easy to achieve, making the budget a poor benchmark",
+        "Senior managers always know better than department managers",
+        "Industry benchmarks are always more accurate"
+      ],
+      "a": 1,
+      "e": "If performance is evaluated only against the internal budget, managers have strong incentive to set achievable (easy) targets. Comparing performance to industry peers or prior year results provides additional context."
+    },
+    {
+      "q": "The term 'variance report' refers to:",
+      "o": [
+        "A report listing all fixed costs in the budget",
+        "A comparison between actual results and budgeted/planned amounts, with differences highlighted",
+        "A report forecasting future cash flows",
+        "A document used to request budget amendments"
+      ],
+      "a": 1,
+      "e": "A variance report compares actual financial results to the budgeted (planned) amounts. Favorable variances (actual better than budget) and unfavorable variances (actual worse than budget) are identified for management attention."
+    },
+    {
+      "q": "A responsibility center manager should be responsible for budget variances ONLY for items they can control. Which cost would be NON-CONTROLLABLE for a department manager?",
+      "o": [
+        "Direct labor costs in the department",
+        "Supplies used in the department",
+        "Corporate overhead allocated to the department based on a formula",
+        "Overtime approved by the department manager"
+      ],
+      "a": 2,
+      "e": "Allocated corporate overhead is determined by corporate management using an allocation formula — the department manager has no authority to change it. It is non-controllable at the department level and should not affect the manager's performance evaluation."
     }
   ],
   "3-2": [
@@ -1072,6 +1292,226 @@
         "1": "While a flexible budget can be prepared for any level of activity, this is not the best answer to the question among the answer choices given.",
         "2": "Fixed costs are the same for any level of activity within the relevant range. Thus, a flexible budget is not necessary to control fixed factory overhead. A flexible budget is necessary to control direct materials and direct labor if the actual activity level differs from static budget activity level."
       }
+    },
+    {
+      "q": "The master budget is prepared for:",
+      "o": [
+        "Multiple activity levels simultaneously",
+        "One specific planned activity level — it is a static budget",
+        "The actual activity level achieved during the period",
+        "The most optimistic sales forecast"
+      ],
+      "a": 1,
+      "e": "The master budget is a static budget prepared for one planned activity level (the expected volume). It is prepared before the period begins, based on management's sales forecast."
+    },
+    {
+      "q": "Under Zero-Based Budgeting, every budget period begins with:",
+      "o": [
+        "Last year's actual amounts adjusted for inflation",
+        "The prior year's budgeted amounts plus a small percentage increase",
+        "Zero — every expenditure must be justified with a cost-benefit analysis",
+        "The current year's midpoint actuals extrapolated forward"
+      ],
+      "a": 2,
+      "e": "ZBB starts from zero with no reference to prior period amounts. Every planned activity and expenditure must be independently justified. The assumption that prior-period spending was appropriate is NOT made."
+    },
+    {
+      "q": "The FIRST budget prepared in the master budget sequence is the:",
+      "o": [
+        "Production budget",
+        "Direct materials budget",
+        "Cash budget",
+        "Sales budget"
+      ],
+      "a": 3,
+      "e": "The sales budget ALWAYS comes first. All other operating budgets depend on knowing how many units will be sold. Without the sales volume, the production budget cannot be built, and without production, DM/DL/OH budgets cannot be built."
+    },
+    {
+      "q": "In the master budget sequence, which budget comes IMMEDIATELY after the production budget?",
+      "o": [
+        "Sales budget",
+        "Direct materials usage budget",
+        "Cash budget",
+        "Budgeted income statement"
+      ],
+      "a": 1,
+      "e": "Sales → Production → Direct Materials Usage. After determining units to produce, the next step is to determine how much direct material is needed for that production level."
+    },
+    {
+      "q": "The direct materials PURCHASES budget differs from the direct materials USAGE budget because:",
+      "o": [
+        "They use different standard costs",
+        "Purchases = Usage + Desired Ending DM Inventory − Beginning DM Inventory",
+        "Purchases includes only variable materials; usage includes fixed",
+        "Usage = Purchases × the scrap rate"
+      ],
+      "a": 1,
+      "e": "DM Usage = amount needed for production. DM Purchases = Usage + Desired Ending DM Inventory − Beginning DM Inventory. The company must purchase enough to cover both production needs AND desired ending inventory levels."
+    },
+    {
+      "q": "Which of the following is a FINANCIAL budget component (not an operating budget)?",
+      "o": [
+        "Sales budget",
+        "Direct labor budget",
+        "Manufacturing overhead budget",
+        "Cash budget"
+      ],
+      "a": 3,
+      "e": "Operating budgets (sales through budgeted income statement) determine operating results. Financial budgets project the financial position: capital expenditure budget, cash budget, budgeted balance sheet, and budgeted SCF."
+    },
+    {
+      "q": "A flexible budget is prepared AFTER the period because:",
+      "o": [
+        "Management forgot to prepare it before the period",
+        "The flexible budget requires knowledge of actual volume to adjust variable costs to the actual activity level",
+        "The flexible budget uses historical costs only",
+        "Auditors require a flexible budget after year-end"
+      ],
+      "a": 1,
+      "e": "A flexible budget recalculates budgeted revenues and costs at the ACTUAL activity level achieved. Since actual volume is not known until after the period, the flexible budget can only be prepared post-period."
+    },
+    {
+      "q": "How are FIXED COSTS treated in a flexible budget?",
+      "o": [
+        "They are adjusted proportionally to actual volume",
+        "They remain the same as in the static budget — fixed costs do not change with volume within the relevant range",
+        "They are eliminated from the flexible budget",
+        "They are replaced with actual fixed costs incurred"
+      ],
+      "a": 1,
+      "e": "In a flexible budget, only VARIABLE costs are adjusted to actual volume (variable cost per unit × actual units). Fixed costs remain the same as in the static budget because they do not change with production volume within the relevant range."
+    },
+    {
+      "q": "The primary purpose of a flexible budget is to:",
+      "o": [
+        "Replace the static budget",
+        "Set the original sales and production targets for the year",
+        "Enable fair performance evaluation by separating the performance effect from the volume effect",
+        "Reduce the time needed for budget preparation"
+      ],
+      "a": 2,
+      "e": "The flexible budget isolates the performance effect. By comparing actual results to what should have been achieved at the actual volume, it eliminates the distortion caused by actual volume differing from planned volume."
+    },
+    {
+      "q": "Sales Volume Variance = Flexible Budget Amount − Static Budget Amount. If this variance is unfavorable, it means:",
+      "o": [
+        "Actual costs exceeded flexible budget costs",
+        "The company produced more than planned",
+        "Actual volume was LOWER than planned volume",
+        "Variable costs were higher per unit than standard"
+      ],
+      "a": 2,
+      "e": "An unfavorable sales volume variance occurs when actual volume is less than the planned volume used to build the static budget. Lower volume leads to lower contribution margin than planned, creating an unfavorable variance."
+    },
+    {
+      "q": "Incremental budgeting differs from ZBB primarily in that:",
+      "o": [
+        "Incremental budgeting starts from zero each period",
+        "Incremental budgeting assumes prior period spending levels are acceptable and adjusts from there",
+        "Incremental budgeting requires full cost-benefit analysis for each expense",
+        "ZBB uses actual prior period data as a starting point"
+      ],
+      "a": 1,
+      "e": "Incremental budgeting starts with last year's actuals (or budget) and adjusts for anticipated changes. It assumes the prior period's spending base was reasonable. ZBB does NOT make this assumption."
+    },
+    {
+      "q": "A life-cycle budget:",
+      "o": [
+        "Covers only the current fiscal year",
+        "Starts from zero each period",
+        "Plans incomes and expenses for a product throughout its entire life from development to decline",
+        "Is updated monthly with rolling revisions"
+      ],
+      "a": 2,
+      "e": "A life-cycle budget covers a specific product from development through decline. It enables management to set a price that covers all lifetime costs and achieves the required return on investment."
+    },
+    {
+      "q": "When investigating variances, which factor would suggest IMMEDIATE investigation regardless of the variance amount?",
+      "o": [
+        "The variance is $1,000",
+        "The variance has been occurring every month for 12 months and is growing in size",
+        "The variance involves a non-controllable cost",
+        "The variance occurred in the last month of the year"
+      ],
+      "a": 1,
+      "e": "Trend is a key investigation criterion. A variance that has been occurring consistently and growing suggests a systematic problem that will continue — it should be investigated even if the monthly amount seems small."
+    },
+    {
+      "q": "The production budget formula is:",
+      "o": [
+        "Units Sold + Beginning FG Inventory − Ending FG Inventory",
+        "Budgeted Sales + Desired Ending FG Inventory − Beginning FG Inventory",
+        "Budgeted Sales − Desired Ending FG Inventory + Beginning FG Inventory",
+        "Actual Sales + Safety Stock − Beginning FG Inventory"
+      ],
+      "a": 1,
+      "e": "Production Budget: Units to Produce = Budgeted Sales + Desired Ending FG Inventory − Beginning FG Inventory. You need to produce enough to meet sales AND build up the desired ending inventory, starting from what is already on hand."
+    },
+    {
+      "q": "Which of the following is LEAST likely to make zero-based budgeting worthwhile to implement?",
+      "o": [
+        "The organization has significant overhead costs that may have grown unchecked",
+        "Management suspects significant waste exists in certain departments",
+        "The environment is stable and the company is small with straightforward operations",
+        "Departments have historically protected their budgets without justification"
+      ],
+      "a": 2,
+      "e": "ZBB is extremely resource-intensive. In a stable, small organization with straightforward operations, incremental budgeting is more efficient. ZBB's benefits (waste elimination) are most valuable in large organizations with complex overhead structures."
+    },
+    {
+      "q": "In the flexible budget, Flexible Budget Variance = Actual Results − Flexible Budget at Actual Volume. A FAVORABLE variance for an expense means:",
+      "o": [
+        "Actual expense was HIGHER than the flexible budget — overspent",
+        "Actual expense was LOWER than the flexible budget — spent less than expected at actual volume",
+        "The variance is zero",
+        "Actual volume was higher than planned"
+      ],
+      "a": 1,
+      "e": "For expenses, favorable variance = actual cost BELOW budget. The company spent less than should have been spent at the actual production level — this is a positive performance outcome."
+    },
+    {
+      "q": "A company prepared the master budget for 10,000 units. Actual production was 8,000 units. Which budget should be used to evaluate the production manager's performance?",
+      "o": [
+        "The original master budget for 10,000 units",
+        "A flexible budget prepared for 8,000 units",
+        "Last year's actual budget",
+        "A zero-based budget for 8,000 units"
+      ],
+      "a": 1,
+      "e": "To evaluate the production manager fairly, performance should be compared against what costs SHOULD have been at the actual volume of 8,000 units — the flexible budget. Comparing to the 10,000-unit static budget is unfair because volume reduction alone reduces variable costs."
+    },
+    {
+      "q": "A project budget differs from an annual operating budget in that:",
+      "o": [
+        "Project budgets are always more accurate",
+        "Project budgets span the life of a specific project, which may cross multiple fiscal years",
+        "Project budgets do not include revenue projections",
+        "Project budgets are required by GAAP"
+      ],
+      "a": 1,
+      "e": "A project budget covers a specific project from start to completion, regardless of fiscal year boundaries. Capital projects (new plant construction, product development) often span multiple years."
+    },
+    {
+      "q": "The cash budget is considered the 'culminating financial budget' because:",
+      "o": [
+        "It is always prepared first",
+        "It connects all operating budget cash flows to the projected balance sheet cash position and borrowing needs",
+        "It is the most accurate budget",
+        "It determines the sales forecast for the operating budget"
+      ],
+      "a": 1,
+      "e": "The cash budget takes all operating budget outputs (collections, disbursements) and combines them to project the company's cash position. It identifies when the company will need to borrow or can invest excess cash — connecting to the budgeted balance sheet."
+    },
+    {
+      "q": "Static budget variable costs are $300,000 for planned volume of 15,000 units. Actual volume was 12,000 units. What should the flexible budget variable costs be?",
+      "o": [
+        "$300,000",
+        "$240,000",
+        "$360,000",
+        "$275,000"
+      ],
+      "a": 1,
+      "e": "Variable cost per unit = $300,000 ÷ 15,000 = $20 per unit. Flexible budget variable costs at 12,000 units = 12,000 × $20 = $240,000."
     }
   ],
   "3-3": [
