@@ -3217,289 +3217,6 @@
         "1": "Recording depreciation increases Depreciation Expense, which decreases net income.",
         "3": "Writing off supplies used increases Supplies Expense, which decreases net income."
       }
-    },
-    {
-      "q": "Which type of adjusting entry records revenue that has been EARNED but cash has NOT yet been received?",
-      "o": [
-        "Deferred revenue",
-        "Accrued revenue",
-        "Prepaid expense",
-        "Depreciation"
-      ],
-      "a": 1,
-      "e": "Accrued revenue (also called conditional contract assets) is earned before cash is received. The adjusting entry debits a receivable and credits revenue.",
-      "wrongWhy": {
-        "0": "Deferred revenue is the opposite — cash received before revenue is earned.",
-        "2": "Prepaid expense is an asset paid in advance.",
-        "3": "Depreciation allocates asset cost; no cash is involved."
-      }
-    },
-    {
-      "q": "A company paid $12,000 for a one-year insurance policy on October 1. At December 31 (year-end), what is the adjusting entry?",
-      "o": [
-        "Dr Insurance Expense $12,000 / Cr Cash $12,000",
-        "Dr Insurance Expense $3,000 / Cr Prepaid Insurance $3,000",
-        "Dr Prepaid Insurance $3,000 / Cr Insurance Expense $3,000",
-        "Dr Insurance Expense $9,000 / Cr Prepaid Insurance $9,000"
-      ],
-      "a": 1,
-      "e": "3 months have passed (Oct, Nov, Dec). Expense = $12,000 × 3/12 = $3,000. The prepaid asset is reduced by $3,000 and the expense is recorded.",
-      "wrongWhy": {
-        "0": "The full $12,000 was already expensed at payment (not the correct initial entry).",
-        "2": "This reverses the correct direction — we reduce prepaid and increase expense.",
-        "3": "9 months ($9,000) is the remaining prepaid balance, not the current expense."
-      }
-    },
-    {
-      "q": "Accumulated Depreciation is classified as which type of account?",
-      "o": [
-        "Expense account",
-        "Contra-asset account",
-        "Liability account",
-        "Revenue account"
-      ],
-      "a": 1,
-      "e": "Accumulated Depreciation carries a credit balance and is presented as a deduction from the related fixed asset on the balance sheet — it is a contra-asset account.",
-      "wrongWhy": {
-        "0": "Depreciation Expense is the income statement account; Accumulated Depreciation is the balance sheet account.",
-        "2": "It is not a liability — it does not represent money owed.",
-        "3": "Revenue accounts have credit balances but represent income, not asset valuation."
-      }
-    },
-    {
-      "q": "Which adjusting entry type involves cash being received BEFORE the related revenue is earned?",
-      "o": [
-        "Accrued expense",
-        "Deferred expense",
-        "Deferred revenue",
-        "Accrued revenue"
-      ],
-      "a": 2,
-      "e": "Deferred revenue (contract liability) arises when cash is received in advance. Revenue recognition is deferred until the performance obligation is satisfied.",
-      "wrongWhy": {
-        "0": "Accrued expense involves an expense incurred but not yet paid.",
-        "1": "Deferred expense (prepaid) involves cash paid before benefit received — but this is for expenses, not revenues.",
-        "3": "Accrued revenue is earned before cash is received."
-      }
-    },
-    {
-      "q": "At year-end, employees have earned $8,000 in wages that will not be paid until next month. What adjusting entry is required?",
-      "o": [
-        "Dr Wages Payable $8,000 / Cr Wages Expense $8,000",
-        "Dr Wages Expense $8,000 / Cr Wages Payable $8,000",
-        "Dr Cash $8,000 / Cr Wages Expense $8,000",
-        "No entry needed until paid"
-      ],
-      "a": 1,
-      "e": "This is an accrued expense. The expense is incurred (under accrual basis) even though not yet paid. Debit the expense and credit the liability.",
-      "wrongWhy": {
-        "0": "The debit and credit are reversed.",
-        "2": "Cash is not involved — no cash has been paid yet.",
-        "3": "Under accrual accounting, expenses are recognized when incurred, not when paid."
-      }
-    },
-    {
-      "q": "A company received $6,000 in December for services to be performed over the next 6 months. At December 31, no services have been performed yet. How is the $6,000 classified on the balance sheet?",
-      "o": [
-        "Revenue",
-        "Deferred revenue (current liability)",
-        "Accounts receivable",
-        "Prepaid expense"
-      ],
-      "a": 1,
-      "e": "Cash received before services are performed creates a deferred revenue (contract liability). The obligation to perform services is outstanding.",
-      "wrongWhy": {
-        "0": "Revenue is not recognized until the performance obligation is satisfied.",
-        "2": "Accounts receivable is an asset representing cash owed TO the company.",
-        "3": "Prepaid expense is something the company paid in advance — here the company received the cash."
-      }
-    },
-    {
-      "q": "Which of the following does NOT require an adjusting entry at period-end?",
-      "o": [
-        "Depreciation on equipment used during the period",
-        "Cash paid for supplies purchased and used",
-        "Accrued interest on a note payable",
-        "Insurance premium paid in advance and partially used"
-      ],
-      "a": 1,
-      "e": "When cash is paid for supplies that are immediately used up, the expense is recognized at the time of purchase — no adjusting entry is needed at period-end.",
-      "wrongWhy": {
-        "0": "Depreciation always requires an adjusting entry — no source document exists for the periodic charge.",
-        "2": "Accrued interest is an accrued expense requiring an adjusting entry.",
-        "3": "Partial use of a prepaid requires an adjusting entry to reclassify the used portion to expense."
-      }
-    },
-    {
-      "q": "The adjusting entry for depreciation NEVER affects which account?",
-      "o": [
-        "Depreciation Expense",
-        "Income before taxes",
-        "Accumulated Depreciation",
-        "Cash"
-      ],
-      "a": 3,
-      "e": "Depreciation is a non-cash expense. No cash is exchanged when depreciation is recorded. The entry debits Depreciation Expense and credits Accumulated Depreciation only."
-    },
-    {
-      "q": "Under accrual accounting, when is revenue recognized?",
-      "o": [
-        "When cash is received",
-        "When the invoice is sent",
-        "When the performance obligation is satisfied",
-        "When the contract is signed"
-      ],
-      "a": 2,
-      "e": "Under ASC 606 and accrual accounting, revenue is recognized when (or as) the performance obligation to the customer is satisfied — when control of the good or service transfers.",
-      "wrongWhy": {
-        "0": "This describes cash basis, not accrual basis.",
-        "1": "Sending an invoice does not satisfy a performance obligation.",
-        "3": "Signing a contract creates an obligation but does not satisfy it."
-      }
-    },
-    {
-      "q": "A machine cost $50,000 and has accumulated depreciation of $32,000. What is its book value?",
-      "o": [
-        "$50,000",
-        "$32,000",
-        "$18,000",
-        "$82,000"
-      ],
-      "a": 2,
-      "e": "Book value = Original cost − Accumulated depreciation = $50,000 − $32,000 = $18,000."
-    },
-    {
-      "q": "Which of the following is an example of an accrued expense?",
-      "o": [
-        "Prepaid rent paid at the beginning of the quarter",
-        "Insurance premium paid 6 months in advance",
-        "Interest on a loan incurred but not yet due",
-        "Revenue collected in advance for a subscription"
-      ],
-      "a": 2,
-      "e": "Accrued expenses are costs incurred during the period but not yet paid. Interest incurred but not yet due is a classic accrued expense — debit Interest Expense, credit Interest Payable.",
-      "wrongWhy": {
-        "0": "Prepaid rent is a deferred expense (cash paid before benefit received).",
-        "1": "Insurance paid in advance is a prepaid (deferred expense).",
-        "3": "Revenue collected in advance is deferred revenue (a liability)."
-      }
-    },
-    {
-      "q": "The matching principle requires that expenses be recognized:",
-      "o": [
-        "When cash is paid",
-        "In the same period as the related revenues they help generate",
-        "Only when management approves the payment",
-        "In the period incurred, regardless of related revenue"
-      ],
-      "a": 1,
-      "e": "The matching principle (expense recognition principle) matches expenses with the revenues they help generate. Cost of goods sold, for example, is recognized in the same period as the related sale revenue."
-    },
-    {
-      "q": "A 3-year equipment lease was prepaid on Jan 1 for $36,000. What is the annual adjusting entry?",
-      "o": [
-        "Dr Lease Expense $36,000 / Cr Cash $36,000",
-        "Dr Lease Expense $12,000 / Cr Prepaid Lease $12,000",
-        "Dr Prepaid Lease $12,000 / Cr Lease Expense $12,000",
-        "Dr Lease Expense $12,000 / Cr Lease Payable $12,000"
-      ],
-      "a": 1,
-      "e": "The initial payment created a prepaid (deferred expense). Each year, 1/3 = $12,000 is recognized as expense by reducing the prepaid asset.",
-      "wrongWhy": {
-        "2": "This reverses the direction — we should reduce prepaid and increase expense.",
-        "3": "No payable is created because the cash has already been paid."
-      }
-    },
-    {
-      "q": "Which statement about adjusting entries is CORRECT?",
-      "o": [
-        "They are optional and only required for large companies",
-        "Every adjusting entry affects at least one income statement and one balance sheet account",
-        "They are recorded only once per year at fiscal year-end",
-        "They always involve a cash account"
-      ],
-      "a": 1,
-      "e": "Every adjusting entry affects one income statement account (revenue or expense) and one balance sheet account (asset or liability). This is a defining characteristic of adjusting entries.",
-      "wrongWhy": {
-        "0": "Adjusting entries are required under GAAP for all companies using accrual accounting.",
-        "2": "Adjusting entries may be required monthly or quarterly for interim reporting.",
-        "3": "Adjusting entries never involve cash — if cash is involved, it is a regular journal entry, not an adjusting entry."
-      }
-    },
-    {
-      "q": "What is the effect of failing to record accrued salaries at year-end?",
-      "o": [
-        "Assets overstated; equity overstated",
-        "Liabilities understated; net income overstated",
-        "Assets understated; net income understated",
-        "Liabilities overstated; net income understated"
-      ],
-      "a": 1,
-      "e": "Failing to record the salary accrual means: (1) Salary Expense is understated → Net Income is overstated. (2) Salaries Payable is not recorded → Liabilities are understated. Retained Earnings (equity) would also be overstated."
-    },
-    {
-      "q": "Interest expense of $500 has been incurred on a bank loan but has not been paid. The adjusting entry is:",
-      "o": [
-        "Dr Cash $500 / Cr Interest Income $500",
-        "Dr Interest Expense $500 / Cr Interest Payable $500",
-        "Dr Interest Payable $500 / Cr Interest Expense $500",
-        "Dr Notes Payable $500 / Cr Cash $500"
-      ],
-      "a": 1,
-      "e": "This is an accrued expense. Debit Interest Expense (income statement) and credit Interest Payable (liability on balance sheet)."
-    },
-    {
-      "q": "A customer paid $4,800 in advance for a one-year service contract starting July 1. At December 31, how much revenue should be recognized?",
-      "o": [
-        "$4,800",
-        "$2,400",
-        "$400",
-        "$0 — all deferred"
-      ],
-      "a": 1,
-      "e": "6 months of service have been performed (July through December). Revenue = $4,800 × 6/12 = $2,400. The remaining $2,400 stays as deferred revenue."
-    },
-    {
-      "q": "Which of the following statements about deferred revenue is TRUE?",
-      "o": [
-        "It is reported as a long-term asset",
-        "It represents revenue already earned but not yet collected",
-        "It creates a liability on the balance sheet",
-        "It is recorded only when a performance obligation is satisfied"
-      ],
-      "a": 2,
-      "e": "Deferred revenue (contract liability) is a liability representing the obligation to provide goods or services in exchange for cash already received. It is classified as current if the obligation will be fulfilled within one year.",
-      "wrongWhy": {
-        "0": "Deferred revenue is a liability, not an asset.",
-        "1": "This describes accrued revenue — the opposite situation.",
-        "3": "When a performance obligation is satisfied, deferred revenue is REDUCED and revenue is recognized."
-      }
-    },
-    {
-      "q": "Which adjusting entry represents a DEFERRED EXPENSE that has been partially consumed?",
-      "o": [
-        "Dr Depreciation Expense / Cr Accumulated Depreciation",
-        "Dr Insurance Expense / Cr Prepaid Insurance",
-        "Dr Salaries Expense / Cr Salaries Payable",
-        "Dr Accounts Receivable / Cr Service Revenue"
-      ],
-      "a": 1,
-      "e": "Reducing a prepaid (deferred expense) and recognizing the portion consumed as expense is the classic deferred expense adjusting entry. Depreciation is technically similar but uses a contra-asset rather than reducing the asset directly.",
-      "wrongWhy": {
-        "2": "This is an accrued expense — expense incurred but not yet paid.",
-        "3": "This is an accrued revenue entry — revenue earned but not yet collected."
-      }
-    },
-    {
-      "q": "What account is debited when recording annual straight-line depreciation on a building?",
-      "o": [
-        "Building",
-        "Accumulated Depreciation",
-        "Depreciation Expense",
-        "Cash"
-      ],
-      "a": 2,
-      "e": "The income statement account Depreciation Expense is debited (increased). The contra-asset account Accumulated Depreciation is credited. The Building account itself is NOT reduced directly."
     }
   ],
   "1-11": [
@@ -5113,544 +4830,165 @@
   ],
   "1-16": [
     {
-      "q": "In a well designed internal control system, two tasks that should be performed by different persons are",
-      "o": [
-        "Recording of cash receipts and preparation of bank reconciliations.",
-        "Approval of bad debt write-offs, and reconciliation of the accounts payable subsidiary ledger and controlling account.",
-        "Distribution of payroll checks and approval of sales returns for credit.",
-        "Posting of amounts from both the cash receipts journal and cash payments journal to the general ledger."
-      ],
-      "a": 0,
-      "e": "Recording of cash receipts is a recordkeeping function and preparation of bank reconciliations is a reconciliation function. If the same person were to perform both functions, that person could misappropriate cash payments and conceal the misappropriation by falsifying the reconciliation.",
-      "wrongWhy": {
-        "1": "Since approval of bad debt write-offs is an accounts receivable authorization function and reconciliation of accounts payable is an accounts payable reconciliation function, there is no incompatibility between the two functions.",
-        "2": "Even though distribution of payroll checks is a custodial function and approval of sales returns is an authorization function, since the two functions are unrelated, there is no incompatibility between them.",
-        "3": "Posting to the general ledger is a recordkeeping function, and the fact that posting is done for both cash receipts and cash payments does not create an incompatibility, since they are different functions."
-      }
+      "t": "h",
+      "v": "What Is Internal Control? — The COSO Definition"
     },
     {
-      "q": "To enter its data center, a company requires that an individual must submit to a multifactor authentication control including a new biometric credential. This credential requirement will",
-      "o": [
-        "strengthen control over the physical access to the hardware in the data center.",
-        "improve data encryption in the data center through better user validation.",
-        "detect situations when there has been unauthorized physical access to hardware.",
-        "improve controls over data processing to ensure complete and accurate processing."
-      ],
-      "a": 0,
-      "e": "Biometric credentials do strengthen control over the physical access to the hardware in the data center.",
-      "wrongWhy": {
-        "1": "Biometric credentials do not improve data encryption in the data center through better user validation.",
-        "2": "Biometric credentials do not detect situations when there has been unauthorized physical access to hardware.",
-        "3": "Biometric credentials do not improve controls over data processing to ensure complete and accurate processing."
-      }
+      "t": "p",
+      "v": "According to the COSO framework (Internal Control — Integrated Framework), internal control is a process, effected by an entity's board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to three categories: Operations, Reporting, and Compliance."
     },
     {
-      "q": "Which of the following best describes the concept of control?",
-      "o": [
-        "Control procedures should be designed from the \"bottom up\" to ensure attention to detail.",
-        "Management regularly discharges personnel who do not perform up to expectations.",
-        "Control represents specific procedures that accountants and auditors design to ensure the correctness of processing.",
-        "Management takes action to enhance the likelihood that established goals and objectives will be achieved."
+      "t": "tbl",
+      "h": [
+        "Objective Category",
+        "What It Means",
+        "Example"
       ],
-      "a": 3,
-      "e": "A control is any action taken by management to enhance the likelihood that established goals and objectives will be achieved.",
-      "wrongWhy": {
-        "0": "While control procedures may be designed from the bottom up, the concept of control flows from the top down.",
-        "1": "This is not the definition of a control.",
-        "2": "Control encompasses much more than controls designed to ensure the correctness of processing. Furthermore, control is designed and instituted by management, not by accountants or auditors."
-      }
+      "r": [
+        [
+          "Operations",
+          "Effectiveness and efficiency of operations; safeguarding of assets against loss",
+          "Production efficiency targets; inventory protection"
+        ],
+        [
+          "Reporting",
+          "Reliability, timeliness, and transparency of financial and non-financial reporting",
+          "Accurate financial statements; timely disclosures"
+        ],
+        [
+          "Compliance",
+          "Adherence to all applicable laws and regulations",
+          "Tax compliance; environmental regulations; SEC reporting"
+        ]
+      ]
     },
     {
-      "q": "Which one of the following controls would best protect a company’s programs and databases from unauthorized use?",
-      "o": [
-        "Multiple levels of authentication used to verify the identity of a user seeking access.",
-        "Passwords strengthened by requiring frequent changes and minimum lengths.",
-        "Proper segregation of duties enabled by separating access and processing rights.",
-        "Antivirus programs installed to constantly scan the company’s systems."
-      ],
-      "a": 0,
-      "e": "The best option is to have multiple levels of authentication be required to access the programs and databases. By having multiple levls of access, each person is able to be given access only to the programs and databases that they need to have access to. Not every person in the company needs to be able to access every system and all information that the company has.",
-      "wrongWhy": {
-        "1": "Requiring strong passwords that are frequently changed will help with ensuring proper access to the programs and databases, but, it is not the best choice of those presented.",
-        "2": "Proper segregation of duties is a good thing to have, and it will help with ensuring proper access to the programs and databases, but, it is not the best choice of those presented.",
-        "3": "Antivirus programs would not protect the database form unauthorized use."
-      }
+      "t": "h",
+      "v": "5 Fundamental Concepts of Internal Control"
     },
     {
-      "q": "The proper segregation of duties requires that:",
-      "o": [
-        "The individual who records a transaction does not compare the accounting record of the asset with the asset itself.",
-        "The individual who maintains custody of an asset must have access to the accounting records for the asset.",
-        "The individual who authorizes a transaction also records it.",
-        "The individual who records a transaction must maintain custody of the asset resulting from the transaction."
-      ],
-      "a": 0,
-      "e": "Segregation of duties requires that the following four functions be done by different people: (1) authorizing a transaction; (2) recording the transaction; (3) keeping physical custody of the related asset; and (4) periodic reconciliation of the physical asset with the recorded amount for the asset. If the individual recording the transaction were to also compare the accounting record of the asset with the asset itself, that person would be performing two of the above functions: recording the transaction and periodic reconciliation of the physical asset with the recorded amount for the asset.",
-      "wrongWhy": {
-        "1": "This is not a requirement of the proper segregation of duties.",
-        "2": "This is not a requirement of the proper segregation of duties.",
-        "3": "This is not a requirement of the proper segregation of duties."
-      }
+      "t": "b",
+      "v": [
+        "1. Achieves objectives: The purpose is to help the company achieve its objectives in the three categories above.",
+        "2. Ongoing process: Internal control is not a one-time event — it is a journey, a continuous set of tasks and activities, a means to an end.",
+        "3. Effected by people: Internal control is carried out by people at every level — board, management, and staff. Policies written in a manual are not enough; people must implement them.",
+        "4. Reasonable assurance only — NOT absolute assurance: The cost of a control should not exceed its expected benefit. Human error, collusion, and management override mean no control system can guarantee objectives will be met.",
+        "5. Flexible: Internal control must be adaptable to the entity's entire structure or to a specific subsidiary, division, or process."
+      ]
     },
     {
-      "q": "Controls should be designed to provide reasonable assurance that",
-      "o": [
-        "The internal audit activity's guidance and oversight of management's performance is accomplished economically and efficiently.",
-        "Management's plans have not been circumvented by worker collusion.",
-        "Management's planning, organizing, and directing processes are properly evaluated.",
-        "Organizational objectives and goals will be achieved economically and efficiently."
-      ],
-      "a": 3,
-      "e": "Control is any action taken by management, the board, and other parties to enhance risk management and increase the likelihood that established objectives and goals will be achieved.",
-      "wrongWhy": {
-        "0": "Oversight of management's performance is provided by the board.",
-        "1": "This is an inherent limitation of internal control.",
-        "2": "Internal auditors would evaluate management's processes."
-      }
+      "t": "h",
+      "v": "COSO Framework — 5 Components of Internal Control"
     },
     {
-      "q": "Which one of the following measures may be used by a company to limit access to its physical hardware?",
-      "o": [
-        "Anti-spyware software.",
-        "Access cards.",
-        "Firewalls.",
-        "System authentication."
-      ],
-      "a": 1,
-      "e": "Access cards limit access to its physical hardware by requiring a person to have an access card to the able to get into a room where the hardware is located.",
-      "wrongWhy": {
-        "0": "Anti-spyware software does not limit access to its physical hardware.",
-        "2": "Firewalls do not limit access to its physical hardware.",
-        "3": "System authentication does not limit access to its physical hardware."
-      }
+      "t": "b",
+      "v": [
+        "1. Control Environment: The tone at the top — management's integrity, ethical values, and commitment to competence. The foundation on which all other components rest. Includes the board of directors, organizational structure, and assignment of authority.",
+        "2. Risk Assessment: Identifying and analyzing risks that could prevent the company from achieving its objectives. Includes setting objectives first, then identifying risks related to those objectives, and managing change risk.",
+        "3. Control Activities: The specific policies and procedures that address risks. Examples: segregation of duties, authorizations and approvals, physical controls, reconciliations, information processing controls.",
+        "4. Information & Communication: Systems that capture and communicate relevant, reliable information in a timely manner to those who need it — both internal reporting and external communication to stakeholders.",
+        "5. Monitoring: Ongoing and periodic evaluation of whether the internal control system is functioning effectively. Includes management supervision, internal audits, and separate evaluations."
+      ]
     },
     {
-      "q": "To establish an effective internal control environment, which one of the following pairs of functions should be performed by different individuals?",
-      "o": [
-        "Creating purchase requisitions and receiving the merchandise.",
-        "Preparing deposit slips and sending deposit slips and checks to the bank.",
-        "Preparing bank reconciliations and tax returns.",
-        "Recording cash receipts and disbursements."
-      ],
-      "a": 0,
-      "e": "These two duties should be performed by different people because creating purchase requisitions is part of the record keeping for the purchasing cycle and receiving the merchandise is part of the physical custody of the purchasing cycle. If a person performed both of these duties, they would be able to falsify the receiving reports to match the purchase requisitions, giving them a chance to steal inventory from the company.",
-      "wrongWhy": {
-        "1": "These two duties can be performed by the same person because they are part of the same process of recording keeping for the cash receipt cycle.",
-        "2": "These two duties can be performed by the same person because the two activities are part of different transaction cycles.",
-        "3": "These two duties can be performed by the same person because the two activities are part of different transaction cycles."
-      }
+      "t": "tip",
+      "v": "The FMAA exam tests the COSO components by name. Know all five: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring. The Control Environment is always the FOUNDATION — it comes first because all other components are built on it."
     },
     {
-      "q": "A small business must limit its financial staff to three employees. One employee is responsible for opening mail, preparing a list of checks received, and bringing deposits to the bank. Which one of the following activities could also be assigned to this staff position without risking the internal control function?",
-      "o": [
-        "Record accounts receivable.",
-        "Maintain personnel records.",
-        "Reconcile bank accounts.",
-        "Maintain petty cash."
-      ],
-      "a": 3,
-      "e": "The person who opens the mail and prepares the deposits of checks may also maintain petty cash because these are two different systems and the duties connected to the receipt of checks does not intersect with the duties of maintaining petty cash.",
-      "wrongWhy": {
-        "0": "The person who makes deposits of checks from customers should not also record accounts receivable.",
-        "1": "The personnel records should not be maintained within the finance function of the company.",
-        "2": "The person who makes deposits should not also reconcile the bank accounts."
-      }
+      "t": "h",
+      "v": "Internal Control Risk"
     },
     {
-      "q": "When an organization has strong internal control, management can expect various benefits. The benefit least likely to occur is",
-      "o": [
-        "Availability of reliable data for decision-making purposes.",
-        "Some assurance of compliance with the Sarbanes-Oxley Act of 2002.",
-        "Reduced cost of an external audit.",
-        "Elimination of employee fraud."
-      ],
-      "a": 3,
-      "e": "While strong internal control can limit employee fraud, complete elimination of employee fraud is not possible, and so this cannot be considered a benefit of a strong internal control system.",
-      "wrongWhy": {
-        "0": "Strong internal control will result in the benefit of better, more accurate data for decision making.",
-        "1": "Strong internal control will result in some assurance of compliance with the SarbanesOxley Act of 2002, and thus that is a benefit.",
-        "2": "Reduced cost of external audits is a benefit that is likely to occur as a result of strong internal control."
-      }
+      "t": "p",
+      "v": "Internal control risk is the risk that the design or operation of an entity's internal control system will NOT prevent or detect a threat to achieving objectives. Controls can fail because of: (1) human error or faulty judgment, (2) collusion between two or more employees working together to circumvent controls, (3) management override of established controls, (4) controls becoming outdated due to lack of monitoring. Internal control can provide only reasonable assurance — never a guarantee."
     },
     {
-      "q": "Segregation of duties is a fundamental concept in an effective system of internal control. Nevertheless, the internal auditor must be aware that this safeguard can be compromised through",
-      "o": [
-        "Irregular employee reviews.",
-        "Collusion among employees.",
-        "Absence of internal auditing.",
-        "Lack of training of employees."
-      ],
-      "a": 1,
-      "e": "Collusion among employees is a way that the segregation of duties can be compromised.",
-      "wrongWhy": {
-        "0": "Irregular employee reviews is not a way that the segregation of duties can be compromised.",
-        "2": "The absence of internal auditing is not a way that the segregation of duties can be compromised.",
-        "3": "Lack of training of employees is not a way that the segregation of duties can be compromised."
-      }
+      "t": "h",
+      "v": "Segregation of Duties — The Most Critical Control"
     },
     {
-      "q": "Which one of the following would violate basic principles of internal control?",
-      "o": [
-        "A department supervisor performs a surprise count of inventory.",
-        "An accounts payable clerk has access to the approved supplier master file for purchases.",
-        "A department supervisor approves employees’ weekly working hours.",
-        "A bookkeeper prepares the cash deposits, while another bookkeeper enters the collections in the journal and ledger."
-      ],
-      "a": 1,
-      "e": "This is a violation of the segregation of duties. The accounts payable clerk should not have access to the list of suppliers for the company.",
-      "wrongWhy": {
-        "0": "This does not violate basic principles of internal control because the department supervidor does not have either physical custody of the inventory or maintain the records related to inventory.",
-        "2": "This does not violate basic principles of internal control.",
-        "3": "This does not violate basic principles of internal control."
-      }
+      "t": "p",
+      "v": "No single person should have complete control over any transaction from beginning to end. The four functions that must be performed by DIFFERENT people: (1) Authorization, (2) Recordkeeping, (3) Physical Custody, (4) Periodic Reconciliation."
     },
     {
-      "q": "Which one of the following statements represents appropriate internal control?",
-      "o": [
-        "Two employees have bank log-in information, and because of this dual system access, no banking fraud can occur.",
-        "A single employee creates all vendor accounts and approves all invoices, and since this employee knows all vendors, false invoices are less likely to be paid.",
-        "A single employee approves every expense report on a monthly basis, and since a single approver profile is set up in the reporting system, erroneous expense claims are less likely to be paid.",
-        "A single employee approves all payments in the accounting system, but this employee cannot approve system invoices; therefore, fraudulent payments are less likely to occur."
+      "t": "tbl",
+      "h": [
+        "Function",
+        "Who Does It",
+        "Example"
       ],
-      "a": 3,
-      "e": "Separating the approval of the invoice function and the approval of the payment function is a proper separation of duties.",
-      "wrongWhy": {
-        "0": "Access to an asset like cash should be limited to only one person. If two people have access to the bank account, each is in a position to do something incorrect, and simply blame the other person.",
-        "1": "The person who creates vendor accounts (record keeping) should not also approve invoices (approval) as thejy would be able to create false accoutns and approve payment to them.",
-        "2": "Expense reports should be approved by someone who knows whether the expenses are legitimate expenses, and that is unlikely to be the same person for every expense report in the company."
-      }
+      "r": [
+        [
+          "Authorization",
+          "Manager/Supervisor",
+          "Purchasing manager approves purchase orders"
+        ],
+        [
+          "Recordkeeping",
+          "Accounting Department",
+          "Records transactions in journals and ledgers"
+        ],
+        [
+          "Physical Custody",
+          "Warehouse/Cashier",
+          "Controls physical access to inventory or cash"
+        ],
+        [
+          "Reconciliation",
+          "Independent personnel",
+          "Compares physical count to book records"
+        ]
+      ]
     },
     {
-      "q": "Certain limitations are inherent in any internal control system. Which one of the following scenarios is the result of an inherent limitation of internal control?",
-      "o": [
-        "The firm sells to customers on account, without credit approval.",
-        "A security guard allows one of the warehouse employees to remove company assets from the premises without authorization.",
-        "An employee, who is unable to read, is assigned custody of the firm's computer tape library and run manuals that are used during the third shift.",
-        "The comptroller both makes and records cash deposits."
-      ],
-      "a": 1,
-      "e": "If two employees (the security guard and the warehouse employee) collude to defraud their employer, a control based on segregation of functions can be rendered ineffective. This is an inherent limitation of internal control.",
-      "wrongWhy": {
-        "0": "This is not an inherent limitation of internal control, because it could and should be avoided through adequate credit approval of sales.",
-        "2": "Assignment of an employee who is unable to read to a job requiring reading is avoidable through adequate testing of potential employees. Therefore, it is not an inherent limitation of internal control.",
-        "3": "This is not an inherent limitation of internal control, because it could and should be avoided through adequate segregation of duties."
-      }
+      "t": "ex",
+      "l": "Why Segregation Matters — Inventory Example",
+      "v": "If the same person has both recordkeeping (#2) AND physical custody (#3) of inventory:\n→ They could steal inventory AND falsify the records to hide the theft.\n→ No independent check exists to detect the discrepancy.\n\nCorrect structure:\n  Recordkeeper counts what the records say should be there.\n  Custodian controls what is actually there.\n  Reconciler compares the two amounts independently.\n\nNote: Collusion — when two or more people work together — can defeat any segregation of duties. This is why collusion risk is a fundamental limitation of internal control."
     },
     {
-      "q": "The five components of the COSO internal control framework include all of the following EXCEPT",
-      "o": [
-        "Control environment.",
-        "Risk assessment.",
-        "External audit.",
-        "Monitoring activities."
-      ],
-      "a": 2,
-      "e": "The five COSO components are: Control Environment, Risk Assessment, Control Activities, Information and Communication, and Monitoring. External audit is not a COSO component — it is an external function.",
-      "wrongWhy": {
-        "0": "Control environment is the first COSO component, setting the tone of integrity and ethics.",
-        "1": "Risk assessment is the second COSO component — identifying and analyzing risks.",
-        "3": "Monitoring activities is the fifth COSO component — assessing control quality over time."
-      }
+      "t": "h",
+      "v": "Safeguarding Assets"
     },
     {
-      "q": "An employee who handles cash receipts should NOT also be responsible for",
-      "o": [
-        "Preparing the bank deposit slip.",
-        "Transporting cash to the bank.",
-        "Recording cash receipts in the accounting records.",
-        "Counting cash at the end of the day."
-      ],
-      "a": 2,
-      "e": "Segregation of duties requires that the person handling cash not also record it. If one employee does both, they can steal cash and conceal it in the records.",
-      "wrongWhy": {
-        "0": "Preparing the deposit slip is a cash handling function — can be done by the same employee.",
-        "1": "Transporting cash to the bank is a cash custody function — can be done by the same employee.",
-        "3": "Counting cash is a custody activity and can be done by the same employee."
-      }
+      "t": "b",
+      "v": [
+        "Physical controls: Equipment, inventory, securities, and cash are secured in locked or guarded areas. Access is restricted to authorized personnel. Periodic physical counts are compared to records.",
+        "Software controls (Logical security): All data and programs must be protected from unauthorized access. Authentication methods: Something you KNOW (passwords), Something you ARE (biometrics — fingerprints, retina), Something you HAVE (security fob). Two-factor authentication requires two independent methods simultaneously.",
+        "Other access controls: Automatic logoff after inactivity; logging of all login attempts; accounts that automatically expire after a limited time period."
+      ]
     },
     {
-      "q": "Which best describes a preventive internal control?",
-      "o": [
-        "Reconciling bank statements monthly to identify discrepancies.",
-        "Requiring dual signatures on checks above a certain amount.",
-        "Conducting periodic surprise audits of petty cash.",
-        "Reviewing exception reports of unusual transactions."
-      ],
-      "a": 1,
-      "e": "A preventive control stops errors or fraud before they occur. Requiring dual signatures prevents unauthorized disbursements by ensuring two people approve significant payments.",
-      "wrongWhy": {
-        "0": "Reconciling bank statements is a detective control — it identifies discrepancies after they occur.",
-        "2": "Surprise audits of petty cash are detective controls — they detect problems after the fact.",
-        "3": "Reviewing exception reports is a detective control — it identifies unusual transactions after processing."
-      }
+      "t": "h",
+      "v": "What Internal Control Can and Cannot Do"
     },
     {
-      "q": "Requiring all purchases over $5,000 to be approved by a senior manager is best described as",
-      "o": [
-        "A compensating control.",
-        "An authorization control.",
-        "A physical safeguard.",
-        "A reconciliation control."
+      "t": "tbl",
+      "h": [
+        "Internal Control CAN",
+        "Internal Control CANNOT"
       ],
-      "a": 1,
-      "e": "An authorization control requires transactions to meet criteria and be approved before execution. Requiring manager approval ensures only legitimate transactions are processed.",
-      "wrongWhy": {
-        "0": "A compensating control offsets weakness in another control. This is a primary authorization control.",
-        "2": "Physical safeguards protect assets from unauthorized access (locks, safes). Approval requirements are not physical.",
-        "3": "A reconciliation control compares two independent records — like a bank reconciliation. This is not a reconciliation."
-      }
+      "r": [
+        [
+          "Help the company achieve its performance and profitability goals",
+          "Guarantee objectives will be achieved"
+        ],
+        [
+          "Prevent loss of resources",
+          "Prevent all fraud — human error and collusion remain possible"
+        ],
+        [
+          "Help ensure reliable financial reporting",
+          "Override management — management can and does override controls"
+        ],
+        [
+          "Help ensure compliance with laws and regulations",
+          "Eliminate all risk — it can only provide reasonable assurance"
+        ]
+      ]
     },
     {
-      "q": "Which scenario represents a violation of the segregation of duties principle?",
-      "o": [
-        "Accounts payable clerk processes invoices; treasurer signs checks.",
-        "Payroll department prepares payroll; HR maintains employee records.",
-        "Cashier receives cash payments and also records them in the general ledger.",
-        "Purchasing issues purchase orders; receiving inspects deliveries."
-      ],
-      "a": 2,
-      "e": "Segregation requires that custody, authorization, and recording functions be separated. A cashier who both receives cash (custody) and records it (record-keeping) can steal and hide the theft in the records.",
-      "wrongWhy": {
-        "0": "Proper segregation — A/P records and the treasurer controls cash. Two separate people.",
-        "1": "Proper segregation — payroll preparation is separate from employee status authorization.",
-        "3": "Proper segregation — purchasing is separate from receiving, preventing collusion."
-      }
-    },
-    {
-      "q": "The PRIMARY objective of a company's internal control system is to",
-      "o": [
-        "Guarantee the accuracy of all financial statement figures.",
-        "Eliminate all risk of fraud and error.",
-        "Provide reasonable assurance that financial reporting is reliable and operations are effective.",
-        "Replace the need for an external audit."
-      ],
-      "a": 2,
-      "e": "Internal controls provide reasonable assurance — not absolute assurance — that financial reporting is reliable, operations are effective, and laws are complied with. Controls reduce but cannot eliminate risk.",
-      "wrongWhy": {
-        "0": "Internal controls cannot guarantee accuracy of every figure — they provide reasonable, not absolute, assurance.",
-        "1": "Controls cannot eliminate all risk. They reduce risk to an acceptable level, but residual risk always remains.",
-        "3": "Internal controls do not replace external audits. External auditors assess whether controls are effective."
-      }
-    },
-    {
-      "q": "According to the COSO framework, internal control is designed to provide reasonable assurance regarding which THREE categories of objectives?",
-      "o": [
-        "Financial reporting, tax compliance, and profitability",
-        "Operations, reporting, and compliance",
-        "Budgeting, controlling, and planning",
-        "Asset protection, accuracy, and efficiency"
-      ],
-      "a": 1,
-      "e": "COSO defines three objective categories: Operations (effectiveness and efficiency), Reporting (financial and non-financial), and Compliance (laws and regulations)."
-    },
-    {
-      "q": "Which of the following best describes 'reasonable assurance' in the context of internal control?",
-      "o": [
-        "Internal controls guarantee that all objectives will be achieved",
-        "Internal controls eliminate all risk of fraud",
-        "Internal control provides assurance that objectives will likely be achieved, but not a guarantee",
-        "Internal controls are only reasonable if they cost nothing to implement"
-      ],
-      "a": 2,
-      "e": "Internal control can provide only reasonable assurance — not absolute assurance. The cost-benefit principle means some risk is accepted because the cost of full control exceeds the benefit."
-    },
-    {
-      "q": "The FIVE components of the COSO Internal Control framework are:",
-      "o": [
-        "Planning, organizing, staffing, directing, and controlling",
-        "Control Environment, Risk Assessment, Control Activities, Information & Communication, and Monitoring",
-        "Authorization, recordkeeping, custody, reconciliation, and supervision",
-        "Segregation of duties, authorization, physical controls, reconciliation, and documentation"
-      ],
-      "a": 1,
-      "e": "The five COSO components are: Control Environment, Risk Assessment, Control Activities, Information & Communication, and Monitoring. These build upon each other, with the Control Environment as the foundation."
-    },
-    {
-      "q": "Which COSO component represents 'the tone at the top' — management's integrity, ethical values, and commitment to competence?",
-      "o": [
-        "Risk Assessment",
-        "Control Activities",
-        "Monitoring",
-        "Control Environment"
-      ],
-      "a": 3,
-      "e": "The Control Environment is the foundation of the COSO framework. It reflects management's philosophy, operating style, and the ethical climate of the organization."
-    },
-    {
-      "q": "Segregation of duties requires that FOUR functions related to any transaction be performed by DIFFERENT people. These four functions are:",
-      "o": [
-        "Budgeting, recording, reporting, and filing",
-        "Authorization, recordkeeping, physical custody, and periodic reconciliation",
-        "Planning, executing, monitoring, and reviewing",
-        "Purchasing, receiving, paying, and recording"
-      ],
-      "a": 1,
-      "e": "The four functions that must be separated: (1) Authorization, (2) Recordkeeping, (3) Physical Custody, (4) Periodic Reconciliation. If the same person performs any two of these for the same asset, fraud becomes possible."
-    },
-    {
-      "q": "Which of the following represents a VIOLATION of segregation of duties?",
-      "o": [
-        "The purchasing manager approves purchase orders for a vendor that the warehouse manager selected",
-        "The accounting clerk records customer payments in the accounts receivable ledger",
-        "The cashier both receives customer cash payments AND reconciles the checking account",
-        "The warehouse manager controls physical access to inventory"
-      ],
-      "a": 2,
-      "e": "The cashier has physical custody of cash and is also performing the reconciliation — two of the four functions. This allows the cashier to steal cash and cover it up through the reconciliation."
-    },
-    {
-      "q": "Collusion in the context of internal control means:",
-      "o": [
-        "Management overrides established control procedures",
-        "Two or more employees work together to circumvent controls and commit fraud",
-        "An employee acts alone to steal from the company",
-        "Controls are too costly to implement and are abandoned"
-      ],
-      "a": 1,
-      "e": "Collusion occurs when two or more individuals cooperate to defeat the internal control system. Segregation of duties is designed to prevent single-person fraud, but collusion can overcome even well-designed controls."
-    },
-    {
-      "q": "Which COSO component involves identifying and analyzing risks that could prevent the company from achieving its objectives?",
-      "o": [
-        "Control Environment",
-        "Control Activities",
-        "Risk Assessment",
-        "Monitoring"
-      ],
-      "a": 2,
-      "e": "Risk Assessment is the COSO component where management identifies, analyzes, and manages risks relevant to achieving the organization's objectives in the three categories (operations, reporting, compliance)."
-    },
-    {
-      "q": "Physical controls, segregation of duties, and reconciliations are all examples of which COSO component?",
-      "o": [
-        "Control Environment",
-        "Risk Assessment",
-        "Control Activities",
-        "Information & Communication"
-      ],
-      "a": 2,
-      "e": "Control Activities are the specific policies and procedures that address identified risks. They include: segregation of duties, authorizations, physical controls, reconciliations, and information processing controls."
-    },
-    {
-      "q": "Internal controls CANNOT:",
-      "o": [
-        "Help achieve performance and profitability goals",
-        "Help ensure reliable financial reporting",
-        "Guarantee that all organizational objectives will be achieved",
-        "Help ensure compliance with laws and regulations"
-      ],
-      "a": 2,
-      "e": "Internal controls provide only reasonable assurance — they CANNOT guarantee objectives will be achieved. Limitations include human error, collusion, and management override."
-    },
-    {
-      "q": "'Two-factor authentication' in the context of software access controls means:",
-      "o": [
-        "Two supervisors must approve any system access",
-        "Two separate login attempts are allowed before lockout",
-        "Two independent, simultaneous actions are required before access is granted",
-        "Two different passwords must be memorized"
-      ],
-      "a": 2,
-      "e": "Two-factor authentication requires two independent, simultaneous actions — for example, a password plus a biometric scan, or a password plus a code sent to a mobile device. It is stronger than single-factor authentication."
-    },
-    {
-      "q": "What is the purpose of periodic reconciliation in segregation of duties?",
-      "o": [
-        "To authorize transactions before they occur",
-        "To record transactions in the accounting system",
-        "To provide an independent comparison of physical assets to book records",
-        "To maintain physical custody of assets"
-      ],
-      "a": 2,
-      "e": "The reconciliation function independently compares what the records say should be there (recordkeeping) with what is actually there (physical custody). It detects discrepancies that may indicate theft or error."
-    },
-    {
-      "q": "Which of the following is a SOFTWARE (logical) control rather than a physical control?",
-      "o": [
-        "Locked storage room for inventory",
-        "Security cameras in the warehouse",
-        "Automatic user account lockout after repeated failed login attempts",
-        "Guards at building entrances"
-      ],
-      "a": 2,
-      "e": "Automatic lockout after failed logins is a logical/software access control. Physical controls include locks, cameras, and guards that protect physical assets directly."
-    },
-    {
-      "q": "A key characteristic of internal control is that it is 'effected by people.' This means:",
-      "o": [
-        "All controls must be automated through software systems",
-        "Written policy manuals alone are sufficient to establish internal control",
-        "Internal control requires people at all levels to put policies into effect",
-        "Only senior management is responsible for implementing controls"
-      ],
-      "a": 2,
-      "e": "Internal control is accomplished by people — it cannot exist solely in policy documents. People at every level (board, management, staff) must implement the policies. Policies written in a manual that no one follows are not effective controls."
-    },
-    {
-      "q": "The cost-benefit principle of internal control states that:",
-      "o": [
-        "All possible controls should be implemented regardless of cost",
-        "The cost of an internal control should not exceed its expected benefit",
-        "Controls are always more beneficial than their cost",
-        "Only financial controls require cost-benefit analysis"
-      ],
-      "a": 1,
-      "e": "The cost-benefit principle means some risk may be accepted because the cost of the control (in money, time, or efficiency loss) exceeds the expected benefit from the risk reduction."
-    },
-    {
-      "q": "Which of the following best describes the MONITORING component of COSO?",
-      "o": [
-        "Identifying risks that threaten achievement of objectives",
-        "Policies and procedures that address identified risks",
-        "Ongoing and periodic evaluation of whether the internal control system is functioning effectively",
-        "The ethical climate and tone set by senior management"
-      ],
-      "a": 2,
-      "e": "Monitoring involves ongoing evaluation through management supervision, internal audits, and separate periodic assessments to determine whether controls are operating as intended and whether changes are needed."
-    },
-    {
-      "q": "A company discovers that two accounts payable clerks have been colluding to issue fraudulent payments. What fundamental limitation of internal control does this illustrate?",
-      "o": [
-        "Absence of a control environment",
-        "Failure of the monitoring component",
-        "The risk that collusion can overcome even well-designed segregation of duties",
-        "Inadequate information and communication systems"
-      ],
-      "a": 2,
-      "e": "Collusion is a fundamental limitation of internal control that can defeat segregation of duties. Any two employees who cooperate can work around controls designed to catch single-person fraud."
-    },
-    {
-      "q": "Biometric access systems (fingerprint, retina scan) are classified as which type of authentication?",
-      "o": [
-        "Something you know",
-        "Something you have",
-        "Something you are",
-        "Two-factor authentication"
-      ],
-      "a": 2,
-      "e": "Biometric authentication uses physical characteristics (fingerprints, retina patterns, voice) — 'something you are.' 'Something you know' = passwords. 'Something you have' = security fob."
-    },
-    {
-      "q": "Which COSO objective category relates to the company achieving its basic business goals and safeguarding assets?",
-      "o": [
-        "Compliance",
-        "Reporting",
-        "Operations",
-        "Information & Communication"
-      ],
-      "a": 2,
-      "e": "Operations objectives relate to the effectiveness and efficiency of operations, including financial and operational performance goals and safeguarding of assets against loss."
-    },
-    {
-      "q": "An internal auditor evaluates the effectiveness of internal controls and reports findings to management. This activity falls under which COSO component?",
-      "o": [
-        "Control Activities",
-        "Risk Assessment",
-        "Control Environment",
-        "Monitoring"
-      ],
-      "a": 3,
-      "e": "Internal audits are a key monitoring activity. Monitoring involves periodic evaluations of whether the internal control system is functioning as designed. Internal auditors provide independent assessments that support the monitoring process."
+      "t": "tip",
+      "v": "Key exam phrase: Internal control provides REASONABLE ASSURANCE — not absolute assurance and not a guarantee. The cost-benefit principle applies: the cost of a control should not exceed the expected benefit. Some risk is simply accepted because the cost of controlling it exceeds the potential loss."
     }
   ],
   "1-17": [
