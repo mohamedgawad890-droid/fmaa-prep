@@ -621,12 +621,12 @@
   {
    "t": "f",
    "l": "Materials Variance Formulas",
-   "v": "Total Materials Variance = (AP × AQ) − (SP × SQ)\n\nQuantity Variance = (AQ − SQ) × SP\nPrice Variance    = (AP − SP) × AQ\n\nAP = Actual Price, SP = Standard Price\nAQ = Actual Quantity used, SQ = Standard Quantity allowed for actual output"
+   "v": "Total Materials Variance = (AP × AQ) − (SP × SQ)\n\nQuantity Variance = (AQ used − SQ) × SP\nPrice Variance    = (AP − SP) × AQ\n\nAP = Actual Price, SP = Standard Price\nAQ = Actual Quantity, SQ = Standard Quantity allowed for actual output\n\nWHICH AQ GOES IN THE PRICE VARIANCE?\n  • Materials inventory carried at STANDARD cost → use AQ PURCHASED\n  • Materials inventory carried at ACTUAL cost   → use AQ USED\nThe quantity variance ALWAYS uses AQ used, never AQ purchased."
   },
   {
    "t": "def",
    "term": "Direct Materials Price Variance",
-   "v": "The difference between the actual price paid for materials and the standard price, multiplied by the actual quantity used. Formula: (AP − SP) × AQ. A favorable variance means materials cost less than standard; unfavorable means more."
+   "v": "The difference between the actual price paid for materials and the standard price, multiplied by the actual quantity. Formula: (AP − SP) × AQ. A favorable variance means materials cost less than standard; unfavorable means more. The quantity used depends on when the variance is isolated: if materials inventory is carried at standard cost the variance is recorded at purchase, so AQ = quantity purchased; if inventory is carried at actual cost the variance is recorded at use, so AQ = quantity used."
   },
   {
    "t": "def",
@@ -637,6 +637,15 @@
    "t": "ex",
    "l": "Medina Co. — Direct Materials (Full Example)",
    "v": "Each football: 1 sq meter leather standard, standard cost $5.00/meter.\nActual: produced 250 footballs, used 290 sq meters at $4.50/meter.\n\nSQ = 1 meter × 250 footballs = 250 meters\nAQ = 290 meters   AP = $4.50   SP = $5.00\n\nQuantity Variance = (290 − 250) × $5.00 = $200 UNFAVORABLE\n(Used 40 extra meters — overage at standard price)\n\nPrice Variance = ($4.50 − $5.00) × 290 = −$145 FAVORABLE\n(Paid $0.50 less per meter × 290 meters used)\n\nTotal Variance = $200 − $145 = $55 UNFAVORABLE\nVerify: (290 × $4.50) − (250 × $5.00) = $1,305 − $1,250 = $55 ✓"
+  },
+  {
+   "t": "ex",
+   "l": "Price Variance — Purchased vs Used (Same Facts, Two Answers)",
+   "v": "Extend the Medina Co. example. Standard: $5.00/meter, 1 meter per football.\nProduced 250 footballs. PURCHASED 400 meters at $4.50. USED 290 meters.\n\nSQ = 1 × 250 = 250 meters   AQ purchased = 400   AQ used = 290\n\nCASE 1 — Inventory carried at STANDARD cost (variance isolated at purchase):\n  Price Variance = ($4.50 − $5.00) × 400 purchased = −$200 FAVORABLE\n\nCASE 2 — Inventory carried at ACTUAL cost (variance isolated at use):\n  Price Variance = ($4.50 − $5.00) × 290 used = −$145 FAVORABLE\n\nQuantity Variance — IDENTICAL in both cases:\n  (290 used − 250) × $5.00 = $200 UNFAVORABLE\n\nSame facts, two different price variances ($200 F vs $145 F). The wording of the\nquestion is what decides it — nothing else changes."
+  },
+  {
+   "t": "tip",
+   "v": "Hunt for the phrase \"direct materials inventory is carried at standard cost\" (or \"...recorded at standard\"). That phrase is the exam's signal to use quantity PURCHASED in the price variance. If the question gives you both a purchased figure and a used figure, it is testing exactly this distinction — the two numbers are there to catch you. The quantity variance always uses quantity USED, no matter how inventory is carried."
   },
   {
    "t": "b",
@@ -687,6 +696,61 @@
     "Unfavorable efficiency variance: more hours used than standard (inexperienced workers, machine breakdowns, material quality issues)",
     "Favorable efficiency variance: fewer hours used than standard (experienced workers, better training, improved process)"
    ]
+  },
+  {
+   "t": "h",
+   "v": "Variable Overhead Variances"
+  },
+  {
+   "t": "p",
+   "v": "Variable overhead behaves like direct labor: it rises and falls with activity. So it splits into the same two pieces — a spending variance (did each hour of overhead cost what it should have?) and an efficiency variance (did we use the right number of hours?). Variable overhead is applied using an allocation base, almost always direct labor hours or machine hours. That base is the key to the whole topic: the efficiency variance is driven entirely by how many base hours were used, not by what the overhead itself cost."
+  },
+  {
+   "t": "f",
+   "l": "Variable Overhead Variance Formulas",
+   "v": "Total Variable OH Variance = Actual Variable OH − Variable OH Applied\nVariable OH Applied = SR × SH\n\nSpending Variance   = Actual Variable OH − (SR × AH)\n                    = (AR − SR) × AH\n\nEfficiency Variance = (AH − SH) × SR\n\nSR = Standard Variable OH Rate per hour, AR = Actual Variable OH Rate per hour\nAH = Actual Hours of the allocation base\nSH = Standard Hours allowed for actual output\n\nSpending + Efficiency = Total Variable OH Variance"
+  },
+  {
+   "t": "def",
+   "term": "Variable Overhead Spending Variance",
+   "v": "The difference between the actual variable overhead incurred and what the actual hours worked should have cost at the standard rate: Actual Variable OH − (SR × AH), or equivalently (AR − SR) × AH. It answers: for the hours we actually ran, did variable overhead cost more or less per hour than standard? Unfavorable means we paid more per hour than planned — for example a rise in the price of electricity, indirect materials, or supplies."
+  },
+  {
+   "t": "def",
+   "term": "Variable Overhead Efficiency Variance",
+   "v": "The difference between the actual hours of the allocation base used and the standard hours allowed for the actual output, priced at the standard variable overhead rate: (AH − SH) × SR. It has nothing to do with how much overhead cost. It measures only how efficiently the allocation base was used — if the base is direct labor hours, an unfavorable variable OH efficiency variance simply means labor took longer than standard, which drags the applied overhead along with it."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Sub-Variance",
+    "Formula",
+    "What It Measures",
+    "Can Be Caused By"
+   ],
+   "r": [
+    [
+     "Spending Variance",
+     "Actual Variable OH − (SR × AH)",
+     "For the hours actually run, did variable overhead cost more or less per hour than standard?",
+     "Higher utility rates; more expensive indirect materials; waste of supplies (Unfav) OR cheaper supplier for indirect materials; lower energy prices (Fav)"
+    ],
+    [
+     "Efficiency Variance",
+     "(AH − SH) × SR",
+     "Was the allocation base (labor or machine hours) used efficiently?",
+     "Untrained workers; poor-quality materials causing rework; machine breakdowns (Unfav) OR skilled workers; better scheduling (Fav)"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Variable Overhead Variances — Full Example",
+   "v": "Budgeted variable OH: $150,000. Budgeted direct labor hours: 30,000.\nStandard variable OH rate (SR) = $150,000 ÷ 30,000 = $5.00 per DLH.\nStandard: 2 DLH per unit. Actual production: 14,000 units.\nActual DLH worked: 29,000. Actual variable OH incurred: $150,800.\n\nSH = 2 × 14,000 = 28,000 hours\nAR = $150,800 ÷ 29,000 = $5.20 per DLH\nVariable OH Applied = 28,000 × $5.00 = $140,000\n\nTotal Variable OH Variance:\n  Actual $150,800 − Applied $140,000 = $10,800 Unfavorable\n\nBreakdown:\n  Spending Variance = $150,800 − (29,000 × $5.00)\n                    = $150,800 − $145,000 = $5,800 Unfavorable\n  (Each hour of overhead cost $5.20 instead of $5.00 — $0.20 × 29,000 = $5,800)\n\n  Efficiency Variance = (29,000 − 28,000) × $5.00 = $5,000 Unfavorable\n  (Took 1,000 more labor hours than standard allowed for 14,000 units)\n\nCheck: $5,800 U + $5,000 U = $10,800 U Total ✓"
+  },
+  {
+   "t": "tip",
+   "v": "Variable overhead has an efficiency variance; fixed overhead does not. Variable overhead has NO production-volume variance; fixed overhead does. Get this pairing straight and most overhead variance questions become sorting exercises. Also note the trap: the variable OH efficiency variance uses the SAME (AH − SH) gap as the direct labor efficiency variance — only the rate differs. If labor efficiency is unfavorable, variable OH efficiency is unfavorable too, automatically."
   },
   {
    "t": "h",
@@ -747,8 +811,10 @@
    "t": "key",
    "v": [
     "Flexible Budget Variance = Actual − Flexible Budget (measures cost control). Sales Volume Variance = Flexible − Static (measures volume impact). They sum to the total static budget variance.",
-    "DM: Quantity Variance = (AQ − SQ) × SP. Price Variance = (AP − SP) × AQ. Total = (AP × AQ) − (SP × SQ).",
+    "DM: Quantity Variance = (AQ used − SQ) × SP. Price Variance = (AP − SP) × AQ. Total = (AP × AQ) − (SP × SQ).",
+    "Materials price variance: use AQ PURCHASED when inventory is carried at standard cost; use AQ USED when it is carried at actual cost. The quantity variance always uses AQ used.",
     "DL: Rate Variance = (AR − SR) × AH. Efficiency Variance = (AH − SH) × SR. Same structure as materials with different names.",
+    "Variable OH: Spending = Actual Variable OH − (SR × AH). Efficiency = (AH − SH) × SR. Variable OH has an efficiency variance but NO production-volume variance.",
     "Fixed OH has ONLY TWO sub-variances: Spending (Actual − Budgeted) and Production-Volume (Budgeted − Applied). There is NO fixed OH efficiency variance.",
     "Favorable variance for a cost = actual lower than standard (good). Unfavorable = actual higher (bad). Opposite for revenue."
    ]
@@ -788,7 +854,7 @@
   {
    "t": "ex",
    "l": "Customer Profitability — Why the Big Customer Can Lose Money",
-   "v": "Two customers, same gross margin percentage, very different profit.\n\nColumns: Customer A | Customer B\nSales:  $500,000  |  $200,000\nCost of goods sold:  $350,000  |  $140,000\nGross margin:  $150,000  |  $60,000\nGross margin %:  30%  |  30%\n\nNow apply the cost-to-serve (activity costs):\nNumber of orders:  200  |  5\nOrder processing at $300/order:  $60,000  |  $1,500\nNumber of deliveries:  200  |  5\nDelivery at $250/delivery:  $50,000  |  $1,250\nSales visits at $500/visit (40 vs 2):  $20,000  |  $1,000\nTotal cost to serve:  $130,000  |  $3,750\n\nCUSTOMER PROFIT:\nCustomer A = $150,000 - $130,000 = $20,000  -> 4% of sales\nCustomer B =  $60,000 -   $3,750 = $56,250  -> 28% of sales\n\nCustomer A buys 2.5x more but earns LESS than a third of B's profit, because A\norders in small frequent quantities. The gross margin hides this completely --\nonly cost-to-serve analysis reveals it."
+   "v": "Two customers, same gross margin percentage, very different profit.\n\nColumns: Customer A | Customer B\nSales:  $500,000  |  $200,000\nCost of goods sold:  $350,000  |  $140,000\nGross margin:  $150,000  |  $60,000\nGross margin %:  30%  |  30%\n\nNow apply the cost-to-serve (activity costs):\nNumber of orders:  200  |  5\nOrder processing at $300/order:  $60,000  |  $1,500\nNumber of deliveries:  200  |  5\nDelivery at $250/delivery:  $50,000  |  $1,250\nSales visits at $500/visit (40 vs 2):  $20,000  |  $1,000\nTotal cost to serve:  $130,000  |  $3,750\n\nCUSTOMER PROFIT:\nCustomer A = $150,000 - $130,000 = $20,000  -> 4% of sales\nCustomer B =  $60,000 -   $3,750 = $56,250  -> 28% of sales\n\nCustomer A buys 2.5x more but earns roughly a third of B's profit ($20,000 vs $56,250),\nbecause A orders in small frequent quantities. The gross margin hides this completely --\nboth customers look identical at 30%. Only cost-to-serve analysis reveals it."
   },
   {
    "t": "h",
@@ -828,7 +894,7 @@
   {
    "t": "ex",
    "l": "ROI vs RI Conflict — Classic Exam Scenario",
-   "v": "Company required rate of return (hurdle rate): 10%\nDivision A current ROI: 20% (operating income $600K ÷ assets $3,000K)\n\nNew project available:\n  Additional operating income: $80,000\n  Additional investment required: $500,000\n  Project ROI = $80,000 ÷ $500,000 = 16%\n\nROI ANALYSIS (Manager's perspective):\n  If project accepted: New ROI = ($600K + $80K) ÷ ($3,000K + $500K) = $680K ÷ $3,500K = 19.4%\n  Old ROI was 20% → New ROI is LOWER → Manager REJECTS project\n\nRI ANALYSIS (Company's perspective):\n  Project RI = $80,000 − (10% × $500,000) = $80,000 − $50,000 = +$30,000\n  Positive RI → Project ADDS value to the company → Company WANTS to accept it\n\nConclusion: The manager's ROI-based evaluation causes rejection of a value-creating project.\nRI solves this: any project with positive RI (return > hurdle rate) should be accepted."
+   "v": "Company required rate of return (hurdle rate): 10%\nDivision A: operating income $600,000 ÷ assets $4,000,000 → current ROI = 15%\n\nNew project available (the same one from the ROI and RI examples above):\n  Additional operating income: $80,000\n  Additional investment required: $600,000\n  Project ROI = $80,000 ÷ $600,000 = 13.3%\n\nROI ANALYSIS (Manager's perspective):\n  If accepted: New ROI = ($600,000 + $80,000) ÷ ($4,000,000 + $600,000)\n             = $680,000 ÷ $4,600,000 = 14.8%\n  Old ROI was 15% → New ROI is LOWER → Manager REJECTS the project\n\nRI ANALYSIS (Company's perspective):\n  Project RI = $80,000 − (10% × $600,000) = $80,000 − $60,000 = +$20,000\n  Positive RI → the project earns above the 10% hurdle → Company WANTS it\n\nBoth measures are correct arithmetic — they just answer different questions.\nROI asks \"does this beat my current average?\" (13.3% < 15% → no).\nRI asks \"does this beat the company's hurdle?\" (13.3% > 10% → yes).\n\nConclusion: ROI-based evaluation causes the manager to reject a value-creating\nproject. This is the classic goal-congruence failure, and RI is the fix."
   },
   {
    "t": "tip",
@@ -1165,7 +1231,7 @@
   {
    "t": "ex",
    "l": "Margin of Safety — Ray Company",
-   "v": "Actual sales: $500,000. Breakeven sales (from earlier): $360,000.\n\nMargin of Safety $  = $500,000 − $360,000 = $140,000\nMargin of Safety %  = $140,000 ÷ $500,000 = 28%\n\nInterpretation: sales can drop up to 28% before the company falls into a loss.\nA higher percentage indicates a stronger safety cushion."
+   "v": "Ray Company, same facts throughout: price $60, variable cost $35, UCM $25,\nfixed costs $150,000, breakeven 6,000 units / $360,000.\nActual sales: 10,000 units = $600,000.\n\nMargin of Safety $     = $600,000 − $360,000 = $240,000\nMargin of Safety units = 10,000 − 6,000 = 4,000 units\nMargin of Safety %     = $240,000 ÷ $600,000 = 40%\n\nInterpretation: sales can drop up to 40% — 4,000 units — before the company\nfalls into a loss. A higher percentage indicates a stronger safety cushion.\n\nCross-check with the CVP statement: CM $250,000 − fixed $150,000 = $100,000\noperating income. Note $240,000 margin of safety × 41.7% CMR = $100,000 ✓\n(Margin of Safety $ × CM Ratio = Operating Income — a useful shortcut.)"
   },
   {
    "t": "key",
