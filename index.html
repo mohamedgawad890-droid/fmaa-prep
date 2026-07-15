@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-15-01 remove-groupcode-example-placeholder -->
+<!-- FMAA-BUILD: 2026-07-15-02 security-fontscale-webhook-token -->
 <script>
-window.FMAA_BUILD='2026-07-15-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-15-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -29,7 +29,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .mobile-brand-img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid #D6EAF8;flex-shrink:0}
 .mobile-brand-title{font-size:14px;font-weight:600;color:#1A5276;letter-spacing:.3px}
 @media(min-width:900px){.mobile-brand{display:none!important}}
-.content{display:flex;flex-direction:column;flex:1;overflow:auto;position:relative}
+.content{--fs:1;display:flex;flex-direction:column;flex:1;overflow:auto;position:relative}
 .scroll-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .pad{padding:0 16px}
 .sh{padding:16px 16px 10px;border-bottom:.5px solid #e0e0d8;flex-shrink:0}
@@ -46,34 +46,34 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bh{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:.5px solid #e0e0d8;flex-shrink:0;background:#fff}
 .bh-back{background:none;border:none;cursor:pointer;font-size:26px;color:#555;padding:0;line-height:1;font-family:inherit}
-.lh{font-size:16px;font-weight:600;color:#1a1a1a;margin:18px 0 8px;line-height:1.3}
-.lp{font-size:14px;color:#333;line-height:1.7;margin-bottom:10px}
+.lh{font-size:calc(16px * var(--fs,1));font-weight:600;color:#1a1a1a;margin:18px 0 8px;line-height:1.3}
+.lp{font-size:calc(14px * var(--fs,1));color:#333;line-height:1.7;margin-bottom:10px}
 .formula{border-radius:10px;padding:12px 14px;margin:12px 0}
-.formula-lbl{font-size:10px;font-weight:600;letter-spacing:.8px;margin-bottom:4px}
-.formula-txt{font-size:15px;font-weight:500;line-height:1.5}
+.formula-lbl{font-size:calc(10px * var(--fs,1));font-weight:600;letter-spacing:.8px;margin-bottom:4px}
+.formula-txt{font-size:calc(15px * var(--fs,1));font-weight:500;line-height:1.5}
 .tip{background:#FFFBEB;border:1px solid #F6D860;border-radius:10px;padding:12px 14px;margin:12px 0}
-.tip-lbl{font-size:10px;font-weight:700;color:#856404;letter-spacing:.8px;margin-bottom:4px}
-.tip-txt{font-size:13px;color:#555;line-height:1.6}
+.tip-lbl{font-size:calc(10px * var(--fs,1));font-weight:700;color:#856404;letter-spacing:.8px;margin-bottom:4px}
+.tip-txt{font-size:calc(13px * var(--fs,1));color:#555;line-height:1.6}
 .ex-block{background:#F0FBF4;border:1.5px solid #27AE6040;border-radius:10px;padding:12px 14px;margin:12px 0}
-.ex-lbl{font-size:10px;font-weight:700;color:#1E8449;letter-spacing:.8px;margin-bottom:6px}
-.ex-body{font-size:13px;color:#1a1a1a;line-height:1.7;font-family:inherit;white-space:pre-wrap}
+.ex-lbl{font-size:calc(10px * var(--fs,1));font-weight:700;color:#1E8449;letter-spacing:.8px;margin-bottom:6px}
+.ex-body{font-size:calc(13px * var(--fs,1));color:#1a1a1a;line-height:1.7;font-family:inherit;white-space:pre-wrap}
 .def-block{background:#EBF3FA;border:1.5px solid #3498DB40;border-radius:10px;padding:12px 14px;margin:12px 0}
-.def-lbl{font-size:10px;font-weight:700;color:#1A5276;letter-spacing:.8px;margin-bottom:4px}
-.def-term{font-size:14px;font-weight:600;color:#154360;margin-bottom:6px}
-.def-body{font-size:13px;color:#1a1a1a;line-height:1.6}
+.def-lbl{font-size:calc(10px * var(--fs,1));font-weight:700;color:#1A5276;letter-spacing:.8px;margin-bottom:4px}
+.def-term{font-size:calc(14px * var(--fs,1));font-weight:600;color:#154360;margin-bottom:6px}
+.def-body{font-size:calc(13px * var(--fs,1));color:#1a1a1a;line-height:1.6}
 .key-block{background:#F4EFFB;border:1.5px solid #7D3C9840;border-radius:10px;padding:14px 16px;margin:18px 0 12px}
-.key-lbl{font-size:11px;font-weight:700;color:#5B2C6F;letter-spacing:.8px;margin-bottom:10px}
+.key-lbl{font-size:calc(11px * var(--fs,1));font-weight:700;color:#5B2C6F;letter-spacing:.8px;margin-bottom:10px}
 .key-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.key-list li{display:flex;gap:8px;font-size:13px;color:#333;line-height:1.6;align-items:flex-start}
+.key-list li{display:flex;gap:8px;font-size:calc(13px * var(--fs,1));color:#333;line-height:1.6;align-items:flex-start}
 .key-list li::before{content:"✓";color:#7D3C98;font-weight:700;flex-shrink:0}
 .blist{list-style:none;margin:8px 0 12px;padding:0;display:flex;flex-direction:column;gap:6px}
-.blist li{display:flex;gap:8px;font-size:14px;color:#333;line-height:1.6;align-items:flex-start}
+.blist li{display:flex;gap:8px;font-size:calc(14px * var(--fs,1));color:#333;line-height:1.6;align-items:flex-start}
 .slist{list-style:none;margin:8px 0 12px;padding:0;counter-reset:slist;display:flex;flex-direction:column;gap:8px}
-.slist li{display:flex;gap:10px;font-size:14px;color:#333;line-height:1.6;align-items:flex-start}
+.slist li{display:flex;gap:10px;font-size:calc(14px * var(--fs,1));color:#333;line-height:1.6;align-items:flex-start}
 .snum{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;margin-top:1px}
 .tbl-wrap{overflow-x:auto;margin:10px 0 14px;border-radius:8px;border:.5px solid #e0e0d8}
-.tbl{border-collapse:collapse;width:100%;font-size:13px}
-.tbl th{padding:8px 10px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.5px}
+.tbl{border-collapse:collapse;width:100%;font-size:calc(13px * var(--fs,1))}
+.tbl th{padding:8px 10px;text-align:left;font-weight:600;font-size:calc(11px * var(--fs,1));letter-spacing:.5px}
 .tbl td{padding:8px 10px;border-top:.5px solid #f0f0eb;color:#444;line-height:1.5}
 .ar-term{cursor:pointer;border-bottom:1px dashed #888;position:relative;display:inline}
 .ar-tip{display:none}.ar-tip.show{display:block}
@@ -550,7 +550,7 @@ function isInstructor(){return STATE.user&&STATE.user.uid===INSTRUCTOR_UID;}
 // ─── FONT SIZE / DAILY GOAL ───────────────────────────────────────────────
 function loadFontSize(){try{return localStorage.getItem('fmaa-fontsize-v1')||'md';}catch{return 'md';}}
 function saveFontSize(v){try{localStorage.setItem('fmaa-fontsize-v1',v);}catch{}STATE.fontSize=v;applyFontSize();}
-function applyFontSize(){const c=document.getElementById('content-area');if(!c)return;const map={sm:'.9',md:'1',lg:'1.15'};c.style.zoom=map[STATE.fontSize]||'1';}
+function applyFontSize(){const c=document.getElementById('content-area');if(!c)return;const map={sm:'0.9',md:'1',lg:'1.15'};c.style.setProperty('--fs',map[STATE.fontSize]||'1');c.style.zoom='';}
 function loadDailyGoal(){try{const v=parseInt(localStorage.getItem('fmaa-goal-v1'));return v>0?v:30;}catch{return 30;}}
 function saveDailyGoal(mins){const v=Math.max(5,Math.min(240,parseInt(mins)||30));try{localStorage.setItem('fmaa-goal-v1',String(v));}catch{}STATE.dailyGoalMinutes=v;if(STATE.user)db.collection('fmaa-students').doc(STATE.user.uid).set({dailyGoalMinutes:v},{merge:true}).catch(()=>{});}
 function todayStudyMinutes(){const st=loadStudyTime();const today=new Date().toDateString();return st.todayDate===today?(st.todayMinutes||0):0;}
@@ -1135,15 +1135,16 @@ async function toggleBestAnswer(replyId,currentlyBest){
 // ─── LEADERBOARD ──────────────────────────────────────────────────────────────
 async function syncLeaderboard(){
   if(!STATE.user||!db)return;const{progress}=STATE;const st=loadStudent();if(!st||!st.name)return;
-  const score={name:st.name,country:st.country||'',lessons:progress.done.length,accuracy:getAcc(),mcqTotal:progress.mcqTotal||0,mcqRight:progress.mcqRight||0,updatedAt:new Date().toISOString()};
+  const score={name:st.name,country:st.country||'',studentId:st.studentId||'',lessons:progress.done.length,accuracy:getAcc(),mcqTotal:progress.mcqTotal||0,mcqRight:progress.mcqRight||0,updatedAt:new Date().toISOString()};
   try{await db.collection('fmaa-leaderboard').doc(STATE.user.uid).set(score);}catch(e){console.log('LB sync error',e);}
 }
 
 // ─── UPLOAD & SHEET ──────────────────────────────────────────────────────────
+const SHEET_TOKEN='fmaa-7Qx2Lm9Rv4Kd8Wt3';
 async function sendToSheet(data){
   try{
     const fd=new FormData();
-    fd.append('payload',JSON.stringify({...data,_rowHeight:80}));
+    fd.append('payload',JSON.stringify({...data,_rowHeight:80,token:SHEET_TOKEN}));
     await fetch('https://script.google.com/macros/s/AKfycbyE1RuXoTaxpo9n2L1OK8EvvA2_iX7OwkKqRkqxjHuSExYedn2lqthrSlAK0X7rTtxj/exec',{
       method:'POST',
       mode:'no-cors',
@@ -1411,7 +1412,9 @@ async function genUniqueStudentId(){
   for(let i=0;i<6;i++){
     const cand=genStudentId();
     try{
-      const snap=await db.collection('fmaa-students').where('studentId','==',cand).limit(1).get();
+      // Uniqueness is checked against fmaa-leaderboard (public-read) so that
+      // fmaa-students can stay locked down to instructor-or-own. See syncLeaderboard().
+      const snap=await db.collection('fmaa-leaderboard').where('studentId','==',cand).limit(1).get();
       if(snap.empty)return cand;
     }catch(_){return cand;}
   }
@@ -1457,6 +1460,12 @@ async function submitProfile(){
   else if(groupCode){_mergedStudent.pendingGroupCode=savePendingGroupCode;_mergedStudent.groupCodeStatus='pending';delete _mergedStudent.groupCode;delete _mergedStudent.groupCodeRejectReason;}
   else {delete _mergedStudent.groupCode;delete _mergedStudent.pendingGroupCode;delete _mergedStudent.groupCodeStatus;}
   saveStudent(_mergedStudent);
+  // Claim this studentId on the public-read leaderboard so genUniqueStudentId()
+  // can check uniqueness without needing open read access to fmaa-students.
+  if(STATE.user&&db){
+    try{await db.collection('fmaa-leaderboard').doc(STATE.user.uid).set({name,country:country||'',studentId},{merge:true});}
+    catch(e){console.log('LB studentId claim error',e);}
+  }
   sendToSheet({name,mobile,email,country,level,goal,examdate,city,role,company,nextCert,studyHours,heardFrom,groupCode:alreadyApproved?groupCode:('PENDING: '+groupCode),whatsapp,university,gradYear,expYears,prevStudy,studentId,photo:photoUrl||'No Photo',app:'FMAA'});
   render();
   if(groupCode&&!alreadyApproved){showModal({icon:'⏳',title:'Request submitted',body:'Your group code request is waiting for instructor approval. You\'ll get access to group content once approved.',type:'info',confirmText:'OK'});}
