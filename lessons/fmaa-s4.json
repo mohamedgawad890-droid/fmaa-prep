@@ -1,1161 +1,1181 @@
 {
-  "4-1": [
-    {
-      "t": "h",
-      "v": "What Is a Cost? Start Here."
-    },
-    {
-      "t": "p",
-      "v": "A cost is simply money a business sacrifices to get something done — buy materials, pay workers, run a machine, rent a building. Before any formula or table, you need to understand one foundational question: what happens to a cost when the business produces more or less? The answer to that question is what this entire unit is about."
-    },
-    {
-      "t": "h",
-      "v": "Topic 1: Variable Costs"
-    },
-    {
-      "t": "p",
-      "v": "Imagine you manufacture footballs. Each football requires exactly 1 square meter of leather. If you make 100 footballs, you need 100 square meters. If you make 500, you need 500. The leather cost follows production exactly — it moves up when you produce more, down when you produce less. That is a variable cost. Direct materials and direct labor are the most common variable costs."
-    },
-    {
-      "t": "def",
-      "term": "Variable Cost",
-      "v": "A cost that changes in total in direct proportion to changes in the level of activity, while remaining constant on a per-unit basis within the relevant range."
-    },
-    {
-      "t": "b",
-      "v": [
-        "As production increases → total variable cost increases, variable cost per unit stays the same",
-        "As production decreases → total variable cost decreases, variable cost per unit stays the same",
-        "If production = zero → variable cost = zero (no production means no variable cost)"
-      ]
-    },
-    {
-      "t": "f",
-      "l": "Variable Cost — Key Relationship",
-      "v": "Total Variable Cost = Cost per Unit × Number of Units Produced\nCost per Unit = Constant (never changes with volume)"
-    },
-    {
-      "t": "ex",
-      "l": "Variable Cost — Numeric Check",
-      "v": "Direct material: $5 per square meter of leather, 1 meter per football.\nProduce 100 footballs → Total material cost = $500\nProduce 500 footballs → Total material cost = $2,500\nCost per unit = $5 in both cases — unchanged. ✓ Variable."
-    },
-    {
-      "t": "tip",
-      "v": "Exam trap: Variable costs per unit are CONSTANT. Only the total changes. If a question says variable cost per unit increases as volume rises, that is wrong."
-    },
-    {
-      "t": "h",
-      "v": "Topic 2: Fixed Costs"
-    },
-    {
-      "t": "p",
-      "v": "Now think about your factory rent. You pay $50,000 per month whether you make 1 football or 100,000. The landlord does not care how many units you produce. That is a fixed cost — it does not change in total as production changes, as long as you stay within the relevant range. Factory rent, depreciation on equipment, and the plant manager's salary are classic examples of fixed manufacturing overhead."
-    },
-    {
-      "t": "def",
-      "term": "Fixed Cost",
-      "v": "A cost that remains constant in total within the relevant range regardless of changes in activity level. On a per-unit basis, fixed cost decreases as activity increases and increases as activity decreases. The relevant range is the normal operating range over which cost behavior assumptions hold."
-    },
-    {
-      "t": "b",
-      "v": [
-        "As production increases → total fixed cost stays the same, fixed cost per unit decreases",
-        "As production decreases → total fixed cost stays the same, fixed cost per unit increases",
-        "Fixed costs only stay fixed within the relevant range (the normal operating range of the business)"
-      ]
-    },
-    {
-      "t": "f",
-      "l": "Fixed Cost — Key Relationship",
-      "v": "Total Fixed Cost = Constant (does not change with production)\nFixed Cost per Unit = Total Fixed Cost ÷ Number of Units Produced (changes with volume)"
-    },
-    {
-      "t": "ex",
-      "l": "Fixed Cost — Numeric Check",
-      "v": "Factory rent = $50,000/month.\nProduce 1,000 units → Rent per unit = $50,000 ÷ 1,000 = $50.00\nProduce 5,000 units → Rent per unit = $50,000 ÷ 5,000 = $10.00\nTotal rent = $50,000 in both cases — unchanged. ✓ Fixed.\nBut per-unit cost dropped from $50 to $10 as production increased."
-    },
-    {
-      "t": "tip",
-      "v": "This is the most-tested concept in this unit: 'Total fixed cost stays the same' does NOT mean 'fixed cost per unit stays the same.' Total fixed cost is constant. Fixed cost per unit FALLS as production rises and RISES as production falls. These are opposite behaviors."
-    },
-    {
-      "t": "h",
-      "v": "Topic 3: Mixed Costs (Semi-Variable Costs)"
-    },
-    {
-      "t": "p",
-      "v": "Some costs have both a fixed base and a variable component. Your factory electricity bill might include a fixed monthly connection fee of $500 regardless of usage, plus $0.08 per kilowatt-hour actually consumed. The $500 is always there — that is the fixed element. The usage charge moves with production — that is the variable element. This combination is a mixed cost, also called a semi-variable cost."
-    },
-    {
-      "t": "def",
-      "term": "Mixed Cost (Semi-Variable Cost)",
-      "v": "A cost that contains both a fixed component (which does not change with activity) and a variable component (which changes proportionally with activity). Total cost never falls below the fixed base, even at zero activity."
-    },
-    {
-      "t": "p",
-      "v": "Another example: a salesperson paid a base salary of $3,000/month plus $50 commission per unit sold. The salary is fixed; the commission is variable. Together they form a mixed cost."
-    },
-    {
-      "t": "f",
-      "l": "Mixed Cost Formula (High-Low Method)",
-      "v": "Total Mixed Cost = Fixed Component + (Variable Rate × Activity Level)\nVariable Rate = (Cost at High Activity − Cost at Low Activity) ÷ (High Activity − Low Activity)\nFixed Component = Total Cost at either point − (Variable Rate × Activity at that point)"
-    },
-    {
-      "t": "ex",
-      "l": "Mixed Cost — Numeric Example",
-      "v": "Electricity: $500 fixed per month + $0.08 per kWh.\nUse 2,000 kWh → Total = $500 + (2,000 × $0.08) = $500 + $160 = $660\nUse 10,000 kWh → Total = $500 + (10,000 × $0.08) = $500 + $800 = $1,300\nThe $500 floor never disappears — it is always there even at zero production."
-    },
-    {
-      "t": "h",
-      "v": "Step Costs (Semi-Fixed Costs)"
-    },
-    {
-      "t": "p",
-      "v": "A step cost (semi-fixed cost) is fixed over a small range of activity, then jumps to a higher level. It moves upward in steps. Example: a hospital needs one nurse per 25 patients. At 1–25 patients, one nurse's salary is incurred. At 26–50, two nurses. At 51–75, three. Each jump is a step. This differs from a semi-variable cost, which increases smoothly from a fixed base; a step cost increases in sudden jumps."
-    },
-    {
-      "t": "def",
-      "term": "Step Cost (Semi-Fixed Cost)",
-      "v": "A cost that remains fixed over a small range of activity, then jumps to a higher fixed level once activity crosses a threshold. Unlike mixed costs which change smoothly, step costs increase in sudden jumps. Common when capacity is added in discrete blocks (equipment, staff, floor space)."
-    },
-    {
-      "t": "ex",
-      "l": "Step Cost — Hospital Nursing Staff",
-      "v": "Rule: 1 nurse per 25 patients. Nurse salary = $6,000/month.\n\nPatients 1–25:   1 nurse  → Total = $6,000\nPatients 26–50:  2 nurses → Total = $12,000\nPatients 51–75:  3 nurses → Total = $18,000\n\nAt 24 patients: cost per patient = $6,000 ÷ 24 = $250\nAt 26 patients: cost per patient = $12,000 ÷ 26 = $462 (jumped — one extra nurse hired)\nAt 50 patients: cost per patient = $12,000 ÷ 50 = $240\n\nEach jump adds a full step of fixed cost that must be absorbed by the new activity range."
-    },
-    {
-      "t": "h",
-      "v": "All Three Side by Side"
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Cost Type",
-        "Total Behavior",
-        "Per-Unit Behavior",
-        "Example"
-      ],
-      "r": [
-        [
-          "Variable",
-          "Changes proportionally with production",
-          "Constant — never changes",
-          "Direct materials per unit"
-        ],
-        [
-          "Fixed",
-          "Constant within relevant range",
-          "Decreases as production rises",
-          "Factory rent, equipment depreciation"
-        ],
-        [
-          "Mixed (Semi-variable)",
-          "Changes, but never reaches zero",
-          "Changes with activity",
-          "Electricity: base fee + usage charge"
-        ],
-        [
-          "Step (Semi-fixed)",
-          "Constant over small range, then jumps",
-          "Decreases within range, then jumps",
-          "Hospital nursing staff salaries"
-        ]
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Estimating Mixed Costs — The High-Low Method"
-    },
-    {
-      "t": "p",
-      "v": "When a cost is mixed, management needs to separate its fixed and variable components to plan and control it. The high-low method is the simplest technique: it uses only the highest and lowest activity points to estimate the variable rate per unit and the fixed component. It is quick and easy but ignores all data points in between — so it is less accurate than regression analysis. Use it when you need a fast estimate."
-    },
-    {
-      "t": "def",
-      "term": "High-Low Method",
-      "v": "A simple cost-estimation technique that uses only the highest and lowest activity levels within a data set to split a mixed cost into its fixed and variable components. Variable rate is estimated from the change in cost over the change in activity between the two extreme points; fixed component is the remainder."
-    },
-    {
-      "t": "ex",
-      "l": "High-Low Method — Utilities Example",
-      "v": "Monthly data on utilities cost and machine hours:\n\nMonth      Machine Hours    Utilities Cost\nJan             2,000            $3,000\nFeb             1,500            $2,500  ← Low\nMar             3,000            $4,000  ← High\nApr             2,500            $3,500\n\nStep 1: Variable rate = (High Cost − Low Cost) ÷ (High Activity − Low Activity)\n                     = ($4,000 − $2,500) ÷ (3,000 − 1,500)\n                     = $1,500 ÷ 1,500 hours\n                     = $1.00 per machine hour\n\nStep 2: Fixed component (use either point — result should match):\n  Using High: $4,000 − ($1.00 × 3,000) = $4,000 − $3,000 = $1,000 fixed\n  Using Low : $2,500 − ($1.00 × 1,500) = $2,500 − $1,500 = $1,000 fixed  ✓\n\nCost formula: Total Utilities = $1,000 + ($1.00 × Machine Hours)\nPredict April at 2,500 hours: $1,000 + $2,500 = $3,500  ✓ (matches actual)"
-    },
-    {
-      "t": "tip",
-      "v": "The high-low method only uses TWO data points and ignores everything else — including outliers that may distort the answer. If the highest or lowest month is unusual (a shutdown, a rush order), the estimate will be wrong. When accuracy matters, use regression analysis instead. On the exam, always identify the highest and lowest ACTIVITY levels, not the highest and lowest costs."
-    },
-    {
-      "t": "h",
-      "v": "Topic 4: Cost Measurement Methods"
-    },
-    {
-      "t": "p",
-      "v": "Once you know how costs behave, you need to assign them to units produced. There are three main methods for allocating costs — both direct costs (materials and labor) and indirect costs (overhead) — to units manufactured."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Method",
-        "How Direct Costs Applied",
-        "How Overhead Applied",
-        "Best Used For"
-      ],
-      "r": [
-        [
-          "Standard Costing",
-          "Standard price × standard quantity allowed for actual output",
-          "Predetermined rate × standard input for actual output",
-          "Most manufacturing; flexible budgeting and variance analysis"
-        ],
-        [
-          "Normal Costing",
-          "Actual price × actual quantity used",
-          "Predetermined rate × actual input used",
-          "Job order costing where actual direct costs are known"
-        ],
-        [
-          "Actual Costing",
-          "Actual price × actual quantity used",
-          "Actual overhead rate × actual input used",
-          "Rarely used; can cause significant cost-per-unit fluctuation"
-        ]
-      ]
-    },
-    {
-      "t": "def",
-      "term": "Standard Costing",
-      "v": "A costing method that assigns costs to production using standard (predetermined) prices, quantities, and overhead rates. Standards are set at the beginning of the year based on efficient operating conditions. Actual costs are then compared to standards to compute variances. Widely used because it enables flexible budgeting and variance analysis."
-    },
-    {
-      "t": "def",
-      "term": "Normal Costing",
-      "v": "A costing method that uses actual direct materials and actual direct labor costs, but applies overhead using a predetermined overhead rate rather than actual overhead. Commonly used in job order costing where actual direct costs are known when the job is completed but actual overhead is not."
-    },
-    {
-      "t": "def",
-      "term": "Actual Costing",
-      "v": "A costing method that uses actual costs for direct materials, direct labor, AND overhead. Rarely used in practice because actual overhead is not known until the end of the accounting period, and unit costs fluctuate significantly from period to period."
-    },
-    {
-      "t": "p",
-      "v": "The predetermined overhead application rate is the key tool in both standard and normal costing. It is calculated once at the beginning of the year using budgeted amounts:"
-    },
-    {
-      "t": "f",
-      "l": "Predetermined Overhead Rate",
-      "v": "Predetermined Rate = Budgeted Manufacturing Overhead ÷ Budgeted Activity Level of Allocation Base\nCommon allocation bases: direct labor hours, machine hours, direct labor cost"
-    },
-    {
-      "t": "def",
-      "term": "Predetermined Overhead Rate",
-      "v": "The overhead application rate calculated at the beginning of the year using budgeted (not actual) overhead divided by the budgeted activity level of the allocation base. It is used throughout the year to apply overhead to production, so unit costs remain stable even when actual overhead fluctuates period-to-period."
-    },
-    {
-      "t": "ex",
-      "l": "Predetermined Rate Calculation",
-      "v": "Budgeted variable overhead: $10,000. Budgeted production: 2,000 units.\nStandard machine hours per unit: 0.25 hours → Budgeted hours = 500.\nPredetermined rate = $10,000 ÷ 500 hours = $20 per machine hour.\n\nActual production = 2,500 units → Standard hours allowed = 2,500 × 0.25 = 625 hours.\nOverhead applied = 625 × $20 = $12,500.\nNote: Actual overhead incurred = $12,000 → Over-applied by $500."
-    },
-    {
-      "t": "tip",
-      "v": "Under-applied overhead = actual overhead incurred > overhead applied to production. Over-applied = actual < applied. At year-end, if immaterial: close to Cost of Goods Sold. If material: prorate among COGS, Finished Goods, and Work-in-Process."
-    },
-    {
-      "t": "h",
-      "v": "Topic 5: Variable vs Absorption Costing"
-    },
-    {
-      "t": "p",
-      "v": "Variable costing and absorption costing are two methods of inventory costing. The ONLY difference between them is how fixed factory overhead is treated. Everything else — variable manufacturing costs, selling and admin costs — is handled the same way."
-    },
-    {
-      "t": "def",
-      "term": "Absorption Costing",
-      "v": "An inventory costing method that treats ALL manufacturing costs — including fixed factory overhead — as product costs. Required by GAAP for external financial reporting and by the IRS for tax reporting."
-    },
-    {
-      "t": "def",
-      "term": "Variable (Direct) Costing",
-      "v": "An inventory costing method that treats only variable manufacturing costs as product costs; fixed factory overhead is treated as a period cost and expensed in the period incurred. Used for internal decision-making only; NOT acceptable for GAAP or tax reporting."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "",
-        "Absorption Costing",
-        "Variable (Direct) Costing"
-      ],
-      "r": [
-        [
-          "Fixed factory overhead",
-          "Product cost — included in inventory, expensed when units are sold",
-          "Period cost — expensed in the period incurred, regardless of sales"
-        ],
-        [
-          "Required for",
-          "External GAAP financial reporting",
-          "Internal management analysis only — NOT acceptable for GAAP or tax reporting"
-        ],
-        [
-          "Income statement shows",
-          "Gross profit (Revenue − COGS including fixed OH)",
-          "Contribution margin (Revenue − All variable costs), then fixed costs below"
-        ],
-        [
-          "When production > sales",
-          "Higher income (fixed OH deferred in ending inventory)",
-          "Lower income (all fixed OH expensed immediately)"
-        ],
-        [
-          "When production = sales",
-          "Same income as variable costing",
-          "Same income as absorption costing"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Absorption vs Variable Costing — Income Difference",
-      "v": "Fixed factory overhead: $120,000. Units produced: 12,000. Units sold: 10,000.\nFixed OH per unit (absorption) = $120,000 ÷ 12,000 = $10/unit\n\nAbsorption: Fixed OH in COGS = 10,000 × $10 = $100,000. In ending inventory = 2,000 × $10 = $20,000.\nVariable: All $120,000 expensed this period regardless of how many sold.\n\nDifference in operating income = $20,000 (absorption income is $20,000 higher because\n$20,000 of fixed OH is deferred in ending inventory under absorption)."
-    },
-    {
-      "t": "tip",
-      "v": "The income difference between absorption and variable costing equals: (Units Produced − Units Sold) × Fixed OH per unit. When production exceeds sales, absorption income is HIGHER. When sales exceed production, absorption income is LOWER."
-    },
-    {
-      "t": "h",
-      "v": "Topic 6: Process Costing vs Job Order Costing"
-    },
-    {
-      "t": "p",
-      "v": "These are two cost accumulation systems used to assign costs to products. The choice depends on whether units are identical or distinct."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "",
-        "Process Costing",
-        "Job Order Costing"
-      ],
-      "r": [
-        [
-          "Used when",
-          "Many identical or similar units manufactured (assembly line, clothing factory)",
-          "Units are distinct and separately identifiable (law firm, custom manufacturer)"
-        ],
-        [
-          "Costs accumulated by",
-          "Department or process",
-          "Specific job, project, or contract"
-        ],
-        [
-          "Example",
-          "Soft drink bottling, textile manufacturing",
-          "Accounting firm billing hours to clients, custom furniture maker"
-        ]
-      ]
-    },
-    {
-      "t": "def",
-      "term": "Process Costing",
-      "v": "A cost accumulation system used when many identical or similar units are produced in a continuous flow. Costs are accumulated by department or process and averaged over all units produced. Examples: soft-drink bottling, oil refining, textile manufacturing."
-    },
-    {
-      "t": "def",
-      "term": "Job Order Costing",
-      "v": "A cost accumulation system used when units are distinct and separately identifiable. Costs are accumulated by specific job, project, or contract. Examples: accounting firm billing hours to clients, custom furniture maker, construction contractor."
-    },
-    {
-      "t": "b",
-      "v": [
-        "Standard costing can be used in either a process costing or job-order costing environment",
-        "Normal costing is used mainly in job order costing (too difficult to use in process costing)",
-        "Actual costing is practical only for job order costing and is seldom used due to fluctuating unit costs"
-      ]
-    },
-    {
-      "t": "key",
-      "v": [
-        "Variable costs: total changes with activity, per-unit is constant. Fixed costs: total is constant, per-unit changes inversely with activity.",
-        "Standard costing = predetermined rate × standard input for actual output; used for both process and job order. Normal costing = actual DM/DL + predetermined OH; used mainly in job order.",
-        "Predetermined Overhead Rate = Budgeted Manufacturing Overhead ÷ Budgeted Activity Level. Set at the start of the year using budgeted figures only.",
-        "Absorption costing (GAAP) puts fixed OH into product cost. Variable costing (internal only) expenses it as a period cost. Income difference = (Units Produced − Units Sold) × Fixed OH per unit.",
-        "Process costing = many identical units, costs accumulated by department. Job order costing = distinct units, costs accumulated by job or project."
-      ]
-    }
-  ],
-  "4-2": [
-    {
-      "t": "h",
-      "v": "Manufacturing Overhead — What It Is and Why It Matters"
-    },
-    {
-      "t": "p",
-      "v": "Think of overhead as all the costs needed to run the factory that cannot be traced directly to a specific unit. You know exactly how much leather goes into each football (direct material) and how many labor hours each worker spent (direct labor). But the factory rent, the maintenance crew's salary, the cleaning supplies — these benefit all the products being made, not just one. That is manufacturing overhead."
-    },
-    {
-      "t": "def",
-      "term": "Manufacturing Overhead",
-      "v": "All manufacturing costs that cannot be directly and economically traced to specific units of output. Includes indirect materials, indirect labor, and other factory costs such as rent, depreciation, and utilities. Under GAAP, all manufacturing overhead must be allocated to units produced."
-    },
-    {
-      "t": "p",
-      "v": "GAAP requires absorption costing for external reporting — meaning all manufacturing overhead must be allocated to units produced. If a company ignores overhead when setting prices, it risks pricing products at a loss because direct costs are covered but indirect costs are not."
-    },
-    {
-      "t": "h",
-      "v": "Three Categories of Production Costs"
-    },
-    {
-      "t": "b",
-      "v": [
-        "Direct materials (DM): materials that can be directly and economically traced to a specific unit — leather in a football, steel in a car frame",
-        "Direct labor (DL): labor directly traceable to a specific unit — the worker stitching the football",
-        "Manufacturing overhead (OH): all other production costs that cannot be traced to specific units — factory rent, depreciation on equipment, indirect labor (plant superintendent, janitors), indirect materials (lubricant, cleaning supplies)"
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Variable, Fixed, and Mixed Overheads"
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Overhead Type",
-        "Behavior",
-        "Examples"
-      ],
-      "r": [
-        [
-          "Variable overhead",
-          "Changes in total as activity changes; per-unit cost assumed constant",
-          "Indirect materials, equipment maintenance, sales commissions"
-        ],
-        [
-          "Fixed overhead",
-          "Does not change in total as activity changes within the relevant range",
-          "Factory rent, depreciation on production equipment, plant superintendent salary"
-        ],
-        [
-          "Mixed overhead",
-          "Contains both fixed and variable elements",
-          "Electricity (base fee + usage charge), allocated cost pools with both fixed and variable costs"
-        ]
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Traditional Overhead Allocation — Plant-Wide vs Departmental"
-    },
-    {
-      "t": "p",
-      "v": "The traditional method groups overhead into a cost pool and allocates it using a single cost driver (the allocation base). The allocation base should reflect what actually causes overhead costs to be incurred — for a labor-intensive process, direct labor hours is best; for a highly automated process, machine hours is better."
-    },
-    {
-      "t": "def",
-      "term": "Allocation Base (Cost Driver)",
-      "v": "The activity measure used to assign overhead costs to units produced. Common bases include direct labor hours, machine hours, and direct labor cost. The base should reflect what actually causes overhead costs to be incurred."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Approach",
-        "Description",
-        "Pros / Cons"
-      ],
-      "r": [
-        [
-          "Plant-wide allocation",
-          "One cost pool for the whole plant; one allocation rate for all products",
-          "Simple and cheap; less accurate — best when products are similar"
-        ],
-        [
-          "Departmental allocation",
-          "Separate cost pool per department; separate rate and allocation base per department",
-          "More accurate; better for decisions; more administrative cost"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Departmental Allocation — Example",
-      "v": "Dept A: high machine use, low labor → allocate OH by machine hours\nDept B: high labor use, low machines → allocate OH by direct labor hours\nDept C: final assembly → allocate OH by number of parts\nDept D: painting → allocate OH by painted surface area\n\nUsing different bases per department gives more accurate product costs than a single plant-wide rate."
-    },
-    {
-      "t": "h",
-      "v": "Calculating the Predetermined Overhead Rate"
-    },
-    {
-      "t": "p",
-      "v": "The rate is calculated at the start of the year using budgeted numbers. It cannot use actual overhead because actual costs may not be known until well after year-end. Once set, the same rate is used throughout the year unless something material changes."
-    },
-    {
-      "t": "f",
-      "l": "Predetermined Overhead Rate",
-      "v": "Predetermined Rate = Budgeted Manufacturing Overhead\n                     ÷ Budgeted Activity Level of Allocation Base\n\nAlso: Rate × Budgeted Activity Level = Budgeted Overhead (useful for working backward)"
-    },
-    {
-      "t": "ex",
-      "l": "Overhead Rate — Full Walkthrough",
-      "v": "Budgeted fixed overhead: $200,000. Budgeted machine hours: 10,000.\nPredetermined rate = $200,000 ÷ 10,000 = $20 per machine hour.\n\nActual machine hours used: 9,500. Fixed overhead applied = 9,500 × $20 = $190,000.\nActual fixed overhead incurred = $205,000.\nUnder-applied overhead = $205,000 − $190,000 = $15,000 (actual > applied → under-applied)."
-    },
-    {
-      "t": "def",
-      "term": "Under-applied / Over-applied Overhead",
-      "v": "The difference between actual manufacturing overhead incurred and overhead applied to production using the predetermined rate. Under-applied: actual overhead > overhead applied (not enough assigned to products). Over-applied: actual overhead < overhead applied (too much assigned to products)."
-    },
-    {
-      "t": "tip",
-      "v": "Always use BUDGETED overhead for the numerator and BUDGETED activity level for the denominator. Never mix budgeted for one and actual for the other. This is a common exam trick."
-    },
-    {
-      "t": "h",
-      "v": "Activity-Based Costing (ABC)"
-    },
-    {
-      "t": "p",
-      "v": "Traditional allocation uses one cost driver for everything. ABC uses multiple cost pools and multiple cost drivers — one driver per cost pool that most accurately represents what causes each pool's costs to be incurred. The premise: products consume activities, and activities consume resources."
-    },
-    {
-      "t": "def",
-      "term": "Activity-Based Costing (ABC)",
-      "v": "An overhead allocation method that uses multiple cost pools and multiple cost drivers — one driver per pool that best reflects what causes that pool's costs to be incurred. More accurate than traditional allocation, but more expensive to maintain."
-    },
-    {
-      "t": "b",
-      "v": [
-        "Resource consumption cost drivers: measure how much of a resource an activity uses",
-        "Activity consumption cost drivers: measure how much of an activity a cost object (product, customer) consumes",
-        "ABC is more accurate than traditional allocation — especially when products differ significantly in volume, complexity, or the activities they require",
-        "Pure ABC does not conform to GAAP (some non-manufacturing costs included, some manufacturing costs excluded), but adapted ABC — using only manufacturing costs in the pools — can be used for external reporting",
-        "ABC is particularly useful internally for pricing decisions, product mix decisions, and customer profitability analysis"
-      ]
-    },
-    {
-      "t": "tip",
-      "v": "ABC assigns overhead more accurately than traditional methods, but it is more expensive to implement and maintain. The benefit of better information must exceed the cost of the additional calculations. Traditional allocation may still be appropriate when products are similar."
-    },
-    {
-      "t": "key",
-      "v": [
-        "Product costs under GAAP = Direct Materials + Direct Labor + Manufacturing Overhead. Everything else is a period cost.",
-        "Predetermined OH Rate uses BUDGETED overhead in the numerator and BUDGETED activity in the denominator — never mix actual with budgeted.",
-        "Under-applied OH = actual > applied. Over-applied = actual < applied. Close to COGS if immaterial; prorate among COGS, WIP, and FG if material.",
-        "Departmental allocation is more accurate than plant-wide allocation when different departments consume overhead differently.",
-        "ABC is more accurate but more expensive. Use it when products differ significantly in volume, complexity, or the activities they consume."
-      ]
-    }
-  ],
-  "4-3": [
-    {
-      "t": "h",
-      "v": "Variance Analysis — What It Is and Why It Matters"
-    },
-    {
-      "t": "p",
-      "v": "Variance analysis compares what actually happened to what should have happened according to the budget. It tells management where actual costs were higher or lower than planned, enabling them to investigate the reasons and take corrective action. This is called management by exception — only significant variances get management attention, focusing effort where it matters most."
-    },
-    {
-      "t": "p",
-      "v": "A positive variance for a cost is UNFAVORABLE (actual cost was higher than standard — bad). A negative variance for a cost is FAVORABLE (actual cost was lower than standard — good). A positive variance for revenue is FAVORABLE."
-    },
-    {
-      "t": "h",
-      "v": "Flexible Budget Variance vs Sales Volume Variance"
-    },
-    {
-      "t": "p",
-      "v": "The static (master) budget is prepared for one specific planned volume. The flexible budget adjusts that plan to the actual volume achieved. This separation is essential for fair performance evaluation."
-    },
-    {
-      "t": "def",
-      "term": "Flexible Budget",
-      "v": "A budget that is adjusted from the static (master) budget to reflect the actual level of activity achieved. It shows what revenues and costs should have been at the actual volume, enabling fair performance evaluation by removing the volume effect."
-    },
-    {
-      "t": "def",
-      "term": "Standard Cost",
-      "v": "The predetermined cost of producing one unit of output under efficient operating conditions. Standard costs are the benchmark against which actual costs are compared to calculate variances."
-    },
-    {
-      "t": "f",
-      "l": "Variance Formulas",
-      "v": "Flexible Budget Variance = Actual Results − Flexible Budget Amount\nSales Volume Variance = Flexible Budget Amount − Static Budget Amount\nTotal Static Budget Variance = Flexible Budget Variance + Sales Volume Variance"
-    },
-    {
-      "t": "ex",
-      "l": "Flexible Budget Variance Report",
-      "v": "Static budget prepared for 24,000 units. Actual sales = 20,000 units.\n\n                     Actual      Flexible    Static\nUnits sold           20,000       20,000      24,000\nRevenues         $2,500,000   $2,400,000  $2,880,000\nVariable costs   $1,900,200   $1,760,000  $2,112,000\nContrib. margin    $599,800     $640,000    $768,000\nFixed costs        $570,000     $552,000    $552,000\nOperating income    $29,800      $88,000    $216,000\n\nFlexible budget variance = $29,800 − $88,000 = −$58,200 Unfavorable\nSales volume variance = $88,000 − $216,000 = −$128,000 Unfavorable\nTotal static budget variance = −$186,200 Unfavorable"
-    },
-    {
-      "t": "def",
-      "term": "Sales Volume Variance",
-      "v": "The portion of the total static budget variance caused by selling more or fewer units than planned. Calculated as Flexible Budget Amount − Static Budget Amount. Reflects the impact of volume, not of cost control or pricing."
-    },
-    {
-      "t": "tip",
-      "v": "The flexible budget isolates the performance effect by removing the volume effect. Comparing actual to flexible shows how well management controlled costs and prices at the actual volume. Comparing flexible to static shows the financial impact of selling fewer/more units than planned."
-    },
-    {
-      "t": "h",
-      "v": "Direct Materials Variances"
-    },
-    {
-      "t": "p",
-      "v": "The total materials variance has two components: a quantity variance (did we use more or less material than we should have?) and a price variance (did we pay more or less per unit than budgeted?). The two always add up to the total variance."
-    },
-    {
-      "t": "f",
-      "l": "Materials Variance Formulas",
-      "v": "Total Materials Variance = (AP × AQ) − (SP × SQ)\n\nQuantity Variance = (AQ − SQ) × SP\nPrice Variance    = (AP − SP) × AQ\n\nAP = Actual Price, SP = Standard Price\nAQ = Actual Quantity used, SQ = Standard Quantity allowed for actual output"
-    },
-    {
-      "t": "def",
-      "term": "Direct Materials Price Variance",
-      "v": "The difference between the actual price paid for materials and the standard price, multiplied by the actual quantity used. Formula: (AP − SP) × AQ. A favorable variance means materials cost less than standard; unfavorable means more."
-    },
-    {
-      "t": "def",
-      "term": "Direct Materials Quantity Variance",
-      "v": "The difference between the actual quantity of materials used and the standard quantity allowed for actual output, multiplied by the standard price. Formula: (AQ − SQ) × SP. A favorable variance means less material was used than expected; unfavorable means more."
-    },
-    {
-      "t": "ex",
-      "l": "Medina Co. — Direct Materials (Full Example)",
-      "v": "Each football: 1 sq meter leather standard, standard cost $5.00/meter.\nActual: produced 250 footballs, used 290 sq meters at $4.50/meter.\n\nSQ = 1 meter × 250 footballs = 250 meters\nAQ = 290 meters   AP = $4.50   SP = $5.00\n\nQuantity Variance = (290 − 250) × $5.00 = $200 UNFAVORABLE\n(Used 40 extra meters — overage at standard price)\n\nPrice Variance = ($4.50 − $5.00) × 290 = −$145 FAVORABLE\n(Paid $0.50 less per meter × 290 meters used)\n\nTotal Variance = $200 − $145 = $55 UNFAVORABLE\nVerify: (290 × $4.50) − (250 × $5.00) = $1,305 − $1,250 = $55 ✓"
-    },
-    {
-      "t": "b",
-      "v": [
-        "Unfavorable quantity variance causes: low-quality materials, machine problems, poor product design, untrained workers, theft, rush orders disrupting workflow",
-        "Favorable quantity variance causes: better quality materials (less waste), improved engineering specs, better-trained workers",
-        "Unfavorable price variance causes: market price increases, inexperienced purchasing staff",
-        "Favorable price variance causes: market price decreases, better purchasing research — BUT may indicate inferior material that drives up the quantity variance"
-      ]
-    },
-    {
-      "t": "tip",
-      "v": "On the exam, you may be given the variance and asked to solve for AP, SP, AQ, or SQ. Use the same formulas — just rearrange algebraically to solve for the unknown. Practice this skill — it appears frequently."
-    },
-    {
-      "t": "h",
-      "v": "Direct Labor Variances"
-    },
-    {
-      "t": "p",
-      "v": "The structure is identical to materials variances — just with different names. The price variance is called the rate variance, and the quantity variance is called the efficiency variance."
-    },
-    {
-      "t": "f",
-      "l": "Direct Labor Variance Formulas",
-      "v": "Total Labor Variance = (AR × AH) − (SR × SH)\n\nRate Variance      = (AR − SR) × AH\nEfficiency Variance = (AH − SH) × SR\n\nAR = Actual Rate, SR = Standard Rate\nAH = Actual Hours worked, SH = Standard Hours allowed for actual output"
-    },
-    {
-      "t": "def",
-      "term": "Direct Labor Rate Variance",
-      "v": "The difference between the actual wage rate paid and the standard wage rate, multiplied by the actual hours worked. Formula: (AR − SR) × AH. Equivalent to the price variance for materials — but named differently because labor is paid a rate, not a price."
-    },
-    {
-      "t": "def",
-      "term": "Direct Labor Efficiency Variance",
-      "v": "The difference between the actual hours worked and the standard hours allowed for actual output, multiplied by the standard wage rate. Formula: (AH − SH) × SR. Equivalent to the quantity variance for materials — but named differently because labor uses hours, not units."
-    },
-    {
-      "t": "ex",
-      "l": "Labor Variance — Quick Example",
-      "v": "Standard: 2 labor hours per unit at $15/hour. Actual: 1,000 units produced\nusing 2,100 hours at $14.50/hour.\n\nSH = 2 × 1,000 = 2,000 hours\nRate Variance = ($14.50 − $15.00) × 2,100 = −$1,050 FAVORABLE\nEfficiency Variance = (2,100 − 2,000) × $15.00 = $1,500 UNFAVORABLE\nTotal = $1,500 − $1,050 = $450 UNFAVORABLE"
-    },
-    {
-      "t": "b",
-      "v": [
-        "Unfavorable rate variance: wage rate higher than standard (union renegotiation, use of more skilled workers than planned)",
-        "Favorable rate variance: lower wages paid — may signal less-skilled workers, leading to unfavorable efficiency variance",
-        "Unfavorable efficiency variance: more hours used than standard (inexperienced workers, machine breakdowns, material quality issues)",
-        "Favorable efficiency variance: fewer hours used than standard (experienced workers, better training, improved process)"
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Fixed Overhead Variances"
-    },
-    {
-      "t": "p",
-      "v": "Fixed overhead variances are unique because fixed overhead is applied to production AS IF it were a variable cost (standard rate × standard input for actual output), but it is actually incurred as a fixed lump sum. This creates two distinct sub-variances. The total fixed overhead variance = Actual Fixed OH Incurred − Fixed OH Applied to production."
-    },
-    {
-      "t": "f",
-      "l": "Fixed Overhead Variance Structure",
-      "v": "Total Fixed OH Variance = Actual Fixed OH − Fixed OH Applied\n\n1. Spending Variance = Actual Fixed OH − Budgeted Fixed OH\n   (Did we spend more or less than we planned?)\n\n2. Production-Volume Variance = Budgeted Fixed OH − Fixed OH Applied\n   (Did we produce more or less than the denominator volume used to set the rate?)"
-    },
-    {
-      "t": "def",
-      "term": "Spending Variance (Fixed Overhead)",
-      "v": "The difference between actual fixed overhead incurred and budgeted fixed overhead. Formula: Actual Fixed OH − Budgeted Fixed OH. Measures whether the company spent more or less on fixed overhead items than planned — independent of production volume."
-    },
-    {
-      "t": "def",
-      "term": "Production-Volume Variance",
-      "v": "The fixed overhead variance that measures whether actual production matched the budgeted (denominator) volume used to set the fixed OH rate. Equal to Budgeted Fixed OH − Fixed OH Applied. It reflects capacity utilization, not spending."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Sub-Variance",
-        "Formula",
-        "What It Measures",
-        "Can Be Caused By"
-      ],
-      "r": [
-        [
-          "Spending Variance",
-          "Actual Fixed OH − Budgeted Fixed OH",
-          "Were actual fixed costs more or less than budgeted?",
-          "New equipment (higher depreciation); rent increase; salary increases (Unfav) OR move to cheaper facility; lower insurance (Fav)"
-        ],
-        [
-          "Production-Volume Variance",
-          "Budgeted Fixed OH − Fixed OH Applied",
-          "Did actual production match the denominator volume?",
-          "Producing more than budgeted → Favorable (overhead spread over more units); producing less → Unfavorable (overhead under-absorbed)"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Fixed Overhead Variances — Full Example",
-      "v": "Budgeted fixed OH: $200,000. Budgeted units: 10,000.\nPredetermined fixed OH rate = $200,000 ÷ 10,000 = $20 per unit.\nActual fixed OH incurred: $210,000. Actual production: 9,500 units.\n\nFixed OH Applied = 9,500 × $20 = $190,000\n\nTotal Fixed OH Variance:\n  Actual $210,000 − Applied $190,000 = $20,000 Unfavorable\n\nBreakdown:\n  Spending Variance = Actual $210,000 − Budgeted $200,000 = $10,000 Unfavorable\n  (Actual fixed costs were $10,000 more than budgeted — e.g., rent increase)\n\n  Production-Volume Variance = Budgeted $200,000 − Applied $190,000 = $10,000 Unfavorable\n  (Produced 9,500 units instead of 10,000 — under-utilized capacity)\n\nCheck: $10,000 U + $10,000 U = $20,000 U Total ✓\n\nKey insight: The production-volume variance has NO connection to how much was actually spent.\nIt measures capacity utilization — whether we produced at the planned denominator volume."
-    },
-    {
-      "t": "tip",
-      "v": "There is NO fixed overhead efficiency variance. Fixed costs do not relate to efficiency because they are the same total amount regardless of how efficiently production ran. Efficiency variances apply only to variable costs. Fixed overhead has only TWO sub-variances: spending and production-volume."
-    },
-    {
-      "t": "key",
-      "v": [
-        "Flexible Budget Variance = Actual − Flexible Budget (measures cost control). Sales Volume Variance = Flexible − Static (measures volume impact). They sum to the total static budget variance.",
-        "DM: Quantity Variance = (AQ − SQ) × SP. Price Variance = (AP − SP) × AQ. Total = (AP × AQ) − (SP × SQ).",
-        "DL: Rate Variance = (AR − SR) × AH. Efficiency Variance = (AH − SH) × SR. Same structure as materials with different names.",
-        "Fixed OH has ONLY TWO sub-variances: Spending (Actual − Budgeted) and Production-Volume (Budgeted − Applied). There is NO fixed OH efficiency variance.",
-        "Favorable variance for a cost = actual lower than standard (good). Unfavorable = actual higher (bad). Opposite for revenue."
-      ]
-    }
-  ],
-  "4-4": [
-    {
-      "t": "h",
-      "v": "Performance Measurement — Evaluating Segments and Managers"
-    },
-    {
-      "t": "p",
-      "v": "A large company is often divided into segments — divisions, departments, or business units. Measuring the performance of each segment and its manager is critical. The two primary financial measures are Return on Investment (ROI) and Residual Income (RI). Each measures something different, and neither is complete on its own."
-    },
-    {
-      "t": "def",
-      "term": "Investment Center",
-      "v": "A segment of the company whose manager is responsible for revenues, costs, AND the assets used to generate them. Because the manager controls all three, both ROI and Residual Income are appropriate measures of performance."
-    },
-    {
-      "t": "h",
-      "v": "Customer and Product Profitability Analysis"
-    },
-    {
-      "t": "p",
-      "v": "Before measuring segment performance, it helps to know which customers and products actually drive profits. Research consistently shows the 80/20 rule in business: roughly 80% of profits come from 20% of customers, and 20% of customers are typically unprofitable. Customer profitability analysis determines the profitability of each customer by allocating the costs-to-serve that customer and comparing them to the revenue generated."
-    },
-    {
-      "t": "b",
-      "v": [
-        "Profitable customers: offer discounts and improved service to retain and grow them",
-        "High cost-to-serve customers: re-price their services or reduce discounts to improve margin",
-        "Unprofitable customers: shift their product mix toward higher-margin items, or reduce the services offered",
-        "Product profitability analysis identifies which products should be re-priced, discontinued, or replaced"
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Return on Investment (ROI)"
-    },
-    {
-      "t": "p",
-      "v": "ROI measures what percentage return a business unit earned on its assets. It is the primary performance measure for an investment center — a segment where the manager controls revenues, costs, AND assets. A high ROI means the segment is generating strong returns on the assets it has been given to manage."
-    },
-    {
-      "t": "def",
-      "term": "Return on Investment (ROI)",
-      "v": "A percentage measure of how much operating income a business unit generates per dollar of assets. Calculated as Operating Income ÷ Assets. Higher ROI indicates better use of the assets employed by the segment."
-    },
-    {
-      "t": "f",
-      "l": "ROI Formula",
-      "v": "ROI = Operating Income of Business Unit ÷ Assets of Business Unit\n\nExpanded: ROI = (Income ÷ Sales) × (Sales ÷ Assets)\n             = Profit Margin × Asset Turnover"
-    },
-    {
-      "t": "ex",
-      "l": "ROI — Example and Decision Use",
-      "v": "Division A: Operating income = $600,000. Total assets = $4,000,000.\nROI = $600,000 ÷ $4,000,000 = 15%\n\nNew project proposed: will earn $80,000 on $600,000 of assets → ROI = 13.3%\nSince 13.3% < Division A's current 15%, the division manager will likely REJECT the project\neven though it is profitable — because it would lower the division's overall ROI.\nThis is the key weakness of ROI: it can lead managers to reject profitable investments."
-    },
-    {
-      "t": "tip",
-      "v": "A manager evaluated on ROI will reject any project whose ROI is below the division's current ROI, even if the project exceeds the company's required rate of return and would benefit the whole company. This goal incongruence is why Residual Income was developed."
-    },
-    {
-      "t": "h",
-      "v": "The ROI vs RI Conflict — Goal Incongruence"
-    },
-    {
-      "t": "p",
-      "v": "The fundamental weakness of ROI is that it can create goal incongruence — a situation where what is good for the division manager is NOT good for the company. A manager evaluated on ROI will reject a project if the project's ROI is below their current division ROI — even if the project's ROI exceeds the company's required rate of return (hurdle rate). This means the company loses a profitable investment because of how the manager is evaluated."
-    },
-    {
-      "t": "ex",
-      "l": "ROI vs RI Conflict — Classic Exam Scenario",
-      "v": "Company required rate of return (hurdle rate): 10%\nDivision A current ROI: 20% (operating income $600K ÷ assets $3,000K)\n\nNew project available:\n  Additional operating income: $80,000\n  Additional investment required: $500,000\n  Project ROI = $80,000 ÷ $500,000 = 16%\n\nROI ANALYSIS (Manager's perspective):\n  If project accepted: New ROI = ($600K + $80K) ÷ ($3,000K + $500K) = $680K ÷ $3,500K = 19.4%\n  Old ROI was 20% → New ROI is LOWER → Manager REJECTS project\n\nRI ANALYSIS (Company's perspective):\n  Project RI = $80,000 − (10% × $500,000) = $80,000 − $50,000 = +$30,000\n  Positive RI → Project ADDS value to the company → Company WANTS to accept it\n\nConclusion: The manager's ROI-based evaluation causes rejection of a value-creating project.\nRI solves this: any project with positive RI (return > hurdle rate) should be accepted."
-    },
-    {
-      "t": "tip",
-      "v": "Exam formula: RI = Operating Income − (Assets × Required Rate of Return). The required rate of return is management's target. If WACC is given and no other rate is specified, use WACC. RI can be negative — this means the division earned less than its target return (not necessarily a loss, just below the hurdle rate). A project should be accepted if its RI is positive, regardless of the division's current ROI."
-    },
-    {
-      "t": "h",
-      "v": "Residual Income (RI)"
-    },
-    {
-      "t": "p",
-      "v": "Residual Income overcomes ROI's goal incongruence problem. Instead of measuring a percentage, RI measures the dollar amount of income earned above the minimum required return on assets. Any project with positive RI should be accepted — it earns more than the company's required return."
-    },
-    {
-      "t": "def",
-      "term": "Residual Income (RI)",
-      "v": "The dollar amount of operating income earned above the minimum required return on assets. Calculated as Operating Income − (Assets × Required Rate of Return). Positive RI means the segment earned more than the required return."
-    },
-    {
-      "t": "f",
-      "l": "Residual Income Formula",
-      "v": "RI = Operating Income of Business Unit\n     − (Assets of Business Unit × Required Rate of Return)\n\nRequired Rate of Return is usually the company's WACC (weighted average cost of capital)\nor whatever rate management sets."
-    },
-    {
-      "t": "ex",
-      "l": "Residual Income — Same Example",
-      "v": "Division A: Operating income = $600,000. Assets = $4,000,000. Required rate = 10%.\nTarget return = $4,000,000 × 10% = $400,000\nRI = $600,000 − $400,000 = $200,000 ✓ Positive — good performance\n\nSame new project: earns $80,000 on $600,000 assets, required rate = 10%.\nProject RI = $80,000 − ($600,000 × 10%) = $80,000 − $60,000 = $20,000 ✓ Positive\nWith RI evaluation, the manager ACCEPTS the project — it earns above the required return."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "",
-        "ROI",
-        "Residual Income"
-      ],
-      "r": [
-        [
-          "Measures",
-          "Percentage return on assets",
-          "Dollar return above minimum required return"
-        ],
-        [
-          "Decision rule",
-          "Accept if ROI > required rate",
-          "Accept if RI > 0"
-        ],
-        [
-          "Weakness",
-          "May reject profitable projects that lower division ROI (goal incongruence)",
-          "Cannot compare divisions of different sizes (larger divisions naturally have larger RI)"
-        ],
-        [
-          "Best for",
-          "Comparing segments of similar size; benchmarking against industry",
-          "Evaluating individual investment decisions; aligning manager decisions with company goals"
-        ]
-      ]
-    },
-    {
-      "t": "tip",
-      "v": "If RI is not given but WACC is given, use WACC as the required rate of return. RI can be negative — it means the segment earned less than its target return. Negative RI does not mean a loss; it means the return was inadequate relative to the assets employed."
-    },
-    {
-      "t": "key",
-      "v": [
-        "ROI = Operating Income ÷ Assets. Can also be expanded as Profit Margin × Asset Turnover.",
-        "RI = Operating Income − (Assets × Required Rate of Return). Use WACC as the required rate if no other rate is given.",
-        "ROI's weakness: goal incongruence. Managers may reject profitable projects that lower the division's ROI, even when the project earns more than the company's required rate.",
-        "RI's weakness: cannot compare divisions of different sizes. A larger division naturally has a larger RI even at the same rate of return.",
-        "Accept a project if its RI is positive — this means the project earns more than the required rate, regardless of the division's current ROI."
-      ]
-    }
-  ],
-  "4-5": [
-    {
-      "t": "h",
-      "v": "Cost-Volume-Profit (CVP) Analysis — The Foundation of Short-Run Decisions"
-    },
-    {
-      "t": "p",
-      "v": "CVP analysis (also called breakeven analysis) examines how changes in volume, costs, and prices affect profit. It is primarily a short-run tool — in the short run, prices and costs are relatively stable, and the main variable the company controls is how many units it produces and sells. CVP answers questions like: how many units must we sell to break even? What profit will we earn at 10,000 units? How does a price cut affect our breakeven point?"
-    },
-    {
-      "t": "h",
-      "v": "CVP Assumptions"
-    },
-    {
-      "t": "b",
-      "v": [
-        "All costs are either fixed or variable — no mixed costs (or mixed costs have been separated into fixed and variable components)",
-        "Costs and revenues are linear within the relevant range",
-        "Unit selling price is constant — no volume discounts",
-        "Fixed costs remain constant within the relevant range",
-        "Variable cost per unit is constant within the relevant range",
-        "For multi-product companies: sales mix remains constant as total volume changes"
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Contribution Margin — The Core Concept"
-    },
-    {
-      "t": "p",
-      "v": "The contribution margin is the amount each unit sold contributes toward covering fixed costs — and then generating profit once fixed costs are fully covered. It is the single most important number in CVP analysis."
-    },
-    {
-      "t": "def",
-      "term": "Contribution Margin",
-      "v": "The amount by which sales revenue exceeds variable costs. Unit CM = Selling Price per Unit − Variable Cost per Unit. It represents the amount each unit contributes toward covering fixed costs, and then toward profit once fixed costs are fully covered."
-    },
-    {
-      "t": "f",
-      "l": "Contribution Margin Formulas",
-      "v": "Unit Contribution Margin (UCM) = Selling Price per Unit − Variable Cost per Unit\nTotal Contribution Margin = UCM × Units Sold\n   OR\nTotal Contribution Margin = Total Revenue − Total Variable Costs\n\nContribution Margin Ratio (CMR) = UCM ÷ Selling Price (expressed as %)"
-    },
-    {
-      "t": "ex",
-      "l": "Contribution Margin — Ray Company",
-      "v": "Wireless router: selling price $60, variable cost $35.\nUCM = $60 − $35 = $25 per unit\nCMR = $25 ÷ $60 = 41.7%\n\nSell 10,000 units:\nTotal Revenue = $600,000\nTotal Variable Cost = $350,000\nTotal Contribution Margin = $250,000 (covers fixed costs, then becomes profit)"
-    },
-    {
-      "t": "h",
-      "v": "Contribution Margin Income Statement"
-    },
-    {
-      "t": "p",
-      "v": "CVP analysis uses a different income statement format than GAAP. Fixed costs are shown below contribution margin as a single lump sum, not mixed into cost of goods sold."
-    },
-    {
-      "t": "f",
-      "l": "CVP Income Statement Format",
-      "v": "Sales Revenue\n− Variable Costs\n= Contribution Margin\n− Fixed Costs\n= Operating Income"
-    },
-    {
-      "t": "ex",
-      "l": "CVP Income Statement — Cari Company",
-      "v": "Selling price $100/unit. Variable cost $60/unit. Fixed costs $120,000.\nUCM = $40 per unit.\n\nAt 1,000 units: Revenue $100K − Variable $60K = CM $40K − Fixed $120K = Loss $(80K)\nAt 2,000 units: Revenue $200K − Variable $120K = CM $80K − Fixed $120K = Loss $(40K)\nAt 3,000 units: Revenue $300K − Variable $180K = CM $120K − Fixed $120K = Income $0 ← Breakeven\nAt 4,000 units: Revenue $400K − Variable $240K = CM $160K − Fixed $120K = Income $40K\nAt 5,000 units: Revenue $500K − Variable $300K = CM $200K − Fixed $120K = Income $80K"
-    },
-    {
-      "t": "h",
-      "v": "Breakeven Analysis"
-    },
-    {
-      "t": "def",
-      "term": "Breakeven Point",
-      "v": "The level of sales at which total revenue equals total costs, resulting in zero operating income. Below breakeven the company operates at a loss; above breakeven it earns a profit."
-    },
-    {
-      "t": "f",
-      "l": "Breakeven Formulas",
-      "v": "Breakeven in Units = Total Fixed Costs ÷ Unit Contribution Margin\nBreakeven in Revenue = Total Fixed Costs ÷ Contribution Margin Ratio\nTarget Profit Units = (Total Fixed Costs + Target Profit) ÷ Unit Contribution Margin"
-    },
-    {
-      "t": "ex",
-      "l": "Breakeven — Ray Company",
-      "v": "Fixed costs = $150,000. UCM = $25.\nBreakeven = $150,000 ÷ $25 = 6,000 units\nVerify: (6,000 × $60) − (6,000 × $35) − $150,000 = $360,000 − $210,000 − $150,000 = $0 ✓\n\nBreakeven in revenue = $150,000 ÷ 41.7% = $360,000 ✓"
-    },
-    {
-      "t": "h",
-      "v": "Marginal Analysis and Relevant Costs"
-    },
-    {
-      "t": "p",
-      "v": "Marginal analysis examines the additional (incremental) benefit and additional cost of a one-unit change in activity. A rational decision-maker takes an action only if the marginal benefit exceeds the marginal cost. This is the core logic behind most short-run business decisions."
-    },
-    {
-      "t": "def",
-      "term": "Marginal Analysis",
-      "v": "A decision technique that compares the additional (incremental) benefit of an action to its additional cost. A rational decision-maker accepts an action only if marginal benefit exceeds marginal cost. Applies to short-run business decisions such as special orders, pricing, and production levels."
-    },
-    {
-      "t": "h",
-      "v": "Relevant vs Irrelevant Information"
-    },
-    {
-      "t": "p",
-      "v": "In any decision, only information that meets both criteria below is relevant:"
-    },
-    {
-      "t": "def",
-      "term": "Relevant Cost",
-      "v": "A cost that meets BOTH criteria: it occurs in the future AND it differs between alternatives under consideration. Only relevant costs should be used in decision-making; sunk costs and costs that do not differ are ignored."
-    },
-    {
-      "t": "b",
-      "v": [
-        "It occurs in the FUTURE (sunk costs — already spent and unrecoverable — are never relevant)",
-        "It DIFFERS between or among the alternatives being considered (costs the same regardless of what you choose are irrelevant)"
-      ]
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Cost Type",
-        "Definition",
-        "Relevant?"
-      ],
-      "r": [
-        [
-          "Sunk cost",
-          "Already incurred; cannot be recovered regardless of decision",
-          "NEVER relevant"
-        ],
-        [
-          "Avoidable cost",
-          "Will go away if a specific option is chosen",
-          "Relevant — it differs between alternatives"
-        ],
-        [
-          "Unavoidable cost",
-          "Will continue regardless of which option is chosen (e.g. non-cancelable lease)",
-          "NOT relevant — same for all alternatives"
-        ],
-        [
-          "Opportunity cost",
-          "Benefit forgone by choosing one alternative over the next-best alternative",
-          "Relevant — it is a future cost that differs between alternatives"
-        ],
-        [
-          "Differential cost",
-          "Difference in cost between two alternatives",
-          "Relevant"
-        ],
-        [
-          "Incremental cost",
-          "Additional cost caused by an activity or decision",
-          "Relevant"
-        ]
-      ]
-    },
-    {
-      "t": "def",
-      "term": "Sunk Cost",
-      "v": "A cost that has already been incurred and cannot be recovered by any current or future decision. Sunk costs are NEVER relevant to decision-making because they cannot be changed. Common examples: the original purchase price of an old machine when deciding whether to replace it, R&D already spent on a failing project."
-    },
-    {
-      "t": "def",
-      "term": "Opportunity Cost",
-      "v": "The benefit (usually contribution margin) forgone by choosing one alternative over the next-best alternative. Opportunity costs are not recorded in the accounting system but are real economic costs. They exist only when resources are constrained; with idle capacity, no opportunity cost is incurred."
-    },
-    {
-      "t": "ex",
-      "l": "Opportunity Cost — Practical Example",
-      "v": "A company uses its factory to make Product A, earning $80,000 contribution margin.\nAlternatively, it could use the same factory to make Product B, earning $95,000 CM.\n\nIf it makes Product A:\nOpportunity cost = $95,000 (the CM from Product B that is given up)\nTrue economic cost of making A = direct costs of A + $95,000 opportunity cost\n\nOpportunity costs are NOT in the accounting records, but they are real economic costs\nthat should influence decisions."
-    },
-    {
-      "t": "tip",
-      "v": "Opportunity costs exist only when resources are constrained. If a company has idle capacity, no opportunity cost exists because accepting a new order does not require giving up anything. Once capacity is full, every decision to accept one order means giving up another — and that lost contribution margin is an opportunity cost."
-    },
-    {
-      "t": "h",
-      "v": "Applying Relevant Costs — Special Order Decisions"
-    },
-    {
-      "t": "p",
-      "v": "A special order is a one-time order from a customer at a price below normal — usually because the customer is a new market, a bulk buyer, or an off-season purchaser. The question: should we accept it? The rule: accept if the additional revenue exceeds the additional (variable) costs. Fixed costs are usually irrelevant because they will be incurred anyway — UNLESS accepting the order requires new capacity or displaces regular sales."
-    },
-    {
-      "t": "def",
-      "term": "Special Order Decision",
-      "v": "A short-run decision on whether to accept a one-time order at a price below the normal selling price. Accept if the incremental revenue exceeds the incremental cost, AND idle capacity exists so no regular sales are displaced. Existing fixed costs are irrelevant unless the order requires additional capacity."
-    },
-    {
-      "t": "ex",
-      "l": "Special Order — Idle Capacity Example",
-      "v": "Normal selling price: $50/unit. Normal cost per unit: DM $12, DL $8, Variable OH $5, Fixed OH $10 = $35 total.\nA foreign customer offers to buy 5,000 units at $30 each. Company has idle capacity.\n\nRelevant analysis (only differential costs matter):\n  Incremental revenue = 5,000 × $30      = $150,000\n  Incremental variable costs:\n    DM: 5,000 × $12   = $60,000\n    DL: 5,000 × $8    = $40,000\n    VOH: 5,000 × $5   = $25,000\n    Total variable   = $125,000\n  Incremental fixed OH = $0 (already incurred, unchanged)\n\n  Incremental profit = $150,000 − $125,000 = $25,000  ✓ ACCEPT\n\nCommon mistake: using the full $35 cost including $10 fixed OH would suggest rejecting ($30 < $35).\nBut fixed OH is NOT incremental — it will be incurred whether we accept or not."
-    },
-    {
-      "t": "tip",
-      "v": "Special order trap: if the company has NO idle capacity and must displace regular sales to accept the special order, the LOST contribution margin from displaced regular sales is an opportunity cost that IS relevant. Add it to the incremental costs before deciding."
-    },
-    {
-      "t": "h",
-      "v": "Applying Relevant Costs — Make-or-Buy Decisions"
-    },
-    {
-      "t": "p",
-      "v": "A make-or-buy (outsourcing) decision is a choice between producing a component internally or buying it from an outside supplier. Compare the AVOIDABLE cost of making the component to the purchase price from the supplier. Fixed costs that will continue regardless of the decision (e.g. factory rent, plant supervisor salary) are irrelevant."
-    },
-    {
-      "t": "def",
-      "term": "Make-or-Buy Decision",
-      "v": "A short-run decision on whether to produce a component internally or purchase it from an external supplier. The relevant analysis compares the avoidable cost of making (variable costs + any fixed costs that would be eliminated + opportunity cost of using the space) against the purchase price. Fixed costs that continue either way are irrelevant."
-    },
-    {
-      "t": "ex",
-      "l": "Make-or-Buy — Component Decision",
-      "v": "Cost to make one unit of Component X internally:\n  DM              $ 6\n  DL              $ 4\n  Variable OH     $ 3\n  Allocated Fixed OH  $ 5\n  Total per unit  $18\n\nOutside supplier offers Component X at $16 per unit. Annual volume: 10,000 units.\nOf the $5 fixed OH, $2 is directly avoidable if we stop making X (supervisor salary),\n$3 is allocated general factory overhead that continues regardless.\n\nRelevant cost to MAKE (per unit):\n  Variable costs (DM + DL + VOH)   = $13\n  Avoidable fixed OH                = $2\n  Total avoidable cost              = $15\n\nRelevant cost to BUY = $16\n\nSince $15 < $16, MAKE saves $1 per unit × 10,000 = $10,000 per year.  ✓ CONTINUE MAKING\n\nNote: the $3 unavoidable allocated OH is irrelevant — it continues either way.\nCommon mistake: comparing full $18 cost to $16 price would wrongly suggest buying."
-    },
-    {
-      "t": "tip",
-      "v": "In make-or-buy: if the freed capacity from stopping internal production could be used for another profitable purpose, that opportunity income (or contribution margin) tips the analysis toward BUY. Always ask: what happens to the released capacity? Idle capacity has zero opportunity cost; profitable alternative use has significant opportunity cost."
-    },
-    {
-      "t": "h",
-      "v": "Applying Relevant Costs — Sell-or-Process-Further Decisions"
-    },
-    {
-      "t": "p",
-      "v": "When a product can be sold at an intermediate stage (called the split-off point) OR further processed into a more refined product and sold at a higher price, management must choose. The rule: process further ONLY if the additional revenue from further processing exceeds the additional cost of that processing. Costs already incurred up to the split-off point are SUNK — they are irrelevant to the decision."
-    },
-    {
-      "t": "def",
-      "term": "Sell-or-Process-Further Decision",
-      "v": "A decision on whether to sell a product at the split-off point or to process it further into a more refined product before selling. Process further only if the INCREMENTAL revenue exceeds the INCREMENTAL processing cost. Joint costs incurred before the split-off point are sunk and irrelevant."
-    },
-    {
-      "t": "ex",
-      "l": "Sell-or-Process-Further — Refinery Example",
-      "v": "A refinery produces crude gasoline at split-off. It can be sold as-is or refined further into premium fuel.\n\n  Selling price at split-off (crude):    $60 per barrel\n  Selling price after refining (premium): $85 per barrel\n  Additional processing cost:            $20 per barrel\n\nJoint cost incurred BEFORE split-off: $40 per barrel (already spent — SUNK, IRRELEVANT).\n\nRelevant analysis:\n  Incremental revenue = $85 − $60 = $25 per barrel\n  Incremental cost    = $20 per barrel\n  Incremental profit  = $5 per barrel  ✓ PROCESS FURTHER\n\nCommon mistake: subtracting the joint cost from the further-processed price ($85 − $40 − $20 = $25)\nand comparing to $60 − $40 = $20 would give the same answer here but is conceptually wrong.\nThe joint cost of $40 is sunk — it must be ignored, not allocated to the decision."
-    },
-    {
-      "t": "tip",
-      "v": "Sell-or-process-further is the classic 'sunk cost' trap on the exam. Any joint cost incurred BEFORE the split-off point is irrelevant. The ONLY question is: does the extra revenue from processing exceed the extra cost of processing? If yes, process further. If no, sell at split-off."
-    },
-    {
-      "t": "h",
-      "v": "Margin of Safety"
-    },
-    {
-      "t": "p",
-      "v": "Once you know the breakeven point, the next question is: how much room do we have before we hit it? The margin of safety measures that cushion — the amount by which actual (or planned) sales exceed the breakeven point. A higher margin of safety means less risk of falling into a loss."
-    },
-    {
-      "t": "def",
-      "term": "Margin of Safety",
-      "v": "The excess of actual or planned sales over the breakeven point. Expresses the cushion between current activity and the level at which the company would begin losing money. Can be measured in units, dollars, or as a percentage of sales."
-    },
-    {
-      "t": "f",
-      "l": "Margin of Safety Formulas",
-      "v": "Margin of Safety (in $)     = Actual (or Budgeted) Sales − Breakeven Sales\nMargin of Safety (in units) = Actual Units Sold − Breakeven Units\nMargin of Safety Ratio (%)  = Margin of Safety $ ÷ Actual Sales $"
-    },
-    {
-      "t": "ex",
-      "l": "Margin of Safety — Ray Company",
-      "v": "Actual sales: $500,000. Breakeven sales (from earlier): $360,000.\n\nMargin of Safety $  = $500,000 − $360,000 = $140,000\nMargin of Safety %  = $140,000 ÷ $500,000 = 28%\n\nInterpretation: sales can drop up to 28% before the company falls into a loss.\nA higher percentage indicates a stronger safety cushion."
-    },
-    {
-      "t": "key",
-      "v": [
-        "Unit CM = Selling Price − Variable Cost per unit. CM Ratio = UCM ÷ Selling Price.",
-        "Breakeven Units = Fixed Costs ÷ UCM. Breakeven Revenue = Fixed Costs ÷ CM Ratio.",
-        "Target Profit Units = (Fixed Costs + Target Profit) ÷ UCM.",
-        "A cost is relevant only if it is BOTH future AND differs between alternatives. Sunk costs are NEVER relevant, regardless of size.",
-        "Opportunity cost exists only under constrained capacity. With idle capacity, accepting a new order does not require giving anything up."
-      ]
-    }
-  ]
+ "4-1": [
+  {
+   "t": "h",
+   "v": "What Is a Cost? Start Here."
+  },
+  {
+   "t": "p",
+   "v": "A cost is simply money a business sacrifices to get something done — buy materials, pay workers, run a machine, rent a building. Before any formula or table, you need to understand one foundational question: what happens to a cost when the business produces more or less? The answer to that question is what this entire unit is about."
+  },
+  {
+   "t": "h",
+   "v": "Topic 1: Variable Costs"
+  },
+  {
+   "t": "p",
+   "v": "Imagine you manufacture footballs. Each football requires exactly 1 square meter of leather. If you make 100 footballs, you need 100 square meters. If you make 500, you need 500. The leather cost follows production exactly — it moves up when you produce more, down when you produce less. That is a variable cost. Direct materials and direct labor are the most common variable costs."
+  },
+  {
+   "t": "def",
+   "term": "Variable Cost",
+   "v": "A cost that changes in total in direct proportion to changes in the level of activity, while remaining constant on a per-unit basis within the relevant range."
+  },
+  {
+   "t": "b",
+   "v": [
+    "As production increases → total variable cost increases, variable cost per unit stays the same",
+    "As production decreases → total variable cost decreases, variable cost per unit stays the same",
+    "If production = zero → variable cost = zero (no production means no variable cost)"
+   ]
+  },
+  {
+   "t": "f",
+   "l": "Variable Cost — Key Relationship",
+   "v": "Total Variable Cost = Cost per Unit × Number of Units Produced\nCost per Unit = Constant (never changes with volume)"
+  },
+  {
+   "t": "ex",
+   "l": "Variable Cost — Numeric Check",
+   "v": "Direct material: $5 per square meter of leather, 1 meter per football.\nProduce 100 footballs → Total material cost = $500\nProduce 500 footballs → Total material cost = $2,500\nCost per unit = $5 in both cases — unchanged. ✓ Variable."
+  },
+  {
+   "t": "tip",
+   "v": "Exam trap: Variable costs per unit are CONSTANT. Only the total changes. If a question says variable cost per unit increases as volume rises, that is wrong."
+  },
+  {
+   "t": "h",
+   "v": "Topic 2: Fixed Costs"
+  },
+  {
+   "t": "p",
+   "v": "Now think about your factory rent. You pay $50,000 per month whether you make 1 football or 100,000. The landlord does not care how many units you produce. That is a fixed cost — it does not change in total as production changes, as long as you stay within the relevant range. Factory rent, depreciation on equipment, and the plant manager's salary are classic examples of fixed manufacturing overhead."
+  },
+  {
+   "t": "def",
+   "term": "Fixed Cost",
+   "v": "A cost that remains constant in total within the relevant range regardless of changes in activity level. On a per-unit basis, fixed cost decreases as activity increases and increases as activity decreases. The relevant range is the normal operating range over which cost behavior assumptions hold."
+  },
+  {
+   "t": "b",
+   "v": [
+    "As production increases → total fixed cost stays the same, fixed cost per unit decreases",
+    "As production decreases → total fixed cost stays the same, fixed cost per unit increases",
+    "Fixed costs only stay fixed within the relevant range (the normal operating range of the business)"
+   ]
+  },
+  {
+   "t": "f",
+   "l": "Fixed Cost — Key Relationship",
+   "v": "Total Fixed Cost = Constant (does not change with production)\nFixed Cost per Unit = Total Fixed Cost ÷ Number of Units Produced (changes with volume)"
+  },
+  {
+   "t": "ex",
+   "l": "Fixed Cost — Numeric Check",
+   "v": "Factory rent = $50,000/month.\nProduce 1,000 units → Rent per unit = $50,000 ÷ 1,000 = $50.00\nProduce 5,000 units → Rent per unit = $50,000 ÷ 5,000 = $10.00\nTotal rent = $50,000 in both cases — unchanged. ✓ Fixed.\nBut per-unit cost dropped from $50 to $10 as production increased."
+  },
+  {
+   "t": "tip",
+   "v": "This is the most-tested concept in this unit: 'Total fixed cost stays the same' does NOT mean 'fixed cost per unit stays the same.' Total fixed cost is constant. Fixed cost per unit FALLS as production rises and RISES as production falls. These are opposite behaviors."
+  },
+  {
+   "t": "h",
+   "v": "Topic 3: Mixed Costs (Semi-Variable Costs)"
+  },
+  {
+   "t": "p",
+   "v": "Some costs have both a fixed base and a variable component. Your factory electricity bill might include a fixed monthly connection fee of $500 regardless of usage, plus $0.08 per kilowatt-hour actually consumed. The $500 is always there — that is the fixed element. The usage charge moves with production — that is the variable element. This combination is a mixed cost, also called a semi-variable cost."
+  },
+  {
+   "t": "def",
+   "term": "Mixed Cost (Semi-Variable Cost)",
+   "v": "A cost that contains both a fixed component (which does not change with activity) and a variable component (which changes proportionally with activity). Total cost never falls below the fixed base, even at zero activity."
+  },
+  {
+   "t": "p",
+   "v": "Another example: a salesperson paid a base salary of $3,000/month plus $50 commission per unit sold. The salary is fixed; the commission is variable. Together they form a mixed cost."
+  },
+  {
+   "t": "f",
+   "l": "Mixed Cost Formula (High-Low Method)",
+   "v": "Total Mixed Cost = Fixed Component + (Variable Rate × Activity Level)\nVariable Rate = (Cost at High Activity − Cost at Low Activity) ÷ (High Activity − Low Activity)\nFixed Component = Total Cost at either point − (Variable Rate × Activity at that point)"
+  },
+  {
+   "t": "ex",
+   "l": "Mixed Cost — Numeric Example",
+   "v": "Electricity: $500 fixed per month + $0.08 per kWh.\nUse 2,000 kWh → Total = $500 + (2,000 × $0.08) = $500 + $160 = $660\nUse 10,000 kWh → Total = $500 + (10,000 × $0.08) = $500 + $800 = $1,300\nThe $500 floor never disappears — it is always there even at zero production."
+  },
+  {
+   "t": "h",
+   "v": "Step Costs (Semi-Fixed Costs)"
+  },
+  {
+   "t": "p",
+   "v": "A step cost (semi-fixed cost) is fixed over a small range of activity, then jumps to a higher level. It moves upward in steps. Example: a hospital needs one nurse per 25 patients. At 1–25 patients, one nurse's salary is incurred. At 26–50, two nurses. At 51–75, three. Each jump is a step. This differs from a semi-variable cost, which increases smoothly from a fixed base; a step cost increases in sudden jumps."
+  },
+  {
+   "t": "def",
+   "term": "Step Cost (Semi-Fixed Cost)",
+   "v": "A cost that remains fixed over a small range of activity, then jumps to a higher fixed level once activity crosses a threshold. Unlike mixed costs which change smoothly, step costs increase in sudden jumps. Common when capacity is added in discrete blocks (equipment, staff, floor space)."
+  },
+  {
+   "t": "ex",
+   "l": "Step Cost — Hospital Nursing Staff",
+   "v": "Rule: 1 nurse per 25 patients. Nurse salary = $6,000/month.\n\nPatients 1–25:   1 nurse  → Total = $6,000\nPatients 26–50:  2 nurses → Total = $12,000\nPatients 51–75:  3 nurses → Total = $18,000\n\nAt 24 patients: cost per patient = $6,000 ÷ 24 = $250\nAt 26 patients: cost per patient = $12,000 ÷ 26 = $462 (jumped — one extra nurse hired)\nAt 50 patients: cost per patient = $12,000 ÷ 50 = $240\n\nEach jump adds a full step of fixed cost that must be absorbed by the new activity range."
+  },
+  {
+   "t": "h",
+   "v": "All Three Side by Side"
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Cost Type",
+    "Total Behavior",
+    "Per-Unit Behavior",
+    "Example"
+   ],
+   "r": [
+    [
+     "Variable",
+     "Changes proportionally with production",
+     "Constant — never changes",
+     "Direct materials per unit"
+    ],
+    [
+     "Fixed",
+     "Constant within relevant range",
+     "Decreases as production rises",
+     "Factory rent, equipment depreciation"
+    ],
+    [
+     "Mixed (Semi-variable)",
+     "Changes, but never reaches zero",
+     "Changes with activity",
+     "Electricity: base fee + usage charge"
+    ],
+    [
+     "Step (Semi-fixed)",
+     "Constant over small range, then jumps",
+     "Decreases within range, then jumps",
+     "Hospital nursing staff salaries"
+    ]
+   ]
+  },
+  {
+   "t": "h",
+   "v": "Estimating Mixed Costs — The High-Low Method"
+  },
+  {
+   "t": "p",
+   "v": "When a cost is mixed, management needs to separate its fixed and variable components to plan and control it. The high-low method is the simplest technique: it uses only the highest and lowest activity points to estimate the variable rate per unit and the fixed component. It is quick and easy but ignores all data points in between — so it is less accurate than regression analysis. Use it when you need a fast estimate."
+  },
+  {
+   "t": "def",
+   "term": "High-Low Method",
+   "v": "A simple cost-estimation technique that uses only the highest and lowest activity levels within a data set to split a mixed cost into its fixed and variable components. Variable rate is estimated from the change in cost over the change in activity between the two extreme points; fixed component is the remainder."
+  },
+  {
+   "t": "ex",
+   "l": "High-Low Method — Utilities Example",
+   "v": "Monthly data on utilities cost and machine hours:\n\nMonth      Machine Hours    Utilities Cost\nJan             2,000            $3,000\nFeb             1,500            $2,500  ← Low\nMar             3,000            $4,000  ← High\nApr             2,500            $3,500\n\nStep 1: Variable rate = (High Cost − Low Cost) ÷ (High Activity − Low Activity)\n                     = ($4,000 − $2,500) ÷ (3,000 − 1,500)\n                     = $1,500 ÷ 1,500 hours\n                     = $1.00 per machine hour\n\nStep 2: Fixed component (use either point — result should match):\n  Using High: $4,000 − ($1.00 × 3,000) = $4,000 − $3,000 = $1,000 fixed\n  Using Low : $2,500 − ($1.00 × 1,500) = $2,500 − $1,500 = $1,000 fixed  ✓\n\nCost formula: Total Utilities = $1,000 + ($1.00 × Machine Hours)\nPredict April at 2,500 hours: $1,000 + $2,500 = $3,500  ✓ (matches actual)"
+  },
+  {
+   "t": "tip",
+   "v": "The high-low method only uses TWO data points and ignores everything else — including outliers that may distort the answer. If the highest or lowest month is unusual (a shutdown, a rush order), the estimate will be wrong. When accuracy matters, use regression analysis instead. On the exam, always identify the highest and lowest ACTIVITY levels, not the highest and lowest costs."
+  },
+  {
+   "t": "h",
+   "v": "Topic 4: Cost Measurement Methods"
+  },
+  {
+   "t": "p",
+   "v": "Once you know how costs behave, you need to assign them to units produced. There are three main methods for allocating costs — both direct costs (materials and labor) and indirect costs (overhead) — to units manufactured."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Method",
+    "How Direct Costs Applied",
+    "How Overhead Applied",
+    "Best Used For"
+   ],
+   "r": [
+    [
+     "Standard Costing",
+     "Standard price × standard quantity allowed for actual output",
+     "Predetermined rate × standard input for actual output",
+     "Most manufacturing; flexible budgeting and variance analysis"
+    ],
+    [
+     "Normal Costing",
+     "Actual price × actual quantity used",
+     "Predetermined rate × actual input used",
+     "Job order costing where actual direct costs are known"
+    ],
+    [
+     "Actual Costing",
+     "Actual price × actual quantity used",
+     "Actual overhead rate × actual input used",
+     "Rarely used; can cause significant cost-per-unit fluctuation"
+    ]
+   ]
+  },
+  {
+   "t": "def",
+   "term": "Standard Costing",
+   "v": "A costing method that assigns costs to production using standard (predetermined) prices, quantities, and overhead rates. Standards are set at the beginning of the year based on efficient operating conditions. Actual costs are then compared to standards to compute variances. Widely used because it enables flexible budgeting and variance analysis."
+  },
+  {
+   "t": "def",
+   "term": "Normal Costing",
+   "v": "A costing method that uses actual direct materials and actual direct labor costs, but applies overhead using a predetermined overhead rate rather than actual overhead. Commonly used in job order costing where actual direct costs are known when the job is completed but actual overhead is not."
+  },
+  {
+   "t": "def",
+   "term": "Actual Costing",
+   "v": "A costing method that uses actual costs for direct materials, direct labor, AND overhead. Rarely used in practice because actual overhead is not known until the end of the accounting period, and unit costs fluctuate significantly from period to period."
+  },
+  {
+   "t": "p",
+   "v": "The predetermined overhead application rate is the key tool in both standard and normal costing. It is calculated once at the beginning of the year using budgeted amounts:"
+  },
+  {
+   "t": "f",
+   "l": "Predetermined Overhead Rate",
+   "v": "Predetermined Rate = Budgeted Manufacturing Overhead ÷ Budgeted Activity Level of Allocation Base\nCommon allocation bases: direct labor hours, machine hours, direct labor cost"
+  },
+  {
+   "t": "def",
+   "term": "Predetermined Overhead Rate",
+   "v": "The overhead application rate calculated at the beginning of the year using budgeted (not actual) overhead divided by the budgeted activity level of the allocation base. It is used throughout the year to apply overhead to production, so unit costs remain stable even when actual overhead fluctuates period-to-period."
+  },
+  {
+   "t": "ex",
+   "l": "Predetermined Rate Calculation",
+   "v": "Budgeted variable overhead: $10,000. Budgeted production: 2,000 units.\nStandard machine hours per unit: 0.25 hours → Budgeted hours = 500.\nPredetermined rate = $10,000 ÷ 500 hours = $20 per machine hour.\n\nActual production = 2,500 units → Standard hours allowed = 2,500 × 0.25 = 625 hours.\nOverhead applied = 625 × $20 = $12,500.\nNote: Actual overhead incurred = $12,000 → Over-applied by $500."
+  },
+  {
+   "t": "ex",
+   "l": "Standard vs Normal vs Actual — Same Job, Three Answers",
+   "v": "Job #100 produces 1,000 units. Overhead is applied on machine hours.\n\nDirect materials — standard: $10/kg, 2 kg per unit. Actual: $11/kg, 2.1 kg per unit.\nOverhead — predetermined rate: $20/hr. Actual rate: $24/hr.\nStandard machine hours: 0.5/unit (500 hrs). Actual machine hours used: 550.\n\nSTANDARD COSTING — standard price x standard qty allowed:\nMaterials = 1,000 x 2 kg x $10 = $20,000\nOverhead  = 500 std hrs x $20 predetermined = $10,000\nTotal = $30,000\n\nNORMAL COSTING — actual price x actual qty, but predetermined OH rate:\nMaterials = 1,000 x 2.1 kg x $11 = $23,100\nOverhead  = 550 actual hrs x $20 predetermined = $11,000\nTotal = $34,100\n\nACTUAL COSTING — actual price x actual qty, and actual OH rate:\nMaterials = 1,000 x 2.1 kg x $11 = $23,100\nOverhead  = 550 actual hrs x $24 actual = $13,200\nTotal = $36,300\n\nThe only difference between Normal and Actual is the overhead rate.\nThe only difference between Standard and Normal is using standard vs actual direct costs."
+  },
+  {
+   "t": "tip",
+   "v": "Under-applied overhead = actual overhead incurred > overhead applied to production. Over-applied = actual < applied. At year-end, if immaterial: close to Cost of Goods Sold. If material: prorate among COGS, Finished Goods, and Work-in-Process."
+  },
+  {
+   "t": "h",
+   "v": "Topic 5: Variable vs Absorption Costing"
+  },
+  {
+   "t": "p",
+   "v": "Variable costing and absorption costing are two methods of inventory costing. The ONLY difference between them is how fixed factory overhead is treated. Everything else — variable manufacturing costs, selling and admin costs — is handled the same way."
+  },
+  {
+   "t": "def",
+   "term": "Absorption Costing",
+   "v": "An inventory costing method that treats ALL manufacturing costs — including fixed factory overhead — as product costs. Required by GAAP for external financial reporting and by the IRS for tax reporting."
+  },
+  {
+   "t": "def",
+   "term": "Variable (Direct) Costing",
+   "v": "An inventory costing method that treats only variable manufacturing costs as product costs; fixed factory overhead is treated as a period cost and expensed in the period incurred. Used for internal decision-making only; NOT acceptable for GAAP or tax reporting."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "",
+    "Absorption Costing",
+    "Variable (Direct) Costing"
+   ],
+   "r": [
+    [
+     "Fixed factory overhead",
+     "Product cost — included in inventory, expensed when units are sold",
+     "Period cost — expensed in the period incurred, regardless of sales"
+    ],
+    [
+     "Required for",
+     "External GAAP financial reporting",
+     "Internal management analysis only — NOT acceptable for GAAP or tax reporting"
+    ],
+    [
+     "Income statement shows",
+     "Gross profit (Revenue − COGS including fixed OH)",
+     "Contribution margin (Revenue − All variable costs), then fixed costs below"
+    ],
+    [
+     "When production > sales",
+     "Higher income (fixed OH deferred in ending inventory)",
+     "Lower income (all fixed OH expensed immediately)"
+    ],
+    [
+     "When production = sales",
+     "Same income as variable costing",
+     "Same income as absorption costing"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Absorption vs Variable Costing — Income Difference",
+   "v": "Fixed factory overhead: $120,000. Units produced: 12,000. Units sold: 10,000.\nFixed OH per unit (absorption) = $120,000 ÷ 12,000 = $10/unit\n\nAbsorption: Fixed OH in COGS = 10,000 × $10 = $100,000. In ending inventory = 2,000 × $10 = $20,000.\nVariable: All $120,000 expensed this period regardless of how many sold.\n\nDifference in operating income = $20,000 (absorption income is $20,000 higher because\n$20,000 of fixed OH is deferred in ending inventory under absorption)."
+  },
+  {
+   "t": "tip",
+   "v": "The income difference between absorption and variable costing equals: (Units Produced − Units Sold) × Fixed OH per unit. When production exceeds sales, absorption income is HIGHER. When sales exceed production, absorption income is LOWER."
+  },
+  {
+   "t": "h",
+   "v": "Topic 6: Process Costing vs Job Order Costing"
+  },
+  {
+   "t": "p",
+   "v": "These are two cost accumulation systems used to assign costs to products. The choice depends on whether units are identical or distinct."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "",
+    "Process Costing",
+    "Job Order Costing"
+   ],
+   "r": [
+    [
+     "Used when",
+     "Many identical or similar units manufactured (assembly line, clothing factory)",
+     "Units are distinct and separately identifiable (law firm, custom manufacturer)"
+    ],
+    [
+     "Costs accumulated by",
+     "Department or process",
+     "Specific job, project, or contract"
+    ],
+    [
+     "Example",
+     "Soft drink bottling, textile manufacturing",
+     "Accounting firm billing hours to clients, custom furniture maker"
+    ]
+   ]
+  },
+  {
+   "t": "def",
+   "term": "Process Costing",
+   "v": "A cost accumulation system used when many identical or similar units are produced in a continuous flow. Costs are accumulated by department or process and averaged over all units produced. Examples: soft-drink bottling, oil refining, textile manufacturing."
+  },
+  {
+   "t": "def",
+   "term": "Job Order Costing",
+   "v": "A cost accumulation system used when units are distinct and separately identifiable. Costs are accumulated by specific job, project, or contract. Examples: accounting firm billing hours to clients, custom furniture maker, construction contractor."
+  },
+  {
+   "t": "b",
+   "v": [
+    "Standard costing can be used in either a process costing or job-order costing environment",
+    "Normal costing is used mainly in job order costing (too difficult to use in process costing)",
+    "Actual costing is practical only for job order costing and is seldom used due to fluctuating unit costs"
+   ]
+  },
+  {
+   "t": "key",
+   "v": [
+    "Variable costs: total changes with activity, per-unit is constant. Fixed costs: total is constant, per-unit changes inversely with activity.",
+    "Standard costing = predetermined rate × standard input for actual output; used for both process and job order. Normal costing = actual DM/DL + predetermined OH; used mainly in job order.",
+    "Predetermined Overhead Rate = Budgeted Manufacturing Overhead ÷ Budgeted Activity Level. Set at the start of the year using budgeted figures only.",
+    "Absorption costing (GAAP) puts fixed OH into product cost. Variable costing (internal only) expenses it as a period cost. Income difference = (Units Produced − Units Sold) × Fixed OH per unit.",
+    "Process costing = many identical units, costs accumulated by department. Job order costing = distinct units, costs accumulated by job or project."
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Process vs Job Order — Numeric Contrast",
+   "v": "Same total cost, two different products. Total production cost = $500,000.\n\nPROCESS COSTING (a paint factory — identical 4-litre cans):\nUnits completed = 100,000 cans.\nCost per can = $500,000 / 100,000 = $5.00\nEvery can carries exactly $5.00. Costs are averaged over the whole process.\n\nJOB ORDER COSTING (a furniture workshop — three custom jobs):\nJob A (hotel lobby): materials $120,000 + labor $60,000 + OH $30,000 = $210,000\nJob B (office desks): materials $90,000  + labor $50,000 + OH $25,000 = $165,000\nJob C (library shelves): materials $70,000 + labor $40,000 + OH $15,000 = $125,000\nTotal = $500,000 — but each job has its OWN cost.\n\nJob A cost per unit (30 units) = $210,000 / 30 = $7,000\nJob C cost per unit (50 units) = $125,000 / 50 = $2,500\n\nKey point: process costing averages ($5.00 for everything); job order traces\ncost to each specific job ($7,000 vs $2,500 — very different)."
+  }
+ ],
+ "4-2": [
+  {
+   "t": "h",
+   "v": "Manufacturing Overhead — What It Is and Why It Matters"
+  },
+  {
+   "t": "p",
+   "v": "Think of overhead as all the costs needed to run the factory that cannot be traced directly to a specific unit. You know exactly how much leather goes into each football (direct material) and how many labor hours each worker spent (direct labor). But the factory rent, the maintenance crew's salary, the cleaning supplies — these benefit all the products being made, not just one. That is manufacturing overhead."
+  },
+  {
+   "t": "def",
+   "term": "Manufacturing Overhead",
+   "v": "All manufacturing costs that cannot be directly and economically traced to specific units of output. Includes indirect materials, indirect labor, and other factory costs such as rent, depreciation, and utilities. Under GAAP, all manufacturing overhead must be allocated to units produced."
+  },
+  {
+   "t": "p",
+   "v": "GAAP requires absorption costing for external reporting — meaning all manufacturing overhead must be allocated to units produced. If a company ignores overhead when setting prices, it risks pricing products at a loss because direct costs are covered but indirect costs are not."
+  },
+  {
+   "t": "h",
+   "v": "Three Categories of Production Costs"
+  },
+  {
+   "t": "b",
+   "v": [
+    "Direct materials (DM): materials that can be directly and economically traced to a specific unit — leather in a football, steel in a car frame",
+    "Direct labor (DL): labor directly traceable to a specific unit — the worker stitching the football",
+    "Manufacturing overhead (OH): all other production costs that cannot be traced to specific units — factory rent, depreciation on equipment, indirect labor (plant superintendent, janitors), indirect materials (lubricant, cleaning supplies)"
+   ]
+  },
+  {
+   "t": "h",
+   "v": "Variable, Fixed, and Mixed Overheads"
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Overhead Type",
+    "Behavior",
+    "Examples"
+   ],
+   "r": [
+    [
+     "Variable overhead",
+     "Changes in total as activity changes; per-unit cost assumed constant",
+     "Indirect materials, equipment maintenance, sales commissions"
+    ],
+    [
+     "Fixed overhead",
+     "Does not change in total as activity changes within the relevant range",
+     "Factory rent, depreciation on production equipment, plant superintendent salary"
+    ],
+    [
+     "Mixed overhead",
+     "Contains both fixed and variable elements",
+     "Electricity (base fee + usage charge), allocated cost pools with both fixed and variable costs"
+    ]
+   ]
+  },
+  {
+   "t": "h",
+   "v": "Traditional Overhead Allocation — Plant-Wide vs Departmental"
+  },
+  {
+   "t": "p",
+   "v": "The traditional method groups overhead into a cost pool and allocates it using a single cost driver (the allocation base). The allocation base should reflect what actually causes overhead costs to be incurred — for a labor-intensive process, direct labor hours is best; for a highly automated process, machine hours is better."
+  },
+  {
+   "t": "def",
+   "term": "Allocation Base (Cost Driver)",
+   "v": "The activity measure used to assign overhead costs to units produced. Common bases include direct labor hours, machine hours, and direct labor cost. The base should reflect what actually causes overhead costs to be incurred."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Approach",
+    "Description",
+    "Pros / Cons"
+   ],
+   "r": [
+    [
+     "Plant-wide allocation",
+     "One cost pool for the whole plant; one allocation rate for all products",
+     "Simple and cheap; less accurate — best when products are similar"
+    ],
+    [
+     "Departmental allocation",
+     "Separate cost pool per department; separate rate and allocation base per department",
+     "More accurate; better for decisions; more administrative cost"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Departmental Allocation — Example",
+   "v": "Dept A: high machine use, low labor → allocate OH by machine hours\nDept B: high labor use, low machines → allocate OH by direct labor hours\nDept C: final assembly → allocate OH by number of parts\nDept D: painting → allocate OH by painted surface area\n\nUsing different bases per department gives more accurate product costs than a single plant-wide rate."
+  },
+  {
+   "t": "h",
+   "v": "Calculating the Predetermined Overhead Rate"
+  },
+  {
+   "t": "p",
+   "v": "The rate is calculated at the start of the year using budgeted numbers. It cannot use actual overhead because actual costs may not be known until well after year-end. Once set, the same rate is used throughout the year unless something material changes."
+  },
+  {
+   "t": "f",
+   "l": "Predetermined Overhead Rate",
+   "v": "Predetermined Rate = Budgeted Manufacturing Overhead\n                     ÷ Budgeted Activity Level of Allocation Base\n\nAlso: Rate × Budgeted Activity Level = Budgeted Overhead (useful for working backward)"
+  },
+  {
+   "t": "ex",
+   "l": "Overhead Rate — Full Walkthrough",
+   "v": "Budgeted fixed overhead: $200,000. Budgeted machine hours: 10,000.\nPredetermined rate = $200,000 ÷ 10,000 = $20 per machine hour.\n\nActual machine hours used: 9,500. Fixed overhead applied = 9,500 × $20 = $190,000.\nActual fixed overhead incurred = $205,000.\nUnder-applied overhead = $205,000 − $190,000 = $15,000 (actual > applied → under-applied)."
+  },
+  {
+   "t": "def",
+   "term": "Under-applied / Over-applied Overhead",
+   "v": "The difference between actual manufacturing overhead incurred and overhead applied to production using the predetermined rate. Under-applied: actual overhead > overhead applied (not enough assigned to products). Over-applied: actual overhead < overhead applied (too much assigned to products)."
+  },
+  {
+   "t": "tip",
+   "v": "Always use BUDGETED overhead for the numerator and BUDGETED activity level for the denominator. Never mix budgeted for one and actual for the other. This is a common exam trick."
+  },
+  {
+   "t": "h",
+   "v": "Activity-Based Costing (ABC)"
+  },
+  {
+   "t": "p",
+   "v": "Traditional allocation uses one cost driver for everything. ABC uses multiple cost pools and multiple cost drivers — one driver per cost pool that most accurately represents what causes each pool's costs to be incurred. The premise: products consume activities, and activities consume resources."
+  },
+  {
+   "t": "def",
+   "term": "Activity-Based Costing (ABC)",
+   "v": "An overhead allocation method that uses multiple cost pools and multiple cost drivers — one driver per pool that best reflects what causes that pool's costs to be incurred. More accurate than traditional allocation, but more expensive to maintain."
+  },
+  {
+   "t": "b",
+   "v": [
+    "Resource consumption cost drivers: measure how much of a resource an activity uses",
+    "Activity consumption cost drivers: measure how much of an activity a cost object (product, customer) consumes",
+    "ABC is more accurate than traditional allocation — especially when products differ significantly in volume, complexity, or the activities they require",
+    "Pure ABC does not conform to GAAP (some non-manufacturing costs included, some manufacturing costs excluded), but adapted ABC — using only manufacturing costs in the pools — can be used for external reporting",
+    "ABC is particularly useful internally for pricing decisions, product mix decisions, and customer profitability analysis"
+   ]
+  },
+  {
+   "t": "tip",
+   "v": "ABC assigns overhead more accurately than traditional methods, but it is more expensive to implement and maintain. The benefit of better information must exceed the cost of the additional calculations. Traditional allocation may still be appropriate when products are similar."
+  },
+  {
+   "t": "key",
+   "v": [
+    "Product costs under GAAP = Direct Materials + Direct Labor + Manufacturing Overhead. Everything else is a period cost.",
+    "Predetermined OH Rate uses BUDGETED overhead in the numerator and BUDGETED activity in the denominator — never mix actual with budgeted.",
+    "Under-applied OH = actual > applied. Over-applied = actual < applied. Close to COGS if immaterial; prorate among COGS, WIP, and FG if material.",
+    "Departmental allocation is more accurate than plant-wide allocation when different departments consume overhead differently.",
+    "ABC is more accurate but more expensive. Use it when products differ significantly in volume, complexity, or the activities they consume."
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "ABC vs Plant-Wide Rate — Numeric Comparison",
+   "v": "A company makes two products. Total overhead = $300,000.\nProduct X: 9,000 units, 1,000 direct labor hours, 10 setups, 50 inspections.\nProduct Y: 1,000 units, 1,000 direct labor hours, 90 setups, 450 inspections.\n\nPLANT-WIDE RATE (based on direct labor hours):\nRate = $300,000 / 2,000 total DLH = $150 per DLH\nProduct X = 1,000 hrs x $150 = $150,000 -> per unit = $150,000/9,000 = $16.67\nProduct Y = 1,000 hrs x $150 = $150,000 -> per unit = $150,000/1,000 = $150.00\n\nACTIVITY-BASED COSTING (two cost pools):\nSetup pool $200,000 / 100 setups = $2,000 per setup\nInspection pool $100,000 / 500 inspections = $200 per inspection\n\nProduct X = (10 x $2,000) + (50 x $200) = $20,000 + $10,000 = $30,000\n            -> per unit = $30,000 / 9,000 = $3.33\nProduct Y = (90 x $2,000) + (450 x $200) = $180,000 + $90,000 = $270,000\n            -> per unit = $270,000 / 1,000 = $270.00\n\nThe plant-wide rate OVERCOSTS the simple high-volume product (X: $16.67 vs $3.33)\nand UNDERCOSTS the complex low-volume product (Y: $150 vs $270). This is exactly\nthe cost distortion ABC is designed to eliminate."
+  }
+ ],
+ "4-3": [
+  {
+   "t": "h",
+   "v": "Variance Analysis — What It Is and Why It Matters"
+  },
+  {
+   "t": "p",
+   "v": "Variance analysis compares what actually happened to what should have happened according to the budget. It tells management where actual costs were higher or lower than planned, enabling them to investigate the reasons and take corrective action. This is called management by exception — only significant variances get management attention, focusing effort where it matters most."
+  },
+  {
+   "t": "p",
+   "v": "A positive variance for a cost is UNFAVORABLE (actual cost was higher than standard — bad). A negative variance for a cost is FAVORABLE (actual cost was lower than standard — good). A positive variance for revenue is FAVORABLE."
+  },
+  {
+   "t": "h",
+   "v": "Flexible Budget Variance vs Sales Volume Variance"
+  },
+  {
+   "t": "p",
+   "v": "The static (master) budget is prepared for one specific planned volume. The flexible budget adjusts that plan to the actual volume achieved. This separation is essential for fair performance evaluation."
+  },
+  {
+   "t": "def",
+   "term": "Flexible Budget",
+   "v": "A budget that is adjusted from the static (master) budget to reflect the actual level of activity achieved. It shows what revenues and costs should have been at the actual volume, enabling fair performance evaluation by removing the volume effect."
+  },
+  {
+   "t": "def",
+   "term": "Standard Cost",
+   "v": "The predetermined cost of producing one unit of output under efficient operating conditions. Standard costs are the benchmark against which actual costs are compared to calculate variances."
+  },
+  {
+   "t": "f",
+   "l": "Variance Formulas",
+   "v": "Flexible Budget Variance = Actual Results − Flexible Budget Amount\nSales Volume Variance = Flexible Budget Amount − Static Budget Amount\nTotal Static Budget Variance = Flexible Budget Variance + Sales Volume Variance"
+  },
+  {
+   "t": "ex",
+   "l": "Flexible Budget Variance Report",
+   "v": "Static budget prepared for 24,000 units. Actual sales = 20,000 units.\n\n                     Actual      Flexible    Static\nUnits sold           20,000       20,000      24,000\nRevenues         $2,500,000   $2,400,000  $2,880,000\nVariable costs   $1,900,200   $1,760,000  $2,112,000\nContrib. margin    $599,800     $640,000    $768,000\nFixed costs        $570,000     $552,000    $552,000\nOperating income    $29,800      $88,000    $216,000\n\nFlexible budget variance = $29,800 − $88,000 = −$58,200 Unfavorable\nSales volume variance = $88,000 − $216,000 = −$128,000 Unfavorable\nTotal static budget variance = −$186,200 Unfavorable"
+  },
+  {
+   "t": "def",
+   "term": "Sales Volume Variance",
+   "v": "The portion of the total static budget variance caused by selling more or fewer units than planned. Calculated as Flexible Budget Amount − Static Budget Amount. Reflects the impact of volume, not of cost control or pricing."
+  },
+  {
+   "t": "tip",
+   "v": "The flexible budget isolates the performance effect by removing the volume effect. Comparing actual to flexible shows how well management controlled costs and prices at the actual volume. Comparing flexible to static shows the financial impact of selling fewer/more units than planned."
+  },
+  {
+   "t": "h",
+   "v": "Direct Materials Variances"
+  },
+  {
+   "t": "p",
+   "v": "The total materials variance has two components: a quantity variance (did we use more or less material than we should have?) and a price variance (did we pay more or less per unit than budgeted?). The two always add up to the total variance."
+  },
+  {
+   "t": "f",
+   "l": "Materials Variance Formulas",
+   "v": "Total Materials Variance = (AP × AQ) − (SP × SQ)\n\nQuantity Variance = (AQ − SQ) × SP\nPrice Variance    = (AP − SP) × AQ\n\nAP = Actual Price, SP = Standard Price\nAQ = Actual Quantity used, SQ = Standard Quantity allowed for actual output"
+  },
+  {
+   "t": "def",
+   "term": "Direct Materials Price Variance",
+   "v": "The difference between the actual price paid for materials and the standard price, multiplied by the actual quantity used. Formula: (AP − SP) × AQ. A favorable variance means materials cost less than standard; unfavorable means more."
+  },
+  {
+   "t": "def",
+   "term": "Direct Materials Quantity Variance",
+   "v": "The difference between the actual quantity of materials used and the standard quantity allowed for actual output, multiplied by the standard price. Formula: (AQ − SQ) × SP. A favorable variance means less material was used than expected; unfavorable means more."
+  },
+  {
+   "t": "ex",
+   "l": "Medina Co. — Direct Materials (Full Example)",
+   "v": "Each football: 1 sq meter leather standard, standard cost $5.00/meter.\nActual: produced 250 footballs, used 290 sq meters at $4.50/meter.\n\nSQ = 1 meter × 250 footballs = 250 meters\nAQ = 290 meters   AP = $4.50   SP = $5.00\n\nQuantity Variance = (290 − 250) × $5.00 = $200 UNFAVORABLE\n(Used 40 extra meters — overage at standard price)\n\nPrice Variance = ($4.50 − $5.00) × 290 = −$145 FAVORABLE\n(Paid $0.50 less per meter × 290 meters used)\n\nTotal Variance = $200 − $145 = $55 UNFAVORABLE\nVerify: (290 × $4.50) − (250 × $5.00) = $1,305 − $1,250 = $55 ✓"
+  },
+  {
+   "t": "b",
+   "v": [
+    "Unfavorable quantity variance causes: low-quality materials, machine problems, poor product design, untrained workers, theft, rush orders disrupting workflow",
+    "Favorable quantity variance causes: better quality materials (less waste), improved engineering specs, better-trained workers",
+    "Unfavorable price variance causes: market price increases, inexperienced purchasing staff",
+    "Favorable price variance causes: market price decreases, better purchasing research — BUT may indicate inferior material that drives up the quantity variance"
+   ]
+  },
+  {
+   "t": "tip",
+   "v": "On the exam, you may be given the variance and asked to solve for AP, SP, AQ, or SQ. Use the same formulas — just rearrange algebraically to solve for the unknown. Practice this skill — it appears frequently."
+  },
+  {
+   "t": "h",
+   "v": "Direct Labor Variances"
+  },
+  {
+   "t": "p",
+   "v": "The structure is identical to materials variances — just with different names. The price variance is called the rate variance, and the quantity variance is called the efficiency variance."
+  },
+  {
+   "t": "f",
+   "l": "Direct Labor Variance Formulas",
+   "v": "Total Labor Variance = (AR × AH) − (SR × SH)\n\nRate Variance      = (AR − SR) × AH\nEfficiency Variance = (AH − SH) × SR\n\nAR = Actual Rate, SR = Standard Rate\nAH = Actual Hours worked, SH = Standard Hours allowed for actual output"
+  },
+  {
+   "t": "def",
+   "term": "Direct Labor Rate Variance",
+   "v": "The difference between the actual wage rate paid and the standard wage rate, multiplied by the actual hours worked. Formula: (AR − SR) × AH. Equivalent to the price variance for materials — but named differently because labor is paid a rate, not a price."
+  },
+  {
+   "t": "def",
+   "term": "Direct Labor Efficiency Variance",
+   "v": "The difference between the actual hours worked and the standard hours allowed for actual output, multiplied by the standard wage rate. Formula: (AH − SH) × SR. Equivalent to the quantity variance for materials — but named differently because labor uses hours, not units."
+  },
+  {
+   "t": "ex",
+   "l": "Labor Variance — Quick Example",
+   "v": "Standard: 2 labor hours per unit at $15/hour. Actual: 1,000 units produced\nusing 2,100 hours at $14.50/hour.\n\nSH = 2 × 1,000 = 2,000 hours\nRate Variance = ($14.50 − $15.00) × 2,100 = −$1,050 FAVORABLE\nEfficiency Variance = (2,100 − 2,000) × $15.00 = $1,500 UNFAVORABLE\nTotal = $1,500 − $1,050 = $450 UNFAVORABLE"
+  },
+  {
+   "t": "b",
+   "v": [
+    "Unfavorable rate variance: wage rate higher than standard (union renegotiation, use of more skilled workers than planned)",
+    "Favorable rate variance: lower wages paid — may signal less-skilled workers, leading to unfavorable efficiency variance",
+    "Unfavorable efficiency variance: more hours used than standard (inexperienced workers, machine breakdowns, material quality issues)",
+    "Favorable efficiency variance: fewer hours used than standard (experienced workers, better training, improved process)"
+   ]
+  },
+  {
+   "t": "h",
+   "v": "Fixed Overhead Variances"
+  },
+  {
+   "t": "p",
+   "v": "Fixed overhead variances are unique because fixed overhead is applied to production AS IF it were a variable cost (standard rate × standard input for actual output), but it is actually incurred as a fixed lump sum. This creates two distinct sub-variances. The total fixed overhead variance = Actual Fixed OH Incurred − Fixed OH Applied to production."
+  },
+  {
+   "t": "f",
+   "l": "Fixed Overhead Variance Structure",
+   "v": "Total Fixed OH Variance = Actual Fixed OH − Fixed OH Applied\n\n1. Spending Variance = Actual Fixed OH − Budgeted Fixed OH\n   (Did we spend more or less than we planned?)\n\n2. Production-Volume Variance = Budgeted Fixed OH − Fixed OH Applied\n   (Did we produce more or less than the denominator volume used to set the rate?)"
+  },
+  {
+   "t": "def",
+   "term": "Spending Variance (Fixed Overhead)",
+   "v": "The difference between actual fixed overhead incurred and budgeted fixed overhead. Formula: Actual Fixed OH − Budgeted Fixed OH. Measures whether the company spent more or less on fixed overhead items than planned — independent of production volume."
+  },
+  {
+   "t": "def",
+   "term": "Production-Volume Variance",
+   "v": "The fixed overhead variance that measures whether actual production matched the budgeted (denominator) volume used to set the fixed OH rate. Equal to Budgeted Fixed OH − Fixed OH Applied. It reflects capacity utilization, not spending."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Sub-Variance",
+    "Formula",
+    "What It Measures",
+    "Can Be Caused By"
+   ],
+   "r": [
+    [
+     "Spending Variance",
+     "Actual Fixed OH − Budgeted Fixed OH",
+     "Were actual fixed costs more or less than budgeted?",
+     "New equipment (higher depreciation); rent increase; salary increases (Unfav) OR move to cheaper facility; lower insurance (Fav)"
+    ],
+    [
+     "Production-Volume Variance",
+     "Budgeted Fixed OH − Fixed OH Applied",
+     "Did actual production match the denominator volume?",
+     "Producing more than budgeted → Favorable (overhead spread over more units); producing less → Unfavorable (overhead under-absorbed)"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Fixed Overhead Variances — Full Example",
+   "v": "Budgeted fixed OH: $200,000. Budgeted units: 10,000.\nPredetermined fixed OH rate = $200,000 ÷ 10,000 = $20 per unit.\nActual fixed OH incurred: $210,000. Actual production: 9,500 units.\n\nFixed OH Applied = 9,500 × $20 = $190,000\n\nTotal Fixed OH Variance:\n  Actual $210,000 − Applied $190,000 = $20,000 Unfavorable\n\nBreakdown:\n  Spending Variance = Actual $210,000 − Budgeted $200,000 = $10,000 Unfavorable\n  (Actual fixed costs were $10,000 more than budgeted — e.g., rent increase)\n\n  Production-Volume Variance = Budgeted $200,000 − Applied $190,000 = $10,000 Unfavorable\n  (Produced 9,500 units instead of 10,000 — under-utilized capacity)\n\nCheck: $10,000 U + $10,000 U = $20,000 U Total ✓\n\nKey insight: The production-volume variance has NO connection to how much was actually spent.\nIt measures capacity utilization — whether we produced at the planned denominator volume."
+  },
+  {
+   "t": "tip",
+   "v": "There is NO fixed overhead efficiency variance. Fixed costs do not relate to efficiency because they are the same total amount regardless of how efficiently production ran. Efficiency variances apply only to variable costs. Fixed overhead has only TWO sub-variances: spending and production-volume."
+  },
+  {
+   "t": "key",
+   "v": [
+    "Flexible Budget Variance = Actual − Flexible Budget (measures cost control). Sales Volume Variance = Flexible − Static (measures volume impact). They sum to the total static budget variance.",
+    "DM: Quantity Variance = (AQ − SQ) × SP. Price Variance = (AP − SP) × AQ. Total = (AP × AQ) − (SP × SQ).",
+    "DL: Rate Variance = (AR − SR) × AH. Efficiency Variance = (AH − SH) × SR. Same structure as materials with different names.",
+    "Fixed OH has ONLY TWO sub-variances: Spending (Actual − Budgeted) and Production-Volume (Budgeted − Applied). There is NO fixed OH efficiency variance.",
+    "Favorable variance for a cost = actual lower than standard (good). Unfavorable = actual higher (bad). Opposite for revenue."
+   ]
+  }
+ ],
+ "4-4": [
+  {
+   "t": "h",
+   "v": "Performance Measurement — Evaluating Segments and Managers"
+  },
+  {
+   "t": "p",
+   "v": "A large company is often divided into segments — divisions, departments, or business units. Measuring the performance of each segment and its manager is critical. The two primary financial measures are Return on Investment (ROI) and Residual Income (RI). Each measures something different, and neither is complete on its own."
+  },
+  {
+   "t": "def",
+   "term": "Investment Center",
+   "v": "A segment of the company whose manager is responsible for revenues, costs, AND the assets used to generate them. Because the manager controls all three, both ROI and Residual Income are appropriate measures of performance."
+  },
+  {
+   "t": "h",
+   "v": "Customer and Product Profitability Analysis"
+  },
+  {
+   "t": "p",
+   "v": "Before measuring segment performance, it helps to know which customers and products actually drive profits. Research consistently shows the 80/20 rule in business: roughly 80% of profits come from 20% of customers, and 20% of customers are typically unprofitable. Customer profitability analysis determines the profitability of each customer by allocating the costs-to-serve that customer and comparing them to the revenue generated."
+  },
+  {
+   "t": "b",
+   "v": [
+    "Profitable customers: offer discounts and improved service to retain and grow them",
+    "High cost-to-serve customers: re-price their services or reduce discounts to improve margin",
+    "Unprofitable customers: shift their product mix toward higher-margin items, or reduce the services offered",
+    "Product profitability analysis identifies which products should be re-priced, discontinued, or replaced"
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Customer Profitability — Why the Big Customer Can Lose Money",
+   "v": "Two customers, same gross margin percentage, very different profit.\n\nColumns: Customer A | Customer B\nSales:  $500,000  |  $200,000\nCost of goods sold:  $350,000  |  $140,000\nGross margin:  $150,000  |  $60,000\nGross margin %:  30%  |  30%\n\nNow apply the cost-to-serve (activity costs):\nNumber of orders:  200  |  5\nOrder processing at $300/order:  $60,000  |  $1,500\nNumber of deliveries:  200  |  5\nDelivery at $250/delivery:  $50,000  |  $1,250\nSales visits at $500/visit (40 vs 2):  $20,000  |  $1,000\nTotal cost to serve:  $130,000  |  $3,750\n\nCUSTOMER PROFIT:\nCustomer A = $150,000 - $130,000 = $20,000  -> 4% of sales\nCustomer B =  $60,000 -   $3,750 = $56,250  -> 28% of sales\n\nCustomer A buys 2.5x more but earns LESS than a third of B's profit, because A\norders in small frequent quantities. The gross margin hides this completely --\nonly cost-to-serve analysis reveals it."
+  },
+  {
+   "t": "h",
+   "v": "Return on Investment (ROI)"
+  },
+  {
+   "t": "p",
+   "v": "ROI measures what percentage return a business unit earned on its assets. It is the primary performance measure for an investment center — a segment where the manager controls revenues, costs, AND assets. A high ROI means the segment is generating strong returns on the assets it has been given to manage."
+  },
+  {
+   "t": "def",
+   "term": "Return on Investment (ROI)",
+   "v": "A percentage measure of how much operating income a business unit generates per dollar of assets. Calculated as Operating Income ÷ Assets. Higher ROI indicates better use of the assets employed by the segment."
+  },
+  {
+   "t": "f",
+   "l": "ROI Formula",
+   "v": "ROI = Operating Income of Business Unit ÷ Assets of Business Unit\n\nExpanded: ROI = (Income ÷ Sales) × (Sales ÷ Assets)\n             = Profit Margin × Asset Turnover"
+  },
+  {
+   "t": "ex",
+   "l": "ROI — Example and Decision Use",
+   "v": "Division A: Operating income = $600,000. Total assets = $4,000,000.\nROI = $600,000 ÷ $4,000,000 = 15%\n\nNew project proposed: will earn $80,000 on $600,000 of assets → ROI = 13.3%\nSince 13.3% < Division A's current 15%, the division manager will likely REJECT the project\neven though it is profitable — because it would lower the division's overall ROI.\nThis is the key weakness of ROI: it can lead managers to reject profitable investments."
+  },
+  {
+   "t": "tip",
+   "v": "A manager evaluated on ROI will reject any project whose ROI is below the division's current ROI, even if the project exceeds the company's required rate of return and would benefit the whole company. This goal incongruence is why Residual Income was developed."
+  },
+  {
+   "t": "h",
+   "v": "The ROI vs RI Conflict — Goal Incongruence"
+  },
+  {
+   "t": "p",
+   "v": "The fundamental weakness of ROI is that it can create goal incongruence — a situation where what is good for the division manager is NOT good for the company. A manager evaluated on ROI will reject a project if the project's ROI is below their current division ROI — even if the project's ROI exceeds the company's required rate of return (hurdle rate). This means the company loses a profitable investment because of how the manager is evaluated."
+  },
+  {
+   "t": "ex",
+   "l": "ROI vs RI Conflict — Classic Exam Scenario",
+   "v": "Company required rate of return (hurdle rate): 10%\nDivision A current ROI: 20% (operating income $600K ÷ assets $3,000K)\n\nNew project available:\n  Additional operating income: $80,000\n  Additional investment required: $500,000\n  Project ROI = $80,000 ÷ $500,000 = 16%\n\nROI ANALYSIS (Manager's perspective):\n  If project accepted: New ROI = ($600K + $80K) ÷ ($3,000K + $500K) = $680K ÷ $3,500K = 19.4%\n  Old ROI was 20% → New ROI is LOWER → Manager REJECTS project\n\nRI ANALYSIS (Company's perspective):\n  Project RI = $80,000 − (10% × $500,000) = $80,000 − $50,000 = +$30,000\n  Positive RI → Project ADDS value to the company → Company WANTS to accept it\n\nConclusion: The manager's ROI-based evaluation causes rejection of a value-creating project.\nRI solves this: any project with positive RI (return > hurdle rate) should be accepted."
+  },
+  {
+   "t": "tip",
+   "v": "Exam formula: RI = Operating Income − (Assets × Required Rate of Return). The required rate of return is management's target. If WACC is given and no other rate is specified, use WACC. RI can be negative — this means the division earned less than its target return (not necessarily a loss, just below the hurdle rate). A project should be accepted if its RI is positive, regardless of the division's current ROI."
+  },
+  {
+   "t": "h",
+   "v": "Residual Income (RI)"
+  },
+  {
+   "t": "p",
+   "v": "Residual Income overcomes ROI's goal incongruence problem. Instead of measuring a percentage, RI measures the dollar amount of income earned above the minimum required return on assets. Any project with positive RI should be accepted — it earns more than the company's required return."
+  },
+  {
+   "t": "def",
+   "term": "Residual Income (RI)",
+   "v": "The dollar amount of operating income earned above the minimum required return on assets. Calculated as Operating Income − (Assets × Required Rate of Return). Positive RI means the segment earned more than the required return."
+  },
+  {
+   "t": "f",
+   "l": "Residual Income Formula",
+   "v": "RI = Operating Income of Business Unit\n     − (Assets of Business Unit × Required Rate of Return)\n\nRequired Rate of Return is usually the company's WACC (weighted average cost of capital)\nor whatever rate management sets."
+  },
+  {
+   "t": "ex",
+   "l": "Residual Income — Same Example",
+   "v": "Division A: Operating income = $600,000. Assets = $4,000,000. Required rate = 10%.\nTarget return = $4,000,000 × 10% = $400,000\nRI = $600,000 − $400,000 = $200,000 ✓ Positive — good performance\n\nSame new project: earns $80,000 on $600,000 assets, required rate = 10%.\nProject RI = $80,000 − ($600,000 × 10%) = $80,000 − $60,000 = $20,000 ✓ Positive\nWith RI evaluation, the manager ACCEPTS the project — it earns above the required return."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "",
+    "ROI",
+    "Residual Income"
+   ],
+   "r": [
+    [
+     "Measures",
+     "Percentage return on assets",
+     "Dollar return above minimum required return"
+    ],
+    [
+     "Decision rule",
+     "Accept if ROI > required rate",
+     "Accept if RI > 0"
+    ],
+    [
+     "Weakness",
+     "May reject profitable projects that lower division ROI (goal incongruence)",
+     "Cannot compare divisions of different sizes (larger divisions naturally have larger RI)"
+    ],
+    [
+     "Best for",
+     "Comparing segments of similar size; benchmarking against industry",
+     "Evaluating individual investment decisions; aligning manager decisions with company goals"
+    ]
+   ]
+  },
+  {
+   "t": "tip",
+   "v": "If RI is not given but WACC is given, use WACC as the required rate of return. RI can be negative — it means the segment earned less than its target return. Negative RI does not mean a loss; it means the return was inadequate relative to the assets employed."
+  },
+  {
+   "t": "key",
+   "v": [
+    "ROI = Operating Income ÷ Assets. Can also be expanded as Profit Margin × Asset Turnover.",
+    "RI = Operating Income − (Assets × Required Rate of Return). Use WACC as the required rate if no other rate is given.",
+    "ROI's weakness: goal incongruence. Managers may reject profitable projects that lower the division's ROI, even when the project earns more than the company's required rate.",
+    "RI's weakness: cannot compare divisions of different sizes. A larger division naturally has a larger RI even at the same rate of return.",
+    "Accept a project if its RI is positive — this means the project earns more than the required rate, regardless of the division's current ROI."
+   ]
+  }
+ ],
+ "4-5": [
+  {
+   "t": "h",
+   "v": "Cost-Volume-Profit (CVP) Analysis — The Foundation of Short-Run Decisions"
+  },
+  {
+   "t": "p",
+   "v": "CVP analysis (also called breakeven analysis) examines how changes in volume, costs, and prices affect profit. It is primarily a short-run tool — in the short run, prices and costs are relatively stable, and the main variable the company controls is how many units it produces and sells. CVP answers questions like: how many units must we sell to break even? What profit will we earn at 10,000 units? How does a price cut affect our breakeven point?"
+  },
+  {
+   "t": "h",
+   "v": "CVP Assumptions"
+  },
+  {
+   "t": "b",
+   "v": [
+    "All costs are either fixed or variable — no mixed costs (or mixed costs have been separated into fixed and variable components)",
+    "Costs and revenues are linear within the relevant range",
+    "Unit selling price is constant — no volume discounts",
+    "Fixed costs remain constant within the relevant range",
+    "Variable cost per unit is constant within the relevant range",
+    "For multi-product companies: sales mix remains constant as total volume changes"
+   ]
+  },
+  {
+   "t": "h",
+   "v": "Contribution Margin — The Core Concept"
+  },
+  {
+   "t": "p",
+   "v": "The contribution margin is the amount each unit sold contributes toward covering fixed costs — and then generating profit once fixed costs are fully covered. It is the single most important number in CVP analysis."
+  },
+  {
+   "t": "def",
+   "term": "Contribution Margin",
+   "v": "The amount by which sales revenue exceeds variable costs. Unit CM = Selling Price per Unit − Variable Cost per Unit. It represents the amount each unit contributes toward covering fixed costs, and then toward profit once fixed costs are fully covered."
+  },
+  {
+   "t": "f",
+   "l": "Contribution Margin Formulas",
+   "v": "Unit Contribution Margin (UCM) = Selling Price per Unit − Variable Cost per Unit\nTotal Contribution Margin = UCM × Units Sold\n   OR\nTotal Contribution Margin = Total Revenue − Total Variable Costs\n\nContribution Margin Ratio (CMR) = UCM ÷ Selling Price (expressed as %)"
+  },
+  {
+   "t": "ex",
+   "l": "Contribution Margin — Ray Company",
+   "v": "Wireless router: selling price $60, variable cost $35.\nUCM = $60 − $35 = $25 per unit\nCMR = $25 ÷ $60 = 41.7%\n\nSell 10,000 units:\nTotal Revenue = $600,000\nTotal Variable Cost = $350,000\nTotal Contribution Margin = $250,000 (covers fixed costs, then becomes profit)"
+  },
+  {
+   "t": "h",
+   "v": "Contribution Margin Income Statement"
+  },
+  {
+   "t": "p",
+   "v": "CVP analysis uses a different income statement format than GAAP. Fixed costs are shown below contribution margin as a single lump sum, not mixed into cost of goods sold."
+  },
+  {
+   "t": "f",
+   "l": "CVP Income Statement Format",
+   "v": "Sales Revenue\n− Variable Costs\n= Contribution Margin\n− Fixed Costs\n= Operating Income"
+  },
+  {
+   "t": "ex",
+   "l": "CVP Income Statement — Cari Company",
+   "v": "Selling price $100/unit. Variable cost $60/unit. Fixed costs $120,000.\nUCM = $40 per unit.\n\nAt 1,000 units: Revenue $100K − Variable $60K = CM $40K − Fixed $120K = Loss $(80K)\nAt 2,000 units: Revenue $200K − Variable $120K = CM $80K − Fixed $120K = Loss $(40K)\nAt 3,000 units: Revenue $300K − Variable $180K = CM $120K − Fixed $120K = Income $0 ← Breakeven\nAt 4,000 units: Revenue $400K − Variable $240K = CM $160K − Fixed $120K = Income $40K\nAt 5,000 units: Revenue $500K − Variable $300K = CM $200K − Fixed $120K = Income $80K"
+  },
+  {
+   "t": "h",
+   "v": "Breakeven Analysis"
+  },
+  {
+   "t": "def",
+   "term": "Breakeven Point",
+   "v": "The level of sales at which total revenue equals total costs, resulting in zero operating income. Below breakeven the company operates at a loss; above breakeven it earns a profit."
+  },
+  {
+   "t": "f",
+   "l": "Breakeven Formulas",
+   "v": "Breakeven in Units = Total Fixed Costs ÷ Unit Contribution Margin\nBreakeven in Revenue = Total Fixed Costs ÷ Contribution Margin Ratio\nTarget Profit Units = (Total Fixed Costs + Target Profit) ÷ Unit Contribution Margin"
+  },
+  {
+   "t": "ex",
+   "l": "Breakeven — Ray Company",
+   "v": "Fixed costs = $150,000. UCM = $25.\nBreakeven = $150,000 ÷ $25 = 6,000 units\nVerify: (6,000 × $60) − (6,000 × $35) − $150,000 = $360,000 − $210,000 − $150,000 = $0 ✓\n\nBreakeven in revenue = $150,000 ÷ 41.7% = $360,000 ✓"
+  },
+  {
+   "t": "h",
+   "v": "Marginal Analysis and Relevant Costs"
+  },
+  {
+   "t": "p",
+   "v": "Marginal analysis examines the additional (incremental) benefit and additional cost of a one-unit change in activity. A rational decision-maker takes an action only if the marginal benefit exceeds the marginal cost. This is the core logic behind most short-run business decisions."
+  },
+  {
+   "t": "def",
+   "term": "Marginal Analysis",
+   "v": "A decision technique that compares the additional (incremental) benefit of an action to its additional cost. A rational decision-maker accepts an action only if marginal benefit exceeds marginal cost. Applies to short-run business decisions such as special orders, pricing, and production levels."
+  },
+  {
+   "t": "h",
+   "v": "Relevant vs Irrelevant Information"
+  },
+  {
+   "t": "p",
+   "v": "In any decision, only information that meets both criteria below is relevant:"
+  },
+  {
+   "t": "def",
+   "term": "Relevant Cost",
+   "v": "A cost that meets BOTH criteria: it occurs in the future AND it differs between alternatives under consideration. Only relevant costs should be used in decision-making; sunk costs and costs that do not differ are ignored."
+  },
+  {
+   "t": "b",
+   "v": [
+    "It occurs in the FUTURE (sunk costs — already spent and unrecoverable — are never relevant)",
+    "It DIFFERS between or among the alternatives being considered (costs the same regardless of what you choose are irrelevant)"
+   ]
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Cost Type",
+    "Definition",
+    "Relevant?"
+   ],
+   "r": [
+    [
+     "Sunk cost",
+     "Already incurred; cannot be recovered regardless of decision",
+     "NEVER relevant"
+    ],
+    [
+     "Avoidable cost",
+     "Will go away if a specific option is chosen",
+     "Relevant — it differs between alternatives"
+    ],
+    [
+     "Unavoidable cost",
+     "Will continue regardless of which option is chosen (e.g. non-cancelable lease)",
+     "NOT relevant — same for all alternatives"
+    ],
+    [
+     "Opportunity cost",
+     "Benefit forgone by choosing one alternative over the next-best alternative",
+     "Relevant — it is a future cost that differs between alternatives"
+    ],
+    [
+     "Differential cost",
+     "Difference in cost between two alternatives",
+     "Relevant"
+    ],
+    [
+     "Incremental cost",
+     "Additional cost caused by an activity or decision",
+     "Relevant"
+    ]
+   ]
+  },
+  {
+   "t": "def",
+   "term": "Sunk Cost",
+   "v": "A cost that has already been incurred and cannot be recovered by any current or future decision. Sunk costs are NEVER relevant to decision-making because they cannot be changed. Common examples: the original purchase price of an old machine when deciding whether to replace it, R&D already spent on a failing project."
+  },
+  {
+   "t": "def",
+   "term": "Opportunity Cost",
+   "v": "The benefit (usually contribution margin) forgone by choosing one alternative over the next-best alternative. Opportunity costs are not recorded in the accounting system but are real economic costs. They exist only when resources are constrained; with idle capacity, no opportunity cost is incurred."
+  },
+  {
+   "t": "ex",
+   "l": "Opportunity Cost — Practical Example",
+   "v": "A company uses its factory to make Product A, earning $80,000 contribution margin.\nAlternatively, it could use the same factory to make Product B, earning $95,000 CM.\n\nIf it makes Product A:\nOpportunity cost = $95,000 (the CM from Product B that is given up)\nTrue economic cost of making A = direct costs of A + $95,000 opportunity cost\n\nOpportunity costs are NOT in the accounting records, but they are real economic costs\nthat should influence decisions."
+  },
+  {
+   "t": "tip",
+   "v": "Opportunity costs exist only when resources are constrained. If a company has idle capacity, no opportunity cost exists because accepting a new order does not require giving up anything. Once capacity is full, every decision to accept one order means giving up another — and that lost contribution margin is an opportunity cost."
+  },
+  {
+   "t": "h",
+   "v": "Applying Relevant Costs — Special Order Decisions"
+  },
+  {
+   "t": "p",
+   "v": "A special order is a one-time order from a customer at a price below normal — usually because the customer is a new market, a bulk buyer, or an off-season purchaser. The question: should we accept it? The rule: accept if the additional revenue exceeds the additional (variable) costs. Fixed costs are usually irrelevant because they will be incurred anyway — UNLESS accepting the order requires new capacity or displaces regular sales."
+  },
+  {
+   "t": "def",
+   "term": "Special Order Decision",
+   "v": "A short-run decision on whether to accept a one-time order at a price below the normal selling price. Accept if the incremental revenue exceeds the incremental cost, AND idle capacity exists so no regular sales are displaced. Existing fixed costs are irrelevant unless the order requires additional capacity."
+  },
+  {
+   "t": "ex",
+   "l": "Special Order — Idle Capacity Example",
+   "v": "Normal selling price: $50/unit. Normal cost per unit: DM $12, DL $8, Variable OH $5, Fixed OH $10 = $35 total.\nA foreign customer offers to buy 5,000 units at $30 each. Company has idle capacity.\n\nRelevant analysis (only differential costs matter):\n  Incremental revenue = 5,000 × $30      = $150,000\n  Incremental variable costs:\n    DM: 5,000 × $12   = $60,000\n    DL: 5,000 × $8    = $40,000\n    VOH: 5,000 × $5   = $25,000\n    Total variable   = $125,000\n  Incremental fixed OH = $0 (already incurred, unchanged)\n\n  Incremental profit = $150,000 − $125,000 = $25,000  ✓ ACCEPT\n\nCommon mistake: using the full $35 cost including $10 fixed OH would suggest rejecting ($30 < $35).\nBut fixed OH is NOT incremental — it will be incurred whether we accept or not."
+  },
+  {
+   "t": "tip",
+   "v": "Special order trap: if the company has NO idle capacity and must displace regular sales to accept the special order, the LOST contribution margin from displaced regular sales is an opportunity cost that IS relevant. Add it to the incremental costs before deciding."
+  },
+  {
+   "t": "h",
+   "v": "Applying Relevant Costs — Make-or-Buy Decisions"
+  },
+  {
+   "t": "p",
+   "v": "A make-or-buy (outsourcing) decision is a choice between producing a component internally or buying it from an outside supplier. Compare the AVOIDABLE cost of making the component to the purchase price from the supplier. Fixed costs that will continue regardless of the decision (e.g. factory rent, plant supervisor salary) are irrelevant."
+  },
+  {
+   "t": "def",
+   "term": "Make-or-Buy Decision",
+   "v": "A short-run decision on whether to produce a component internally or purchase it from an external supplier. The relevant analysis compares the avoidable cost of making (variable costs + any fixed costs that would be eliminated + opportunity cost of using the space) against the purchase price. Fixed costs that continue either way are irrelevant."
+  },
+  {
+   "t": "ex",
+   "l": "Make-or-Buy — Component Decision",
+   "v": "Cost to make one unit of Component X internally:\n  DM              $ 6\n  DL              $ 4\n  Variable OH     $ 3\n  Allocated Fixed OH  $ 5\n  Total per unit  $18\n\nOutside supplier offers Component X at $16 per unit. Annual volume: 10,000 units.\nOf the $5 fixed OH, $2 is directly avoidable if we stop making X (supervisor salary),\n$3 is allocated general factory overhead that continues regardless.\n\nRelevant cost to MAKE (per unit):\n  Variable costs (DM + DL + VOH)   = $13\n  Avoidable fixed OH                = $2\n  Total avoidable cost              = $15\n\nRelevant cost to BUY = $16\n\nSince $15 < $16, MAKE saves $1 per unit × 10,000 = $10,000 per year.  ✓ CONTINUE MAKING\n\nNote: the $3 unavoidable allocated OH is irrelevant — it continues either way.\nCommon mistake: comparing full $18 cost to $16 price would wrongly suggest buying."
+  },
+  {
+   "t": "tip",
+   "v": "In make-or-buy: if the freed capacity from stopping internal production could be used for another profitable purpose, that opportunity income (or contribution margin) tips the analysis toward BUY. Always ask: what happens to the released capacity? Idle capacity has zero opportunity cost; profitable alternative use has significant opportunity cost."
+  },
+  {
+   "t": "h",
+   "v": "Applying Relevant Costs — Sell-or-Process-Further Decisions"
+  },
+  {
+   "t": "p",
+   "v": "When a product can be sold at an intermediate stage (called the split-off point) OR further processed into a more refined product and sold at a higher price, management must choose. The rule: process further ONLY if the additional revenue from further processing exceeds the additional cost of that processing. Costs already incurred up to the split-off point are SUNK — they are irrelevant to the decision."
+  },
+  {
+   "t": "def",
+   "term": "Sell-or-Process-Further Decision",
+   "v": "A decision on whether to sell a product at the split-off point or to process it further into a more refined product before selling. Process further only if the INCREMENTAL revenue exceeds the INCREMENTAL processing cost. Joint costs incurred before the split-off point are sunk and irrelevant."
+  },
+  {
+   "t": "ex",
+   "l": "Sell-or-Process-Further — Refinery Example",
+   "v": "A refinery produces crude gasoline at split-off. It can be sold as-is or refined further into premium fuel.\n\n  Selling price at split-off (crude):    $60 per barrel\n  Selling price after refining (premium): $85 per barrel\n  Additional processing cost:            $20 per barrel\n\nJoint cost incurred BEFORE split-off: $40 per barrel (already spent — SUNK, IRRELEVANT).\n\nRelevant analysis:\n  Incremental revenue = $85 − $60 = $25 per barrel\n  Incremental cost    = $20 per barrel\n  Incremental profit  = $5 per barrel  ✓ PROCESS FURTHER\n\nCommon mistake: subtracting the joint cost from the further-processed price ($85 − $40 − $20 = $25)\nand comparing to $60 − $40 = $20 would give the same answer here but is conceptually wrong.\nThe joint cost of $40 is sunk — it must be ignored, not allocated to the decision."
+  },
+  {
+   "t": "tip",
+   "v": "Sell-or-process-further is the classic 'sunk cost' trap on the exam. Any joint cost incurred BEFORE the split-off point is irrelevant. The ONLY question is: does the extra revenue from processing exceed the extra cost of processing? If yes, process further. If no, sell at split-off."
+  },
+  {
+   "t": "h",
+   "v": "Margin of Safety"
+  },
+  {
+   "t": "p",
+   "v": "Once you know the breakeven point, the next question is: how much room do we have before we hit it? The margin of safety measures that cushion — the amount by which actual (or planned) sales exceed the breakeven point. A higher margin of safety means less risk of falling into a loss."
+  },
+  {
+   "t": "def",
+   "term": "Margin of Safety",
+   "v": "The excess of actual or planned sales over the breakeven point. Expresses the cushion between current activity and the level at which the company would begin losing money. Can be measured in units, dollars, or as a percentage of sales."
+  },
+  {
+   "t": "f",
+   "l": "Margin of Safety Formulas",
+   "v": "Margin of Safety (in $)     = Actual (or Budgeted) Sales − Breakeven Sales\nMargin of Safety (in units) = Actual Units Sold − Breakeven Units\nMargin of Safety Ratio (%)  = Margin of Safety $ ÷ Actual Sales $"
+  },
+  {
+   "t": "ex",
+   "l": "Margin of Safety — Ray Company",
+   "v": "Actual sales: $500,000. Breakeven sales (from earlier): $360,000.\n\nMargin of Safety $  = $500,000 − $360,000 = $140,000\nMargin of Safety %  = $140,000 ÷ $500,000 = 28%\n\nInterpretation: sales can drop up to 28% before the company falls into a loss.\nA higher percentage indicates a stronger safety cushion."
+  },
+  {
+   "t": "key",
+   "v": [
+    "Unit CM = Selling Price − Variable Cost per unit. CM Ratio = UCM ÷ Selling Price.",
+    "Breakeven Units = Fixed Costs ÷ UCM. Breakeven Revenue = Fixed Costs ÷ CM Ratio.",
+    "Target Profit Units = (Fixed Costs + Target Profit) ÷ UCM.",
+    "A cost is relevant only if it is BOTH future AND differs between alternatives. Sunk costs are NEVER relevant, regardless of size.",
+    "Opportunity cost exists only under constrained capacity. With idle capacity, accepting a new order does not require giving anything up."
+   ]
+  }
+ ]
 }
