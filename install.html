@@ -9,6 +9,7 @@ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__in
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Download FMAA Prep — Mohamed Abdelgawad</title>
 <meta name="theme-color" content="#1A5276">
+<link rel="manifest" href="./manifest.json">
 <link rel="apple-touch-icon" href="./icon-192.png">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -112,6 +113,13 @@ html,body{min-height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI
 </div>
 
 <script>
+// Chrome only fires beforeinstallprompt on a page that has BOTH a linked manifest
+// and a registered service worker. Without this the Install buttons can never work.
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(err=>console.log('SW register failed:',err));
+  });
+}
 let deferredPrompt=window.__installPrompt||null;
 window.__onInstallReady=()=>{deferredPrompt=window.__installPrompt;updateAvailability();};
 window.addEventListener('appinstalled',()=>{deferredPrompt=null;window.__installPrompt=null;});
@@ -126,10 +134,16 @@ function updateAvailability(){
 
 setTimeout(()=>{
   if(!deferredPrompt){
+    // No install prompt available (already installed, or a browser that doesn't
+    // support it) — relabel both buttons and reveal the manual steps instead.
+    ['android','windows'].forEach(p=>{
+      const b=document.getElementById('btn-'+p);
+      if(b) b.textContent='Show steps';
+    });
     if(isAndroid()) toggleSteps('android',true);
-    if(isWindows()) document.getElementById('btn-windows').onclick=()=>toggleSteps('windows');
+    if(isWindows()) toggleSteps('windows',true);
   }
-},1200);
+},1800);
 
 async function installNow(platform){
   if(deferredPrompt){
