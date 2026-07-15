@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-14-01 remove-groupcode-example-placeholder -->
+<!-- FMAA-BUILD: 2026-07-15-01 remove-groupcode-example-placeholder -->
 <script>
-window.FMAA_BUILD='2026-07-14-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-15-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -153,7 +153,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 /* ── QoD (Question of the Day) ─────────────────────────────────── */
 .qod-card{background:linear-gradient(135deg,#7D3C98,#5B2C6F);border-radius:14px;padding:14px 16px;margin-bottom:14px;color:#fff}
 .qod-lbl{font-size:10px;font-weight:700;letter-spacing:1px;opacity:.75;margin-bottom:4px}
-.qod-title{font-size:15px;font-weight:600;margin-bottom:8px;line-height:1.4}
+.qod-title{font-size:15px;font-weight:600;margin-bottom:8px;line-height:1.4;white-space:pre-wrap}
 .qod-meta{font-size:11px;color:rgba(255,255,255,.75);margin-bottom:10px}
 .qod-opt{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:9px;padding:9px 12px;margin-bottom:6px;cursor:pointer;font-size:13px;display:flex;align-items:flex-start;gap:8px;transition:background .15s}
 .qod-opt:hover{background:rgba(255,255,255,.18)}
@@ -1630,7 +1630,7 @@ function renderQuizSession(){
     <div>${timerBadgeHTML(qs.qTimerStart&&qs.selected===null?Date.now()-qs.qTimerStart:qs.qTimerElapsed||0,sel!==null)}</div>
   </div>
   <div class="scroll-area pad" style="padding-top:14px">
-    ${dataTableHTML(q)}<div style="font-size:15px;color:#1a1a1a;line-height:1.6;margin-bottom:16px;font-weight:500">${esc(q.q)}</div>
+    ${dataTableHTML(q)}<div style="font-size:15px;color:#1a1a1a;line-height:1.6;margin-bottom:16px;font-weight:500;white-space:pre-wrap">${esc(q.q)}</div>
     ${opts}${explanation}
     ${sel===null?`<div style="display:flex;gap:8px;margin-top:14px"><button onclick="skipQuestion()" style="flex:1;padding:12px;border-radius:10px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Skip · Come back later</button></div>${skippedCount>0?`<div style="font-size:11px;color:#EF9F27;text-align:center;margin-top:8px">⏭ ${skippedCount} skipped — you'll be prompted at the end</div>`:''}`:''}
     ${sel!==null?`<button onclick="nextQuestion()" class="btn" style="margin-top:14px;background:#1A5276">${qs.idx+1<qs.questions.length?'Next Question →':(skippedCount>0?`Review ${skippedCount} skipped →`:'See Results →')}</button>`:''}
@@ -1675,7 +1675,7 @@ function renderQuestionReview(questions, answers, title){
         <div style="font-size:10px;font-weight:600;color:#888;letter-spacing:.5px">Q${i+1}${timeTaken?' · ⏱ '+timeTaken:''}</div>
         <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:${ok?'#D5F5E3':'#FCEBEB'};color:${ok?'#186A3B':'#A32D2D'};flex-shrink:0">${ok?'Correct':'Wrong'}</span>
       </div>
-      <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px">${esc(q.q)}</div>
+      <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px;white-space:pre-wrap">${esc(q.q)}</div>
       ${q.data&&q.data.length?`<table style="width:100%;border-collapse:collapse;margin:0 0 10px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:12px">${q.data.map(r=>`<tr><td style="padding:5px 8px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:5px 8px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('')}</table>`:''}
       ${opts}${skippedNote}${expHtml}
     </div>`;
@@ -1737,7 +1737,7 @@ function renderQuizMode(){
     <div>${timerBadgeHTML(qm.qTimerStart&&qm.selected===null?Date.now()-qm.qTimerStart:qm.qTimerElapsed||0,sel!==null)}</div>
   </div>
   <div class="scroll-area pad" style="padding-top:14px">
-    ${dataTableHTML(q)}<div style="font-size:15px;color:#1a1a1a;line-height:1.6;margin-bottom:16px;font-weight:500">${esc(q.q)}</div>
+    ${dataTableHTML(q)}<div style="font-size:15px;color:#1a1a1a;line-height:1.6;margin-bottom:16px;font-weight:500;white-space:pre-wrap">${esc(q.q)}</div>
     ${opts}${explanation}
     ${sel!==null?`<button onclick="nextQuizModeQuestion()" class="btn" style="margin-top:14px;background:#1A5276">${qm.idx+1<qm.questions.length?'Next Question →':'See Results →'}</button>`:''}
     <div style="height:20px"></div>
@@ -2057,7 +2057,7 @@ function renderMockMCQContent(){const cont=document.getElementById('mock-mcq-con
     ${navOpen?`<div style="background:#fafaf8;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:14px"><div style="font-size:12px;font-weight:600;color:#555;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center"><span>Question Navigator</span><span id="mock-prog" style="font-size:11px;color:#888"></span></div><div id="mock-nav-grid" style="display:grid;grid-template-columns:repeat(10,1fr);gap:4px"></div><div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:#888"><span>\uD83D\uDFE6 Answered</span><span>\uD83D\uDFE7 Flagged</span><span>\u2B1C Unanswered</span><span style="background:#154360;color:#fff;padding:1px 6px;border-radius:3px">Current</span></div></div>`:''}
     <div style="display:flex;justify-content:flex-end;align-items:center;margin-bottom:12px"><button id="mock-flag-btn" onclick="mockFlagQ(${mcqCurr})" style="cursor:pointer;font-size:13px;font-weight:600;color:${flagged?'#EF9F27':'#888'};font-family:inherit;padding:4px 8px;border-radius:8px;background:#fff;border:.5px solid ${flagged?'#EF9F27':'#d0d0d8'}">${flagged?'\uD83D\uDEA9 Flagged':'\u2691 Flag'}</button></div>
     ${dataTableHTML(q)}
-    <div style="font-size:15px;font-weight:500;color:#1a1a1a;line-height:1.6;margin-bottom:18px">${esc(q.q)}</div>
+    <div style="font-size:15px;font-weight:500;color:#1a1a1a;line-height:1.6;margin-bottom:18px;white-space:pre-wrap">${esc(q.q)}</div>
     <div style="display:flex;flex-direction:column;gap:9px" id="mock-opts">${q.o.map((opt,i)=>{const sel=answered===i;return`<div class="mock-opt" onclick="mockAnswerQ(${mcqCurr},${i})" style="padding:12px 14px;border-radius:10px;border:.5px solid ${sel?'#1A5276':'#d0d0d8'};background:${sel?'#D6EAF8':'#fafaf8'};cursor:pointer;display:flex;gap:12px;align-items:flex-start;transition:all .15s"><span style="width:22px;height:22px;border-radius:50%;background:${sel?'#1A5276':'#e0e0d8'};color:${sel?'#fff':'#555'};display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">${labels[i]}</span><span style="font-size:14px;color:${sel?'#154360':'#333'};font-weight:${sel?'500':'400'};line-height:1.45">${esc(opt)}</span></div>`;}).join('')}</div>
   </div>
   <div style="padding:12px 16px;border-top:.5px solid #e0e0d8;background:#fff;flex-shrink:0;display:flex;gap:10px;align-items:center">
@@ -3123,7 +3123,7 @@ function renderDashboard(){
         const secInfo=S.find(s=>s.id===q.sid);
         return`<div style="background:#fff;border:.5px solid #e0e0d8;border-left:3px solid ${secInfo?secInfo.bar:'#1A5276'};border-radius:10px;padding:12px 14px;margin-bottom:10px">
           <div style="font-size:10px;font-weight:600;color:#888;letter-spacing:.5px;margin-bottom:6px">Q${i+1}${secInfo?' · '+esc(secInfo.title):''}</div>
-          <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px">${esc(q.q)}</div>
+          <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px;white-space:pre-wrap">${esc(q.q)}</div>
           ${opts}
           ${q.e?`<div style="background:#FFF8E7;border-radius:8px;padding:9px 12px;margin-top:8px"><div style="font-size:10px;font-weight:700;color:#856404;letter-spacing:.5px;margin-bottom:3px">💡 EXPLANATION</div><div style="font-size:12px;color:#444;line-height:1.6">${esc(q.e)}</div></div>`:''}
         </div>`;
