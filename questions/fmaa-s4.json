@@ -33,7 +33,7 @@
    }
   },
   {
-   "q": "The estimated unit costs for a company using absorption (full) costing and planning to produce and sell at a level of 12,000 units per month are as follows. Cost Item Estimated Unit Cost Direct materials $32 Direct labor Variable manufacturing overhead Fixed manufacturing overhead Variable selling Fixed selling Estimated total variable costs per unit are:",
+   "q": "The estimated unit costs for a company using absorption (full) costing and planning to produce and sell at a level of 12,000 units per month are as follows.\n\nCost Item — Estimated Unit Cost\nDirect materials:  $32\nDirect labor:  $20\nVariable manufacturing overhead:  $15\nFixed manufacturing overhead:  $6\nVariable selling:  $3\nFixed selling:  $4\n\nEstimated total variable costs per unit are:",
    "o": [
     "$70",
     "$18",
@@ -49,7 +49,7 @@
    }
   },
   {
-   "q": "Taylor Corporation is determining the cost behavior of several items in order to budget for the upcoming year. Past trends have indicated the following dollars were spent at three different levels of output.\n\nUnit Levels:  10,000  |  12,000  |  15,000\nCost A:  $25,000  |  $29,000  |  $35,000\nCost B:  $10,000  |  $15,000  |  $15,000\nCost C:  $15,000  |  $18,000  |  $22,500\n\nIn establishing a budget for 14,000 units, Taylor should treat Costs A, B, and C, respectively, as",
+   "q": "Taylor Corporation is determining the cost behavior of several items in order to budget for the upcoming year. Past trends have indicated the following dollars were spent at three different levels of output.\n\nUnit Levels:  10,000  |  12,000  |  15,000\nCost A:  $25,000  |  $29,000  |  $35,000\nCost B:  $15,000  |  $15,000  |  $15,000\nCost C:  $15,000  |  $18,000  |  $22,500\n\nIn establishing a budget for 14,000 units, Taylor should treat Costs A, B, and C, respectively, as",
    "o": [
     "semi-variable, semi-variable, and semi-variable.",
     "semi-variable, fixed, and variable.",
@@ -835,7 +835,7 @@
    }
   },
   {
-   "q": "Zeta Company is preparing its annual profit plan. As part of its analysis of the profitability of individual products, the controller estimates the amount of overhead that should be allocated to the individual product lines from the information given as follows: Wall Mirrors Specialty Windows Units produced Material moves per product line Direct labor hours per unit Budgeted materials handling costs $50,000 Under a costing system that allocates overhead on the basis of direct labor hours, the materials handling costs allocated to one unit of wall mirrors would be",
+   "q": "Zeta Company is preparing its annual profit plan. As part of its analysis of the profitability of individual products, the controller estimates the amount of overhead that should be allocated to the individual product lines from the information given as follows.\n\nColumns: Wall Mirrors | Specialty Windows\nUnits produced:  25  |  25\nMaterial moves per product line:  5  |  15\nDirect labor hours per unit:  200  |  200\n\nBudgeted materials handling costs are $50,000. Under a costing system that allocates overhead on the basis of direct labor hours, the materials handling costs allocated to one unit of wall mirrors would be",
    "o": [
     "$5,000",
     "$500",
@@ -1125,7 +1125,7 @@
    }
   },
   {
-   "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product. Standard Quantity Standard Price Standard Cost Direct materials 5 pounds $3.60/pound $18.00 Direct labor 1.25 hours 12.00/hour 15.00 $33.00 During May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct materials usage (quantity) variance for May is",
+   "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  5 pounds  |  $3.60/pound  |  $18.00\nDirect labor:  1.25 hours  |  $12.00/hour  |  $15.00\nTotal standard prime cost:   |    |  $33.00\n\nDuring May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct materials usage (quantity) variance for May is",
    "o": [
     "$7,200 favorable.",
     "$7,600 favorable.",
@@ -1205,7 +1205,7 @@
    }
   },
   {
-   "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product. Standard Quantity Standard Price Standard Cost Direct materials 8 pounds $1.80 per pound $14.40 Direct labor 0.25 hours $8.00 per hour 2.00 $16.40 During November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct materials usage (quantity) variance for November is:",
+   "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  8 pounds  |  $1.80 per pound  |  $14.40\nDirect labor:  0.25 hours  |  $8.00 per hour  |  $2.00\nTotal standard prime cost:   |    |  $16.40\n\nDuring November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct materials usage (quantity) variance for November is:",
    "o": [
     "$17,100 unfavorable.",
     "$1,100 favorable.",
@@ -1701,7 +1701,7 @@
    }
   },
   {
-   "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product. Standard Quantity Standard Price Standard Cost Direct materials 5 pounds $3.60/pound $18.00 Direct labor 1.25 hours 12.00/hour 15.00 $33.00 During May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct labor usage (efficiency) variance for May is",
+   "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  5 pounds  |  $3.60/pound  |  $18.00\nDirect labor:  1.25 hours  |  $12.00/hour  |  $15.00\nTotal standard prime cost:   |    |  $33.00\n\nDuring May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct labor usage (efficiency) variance for May is",
    "o": [
     "$5,850 unfavorable.",
     "$5,850 favorable.",
@@ -1717,7 +1717,7 @@
    }
   },
   {
-   "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product. Standard Quantity Standard Price Standard Cost Direct materials 5 pounds $3.60/pound $18.00 Direct labor 1.25 hours 12.00/hour 15.00 $33.00 During May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct labor price (rate) variance for May is",
+   "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  5 pounds  |  $3.60/pound  |  $18.00\nDirect labor:  1.25 hours  |  $12.00/hour  |  $15.00\nTotal standard prime cost:   |    |  $33.00\n\nDuring May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct labor price (rate) variance for May is",
    "o": [
     "$7,200 unfavorable.",
     "$8,400 unfavorable.",
@@ -1781,7 +1781,7 @@
    }
   },
   {
-   "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product. Standard Quantity Standard Price Standard Cost Direct materials 8 pounds $1.80 per pound $14.40 Direct labor 0.25 hours $8.00 per hour 2.00 $16.40 During November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct labor usage (efficiency) variance for November is:",
+   "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  8 pounds  |  $1.80 per pound  |  $14.40\nDirect labor:  0.25 hours  |  $8.00 per hour  |  $2.00\nTotal standard prime cost:   |    |  $16.40\n\nDuring November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct labor usage (efficiency) variance for November is:",
    "o": [
     "$2,000 favorable.",
     "$2,000 unfavorable.",
@@ -1797,7 +1797,7 @@
    }
   },
   {
-   "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product. Standard Quantity Standard Price Standard Cost Direct materials 8 pounds $1.80 per pound $14.40 Direct labor 0.25 hours $8.00 per hour 2.00 $16.40 During November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct labor price (rate) variance for November is:",
+   "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  8 pounds  |  $1.80 per pound  |  $14.40\nDirect labor:  0.25 hours  |  $8.00 per hour  |  $2.00\nTotal standard prime cost:   |    |  $16.40\n\nDuring November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct labor price (rate) variance for November is:",
    "o": [
     "$1,900 unfavorable.",
     "$2,200 favorable.",
