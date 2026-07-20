@@ -1054,11 +1054,48 @@
   },
   {
    "t": "h",
+   "v": "Target Profit — Planning for a Profit Goal, Not Just Breakeven"
+  },
+  {
+   "t": "p",
+   "v": "Breakeven tells you the point where you stop losing money — but no business exists to earn zero. Owners set a profit goal, and target-profit analysis answers the natural next question: how many units must we sell to earn a specific operating income? The logic is identical to breakeven, with one change — fixed costs now have to cover both themselves AND the desired profit before a sale counts toward the goal. In effect, you treat the target profit as an extra amount to be covered alongside fixed costs."
+  },
+  {
+   "t": "f",
+   "l": "Target Profit Formulas",
+   "v": "Before tax:\nTarget Units = (Fixed Costs + Target Operating Income) ÷ Unit Contribution Margin\nTarget Revenue = (Fixed Costs + Target Operating Income) ÷ Contribution Margin Ratio\n\nAfter tax (when the goal is stated as a net income figure):\nPre-tax Profit = After-tax Net Income ÷ (1 − Tax Rate)\nThen: Target Units = (Fixed Costs + Pre-tax Profit) ÷ Unit Contribution Margin"
+  },
+  {
+   "t": "ex",
+   "l": "Target Profit (Before Tax) — Ray Company",
+   "v": "Fixed costs = $150,000. UCM = $25. Ray wants an operating income of $50,000.\nTarget Units = ($150,000 + $50,000) ÷ $25 = 8,000 units\nVerify: (8,000 × $25) − $150,000 = $200,000 − $150,000 = $50,000 ✓"
+  },
+  {
+   "t": "ex",
+   "l": "Target Profit (After Tax) — Ray Company",
+   "v": "Same fixed costs of $150,000 and UCM of $25, but now Ray wants an after-tax net income of $30,000 and faces a 40% tax rate.\nStep 1 — convert the goal to pre-tax: Pre-tax Profit = $30,000 ÷ (1 − 0.40) = $50,000\nStep 2 — solve as before: Target Units = ($150,000 + $50,000) ÷ $25 = 8,000 units"
+  },
+  {
+   "t": "tip",
+   "v": "Income taxes do NOT change the breakeven point — at breakeven, profit is zero, and tax on zero is zero. Taxes only matter once there is a profit goal. So if a question gives you a tax rate but asks for breakeven, the tax rate is a distractor. When the goal is stated after tax, always gross it up to a pre-tax figure by dividing by (1 − tax rate) before adding it to fixed costs."
+  },
+  {
+   "t": "h",
    "v": "Marginal Analysis and Relevant Costs"
   },
   {
    "t": "p",
    "v": "Marginal analysis examines the additional (incremental) benefit and additional cost of a one-unit change in activity. A rational decision-maker takes an action only if the marginal benefit exceeds the marginal cost. This is the core logic behind most short-run business decisions."
+  },
+  {
+   "t": "def",
+   "term": "Marginal Revenue",
+   "v": "The additional revenue earned from selling one more unit — the change in total revenue divided by the change in units sold: MR = Δ Total Revenue ÷ Δ Units. When a firm must lower its price to sell additional units, marginal revenue can fall well below the new selling price, because the lower price also applies to units that could have sold for more."
+  },
+  {
+   "t": "ex",
+   "l": "Marginal Revenue — One More Unit",
+   "v": "A company can sell 8 units at $450 each, or 9 units at $445 each.\nTotal revenue at 8 units = 8 × $450 = $3,600\nTotal revenue at 9 units = 9 × $445 = $4,005\nMarginal revenue of the 9th unit = $4,005 − $3,600 = $405\nNotice $405 is far below the $445 price — the price cut to $445 also reduced revenue on the first 8 units."
   },
   {
    "t": "def",
