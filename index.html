@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-15-02 security-fontscale-webhook-token -->
+<!-- FMAA-BUILD: 2026-07-21-01 quiz-navigator-stemtables-sentencebreaks-reviewexp -->
 <script>
-window.FMAA_BUILD='2026-07-15-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-21-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -542,6 +542,48 @@ function lessonDone(lid){return _getDoneSet().has(lid);}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function expFor(q,chosen){if(chosen!==null&&chosen!==q.a&&q.wrongWhy&&q.wrongWhy[chosen])return q.wrongWhy[chosen];return q.e;}
 function dataTableHTML(q){if(!q.data||!q.data.length)return'';const rows=q.data.map(r=>`<tr><td style="padding:6px 10px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('');return`<table style="width:100%;border-collapse:collapse;margin:0 0 16px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:13px">${rows}</table>`;}
+// ── Stem formatting ──────────────────────────────────────────────────────────
+// Turns a raw question stem into HTML: (1) prose gets a line break at each
+// sentence end (. ? !) followed by a capital/number/quote, but NOT inside
+// decimals like $88.98; (2) any run of '|'-delimited lines becomes an aligned
+// table. Lookahead-only regex (no lookbehind) for broad Safari/iOS support.
+function fmtProseLine(l){
+  if(!l||!l.trim())return'';
+  const marked=l.replace(/([.?!])\s+(?=[A-Z0-9"'(])/g,'$1\u0001');
+  return marked.split('\u0001').map(s=>esc(s)).join('<br>');
+}
+function renderStemTable(blk){
+  const rows=blk.map(line=>{
+    const cells=line.split('|').map(c=>c.trim());
+    let first=cells[0]||'',label='';
+    const ci=first.indexOf(':');
+    if(ci!==-1){label=first.slice(0,ci).trim();first=first.slice(ci+1).trim();}
+    const vals=[first,...cells.slice(1)];
+    return {label,vals,header:label.toLowerCase()==='columns'};
+  });
+  const ncols=Math.max.apply(null,rows.map(r=>r.vals.length));
+  const body=rows.map(r=>{
+    const isH=r.header;
+    const lab=`<td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:left;color:${isH?'#555':'#333'};font-weight:${isH?'600':'500'}">${esc(isH?'':r.label)}</td>`;
+    let vc='';for(let c=0;c<ncols;c++){const v=r.vals[c]!=null?r.vals[c]:'';vc+=`<td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:right;white-space:nowrap;color:${isH?'#555':'#1a1a1a'};font-weight:${isH?'600':'400'}">${esc(v)}</td>`;}
+    return `<tr>${lab}${vc}</tr>`;
+  }).join('');
+  return `<div style="overflow-x:auto;margin:2px 0 14px"><table style="width:100%;border-collapse:collapse;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:13px">${body}</table></div>`;
+}
+function fmtStem(raw){
+  const lines=String(raw==null?'':raw).split('\n');
+  let html='',i=0,prevWasTable=false;
+  while(i<lines.length){
+    if(lines[i].indexOf('|')!==-1){
+      const blk=[];while(i<lines.length&&lines[i].indexOf('|')!==-1){blk.push(lines[i]);i++;}
+      html+=renderStemTable(blk);prevWasTable=true;continue;
+    }
+    const frag=fmtProseLine(lines[i]);i++;
+    if(prevWasTable){html+=frag;prevWasTable=false;}      // table margin handles the gap
+    else{html+=(html?'<br>':'')+frag;}                    // blank source line → paragraph gap
+  }
+  return html;
+}
 function safePhotoURL(u){if(typeof u!=='string')return'';return(/^https:\/\/res\.cloudinary\.com\//.test(u)||/^data:image\//.test(u))?u:'';}
 function getStudyStreak(){return loadStreak().count||0;}
 function timeAgo(iso){if(!iso)return'';try{const diff=Date.now()-new Date(iso).getTime();const m=Math.floor(diff/60000);if(m<1)return'just now';if(m<60)return`${m}m ago`;const h=Math.floor(m/60);if(h<24)return`${h}h ago`;const d=Math.floor(h/24);if(d<7)return`${d}d ago`;return new Date(iso).toLocaleDateString();}catch{return '';}}
@@ -976,34 +1018,56 @@ function shuffleQuestionOptions(q){
   if(q.wrongWhy){for(const[k,v]of Object.entries(q.wrongWhy)){const newK=idx.indexOf(Number(k));if(newK>=0)newWrongWhy[newK]=v;}}
   return{...q,o:newOpts,a:newA,wrongWhy:Object.keys(newWrongWhy).length?newWrongWhy:q.wrongWhy};
 }
+// ── Quiz-session answers are index-keyed: answers[i] = {selected,correct[,skipped]}
+//    or undefined (not yet reached). This lets students jump freely via the
+//    question-map navigator while every question keeps its own recorded state.
+function qsAnswered(qs,k){const a=qs&&qs.answers[k];return !!(a&&a.selected!=null);}
+function qsFirstOpen(qs){for(let k=0;k<qs.questions.length;k++){if(!qsAnswered(qs,k))return k;}return -1;}
 function selectAnswer(i){
-  if(STATE.tab==='quiz-session'){if(STATE.quizState.selected!==null)return;const elapsed=STATE.quizState.qTimerStart?Date.now()-STATE.quizState.qTimerStart:0;STATE.quizState={...STATE.quizState,selected:i,qTimerElapsed:elapsed};stopQTimer();render();}
+  if(STATE.tab==='quiz-session'){
+    const qs=STATE.quizState;if(!qs)return;
+    if(qsAnswered(qs,qs.idx))return; // already answered → read-only reveal
+    const correct=(i===qs.questions[qs.idx].a);
+    const elapsed=qs.qTimerStart?Date.now()-qs.qTimerStart:0;
+    const answers=qs.answers.slice();answers[qs.idx]={selected:i,correct};
+    const qt=(qs.questionTimes||[]).slice();qt[qs.idx]=(qt[qs.idx]||0)+elapsed;
+    STATE.quizState={...qs,answers,questionTimes:qt,qTimerElapsed:qt[qs.idx]};stopQTimer();render();
+  }
   else if(STATE.tab==='quiz-mode'){if(STATE.quizMode.selected!==null)return;const elapsed=STATE.quizMode.qTimerStart?Date.now()-STATE.quizMode.qTimerStart:0;STATE.quizMode={...STATE.quizMode,selected:i,qTimerElapsed:elapsed};stopQTimer();render();}
+}
+// ── Question-map navigator: jump to any question ─────────────────────────────
+function goToQuestion(i){
+  const qs=STATE.quizState;if(!qs)return;
+  if(i<0||i>=qs.questions.length||i===qs.idx)return;
+  const qt=(qs.questionTimes||[]).slice();
+  // bank time spent on the current still-open question before leaving it
+  if(!qsAnswered(qs,qs.idx)&&qs.qTimerStart){qt[qs.idx]=(qt[qs.idx]||0)+(Date.now()-qs.qTimerStart);}
+  const answered=qsAnswered(qs,i);
+  STATE.quizState={...qs,idx:i,questionTimes:qt,qTimerStart:answered?null:Date.now(),qTimerElapsed:answered?(qt[i]||0):null};
+  render();
 }
 function skipQuestion(){
   const qs=STATE.quizState;if(!qs)return;
-  // Record as skipped (selected=null), advance
-  const newAnswers=[...qs.answers,{selected:null,correct:false,skipped:true}];
-  const qt=[...(qs.questionTimes||[]),qs.qTimerElapsed||0];
-  if(qs.idx+1>=qs.questions.length){
-    // At end — if any skipped, show review prompt
-    STATE.quizState={...qs,answers:newAnswers,questionTimes:qt};
-    finishQuizSession();return;
-  }
-  STATE.quizState={...qs,idx:qs.idx+1,selected:null,answers:newAnswers,questionTimes:qt,qTimerStart:Date.now(),qTimerElapsed:null};
+  const answers=qs.answers.slice();
+  if(!answers[qs.idx])answers[qs.idx]={selected:null,correct:false,skipped:true};
+  const qt=(qs.questionTimes||[]).slice();qt[qs.idx]=(qt[qs.idx]||0)+(qs.qTimerStart?Date.now()-qs.qTimerStart:(qs.qTimerElapsed||0));
+  const ns={...qs,answers,questionTimes:qt};
+  if(qs.idx+1>=qs.questions.length){STATE.quizState=ns;finishOrRevisit();return;}
+  const ni=qs.idx+1;const answered=qsAnswered(ns,ni);
+  STATE.quizState={...ns,idx:ni,qTimerStart:answered?null:Date.now(),qTimerElapsed:answered?(qt[ni]||0):null};
   render();
 }
-function jumpToUnanswered(){
-  const qs=STATE.quizState;if(!qs)return;
-  // Find first unanswered (skipped) question
-  for(let i=0;i<qs.answers.length;i++){if(qs.answers[i]&&qs.answers[i].skipped){STATE.quizState={...qs,idx:i,selected:null,answers:qs.answers.slice(0,i),qTimerStart:Date.now(),qTimerElapsed:null};render();return;}}
-  // None left — finish
+function finishOrRevisit(){
+  const qs=STATE.quizState;let open=-1;
+  for(let k=0;k<qs.questions.length;k++){if(k!==qs.idx&&!qsAnswered(qs,k)){open=k;break;}}
+  if(open>=0){const qt=(qs.questionTimes||[]).slice();showToast('Revisiting skipped questions…','info',1500);STATE.quizState={...qs,idx:open,questionTimes:qt,qTimerStart:Date.now(),qTimerElapsed:null};render();return;}
   finishQuizSession();
 }
+function jumpToUnanswered(){finishOrRevisit();}
 function finishQuizSession(){
   const qs=STATE.quizState;
-  const newAnswers=qs.answers;
-  // Any question without a recorded answer counts as wrong (per Gawad decision #9=A)
+  // Normalise sparse array: any untouched slot counts as wrong (Gawad decision #9=A)
+  const newAnswers=[];for(let k=0;k<qs.questions.length;k++){newAnswers[k]=qs.answers[k]||{selected:null,correct:false,skipped:true};}
   const rightCount=newAnswers.filter(a=>a&&a.correct).length;
   endStudyTimer();
   if(qs.isRetry){
@@ -1018,27 +1082,14 @@ function finishQuizSession(){
   STATE.quizState={...qs,answers:newAnswers,done:true,quizEndTime:Date.now()};updateStreak();STATE.tab='quiz-results';render();
 }
 function nextQuestion(){
-  const qs=STATE.quizState;const correct=qs.selected===qs.questions[qs.idx].a;const newAnswers=[...qs.answers,{selected:qs.selected,correct}];
-  if(qs.idx+1>=qs.questions.length){
-    // Check for any skipped/unanswered questions
-    const firstSkip=newAnswers.findIndex(a=>a&&a.skipped);
-    if(firstSkip>=0){
-      const qt=[...(qs.questionTimes||[]),qs.qTimerElapsed||0];
-      STATE.quizState={...qs,idx:firstSkip,selected:null,answers:newAnswers.slice(0,firstSkip),questionTimes:qt,qTimerStart:Date.now(),qTimerElapsed:null};
-      showToast('Revisiting skipped questions…','info',1500);render();return;
-    }
-    const rightCount=newAnswers.filter(a=>a.correct).length;endStudyTimer();
-    if(qs.isRetry){
-      const p=STATE.progress;const ls={...(p.lessonScores||{})};
-      qs.questions.forEach((q,i)=>{if(newAnswers[i]?.correct&&q._lessonId!=null&&q._ansIdx!=null){const entry=ls[q._lessonId];if(entry&&entry.answers){const updatedAnswers=[...entry.answers];updatedAnswers[q._ansIdx]=q.a;const newCorrect=updatedAnswers.filter((a,idx)=>{const qz=S.flatMap(s=>s.lessons).find(l=>l.id===q._lessonId)?.quizzes?.[idx];return qz&&a===qz.a;}).length;ls[q._lessonId]={...entry,answers:updatedAnswers,correct:newCorrect};}}});
-      saveProg({...p,lessonScores:ls,mcqTotal:p.mcqTotal+qs.questions.length,mcqRight:p.mcqRight+rightCount});
-    }else{
-      const p=STATE.progress;const ls=p.lessonScores||{};const ansArr=newAnswers.map(a=>a.selected);
-      saveProg({...p,lessonScores:{...ls,[qs.lessonId]:{correct:rightCount,total:qs.questions.length,answers:ansArr}},mcqTotal:p.mcqTotal+qs.questions.length,mcqRight:p.mcqRight+rightCount});
-      if(qs.lessonId)addQuizAttempt(qs.lessonId,rightCount,qs.questions.length);
-    }
-    const qt2=[...(qs.questionTimes||[]),qs.qTimerElapsed||0];STATE.quizState={...qs,answers:newAnswers,done:true,questionTimes:qt2,quizEndTime:Date.now()};updateStreak();STATE.tab='quiz-results';render();
-  }else{const qt=[...(qs.questionTimes||[]),qs.qTimerElapsed||0];STATE.quizState={...qs,idx:qs.idx+1,selected:null,answers:newAnswers,questionTimes:qt,qTimerStart:Date.now(),qTimerElapsed:null};render();}
+  const qs=STATE.quizState;if(!qs)return;
+  // Current answer already recorded by selectAnswer; this button advances / finishes.
+  if(qsFirstOpen(qs)===-1){finishQuizSession();return;}      // everything answered → results
+  if(qs.idx+1<qs.questions.length){
+    const ni=qs.idx+1;const answered=qsAnswered(qs,ni);const qt=(qs.questionTimes||[]).slice();
+    STATE.quizState={...qs,idx:ni,questionTimes:qt,qTimerStart:answered?null:Date.now(),qTimerElapsed:answered?(qt[ni]||0):null};render();return;
+  }
+  finishOrRevisit(); // on last question but earlier ones still open
 }
 function nextQuizModeQuestion(){
   const qm=STATE.quizMode;const correct=qm.selected===qm.questions[qm.idx].a;const newAnswers=[...qm.answers,{selected:qm.selected,correct}];
@@ -1625,24 +1676,39 @@ function renderQuizModeSelect(){
 
 function renderQuizSession(){
   const qs=STATE.quizState;if(!qs)return'';
-  const sec=sect(qs.sId);const q=qs.questions[qs.idx];const sel=qs.selected;
-  const barW=Math.round(qs.idx/qs.questions.length*100);
-  const skippedCount=(qs.answers||[]).filter(a=>a&&a.skipped).length;
+  const sec=sect(qs.sId);const q=qs.questions[qs.idx];
+  const rec=qs.answers[qs.idx];const sel=(rec&&rec.selected!=null)?rec.selected:null;
+  const n=qs.questions.length;
+  const answeredCount=(qs.answers||[]).filter(a=>a&&a.selected!=null).length;
+  const openCount=n-answeredCount;
+  const skippedCount=(qs.answers||[]).filter(a=>a&&a.skipped&&a.selected==null).length;
+  const barW=Math.round(answeredCount/n*100);
+  // ── Question-map navigator ──
+  const navPills=qs.questions.map((_,k)=>{
+    const a=qs.answers[k];let bg='#f0f0eb',bd='.5px solid #ddd',tc='#999';
+    if(a&&a.selected!=null&&a.correct){bg='#D5F5E3';bd='1px solid #1E8449';tc='#186A3B';}
+    else if(a&&a.selected!=null){bg='#FCEBEB';bd='1px solid #E24B4A';tc='#791F1F';}
+    else if(a&&a.skipped){bg='#FEF5E7';bd='1px solid #EF9F27';tc='#B9770E';}
+    const ring=k===qs.idx?'box-shadow:0 0 0 2px #1A5276;':'';
+    return`<button onclick="goToQuestion(${k})" style="flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:${bd};background:${bg};color:${tc};font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;${ring}">${k+1}</button>`;
+  }).join('');
   const opts=q.o.map((opt,i)=>{
     let bg='#f5f5f0',border='.5px solid #e0e0d8',textC='#1a1a1a',circBg='#e5e5e0',circC='#666',circBorder='.5px solid #bbb',circTxt=String.fromCharCode(65+i);
     if(sel!==null){if(i===q.a){bg='#D5F5E3';border='1px solid #1E8449';textC='#186A3B';circBg='#1E8449';circC='#fff';circBorder='none';circTxt='✓';}else if(i===sel){bg='#FCEBEB';border='1px solid #E24B4A';textC='#791F1F';circBg='#E24B4A';circC='#fff';circBorder='none';circTxt='✕';}}
-    return`<div class="quiz-opt" style="background:${bg};border:${border}" onclick="selectAnswer(${i})"><div class="quiz-opt-circle" style="background:${circBg};color:${circC};border:${circBorder}">${circTxt}</div><div class="quiz-opt-text" style="color:${textC}">${esc(opt)}</div></div>`;}).join('');
+    return`<div class="quiz-opt" style="background:${bg};border:${border}${sel!==null?';cursor:default':''}" onclick="selectAnswer(${i})"><div class="quiz-opt-circle" style="background:${circBg};color:${circC};border:${circBorder}">${circTxt}</div><div class="quiz-opt-text" style="color:${textC}">${esc(opt)}</div></div>`;}).join('');
   const explanation=sel!==null?`<div style="background:${sel===q.a?'#D5F5E3':'#FCEBEB'};border:1px solid ${sel===q.a?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-top:12px"><div style="font-size:11px;font-weight:600;color:${sel===q.a?'#186A3B':'#A32D2D'};letter-spacing:.5px;margin-bottom:6px">${sel===q.a?'✅ CORRECT':'❌ INCORRECT — '+q.o[q.a]}</div><div style="font-size:13px;color:#444;line-height:1.6">${esc(expFor(q,sel))}</div></div>`:'';
+  const nextLabel=openCount===0?'See Results →':(qs.idx+1<n?'Next Question →':`Review ${openCount} unanswered →`);
   return`<div class="bh"><button class="bh-back" onclick="STATE.tab='quiz-mode-select';render()">‹</button>
-    <div style="flex:1;min-width:0"><div style="font-size:11px;color:#888">Question ${qs.idx+1} of ${qs.questions.length}${qs.isRetry?' · Retry':''}</div>
+    <div style="flex:1;min-width:0"><div style="font-size:11px;color:#888">Question ${qs.idx+1} of ${n}${qs.isRetry?' · Retry':''}</div>
     <div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:4px;overflow:hidden"><div style="height:100%;width:${barW}%;background:#1A5276;border-radius:2px;transition:width .3s"></div></div></div>
-    <div>${timerBadgeHTML(qs.qTimerStart&&qs.selected===null?Date.now()-qs.qTimerStart:qs.qTimerElapsed||0,sel!==null)}</div>
+    <div>${timerBadgeHTML(sel===null?(qs.qTimerStart?Date.now()-qs.qTimerStart:0):(qs.qTimerElapsed||0),sel!==null)}</div>
   </div>
+  <div style="flex-shrink:0;padding:8px 16px 6px;border-bottom:.5px solid #f0f0eb;display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch">${navPills}</div>
   <div class="scroll-area pad" style="padding-top:14px">
-    ${dataTableHTML(q)}<div style="font-size:15px;color:#1a1a1a;line-height:1.6;margin-bottom:16px;font-weight:500;white-space:pre-wrap">${esc(q.q)}</div>
+    ${dataTableHTML(q)}<div style="font-size:15px;color:#1a1a1a;line-height:1.6;margin-bottom:16px;font-weight:500">${fmtStem(q.q)}</div>
     ${opts}${explanation}
-    ${sel===null?`<div style="display:flex;gap:8px;margin-top:14px"><button onclick="skipQuestion()" style="flex:1;padding:12px;border-radius:10px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Skip · Come back later</button></div>${skippedCount>0?`<div style="font-size:11px;color:#EF9F27;text-align:center;margin-top:8px">⏭ ${skippedCount} skipped — you'll be prompted at the end</div>`:''}`:''}
-    ${sel!==null?`<button onclick="nextQuestion()" class="btn" style="margin-top:14px;background:#1A5276">${qs.idx+1<qs.questions.length?'Next Question →':(skippedCount>0?`Review ${skippedCount} skipped →`:'See Results →')}</button>`:''}
+    ${sel===null?`<div style="display:flex;gap:8px;margin-top:14px"><button onclick="skipQuestion()" style="flex:1;padding:12px;border-radius:10px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Skip · Come back later</button></div>${skippedCount>0?`<div style="font-size:11px;color:#EF9F27;text-align:center;margin-top:8px">⏭ ${skippedCount} skipped — tap any number above to jump back</div>`:''}`:''}
+    ${sel!==null?`<button onclick="nextQuestion()" class="btn" style="margin-top:14px;background:#1A5276">${nextLabel}</button>`:''}
     <div style="height:20px"></div>
   </div>`;}
 
@@ -1672,10 +1738,11 @@ function renderQuestionReview(questions, answers, title){
         <span style="font-size:13px;color:${tc};font-weight:${fw};line-height:1.45">${esc(opt)}</span>
       </div>`;
     }).join('');
-    const expHtml = (chosen!==null&&chosen!==undefined)
+    // Explanation shown for every question — answered, wrong, or skipped.
+    const expHtml = q.e
       ? `<div style="background:${ok?'#EAF3DE':'#FFF3CD'};border-radius:8px;padding:10px 12px;margin-top:8px">
           <div style="font-size:10px;font-weight:700;color:${ok?'#186A3B':'#856404'};letter-spacing:.5px;margin-bottom:4px">${ok?'✅ CORRECT':'💡 EXPLANATION'}</div>
-          <div style="font-size:12px;color:#444;line-height:1.6">${esc(q.e||'')}</div>
+          <div style="font-size:12px;color:#444;line-height:1.6">${esc(q.e)}</div>
         </div>` : '';
     const skippedNote = (chosen===null||chosen===undefined)
       ? `<div style="font-size:12px;color:#888;font-style:italic;margin-top:4px">— Not answered</div>` : '';
@@ -1684,7 +1751,7 @@ function renderQuestionReview(questions, answers, title){
         <div style="font-size:10px;font-weight:600;color:#888;letter-spacing:.5px">Q${i+1}${timeTaken?' · ⏱ '+timeTaken:''}</div>
         <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:${ok?'#D5F5E3':'#FCEBEB'};color:${ok?'#186A3B':'#A32D2D'};flex-shrink:0">${ok?'Correct':'Wrong'}</span>
       </div>
-      <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px;white-space:pre-wrap">${esc(q.q)}</div>
+      <div style="font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.55;margin-bottom:10px">${fmtStem(q.q)}</div>
       ${q.data&&q.data.length?`<table style="width:100%;border-collapse:collapse;margin:0 0 10px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:12px">${q.data.map(r=>`<tr><td style="padding:5px 8px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:5px 8px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('')}</table>`:''}
       ${opts}${skippedNote}${expHtml}
     </div>`;
@@ -1703,7 +1770,7 @@ function renderQuizResults(){
   const sec=qs.sId?S.find(s=>s.id===qs.sId):null;
   const lessonTitle=qs.lessonId?(sec?.lessons.find(l=>l.id===qs.lessonId)?.title||'Quiz'):'Wrong Answers';
   const questionsWithTime=qs.questions.map((q,i)=>({...q,_timeTaken:(qs.questionTimes||[])[i]||null}));
-  const answersForReview=qs.answers.map(a=>({selected:a.selected,correct:a.correct}));
+  const answersForReview=qs.answers.map(a=>({selected:a?a.selected:null,correct:!!(a&&a.correct)}));
   if(STATE._quizReviewMode){
     return`<div class="bh"><button class="bh-back" onclick="STATE._quizReviewMode=false;render()">‹</button><div style="font-size:14px;font-weight:500">Back to Summary</div></div>
     <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,answersForReview,lessonTitle)}</div>`;
@@ -3416,7 +3483,7 @@ function render(){
       nav.innerHTML=brandHeader+getNavTabs().map(t=>{const badge=(t.id==='community'&&isInstructor()&&STATE.dashCommunityUnread>0)?`<span style="position:absolute;top:2px;right:6px;background:#E24B4A;color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px">${STATE.dashCommunityUnread}</span>`:'';return `<button class="nav-btn${t.id===active?' active':''}" onclick="navTo('${t.id}')" style="position:relative"><span class="nav-icon">${t.icon}</span><span>${t.label}</span>${badge}</button>`;}).join('');
     }
   }
-  if(STATE.tab==='quiz-session'&&STATE.quizState&&STATE.quizState.selected===null){setTimeout(()=>startQTimer(()=>STATE.quizState.qTimerStart),20);}
+  if(STATE.tab==='quiz-session'&&STATE.quizState){const _qs=STATE.quizState;const _r=_qs.answers[_qs.idx];if(!(_r&&_r.selected!=null)&&_qs.qTimerStart){setTimeout(()=>startQTimer(()=>STATE.quizState.qTimerStart),20);}}
   else if(STATE.tab==='quiz-mode'&&STATE.quizMode&&!STATE.quizMode.done&&STATE.quizMode.selected===null){setTimeout(()=>startQTimer(()=>STATE.quizMode.qTimerStart),20);}
   else stopQTimer();
 }
