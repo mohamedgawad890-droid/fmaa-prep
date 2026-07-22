@@ -49,7 +49,7 @@
    }
   },
   {
-   "q": "Taylor Corporation is determining the cost behavior of several items in order to budget for the upcoming year. Past trends have indicated the following dollars were spent at three different levels of output.\n\nUnit Levels:  10,000  |  12,000  |  15,000\nCost A:  $25,000  |  $29,000  |  $35,000\nCost B:  $15,000  |  $15,000  |  $15,000\nCost C:  $15,000  |  $18,000  |  $22,500\n\nIn establishing a budget for 14,000 units, Taylor should treat Costs A, B, and C, respectively, as",
+   "q": "Taylor Corporation is determining the cost behavior of several items in order to budget for the upcoming year. Past trends have indicated the following dollars were spent at three different levels of output.\n\nUnit Levels — Columns:  10,000  |  12,000  |  15,000\nCost A:  $25,000  |  $29,000  |  $35,000\nCost B:  $15,000  |  $15,000  |  $15,000\nCost C:  $15,000  |  $18,000  |  $22,500\n\nIn establishing a budget for 14,000 units, Taylor should treat Costs A, B, and C, respectively, as",
    "o": [
     "semi-variable, semi-variable, and semi-variable.",
     "semi-variable, fixed, and variable.",
@@ -171,9 +171,9 @@
    "a": 2,
    "e": "If the company increases sales by 15%, they will sell 4,600 pizzas. The contribution per pizza will become $3.75 ($9.00 selling price - $$5.25 of variable costs). Total contribution will be $17,250 (4,600 pizzes x $3.75 contribution per pizza). Subrtracting the $16,000 of fixed costs per month, the company will have $1,250 of operating income.",
    "wrongWhy": {
-    "0": "This answer is incorrect. See the correct answer for a complete calculation.",
-    "1": "This answer choice does not take into account the 15% increase in the number of pizzas sold. See the correct answer for a complete calculation.",
-    "3": "This answer is incorrect. See the correct answer for a complete calculation."
+    "0": "This uses the restaurant's full capacity of 6,000 pizzas: 6,000 × $3.75 contribution margin = $22,500, less $16,000 of fixed cost = $6,500. But capacity is what the restaurant COULD make, not what it expects to sell. Management's estimate is 15% more than the current 4,000 pizzas, which is 4,600 pizzas — not 6,000.",
+    "1": "This keeps volume at the current 4,000 pizzas while cutting the price to $9: 4,000 × $3.75 = $15,000, less $16,000 of fixed cost = $(1,000). It drops the 15% volume increase, which is the entire reason for cutting the price. At $9 the restaurant expects to sell 4,600 pizzas, not 4,000.",
+    "3": "This is far too high. To reach $9,875 of operating income on 4,600 pizzas the contribution margin would have to be about $5.63 per pizza. The cost schedule gives total variable costs of $5.25 per pizza, so at a $9.00 price the contribution margin is $3.75 — most likely part of the variable cost list (the $2.50 of other variable costs) was left out."
    }
   },
   {
@@ -321,7 +321,7 @@
    }
   },
   {
-   "q": "A company has observed the following costs at different production levels.\n\nUnit Production Level:  25,000  |  50,000  |  75,000\nCost A:  $3,250  |  $5,250  |  $7,250\nCost B:  $7,500  |  $7,500  |  $7,500\nCost C:  $2,750  |  $5,500  |  $8,250\nCost D:  $1,750  |  $2,500  |  $3,000\n\nWhat are the cost behaviors of Costs A, B, C, and D, respectively?",
+   "q": "A company has observed the following costs at different production levels.\n\nUnit Production Level — Columns:  25,000  |  50,000  |  75,000\nCost A:  $3,250  |  $5,250  |  $7,250\nCost B:  $7,500  |  $7,500  |  $7,500\nCost C:  $2,750  |  $5,500  |  $8,250\nCost D:  $1,750  |  $2,500  |  $3,000\n\nWhat are the cost behaviors of Costs A, B, C, and D, respectively?",
    "o": [
     "Variable, fixed, variable, mixed.",
     "Mixed, fixed, mixed, variable.",
@@ -337,7 +337,7 @@
    }
   },
   {
-   "q": "Fowler Co. provides the following summary of its total budgeted production costs at three production levels.\n\nVolume in Units:  1,000  |  1,500  |  2,000\nCost A:  $1,420  |  $2,130  |  $2,840\nCost B:  $1,550  |  $2,200  |  $2,900\nCost C:  $1,000  |  $1,000  |  $1,000\nCost D:  $1,630  |  $2,445  |  $3,260\n\nThe cost behavior of each of the Costs A through D, respectively, is",
+   "q": "Fowler Co. provides the following summary of its total budgeted production costs at three production levels.\n\nVolume in Units — Columns:  1,000  |  1,500  |  2,000\nCost A:  $1,420  |  $2,130  |  $2,840\nCost B:  $1,550  |  $2,200  |  $2,900\nCost C:  $1,000  |  $1,000  |  $1,000\nCost D:  $1,630  |  $2,445  |  $3,260\n\nThe cost behavior of each of the Costs A through D, respectively, is",
    "o": [
     "variable, fixed, fixed, and variable.",
     "variable, semi-variable, fixed, and semi-variable.",
@@ -639,7 +639,7 @@
    "wrongWhy": {
     "0": "This answer does not include the overhead costs that are allocated based on raw materials and machine hours.",
     "2": "This answer does not include the costs allocated based on machine hours.",
-    "3": "The correct choice is given."
+    "3": "A correct choice is available, so this is not it. The trap is stopping at the overhead figure. The three allocations total $24,780 ($8,000 + $400 + $16,380), which is not among the choices — but the question asks for TOTAL cost charged to the run, so the direct labor of $8,000 and the raw materials of $2,000 must be added, giving $34,780."
    }
   },
   {
@@ -659,7 +659,7 @@
    }
   },
   {
-   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours. The actual data for the year ended November 30 are presented as follows. Actual production in units 198,000 Actual direct labor hours 440,000 Actual variable overhead $352,000 Actual fixed overhead $575,000 The fixed overhead applied to Franklin's production for the year is:",
+   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nThe fixed overhead applied to Franklin's production for the year is:",
    "o": [
     "$594,000.",
     "$600,000.",
@@ -669,9 +669,9 @@
    "a": 0,
    "e": "The amount of fixed overhead applied is calculated as the application rate ($3 per unit as given in the question) multiplied by the number of units actually produced (198,000). Fixed overhead applied is $594,000.",
    "wrongWhy": {
-    "1": "This is the budgeted fixed overhead amount based on 200,000 units of production. In the calculation of applied overhead we use the standard input for the actual level of output. The formula is Standard Application rate × Standard input for the Actual level of output. See the correct answer for a complete explanation.",
-    "2": "The amount of overhead applied is calculated as Standard Application rate × Standard input for the Actual level of output. See the correct answer for a complete explanation.",
-    "3": "This is the amount of actual fixed overhead. In fact, the overhead applied and actual overhead differ in most cases, as in this particular case. See the correct answer for a complete explanation."
+    "1": "This is BUDGETED fixed overhead, not applied fixed overhead: $3.00 × 200,000 budgeted units = $600,000. Overhead is applied on the basis of what was actually produced, which was 198,000 units. The $6,000 gap between budgeted and applied fixed overhead is precisely the fixed overhead volume variance.",
+    "2": "This figure cannot be produced by any rate-times-base combination in the problem. Applied fixed overhead is the standard rate multiplied by the actual output: $3.00 per unit × 198,000 units = $594,000, or equivalently $1.50 per standard direct labor hour × 396,000 standard hours allowed.",
+    "3": "This is the fixed overhead actually INCURRED, which the question gives directly. Applied overhead is a calculated amount — the standard rate times actual output — and the two are rarely equal. Here applied ($594,000) exceeds actual ($575,000) by $19,000, meaning fixed overhead was over-applied."
    }
   },
   {
@@ -739,7 +739,7 @@
    }
   },
   {
-   "q": "Using the following budget data for Valley Corporation, which produces only one product, calculate the company's predetermined factory overhead application rate for variable overhead. Units to be produced 11,000 Units to be sold 10,000 Indirect materials, varying with production $ 1,000 Indirect labor, varying with production 10,000 Factory supervisor's salary, incurred regardless of production 20,000 Depreciation on factory building and equipment 30,000 Utilities to operate factory machines 12,000 Security lighting for factory 2,000 Selling, general and administrative expenses 5,000",
+   "q": "Using the following budget data for Valley Corporation, which produces only one product, calculate the company's predetermined factory overhead application rate for variable overhead.\n\nBudget data — Columns: | Amount\nUnits to be produced: | 11,000\nUnits to be sold: | 10,000\nIndirect materials, varying with production: | $1,000\nIndirect labor, varying with production: | 10,000\nFactory supervisor's salary, incurred regardless of production: | 20,000\nDepreciation on factory building and equipment: | 30,000\nUtilities to operate factory machines: | 12,000\nSecurity lighting for factory: | 2,000\nSelling, general and administrative expenses: | 5,000\n",
    "o": [
     "$4.73.",
     "$2.30.",
@@ -931,7 +931,7 @@
    }
   },
   {
-   "q": "John Sheng, cost accountant at Starlet Company, is developing departmental factory overhead application rates for the company's tooling and fabricating departments. The budgeted overhead for each department and the data for one job are shown below.\n\nDepartments — Columns: Tooling | Fabricating\nSupplies:  $850  |  $200\nSupervisors' salaries:  $1,500  |  $2,000\nIndirect labor:  $1,200  |  $4,880\nDepreciation:  $1,000  |  $5,500\nRepairs:  $4,075  |  $3,540\nTotal budgeted overhead:  $8,625  |  $16,120\n\nTotal direct labor hours:  460  |  620\nDirect labor hours on Job #231:  12  |  3\n\nUsing the departmental overhead application rates, total overhead applied to Job #231 in the Tooling and Fabricating Departments will be",
+   "q": "John Sheng, cost accountant at Starlet Company, is developing departmental factory overhead application rates for the company's tooling and fabricating departments. The budgeted overhead for each department and the data for one job are shown below.\n\nDepartments — Columns: Tooling | Fabricating\nSupplies:  $850  |  $200\nSupervisors' salaries:  $1,500  |  $2,000\nIndirect labor:  $1,200  |  $4,880\nDepreciation:  $1,000  |  $5,500\nRepairs:  $4,075  |  $3,540\nTotal budgeted overhead:  $8,625  |  $16,120\nTotal direct labor hours:  460  |  620\nDirect labor hours on Job #231:  12  |  3\n\nUsing the departmental overhead application rates, total overhead applied to Job #231 in the Tooling and Fabricating Departments will be",
    "o": [
     "$303.",
     "$537.",
@@ -1059,7 +1059,7 @@
    }
   },
   {
-   "q": "Cynthia Rogers, the cost accountant for Sanford Manufacturing, is preparing a management report which must include an allocation of overhead. The budgeted overhead for each department and the data for one job are shown below.\n\nDepartment — Columns: Tooling | Fabricating\nSupplies:  $690  |  $80\nSupervisors' salaries:  $1,400  |  $1,800\nIndirect labor:  $1,000  |  $4,000\nDepreciation:  $1,200  |  $5,200\nRepairs:  $4,400  |  $3,000\nTotal budgeted overhead:  $8,690  |  $14,080\n\nTotal direct labor hours:  440  |  640\nDirect labor hours on Job #231:  10  |  2\n\nUsing the departmental overhead application rates, and allocating overhead on the basis of direct labor hours, overhead applied to Job #231 in the Tooling Department would be",
+   "q": "Cynthia Rogers, the cost accountant for Sanford Manufacturing, is preparing a management report which must include an allocation of overhead. The budgeted overhead for each department and the data for one job are shown below.\n\nDepartment — Columns: Tooling | Fabricating\nSupplies:  $690  |  $80\nSupervisors' salaries:  $1,400  |  $1,800\nIndirect labor:  $1,000  |  $4,000\nDepreciation:  $1,200  |  $5,200\nRepairs:  $4,400  |  $3,000\nTotal budgeted overhead:  $8,690  |  $14,080\nTotal direct labor hours:  440  |  640\nDirect labor hours on Job #231:  10  |  2\n\nUsing the departmental overhead application rates, and allocating overhead on the basis of direct labor hours, overhead applied to Job #231 in the Tooling Department would be",
    "o": [
     "$501.00.",
     "$241.50.",
@@ -1119,9 +1119,9 @@
    "a": 3,
    "e": "The price variance is calculated as follows: (Actual Price − Standard Price) × Actual Quantity. The actual materials price is $12.25 ($60,025 ÷ 4,900). The standard materials price is $12.00 per unit. The actual quantity is 4,900 units of direct materials. Hence, the material price variance is ($12.25 − $12.00) × 4,900 = $1,225 unfavorable. The actual price is higher than the standard price, so the price variance is unfavorable.",
    "wrongWhy": {
-    "0": "The actual price is higher than the standard price, which gives us an unfavorable price variance. See the correct answer for a complete explanation.",
-    "1": "The actual price is higher than the standard price, which gives us an unfavorable price variance. See the correct answer for a complete explanation.",
-    "2": "The actual price is higher than the standard price, which gives us an unfavorable price variance. See the correct answer for a complete explanation."
+    "0": "This does not come out of the price variance formula. The price variance is (Actual Price − Standard Price) × Actual Quantity = ($12.25 − $12.00) × 4,900. A favorable result is also impossible here: the actual price of $12.25 ($60,025 ÷ 4,900) is above the $12.00 standard, so the company paid more per unit than standard.",
+    "1": "This is the QUANTITY variance the production supervisor is claiming, not the price variance: (4,900 − 5,000) × $12.00 = $1,200 favorable. It is a real variance, but it answers a different question. Price and quantity are separate components, and the question asks specifically for the price variance.",
+    "2": "Zero would require the actual price to equal the $12.00 standard. It does not: $60,025 ÷ 4,900 units = $12.25. The total flexible budget variance is only $25 because the $1,200 favorable quantity variance almost cancels the $1,225 unfavorable price variance — a small net figure does not mean each component is small."
    }
   },
   {
@@ -1136,12 +1136,12 @@
    "e": "The material usage variance is calculated as: (Actual Quantity − Standard Quantity for Actual Output) × Standard Price. The actual quantity is 108,000 pounds. The standard quantity allowed for the actual output is 110,000 pounds (5 pounds of direct materials per unit of product times 22,000 units produced). The standard price is $3.60 per pound. The material usage variance is (108,000 − 110,000) × $3,60 = $(7,200) favorable. The variance is favorable because the actual quantity used is less than the standard quantity for the actual output, and this is a cost variance.",
    "wrongWhy": {
     "1": "The material usage variance is calculated as: (Actual Quantity − Standard Quantity for Actual Output) × Standard Price. This answer results from using the actual price paid for the materials during the period, not the standard price.",
-    "2": "Since the actual quantity used is less than the standard quantity budgeted for the current level of production, the variance is favorable. See the correct answer for a complete explanation.",
-    "3": "Since the actual quantity used is less than the standard quantity budgeted for the current level of production, the variance is favorable. See the correct answer for a complete explanation."
+    "2": "The magnitude is right but the direction is wrong. Jackson used 108,000 pounds to make 22,000 units, while the standard allows 110,000 pounds (22,000 × 5 pounds). Less material was used than the standard permits, and for a cost variance using less than allowed is FAVORABLE.",
+    "3": "No combination of the materials data produces this figure. The materials usage variance has only two inputs: the 2,000-pound difference between the 108,000 pounds used and the 110,000 pounds allowed, and the $3.60 standard price. Those give $7,200. Note that the standard PRICE, not the $3.80 actual price, is always used in a quantity variance."
    }
   },
   {
-   "q": "Blaster Inc., a manufacturer of portable radios, purchases the components from subcontractors to use to assemble into a complete radio. Each radio requires three units each of Part XBEZ52, which has a standard cost of $1.45 per unit. During May, Blaster experienced the following with respect to Part XBEZ52. Units Purchases ($18,000) 12,000 Consumed in manufacturing 10,000 Radios manufactured 3,000 During May, Blaster Inc. incurred a materials efficiency variance of",
+   "q": "Blaster Inc., a manufacturer of portable radios, purchases the components from subcontractors to use to assemble into a complete radio. Each radio requires three units each of Part XBEZ52, which has a standard cost of $1.45 per unit.\n\nDuring May, Blaster experienced the following with respect to Part XBEZ52.\n\nPart XBEZ52 — Columns: | Units\nPurchases ($18,000): | 12,000\nConsumed in manufacturing: | 10,000\nRadios manufactured: | 3,000\n\nDuring May, Blaster Inc. incurred a materials efficiency variance of",
    "o": [
     "$4,350 unfavorable.",
     "$1,450 unfavorable.",
@@ -1365,7 +1365,7 @@
    }
   },
   {
-   "q": "At the beginning of the year, Douglas Company prepared the following monthly budget for direct materials.\n\nUnits produced and sold:  10,000  |  15,000\nDirect material:  $15,000  |  $22,500\n\nAt the end of the month, the company's records showed that 12,000 units were produced and sold and $20,000 was spent for direct materials. The variance for direct materials is",
+   "q": "At the beginning of the year, Douglas Company prepared the following monthly budget for direct materials.\n\nUnits produced and sold — Columns:  10,000  |  15,000\nDirect material:  $15,000  |  $22,500\n\nAt the end of the month, the company's records showed that 12,000 units were produced and sold and $20,000 was spent for direct materials. The variance for direct materials is",
    "o": [
     "$2,000 favorable.",
     "$5,000 unfavorable.",
@@ -1471,9 +1471,9 @@
    "a": 1,
    "e": "The quantity variance (also called the efficiency or usage variance) is calculated as: (Actual Quantity − Standard Quantity for Actual Output) × Standard Price. The actual quantity is 190,000. The standard quantity allowed for the output of 20,000 units of product is 200,000 lb. (20,000 × 10 lb. standard quantity of material per unit of finished product). The standard price is $24. The direct materials efficiency variance is (190,000 − 200,000) × $24 = $(240,000) favorable. The variance is favorable because the actual quantity used in production is less than the standard quantity allowed for the actual output.",
    "wrongWhy": {
-    "0": "This is the direct materials price variance. However, the question asks for the direct materials efficiency variance. See the correct answer for a complete explanation.",
-    "2": "The direct materials efficiency variance is favorable because the actual quantity used in production is less than the standard quantity allowed for the actual output. See the correct answer for a complete explanation.",
-    "3": "This is the direct labor rate variance. The question asks for the direct materials efficiency variance. See the correct answer for a complete explanation."
+    "0": "This is the materials PRICE variance: ($28 − $24) × 190,000 = $760,000 unfavorable. It measures what was paid per pound. The efficiency variance holds price constant at standard and measures only how many pounds were used against how many were allowed.",
+    "2": "The magnitude is right but the direction is wrong. Actual input was 190,000 pounds while the standard allows 200,000 pounds (20,000 units × 10 pounds). The company used 10,000 pounds LESS than allowed, which is favorable for a cost variance.",
+    "3": "This is the direct LABOR rate variance for the same data set: ($18 − $20) × 78,000 hours = $156,000 favorable. It comes from the Direct Labor column and has nothing to do with materials efficiency."
    }
   },
   {
@@ -1487,9 +1487,9 @@
    "a": 2,
    "e": "The direct materials price variance is calculated as follows: (Actual Price − Standard Price) × Actual Quantity. All the components of the formula are in the data given. The actual price is $28. The standard price is $24. The actual quantity is 190,000. Therefore, the direct materials price variance is ($28 − $24) × 190,000 = $760,000 unfavorable. Because the actual price was higher than the standard, the variance is unfavorable.",
    "wrongWhy": {
-    "0": "The variance is unfavorable because the actual price ($28) is higher than standard ($24). See the correct answer for a complete explanation.",
-    "1": "This is the materials efficiency variance. However, the question asks for the materials price variance. See the correct answer for a complete explanation.",
-    "3": "This is the direct labor rate variance. However, the question asks for the direct materials price variance. See the correct answer for a complete explanation."
+    "0": "The magnitude is right but the direction is wrong. The actual price per pound is $28 against a $24 standard, so the company paid $4 MORE per pound than standard. Paying more than standard is unfavorable.",
+    "1": "This is the materials EFFICIENCY variance, and it is favorable rather than unfavorable: (190,000 − 200,000) × $24 = $240,000 favorable. It measures quantity used against quantity allowed. The price variance measures the difference between the actual and standard price.",
+    "3": "This is the direct LABOR rate variance: ($18 − $20) × 78,000 hours = $156,000 favorable. It uses the labor column of the table. The materials price variance uses the materials column: ($28 − $24) × 190,000 pounds."
    }
   },
   {
@@ -1679,7 +1679,7 @@
    "a": 1,
    "e": "The quantity variance (also called the efficiency or usage variance) is calculated as: (AQ − SQ) × SP or (Actual Quantity − Standard Quantity for Actual Output) × Standard Price. The actual quantity of material used was 23,000 lb. The standard quantity of material scheduled for actual output was 22,500 lb. (7,500 units of finished product × 3 lb. of material needed to complete one unit of product). The standard price is $1.60. The quantity variance is (23,000 − 22,500) × $1.60 = $800 unfavorable. The quantity of material used for production was greater than the amount allowed for the production, which creates an unfavorable variance.",
    "wrongWhy": {
-    "2": "The quantity variance (also called the efficiency or usage variance) is calculated as: (AQ − SQ) × SP or (Actual Quantity − Standard Quantity for Actual Output) × Standard Price. This answer results from using the standard quantity of materials for the master budget production output of 8,000 units (8,000 × 3 lbs. per unit, or 24,000 lbs.) instead of the standard quantity for the actual output. See the correct answer for a complete explanation.",
+    "2": "This substitutes BUDGETED production of 8,000 units for the 7,500 units actually produced. That gives a standard quantity of 24,000 pounds and (23,000 − 24,000) × $1.60 = $1,600 favorable. The standard quantity in a quantity variance is always the quantity allowed for the output ACTUALLY achieved: 7,500 × 3 pounds = 22,500 pounds.",
     "3": "The quantity variance (also called the efficiency or usage variance) is calculated as: (AQ − SQ) × SP. This answer results from using the actual price of $1.55 ($38,750 total cost ÷ 25,000 lbs. purchased) instead of the standard price.",
     "0": "This has both the wrong quantity and the wrong sign. It applies the standard price to the purchase quantity rather than comparing the quantity used against the standard quantity allowed for the actual output. The quantity variance always uses the quantity USED, never the quantity purchased — the purchased figure belongs in the price variance when inventory is recorded at standard cost, as it is here. Because more material was used than the standard allowed, the variance is also unfavorable, not favorable."
    }
@@ -1697,7 +1697,7 @@
    "wrongWhy": {
     "0": "This is the actual labor cost of $9,120,000 minus the flexible budget labor cost of $9,500,000 (9,500 articles actually reviewed and edited at $1,000 standard cost per article). So this is the total flexible budget variance for labor. The question asks for only the labor efficiency variance, which is one part of the total flexible budget variance.",
     "1": "This is the difference between the flexible budget standard labor costs (variable costs) and total actual costs (including fixed and variable costs), which does not mean anything.",
-    "2": "The labor efficiency variance is calculated as follows: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. There are two mistakes in this variance calculation. One, the standard hours for the actual output was used in place of the actual hours. And two, the number of hours in the fixed budget was used in place of the standard hours for the actual output. See the correct answer for a complete explanation."
+    "2": "This is the difference between the static budget of $10,000,000 for 10,000 articles and the flexible budget of $9,500,000 for the 9,500 articles actually completed. That $500,000 reflects doing 500 fewer articles than normal capacity — a volume effect, not efficiency. The efficiency variance compares the 192,000 hours actually worked with the 190,000 hours allowed for 9,500 articles."
    }
   },
   {
@@ -1712,8 +1712,8 @@
    "e": "The direct labor efficiency variance is calculated as: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. Actual hours is 28,000. The standard hours allowed for the actual level of output is 27,500 hours (1.25 hours per unit × 22,000 units produced). The standard labor rate is $12. Therefore, the direct labor efficiency variance is (28,000 − 27,500) × $12 = $6,000 unfavorable. The variance is unfavorable because the actual hours exceed the standard hours, and this is a cost variance.",
    "wrongWhy": {
     "0": "The labor efficiency variance is calculated as: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. This answer results from multiplying by the actual rate ($11.70) instead of the standard rate.",
-    "1": "The actual hours exceed the standard amount, which means the variance is unfavorable. See the correct answer for a complete explanation.",
-    "2": "The actual hours exceed the standard amount, which means the variance is unfavorable. See the correct answer for a complete explanation."
+    "1": "This figure does not arise from the labor data. The only inputs to the labor efficiency variance are the 500-hour difference (28,000 actual against 27,500 allowed for 22,000 units) and the $12.00 standard rate. The direction is also wrong: actual hours exceed the hours allowed, so the variance must be unfavorable.",
+    "2": "The magnitude is right but the direction is wrong. Jackson used 28,000 direct labor hours to make 22,000 units, while the standard allows 27,500 hours (22,000 × 1.25). Using 500 hours MORE than allowed is unfavorable for a cost variance."
    }
   },
   {
@@ -1727,9 +1727,9 @@
    "a": 2,
    "e": "The labor price/rate variance is calculated as: (Actual Rate − Standard Rate) × Actual Hours. The actual total direct labor cost is $327,600 ($364,000 × 90%), and the actual labor rate is $11.70 ($327,600 ÷ 28,000 hours used). The standard labor rate is $12. The actual hours used is 28,000. Therefore, the labor rate variance is ($11.70 − $12.00) × 28,000 = ($8,400) favorable. Since the actual labor rate of $11.70 is lower than the standard labor rate of $12, the variance is favorable.",
    "wrongWhy": {
-    "0": "Since the actual labor rate of $11.70 is lower than the standard labor rate of $12, the variance is favorable. See the correct answer for a complete explanation.",
-    "1": "Since the actual labor rate of $11.70 is lower than the standard labor rate of $12, the variance is favorable. See the correct answer for a complete explanation.",
-    "3": "This result is the direct labor efficiency variance, but this question asks for the direct labor rate variance. See the correct answer for a complete explanation."
+    "0": "This is the direct MATERIALS usage variance for the same data — and it is favorable, not unfavorable: (108,000 − 110,000) pounds × $3.60 = $7,200 favorable. It concerns pounds of material, not the rate paid for labor.",
+    "1": "The magnitude is right but the direction is wrong. Actual direct labor cost is $327,600 ($364,000 × 90%) for 28,000 hours, an actual rate of $11.70 against a $12.00 standard. Paying $0.30 per hour LESS than standard is favorable.",
+    "3": "This is the labor EFFICIENCY variance: (28,000 − 27,500) × $12.00 = $6,000 unfavorable. It measures hours used against hours allowed. The rate variance measures the price paid per hour and is computed on the 28,000 hours actually worked."
    }
   },
   {
@@ -1743,9 +1743,9 @@
    "a": 0,
    "e": "This is an example of price and quantity variances applied to a service business. To answer this question, we must work out both the price (rate) variance and the quantity (efficiency) variance. The price variance formula is (AP − SP) × AQ = Price Variance. The quantity variance formula is (AQ − SQ) × SP = Quantity Variance. Since these are cost items, a negative variance is a favorable variance (actual is lower than standard) and a positive variance is an unfavorable one (actual is higher than standard). The Standard Quantity (SQ) is the standard for the number of hours to service 160 cars. The standard is 0.25 hours per car multiplied by 160 cars, which is 40 hours. The Standard Price (SP) is given as $7 per hour. The Price Variance is $19 unfavorable. The Quantity Variance is ($14) favorable. Whenever we have all of the values we need except one, we can set up a simple equation and solve for the missing variable. We have all of the values for the Quantity Variance formula except for AQ. So the first equation will be: (AQ − 40) × 7 = (14) 7 AQ − 280 = (14) 7 AQ = 266 AQ = 38, and this is the actual hours worked.",
    "wrongWhy": {
-    "1": "This answer results from solving the Quantity Variance formula for the variable AQ using a positive Quantity Variance in the formula instead of a negative one. The Quantity (Efficiency) Variance is favorable. Since it is a cost, a favorable variance is represented by a negative amount. Therefore, the Quantity Variance used in the formula should be negative. See the correct answer for a complete explanation.",
+    "1": "The 42 hours cannot be right. The standard is 40 hours (160 cars × 0.25 hours), so 42 actual hours would give an efficiency variance of (42 − 40) × $7 = $14 UNFAVORABLE. The question states the efficiency variance is $14 favorable, so actual hours must be below 40 — they are 38.",
     "2": "This answer results from using $19 unfavorable as the Efficiency (Quantity) Variance and $14 favorable as the Rate (Price) Variance. Instead, the Rate Variance is $19 unfavorable and the Efficiency Variance is $14 favorable.",
-    "3": "This answer results from two errors: (1) Solving the Quantity Variance formula for the variable AQ using a positive Quantity Variance in the formula instead of a negative one. The Quantity (Efficiency) Variance is favorable. Since it is a cost, a favorable variance is represented by a negative amount. Therefore, the Quantity Variance used in the formula should be negative. (2) Solving the Price Variance formula for the variable AP using a negative Price Variance in the formula instead of a positive one. The Price (Rate) Variance is unfavorable. Since it is a cost, an unfavorable variance is represented by a positive amount. Therefore, the Price Variance used in the formula should be positive. See the correct answer for a complete explanation."
+    "3": "Both figures contradict the variances given. At $6.55 the actual rate is below the $7.00 standard, so the rate variance would be favorable, not $19 unfavorable. At 42 hours actual time exceeds the 40-hour standard, so the efficiency variance would be unfavorable, not $14 favorable."
    }
   },
   {
@@ -1765,7 +1765,7 @@
    }
   },
   {
-   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours. The actual data for the year ended November 30 are presented as follows. Actual production in units 198,000 Actual direct labor hours 440,000 Actual variable overhead $352,000 Actual fixed overhead $575,000 The standard hours allowed for actual production for the year ended November 30 total:",
+   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nThe standard hours allowed for actual production for the year ended November 30 total:",
    "o": [
     "400,000.",
     "495,000.",
@@ -1791,9 +1791,9 @@
    "a": 1,
    "e": "The labor efficiency variance is a quantity variance, calculated as follows: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. A total of 5,000 direct labor hours were actually used in production. We know that 19,000 units of product were manufactured during the period. The standard direct labor hours allowed for production of one unit is 0.25 hours. Therefore, the standard direct labor hours allowed for the production of the period is 19,000 × 0.25 = 4,750 hours. The standard rate is $8. Therefore, the direct labor efficiency variance is (5,000 − 4,750) × $8 = $2,000 unfavorable. Because the actual hours used were greater than the standard hours allowed for the actual output, the variance is positive and unfavorable.",
    "wrongWhy": {
-    "0": "The labor efficiency variance is unfavorable as the actual hours used were greater than the hours allowed for the actual production. See the correct answer for a complete explanation.",
-    "2": "The labor efficiency variance is unfavorable as the actual hours used were greater than the hours allowed for the actual production. See the correct answer for a complete explanation.",
-    "3": "The labor efficiency variance is (Actual Hours − Standard Hours for the Actual Output) × Standard Rate. See the correct answer for a complete explanation."
+    "0": "The magnitude is right but the direction is wrong. Arrow used 5,000 direct labor hours to produce 19,000 units, while the standard allows 4,750 hours (19,000 × 0.25). Using 250 hours MORE than allowed is unfavorable for a cost variance.",
+    "2": "This is the labor RATE variance: actual direct labor cost is $37,800 ($42,000 × 90%), an actual rate of $7.56 per hour ($37,800 ÷ 5,000), so ($7.56 − $8.00) × 5,000 = $2,200 favorable. That measures the price of labor. The efficiency variance measures the hours used.",
+    "3": "The direction is right but the figure is not. It would require a 225-hour difference at the $8.00 standard rate. The actual difference is 250 hours (5,000 worked against 4,750 allowed for 19,000 units), which at $8.00 gives $2,000 unfavorable."
    }
   },
   {
@@ -1807,9 +1807,9 @@
    "a": 1,
    "e": "The labor rate/price variance is: (Actual Rate − Standard Rate) × Actual Hours. The actual direct labor cost was $37,800 ($42,000 × 90%) for the month of November. The actual rate was $7.56 ($37,800 ÷ 5,000). The actual number of hours was 5,000. The labor rate/price variance was ($7.56 − $8.00) × 5,000 = $(2,200) favorable. A negative variance for a cost is a favorable variance.",
    "wrongWhy": {
-    "0": "The labor rate/price variance is favorable as the actual direct labor rate is lower than the standard. See the correct answer for a complete explanation.",
-    "2": "The labor rate/price variance is calculated as: (Actual Rate − Actual Rate) × Actual Hours. This answer results from using the hours allowed for the actual output (19,000 × 0.25) instead of the actual hours. See the correct answer for a complete explanation.",
-    "3": "This answer results from using the total factory wages of $42,000 to calculate the direct labor actual rate. However, only 90% of the total factory wages were direct labor. See the correct answer for a complete explanation."
+    "0": "This is not a rate-variance figure, and the direction is wrong as well. The actual rate is $7.56 per hour ($37,800 ÷ 5,000 hours), which is below the $8.00 standard, so Arrow paid less per hour than standard and the variance must be favorable.",
+    "2": "This multiplies the correct $0.44 rate difference by the 4,750 STANDARD hours instead of the 5,000 hours actually worked. A rate variance is always measured on actual hours, because that is the number of hours the rate difference was actually paid on: ($7.56 − $8.00) × 5,000 = $2,200 favorable.",
+    "3": "This is the labor EFFICIENCY variance: (5,000 − 4,750) × $8.00 = $2,000 unfavorable. It measures hours used against hours allowed. The rate variance compares the $7.56 actually paid per hour with the $8.00 standard."
    }
   },
   {
@@ -1823,9 +1823,9 @@
    "a": 0,
    "e": "The labor efficiency variance is calculated follows: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. The actual hours worked are 94,000, and the standard hours for the actual output are 88,000 (4 hours per unit multiplied by 22,000 units produced). The standard labor hourly rate is $9. The labor efficiency variance is (94,000 − 88,000) × $9 = 54,000 unfavorable. The variance is unfavorable (positive) because the actual hours were greater than the standard hours for the actual output, and this is a cost variance.",
    "wrongWhy": {
-    "1": "The labor efficiency variance is calculated follows: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. There are three mistakes made to get this answer. First, the actual labor rate ($10) is used instead of the standard rate of $9. Second, the standard hours (88,000) is used instead of actual hours (94,000). Third, the capacity hours (100,000) is used instead of standard hours (88,000). See the correct answer for a complete explanation.",
-    "2": "This is the difference between the capacity hours (100,000) and the standard hours (88,000), multiplied by the standard rate. However, in the direct labor efficiency variance, we need to use actual hours (94,000) instead of capacity hours (100,000). Furthermore, the actual hours used was greater than the standard hours for the actual output, and so the variance is unfavorable. See the correct answer for a complete explanation.",
-    "3": "The labor efficiency variance is calculated follows: (Actual Hours − Standard Hours for Actual Output) × Standard Rate. There were two mistakes made to get this result. First the actual labor rate ($10) is used instead of the standard rate of $9. Second, the capacity hours (100,000) is used instead of standard hours for the actual output (88,000). See the correct answer for a complete explanation."
+    "1": "This figure does not come out of the labor efficiency formula, and the direction is wrong. Water Control worked 94,000 hours to produce 22,000 pumps, while the standard allows 88,000 hours (22,000 × 4). Using 6,000 hours MORE than allowed is unfavorable.",
+    "2": "This is built on the 3,000-pump shortfall against the 25,000 SCHEDULED: 3,000 × 4 hours × $9 = $108,000. That compares output with the production schedule, which is a volume question. Standard hours in an efficiency variance are always based on the 22,000 pumps actually produced.",
+    "3": "Both the amount and the direction are wrong. The 6,000-hour excess (94,000 worked against 88,000 allowed) multiplied by the $9 standard rate gives $54,000, and because actual hours exceed allowed hours the variance is unfavorable."
    }
   },
   {
@@ -1840,8 +1840,8 @@
    "e": "The labor rate (price) variance is calculated as: (Actual Rate − Standard Rate) × Actual Hours. The actual rate is $10 per hour ($940,000 ÷ 94,000), the standard rate is $9 per hour, and 94,000 hours were actually worked during the period. So, the labor price variance was ($10 − $9) × 94,000 = $94,000 unfavorable. The variance was unfavorable because the actual rate was greater than the standard rate, and this is a cost item.",
    "wrongWhy": {
     "1": "This can be produced by comparing the $940,000 of actual labor cost against the standard hours allowed priced at the ACTUAL rate (22,000 pumps x 4 hours = 88,000 standard hours, x $10 = $880,000, a $60,000 difference) — and then labelling it favorable. Both halves are wrong. The rate variance holds hours constant at ACTUAL hours and varies only the rate: ($10 - $9) x 94,000 = $94,000. It is unfavorable, because for a cost an actual rate above standard is unfavorable. The hours gap belongs in the efficiency variance, not this one.",
-    "2": "This is the total direct labor variance. See the correct answer for a complete explanation.",
-    "3": "This is the direct labor efficiency variance. See the correct answer for a complete explanation."
+    "2": "This adds the two labor variances together: $94,000 unfavorable rate plus $54,000 unfavorable efficiency. That sum is the total flexible-budget labor variance, not the price variance on its own. The question asks only for the price component: ($10.00 − $9.00) × 94,000 hours.",
+    "3": "This is the labor EFFICIENCY variance: (94,000 − 88,000) × $9.00 = $54,000 unfavorable. It measures how many hours were used. The price variance measures what was paid per hour: the actual rate is $10.00 ($940,000 ÷ 94,000) against a $9.00 standard."
    }
   },
   {
@@ -1925,7 +1925,7 @@
    }
   },
   {
-   "q": "Ardmore Enterprises uses a standard cost system in its small appliance division. The standard cost of manufacturing one unit of Zeb is as follows: Materials - 60 pounds at $1.50 per pound $ 90 Labor - 3 hours at $12 per hour Factory overhead - 3 hours at $8 per hour Total standard cost per unit $150 The budgeted variable factory overhead rate is $3 per labor hour, and the budgeted fixed factory overhead is $27,000 per month. During May, Ardmore produced 1,650 units of Zeb compared with a normal capacity of 1,800 units. The actual cost per unit was as follows: Materials (purchased and used) - 58 pounds at $1.65 per pound $ 95.70 Labor - 3.1 hours at $12 per hour 37.20 Factory overhead - $39,930 per 1,650 units 24.20 Total actual cost per unit $157.10 The labor rate variance for May is",
+   "q": "Ardmore Enterprises uses a standard cost system in its small appliance division. The standard cost of manufacturing one unit of Zeb is as follows.\n\nStandard cost per unit — Columns: | Amount\nMaterials — 60 pounds at $1.50 per pound: | $90.00\nLabor — 3 hours at $12 per hour: | 36.00\nFactory overhead — 3 hours at $8 per hour: | 24.00\nTotal standard cost per unit: | $150.00\n\nThe budgeted variable factory overhead rate is $3 per labor hour, and the budgeted fixed factory overhead is $27,000 per month. During May, Ardmore produced 1,650 units of Zeb compared with a normal capacity of 1,800 units. The actual cost per unit was as follows.\n\nActual cost per unit — Columns: | Amount\nMaterials (purchased and used) — 58 pounds at $1.65 per pound: | $95.70\nLabor — 3.1 hours at $12 per hour: | 37.20\nFactory overhead — $39,930 per 1,650 units: | 24.20\nTotal actual cost per unit: | $157.10\n\nThe labor rate variance for May is",
    "o": [
     "$1,920 favorable.",
     "$0",
@@ -1935,9 +1935,9 @@
    "a": 1,
    "e": "The labor rate variance formula is: (Actual Rate − Standard Rate) × Actual Hours. The labor rate variance is zero as the standard rate equals the actual rate of $12.00 per hour.",
    "wrongWhy": {
-    "0": "This is the difference between the actual total overhead incurred and the flexible budget overhead. This is not the labor rate variance. See the correct answer for a complete explanation.",
-    "2": "The labor rate variance is not unfavorable. See the correct answer for a complete explanation.",
-    "3": "This is the material quantity variance. The question asks for the labor rate variance. See the correct answer for a complete explanation."
+    "0": "This figure does not arise from the labor data at all. Both the standard and the actual labor rate are $12.00 per hour, so whatever the hours worked, (Actual Rate − Standard Rate) × Actual Hours must be zero. A rate variance can only be non-zero when the two rates differ.",
+    "2": "This is the direct MATERIALS quantity variance, and it is favorable rather than unfavorable: (58 − 60) pounds × $1.50 × 1,650 units = $4,950 favorable. Ardmore used two pounds less per unit than standard. It has nothing to do with the labor rate.",
+    "3": "This is the direct materials quantity variance — correctly signed, but answering a different question: (58 − 60) pounds × $1.50 × 1,650 units. The labor RATE variance compares the $12.00 actually paid per hour with the $12.00 standard rate, which gives zero."
    }
   },
   {
@@ -1952,8 +1952,8 @@
    "e": "The labor rate variance is calculated as follows: (Actual Rate − Standard Rate) × Actual Hours (i.e., actual units of input). All the components of the formula are in the data given. The actual rate is $18, and the standard rate is $20. The actual hours are 78,000. Thus, the variance is ($18 − $20) × 78,000 = $(156,000). The direct labor rate variance for April is favorable because the actual labor rate was less than the standard labor rate.",
    "wrongWhy": {
     "0": "The labor rate variance is calculated as follows: (Actual Rate − Standard Rate) × Actual Hours (i.e., actual units of input). An answer of $40,000 results from using the formula (Standard Rate − Actual Rate) × Actual Units of Output.",
-    "1": "This is the direct materials efficiency variance. However, the question asks for the direct labor rate variance. See the correct answer for a complete explanation.",
-    "3": "The actual labor rate was less than the standard labor rate, which creates a favorable variance. See the correct answer for a complete explanation."
+    "1": "This is the direct MATERIALS efficiency variance: (190,000 − 200,000) pounds × $24 = $240,000 favorable. It comes from the Direct Materials column. The labor rate variance uses the labor column: ($18 − $20) × 78,000 hours.",
+    "3": "The magnitude is right but the direction is wrong. The actual labor rate is $18 per hour against a $20 standard, so the company paid $2 per hour LESS than standard. Paying less than standard is favorable for a cost variance."
    }
   },
   {
@@ -2069,7 +2069,7 @@
    }
   },
   {
-   "q": "The total budgeted direct labor cost of a company for the month was set at $75,000 when 5,000 units were planned to be produced. The following standard cost, stated in terms of direct labor hours (DLH), was used to develop the budget for direct labor cost: 1.25 DLH x $12.00/DLH = $15.00/unit produced The actual operating results for the month were as follows: Actual units produced 5,200 Actual direct labor hours worked 6,600 Actual direct labor cost $77,220 The direct labor efficiency variance for the month would be",
+   "q": "The total budgeted direct labor cost of a company for the month was set at $75,000 when 5,000 units were planned to be produced. The following standard cost, stated in terms of direct labor hours (DLH), was used to develop the budget for direct labor cost:\n\n1.25 DLH × $12.00/DLH = $15.00/unit produced\n\nThe actual operating results for the month were as follows.\n\nActual results — Columns: | Amount\nActual units produced: | 5,200\nActual direct labor hours worked: | 6,600\nActual direct labor cost: | $77,220\n\nThe direct labor efficiency variance for the month would be",
    "o": [
     "$3,000 unfavorable.",
     "$4,200 unfavorable.",
@@ -2101,7 +2101,7 @@
    }
   },
   {
-   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours. The actual data for the year ended November 30 are presented as follows. Actual production in units 198,000 Actual direct labor hours 440,000 Actual variable overhead $352,000 Actual fixed overhead $575,000 Franklin's fixed overhead volume variance for the year is",
+   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nFranklin's fixed overhead volume variance for the year is",
    "o": [
     "$25,000 favorable.",
     "$55,000 unfavorable.",
@@ -2111,13 +2111,13 @@
    "a": 3,
    "e": "The fixed overhead volume variance (also called the fixed overhead production-volume variance) is the budgeted amount of fixed overhead minus the amount of fixed overhead applied (standard rate × standard quantity of application base allowed for the actual level of output). The fixed overhead rate was estimated to be $3.00 per unit and 200,000 units were scheduled for production. The total budgeted fixed overhead was therefore $600,000 ($3.00 × 200,000). Two hours of labor are the standard required to produce one unit. Thus, the application rate is $1.50 per direct labor hour ($3.00 ÷ 2). The standard direct labor hours allowed for the actual output were 396,000 (2 × 198,000 actual production in units). The applied overhead equals $594,000 ($1.50 × 396,000). We also could calculate the amount of applied overhead using actual units produced and the unit fixed overhead application rate ($3.00 × 198,000) which gives the same answer: $594,000.",
    "wrongWhy": {
-    "0": "The fixed overhead volume variance (also called the fixed overhead production-volume variance) is the budgeted amount of fixed overhead minus the amount of fixed overhead applied (standard rate × standard quantity of application base allowed for the actual level of output). See the correct answer for a complete explanation.",
-    "1": "The fixed overhead volume variance (also called the fixed overhead production-volume variance) is the budgeted amount of fixed overhead minus the amount of fixed overhead applied (standard rate × standard quantity of application base allowed for the actual level of output). See the correct answer for a complete explanation.",
-    "2": "The fixed overhead volume variance (also called the fixed overhead production-volume variance) is the budgeted amount of fixed overhead minus the amount of fixed overhead applied (standard rate × standard quantity of application base allowed for the actual level of output). See the correct answer for a complete explanation."
+    "0": "This is the fixed overhead SPENDING (budget) variance: $575,000 actual against $600,000 budgeted = $25,000 favorable. It compares what was spent with what was budgeted. The volume variance compares what was BUDGETED with what was APPLIED, and never involves the actual spend.",
+    "1": "This is not a fixed overhead figure at all — it is the total VARIABLE overhead variance. Budgeted variable overhead is $300,000 ($900,000 total less $600,000 fixed), a rate of $0.75 per standard hour, so $0.75 × 396,000 = $297,000 applied against $352,000 actual = $55,000 unfavorable.",
+    "2": "This is the TOTAL fixed overhead variance: $575,000 actual against $594,000 applied. It nets the $25,000 favorable spending variance against the $6,000 unfavorable volume variance. The question asks for the volume component on its own, which is budgeted ($600,000) less applied ($594,000)."
    }
   },
   {
-   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours. The actual data for the year ended November 30 are presented as follows. Actual production in units 198,000 Actual direct labor hours 440,000 Actual variable overhead $352,000 Actual fixed overhead $575,000 Franklin's fixed overhead spending variance for the year is:",
+   "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nFranklin's fixed overhead spending variance for the year is:",
    "o": [
     "$5,750 favorable.",
     "$25,000 favorable.",
@@ -2127,9 +2127,9 @@
    "a": 1,
    "e": "The fixed overhead budget/spending variance is the difference between the actual fixed overhead amount and the budgeted fixed overhead costs. Actual fixed overhead is given as $575,000. The fixed overhead rate was estimated to be $3.00 per unit and 200,000 units were scheduled for production, thus, the total budgeted fixed overhead was $600,000 ($3.00 × 200,000). The fixed overhead spending variance was $25,000 favorable ($575,000 − $600,000).",
    "wrongWhy": {
-    "0": "The fixed overhead budget/spending variance is the difference between the actual fixed overhead amount and the budgeted fixed overhead costs. See the correct answer for a complete explanation.",
-    "2": "The fixed overhead budget/spending variance is the difference between the actual fixed overhead amount and the budgeted fixed overhead costs. See the correct answer for a complete explanation.",
-    "3": "The fixed overhead budget/spending variance is the difference between the actual fixed overhead amount and the budgeted fixed overhead costs. See the correct answer for a complete explanation."
+    "0": "This figure does not come from the spending variance calculation. The fixed overhead spending variance is simply the difference between the $575,000 actually incurred and the $600,000 budgeted ($3.00 × 200,000 budgeted units) — no rates or hours are involved.",
+    "2": "The magnitude is right but the direction is wrong. Actual fixed overhead of $575,000 is BELOW the $600,000 budget, so Franklin spent $25,000 less on fixed overhead than planned. Spending less than budget is favorable.",
+    "3": "This is the TOTAL fixed overhead variance: $575,000 actual against $594,000 applied ($3.00 × 198,000 units). It combines the $25,000 favorable spending variance with the $6,000 unfavorable volume variance. The question asks for the spending component alone."
    }
   },
   {
@@ -2165,7 +2165,7 @@
    }
   },
   {
-   "q": "Tiny Tykes Corporation had the following activity relating to its fixed and variable overhead for the month of July. Actual costs Fixed overhead $120,000 Variable overhead 80,000 Flexible budget Variable overhead 90,000 Applied costs Fixed overhead 125,000 Variable overhead spending variance 2,000F Production volume variance 5,000U The fixed overhead efficiency variance is",
+   "q": "Tiny Tykes Corporation had the following activity relating to its fixed and variable overhead for the month of July.\n\nJuly overhead — Columns: | Amount\nActual costs — Fixed overhead: | $120,000\nActual costs — Variable overhead: | 80,000\nFlexible budget — Variable overhead: | 90,000\nApplied costs — Fixed overhead: | 125,000\nVariable overhead spending variance: | 2,000 F\nProduction volume variance: | 5,000 U\n\nThe fixed overhead efficiency variance is",
    "o": [
     "Never a meaningful variance.",
     "$3,000 favorable.",
@@ -2343,7 +2343,7 @@
    }
   },
   {
-   "q": "A company has recently implemented responsibility accounting in all 7 segments of the company. The following information is available for Segment W for the last quarter. Net working capital $12,000,000 Property, plant and equipment, net 31,750,000 Revenues 8,000,000 Cost of sales 6,350,000 General and administrative expenses 180,000 Based on the information provided, if the company treats Segment W as an investment center, what is the annual return on investment for Segment W?",
+   "q": "A company has recently implemented responsibility accounting in all 7 segments of the company. The following information is available for Segment W for the last quarter.\n\nSegment W — Columns: | Amount\nNet working capital: | $12,000,000\nProperty, plant and equipment, net: | 31,750,000\nRevenues: | 8,000,000\nCost of sales: | 6,350,000\nGeneral and administrative expenses: | 180,000\n\nBased on the information provided, if the company treats Segment W as an investment center, what is the annual return on investment for Segment W?",
    "o": [
     "3.36%.",
     "13.44%.",
@@ -2423,7 +2423,7 @@
    }
   },
   {
-   "q": "Listed below is selected financial information for the Western Division of the Hinzel Company for last year. Amount (thousands) Account Current assets $ 625 General and administrative expenses Net sales 4,000 Property, plant, and equipment 1,775 Cost of goods sold 3,525 If Hinzel treats the Western Division as an investment center for performance measurement purposes, what is the division's return on investment (ROI) for last year?",
+   "q": "Listed below is selected financial information for the Western Division of the Hinzel Company for last year.\n\nAccount — Columns: | Amount (thousands)\nCurrent assets: | $625\nGeneral and administrative expenses: | 75\nNet sales: | 4,000\nProperty, plant, and equipment: | 1,775\nCost of goods sold: | 3,525\n\nIf Hinzel treats the Western Division as an investment center for performance measurement purposes, what is the division's return on investment (ROI) for last year?",
    "o": [
     "22.54%",
     "19.79%",
@@ -2495,11 +2495,11 @@
     "East"
    ],
    "a": 3,
-   "e": "Return on investment is operating income divided by assets. North’s ROI is $1,000 ÷ $2,500 or 0.40; South's ROI is $5,000 ÷ $15,000 or 0.333; East’s ROI is $4,000 ÷ $8,000 or 0.50; and West’s ROI is $7,500 ÷ $25,000 or 0.30. South’s return on investment is the highest of the four.",
+   "e": "Return on investment is operating income divided by assets. North's ROI is $1,000 ÷ $2,500, or 40%; South's ROI is $5,000 ÷ $15,000, or 33.3%; East's ROI is $4,000 ÷ $8,000, or 50%; and West's ROI is $7,500 ÷ $25,000, or 30%. East's return on investment is the highest of the four, even though East does not have the largest operating income. ROI measures income against the assets used to earn it, so a smaller division working a smaller asset base can out-perform a larger one.",
    "wrongWhy": {
-    "0": "South does not have the highest ROI. See the correct answer for the full explanation.",
-    "1": "North does not have the highest ROI. See the correct answer for the full explanation.",
-    "2": "West does not have the highest ROI. See the correct answer for the full explanation."
+    "0": "South earns the second-largest operating income at $5,000, but it needs $15,000 of assets to do it, giving an ROI of 33.3% — the second lowest of the four. ROI always weighs income against the assets used to earn it, so a large income on a large asset base can still be a poor return.",
+    "1": "North's ROI is 40% ($1,000 ÷ $2,500), which is the second highest but still below East's. East earns $4,000 on $8,000 of assets, or 50%. North is a strong performer, but it is not the answer.",
+    "2": "West has by far the largest operating income at $7,500, which is why it looks attractive, but it also carries $25,000 of assets — more than the other three divisions combined. Its ROI of 30% is the LOWEST of the four. Absolute income tells you nothing about return on investment."
    }
   },
   {
@@ -2727,7 +2727,7 @@
    }
   },
   {
-   "q": "A company’s recent operating results are shown below. Sales $4,370,000 Expenses 2,728,000 Operating income 1,642,000 Total assets 9,818,000 Total liabilities 7,663,000 The company has set a target return on investment (ROI) of 18%. Management is evaluating the following two plans. Plan 1: Invest $1,200,000 in a new location that will produce $3,000,000 in sales each year. Operating expenses will increase $2,781,600 each year. Plan 2: Reduce company costs by improving technology in the manufacturing process. An equipment investment of $730,000 will reduce annual operating costs by $315,000. Which plan, if implemented, would result in the company having an ROI at or above the targeted ROI?",
+   "q": "A company's recent operating results are shown below.\n\nOperating results — Columns: | Amount\nSales: | $4,370,000\nExpenses: | 2,728,000\nOperating income: | 1,642,000\nTotal assets: | 9,818,000\nTotal liabilities: | 7,663,000\n\nThe company has set a target return on investment (ROI) of 18%. Management is evaluating the following two plans.\n\nPlan 1: Invest $1,200,000 in a new location that will produce $3,000,000 in sales each year. Operating expenses will increase $2,781,600 each year.\n\nPlan 2: Reduce company costs by improving technology in the manufacturing process. An equipment investment of $730,000 will reduce annual operating costs by $315,000.\n\nWhich plan, if implemented, would result in the company having an ROI at or above the targeted ROI?",
    "o": [
     "Plan 2, since it will increase the company’s ROI to 18.6%.",
     "Plan 1, since it will increase the company’s ROI to 18.2%.",
@@ -2801,8 +2801,8 @@
    "a": 3,
    "e": "Residual income is the amount of return after a certain required return on the assets in use by the division. The calculation of the required return is based on an imputed interest rate for the cost of funds represented by the assets in use. This describes the situation in the question.",
    "wrongWhy": {
-    "0": "Operating income does not take into account the imputed interest rate on the assets of the investment center. See the correct answer for a complete explanation.",
-    "1": "Return on assets does not take into account the imputed interest rate on the assets of the investment center. See the correct answer for a complete explanation.",
+    "0": "Operating income is the segment margin BEFORE any charge for the capital employed. The definition in the question deducts imputed interest on the assets used, and that deduction is exactly the step that converts operating income into residual income.",
+    "1": "Return on assets is a ratio — income divided by assets — expressed as a percentage. The measure described in the question is a dollar amount left over after an interest charge is subtracted, not a ratio. Deducting a charge leaves a residual; dividing produces a rate of return.",
     "2": "Return on investment is calculated as income divided by the invested amount. There is no deduction of an imputed interest rate in the calculation of return on investment."
    }
   }
@@ -2933,7 +2933,7 @@
    "wrongWhy": {
     "0": "This answer results from dividing fixed cost by the sales price. 6,000 units of sales would only be enough to cover fixed costs, not the variable costs ($180,000 Fixed Cost ÷ $30 sales price).",
     "1": "This answer results from dividing fixed costs by the variable costs. The breakeven point in units is found by dividing fixed costs by the unit contribution margin.",
-    "3": "The correct answer is one of the answer choices. The breakeven point in units is found by dividing fixed costs by the unit contribution margin."
+    "3": "A correct choice is available, so this is not it. Fixed costs of $180,000 divided by the $4 unit contribution margin ($30 selling price − $26 variable cost) gives 45,000 units, which is one of the choices offered."
    }
   },
   {
@@ -2949,7 +2949,7 @@
    "wrongWhy": {
     "0": "This answer results from using the previous year's fixed costs to calculate the breakeven point for the coming year. The question says the fixed costs will increase by 10%.",
     "2": "This is last year's breakeven point.",
-    "3": "The correct answer is among the answer choices given."
+    "3": "A correct figure is among the choices, so this is not it. Fixed costs rise 10% to $115,500, and the new unit contribution margin is $6.00 ($9.00 price − $3.00 variable cost after the one-third increase). $115,500 ÷ $6.00 = 19,250 units, which is one of the choices offered."
    }
   },
   {
@@ -3289,7 +3289,7 @@
    }
   },
   {
-   "q": "A company sells a single product at $50 per unit. The company has budgeted to sell 600,000 units in the coming year. The company’s budgeted income statement for the coming year is as follows: Sales ($50 x 600,000) $30,000,000 Cost of sales 20,000,000 Gross profit $10,000,000 Selling, general and administrative expenses Operating income 7,500,000 $ 2,500,000 Cost of sales consists of 75% variable cost and 25% fixed cost. Sales, general, and administrative expenses are 40% variable cost and 60% fixed cost. Management wants to know how low sales volume can go without the company having an operating loss. Based on the budget information, what is the company’s breakeven point in units?",
+   "q": "A company sells a single product at $50 per unit. The company has budgeted to sell 600,000 units in the coming year. The company's budgeted income statement for the coming year is as follows.\n\nBudgeted income statement — Columns: | Amount\nSales ($50 × 600,000): | $30,000,000\nCost of sales: | 20,000,000\nGross profit: | $10,000,000\nSelling, general and administrative expenses: | 7,500,000\nOperating income: | $2,500,000\n\nCost of sales consists of 75% variable cost and 25% fixed cost. Sales, general, and administrative expenses are 40% variable cost and 60% fixed cost. Management wants to know how low sales volume can go without the company having an operating loss. Based on the budget information, what is the company's breakeven point in units?",
    "o": [
     "300,000 units",
     "449,910 units",
@@ -3401,7 +3401,7 @@
    }
   },
   {
-   "q": "A company manufactures a single product. Estimated cost data regarding this product and other information for the product and the company are as follows: Sales price per unit $40 Total variable production cost per unit $22 Sales commission (on sales) 5% Fixed costs and expenses: Manufacturing overhead $5,598,720 General and administrative $3,732,480 Effective income tax rate 40% The number of units the company must sell in the coming year in order to reach its breakeven point is:",
+   "q": "A company manufactures a single product. Estimated cost data regarding this product and other information for the product and the company are as follows.\n\nEstimated data — Columns: | Amount\nSales price per unit: | $40\nTotal variable production cost per unit: | $22\nSales commission (on sales): | 5%\nFixed costs and expenses — Manufacturing overhead: | $5,598,720\nFixed costs and expenses — General and administrative: | $3,732,480\nEffective income tax rate: | 40%\n\nThe number of units the company must sell in the coming year in order to reach its breakeven point is:",
    "o": [
     "388,800 units.",
     "518,400 units.",
@@ -3577,7 +3577,7 @@
    }
   },
   {
-   "q": "Gleason Co. has two products, a frozen dessert and ready-to-bake breakfast rolls, ready for introduction. However, plant capacity is limited, and only one product can be introduced at present. Therefore, Gleason has conducted a market study, at a cost of $26,000, to determine which product will be more profitable. The results of the study follow.\n\nSales of Desserts at $1.80/unit — Volume | Probability:\n250,000  |  0.30\n300,000  |  0.40\n350,000  |  0.20\n400,000  |  0.10\n\nSales of Rolls at $1.20/unit — Volume | Probability:\n200,000  |  0.20\n250,000  |  0.50\n300,000  |  0.20\n350,000  |  0.10\n\nThe costs associated with the two products have been estimated by Gleason's cost accounting department and are shown as follows.\n\nColumns: Dessert | Rolls\nIngredients per unit:  $0.40  |  $0.25\nDirect labor per unit:  $0.35  |  $0.30\nVariable overhead per unit:  $0.40  |  $0.20\nProduction tooling*:  $48,000  |  $25,000\nAdvertising:  $30,000  |  $20,000\n\n*Gleason treats production tooling as a current operating expense rather than capitalizing it as a fixed asset.\n\nThe cost incurred by Gleason for the market study is a(n)",
+   "q": "Gleason Co. has two products, a frozen dessert and ready-to-bake breakfast rolls, ready for introduction. However, plant capacity is limited, and only one product can be introduced at present. Therefore, Gleason has conducted a market study, at a cost of $26,000, to determine which product will be more profitable. The results of the study follow.\n\nSales of Desserts at $1.80/unit — Columns: Volume | Probability\n250,000  |  0.30\n300,000  |  0.40\n350,000  |  0.20\n400,000  |  0.10\n\nSales of Rolls at $1.20/unit — Columns: Volume | Probability\n200,000  |  0.20\n250,000  |  0.50\n300,000  |  0.20\n350,000  |  0.10\n\nThe costs associated with the two products have been estimated by Gleason's cost accounting department and are shown as follows.\n\nEstimated costs — Columns: Dessert | Rolls\nIngredients per unit:  $0.40  |  $0.25\nDirect labor per unit:  $0.35  |  $0.30\nVariable overhead per unit:  $0.40  |  $0.20\nProduction tooling*:  $48,000  |  $25,000\nAdvertising:  $30,000  |  $20,000\n\n*Gleason treats production tooling as a current operating expense rather than capitalizing it as a fixed asset.\n\nThe cost incurred by Gleason for the market study is a(n)",
    "o": [
     "Incremental cost.",
     "Prime cost.",
@@ -3585,7 +3585,7 @@
     "Opportunity cost."
    ],
    "a": 2,
-   "e": "The correct answer is: Sunk cost.. Review this topic in your study materials for a full explanation.",
+   "e": "Gleason has already paid the $26,000 for the market study, and no decision made now can recover it. A cost that has already been incurred and cannot be changed by any future choice is a sunk cost. Sunk costs are irrelevant to the decision at hand and are excluded from the comparison of the two products. Only the costs that differ between launching the dessert and launching the rolls — ingredients, direct labor, variable overhead, production tooling and advertising — belong in that analysis.",
    "wrongWhy": {
     "0": "Incremental costs are additional cost that result when production or some other factor is increased. The market study is not an incremental cost.",
     "1": "Prime costs include direct labor and direct material. The market study is not a cost for either direct labor or direct material.",
