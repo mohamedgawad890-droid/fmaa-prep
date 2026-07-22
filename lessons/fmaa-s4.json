@@ -10,7 +10,7 @@
   },
   {
    "t": "h",
-   "v": "Topic 1: Variable Costs"
+   "v": "1. Variable Costs"
   },
   {
    "t": "p",
@@ -45,7 +45,7 @@
   },
   {
    "t": "h",
-   "v": "Topic 2: Fixed Costs"
+   "v": "2. Fixed Costs"
   },
   {
    "t": "p",
@@ -80,7 +80,7 @@
   },
   {
    "t": "h",
-   "v": "Topic 3: Mixed Costs (Semi-Variable Costs)"
+   "v": "3. Mixed Costs (Semi-Variable Costs)"
   },
   {
    "t": "p",
@@ -97,8 +97,8 @@
   },
   {
    "t": "f",
-   "l": "Mixed Cost Formula (High-Low Method)",
-   "v": "Total Mixed Cost = Fixed Component + (Variable Rate × Activity Level)\nVariable Rate = (Cost at High Activity − Cost at Low Activity) ÷ (High Activity − Low Activity)\nFixed Component = Total Cost at either point − (Variable Rate × Activity at that point)"
+   "l": "Mixed Cost — Structure",
+   "v": "Total Mixed Cost = Fixed Component + (Variable Rate × Activity Level)\n\nThe fixed component is incurred even at zero activity, so total cost never falls to zero.\nThe variable component moves in proportion to the activity level."
   },
   {
    "t": "ex",
@@ -107,7 +107,7 @@
   },
   {
    "t": "h",
-   "v": "Step Costs (Semi-Fixed Costs)"
+   "v": "4. Step Costs (Semi-Fixed Costs)"
   },
   {
    "t": "p",
@@ -164,64 +164,7 @@
   },
   {
    "t": "h",
-   "v": "Estimating Mixed Costs — The High-Low Method"
-  },
-  {
-   "t": "p",
-   "v": "When a cost is mixed, management needs to separate its fixed and variable components to plan and control it. The high-low method is the simplest technique: it uses only the highest and lowest activity points to estimate the variable rate per unit and the fixed component. It is quick and easy but ignores all data points in between — so it is less accurate than regression analysis. Use it when you need a fast estimate."
-  },
-  {
-   "t": "def",
-   "term": "High-Low Method",
-   "v": "A simple cost-estimation technique that uses only the highest and lowest activity levels within a data set to split a mixed cost into its fixed and variable components. Variable rate is estimated from the change in cost over the change in activity between the two extreme points; fixed component is the remainder."
-  },
-  {
-   "t": "ex",
-   "v": "Monthly data on utilities cost and machine hours:",
-   "l": "High-Low Method — Utilities Example"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Month",
-    "Machine Hours",
-    "Utilities Cost"
-   ],
-   "r": [
-    [
-     "Jan",
-     "2,000",
-     "$3,000"
-    ],
-    [
-     "Feb",
-     "1,500",
-     "$2,500  ← Low"
-    ],
-    [
-     "Mar",
-     "3,000",
-     "$4,000  ← High"
-    ],
-    [
-     "Apr",
-     "2,500",
-     "$3,500"
-    ]
-   ]
-  },
-  {
-   "t": "ex",
-   "v": "Step 1: Variable rate = (High Cost − Low Cost) ÷ (High Activity − Low Activity)\n                     = ($4,000 − $2,500) ÷ (3,000 − 1,500)\n                     = $1,500 ÷ 1,500 hours\n                     = $1.00 per machine hour\n\nStep 2: Fixed component (use either point — result should match):\n  Using High: $4,000 − ($1.00 × 3,000) = $4,000 − $3,000 = $1,000 fixed\n  Using Low : $2,500 − ($1.00 × 1,500) = $2,500 − $1,500 = $1,000 fixed  ✓\n\nCost formula: Total Utilities = $1,000 + ($1.00 × Machine Hours)\nPredict April at 2,500 hours: $1,000 + $2,500 = $3,500  ✓ (matches actual)",
-   "l": "High-Low — Solution"
-  },
-  {
-   "t": "tip",
-   "v": "The high-low method only uses TWO data points and ignores everything else — including outliers that may distort the answer. If the highest or lowest month is unusual (a shutdown, a rush order), the estimate will be wrong. When accuracy matters, use regression analysis instead. On the exam, always identify the highest and lowest ACTIVITY levels, not the highest and lowest costs."
-  },
-  {
-   "t": "h",
-   "v": "Topic 4: Cost Measurement Methods"
+   "v": "5. Cost Measurement Methods"
   },
   {
    "t": "p",
@@ -292,8 +235,119 @@
   },
   {
    "t": "ex",
-   "l": "Standard vs Normal vs Actual — Same Job, Three Answers",
-   "v": "Job #100 produces 1,000 units. Overhead is applied on machine hours.\n\nDirect materials — standard: $10/kg, 2 kg per unit. Actual: $11/kg, 2.1 kg per unit.\nOverhead — predetermined rate: $20/hr. Actual rate: $24/hr.\nStandard machine hours: 0.5/unit (500 hrs). Actual machine hours used: 550.\n\nSTANDARD COSTING — standard price x standard qty allowed:\nMaterials = 1,000 x 2 kg x $10 = $20,000\nOverhead  = 500 std hrs x $20 predetermined = $10,000\nTotal = $30,000\n\nNORMAL COSTING — actual price x actual qty, but predetermined OH rate:\nMaterials = 1,000 x 2.1 kg x $11 = $23,100\nOverhead  = 550 actual hrs x $20 predetermined = $11,000\nTotal = $34,100\n\nACTUAL COSTING — actual price x actual qty, and actual OH rate:\nMaterials = 1,000 x 2.1 kg x $11 = $23,100\nOverhead  = 550 actual hrs x $24 actual = $13,200\nTotal = $36,300\n\nThe only difference between Normal and Actual is the overhead rate.\nThe only difference between Standard and Normal is using standard vs actual direct costs."
+   "l": "Cost Measurement Methods — The Scenario",
+   "v": "Larkspur Instruments manufactures a single product, a bench scale. Overhead is applied\non the basis of direct labour hours (DLH), and the direct labour standard is 2 DLH per scale.\nFor 20X4 the company PLANNED to manufacture 20,000 scales.\n\nPlanned (standard) cost per scale:\n  Direct materials   $45   =  5 units of DM @ $9 per unit\n  Direct labour      $30   =  2 DLH @ $15 per DLH\n  Variable overhead  $10   =  2 DLH @ $5 per DLH    (budget $200,000)\n  Fixed overhead     $13   =  2 DLH @ $6.50 per DLH (budget $260,000)\n\nACTUAL production for 20X4 was 21,000 scales, and actual costs incurred were:\n  Direct materials   $882,000   =  5.25 units of DM per scale @ $8 per unit\n  Direct labour      $617,400   =  2.1 DLH per scale @ $14 per DLH\n  Variable overhead  $224,910\n  Fixed overhead     $264,600"
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Input",
+    "Standard",
+    "Actual"
+   ],
+   "r": [
+    [
+     "Direct materials — quantity",
+     "5 units / scale",
+     "5.25 units / scale"
+    ],
+    [
+     "Direct materials — price",
+     "$9 per unit",
+     "$8 per unit"
+    ],
+    [
+     "Direct labour — quantity",
+     "2 DLH / scale",
+     "2.1 DLH / scale"
+    ],
+    [
+     "Direct labour — rate",
+     "$15 per DLH",
+     "$14 per DLH"
+    ],
+    [
+     "Variable OH rate",
+     "$5.00 per DLH",
+     "$5.10 per DLH"
+    ],
+    [
+     "Fixed OH rate",
+     "$6.50 per DLH",
+     "$6.00 per DLH"
+    ],
+    [
+     "Production volume",
+     "20,000 scales",
+     "21,000 scales"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Method 1 — Standard Costing",
+   "v": "Standard price x standard quantity ALLOWED for the actual output (21,000 scales).\nNotice that neither the 5.25 units nor the 2.1 DLH actually used appears anywhere.\n\nDirect materials:  $9 std cost/unit x 5 units allowed/scale x 21,000  =  $945,000\nDirect labour:     $15 std rate/DLH x 2 DLH allowed/scale x 21,000    =  $630,000\nVariable overhead: $5 predet. rate/DLH x 2 DLH allowed/scale x 21,000 =  $210,000\nFixed overhead:    $6.50 predet. rate/DLH x 2 DLH allowed x 21,000    =  $273,000\n                                                              Total  = $2,058,000\n\nCost applied PER UNIT:\n  Direct materials  ($9 std cost/unit x 5 units allowed)    = $45.00\n  Direct labour     ($15 std rate/DLH x 2 DLH allowed)      =  30.00\n  Variable overhead ($5 predet. rate/DLH x 2 DLH allowed)   =  10.00\n  Fixed overhead    ($6.50 predet. rate/DLH x 2 DLH allowed)=  13.00\n  Total cost per unit                                       = $98.00"
+  },
+  {
+   "t": "ex",
+   "l": "Method 2 — Normal Costing",
+   "v": "ACTUAL direct materials and ACTUAL direct labour, but overhead still applied at the\nPREDETERMINED rate — multiplied by the actual hours used, not the hours allowed.\n\nDirect materials:  $8 actual rate/unit x 5.25 units used/scale x 21,000  =  $882,000\nDirect labour:     $14 actual rate/DLH x 2.1 DLH used/scale x 21,000     =  $617,400\nVariable overhead: $5 predet. rate/DLH x 2.1 DLH used/scale x 21,000     =  $220,500\nFixed overhead:    $6.50 predet. rate/DLH x 2.1 DLH used/scale x 21,000  =  $286,650\n                                                                 Total  = $2,006,550\n\nCost applied PER UNIT:\n  Direct materials  ($8 actual cost/unit x 5.25 units used)      = $42.00\n  Direct labour     ($14 actual rate/DLH x 2.1 DLH used)         =  29.40\n  Variable overhead ($5 predet. rate/DLH x 2.1 DLH used)         =  10.50\n  Fixed overhead    ($6.50 predet. rate/DLH x 2.1 DLH used)      =  13.65\n  Total cost per unit                                            = $95.55"
+  },
+  {
+   "t": "ex",
+   "l": "Method 3 — Actual Costing",
+   "v": "Everything actual — including the overhead rates, which cannot be known until the\nperiod has closed and total overhead has been divided by the actual hours worked.\n\nDeriving the actual overhead rates:\n  Variable OH: $224,910 / 21,000 scales = $10.71 per scale / 2.1 DLH = $5.10 per DLH\n  Fixed OH:    $264,600 / 21,000 scales = $12.60 per scale / 2.1 DLH = $6.00 per DLH\n\nDirect materials:  $8 actual rate/unit x 5.25 units used/scale x 21,000  =  $882,000\nDirect labour:     $14 actual rate/DLH x 2.1 DLH used/scale x 21,000     =  $617,400\nVariable overhead: $5.10 actual rate/DLH x 2.1 DLH used/scale x 21,000   =  $224,910\nFixed overhead:    $6.00 actual rate/DLH x 2.1 DLH used/scale x 21,000   =  $264,600\n                                                                 Total  = $1,988,910\n\nCost applied PER UNIT:\n  Direct materials  ($8 actual cost/unit x 5.25 units used)      = $42.00\n  Direct labour     ($14 actual rate/DLH x 2.1 DLH used)         =  29.40\n  Variable overhead ($5.10 actual rate/DLH x 2.1 DLH used)       =  10.71\n  Fixed overhead    ($6.00 actual rate/DLH x 2.1 DLH used)       =  12.60\n  Total cost per unit                                            = $94.71"
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Cost element",
+    "Standard",
+    "Normal",
+    "Actual"
+   ],
+   "r": [
+    [
+     "Direct materials",
+     "$945,000",
+     "$882,000",
+     "$882,000"
+    ],
+    [
+     "Direct labour",
+     "$630,000",
+     "$617,400",
+     "$617,400"
+    ],
+    [
+     "Variable overhead",
+     "$210,000",
+     "$220,500",
+     "$224,910"
+    ],
+    [
+     "Fixed overhead",
+     "$273,000",
+     "$286,650",
+     "$264,600"
+    ],
+    [
+     "Total cost applied",
+     "$2,058,000",
+     "$2,006,550",
+     "$1,988,910"
+    ],
+    [
+     "Cost PER UNIT",
+     "$98.00",
+     "$95.55",
+     "$94.71"
+    ]
+   ]
+  },
+  {
+   "t": "tip",
+   "v": "Read the table by column pairs and the whole topic falls into place. Standard vs Normal differ ONLY in the direct costs — standard uses the quantity and price ALLOWED (5 units, $9, 2 DLH, $15); normal uses what was actually used and paid (5.25 units, $8, 2.1 DLH, $14). Normal vs Actual differ ONLY in the overhead RATE — $5.00 and $6.50 predetermined versus $5.10 and $6.00 actual. Standard costing is the only method that never touches the actual input quantities, which is exactly why it is the only one that produces variances."
   },
   {
    "t": "tip",
@@ -301,11 +355,11 @@
   },
   {
    "t": "h",
-   "v": "Topic 5: Variable vs Absorption Costing"
+   "v": "6. Variable vs Absorption Costing"
   },
   {
    "t": "p",
-   "v": "Variable costing and absorption costing are two methods of inventory costing. The ONLY difference between them is how fixed factory overhead is treated. Everything else — variable manufacturing costs, selling and admin costs — is handled the same way."
+   "v": "Variable costing and absorption costing are two methods of inventory costing. There are only TWO differences between them: (1) how fixed factory overhead is treated, and (2) how the income statement is presented. Every other cost — variable manufacturing costs, selling and administrative costs — is handled the same way under both methods, although it may be reported on a different line."
   },
   {
    "t": "def",
@@ -359,11 +413,38 @@
   },
   {
    "t": "tip",
-   "v": "The income difference between absorption and variable costing equals: (Units Produced − Units Sold) × Fixed OH per unit. When production exceeds sales, absorption income is HIGHER. When sales exceed production, absorption income is LOWER."
+   "v": "When production exceeds sales, absorption income is HIGHER than variable costing income, because part of the period's fixed factory overhead is held back in ending inventory instead of being expensed. When sales exceed production, absorption income is LOWER, because fixed overhead carried in from earlier periods is released into cost of goods sold. When production equals sales, the two incomes are identical."
   },
   {
    "t": "h",
-   "v": "Topic 6: Process Costing vs Job Order Costing"
+   "v": "7. Income Statement Presentation — Absorption vs Variable"
+  },
+  {
+   "t": "p",
+   "v": "The second difference between the two methods is how the income statement is laid out. Absorption costing follows the GAAP format: sales less cost of goods sold gives gross profit, and operating expenses are deducted after that. Variable costing splits every cost by BEHAVIOUR instead: all variable costs (manufacturing and non-manufacturing) come off first to give contribution margin, and all fixed costs come off in one block below it."
+  },
+  {
+   "t": "f",
+   "l": "Absorption Costing — Income Statement Format",
+   "v": "Sales revenue\n− Cost of goods sold  (variable manufacturing + FIXED manufacturing overhead)\n= Gross profit\n− Operating expenses  (variable selling & admin + fixed selling & admin)\n= Operating income"
+  },
+  {
+   "t": "f",
+   "l": "Variable Costing — Income Statement Format",
+   "v": "Sales revenue\n− Variable costs  (variable manufacturing + variable selling & admin)\n= Contribution margin\n− Fixed costs  (FIXED manufacturing overhead + fixed selling & admin)\n= Operating income"
+  },
+  {
+   "t": "ex",
+   "l": "Same Facts as Above, Shown as Two Statements",
+   "v": "Produced 12,000 units, sold 10,000 units at $50. No opening inventory.\nVariable manufacturing cost $20/unit. Fixed manufacturing overhead $120,000.\nVariable selling $3/unit. Fixed selling & admin $60,000.\n\nFixed OH per unit under absorption = $120,000 / 12,000 produced = $10/unit\nAbsorption product cost = $20 variable + $10 fixed = $30/unit\n\nABSORPTION COSTING\n  Sales (10,000 x $50)                              $500,000\n  Cost of goods sold (10,000 x $30)                 (300,000)\n  Gross profit                                       200,000\n  Selling & admin (10,000 x $3 + $60,000)            (90,000)\n  Operating income                                  $110,000\n\nVARIABLE COSTING\n  Sales (10,000 x $50)                              $500,000\n  Variable costs (10,000 x ($20 + $3))              (230,000)\n  Contribution margin                                270,000\n  Fixed costs ($120,000 + $60,000)                  (180,000)\n  Operating income                                   $90,000\n\nReconciliation: 2,000 unsold units each carry $10 of fixed overhead into ending\ninventory under absorption. That $20,000 is held on the balance sheet instead of\nbeing expensed — which is exactly the $110,000 − $90,000 gap."
+  },
+  {
+   "t": "tip",
+   "v": "Every line except cost of goods sold and the fixed-cost block is identical between the two statements. Absorption groups costs by FUNCTION (manufacturing vs selling), variable costing groups them by BEHAVIOUR (variable vs fixed). Only variable costing produces a contribution margin line — which is why CVP analysis and short-run decisions always use the variable costing format."
+  },
+  {
+   "t": "h",
+   "v": "8. Process Costing vs Job Order Costing"
   },
   {
    "t": "p",
@@ -422,8 +503,9 @@
    "v": [
     "Variable costs: total changes with activity, per-unit is constant. Fixed costs: total is constant, per-unit changes inversely with activity.",
     "Standard costing = predetermined rate × standard input for actual output; used for both process and job order. Normal costing = actual DM/DL + predetermined OH; used mainly in job order.",
+    "Standard costing uses the price and quantity ALLOWED for actual output. Normal costing uses actual DM and DL with a predetermined OH rate applied to ACTUAL hours. Actual costing uses actual rates throughout.",
     "Predetermined Overhead Rate = Budgeted Manufacturing Overhead ÷ Budgeted Activity Level. Set at the start of the year using budgeted figures only.",
-    "Absorption costing (GAAP) puts fixed OH into product cost. Variable costing (internal only) expenses it as a period cost. Income difference = (Units Produced − Units Sold) × Fixed OH per unit.",
+    "Absorption costing (GAAP) puts fixed OH into product cost. Variable costing (internal only) expenses it as a period cost. The two differ in fixed OH treatment AND in income statement presentation; when production exceeds sales, absorption income is higher.",
     "Process costing = many identical units, costs accumulated by department. Job order costing = distinct units, costs accumulated by job or project."
    ]
   }
@@ -448,7 +530,7 @@
   },
   {
    "t": "h",
-   "v": "Three Categories of Production Costs"
+   "v": "1. Three Categories of Production Costs"
   },
   {
    "t": "b",
@@ -459,8 +541,13 @@
    ]
   },
   {
+   "t": "ex",
+   "l": "Sorting One Month's Costs Into the Three Categories",
+   "v": "A furniture workshop produced 2,000 chairs in March and incurred the following:\n\n  Oak timber traced to the chairs            $70,000\n  Wages of the carpenters who built them     $48,000\n  Wood glue and sandpaper                     $3,000\n  Factory supervisor's salary                $12,000\n  Factory rent                               $20,000\n  Depreciation on the saws                    $7,000\n  Sales office rent                           $9,000\n\nDIRECT MATERIALS  = $70,000                       -> $35.00 per chair\nDIRECT LABOUR     = $48,000                       -> $24.00 per chair\nMANUFACTURING OH  = $3,000 + $12,000 + $20,000 + $7,000\n                  = $42,000                       -> $21.00 per chair\n  (glue and sandpaper = indirect materials; supervisor = indirect labour;\n   rent and depreciation = other factory costs)\n\nTotal product cost = $160,000 -> $80.00 per chair\n\nThe $9,000 sales office rent is NOT a product cost. It is a period cost, expensed\nin March regardless of how many chairs were sold. Putting it into the $80 would\noverstate inventory and understate this period's expense."
+  },
+  {
    "t": "h",
-   "v": "Variable, Fixed, and Mixed Overheads"
+   "v": "2. Variable, Fixed and Mixed Overhead"
   },
   {
    "t": "tbl",
@@ -488,8 +575,13 @@
    ]
   },
   {
+   "t": "ex",
+   "l": "The Same Overhead Pool at Two Volumes",
+   "v": "A plant budgets three overhead items. Compare them at 4,000 and 8,000 machine hours:\n\n  Indirect materials (variable)  $2.00 per machine hour\n  Factory rent (fixed)           $40,000 per month\n  Electricity (mixed)            $6,000 fixed + $1.50 per machine hour\n\nAt 4,000 machine hours:\n  Indirect materials  4,000 x $2.00            = $ 8,000\n  Factory rent                                 =  40,000\n  Electricity  $6,000 + (4,000 x $1.50)        =  12,000\n  Total overhead                               = $60,000  -> $15.00 per hour\n\nAt 8,000 machine hours:\n  Indirect materials  8,000 x $2.00            = $16,000\n  Factory rent                                 =  40,000\n  Electricity  $6,000 + (8,000 x $1.50)        =  18,000\n  Total overhead                               = $74,000  -> $9.25 per hour\n\nHours doubled but total overhead rose only 23%, because the $40,000 rent and the\n$6,000 electricity base did not move at all. That is why overhead PER HOUR fell from\n$15.00 to $9.25 — and why a rate built at one volume misprices output at another."
+  },
+  {
    "t": "h",
-   "v": "Traditional Overhead Allocation — Plant-Wide vs Departmental"
+   "v": "3. Traditional Allocation — Plant-Wide vs Departmental"
   },
   {
    "t": "p",
@@ -522,12 +614,12 @@
   },
   {
    "t": "ex",
-   "l": "Departmental Allocation — Example",
-   "v": "Dept A: high machine use, low labor → allocate OH by machine hours\nDept B: high labor use, low machines → allocate OH by direct labor hours\nDept C: final assembly → allocate OH by number of parts\nDept D: painting → allocate OH by painted surface area\n\nUsing different bases per department gives more accurate product costs than a single plant-wide rate."
+   "l": "Plant-Wide Rate vs Departmental Rates — Same Product, Two Answers",
+   "v": "A plant has two departments and total budgeted overhead of $600,000.\n\n  Machining  — budgeted overhead $450,000, budgeted 15,000 machine hours\n  Assembly   — budgeted overhead $150,000, budgeted 25,000 direct labour hours\n  Plant totals: 15,000 machine hours and 25,000 DLH\n\nPLANT-WIDE RATE (single pool, allocated on direct labour hours):\n  $600,000 / 25,000 DLH = $24.00 per DLH\n\nDEPARTMENTAL RATES (each department gets the base that drives its own costs):\n  Machining: $450,000 / 15,000 machine hours = $30.00 per machine hour\n  Assembly:  $150,000 / 25,000 DLH           = $ 6.00 per DLH\n\nNow cost Job 400, which uses 20 machine hours in Machining and 4 DLH in Assembly:\n\n  Plant-wide:     4 DLH x $24.00                        = $ 96\n  Departmental:  (20 mach hrs x $30) + (4 DLH x $6)     = $624\n\nThe plant-wide rate charges Job 400 just $96 because it only ever looks at labour\nhours — and Job 400 barely uses any. But the job consumed $600 of machine capacity.\nThe single base cannot see it, so that cost is silently pushed onto labour-heavy jobs."
   },
   {
    "t": "h",
-   "v": "Calculating the Predetermined Overhead Rate"
+   "v": "4. Calculating the Predetermined Overhead Rate"
   },
   {
    "t": "p",
@@ -554,7 +646,7 @@
   },
   {
    "t": "h",
-   "v": "Activity-Based Costing (ABC)"
+   "v": "5. Activity-Based Costing (ABC)"
   },
   {
    "t": "p",
@@ -585,12 +677,50 @@
    "v": "A company makes two products. Total overhead = $300,000.\nProduct X: 9,000 units, 1,000 direct labor hours, 10 setups, 50 inspections.\nProduct Y: 1,000 units, 1,000 direct labor hours, 90 setups, 450 inspections.\n\nPLANT-WIDE RATE (based on direct labor hours):\nRate = $300,000 / 2,000 total DLH = $150 per DLH\nProduct X = 1,000 hrs x $150 = $150,000 -> per unit = $150,000/9,000 = $16.67\nProduct Y = 1,000 hrs x $150 = $150,000 -> per unit = $150,000/1,000 = $150.00\n\nACTIVITY-BASED COSTING (two cost pools):\nSetup pool $200,000 / 100 setups = $2,000 per setup\nInspection pool $100,000 / 500 inspections = $200 per inspection\n\nProduct X = (10 x $2,000) + (50 x $200) = $20,000 + $10,000 = $30,000\n            -> per unit = $30,000 / 9,000 = $3.33\nProduct Y = (90 x $2,000) + (450 x $200) = $180,000 + $90,000 = $270,000\n            -> per unit = $270,000 / 1,000 = $270.00\n\nThe plant-wide rate OVERCOSTS the simple high-volume product (X: $16.67 vs $3.33)\nand UNDERCOSTS the complex low-volume product (Y: $150 vs $270). This is exactly\nthe cost distortion ABC is designed to eliminate."
   },
   {
+   "t": "h",
+   "v": "6. Over-costing and Under-costing — Why ABC Matters"
+  },
+  {
+   "t": "p",
+   "v": "When one plant-wide base is used, products that consume a lot of the base absorb overhead they did not cause, while products that consume little of the base escape overhead they did cause. The first group is OVER-COSTED, the second UNDER-COSTED. The two errors are linked: the total overhead allocated is always correct, so every dollar wrongly loaded onto one product is a dollar missing from another."
+  },
+  {
+   "t": "def",
+   "term": "Over-costed Product",
+   "v": "A product assigned more overhead than the activities it actually consumed. Its reported margin looks too thin, which can lead management to raise its price, cut support for it, or drop a product line that was in fact profitable."
+  },
+  {
+   "t": "def",
+   "term": "Under-costed Product",
+   "v": "A product assigned less overhead than the activities it actually consumed. Its reported margin looks too healthy, which can lead management to price it too low, chase volume in it, or expand a line that is quietly destroying profit."
+  },
+  {
+   "t": "b",
+   "v": [
+    "High-volume, simple products tend to be OVER-costed under a plant-wide rate — they consume a lot of the base (labour or machine hours) but few of the costly activities",
+    "Low-volume, complex products tend to be UNDER-costed — they trigger many setups, inspections and special handling while consuming little of the base",
+    "The distortion grows as products differ more in volume, batch size or complexity",
+    "When traditionally allocated costs are used to control spending, managers often attack the over-costed products — when the real resource drain sits in the under-costed ones",
+    "ABC reduces the distortion by giving each pool its own driver, so overhead follows the activity that actually caused it"
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Measuring the Distortion — the Two Errors Always Offset",
+   "v": "Take the two products from the ABC example above and put the two answers side by side:\n\n                        Plant-wide    ABC        Error\n  Product X (9,000 units, simple, high volume)\n     per unit           $16.67       $3.33      OVER-costed by $13.34\n     total overhead    $150,000     $30,000     $120,000 too much\n\n  Product Y (1,000 units, complex, low volume)\n     per unit          $150.00     $270.00      UNDER-costed by $120.00\n     total overhead    $150,000    $270,000     $120,000 too little\n\n  Total allocated      $300,000    $300,000     correct under BOTH methods\n\nThe plant-wide rate did not lose any overhead — it moved $120,000 off Product Y and\nloaded it onto Product X. Acting on those numbers, management would raise X's price\nor drop it (it looks barely profitable) while pushing volume in Y (it looks like the\nstar). Both decisions destroy profit, and both are caused purely by the allocation base."
+  },
+  {
+   "t": "tip",
+   "v": "The exam usually frames this as a direction question: 'under a plant-wide rate, which product is under-costed?' The answer is almost always the low-volume, high-complexity product. Work it from the activity data, not the unit volumes — the product with many setups or inspections per unit is the one the single base fails to charge."
+  },
+  {
    "t": "key",
    "v": [
     "Product costs under GAAP = Direct Materials + Direct Labor + Manufacturing Overhead. Everything else is a period cost.",
     "Predetermined OH Rate uses BUDGETED overhead in the numerator and BUDGETED activity in the denominator — never mix actual with budgeted.",
     "Under-applied OH = actual > applied. Over-applied = actual < applied. Close to COGS if immaterial; prorate among COGS, WIP, and FG if material.",
     "Departmental allocation is more accurate than plant-wide allocation when different departments consume overhead differently.",
+    "A plant-wide rate OVER-costs high-volume simple products and UNDER-costs low-volume complex ones. The total allocated is always right — the error is in how it is split.",
     "ABC is more accurate but more expensive. Use it when products differ significantly in volume, complexity, or the activities they consume."
    ]
   }
@@ -610,7 +740,7 @@
   },
   {
    "t": "h",
-   "v": "Flexible Budget Variance vs Sales Volume Variance"
+   "v": "1. Flexible Budget Variance vs Sales Volume Variance"
   },
   {
    "t": "p",
@@ -699,7 +829,95 @@
   },
   {
    "t": "h",
-   "v": "Direct Materials Variances"
+   "v": "2. The Flexible Budget Variance Report"
+  },
+  {
+   "t": "p",
+   "v": "In practice the three columns are never shown on their own — they are laid out with the two variance columns sitting between them, so the report reads left to right as a single bridge from actual results all the way back to the original plan. This is the layout the exam presents, and knowing which column subtracts from which is most of the battle."
+  },
+  {
+   "t": "f",
+   "l": "The Five-Column Layout",
+   "v": "Actual  |  Flexible Budget  |  Flexible  |  Sales Volume  |  Static\nResults |    Variances      |  Budget    |   Variances    |  Budget\n\nFlexible Budget Variance = Actual Results − Flexible Budget\nSales Volume Variance    = Flexible Budget − Static Budget\nTotal Static Budget Variance = Actual Results − Static Budget\n\nThe flexible budget uses BUDGETED prices and rates applied to ACTUAL volume.\nThe static budget uses BUDGETED prices and rates applied to BUDGETED volume."
+  },
+  {
+   "t": "ex",
+   "l": "Building the Report — Same Facts as Above",
+   "v": "Static budget prepared for 24,000 units; actual sales were 20,000 units.\nThe flexible budget re-prices the plan at 20,000 units: revenue $120/unit,\nvariable costs $88/unit, fixed costs $552,000 (unchanged by volume)."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "",
+    "Actual",
+    "FB Variance",
+    "Flexible",
+    "SV Variance",
+    "Static"
+   ],
+   "r": [
+    [
+     "Units sold",
+     "20,000",
+     "—",
+     "20,000",
+     "4,000 U",
+     "24,000"
+    ],
+    [
+     "Revenues",
+     "$2,500,000",
+     "$100,000 F",
+     "$2,400,000",
+     "$480,000 U",
+     "$2,880,000"
+    ],
+    [
+     "Variable costs",
+     "$1,900,200",
+     "$140,200 U",
+     "$1,760,000",
+     "$352,000 F",
+     "$2,112,000"
+    ],
+    [
+     "Contribution margin",
+     "$599,800",
+     "$40,200 U",
+     "$640,000",
+     "$128,000 U",
+     "$768,000"
+    ],
+    [
+     "Fixed costs",
+     "$570,000",
+     "$18,000 U",
+     "$552,000",
+     "—",
+     "$552,000"
+    ],
+    [
+     "Operating income",
+     "$29,800",
+     "$58,200 U",
+     "$88,000",
+     "$128,000 U",
+     "$216,000"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Reading the Report",
+   "v": "Total static budget variance = $29,800 − $216,000 = $186,200 UNFAVOURABLE\n  split into\nFlexible budget variance = $29,800 − $88,000  = $ 58,200 UNFAVOURABLE\nSales volume variance    = $88,000 − $216,000 = $128,000 UNFAVOURABLE\nCheck: $58,200 + $128,000 = $186,200  ✓\n\nTwo separate stories in one report:\n  The SALES VOLUME variance ($128,000 U) says the company sold 4,000 fewer units\n  than planned. That is a marketing and demand problem — nothing to do with cost\n  control, because every price and rate in that column is the budgeted one.\n\n  The FLEXIBLE BUDGET variance ($58,200 U) says that even at the 20,000 units it\n  did sell, the company underperformed: it earned $100,000 more revenue than the\n  flexible budget allowed (F), but overspent variable costs by $140,200 (U) and\n  fixed costs by $18,000 (U). That is the operations story."
+  },
+  {
+   "t": "tip",
+   "v": "Column order matters more than the arithmetic. Actual and Flexible sit side by side because both reflect the ACTUAL volume — the only thing that differs between them is prices, rates and efficiency, which is what management controlled. Flexible and Static sit side by side because both use BUDGETED prices — the only thing that differs is volume. Fixed costs show no sales volume variance at all, since the flexible and static amounts for a fixed cost are by definition the same."
+  },
+  {
+   "t": "h",
+   "v": "3. Direct Materials Variances"
   },
   {
    "t": "p",
@@ -749,7 +967,7 @@
   },
   {
    "t": "h",
-   "v": "Direct Labor Variances"
+   "v": "4. Direct Labour Variances"
   },
   {
    "t": "p",
@@ -786,7 +1004,7 @@
   },
   {
    "t": "h",
-   "v": "Variable Overhead Variances"
+   "v": "5. Variable Overhead Variances"
   },
   {
    "t": "p",
@@ -841,7 +1059,7 @@
   },
   {
    "t": "h",
-   "v": "Fixed Overhead Variances"
+   "v": "6. Fixed Overhead Variances"
   },
   {
    "t": "p",
@@ -923,7 +1141,7 @@
   },
   {
    "t": "h",
-   "v": "Customer and Product Profitability Analysis"
+   "v": "1. Customer and Product Profitability Analysis"
   },
   {
    "t": "p",
@@ -1023,8 +1241,17 @@
    "l": "Customer Profit"
   },
   {
+   "t": "p",
+   "v": "Customer profitability data has a second use beyond re-pricing and service levels: it tells the company who to go after in the first place. Once the profitable customers have been identified, their shared characteristics — size, industry, order pattern, channel — become the profile the marketing effort targets. Just as usefully, it identifies the customer types the company should stop spending money to attract."
+  },
+  {
+   "t": "ex",
+   "l": "Using the Analysis to Aim the Marketing Budget",
+   "v": "Extending the two customers above, the company profiles its whole customer base:\n\n  Profile A — large, frequent, small-quantity orders (like Customer A)\n      average profit 4% of sales, 62 customers\n  Profile B — moderate size, few large orders (like Customer B)\n      average profit 28% of sales, 18 customers\n\nProfile B customers generate roughly seven times the profit per sales dollar.\nA marketing budget aimed at attracting more Profile B customers — and a service\npolicy that nudges Profile A customers toward larger, less frequent orders — is\nworth far more than an across-the-board push for revenue growth.\n\nBanks do this routinely: monthly account analysis shows each business customer's\naverage balances, transaction counts and services used, which sets both the fee\nstructure for that customer and the profile the bank markets to."
+  },
+  {
    "t": "h",
-   "v": "Return on Investment (ROI)"
+   "v": "2. Return on Investment (ROI)"
   },
   {
    "t": "p",
@@ -1038,7 +1265,7 @@
   {
    "t": "f",
    "l": "ROI Formula",
-   "v": "ROI = Operating Income of Business Unit ÷ Assets of Business Unit\n\nExpanded: ROI = (Income ÷ Sales) × (Sales ÷ Assets)\n             = Profit Margin × Asset Turnover"
+   "v": "ROI = Operating Income of Business Unit ÷ Assets of Business Unit"
   },
   {
    "t": "ex",
@@ -1051,24 +1278,38 @@
   },
   {
    "t": "h",
-   "v": "The ROI vs RI Conflict — Goal Incongruence"
+   "v": "3. Interpreting ROI — Evaluation Tool vs Decision Tool"
   },
   {
    "t": "p",
-   "v": "The fundamental weakness of ROI is that it can create goal incongruence — a situation where what is good for the division manager is NOT good for the company. A manager evaluated on ROI will reject a project if the project's ROI is below their current division ROI — even if the project's ROI exceeds the company's required rate of return (hurdle rate). This means the company loses a profitable investment because of how the manager is evaluated."
+   "v": "ROI is used in two quite different ways, and the exam expects you to tell them apart. As an EVALUATION tool it looks backwards, comparing a segment's return against other segments, against the company as a whole, or against its own prior years. As a DECISION tool it looks forwards, comparing a proposed project's expected ROI against the required rate of return to judge whether the investment is worth making."
+  },
+  {
+   "t": "b",
+   "v": [
+    "As an evaluation tool: management must first be satisfied that ROI is the right measure for the company's goals, and that the ROI target set for a segment reflects that segment's own market and business — a mature division and a start-up division should not be held to the same number",
+    "As a decision tool: compare the project's ROI to the required rate of return (hurdle rate). Above the hurdle, the project is acceptable to the company; below it, it is not",
+    "Capital investment decisions involve more than ROI alone, but a project's ROI is a legitimate input to the decision",
+    "The two uses can pull in opposite directions — a project can clear the company hurdle and still be rejected by a manager whose own evaluation is based on divisional ROI"
+   ]
+  },
+  {
+   "t": "def",
+   "term": "Required Rate of Return (Hurdle Rate)",
+   "v": "The minimum rate of return a segment or project must earn to justify the resources invested in it. Senior management sets it. A company's weighted average cost of capital (WACC) is generally its minimum required rate, but management may set a higher rate for a segment or project whose business risk is judged greater than the firm's overall risk."
   },
   {
    "t": "ex",
-   "l": "ROI vs RI Conflict — Classic Exam Scenario",
-   "v": "Company required rate of return (hurdle rate): 10%\nDivision A: operating income $600,000 ÷ assets $4,000,000 → current ROI = 15%\n\nNew project available (the same one from the ROI and RI examples above):\n  Additional operating income: $80,000\n  Additional investment required: $600,000\n  Project ROI = $80,000 ÷ $600,000 = 13.3%\n\nROI ANALYSIS (Manager's perspective):\n  If accepted: New ROI = ($600,000 + $80,000) ÷ ($4,000,000 + $600,000)\n             = $680,000 ÷ $4,600,000 = 14.8%\n  Old ROI was 15% → New ROI is LOWER → Manager REJECTS the project\n\nRI ANALYSIS (Company's perspective):\n  Project RI = $80,000 − (10% × $600,000) = $80,000 − $60,000 = +$20,000\n  Positive RI → the project earns above the 10% hurdle → Company WANTS it\n\nBoth measures are correct arithmetic — they just answer different questions.\nROI asks \"does this beat my current average?\" (13.3% < 15% → no).\nRI asks \"does this beat the company's hurdle?\" (13.3% > 10% → yes).\n\nConclusion: ROI-based evaluation causes the manager to reject a value-creating\nproject. This is the classic goal-congruence failure, and RI is the fix."
+   "l": "The Same Project Judged Two Ways",
+   "v": "Company hurdle rate: 10%.\nDivision A currently earns $600,000 on $4,000,000 of assets -> ROI = 15%.\nA new project would earn $80,000 on $600,000 of assets -> project ROI = 13.3%.\n\nAS A DECISION TOOL (company's question):\n  Is 13.3% above the 10% hurdle?  Yes -> the project is acceptable.\n\nAS AN EVALUATION TOOL (manager's question):\n  New divisional ROI = ($600,000 + $80,000) / ($4,000,000 + $600,000)\n                     = $680,000 / $4,600,000 = 14.8%\n  Old divisional ROI was 15%, so accepting drags the manager's own number DOWN.\n\nSame project, same arithmetic, opposite conclusions — because the two uses of ROI\nare asking different questions. This is the tension the next topic resolves."
   },
   {
    "t": "tip",
-   "v": "Exam formula: RI = Operating Income − (Assets × Required Rate of Return). The required rate of return is management's target. If WACC is given and no other rate is specified, use WACC. RI can be negative — this means the division earned less than its target return (not necessarily a loss, just below the hurdle rate). A project should be accepted if its RI is positive, regardless of the division's current ROI."
+   "v": "Watch the benchmark named in the stem. If the project's return is being compared to the required rate, hurdle rate or WACC, ROI is being used as a DECISION tool and the answer turns on whether it clears that rate. If it is being compared to the division's current or average ROI, it is being used as an EVALUATION tool and the answer usually exposes goal incongruence."
   },
   {
    "t": "h",
-   "v": "Residual Income (RI)"
+   "v": "4. Residual Income (RI)"
   },
   {
    "t": "p",
@@ -1077,17 +1318,27 @@
   {
    "t": "def",
    "term": "Residual Income (RI)",
-   "v": "The dollar amount of operating income earned above the minimum required return on assets. Calculated as Operating Income − (Assets × Required Rate of Return). Positive RI means the segment earned more than the required return."
+   "v": "The amount of operating income BEFORE TAXES earned above the minimum required return on the business unit's assets. Calculated as Operating Income − (Assets × Required Rate of Return). Positive RI means the segment earned more than the required return on the funds the company has invested in it."
   },
   {
    "t": "f",
    "l": "Residual Income Formula",
-   "v": "RI = Operating Income of Business Unit\n     − (Assets of Business Unit × Required Rate of Return)\n\nRequired Rate of Return is usually the company's WACC (weighted average cost of capital)\nor whatever rate management sets."
+   "v": "RI = Operating Income (before taxes) of Business Unit\n     − (Assets of Business Unit × Required Rate of Return)\n\nRequired Rate of Return is usually the company's WACC (weighted average cost of capital)\nor whatever higher rate management sets for the risk of that unit."
   },
   {
    "t": "ex",
    "l": "Residual Income — Same Example",
    "v": "Division A: Operating income = $600,000. Assets = $4,000,000. Required rate = 10%.\nTarget return = $4,000,000 × 10% = $400,000\nRI = $600,000 − $400,000 = $200,000 ✓ Positive — good performance\n\nSame new project: earns $80,000 on $600,000 assets, required rate = 10%.\nProject RI = $80,000 − ($600,000 × 10%) = $80,000 − $60,000 = $20,000 ✓ Positive\nWith RI evaluation, the manager ACCEPTS the project — it earns above the required return."
+  },
+  {
+   "t": "def",
+   "term": "Imputed Cost of the Investment",
+   "v": "The target return in the residual income calculation — assets of the business unit multiplied by the required rate of return. It is an imputed cost, meaning it is never recorded in the accounting system: it represents the opportunity cost of the other returns the company gave up when it committed those funds to this business unit. Residual income is therefore operating income after covering the required charge for the funds the company has invested in the unit's operations."
+  },
+  {
+   "t": "ex",
+   "l": "Why the Charge Is Called Imputed",
+   "v": "Division A: operating income before taxes $600,000, assets $4,000,000, required 10%.\n\n  Target (imputed) return = $4,000,000 x 10% = $400,000\n  Residual income         = $600,000 − $400,000 = $200,000\n\nNo invoice for $400,000 exists and no journal entry is ever made for it. The company\nsimply had $4,000,000 it could have deployed elsewhere at 10%. Tying it up in this\ndivision cost the company that $400,000 of forgone return, so the division must clear\nit before its performance counts as value added. The $200,000 that remains is genuine\nreturn above and beyond the cost of the funds employed."
   },
   {
    "t": "tbl",
@@ -1124,10 +1375,28 @@
    "v": "If RI is not given but WACC is given, use WACC as the required rate of return. RI can be negative — it means the segment earned less than its target return. Negative RI does not mean a loss; it means the return was inadequate relative to the assets employed."
   },
   {
+   "t": "h",
+   "v": "5. ROI vs RI — Goal Incongruence"
+  },
+  {
+   "t": "p",
+   "v": "The fundamental weakness of ROI is that it can create goal incongruence — a situation where what is good for the division manager is NOT good for the company. A manager evaluated on ROI will reject a project if the project's ROI is below their current division ROI — even if the project's ROI exceeds the company's required rate of return (hurdle rate). This means the company loses a profitable investment because of how the manager is evaluated."
+  },
+  {
+   "t": "ex",
+   "l": "ROI vs RI Conflict — Classic Exam Scenario",
+   "v": "Company required rate of return (hurdle rate): 10%\nDivision A: operating income $600,000 ÷ assets $4,000,000 → current ROI = 15%\n\nNew project available (the same one from the ROI and RI examples above):\n  Additional operating income: $80,000\n  Additional investment required: $600,000\n  Project ROI = $80,000 ÷ $600,000 = 13.3%\n\nROI ANALYSIS (Manager's perspective):\n  If accepted: New ROI = ($600,000 + $80,000) ÷ ($4,000,000 + $600,000)\n             = $680,000 ÷ $4,600,000 = 14.8%\n  Old ROI was 15% → New ROI is LOWER → Manager REJECTS the project\n\nRI ANALYSIS (Company's perspective):\n  Project RI = $80,000 − (10% × $600,000) = $80,000 − $60,000 = +$20,000\n  Positive RI → the project earns above the 10% hurdle → Company WANTS it\n\nBoth measures are correct arithmetic — they just answer different questions.\nROI asks \"does this beat my current average?\" (13.3% < 15% → no).\nRI asks \"does this beat the company's hurdle?\" (13.3% > 10% → yes).\n\nConclusion: ROI-based evaluation causes the manager to reject a value-creating\nproject. This is the classic goal-congruence failure, and RI is the fix."
+  },
+  {
+   "t": "tip",
+   "v": "Exam formula: RI = Operating Income − (Assets × Required Rate of Return). The required rate of return is management's target. If WACC is given and no other rate is specified, use WACC. RI can be negative — this means the division earned less than its target return (not necessarily a loss, just below the hurdle rate). A project should be accepted if its RI is positive, regardless of the division's current ROI."
+  },
+  {
    "t": "key",
    "v": [
-    "ROI = Operating Income ÷ Assets. Can also be expanded as Profit Margin × Asset Turnover.",
-    "RI = Operating Income − (Assets × Required Rate of Return). Use WACC as the required rate if no other rate is given.",
+    "ROI = Operating Income ÷ Assets of the business unit.",
+    "RI = Operating Income before taxes − (Assets × Required Rate of Return). The target return is an imputed cost — the opportunity cost of the funds invested. Use WACC as the required rate if no other rate is given.",
+    "ROI has two uses: as an EVALUATION tool it is compared to other segments or to the division's own history; as a DECISION tool it is compared to the required rate of return. Watch which benchmark the question names.",
     "ROI's weakness: goal incongruence. Managers may reject profitable projects that lower the division's ROI, even when the project earns more than the company's required rate.",
     "RI's weakness: cannot compare divisions of different sizes. A larger division naturally has a larger RI even at the same rate of return.",
     "Accept a project if its RI is positive — this means the project earns more than the required rate, regardless of the division's current ROI."
@@ -1145,22 +1414,33 @@
   },
   {
    "t": "h",
-   "v": "CVP Assumptions"
+   "v": "1. CVP Assumptions"
   },
   {
    "t": "b",
    "v": [
-    "All costs are either fixed or variable — no mixed costs (or mixed costs have been separated into fixed and variable components)",
-    "Costs and revenues are linear within the relevant range",
-    "Unit selling price is constant — no volume discounts",
-    "Fixed costs remain constant within the relevant range",
-    "Variable cost per unit is constant within the relevant range",
-    "For multi-product companies: sales mix remains constant as total volume changes"
+    "All costs are either variable or fixed — there are no mixed (semi-variable or semi-fixed) costs, or they have already been separated into their fixed and variable components",
+    "Total costs and total revenues are predictable and linear (they graph as a straight line) in relation to output units within the relevant range for the period",
+    "Changes in the level of total revenues and total costs arise ONLY because of changes in the number of units produced and sold",
+    "Fixed costs remain constant over the relevant range — this includes both direct fixed costs and indirect (allocated) fixed costs",
+    "Unit variable costs remain constant over the relevant range — this includes both direct variable costs and indirect (allocated) variable costs",
+    "The unit selling price remains constant over the relevant range",
+    "When a company sells two or more products, a constant sales mix is assumed — if the mix changes, the quantity of each product needed to break even changes too",
+    "The time value of money is ignored"
    ]
   },
   {
+   "t": "ex",
+   "l": "What Happens When an Assumption Fails",
+   "v": "A company sells at $60 with variable cost $35, so UCM = $25 and fixed costs are\n$150,000. Textbook breakeven = $150,000 / $25 = 6,000 units.\n\nNow suppose the supplier offers a volume discount: variable cost falls to $32 once\ncumulative purchases pass 5,000 units. Unit variable cost is no longer constant, so\nthe linearity assumption has failed and a single UCM no longer describes the business.\n\n  First 5,000 units:  UCM $25  ->  contribution earned = 5,000 x $25 = $125,000\n  Fixed costs still to cover  =  $150,000 − $125,000 = $25,000\n  Beyond 5,000 units: UCM $28  ->  extra units needed = $25,000 / $28 = 893 units\n\n  True breakeven = 5,000 + 893 = 5,893 units, not 6,000.\n\nThe error here is small because the discount is small. But the mechanism is the point:\nthe moment unit price or unit variable cost moves with volume, one contribution margin\ncannot describe the whole range, and a single breakeven figure becomes an approximation."
+  },
+  {
+   "t": "tip",
+   "v": "The assumptions are not decoration — each one is a question the exam can ask directly. The most commonly tested are that fixed costs stay constant within the relevant range, that unit variable cost and unit selling price stay constant, and that the sales mix is unchanged for a multi-product company. If a stem tells you volume discounts apply or that the mix shifts, it is testing whether you know CVP has stopped being valid."
+  },
+  {
    "t": "h",
-   "v": "Contribution Margin — The Core Concept"
+   "v": "2. Contribution Margin"
   },
   {
    "t": "p",
@@ -1183,7 +1463,7 @@
   },
   {
    "t": "h",
-   "v": "Contribution Margin Income Statement"
+   "v": "3. Contribution Margin Income Statement"
   },
   {
    "t": "p",
@@ -1201,7 +1481,7 @@
   },
   {
    "t": "h",
-   "v": "Breakeven Analysis"
+   "v": "4. Breakeven Analysis"
   },
   {
    "t": "def",
@@ -1211,7 +1491,7 @@
   {
    "t": "f",
    "l": "Breakeven Formulas",
-   "v": "Breakeven in Units = Total Fixed Costs ÷ Unit Contribution Margin\nBreakeven in Revenue = Total Fixed Costs ÷ Contribution Margin Ratio\nTarget Profit Units = (Total Fixed Costs + Target Profit) ÷ Unit Contribution Margin"
+   "v": "Breakeven in Units   = Total Fixed Costs ÷ Unit Contribution Margin\nBreakeven in Revenue = Total Fixed Costs ÷ Contribution Margin Ratio"
   },
   {
    "t": "ex",
@@ -1220,7 +1500,7 @@
   },
   {
    "t": "h",
-   "v": "Marginal Analysis and Relevant Costs"
+   "v": "5. Marginal Analysis and Relevant Costs"
   },
   {
    "t": "p",
@@ -1232,8 +1512,13 @@
    "v": "A decision technique that compares the additional (incremental) benefit of an action to its additional cost. A rational decision-maker accepts an action only if marginal benefit exceeds marginal cost. Applies to short-run business decisions such as special orders, pricing, and production levels."
   },
   {
+   "t": "ex",
+   "l": "Marginal Revenue vs Marginal Cost",
+   "v": "A fuel company is deciding how far to push volume. It can sell 8 units at $450 each,\nbut to sell a 9th unit it must drop the price on ALL units to $445.\n\n  Total revenue at 8 units:  8 x $450 = $3,600\n  Total revenue at 9 units:  9 x $445 = $4,005\n  MARGINAL REVENUE of the 9th unit = $4,005 − $3,600 = $405\n\nNote the marginal revenue is $405, not the $445 sticker price — the extra sale also\ncost $5 on each of the 8 units that would have sold at $450 ($445 − 8 x $5 = $405).\n\n  If the marginal COST of producing the 9th unit is $380:\n      $405 marginal revenue > $380 marginal cost  ->  produce it, profit rises $25\n  If the marginal COST of producing the 9th unit is $420:\n      $405 marginal revenue < $420 marginal cost  ->  do not produce it\n\nThe rule never changes: act only while marginal benefit exceeds marginal cost. Stop at\nthe unit where they cross — that is the profit-maximising output level."
+  },
+  {
    "t": "h",
-   "v": "Relevant vs Irrelevant Information"
+   "v": "6. Relevant vs Irrelevant Information"
   },
   {
    "t": "p",
@@ -1312,7 +1597,7 @@
   },
   {
    "t": "h",
-   "v": "Applying Relevant Costs — Special Order Decisions"
+   "v": "7. Special Order Decisions"
   },
   {
    "t": "p",
@@ -1334,7 +1619,7 @@
   },
   {
    "t": "h",
-   "v": "Applying Relevant Costs — Make-or-Buy Decisions"
+   "v": "8. Make-or-Buy Decisions"
   },
   {
    "t": "p",
@@ -1356,7 +1641,7 @@
   },
   {
    "t": "h",
-   "v": "Applying Relevant Costs — Sell-or-Process-Further Decisions"
+   "v": "9. Sell-or-Process-Further Decisions"
   },
   {
    "t": "p",
@@ -1378,35 +1663,39 @@
   },
   {
    "t": "h",
-   "v": "Margin of Safety"
+   "v": "10. Value Chain and Value Engineering"
   },
   {
    "t": "p",
-   "v": "Once you know the breakeven point, the next question is: how much room do we have before we hit it? The margin of safety measures that cushion — the amount by which actual (or planned) sales exceed the breakeven point. A higher margin of safety means less risk of falling into a loss."
+   "v": "CVP is a short-run tool because in the short run the market sets prices and costs. What customers will pay and what competitors do govern price; suppliers largely govern input costs. That leaves a company two levers: which products it supplies and in what quantity — which is what CVP analyses — plus a limited ability to push costs down through supplier concessions and value engineering."
   },
   {
    "t": "def",
-   "term": "Margin of Safety",
-   "v": "The excess of actual or planned sales over the breakeven point. Expresses the cushion between current activity and the level at which the company would begin losing money. Can be measured in units, dollars, or as a percentage of sales."
+   "term": "Value Chain",
+   "v": "The sequence of steps a business goes through to transform inputs such as raw materials into finished products, adding value at each process, and finally to sell those finished products to customers."
   },
   {
-   "t": "f",
-   "l": "Margin of Safety Formulas",
-   "v": "Margin of Safety (in $)     = Actual (or Budgeted) Sales − Breakeven Sales\nMargin of Safety (in units) = Actual Units Sold − Breakeven Units\nMargin of Safety Ratio (%)  = Margin of Safety $ ÷ Actual Sales $"
+   "t": "def",
+   "term": "Value Engineering",
+   "v": "An evaluation of all the business functions in the value chain with the objective of reducing costs while still satisfying customer needs. It may lead to design improvements, changes to materials specifications, or modifications to manufacturing methods."
   },
   {
    "t": "ex",
-   "l": "Margin of Safety — Ray Company",
-   "v": "Ray Company, same facts throughout: price $60, variable cost $35, UCM $25,\nfixed costs $150,000, breakeven 6,000 units / $360,000.\nActual sales: 10,000 units = $600,000.\n\nMargin of Safety $     = $600,000 − $360,000 = $240,000\nMargin of Safety units = 10,000 − 6,000 = 4,000 units\nMargin of Safety %     = $240,000 ÷ $600,000 = 40%\n\nInterpretation: sales can drop up to 40% — 4,000 units — before the company\nfalls into a loss. A higher percentage indicates a stronger safety cushion.\n\nCross-check with the CVP statement: CM $250,000 − fixed $150,000 = $100,000\noperating income. Note $240,000 margin of safety × 41.7% CMR = $100,000 ✓\n(Margin of Safety $ × CM Ratio = Operating Income — a useful shortcut.)"
+   "l": "Value Engineering Moving the Breakeven Point",
+   "v": "A product sells for $60 with variable cost $35 and fixed costs of $150,000.\n  UCM = $25   ->   breakeven = $150,000 / $25 = 6,000 units\n\nA value engineering review finds that a redesigned housing uses less material and\nremoves one assembly step, without any change customers can detect:\n  Variable cost falls from $35 to $31   ->   new UCM = $29\n  New breakeven = $150,000 / $29 = 5,173 units\n\nThe company did not raise its price, did not cut a feature, and did not sell one\nextra unit — yet it now needs 827 fewer units to break even, and every unit above\nthat point earns $4 more. This is the lever CVP itself cannot pull."
+  },
+  {
+   "t": "tip",
+   "v": "Keep the two ideas distinct. The value CHAIN is the map — the sequence of value-adding steps from raw material to customer. Value ENGINEERING is the activity performed on that map — reviewing every function in it to strip out cost while keeping the product acceptable to the customer. The exam tests the definitions far more often than any calculation."
   },
   {
    "t": "key",
    "v": [
     "Unit CM = Selling Price − Variable Cost per unit. CM Ratio = UCM ÷ Selling Price.",
     "Breakeven Units = Fixed Costs ÷ UCM. Breakeven Revenue = Fixed Costs ÷ CM Ratio.",
-    "Target Profit Units = (Fixed Costs + Target Profit) ÷ UCM.",
     "A cost is relevant only if it is BOTH future AND differs between alternatives. Sunk costs are NEVER relevant, regardless of size.",
-    "Opportunity cost exists only under constrained capacity. With idle capacity, accepting a new order does not require giving anything up."
+    "Opportunity cost exists only under constrained capacity. With idle capacity, accepting a new order does not require giving anything up.",
+    "CVP rests on eight assumptions. The most tested: fixed costs constant within the relevant range, unit variable cost and unit selling price constant, and a constant sales mix for a multi-product company."
    ]
   }
  ]
