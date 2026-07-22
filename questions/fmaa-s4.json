@@ -2359,7 +2359,7 @@
    }
   },
   {
-   "q": "The Leather Goods Division of Zack Corp. had the following information for 20X3:\n\nSales:  $500,000\nOperating income:  $50,000\nAssets:  $200,000\nRequired rate of return:  10%\n\nWhat amount of residual income did the Leather Goods Division have?",
+   "q": "The Leather Goods Division of Zack Corp. had the following information for 20X3:\n\nColumns: | 20X3\nSales: | $500,000\nOperating income: | $50,000\nAssets: | $200,000\nRequired rate of return: | 10%\n\nWhat amount of residual income did the Leather Goods Division have?",
    "o": [
     "$(20,000)",
     "$10,000",
@@ -3177,7 +3177,7 @@
    }
   },
   {
-   "q": "Delphi Company has developed a new project that will be marketed for the first time during the next fiscal year. Although the Marketing Department estimates that 35,000 units could be sold at $36 per unit, Delphi's management has allocated only enough manufacturing capacity to produce a maximum of 25,000 units of the new product annually. The fixed costs associated with the new product are budgeted at $450,000 for the year, which includes $60,000 for depreciation on new manufacturing equipment. Data associated with each unit of product are presented as follows. Delphi is subject to a 40% income tax rate.\n\nVariable Costs\nDirect material:  $7.00\nDirect labor:  $3.50\nManufacturing overhead:  $4.00\nTotal variable manufacturing cost:  $14.50\nSelling expenses:  $1.50\nTotal variable cost:  $16.00\n\nThe number of units of the new product that Delphi Company must sell during the next fiscal year in order to break even is",
+   "q": "Delphi Company has developed a new project that will be marketed for the first time during the next fiscal year. Although the Marketing Department estimates that 35,000 units could be sold at $36 per unit, Delphi's management has allocated only enough manufacturing capacity to produce a maximum of 25,000 units of the new product annually. The fixed costs associated with the new product are budgeted at $450,000 for the year, which includes $60,000 for depreciation on new manufacturing equipment. Data associated with each unit of product are presented as follows. Delphi is subject to a 40% income tax rate.\n\nColumns: | Variable cost per unit\nDirect material: | $7.00\nDirect labor: | $3.50\nManufacturing overhead: | $4.00\nTotal variable manufacturing cost: | $14.50\nSelling expenses: | $1.50\nTotal variable cost: | $16.00\n\nThe number of units of the new product that Delphi Company must sell during the next fiscal year in order to break even is",
    "o": [
     "20,930.",
     "18,140.",
@@ -3513,7 +3513,7 @@
    }
   },
   {
-   "q": "Madengrad Company manufactures a single electronic product called Precisionmix. This unit is a batch-density monitoring device attached to large industrial mixing machines used in flour, rubber, petroleum, and chemical manufacturing. Precisionmix sells for $900 per unit. The following variable costs are incurred to produce each Precisionmix device:\n\nDirect labor:  $180\nDirect materials and factory overhead:  $345\nTotal variable production costs:  $525\nMarketing costs:  $75\nTotal variable costs:  $600\n\nMadengrad's income tax rate is 40%, and annual fixed costs are $6,600,000. Except for an operating loss incurred in the year of incorporation, the firm has been profitable over the last 5 years.\n\nThe annual sales volume required for Madengrad Company to break even is",
+   "q": "Madengrad Company manufactures a single electronic product called Precisionmix. This unit is a batch-density monitoring device attached to large industrial mixing machines used in flour, rubber, petroleum, and chemical manufacturing. Precisionmix sells for $900 per unit. The following variable costs are incurred to produce each Precisionmix device:\n\nColumns: | Variable cost per unit\nDirect labor: | $180\nDirect materials and factory overhead: | $345\nTotal variable production costs: | $525\nMarketing costs: | $75\nTotal variable costs: | $600\n\nMadengrad's income tax rate is 40%, and annual fixed costs are $6,600,000. Except for an operating loss incurred in the year of incorporation, the firm has been profitable over the last 5 years.\n\nThe annual sales volume required for Madengrad Company to break even is",
    "o": [
     "22,000 units.",
     "11,000 units.",
