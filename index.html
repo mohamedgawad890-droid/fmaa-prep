@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-21-01 quiz-navigator-stemtables-sentencebreaks-reviewexp -->
+<!-- FMAA-BUILD: 2026-07-22-01 stemtable-headers -->
 <script>
-window.FMAA_BUILD='2026-07-21-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-22-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -552,6 +552,12 @@ function fmtProseLine(l){
   const marked=l.replace(/([.?!])\s+(?=[A-Z0-9"'(])/g,'$1\u0001');
   return marked.split('\u0001').map(s=>esc(s)).join('<br>');
 }
+// BATCH 2026-07-22-01 (#3): a header row used to be recognised only when its
+// label was exactly "Columns". Stems that name the header ("Department — Columns:",
+// "Unit Levels — Columns:") therefore rendered their column headings as ordinary
+// data, so the figures underneath had nothing labelling them. A label is now a
+// header when it IS "Columns" or ENDS with "Columns"; the trailing marker is
+// stripped so the leading cell still shows the name ("Department", "Unit Levels").
 function renderStemTable(blk){
   const rows=blk.map(line=>{
     const cells=line.split('|').map(c=>c.trim());
@@ -559,12 +565,21 @@ function renderStemTable(blk){
     const ci=first.indexOf(':');
     if(ci!==-1){label=first.slice(0,ci).trim();first=first.slice(ci+1).trim();}
     const vals=[first,...cells.slice(1)];
-    return {label,vals,header:label.toLowerCase()==='columns'};
+    const header=/(^|[\s—–-])columns$/i.test(label);
+    if(header)label=label.replace(/[\s—–-]*columns$/i,'').trim();
+    return {label,vals,header};
   });
-  const ncols=Math.max.apply(null,rows.map(r=>r.vals.length));
+  let ncols=Math.max.apply(null,rows.map(r=>r.vals.length));
+  // BATCH 2026-07-22-01 (#4): a single-value table has to be written "Label: | value"
+  // because fmtStem only treats a line as table content when it contains a pipe.
+  // That leaves value column 0 blank on every row and rendered as an empty column.
+  // Drop any value column that is empty in every row.
+  const keep=[];for(let c=0;c<ncols;c++){if(rows.some(r=>(r.vals[c]||'').trim()!==''))keep.push(c);}
+  rows.forEach(r=>{r.vals=keep.map(c=>r.vals[c]!=null?r.vals[c]:'');});
+  ncols=keep.length;
   const body=rows.map(r=>{
     const isH=r.header;
-    const lab=`<td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:left;color:${isH?'#555':'#333'};font-weight:${isH?'600':'500'}">${esc(isH?'':r.label)}</td>`;
+    const lab=`<td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:left;color:${isH?'#555':'#333'};font-weight:${isH?'600':'500'}">${esc(r.label)}</td>`;
     let vc='';for(let c=0;c<ncols;c++){const v=r.vals[c]!=null?r.vals[c]:'';vc+=`<td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:right;white-space:nowrap;color:${isH?'#555':'#1a1a1a'};font-weight:${isH?'600':'400'}">${esc(v)}</td>`;}
     return `<tr>${lab}${vc}</tr>`;
   }).join('');
