@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-22-01 stemtable-headers -->
+<!-- FMAA-BUILD: 2026-07-22-02 lecture-checkin-staleprofile-notesync -->
 <script>
-window.FMAA_BUILD='2026-07-22-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-22-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -359,19 +359,63 @@ function mergeProgress(a,b){
   for(const k in bls){const cur=ls[k],inc=bls[k];if(!cur){ls[k]=inc;continue;}const accCur=cur.total?cur.correct/cur.total:0,accInc=inc.total?inc.correct/inc.total:0;ls[k]=(accInc>accCur||(accInc===accCur&&(inc.total||0)>(cur.total||0)))?inc:cur;}
   return{done,lessonScores:ls,mcqTotal:(a.mcqTotal||0)+(b.mcqTotal||0),mcqRight:(a.mcqRight||0)+(b.mcqRight||0)};
 }
+// BATCH 2026-07-22-02 (#2): notes could be lost two ways. (a) the cloud write was
+// debounced 1500ms and the timer restarted on every keystroke, so leaving the
+// lesson (or a service-worker auto-reload) while typing dropped the write
+// entirely; (b) syncNoteFromCloud then stamped the older cloud copy over both
+// localStorage and the textarea without checking which was newer. Notes now carry
+// a local timestamp, the cloud copy only wins when it is genuinely newer, the
+// debounce is shorter, and pending writes are flushed when the lesson changes or
+// the app is backgrounded.
 function loadLessonNote(lid){try{return localStorage.getItem('fmaa-note-'+lid)||'';}catch{return'';}}
-let _noteDebounce={};
-function saveLessonNote(lid,val){
-  try{localStorage.setItem('fmaa-note-'+lid,val);}catch{}
-  clearTimeout(_noteDebounce[lid]);
-  _noteDebounce[lid]=setTimeout(()=>{if(STATE.user&&db){db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid).set({text:val,updatedAt:firebase.firestore.FieldValue.serverTimestamp()}).catch(()=>{});}},1500);
+function loadLessonNoteAt(lid){try{return parseInt(localStorage.getItem('fmaa-note-at-'+lid))||0;}catch{return 0;}}
+let _noteDebounce={},_notePending={};
+function _flushLessonNote(lid){
+  const p=_notePending[lid];if(!p)return;
+  clearTimeout(_noteDebounce[lid]);delete _noteDebounce[lid];delete _notePending[lid];
+  if(!STATE.user||!db)return;
+  db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid)
+    .set({text:p.text,updatedAtMs:p.at,updatedAt:firebase.firestore.FieldValue.serverTimestamp()})
+    .catch(()=>{});
 }
+function flushAllLessonNotes(){Object.keys(_notePending).forEach(_flushLessonNote);}
+function saveLessonNote(lid,val){
+  const at=Date.now();
+  try{localStorage.setItem('fmaa-note-'+lid,val);localStorage.setItem('fmaa-note-at-'+lid,String(at));}catch{}
+  _notePending[lid]={text:val,at};
+  clearTimeout(_noteDebounce[lid]);
+  _noteDebounce[lid]=setTimeout(()=>_flushLessonNote(lid),600);
+}
+// Backgrounding, closing or navigating away must not drop a pending note.
+try{
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')flushAllLessonNotes();});
+  window.addEventListener('pagehide',flushAllLessonNotes);
+  window.addEventListener('beforeunload',flushAllLessonNotes);
+}catch{}
 const _noteSynced={};
 async function syncNoteFromCloud(lid){
   if(!STATE.user||!db)return;
   if(_noteSynced[lid])return;
   _noteSynced[lid]=true;
-  try{const doc=await db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid).get();if(doc.exists){const cloud=doc.data().text||'';try{localStorage.setItem('fmaa-note-'+lid,cloud);}catch{}const el=document.getElementById('lesson-notes-'+lid);if(el&&el.value!==cloud)el.value=cloud;}}catch{_noteSynced[lid]=false;}
+  try{
+    const doc=await db.collection('fmaa-notes').doc(STATE.user.uid).collection('lessons').doc(lid).get();
+    if(!doc.exists)return;
+    const data=doc.data()||{};
+    const cloud=data.text||'';
+    const cloudAt=data.updatedAtMs||0;
+    const localAt=loadLessonNoteAt(lid);
+    const local=loadLessonNote(lid);
+    // An unsaved edit is in flight, or the local copy is newer — keep the local
+    // text and push it up instead of overwriting it with a stale cloud copy.
+    if(_notePending[lid]||(local&&localAt>=cloudAt&&local!==cloud)){
+      if(local!==cloud){_notePending[lid]={text:local,at:localAt||Date.now()};_flushLessonNote(lid);}
+      return;
+    }
+    if(cloud===local)return;
+    try{localStorage.setItem('fmaa-note-'+lid,cloud);localStorage.setItem('fmaa-note-at-'+lid,String(cloudAt||Date.now()));}catch{}
+    const el=document.getElementById('lesson-notes-'+lid);
+    if(el&&el.value!==cloud&&document.activeElement!==el)el.value=cloud;
+  }catch{_noteSynced[lid]=false;}
 }
 function loadStreak(){try{const d=localStorage.getItem('fmaa-streak-v1');return d?JSON.parse(d):{count:0,lastDate:''};}catch{return{count:0,lastDate:''};}}
 function saveStreak(s){try{localStorage.setItem('fmaa-streak-v1',JSON.stringify(s));}catch{}}
@@ -667,7 +711,11 @@ function subtopicBreakdown(){const ls=STATE.progress.lessonScores||{};const rows
 
 // ─── STUDENT DATA ─────────────────────────────────────────────────────────────
 function loadStudent(){try{const d=localStorage.getItem('fmaa-student-v1');return d?JSON.parse(d):null;}catch{return null;}}
-function saveStudent(d){try{localStorage.setItem('fmaa-student-v1',JSON.stringify(d));}catch{}if(STATE.user){db.collection('fmaa-students').doc(STATE.user.uid).set(d).catch(()=>{});}}
+// BATCH 2026-07-22-02 (#1): this used .set(d) with no merge, so saving a profile
+// from a stale local copy overwrote fields only the instructor writes —
+// groupCodeStatus could be knocked from 'approved' back to 'pending', and
+// approvedBy/approvedAt were deleted outright. Merge instead.
+function saveStudent(d){try{localStorage.setItem('fmaa-student-v1',JSON.stringify(d));}catch{}if(STATE.user){db.collection('fmaa-students').doc(STATE.user.uid).set(d,{merge:true}).catch(()=>{});}}
 function loadTracker(){try{const d=localStorage.getItem('fmaa-tracker-v1');return d?JSON.parse(d):{};} catch{return{};}}
 function saveTracker(d){try{localStorage.setItem('fmaa-tracker-v1',JSON.stringify(d));}catch{}if(STATE.user){db.collection('fmaa-tracker').doc(STATE.user.uid).set(d).catch(()=>{});}}
 function setTrackerValue(lessonId,val){const t=loadTracker();if(t[lessonId]===val){delete t[lessonId];}else{t[lessonId]=val;}saveTracker(t);render();}
@@ -935,6 +983,8 @@ function renderLessonListHTML(sec,prog){
 function studyGo(sectId,lessonId){
   // Profile gate: block if name+mobile not set (same check as navTo)
   if(!isInstructor()){const _st=loadStudent();if(!_st||!_st.name||!_st.mobile){STATE.tab='register';STATE.showProfileWarning=true;render();return;}}
+  // BATCH 2026-07-22-02 (#2): push any unsaved note up before the lesson changes.
+  if(STATE.lessonId&&STATE.lessonId!==lessonId)flushAllLessonNotes();
   if(STATE.lessonId&&!lessonId)endStudyTimer();
   if(lessonId)startStudyTimer('lesson-'+lessonId);
   STATE.sectId=sectId;STATE.lessonId=lessonId;
@@ -2294,7 +2344,28 @@ async function deleteLecture(id){
 // ── Student: load active lecture/feedback for their group ─────────────────
 async function loadActiveLecture(){
   if(STATE._lectureLoading)return;
-  const st=loadStudent();if(!st||!st.groupCode||!STATE.user||st.groupCodeStatus==='pending'||st.groupCodeStatus==='rejected')return;
+  if(!STATE.user)return;
+  // BATCH 2026-07-22-02 (#1): this used to bail outright on the localStorage copy
+  // of the student record. That copy is only refreshed at login or on the register
+  // tab, so once the instructor approved a group code the running app kept seeing
+  // groupCodeStatus:'pending' and silently skipped the check-in popup until the
+  // student fully restarted. When the local copy says the student has no usable
+  // group, re-read the doc from Firestore once before giving up.
+  let st=loadStudent();
+  const blocked=s=>!s||!s.groupCode||s.groupCodeStatus==='pending'||s.groupCodeStatus==='rejected';
+  if(blocked(st)){
+    if(STATE._studentRecheckAt&&Date.now()-STATE._studentRecheckAt<60000)return;
+    STATE._studentRecheckAt=Date.now();
+    try{
+      const doc=await db.collection('fmaa-students').doc(STATE.user.uid).get();
+      if(!doc.exists)return;
+      const fresh=doc.data()||{};
+      if(blocked(fresh))return;
+      try{localStorage.setItem('fmaa-student-v1',JSON.stringify(fresh));}catch{}
+      st=fresh;
+      STATE.activeLectureLoaded=false;
+    }catch(e){return;}
+  }
   STATE._lectureLoading=true;
   const gc=st.groupCode.toUpperCase();
   try{
@@ -3411,6 +3482,7 @@ function activeNavTab(){
   return t;
 }
 async function navTo(tab){
+  if(tab!=='study')flushAllLessonNotes();
   if(tab!=='study'&&tab!=='quiz-session')endStudyTimer();
   if(STATE.mockExam&&STATE.mockExam.status==='mcq'&&tab!=='mock-exam'){mockClearTimers();STATE.mockExam.status='idle';}
   if(!STATE.user&&tab!=='login'&&tab!=='loading'&&tab!=='onboarding'){STATE.tab='login';render();return;}
