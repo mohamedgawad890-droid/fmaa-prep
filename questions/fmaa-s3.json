@@ -33,22 +33,6 @@
    }
   },
   {
-   "q": "A continuous profit plan",
-   "o": [
-    "Is an annual plan that is part of a 5-year plan.",
-    "Is a plan that is revised monthly or quarterly.",
-    "Works best for a company that can reliably forecast events a year or more into the future.",
-    "Is a plan devised by a full-time planning staff."
-   ],
-   "a": 1,
-   "e": "A continuous plan is one that is automatically prepared for a certain period of time ahead of the present. For example, a 1-year continuous plan will be prepared at the end of every month for the next 12 months.",
-   "wrongWhy": {
-    "0": "A continuous plan does not need to be part of a larger 5-year plan.",
-    "2": "A continuous plan works for any company, whether or not they can accurately forecast more than a year into the future.",
-    "3": "A continuous plan may or may not be produced by a full-time planning staff."
-   }
-  },
-  {
    "q": "In developing the budget for the next year, which one of the following approaches would produce the greatest amount of positive motivation and goal congruence?",
    "o": [
     "Permit the divisional manager to develop the goal for the division that in the manager's view will generate the greatest amount of profits.",
@@ -78,22 +62,6 @@
     "0": "Process costing is the method by which costs are assigned to individual products when the products are all relatively similar (homogeneous) and are mass-produced.",
     "2": "A budget manual details the budgeting process.",
     "3": "Job-order costing is the method by which all of the costs associated with a specific job (or client) are accumulated and charged to that job (or client). The costs are accumulated on what is called a job-cost sheet."
-   }
-  },
-  {
-   "q": "A continuous (rolling) budget",
-   "o": [
-    "Presents the plan for only one level of activity and does not adjust to changes in the level of activity.",
-    "Drops the current month or quarter and adds a future month or quarter as the current month or quarter is completed.",
-    "Presents planned activities for a period but does not present a firm commitment.",
-    "Presents the plan for a range of activity so that the plan can be adjusted for changes in activity."
-   ],
-   "a": 1,
-   "e": "A continuous budget, also called a rolling budget, is one that is prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months.",
-   "wrongWhy": {
-    "0": "This is not the description of a rolling budget. \"Continuous\" or \"rolling\" merely identifies a budget that has been prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months. This is a description of a static budget. A static budget is developed for one specific activity level. A static budget may be in the form of a rolling budget, but it may also be an annual budget, that is, a budget prepared for a full fiscal year prior to the beginning of that fiscal year.",
-    "2": "This is not the description of a rolling budget. \"Continuous\" or \"rolling\" merely identifies a budget that has been prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months. No type of budget should present a firm commitment. A budget should be used as a guide, a motivating device, and a control tool; but it should be able to be revised if necessary. If conditions change during the budget period, the budget should not be used as an excuse for not doing something that is strategically important to the company, such as acting on an unforeseen business opportunity that arises. The statement “it’s not in the budget” should not be used.",
-    "3": "This is not the description of a rolling budget. \"Continuous\" or \"rolling\" merely identifies a budget that has been prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months. No type of budgeting presents the plan for a range of activity so the plan can be adjusted for changes in activity, but this is close to the description of a flexible budget. A flexible budget takes the variable revenues and costs as they are planned in the master budget (the static budget) and adjusts the master budget amounts to what the budgeted amounts would have been if the actual activity levels had been used in preparing the budget. A flexible budget can be prepared only after the actual level of activity is known. A flexible budget may be in the form of a rolling budget, but it may also be an annual budget, that is, a budget prepared for a full fiscal year prior to the beginning of that fiscal year."
    }
   },
   {
@@ -337,22 +305,6 @@
    }
   },
   {
-   "q": "A continuous budget is one that",
-   "o": [
-    "is available for a specified future period by adding a period to the period that just ended.",
-    "is created after the organization has been operating for at least one period.",
-    "is adjusted throughout the period for changing environmental factors.",
-    "uses the prior period's actual results as the current period's budget."
-   ],
-   "a": 0,
-   "e": "At all times, a continuous budget covers a set number of months, quarters, or years into the future. Each month or quarter, the month or quarter just completed is dropped and a new monthly or quarterly budget is added to the end of the budget.",
-   "wrongWhy": {
-    "1": "A continuous budget can be created at any time, not just after the organization has been operating for at least one period.",
-    "2": "A continuous budget is not adjusted throughout the period for changing environmental factors.",
-    "3": "A continuous budget does not use the prior period’s actual results as the current period’s budget."
-   }
-  },
-  {
    "q": "The first step in developing a master budget is to prepare the",
    "o": [
     "selling and administrative budget.",
@@ -382,22 +334,6 @@
     "1": "This is a criticism of traditional budgeting, because this can occur. Actual performance for a period is measured against budgeted performance for that period. While it is necessary to wait until the end of a period to measure the budgetary variance for the whole period, the budget period can be broken into smaller timeframes. A 12 month budget can, and often will, be divided into monthly amounts to allow for current month and year-to-date budget variance reporting throughout the year, so that operational adjustments can be made as necessary.",
     "2": "This is a criticism of traditional budgeting. Those who criticize it question why a budget needs to have a fixed time horizon such as one year. They say that different segments of the same company have different needs for planning. The purpose of a forecast should be to recognize issues that need to be planned for in time to plan for them, and this will be different for every area of the company. So different forecasting horizons are needed for different areas, and they need to be monitored individually. One size does not fit all in an organization today.",
     "3": "This is a criticism of traditional budgeting. The traditional budgeting process may lead to across-the\u0002board cuts when early budget iterations show that planned expenses are too high. However, budgeting should not necessarily require across the board cuts, even when expenses are higher than desired. Cost cutting should be based on what is best for the organization. Frequently cuts based on what is best for the organization will not be equally distributed."
-   }
-  },
-  {
-   "q": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is a",
-   "o": [
-    "sales budget.",
-    "flexible budget.",
-    "rolling budget.",
-    "master budget."
-   ],
-   "a": 2,
-   "e": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is a rolling budget. A rolling budget is a budget that is prepared for a certain period of time ahead of the present. For example, a one-year continuous, or rolling, budget would be prepared at the end of every month for the next twelve months.",
-   "wrongWhy": {
-    "0": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is not a sales budget. The sales budget is the first operating budget to be prepared in the process of developing the master budget for the year. It incorporates the expected sales in units of each product and each product’s expected selling price. The sales budget is based on the firm’s forecasted sales level, its short- and long-term objectives, and its production capacity. Since it is part of the development of the master budget, the sales budget is developed using just one projected sales level. Please see the correct answer explanation for more information.",
-    "1": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is not a flexible budget. A flexible budget is a budget in which the master budget amounts have been adjusted to what the budgeted amounts would have been if the actual activity supporting those amounts had been used in preparing the budget. Please see the correct answer explanation for more information.",
-    "3": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is not a master budget. A master budget is a budget that expresses the operating and financial plans of management for a fiscal year, and each item in it is developed using an assumption that includes just one projected activity level. Please see the correct answer explanation for more information."
    }
   },
   {
@@ -719,6 +655,159 @@
     "1": "The use of budgetary slack does not increase the ability to identify potential budget weaknesses. Budgetary slack exists when budgeted revenues are understated or budgeted expenses are overstated. Since the budgetary slack distorts a real attainable level of performance it is difficult to identify potential budget weaknesses.",
     "2": "The use of budgetary slack does not increase the probability that budgets will not be achieved--just the opposite. When a budget is easily achieved, it is said to have budgetary slack in it. When budgetary slack exists, either budgeted revenues are understated or budgeted expenses are overstated, or both. Thus, budgetary slack increases the probability that budgets will be achieved."
    }
+  },
+  {
+   "q": "The manager of a responsibility center that is accountable for costs incurred but not for revenue earned or for the capital invested in the center is the manager of",
+   "o": [
+    "A cost center.",
+    "A profit center.",
+    "An investment center.",
+    "A revenue center."
+   ],
+   "a": 0,
+   "e": "A cost center is a responsibility center whose manager is held accountable only for the costs incurred in the center. A maintenance department, the accounting department and a production department are typical cost centers: they consume resources but do not generate revenue and do not control the capital invested in them.",
+   "wrongWhy": {
+    "1": "A profit center manager is accountable for both costs and revenues, and so is evaluated on the profit the center generates. That is a wider responsibility than costs alone.",
+    "2": "An investment center manager is accountable for costs, revenues and the capital invested in the center, and is usually evaluated on a return measure such as return on investment.",
+    "3": "A revenue center manager is accountable for revenue generated, not for the costs of producing what is sold."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following costs is most likely to be controllable by the supervisor of a production department?",
+   "o": [
+    "Depreciation on the factory building.",
+    "Indirect materials consumed in the supervisor's department.",
+    "The department's allocated share of corporate headquarters salaries.",
+    "Property taxes on the plant."
+   ],
+   "a": 1,
+   "e": "A cost is controllable at a given level of management if the manager at that level can significantly influence the amount of the cost through his or her own decisions. The quantity of indirect materials such as glue, screws and cleaning supplies consumed in the department is driven by day-to-day decisions the supervisor makes, so it is controllable by that supervisor.",
+   "wrongWhy": {
+    "0": "Depreciation on the building is a committed fixed cost that results from a capital decision made long before, usually by senior management. The department supervisor cannot influence it.",
+    "2": "An allocated share of headquarters salaries is assigned to the department by a formula. The supervisor has no influence over either the size of those salaries or the allocation method.",
+    "3": "Property taxes are set by the taxing authority on the assessed value of the plant. No decision the supervisor makes changes the amount."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Variances between actual and budgeted costs for a responsibility center should be reported by",
+   "o": [
+    "The accounting department, because it maintains the accounting records.",
+    "The person who makes the decisions that affect the cost.",
+    "Senior management, so that the reporting remains objective.",
+    "An external consultant, so that departmental bias is removed."
+   ],
+   "a": 1,
+   "e": "The person responsible for making the decisions that affect a cost should also be the person who reports on the variances between actual and planned amounts. That person budgeted for the cost, makes the spending decisions, and is best placed to make whatever operational adjustments the variance shows are needed.",
+   "wrongWhy": {
+    "0": "The accounting department compiles and distributes the reports, but it does not make the spending decisions and cannot explain why a variance arose or what should be done about it.",
+    "2": "Senior management reviews variance reports; it does not prepare them. Senior managers are too far from the daily decisions to identify causes or corrective actions.",
+    "3": "An outside consultant has no knowledge of the operating decisions behind the numbers and no authority to make the operational adjustments the variance calls for."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A division manager is evaluated on the division's total reported costs, which include an allocated share of corporate advertising that the manager cannot influence. The most likely consequence is that",
+   "o": [
+    "The manager will find ways to reduce corporate advertising spending.",
+    "The manager will regard the evaluation as unfair, and motivation will suffer.",
+    "Goal congruence between the division and the company will improve.",
+    "The division's controllable costs will fall."
+   ],
+   "a": 1,
+   "e": "Managers should be evaluated only on the costs they can control. When non-controllable allocated costs are included in the performance measure, the manager is being held responsible for an outcome he or she cannot influence. The predictable result is that the evaluation is seen as unfair and motivation falls.",
+   "wrongWhy": {
+    "0": "Corporate advertising is decided at the corporate level. A division manager has no authority over it, which is precisely why including it in the evaluation is a problem.",
+    "2": "Goal congruence improves when performance measures line up with what the manager actually controls. Including non-controllable costs works against goal congruence, not for it.",
+    "3": "Nothing about the allocation changes the costs the manager does control. It simply adds an uncontrollable amount on top of them."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Standards that can be met only under perfect operating conditions, with no machine breakdowns, no waste and no employee downtime, will most likely",
+   "o": [
+    "Motivate employees to their maximum level of effort.",
+    "Discourage employees, because the standard is regarded as unattainable.",
+    "Produce favorable variances in most periods.",
+    "Permanently eliminate budgetary slack from the budget."
+   ],
+   "a": 1,
+   "e": "A standard motivates only if the person held to it believes it can be reached. An ideal standard that assumes perfect conditions will be missed in virtually every period, so employees stop treating it as a goal and the resulting variances stop carrying information. Standards should be set at a level that is high but attainable.",
+   "wrongWhy": {
+    "0": "The opposite happens. Once a target is seen as impossible, effort falls rather than rises, because additional effort makes no difference to whether the standard is met.",
+    "2": "Ideal standards allow for no inefficiency at all, so actual results will almost always be worse than standard. The variances produced will be persistently unfavorable, not favorable.",
+    "3": "The problem with an ideal standard is the opposite of slack. Slack arises when standards are too easy; an ideal standard is too hard."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company engages an outside consulting firm to set the standard costs for its production departments. Compared with standards developed by the departments themselves, the most likely consequence is",
+   "o": [
+    "Greater acceptance of the standards by the people held to them.",
+    "Lower acceptance, because those held to the standards had no part in setting them.",
+    "Standards that reflect day-to-day operating conditions more accurately.",
+    "Faster achievement of goal congruence throughout the company."
+   ],
+   "a": 1,
+   "e": "Outside consultants bring objectivity and can settle internal disputes quickly, but they leave no ownership behind. People who had no voice in setting a standard are less likely to accept it or to feel committed to meeting it, which is the central behavioural drawback of imposing standards from outside.",
+   "wrongWhy": {
+    "0": "Acceptance comes from participation. Removing the departments from the process removes the main source of their commitment to the resulting standards.",
+    "2": "Consultants lack the detailed operating knowledge that departmental staff have. Standards set from outside are more likely, not less likely, to miss the practical realities of the work.",
+    "3": "Goal congruence is built by involving the people whose behaviour the budget is meant to guide. Imposing standards from outside does not achieve it faster."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "For a standard to work as both a planning tool and a motivational tool, it should be set at a level that is",
+   "o": [
+    "Easily achieved by every employee.",
+    "Achievable only under ideal conditions.",
+    "High but attainable.",
+    "Equal to the previous period's actual results."
+   ],
+   "a": 2,
+   "e": "A standard set high but attainable stretches performance while remaining credible. It gives a realistic basis for planning the budget and, because employees believe it can be met, it also motivates the effort needed to meet it.",
+   "wrongWhy": {
+    "0": "A standard that everyone meets easily contains slack. Actual results will beat it routinely, so it neither stretches performance nor provides a meaningful benchmark for control.",
+    "1": "A standard achievable only under ideal conditions is missed in every period, so it stops functioning as a goal and its variances stop being informative.",
+    "3": "Last period's actual results include whatever inefficiency occurred in that period. Building those inefficiencies into the standard locks them in permanently."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following is most essential to a successful budgeting process?",
+   "o": [
+    "Preparing the entire budget within the accounting department.",
+    "Active support and participation from top management.",
+    "Setting goals that are certain to be achieved.",
+    "Keeping the completed budget confidential from operating managers."
+   ],
+   "a": 1,
+   "e": "Without visible support from top management, a budget is treated as an accounting exercise rather than as the company's operating plan. Top management sets the goals, establishes the priorities and provides the resources that make the process work, and its participation signals to everyone else that the budget matters.",
+   "wrongWhy": {
+    "0": "Accounting coordinates and compiles the budget, but operating managers hold the knowledge of what is achievable and what resources are needed. A budget built in isolation by accounting will be neither accurate nor accepted.",
+    "2": "Goals that are certain to be achieved contain budgetary slack. They remove the motivational value of the budget and weaken it as a control tool.",
+    "3": "The budget is the operating plan for the managers who must carry it out. Withholding it from them defeats its purpose as a planning, coordinating and communication tool."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company's budget guidelines are vague, submission deadlines are unclear, and operating managers receive the approved budget only after the budget year has begun. The budgeting process most clearly lacks",
+   "o": [
+    "Budgetary slack.",
+    "Clear communication of budget guidelines and an enforced timetable.",
+    "A flexible budget.",
+    "A capital expenditures budget."
+   ],
+   "a": 1,
+   "e": "A successful budgeting process needs clearly communicated guidelines, defined responsibilities and a timetable that is actually met, so that the budget is complete and in the hands of the managers before the period it covers begins. A budget delivered after the year starts cannot guide the decisions made in that year.",
+   "wrongWhy": {
+    "0": "Budgetary slack is a distortion built deliberately into budget figures. Its absence is desirable, and nothing in the situation described points to slack.",
+    "2": "A flexible budget is a tool for evaluating performance after the fact by restating the budget at actual volume. It does not address guidelines, deadlines or communication.",
+    "3": "A capital expenditures budget covers long-term asset purchases and is prepared years in advance. It is unrelated to the breakdown in process discipline described here."
+   },
+   "src": "gawad"
   }
  ],
  "3-2": [
@@ -1057,6 +1146,376 @@
     "1": "While a flexible budget can be prepared for any level of activity, this is not the best answer to the question among the answer choices given.",
     "2": "Fixed costs are the same for any level of activity within the relevant range. Thus, a flexible budget is not necessary to control fixed factory overhead. A flexible budget is necessary to control direct materials and direct labor if the actual activity level differs from static budget activity level."
    }
+  },
+  {
+   "q": "A continuous profit plan",
+   "o": [
+    "Is an annual plan that is part of a 5-year plan.",
+    "Is a plan that is revised monthly or quarterly.",
+    "Works best for a company that can reliably forecast events a year or more into the future.",
+    "Is a plan devised by a full-time planning staff."
+   ],
+   "a": 1,
+   "e": "A continuous plan is one that is automatically prepared for a certain period of time ahead of the present. For example, a 1-year continuous plan will be prepared at the end of every month for the next 12 months.",
+   "wrongWhy": {
+    "0": "A continuous plan does not need to be part of a larger 5-year plan.",
+    "2": "A continuous plan works for any company, whether or not they can accurately forecast more than a year into the future.",
+    "3": "A continuous plan may or may not be produced by a full-time planning staff."
+   }
+  },
+  {
+   "q": "A continuous (rolling) budget",
+   "o": [
+    "Presents the plan for only one level of activity and does not adjust to changes in the level of activity.",
+    "Drops the current month or quarter and adds a future month or quarter as the current month or quarter is completed.",
+    "Presents planned activities for a period but does not present a firm commitment.",
+    "Presents the plan for a range of activity so that the plan can be adjusted for changes in activity."
+   ],
+   "a": 1,
+   "e": "A continuous budget, also called a rolling budget, is one that is prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months.",
+   "wrongWhy": {
+    "0": "This is not the description of a rolling budget. \"Continuous\" or \"rolling\" merely identifies a budget that has been prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months. This is a description of a static budget. A static budget is developed for one specific activity level. A static budget may be in the form of a rolling budget, but it may also be an annual budget, that is, a budget prepared for a full fiscal year prior to the beginning of that fiscal year.",
+    "2": "This is not the description of a rolling budget. \"Continuous\" or \"rolling\" merely identifies a budget that has been prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months. No type of budget should present a firm commitment. A budget should be used as a guide, a motivating device, and a control tool; but it should be able to be revised if necessary. If conditions change during the budget period, the budget should not be used as an excuse for not doing something that is strategically important to the company, such as acting on an unforeseen business opportunity that arises. The statement “it’s not in the budget” should not be used.",
+    "3": "This is not the description of a rolling budget. \"Continuous\" or \"rolling\" merely identifies a budget that has been prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months. No type of budgeting presents the plan for a range of activity so the plan can be adjusted for changes in activity, but this is close to the description of a flexible budget. A flexible budget takes the variable revenues and costs as they are planned in the master budget (the static budget) and adjusts the master budget amounts to what the budgeted amounts would have been if the actual activity levels had been used in preparing the budget. A flexible budget can be prepared only after the actual level of activity is known. A flexible budget may be in the form of a rolling budget, but it may also be an annual budget, that is, a budget prepared for a full fiscal year prior to the beginning of that fiscal year."
+   }
+  },
+  {
+   "q": "A continuous budget is one that",
+   "o": [
+    "is available for a specified future period by adding a period to the period that just ended.",
+    "is created after the organization has been operating for at least one period.",
+    "is adjusted throughout the period for changing environmental factors.",
+    "uses the prior period's actual results as the current period's budget."
+   ],
+   "a": 0,
+   "e": "At all times, a continuous budget covers a set number of months, quarters, or years into the future. Each month or quarter, the month or quarter just completed is dropped and a new monthly or quarterly budget is added to the end of the budget.",
+   "wrongWhy": {
+    "1": "A continuous budget can be created at any time, not just after the organization has been operating for at least one period.",
+    "2": "A continuous budget is not adjusted throughout the period for changing environmental factors.",
+    "3": "A continuous budget does not use the prior period’s actual results as the current period’s budget."
+   }
+  },
+  {
+   "q": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is a",
+   "o": [
+    "sales budget.",
+    "flexible budget.",
+    "rolling budget.",
+    "master budget."
+   ],
+   "a": 2,
+   "e": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is a rolling budget. A rolling budget is a budget that is prepared for a certain period of time ahead of the present. For example, a one-year continuous, or rolling, budget would be prepared at the end of every month for the next twelve months.",
+   "wrongWhy": {
+    "0": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is not a sales budget. The sales budget is the first operating budget to be prepared in the process of developing the master budget for the year. It incorporates the expected sales in units of each product and each product’s expected selling price. The sales budget is based on the firm’s forecasted sales level, its short- and long-term objectives, and its production capacity. Since it is part of the development of the master budget, the sales budget is developed using just one projected sales level. Please see the correct answer explanation for more information.",
+    "1": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is not a flexible budget. A flexible budget is a budget in which the master budget amounts have been adjusted to what the budgeted amounts would have been if the actual activity supporting those amounts had been used in preparing the budget. Please see the correct answer explanation for more information.",
+    "3": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is not a master budget. A master budget is a budget that expresses the operating and financial plans of management for a fiscal year, and each item in it is developed using an assumption that includes just one projected activity level. Please see the correct answer explanation for more information."
+   }
+  },
+  {
+   "q": "A company prepares a budget covering the next twelve months. At the end of each month it drops the month just completed and adds the same month of the following year, so that twelve months are always budgeted. This budget is best described as",
+   "o": [
+    "A static budget.",
+    "A continuous (rolling) budget.",
+    "A zero-based budget.",
+    "A project budget."
+   ],
+   "a": 1,
+   "e": "A continuous, or rolling, budget always keeps a constant number of future periods in view. As each period closes it is dropped and a new period is added at the far end, so management is never looking at a budget horizon that shrinks as the year progresses.",
+   "wrongWhy": {
+    "0": "A static budget is prepared for one planned level of activity and is not changed during the period. The defining feature here is the rolling horizon, not the level of activity.",
+    "2": "Zero-based budgeting describes how each amount is justified — every item is built up from zero each period. It says nothing about how far ahead the budget extends.",
+    "3": "A project budget follows a single project from beginning to end. It is not a recurring twelve-month horizon that rolls forward each month."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "In deciding whether to investigate a variance, management should primarily consider",
+   "o": [
+    "Whether the variance is favorable or unfavorable.",
+    "Whether the expected benefit of the investigation exceeds its cost.",
+    "The size of the department that reported the variance.",
+    "Whether the variance arose in a fixed cost or a variable cost."
+   ],
+   "a": 1,
+   "e": "Investigating a variance consumes management and accounting time, so it is itself a cost. A variance is worth investigating only when the expected benefit — correcting a problem, updating an out-of-date standard, preventing a recurrence — is greater than the cost of finding out what happened.",
+   "wrongWhy": {
+    "0": "Direction alone is not the test. A favorable variance can signal an obsolete standard or a shortcut that will cause problems later, and a small unfavorable variance may not be worth pursuing.",
+    "2": "Department size does not determine whether an investigation pays for itself. A small department can produce a variance that matters, and a large one can produce a trivial variance.",
+    "3": "Both fixed and variable costs produce variances worth investigating. The cost behavior pattern helps explain the variance but does not decide whether to look into it."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following is the best reason for investigating a favorable variance?",
+   "o": [
+    "Favorable variances never need to be investigated.",
+    "It may signal an out-of-date standard, or a quality shortcut that will create problems in a later period.",
+    "It automatically indicates good performance that should be rewarded.",
+    "It removes the need to prepare a flexible budget."
+   ],
+   "a": 1,
+   "e": "A favorable variance is not automatically good news. It may mean the standard is too loose and no longer reflects current conditions, or that a cost was avoided in a way that stores up trouble — cheaper materials that raise the defect rate, or deferred maintenance that causes downtime later.",
+   "wrongWhy": {
+    "0": "Treating favorable variances as automatically acceptable is exactly the mistake this reasoning warns against. Investigation criteria should be applied to variances in both directions.",
+    "2": "Sometimes a favorable variance does reflect good performance, but that is a conclusion an investigation reaches, not an assumption made before one.",
+    "3": "The flexible budget is what makes a meaningful variance possible in the first place, by restating the budget at the actual level of activity. Nothing about a favorable variance removes that need."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company investigates any cost variance greater than $10,000 or 5% of the budgeted amount, whichever is lower. Based on the data below, which item must be investigated?\nItem — Columns: | Budgeted cost | Variance\nItem A: | $150,000 | $8,000\nItem B: | $400,000 | $9,000\nItem C: | $60,000 | $2,500\nItem D: | $900,000 | $9,500",
+   "o": [
+    "Item A.",
+    "Item B.",
+    "Item C.",
+    "Item D."
+   ],
+   "a": 0,
+   "e": "For each item the threshold is the lower of $10,000 and 5% of the budgeted amount. Item A: 5% of $150,000 is $7,500, which is lower than $10,000, so the threshold is $7,500 and the $8,000 variance exceeds it. Item A must be investigated.",
+   "wrongWhy": {
+    "1": "For Item B, 5% of $400,000 is $20,000, so the lower threshold is $10,000. The $9,000 variance falls below it.",
+    "2": "For Item C, 5% of $60,000 is $3,000, which is the lower threshold. The $2,500 variance falls below it.",
+    "3": "For Item D, 5% of $900,000 is $45,000, so the lower threshold is $10,000. The $9,500 variance falls just below it."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A small unfavorable direct materials usage variance has appeared in each of the last six months. Management should",
+   "o": [
+    "Ignore it, because each individual month's amount is immaterial.",
+    "Investigate it, because a variance that persists in the same direction suggests the standard or the process is wrong.",
+    "Write the accumulated amount off to cost of goods sold.",
+    "Revise the flexible budget so that it matches actual results."
+   ],
+   "a": 1,
+   "e": "Materiality is not judged one month at a time. A variance that recurs in the same direction period after period is evidence of something systematic — an outdated standard, a change in material quality, or a process that no longer performs as assumed — and the accumulated effect over a year can be large.",
+   "wrongWhy": {
+    "0": "Judging each month in isolation is what allows a persistent problem to escape attention. The pattern itself is the signal, regardless of the size of any single month.",
+    "2": "Writing the amount off records the effect in the accounts but does nothing about the cause, which will keep producing the same variance next month.",
+    "3": "Restating the budget to agree with actual results eliminates the variance on paper and destroys the budget's value as a control tool. The point of the comparison is to expose differences, not hide them."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following is least likely to justify investigating a variance?",
+   "o": [
+    "The variance is large in both dollar terms and percentage terms.",
+    "The variance has recurred for several consecutive periods.",
+    "The variance arose in a cost that no one in the organization is able to control.",
+    "The variance arose in a cost that is critical to product quality."
+   ],
+   "a": 2,
+   "e": "An investigation is worthwhile only if it can lead to action. When a cost is genuinely outside anyone's control — a tax rate change or a commodity price set in a world market — investigating explains the number but cannot change the outcome, so the expected benefit is small.",
+   "wrongWhy": {
+    "0": "Size in both absolute and relative terms is the most common trigger for investigation, because a variance that is large on both measures is unlikely to be random.",
+    "1": "A recurring variance points to a systematic cause such as an out-of-date standard, and investigating it can prevent the same difference arising again.",
+    "3": "A variance in a cost critical to quality deserves attention even when small, because the underlying cause may affect the product itself and reach the customer."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A project budget differs from the annual operating budget principally because a project budget",
+   "o": [
+    "Covers exactly one accounting period.",
+    "Follows a specific project from beginning to end, often crossing departments and more than one accounting period.",
+    "Is prepared only for capital expenditures.",
+    "Must always be developed using zero-based budgeting."
+   ],
+   "a": 1,
+   "e": "A project budget is organized around a project rather than around a period or a department. It covers the whole life of the project, from initiation to completion, and gathers the costs from every department involved, so it commonly spans several accounting periods.",
+   "wrongWhy": {
+    "0": "That describes the annual operating budget. The project budget is defined by the project's own timeline, which rarely coincides with a single fiscal year.",
+    "2": "Many project budgets do involve capital spending, but a project budget can equally cover a marketing campaign, a system implementation or a research programme with no capital asset at all.",
+    "3": "Zero-based budgeting is a technique for justifying amounts. A project budget may or may not use it; the two ideas are independent."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which situation is best suited to project budgeting?",
+   "o": [
+    "Budgeting the monthly payroll of the accounting department.",
+    "Budgeting the construction of a new distribution centre expected to take eighteen months.",
+    "Budgeting routine annual maintenance costs.",
+    "Budgeting monthly sales by geographic region."
+   ],
+   "a": 1,
+   "e": "The construction has a defined beginning and end, spans more than one fiscal year, and draws on several departments. Those are exactly the conditions a project budget is designed for: costs are accumulated and controlled by project rather than by period.",
+   "wrongWhy": {
+    "0": "Departmental payroll is a recurring periodic cost with no defined end point. It belongs in the department's annual operating budget.",
+    "2": "Routine annual maintenance recurs every year and is planned by period, which is what the operating budget does.",
+    "3": "Monthly sales by region is periodic, recurring reporting. It fits the sales budget, not a project budget."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Life-cycle budgeting estimates",
+   "o": [
+    "Only the manufacturing costs of a product.",
+    "The revenues and costs of a product over its entire life, from research and development through to withdrawal from the market.",
+    "Costs for the current fiscal year only.",
+    "The remaining useful lives of the company's fixed assets."
+   ],
+   "a": 1,
+   "e": "Life-cycle budgeting looks at a product across its whole life rather than one year at a time. It brings research and development, design, production, marketing, distribution and customer service costs into a single picture so management can judge whether the product will be profitable overall.",
+   "wrongWhy": {
+    "0": "Manufacturing costs are only one stage. Confining the analysis to production hides the upstream design spending and the downstream service costs that often decide whether a product pays.",
+    "2": "A single fiscal year is what the annual operating budget covers. Life-cycle budgeting exists precisely because one year is too short a window for products with long development or service tails.",
+    "3": "That describes fixed asset records and depreciation schedules, which concern assets rather than products."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Life-cycle budgeting is most useful for a product that",
+   "o": [
+    "Has been sold unchanged for many years.",
+    "Requires heavy research, development and design spending before the first unit is sold.",
+    "Has no fixed costs.",
+    "Is purchased finished and resold without modification."
+   ],
+   "a": 1,
+   "e": "When a large share of a product's total cost is committed before any revenue arrives, judging the product on one year's manufacturing costs is misleading. Life-cycle budgeting spreads the development and design spending across the whole life so the product's true profitability becomes visible.",
+   "wrongWhy": {
+    "0": "A mature product with stable costs and a long history is adequately handled by the ordinary annual budget, because each year looks much like the last.",
+    "2": "Every product carries some fixed costs, and the absence of fixed costs would not be the reason for choosing a life-cycle view.",
+    "3": "A reseller incurs no development or design costs, so the upstream stages that make life-cycle budgeting valuable are absent."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which cost would be included in a product's life-cycle budget but excluded from the conventional product cost reported for a single year?",
+   "o": [
+    "Direct materials used during the current year.",
+    "Product design costs incurred two years before launch and customer-support costs incurred after the final sale.",
+    "Factory rent for the current year.",
+    "Direct labor incurred during the current year."
+   ],
+   "a": 1,
+   "e": "The life-cycle budget captures every cost caused by the product, including the upstream costs incurred before the product reaches the market and the downstream costs incurred after the last unit is sold. Conventional annual product costing recognizes neither.",
+   "wrongWhy": {
+    "0": "Direct materials used in the current year are part of the conventional product cost for that year, so they appear in both views.",
+    "2": "Current-year factory rent is part of manufacturing overhead in the conventional annual cost, so it is not unique to the life-cycle view.",
+    "3": "Current-year direct labor is a conventional product cost and appears in both the annual figures and the life-cycle budget."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company is preparing a life-cycle budget for a new product. Research and development is budgeted at $600,000, design at $200,000, marketing and distribution at $400,000, and customer service at $150,000. Manufacturing cost is budgeted at $18 per unit, and 100,000 units are expected to be sold over the product's life. The budgeted life-cycle cost per unit is",
+   "o": [
+    "$18.00.",
+    "$31.50.",
+    "$13.50.",
+    "$30.00."
+   ],
+   "a": 1,
+   "e": "The costs that do not vary with units are added together and spread over the expected life volume: $600,000 + $200,000 + $400,000 + $150,000 = $1,350,000, divided by 100,000 units, is $13.50 per unit. Adding the $18.00 manufacturing cost per unit gives a life-cycle cost of $31.50 per unit.",
+   "wrongWhy": {
+    "0": "$18.00 is the manufacturing cost per unit alone. Using it as the life-cycle cost ignores the $1,350,000 of development, design, marketing and service costs the product also causes.",
+    "2": "$13.50 is only the non-manufacturing portion spread over the life volume. The manufacturing cost per unit must be added to it.",
+    "3": "$30.00 results from omitting one of the four non-manufacturing cost pools. All four belong in the life-cycle budget."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company budgets variable costs of $6 per unit and fixed costs of $120,000 for the year, based on planned production of 40,000 units. Actual production was 45,000 units. The flexible budget total cost for the actual level of production is",
+   "o": [
+    "$360,000.",
+    "$390,000.",
+    "$405,000.",
+    "$270,000."
+   ],
+   "a": 1,
+   "e": "The flexible budget applies the budgeted rates to the actual level of activity. Variable costs become 45,000 units × $6 = $270,000. Fixed costs stay at the static budget amount of $120,000, because fixed costs do not flex within the relevant range. The flexible budget total is $390,000.",
+   "wrongWhy": {
+    "0": "$360,000 is the static budget: 40,000 units × $6 plus $120,000 of fixed cost. That is the original plan, not the budget restated at actual volume.",
+    "2": "$405,000 results from flexing the fixed costs as well, by applying a combined $9 per unit rate to 45,000 units. Fixed costs must remain at $120,000.",
+    "3": "$270,000 is the variable cost component only. The fixed costs still have to be added."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company's static budget was based on sales of 10,000 units with a budgeted contribution margin of $12 per unit. Actual sales were 11,000 units and the actual contribution margin earned was $126,500. The flexible budget variance for contribution margin is",
+   "o": [
+    "$6,500 favorable.",
+    "$5,500 unfavorable.",
+    "$12,000 favorable.",
+    "$5,500 favorable."
+   ],
+   "a": 1,
+   "e": "The flexible budget contribution margin is 11,000 units × $12 = $132,000. The flexible budget variance compares actual results with the flexible budget: $126,500 − $132,000 = $5,500 unfavorable. The company sold more units than planned but earned less contribution per unit than budgeted.",
+   "wrongWhy": {
+    "0": "$6,500 is the difference between actual contribution margin of $126,500 and the static budget of $120,000. That combines the volume effect with the rate effect instead of separating them.",
+    "2": "$12,000 favorable is the sales volume variance: the flexible budget of $132,000 less the static budget of $120,000. It measures the effect of selling 1,000 extra units, not the flexible budget variance.",
+    "3": "The direction is wrong. Actual contribution margin of $126,500 is below the flexible budget of $132,000, so the variance is unfavorable."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company budgeted a selling price of $25 per unit and planned to sell 8,000 units. It actually sold 8,600 units at an average price of $24. Flexible budget revenue is",
+   "o": [
+    "$200,000.",
+    "$206,400.",
+    "$215,000.",
+    "$204,000."
+   ],
+   "a": 2,
+   "e": "The flexible budget uses the budgeted selling price at the actual sales volume: 8,600 units × $25 = $215,000. Comparing that figure with actual revenue of $206,400 isolates the effect of the price shortfall from the effect of selling more units than planned.",
+   "wrongWhy": {
+    "0": "$200,000 is the static budget revenue, 8,000 units × $25. It has not been restated for the actual volume of 8,600 units.",
+    "1": "$206,400 is actual revenue, 8,600 units × the actual $24 price. The flexible budget must use the budgeted price, not the actual one.",
+    "3": "$204,000 does not correspond to any meaningful combination of the budgeted and actual prices and volumes."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following is part of the financial budget rather than the operating budget?",
+   "o": [
+    "The direct labor usage budget.",
+    "The budgeted balance sheet.",
+    "The nonmanufacturing budgets.",
+    "The budgeted income statement."
+   ],
+   "a": 1,
+   "e": "The master budget has two halves. The operating budget is the budgeted income statement together with every schedule that supports it. The financial budget is the capital expenditures budget, the cash budget, the budgeted balance sheet and the budgeted statement of cash flows.",
+   "wrongWhy": {
+    "0": "The direct labor usage budget supports the cost of goods manufactured and therefore the budgeted income statement, placing it in the operating budget.",
+    "2": "The nonmanufacturing budgets — research and development, selling and distribution, administrative — feed the budgeted income statement and belong to the operating budget.",
+    "3": "The budgeted income statement is the end point of the operating budget, not part of the financial budget."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The operating budget culminates in the",
+   "o": [
+    "Cash budget.",
+    "Budgeted income statement.",
+    "Budgeted balance sheet.",
+    "Capital expenditures budget."
+   ],
+   "a": 1,
+   "e": "Every schedule in the operating budget — sales, production, materials, labor, overhead, inventories, cost of goods manufactured, cost of goods sold and the nonmanufacturing budgets — feeds into the budgeted income statement, which is where the operating budget ends.",
+   "wrongWhy": {
+    "0": "The cash budget belongs to the financial budget. It is the last budget prepared before the budgeted financial statements, but it is not the end point of the operating budget.",
+    "2": "The budgeted balance sheet is part of the financial budget and is prepared after the cash budget.",
+    "3": "The capital expenditures budget is part of the financial budget and is prepared years in advance, before the annual budget cycle begins."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A master budget is best described as",
+   "o": [
+    "A budget covering the manufacturing function only.",
+    "A comprehensive set of budgets covering all phases of operations, made up of the operating budget and the financial budget.",
+    "A budget that is revised whenever actual volume differs from the planned volume.",
+    "The company's long-range strategic plan."
+   ],
+   "a": 1,
+   "e": "The master budget, also called the comprehensive or annual budget, is the company's complete financial plan for the period. It consists of the operating budget, ending in the budgeted income statement, and the financial budget, ending in the budgeted balance sheet and budgeted statement of cash flows.",
+   "wrongWhy": {
+    "0": "The master budget covers selling, administrative, research, financing and investing activities as well as manufacturing.",
+    "2": "A budget restated at the actual level of activity is a flexible budget. The master budget is prepared at one planned level and is therefore a static budget.",
+    "3": "The strategic plan sets goals and direction over the long term. The master budget translates the near-term portion of that plan into quantified financial statements."
+   },
+   "src": "gawad"
   }
  ],
  "3-3": [
@@ -1456,7 +1915,8 @@
    "e": "Assuming all variable costs per unit and all fixed costs in total will be the same for the budget period as they were for the last fiscal year, the flexible budget total costs will be: Direct labor ($200,000 ÷ 100,000) × 110,000 $220,000 Direct materials ($100,000 ÷ 100,000) × 110,000 110,000 Variable manufacturing overhead ($100,000 ÷ 100,000) × 110,000 110,000 Variable selling and administrative ($50,000 ÷ 100,000) × 110,000 55,000 Fixed manufacturing overhead 100,000 Fixed selling and administrative 100,000 Total costs $695,000",
    "wrongWhy": {
     "2": "$715,000 is the total costs reported for the last fiscal year when the company produced 100,000 units, divided by 100,000 and the result multiplied by 110,000. However, some of those costs were fixed costs. Fixed costs do not change with changes in the activity level, as long as the volume remains within the relevant range. Since the question does not state that a volume of 110,000 units is outside the relevant range (and does not give an increased total fixed cost figure for producing and selling 110,000 units), the only possible assumption is that fixed costs will not change in total. Therefore, it is not appropriate to increase the fixed costs for the increase in production and sales expected for the budget period.",
-    "3": "$650,000 is the total costs reported for the last fiscal year when the company produced 100,000 units. The company plans to produce and sell 110,000 units during the budget period, and variable expenses for 110,000 units will be greater in total than they were for 100,000 units."
+    "3": "$650,000 is the total costs reported for the last fiscal year when the company produced 100,000 units. The company plans to produce and sell 110,000 units during the budget period, and variable expenses for 110,000 units will be greater in total than they were for 100,000 units.",
+    "1": "$450,000 is the variable cost to produce and sell 100,000 units. Total cost includes fixed costs as well as variable costs; and the flexible budget cost should be based on 110,000 units, not 100,000 units. Furthermore, the total cost to produce and sell 100,000 units during the last fiscal year was $650,000, and the cost to produce and sell 110,000 units during the budget period would not be $200,000 less than the cost to produce and sell 100,000 units."
    }
   },
   {
@@ -1743,7 +2203,8 @@
    "e": "The formula for inventory is: Beginning Inventory + Units Produced (or Purchased) − Units Sold = Ending Inventory. If you have any 3 of those numbers, you can calculate the 4th number. Here, we have beginning inventory, sold units, and ending inventory. We also know that 10% of all units produced are not usable. Beginning inventory = 470 Units sold = 6,300 Ending inventory = 590 The calculation of good units to be produced can be accomplished with a simple linear equation, following the inventory formula above: 470 + X − 6,300 = 590 X = 6,420 6,420 is the number of good units that are needed. However, the question asks how many units should be produced, taking into consideration the fact that 10% of the units produced will be defective. The equation to calculate how many units need to be produced in order to result in 6,420 good units after the bad units have been thrown away is: .90X = 6,420 X = 7,133",
    "wrongWhy": {
     "1": "This covers the sales forecast as well as the desired ending inventory but forgets about the beginning inventory and also the fact that 10% of production will not pass inspection. See the correct answer for a full explanation.",
-    "2": "This answer results from incorrectly calculating the total production required in order to compensate for the 10% that do not pass final inspection. To adjust for the defective units, it is necessary to divide the number of good units needed by 0.90 instead of multiplying the number of good units needed by 1.10."
+    "2": "This answer results from incorrectly calculating the total production required in order to compensate for the 10% that do not pass final inspection. To adjust for the defective units, it is necessary to divide the number of good units needed by 0.90 instead of multiplying the number of good units needed by 1.10.",
+    "0": "This calculation incorrectly assumes that all of the units to be sold as well as the required units in ending inventory will need to be produced this year. However, 470 of those units are already complete. The first step is to determine the good units that need to be produced, then adjust for the 10% that will be spoiled. In this calculation, the 10% spoilage was factored into the equation prior to subtracting the beginning inventory. See the correct answer for a complete explanation."
    }
   },
   {
@@ -1921,6 +2382,567 @@
     "2": "The financial budget includes the master budget balance sheet, the budgeted statement of cash flows, the cash budget, and the capital budget. The balance sheet is an important part of the financial budget as it pulls everything together at the end.",
     "3": "The financial budget includes the master budget balance sheet, the budgeted statement of cash flows, the cash budget, and the capital budget. The capital budget is necessary as it demonstrates where large capital expenditures will be made and how capital will be used. If capital expenditures for the coming year will affect the balance sheet, income statement and cash flows, these capital expenditures must be reflected in the budgeted balance sheet, income statement and cash flow statement, so the capital budget is required in order to develop these other budgets."
    }
+  },
+  {
+   "q": "The budgeting cycle includes all of the following except",
+   "o": [
+    "Planning the performance of the company for the coming budget period.",
+    "Comparing actual results with budgeted results during the period.",
+    "Investigating variances from the plan and making operational changes.",
+    "Ending all further planning activity once the budget has been approved."
+   ],
+   "a": 3,
+   "e": "The budgeting cycle runs throughout the year. Managers plan the coming period, actual results are reported and compared with the budget monthly or quarterly, variances are investigated and operations adjusted, and market feedback and external conditions are monitored continuously as planning for the next period begins. Approval of the budget is the start of the cycle, not the end of planning.",
+   "wrongWhy": {
+    "0": "Planning the company's performance for the coming period is the first stage of the cycle and produces the annual master budget or profit plan.",
+    "1": "Comparing actual with budgeted results during the period is what gives the budget its control function. Without it the cycle loses most of its value.",
+    "2": "Investigating variances and making operational changes — or revising the budget when an external event has made it unachievable — is a core stage of the cycle."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Throughout the budget period, actual results should be compared with budgeted results",
+   "o": [
+    "Only at the end of the fiscal year.",
+    "Monthly or quarterly.",
+    "Only when management suspects a large variance has occurred.",
+    "Only when the external auditors request the comparison."
+   ],
+   "a": 1,
+   "e": "Reporting actual against budget on a monthly or quarterly basis is what allows problems to be identified while there is still time to act on them. Waiting until the year is over reduces the budget to a historical record.",
+   "wrongWhy": {
+    "0": "A year-end comparison arrives far too late to change anything. The purpose of the comparison is to trigger corrective action during the period.",
+    "2": "Waiting for a suspicion of a problem defeats the purpose. Regular comparison is how problems are discovered in the first place.",
+    "3": "Budget-to-actual reporting is an internal management control process. It is prepared for management, not for the external auditors."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Midway through the year an unexpected external event makes the sales budget impossible to achieve. Management should",
+   "o": [
+    "Hold managers to the original budget so that budget discipline is maintained.",
+    "Investigate, adjust operations where possible, and revise the budget if the original target genuinely cannot be met.",
+    "Abandon budgeting for the remainder of the year.",
+    "Reclassify the shortfall as a favorable variance."
+   ],
+   "a": 1,
+   "e": "When a variance arises from something operational, the operations are changed. When the budget itself has been made unachievable by an external situation, the budget is revised. Continuing to measure managers against a target that external events have made impossible destroys the credibility of the whole process.",
+   "wrongWhy": {
+    "0": "Holding managers to an impossible target removes any motivational value the budget had and produces variances that carry no information about performance.",
+    "2": "Abandoning the budget leaves the company with no plan and no control benchmark for the rest of the year. The budget is revised, not discarded.",
+    "3": "Relabelling an unfavorable outcome does not change it. It misrepresents performance and hides the problem from the people who need to act on it."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Within the budgeting cycle, management accountants primarily",
+   "o": [
+    "Set the company's strategic goals.",
+    "Assist managers in planning the budget and in investigating variances from the plan.",
+    "Approve the company's capital expenditure proposals.",
+    "Negotiate selling prices with major customers."
+   ],
+   "a": 1,
+   "e": "Management accountants work alongside operating managers at both ends of the cycle: helping build the plan for the coming period, and then helping investigate the variances between actual and budgeted results so that the right operational adjustments can be identified.",
+   "wrongWhy": {
+    "0": "Strategic goals are set by senior management and the board. The budget translates those goals into quantified plans.",
+    "2": "Capital expenditure approval rests with senior management and, for large projects, the board. Management accountants provide the analysis supporting the decision.",
+    "3": "Pricing negotiations belong to the sales and marketing function. Management accountants supply cost and margin information that supports those negotiations."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Monitoring market feedback and external conditions throughout the budget period is important mainly because it",
+   "o": [
+    "Eliminates variances from the budget.",
+    "Provides the information needed to plan the next budget period.",
+    "Is required by generally accepted accounting principles.",
+    "Removes the need to prepare a cash budget."
+   ],
+   "a": 1,
+   "e": "The budgeting cycle is continuous. What managers observe during the current period — a decline in demand for a product line, a change in a competitor's pricing, a shift in input costs — becomes the basis for the assumptions used in next period's budget.",
+   "wrongWhy": {
+    "0": "Monitoring explains variances and may prompt action, but it cannot eliminate the differences between plan and outcome.",
+    "2": "Budgeting is an internal management process. GAAP governs external financial reporting and does not require budgets at all.",
+    "3": "The cash budget is prepared regardless. Monitoring external conditions may change the assumptions inside it but never removes the need for it."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The direct materials usage budget is developed primarily from the production budget together with the",
+   "o": [
+    "Cash budget.",
+    "Bill of materials.",
+    "Budgeted balance sheet.",
+    "Capital expenditures budget."
+   ],
+   "a": 1,
+   "e": "The bill of materials specifies which materials and how much of each are required to manufacture one unit of a product, in what sequence and in which department. Applying it to the number of units to be produced gives the quantity of each direct material needed for production.",
+   "wrongWhy": {
+    "0": "The cash budget is prepared near the end of the process and draws on the materials budgets, not the other way round.",
+    "2": "The budgeted balance sheet is one of the final outputs of the master budget. It does not supply input quantities for production.",
+    "3": "The capital expenditures budget covers long-term assets. It may create new production needs, but it does not specify the material content of a unit."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company plans to produce 4,050 birdhouses. Each birdhouse requires 1.5 board feet of oak. The quantity of oak that must be available for production is",
+   "o": [
+    "2,700 board feet.",
+    "6,075 board feet.",
+    "4,050 board feet.",
+    "6,750 board feet."
+   ],
+   "a": 1,
+   "e": "The direct materials usage budget multiplies the units to be produced by the standard quantity allowed per unit: 4,050 units × 1.5 board feet = 6,075 board feet.",
+   "wrongWhy": {
+    "0": "2,700 divides the units by 1.5 instead of multiplying. Each unit requires more than one board foot, so the quantity of material must exceed the number of units.",
+    "2": "4,050 is the number of units to be produced, not the quantity of material. It ignores the 1.5 board feet required per unit.",
+    "3": "6,750 multiplies 4,500 units by 1.5. The production budget calls for 4,050 units, not 4,500."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company plans to produce 4,050 units. Each unit requires 1.5 board feet of oak at a budgeted cost of $10 per board foot. The budgeted cost of direct materials to be used in production is",
+   "o": [
+    "$40,500.",
+    "$60,750.",
+    "$27,000.",
+    "$67,500."
+   ],
+   "a": 1,
+   "e": "The usage budget is quantity multiplied by cost: 4,050 units × 1.5 board feet = 6,075 board feet, and 6,075 × $10 = $60,750. Note that this is the cost of materials to be used, before any adjustment for desired ending materials inventory, which belongs in the purchases budget.",
+   "wrongWhy": {
+    "0": "$40,500 multiplies the 4,050 units directly by $10, ignoring that each unit consumes 1.5 board feet rather than one.",
+    "2": "$27,000 divides the units by 1.5 before applying the price, reversing the calculation.",
+    "3": "$67,500 applies the 1.5 board feet and $10 price to 4,500 units instead of the 4,050 units the production budget calls for."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The standard cost per direct labor hour used in the direct labor usage budget should include",
+   "o": [
+    "Wages only.",
+    "Wages plus employer payroll taxes, workers' compensation, unemployment taxes, insurance premiums, pension contributions and other employee benefits.",
+    "Wages plus an allocation of manufacturing overhead.",
+    "Wages plus the cost of indirect labor."
+   ],
+   "a": 1,
+   "e": "The standard rate per direct labor hour is meant to capture the full cost to the employer of an hour of direct labor. That includes the employer's share of social security and medicare, workers' compensation insurance, federal and state unemployment taxes, life and health insurance premiums, pension contributions and any other employee benefits provided.",
+   "wrongWhy": {
+    "0": "Wages alone understate the true cost of an hour of labor. The employer bears substantial additional costs for every hour worked.",
+    "2": "Manufacturing overhead is budgeted and applied separately through the overhead rate. Including it in the labor rate would double count it.",
+    "3": "Indirect labor cannot be traced to a specific product and is a manufacturing overhead cost, so it belongs in the overhead budget, not the direct labor rate."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company plans to produce 2,550 benches. Each bench requires 2.0 direct labor hours at a budgeted rate of $20 per hour. The budgeted cost of direct labor for benches is",
+   "o": [
+    "$51,000.",
+    "$102,000.",
+    "$50,000.",
+    "$204,000."
+   ],
+   "a": 1,
+   "e": "Units to produce × standard hours per unit × standard rate per hour: 2,550 × 2.0 = 5,100 direct labor hours, and 5,100 × $20 = $102,000.",
+   "wrongWhy": {
+    "0": "$51,000 applies the $20 rate to the 2,550 units instead of to the 5,100 hours those units require.",
+    "2": "$50,000 does not follow from any combination of the figures given.",
+    "3": "$204,000 applies four hours per unit rather than the two hours the standard allows."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company budgets fixed manufacturing overhead of $33,240 and variable manufacturing overhead of $22,160 for a year in which 11,080 direct labor hours are budgeted. Overhead is applied on the basis of direct labor hours. The total predetermined overhead application rate is",
+   "o": [
+    "$2.00 per direct labor hour.",
+    "$3.00 per direct labor hour.",
+    "$5.00 per direct labor hour.",
+    "$8.00 per direct labor hour."
+   ],
+   "a": 2,
+   "e": "Total budgeted overhead is $33,240 + $22,160 = $55,400. Divided by the 11,080 budgeted direct labor hours, the total predetermined rate is $5.00 per direct labor hour, made up of $3.00 fixed and $2.00 variable.",
+   "wrongWhy": {
+    "0": "$2.00 is the variable component only, $22,160 ÷ 11,080. Under absorption costing the fixed overhead is applied to production as well.",
+    "1": "$3.00 is the fixed component only, $33,240 ÷ 11,080. The variable component must be added to reach the total rate.",
+    "3": "$8.00 adds the two separate rates to a third figure that does not belong. The two components sum to $5.00."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company applies manufacturing overhead at $5.00 per direct labor hour. One product requires 1.0 direct labor hour per unit, and 3,550 units of it are budgeted for production. The manufacturing overhead applied to that product is",
+   "o": [
+    "$3,550.",
+    "$17,750.",
+    "$10,650.",
+    "$7,100."
+   ],
+   "a": 1,
+   "e": "Overhead applied equals the budgeted hours for the product multiplied by the application rate. The product requires 3,550 × 1.0 = 3,550 direct labor hours, and 3,550 × $5.00 = $17,750.",
+   "wrongWhy": {
+    "0": "$3,550 is the number of direct labor hours, not the overhead cost. The $5.00 rate still has to be applied.",
+    "2": "$10,650 applies a $3.00 rate, which is the fixed component only. The full $5.00 rate applies to production.",
+    "3": "$7,100 applies a $2.00 rate, which is the variable component only."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The number of allocation-base hours used to calculate the predetermined manufacturing overhead rate is taken from the",
+   "o": [
+    "Sales budget.",
+    "Direct labor usage budget, or from budgeted machine hours.",
+    "Cash budget.",
+    "Budgeted income statement."
+   ],
+   "a": 1,
+   "e": "The overhead rate is total budgeted overhead divided by the budgeted quantity of the allocation base. When overhead is applied on direct labor hours, those hours come from the direct labor usage budget; when it is applied on machine hours, the budgeted machine hours are used.",
+   "wrongWhy": {
+    "0": "The sales budget provides units to be sold. It drives production volume but does not itself state the labor or machine hours allowed.",
+    "2": "The cash budget is prepared much later and draws on the overhead budget rather than supplying data to it.",
+    "3": "The budgeted income statement is an output of the operating budget, assembled after the overhead budget is complete."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A product requires $108 of direct materials, 2.0 direct labor hours at $20 per hour, and manufacturing overhead applied at $5.00 per direct labor hour. The budgeted product cost per unit is",
+   "o": [
+    "$148.",
+    "$158.",
+    "$168.",
+    "$118."
+   ],
+   "a": 1,
+   "e": "The budgeted product cost per unit adds the three product cost elements: direct materials $108, direct labor 2.0 hours × $20 = $40, and manufacturing overhead 2.0 hours × $5 = $10. The total is $158 per unit.",
+   "wrongWhy": {
+    "0": "$148 omits the $10 of applied manufacturing overhead. Under absorption costing, overhead is a product cost and must be included.",
+    "2": "$168 applies overhead at $10 per hour rather than the $5 per hour rate given.",
+    "3": "$118 includes only direct materials and overhead, leaving out the $40 of direct labor."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company plans to hold 250 units of a product in finished goods inventory at year-end. The budgeted product cost is $158 per unit. The budgeted cost of that ending finished goods inventory is",
+   "o": [
+    "$37,000.",
+    "$39,500.",
+    "$27,000.",
+    "$39,000."
+   ],
+   "a": 1,
+   "e": "The ending finished goods inventory budget values the planned ending units at the budgeted product cost per unit: 250 units × $158 = $39,500. Under FIFO the current year's budgeted unit cost is the correct figure to use, because the units on hand at year-end will be the ones produced most recently.",
+   "wrongWhy": {
+    "0": "$37,000 values the units at $148, which omits the applied manufacturing overhead from the product cost.",
+    "2": "$27,000 does not correspond to the units and unit cost given.",
+    "3": "$39,000 values the units at $156 rather than the $158 budgeted product cost."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company plans to hold 1,100 board feet of oak in direct materials inventory at year-end. The budgeted cost is $12 per board foot. The budgeted cost of that ending direct materials inventory is",
+   "o": [
+    "$12,000.",
+    "$13,200.",
+    "$11,000.",
+    "$13,000."
+   ],
+   "a": 1,
+   "e": "The ending direct materials inventory budget values the planned ending quantity at the budgeted cost per unit of material: 1,100 board feet × $12 = $13,200.",
+   "wrongWhy": {
+    "0": "$12,000 values 1,000 board feet rather than the 1,100 the company plans to hold.",
+    "2": "$11,000 applies $10 per board foot instead of the $12 budgeted cost.",
+    "3": "$13,000 rounds the quantity or the rate rather than using the exact figures given."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company using FIFO finds that the budgeted cost of its beginning finished goods inventory differs from its budgeted current-year product cost per unit. The reason is that",
+   "o": [
+    "The company has made an error in the budget.",
+    "The beginning inventory was produced in the prior year, when labor and overhead costs differed from the amounts budgeted for the current year.",
+    "The beginning inventory must always be valued at zero.",
+    "Beginning and ending inventories are always valued at the same amount."
+   ],
+   "a": 1,
+   "e": "Under FIFO the units on hand at the start of the year were produced in the prior year and carry that year's costs. Direct labor rates and overhead application rates change from year to year, so the beginning inventory unit cost will normally differ from the unit cost budgeted for current-year production, which is used to value the ending inventory.",
+   "wrongWhy": {
+    "0": "The difference is a normal consequence of the FIFO cost flow assumption combined with changing cost rates, not a mistake.",
+    "2": "Beginning inventory is valued at its actual or budgeted prior-year cost. Valuing it at zero would understate cost of goods available for sale.",
+    "3": "The two are valued at different unit costs precisely because they were produced in different years under different cost conditions."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Budgeted cost of goods manufactured is calculated as",
+   "o": [
+    "Budgeted direct materials used, plus direct labor used, plus manufacturing overhead applied, adjusted for the change in work-in-process inventory.",
+    "Budgeted direct materials purchased, plus direct labor, plus manufacturing overhead.",
+    "Budgeted beginning finished goods, plus purchases, less ending finished goods.",
+    "Budgeted total manufacturing costs less ending finished goods inventory."
+   ],
+   "a": 0,
+   "e": "Cost of goods manufactured covers the units brought to completion during the period. It starts with the three product cost elements — direct materials used, direct labor used and manufacturing overhead applied — to give total manufacturing costs, then adds beginning work-in-process and deducts ending work-in-process.",
+   "wrongWhy": {
+    "1": "Materials purchased is not the same as materials used. The purchases figure includes materials that will sit in inventory rather than enter production.",
+    "2": "That is the cost of goods sold calculation for a reseller. Cost of goods manufactured concerns production, not sales.",
+    "3": "The adjustment in the cost of goods manufactured calculation is for work-in-process, not finished goods. Finished goods enters the cost of goods sold calculation."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company budgets direct materials used of $371,650, direct labor used of $221,600 and manufacturing overhead applied of $55,400. Beginning and ending work-in-process inventories are both budgeted at $5,000. Budgeted cost of goods manufactured is",
+   "o": [
+    "$648,650.",
+    "$653,650.",
+    "$643,650.",
+    "$593,250."
+   ],
+   "a": 0,
+   "e": "Total budgeted manufacturing costs are $371,650 + $221,600 + $55,400 = $648,650. Adding beginning work-in-process of $5,000 and deducting ending work-in-process of $5,000 leaves cost of goods manufactured unchanged at $648,650, because the two work-in-process amounts are equal.",
+   "wrongWhy": {
+    "1": "$653,650 adds the beginning work-in-process without deducting the ending balance. Both adjustments must be made.",
+    "2": "$643,650 deducts the ending work-in-process without adding the beginning balance.",
+    "3": "$593,250 omits one of the three cost elements from total manufacturing costs."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "If no significant change in work-in-process inventory is planned for the budget period, budgeted cost of goods manufactured will",
+   "o": [
+    "Exceed total budgeted manufacturing costs.",
+    "Equal total budgeted manufacturing costs.",
+    "Fall short of total budgeted manufacturing costs by the amount of the ending work-in-process inventory.",
+    "Equal budgeted cost of goods sold."
+   ],
+   "a": 1,
+   "e": "When no significant change in work-in-process is planned, beginning and ending work-in-process are budgeted at the same amount. Adding one and deducting the other leaves the total unchanged, so cost of goods manufactured equals total manufacturing costs.",
+   "wrongWhy": {
+    "0": "Cost of goods manufactured exceeds total manufacturing costs only when work-in-process is being run down, so that more is added at the beginning than deducted at the end.",
+    "2": "Only the change in work-in-process affects the result, not the level of the ending balance on its own.",
+    "3": "Cost of goods sold also reflects the change in finished goods inventory, so the two are equal only in the special case where finished goods inventory is unchanged as well."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Budgeted cost of goods sold is calculated as",
+   "o": [
+    "Budgeted cost of goods manufactured less budgeted ending finished goods inventory.",
+    "Budgeted beginning finished goods inventory, plus budgeted cost of goods manufactured, less budgeted ending finished goods inventory.",
+    "Budgeted beginning finished goods inventory, plus budgeted cost of goods manufactured, plus budgeted ending finished goods inventory.",
+    "Budgeted cost of goods manufactured plus budgeted ending finished goods inventory, less budgeted beginning finished goods inventory."
+   ],
+   "a": 1,
+   "e": "Beginning finished goods inventory plus cost of goods manufactured gives the budgeted cost of goods available for sale. Deducting the budgeted ending finished goods inventory leaves the cost of the units expected to be sold. For a reseller, purchases replaces cost of goods manufactured.",
+   "wrongWhy": {
+    "0": "Omitting the beginning inventory understates the goods available for sale and therefore understates cost of goods sold.",
+    "2": "Ending inventory is deducted, not added. The units still on hand at the end of the period have not been sold.",
+    "3": "This reverses the two inventory adjustments. Beginning inventory is added and ending inventory is deducted."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "A company budgets beginning finished goods inventory of $48,300, cost of goods manufactured of $648,650 and ending finished goods inventory of $62,250. Budgeted cost of goods sold is",
+   "o": [
+    "$634,700.",
+    "$662,700.",
+    "$648,650.",
+    "$696,950."
+   ],
+   "a": 0,
+   "e": "Beginning finished goods of $48,300 plus cost of goods manufactured of $648,650 gives cost of goods available for sale of $696,950. Deducting the ending finished goods inventory of $62,250 leaves budgeted cost of goods sold of $634,700.",
+   "wrongWhy": {
+    "1": "$662,700 adds the ending inventory and deducts the beginning inventory, reversing both adjustments.",
+    "2": "$648,650 is cost of goods manufactured alone, with neither inventory adjustment applied.",
+    "3": "$696,950 is the cost of goods available for sale. The ending inventory still has to be deducted."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The budgeted cost of the ending finished goods inventory used in the budgeted cost of goods sold schedule is taken from the",
+   "o": [
+    "Sales budget.",
+    "Ending inventories budget.",
+    "Cash budget.",
+    "Capital expenditures budget."
+   ],
+   "a": 1,
+   "e": "The ending inventories budget values the planned ending finished goods units at the budgeted product cost per unit. That figure is then carried into the budgeted cost of goods sold schedule and also appears as inventory on the budgeted balance sheet.",
+   "wrongWhy": {
+    "0": "The sales budget gives units to be sold and selling prices. It does not value the units remaining in inventory.",
+    "2": "The cash budget deals with receipts and disbursements. Inventory valuation is not a cash flow.",
+    "3": "The capital expenditures budget covers long-term assets, not inventory."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following costs belongs in the selling, marketing and distribution budget?",
+   "o": [
+    "The factory supervisor's salary.",
+    "Sales commissions and shipping-out costs.",
+    "Depreciation on production equipment.",
+    "Direct materials used in production."
+   ],
+   "a": 1,
+   "e": "The selling, marketing and distribution budget covers sales supervisory salaries, sales commissions, travel and entertainment, advertising and promotion, shipping-out expenses, and depreciation on furniture and equipment used by sales and marketing staff.",
+   "wrongWhy": {
+    "0": "A factory supervisor's salary is an indirect production cost and belongs in the manufacturing overhead budget.",
+    "2": "Depreciation on production equipment is a fixed manufacturing overhead cost, not a selling cost.",
+    "3": "Direct materials are a product cost budgeted in the direct materials usage and purchases budgets."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following costs belongs in the administrative and general expense budget?",
+   "o": [
+    "Advertising and promotion expenses.",
+    "Salaries of the accounting, legal, information technology and human resources staff.",
+    "Indirect factory labor.",
+    "Raw material purchases."
+   ],
+   "a": 1,
+   "e": "The administrative and general expense budget covers salaries and wages for management and support staff in administrative and staff departments such as accounting, legal, information technology and human resources, together with insurance, audit fees, office supplies and depreciation on administrative equipment.",
+   "wrongWhy": {
+    "0": "Advertising and promotion is a selling and marketing cost and belongs in the selling, marketing and distribution budget.",
+    "2": "Indirect factory labor cannot be traced to a product but is incurred in production, so it is a manufacturing overhead cost.",
+    "3": "Raw material purchases are budgeted in the direct materials purchases budget as part of the operating budget's production schedules."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The assumptions underlying the amounts in the nonmanufacturing budgets should be documented mainly because",
+   "o": [
+    "Generally accepted accounting principles require the documentation.",
+    "Revisions during the budget development process are far easier when the basis for each figure is known.",
+    "Documentation eliminates budgetary slack.",
+    "The documentation is needed to prepare the statement of cash flows."
+   ],
+   "a": 1,
+   "e": "Budgets are revised several times before senior management is satisfied. When the assumptions behind a figure are recorded — for example the individual employees and salaries behind budgeted administrative wages — a revision can be traced to its source and made accurately instead of being applied as an arbitrary percentage cut.",
+   "wrongWhy": {
+    "0": "Budgeting is an internal management process. GAAP governs external financial reporting and imposes no documentation requirement on budgets.",
+    "2": "Documentation makes slack easier to detect because the basis of each figure is visible, but it does not eliminate the incentive to build slack in.",
+    "3": "The statement of cash flows is prepared from the balance sheet and income statement. It does not depend on budget assumption documentation."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The first draft of the budgeted income statement is used by senior management to",
+   "o": [
+    "Record the year's results in the general ledger.",
+    "Evaluate whether budgeted net income is acceptable, using measures such as earnings per share or an industry average, and send changes back into the component budgets.",
+    "Calculate the company's actual tax liability for the year.",
+    "Replace the cash budget."
+   ],
+   "a": 1,
+   "e": "Senior management reviews the first draft against whatever measure it uses to judge performance — earnings per share, an industry average, a price-earnings ratio — and where the result falls short, changes are pushed back down into the supporting budgets. The cycle repeats until the budgeted result is acceptable.",
+   "wrongWhy": {
+    "0": "The general ledger records actual transactions. Budgeted amounts are planning figures and are never posted as results.",
+    "2": "Tax liability is computed on actual taxable income after the year ends. The budgeted income statement supports planning, including an estimate of tax, but not the actual liability.",
+    "3": "The cash budget deals with the timing of cash receipts and disbursements, which the income statement does not show. Neither replaces the other."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Budgeted net income affects the budgeted balance sheet through",
+   "o": [
+    "Accounts receivable.",
+    "Retained earnings in the equity section.",
+    "Inventory.",
+    "Accounts payable."
+   ],
+   "a": 1,
+   "e": "The budgeted income statement flows into the budgeted balance sheet the same way the actual income statement flows into the actual balance sheet: budgeted net income, less any budgeted dividends, increases retained earnings within equity.",
+   "wrongWhy": {
+    "0": "Accounts receivable is driven by budgeted credit sales and the expected collection pattern, not by net income.",
+    "2": "Inventory on the budgeted balance sheet comes from the ending inventories budget.",
+    "3": "Accounts payable follows from budgeted purchases and the company's payment policy."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The cash budget and the budgeted statement of cash flows differ in that the cash budget",
+   "o": [
+    "Classifies cash flows as operating, investing and financing.",
+    "Classifies cash flows as receipts and disbursements.",
+    "Is prepared after the budgeted balance sheet.",
+    "Covers financing activities only."
+   ],
+   "a": 1,
+   "e": "The cash budget is organized around receipts and disbursements, because its purpose is to show when cash comes in and goes out so that borrowings and investments can be planned. The budgeted statement of cash flows uses the three financial reporting categories of operating, investing and financing.",
+   "wrongWhy": {
+    "0": "That is the classification used in the budgeted statement of cash flows, not the cash budget.",
+    "2": "The order is the reverse. The cash budget must be prepared before the budgeted balance sheet, because the ending cash balance appears on it.",
+    "3": "The cash budget covers all cash movements — collections from customers, payments for materials and payroll, capital purchases and taxes — not financing alone."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Which one of the following is the correct order of preparation?",
+   "o": [
+    "Budgeted balance sheet, then cash budget, then budgeted statement of cash flows.",
+    "Cash budget, then budgeted balance sheet, then budgeted statement of cash flows.",
+    "Budgeted statement of cash flows, then cash budget, then budgeted balance sheet.",
+    "Cash budget, then budgeted statement of cash flows, then budgeted balance sheet."
+   ],
+   "a": 1,
+   "e": "The cash budget produces the ending cash balance that appears on the budgeted balance sheet, so it comes first. The budgeted statement of cash flows is derived from the budgeted balance sheet and budgeted income statement, so it comes last of the three.",
+   "wrongWhy": {
+    "0": "The balance sheet cannot be completed before the cash budget, because the cash figure on it comes from the cash budget.",
+    "2": "The budgeted statement of cash flows is derived from the other two statements and therefore cannot be prepared first.",
+    "3": "The budgeted statement of cash flows requires the completed budgeted balance sheet, so it cannot precede it."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "The ending cash balance calculated in the cash budget appears on the",
+   "o": [
+    "Budgeted income statement.",
+    "Budgeted balance sheet.",
+    "Capital expenditures budget.",
+    "Sales budget."
+   ],
+   "a": 1,
+   "e": "The cash budget's ending balance for the period is the cash figure reported in the current assets section of the budgeted balance sheet at that period end. That link is why the cash budget must be completed before the budgeted balance sheet can be prepared.",
+   "wrongWhy": {
+    "0": "The income statement reports revenues and expenses. Cash balances are balance sheet amounts.",
+    "2": "The capital expenditures budget lists approved projects and their funding. It feeds disbursements into the cash budget rather than receiving the ending balance from it.",
+    "3": "The sales budget reports budgeted units and revenue and is prepared long before the cash budget."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Preparing budgeted financial statements monthly rather than only annually is particularly valuable because it allows a company to",
+   "o": [
+    "Avoid preparing a cash budget.",
+    "Identify potential problems, such as a looming breach of a debt covenant, in time to take corrective action.",
+    "Eliminate unfavorable variances.",
+    "Postpone the capital expenditures budget."
+   ],
+   "a": 1,
+   "e": "Monthly budgeted statements reveal where the company will be at each point in the year rather than only at year-end. If the projections show a covenant such as a minimum current ratio being breached in the second quarter, management has time to adjust the plan before the breach actually occurs.",
+   "wrongWhy": {
+    "0": "The cash budget is the source of much of the information in the monthly statements. Preparing them more often increases the need for it.",
+    "2": "Variances arise from differences between plan and outcome. More frequent reporting surfaces them earlier; it does not remove them.",
+    "3": "The capital expenditures budget is prepared years in advance and must be in place before the annual budget is built."
+   },
+   "src": "gawad"
+  },
+  {
+   "q": "Unrealistic budgeting occurs when management",
+   "o": [
+    "Prepares a flexible budget in addition to a static budget.",
+    "Changes budgeted amounts in order to reach a desired result that operations cannot actually deliver.",
+    "Involves lower-level managers in the budget development process.",
+    "Revises the budget after an external event makes the original target unachievable."
+   ],
+   "a": 1,
+   "e": "Budgets are revised repeatedly during development, and the danger in that process is that management adjusts the numbers to produce an acceptable budgeted profit without any operational change that would make the new numbers achievable. The budget then reflects a wish rather than a plan.",
+   "wrongWhy": {
+    "0": "Preparing both a static and a flexible budget is normal practice and improves performance evaluation.",
+    "2": "Involving lower-level managers is participative budgeting, which improves both accuracy and acceptance.",
+    "3": "Revising a budget that external events have made unachievable is a legitimate part of the budgeting cycle. Unrealistic budgeting is the opposite case: changing the numbers with no basis for the change."
+   },
+   "src": "gawad"
   }
  ]
 }
