@@ -107,7 +107,7 @@
   },
   {
    "t": "h",
-   "v": "4. Step Costs (Semi-Fixed Costs)"
+   "v": "4. Semi-Fixed (Step) Costs"
   },
   {
    "t": "p",
@@ -1007,6 +1007,10 @@
    "v": "5. Variable Overhead Variances"
   },
   {
+   "t": "tip",
+   "v": "Scope note: HOCK covers variable overhead variances only in passing for the FMAA, while fixed overhead variances get the full treatment. Learn the two formulas below and be able to label a variance favourable or unfavourable — but if study time is short, put fixed overhead first."
+  },
+  {
    "t": "p",
    "v": "Variable overhead behaves like direct labor: it rises and falls with activity. So it splits into the same two pieces — a spending variance (did each hour of overhead cost what it should have?) and an efficiency variance (did we use the right number of hours?). Variable overhead is applied using an allocation base, almost always direct labor hours or machine hours. That base is the key to the whole topic: the efficiency variance is driven entirely by how many base hours were used, not by what the overhead itself cost."
   },
@@ -1500,7 +1504,49 @@
   },
   {
    "t": "h",
-   "v": "5. Marginal Analysis and Relevant Costs"
+   "v": "5. Margin of Safety and Target Profit"
+  },
+  {
+   "t": "p",
+   "v": "Breakeven tells you the point where profit is zero. Two questions follow immediately from it, and the exam asks both. First: how far can sales fall before we start losing money? That is the margin of safety. Second: how much must we sell to earn a specific profit, not just to break even? That is target profit volume."
+  },
+  {
+   "t": "def",
+   "term": "Margin of Safety",
+   "v": "The excess of budgeted or actual sales over breakeven sales. It measures how much sales can decline before the company reaches its breakeven point and begins to incur a loss. A larger margin of safety means lower operating risk."
+  },
+  {
+   "t": "f",
+   "l": "Margin of Safety Formulas",
+   "v": "Margin of Safety (units)   = Budgeted (or Actual) Unit Sales − Breakeven Unit Sales\nMargin of Safety ($)       = Budgeted (or Actual) Sales Revenue − Breakeven Sales Revenue\nMargin of Safety Ratio (%) = Margin of Safety ($) ÷ Budgeted (or Actual) Sales Revenue"
+  },
+  {
+   "t": "ex",
+   "l": "Margin of Safety — Ray Company",
+   "v": "Selling price $60, variable cost $35, so UCM = $25. Fixed costs = $150,000.\nBreakeven = $150,000 ÷ $25 = 6,000 units, or 6,000 × $60 = $360,000 in revenue.\n\nRay budgets sales of 10,000 units, or $600,000.\n\nMargin of safety in units   = 10,000 − 6,000 = 4,000 units\nMargin of safety in dollars = $600,000 − $360,000 = $240,000\nMargin of safety ratio      = $240,000 ÷ $600,000 = 40%\n\nReading: sales could fall by 40% before Ray moves into a loss."
+  },
+  {
+   "t": "def",
+   "term": "Target Profit Volume",
+   "v": "The level of sales required to earn a specified operating income. Fixed costs and the target profit are both amounts the contribution margin must cover, so the target profit is simply added to fixed costs in the numerator of the breakeven formula."
+  },
+  {
+   "t": "f",
+   "l": "Target Profit Formulas",
+   "v": "Units for Target Profit   = (Total Fixed Costs + Target Operating Income) ÷ Unit Contribution Margin\nRevenue for Target Profit = (Total Fixed Costs + Target Operating Income) ÷ Contribution Margin Ratio\n\nIf the target is stated AFTER tax:\n  Pre-tax Target Income = After-tax Target Income ÷ (1 − Tax Rate)"
+  },
+  {
+   "t": "ex",
+   "l": "Target Profit — Ray Company",
+   "v": "Same facts: UCM = $25, fixed costs = $150,000. Ray wants $50,000 operating income.\n\nUnits = ($150,000 + $50,000) ÷ $25 = 8,000 units\n\nCheck: (8,000 × $25) − $150,000 = $200,000 − $150,000 = $50,000 ✓\n\nIf instead Ray wants $50,000 AFTER tax at a 20% tax rate:\n  Pre-tax target = $50,000 ÷ (1 − 0.20) = $62,500\n  Units = ($150,000 + $62,500) ÷ $25 = 8,500 units"
+  },
+  {
+   "t": "tip",
+   "v": "Two traps. First, margin of safety is measured from budgeted or actual sales down to breakeven — not the other way round, and never from zero. Second, when a question gives a target profit as a percentage, read carefully whether it is a percentage of sales revenue or a fixed dollar amount; a percentage of sales must be moved to the left side of the equation before you solve, because it changes with volume."
+  },
+  {
+   "t": "h",
+   "v": "6. Marginal Analysis and Relevant Costs"
   },
   {
    "t": "p",
@@ -1517,8 +1563,26 @@
    "v": "A fuel company is deciding how far to push volume. It can sell 8 units at $450 each,\nbut to sell a 9th unit it must drop the price on ALL units to $445.\n\n  Total revenue at 8 units:  8 x $450 = $3,600\n  Total revenue at 9 units:  9 x $445 = $4,005\n  MARGINAL REVENUE of the 9th unit = $4,005 − $3,600 = $405\n\nNote the marginal revenue is $405, not the $445 sticker price — the extra sale also\ncost $5 on each of the 8 units that would have sold at $450 ($445 − 8 x $5 = $405).\n\n  If the marginal COST of producing the 9th unit is $380:\n      $405 marginal revenue > $380 marginal cost  ->  produce it, profit rises $25\n  If the marginal COST of producing the 9th unit is $420:\n      $405 marginal revenue < $420 marginal cost  ->  do not produce it\n\nThe rule never changes: act only while marginal benefit exceeds marginal cost. Stop at\nthe unit where they cross — that is the profit-maximising output level."
   },
   {
+   "t": "p",
+   "v": "Marginal analysis works within the cost structure the company already has. Over a longer horizon that structure is not fixed — a company can redesign the product or the process and shift its variable and fixed costs outright. Two related terms describe that longer-run lever, and the exam expects you to distinguish them."
+  },
+  {
+   "t": "def",
+   "term": "Value Chain",
+   "v": "The sequence of steps a business goes through to transform inputs such as raw materials into finished products, adding value at each process, and finally to sell those finished products to customers."
+  },
+  {
+   "t": "def",
+   "term": "Value Engineering",
+   "v": "An evaluation of all the business functions in the value chain with the objective of reducing costs while still satisfying customer needs. It may lead to design improvements, changes to materials specifications, or modifications to manufacturing methods."
+  },
+  {
+   "t": "tip",
+   "v": "Keep the two apart. The value CHAIN is the map — the sequence of value-adding steps from raw materials through to the customer. Value ENGINEERING is the action taken on that map — reviewing every function in the chain to strip out cost without giving up what the customer values."
+  },
+  {
    "t": "h",
-   "v": "6. Relevant vs Irrelevant Information"
+   "v": "7. Relevant vs Irrelevant Information"
   },
   {
    "t": "p",
@@ -1597,7 +1661,7 @@
   },
   {
    "t": "h",
-   "v": "7. Special Order Decisions"
+   "v": "8. Special Order Decisions"
   },
   {
    "t": "p",
@@ -1619,7 +1683,7 @@
   },
   {
    "t": "h",
-   "v": "8. Make-or-Buy Decisions"
+   "v": "9. Make-or-Buy Decisions"
   },
   {
    "t": "p",
@@ -1641,7 +1705,7 @@
   },
   {
    "t": "h",
-   "v": "9. Sell-or-Process-Further Decisions"
+   "v": "10. Sell-or-Process-Further Decisions"
   },
   {
    "t": "p",
@@ -1660,33 +1724,6 @@
   {
    "t": "tip",
    "v": "Sell-or-process-further is the classic 'sunk cost' trap on the exam. Any joint cost incurred BEFORE the split-off point is irrelevant. The ONLY question is: does the extra revenue from processing exceed the extra cost of processing? If yes, process further. If no, sell at split-off."
-  },
-  {
-   "t": "h",
-   "v": "10. Value Chain and Value Engineering"
-  },
-  {
-   "t": "p",
-   "v": "CVP is a short-run tool because in the short run the market sets prices and costs. What customers will pay and what competitors do govern price; suppliers largely govern input costs. That leaves a company two levers: which products it supplies and in what quantity — which is what CVP analyses — plus a limited ability to push costs down through supplier concessions and value engineering."
-  },
-  {
-   "t": "def",
-   "term": "Value Chain",
-   "v": "The sequence of steps a business goes through to transform inputs such as raw materials into finished products, adding value at each process, and finally to sell those finished products to customers."
-  },
-  {
-   "t": "def",
-   "term": "Value Engineering",
-   "v": "An evaluation of all the business functions in the value chain with the objective of reducing costs while still satisfying customer needs. It may lead to design improvements, changes to materials specifications, or modifications to manufacturing methods."
-  },
-  {
-   "t": "ex",
-   "l": "Value Engineering Moving the Breakeven Point",
-   "v": "A product sells for $60 with variable cost $35 and fixed costs of $150,000.\n  UCM = $25   ->   breakeven = $150,000 / $25 = 6,000 units\n\nA value engineering review finds that a redesigned housing uses less material and\nremoves one assembly step, without any change customers can detect:\n  Variable cost falls from $35 to $31   ->   new UCM = $29\n  New breakeven = $150,000 / $29 = 5,173 units\n\nThe company did not raise its price, did not cut a feature, and did not sell one\nextra unit — yet it now needs 827 fewer units to break even, and every unit above\nthat point earns $4 more. This is the lever CVP itself cannot pull."
-  },
-  {
-   "t": "tip",
-   "v": "Keep the two ideas distinct. The value CHAIN is the map — the sequence of value-adding steps from raw material to customer. Value ENGINEERING is the activity performed on that map — reviewing every function in it to strip out cost while keeping the product acceptable to the customer. The exam tests the definitions far more often than any calculation."
   },
   {
    "t": "key",
