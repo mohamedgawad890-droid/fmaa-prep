@@ -257,12 +257,12 @@
    }
   },
   {
-   "q": "A controllable expense",
+   "q": "Which of the following best describes a controllable expense?",
    "o": [
-    "Is an expense that will remain semivariable in total over the relevant range in a given time period.",
-    "Is an expense whose actual amount will not normally differ from the standard (budget) amount.",
-    "Is an expected future expense that will be different under various alternatives.",
-    "Is one that is directly influenced at a given level of managerial authority within a given time period."
+    "An expense that will remain semivariable in total over the relevant range in a given time period.",
+    "An expense whose actual amount will not normally differ from the standard (budget) amount.",
+    "An expected future expense that will be different under various alternatives.",
+    "An expense that is directly influenced at a given level of managerial authority within a given time period."
    ],
    "a": 3,
    "e": "A controllable expense is an expense that is directly influenced at a given level of managerial authority within a given time period. Therefore, that manager is able to control this expense because he or she has the authority to make decisions about how the money will be spent.",
@@ -808,6 +808,38 @@
     "3": "A capital expenditures budget covers long-term asset purchases and is prepared years in advance. It is unrelated to the breakdown in process discipline described here."
    },
    "src": "gawad"
+  },
+  {
+   "q": "Which of the following correctly describes the time frames of a company's long-range strategic plan compared with its annual profit plan?",
+   "o": [
+    "The strategic plan covers one year, and the annual profit plan covers three to five years.",
+    "The strategic plan covers three to five years or longer, and the annual profit plan covers one year, usually broken into months or quarters.",
+    "Both cover exactly one year, but the strategic plan is prepared only by senior management.",
+    "The strategic plan covers a single operating cycle, and the annual profit plan covers a single month."
+   ],
+   "a": 1,
+   "e": "The strategic (long-range) plan sets out the company's goals and direction over an extended horizon, commonly three to five years or more, and is stated largely in qualitative and broad quantitative terms. The annual profit plan, or budget, translates the first year of that direction into detailed quantitative terms and is normally subdivided into months or quarters so that actual results can be compared against it as the year unfolds.",
+   "wrongWhy": {
+    "0": "This reverses the two horizons. The detailed, quantified plan is the one-year annual profit plan; the multi-year plan is the strategic plan.",
+    "2": "The two plans do not cover the same period. The distinguishing feature is the length of the horizon and the level of detail, not who prepares them.",
+    "3": "Neither horizon is described correctly. A strategic plan spans several years, and an annual profit plan covers a full year, not a single month, although it is broken down into shorter interim periods."
+   }
+  },
+  {
+   "q": "Which of the following statements about the time frames used in budgeting is correct?",
+   "o": [
+    "A short-term budget is usually prepared for a period of one year or less and is generally broken down into shorter interim periods such as months or quarters.",
+    "A long-term budget covers no more than 18 months, because forecasts beyond that period are unreliable.",
+    "A company's budget time frame must be identical for every department within the company.",
+    "Short-term budgets are prepared only by companies that have no long-range plan."
+   ],
+   "a": 0,
+   "e": "Budgets are prepared for different time frames depending on their purpose. The short-term budget, which is the annual profit plan, typically covers one year or less and is subdivided into months or quarters so that performance can be monitored and corrective action taken during the period rather than only at year end.",
+   "wrongWhy": {
+    "1": "There is no 18-month ceiling. Long-term budgets and plans routinely extend three to five years or longer, and capital expenditure budgets in particular may cover much longer horizons.",
+    "2": "Different departments and different types of budget legitimately use different horizons. A capital expenditures budget, for example, commonly spans several years while an operating department's budget covers one year.",
+    "3": "Short-term and long-term budgets are complements, not alternatives. A company with a long-range plan still prepares an annual profit plan, and in fact the annual plan should be derived from the long-range plan."
+   }
   }
  ],
  "3-2": [
@@ -1004,12 +1036,12 @@
    }
   },
   {
-   "q": "Flexible budgets",
+   "q": "What do flexible budgets accommodate?",
    "o": [
-    "Accommodate changes in activity levels.",
-    "Are static budgets that have been revised for changes in prices.",
-    "Accommodate changes in the inflation rate.",
-    "Are used to evaluate capacity use."
+    "Changes in activity levels.",
+    "Changes in prices, by revising the static budget.",
+    "Changes in the inflation rate.",
+    "Changes in capacity use, which they are designed to evaluate."
    ],
    "a": 0,
    "e": "A flexible budget is based on the static budget, but variable revenues and variable expenses are adjusted upward or downward to reflect the actual activity level. A flexible budget is more useful than a static budget because it allows the company to compare the actual results with the budgeted results that have been adjusted for the actual level of activity. Thus, it accommodates changes in activity levels.",
@@ -1148,12 +1180,12 @@
    }
   },
   {
-   "q": "A continuous profit plan",
+   "q": "Which of the following best describes a continuous profit plan?",
    "o": [
-    "Is an annual plan that is part of a 5-year plan.",
-    "Is a plan that is revised monthly or quarterly.",
-    "Works best for a company that can reliably forecast events a year or more into the future.",
-    "Is a plan devised by a full-time planning staff."
+    "An annual plan that is part of a 5-year plan.",
+    "A plan that is revised monthly or quarterly, always covering a constant period ahead.",
+    "A plan that works best for a company that can reliably forecast events a year or more into the future.",
+    "A plan devised by a full-time planning staff."
    ],
    "a": 1,
    "e": "A continuous plan is one that is automatically prepared for a certain period of time ahead of the present. For example, a 1-year continuous plan will be prepared at the end of every month for the next 12 months.",
@@ -1164,12 +1196,12 @@
    }
   },
   {
-   "q": "A continuous (rolling) budget",
+   "q": "Which of the following describes a continuous (rolling) budget?",
    "o": [
-    "Presents the plan for only one level of activity and does not adjust to changes in the level of activity.",
-    "Drops the current month or quarter and adds a future month or quarter as the current month or quarter is completed.",
-    "Presents planned activities for a period but does not present a firm commitment.",
-    "Presents the plan for a range of activity so that the plan can be adjusted for changes in activity."
+    "It presents the plan for only one level of activity and does not adjust to changes in the level of activity.",
+    "It drops the current month or quarter and adds a future month or quarter as the current month or quarter is completed.",
+    "It presents planned activities for a period but does not present a firm commitment.",
+    "It presents the plan for a range of activity so that the plan can be adjusted for changes in activity."
    ],
    "a": 1,
    "e": "A continuous budget, also called a rolling budget, is one that is prepared for a certain period of time ahead of the present. For example, a 1-year continuous budget will be prepared at the end of every month for the next 12 months.",
@@ -1696,12 +1728,12 @@
    }
   },
   {
-   "q": "The master budget",
+   "q": "Which of the following statements about the master budget is correct?",
    "o": [
-    "reflects controllable costs only.",
-    "can be used to determine manufacturing cost variances.",
-    "contains the operating budgets.",
-    "shows forecasted and actual results."
+    "It reflects controllable costs only.",
+    "It can be used to determine manufacturing cost variances.",
+    "It contains the operating budgets.",
+    "It shows forecasted and actual results."
    ],
    "a": 2,
    "e": "The master budget includes the operating budget, which consists of the budgeted income statement and all the budgets that support the budgeted income statement. The master budget also includes the financial budget, which consists of the capital expenditures budget, the cash budget, the budgeted balance sheet, and the budgeted statement of cash flows.",

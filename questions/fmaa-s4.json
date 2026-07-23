@@ -145,12 +145,12 @@
    }
   },
   {
-   "q": "Variable costs are all costs",
+   "q": "Which of the following best describes variable costs?",
    "o": [
-    "Of manufacturing incurred to produce units of output.",
-    "That do not change in total for a given period and relevant range but become progressively smaller on a per unit basis as volume increases.",
-    "That are associated with marketing, shipping, warehousing, and billing activities.",
-    "That fluctuate in total in response to small changes in the rate of utilization of capacity."
+    "All costs of manufacturing incurred to produce units of output.",
+    "Costs that do not change in total for a given period and relevant range but become progressively smaller on a per unit basis as volume increases.",
+    "Costs that are associated with marketing, shipping, warehousing, and billing activities.",
+    "Costs that fluctuate in total in response to small changes in the rate of utilization of capacity."
    ],
    "a": 3,
    "e": "Variable costs are costs that are incurred only if activity (production or sales) takes place. Therefore, the more units that are produced, the greater the total variable costs of production will be. And if production decreases, so will the total variable production costs.",
@@ -606,6 +606,86 @@
     "0": "A variable cost is a cost that changes in total as the level of activity (either sales or production) changes. The corporate president's salary will not be affected by the level of activity either of sales or of production.",
     "1": "A variable cost is a cost that changes in total as the level of activity (either sales or production) changes. Property taxes will not be affected by the level of activity either of sales or of production.",
     "2": "A variable cost is a cost that changes in total as the level of activity (either sales or production) changes. Interest charges will not be affected by the level of activity either of sales or of production."
+   }
+  },
+  {
+   "q": "A cost that remains constant over a narrow range of activity and then jumps abruptly to a higher level, where it again remains constant, is best described as which of the following?",
+   "o": [
+    "A semi-variable (mixed) cost.",
+    "A semi-fixed (step) cost.",
+    "A purely variable cost.",
+    "A committed fixed cost."
+   ],
+   "a": 1,
+   "e": "A semi-fixed cost, also called a step cost or a step variable cost, is fixed over a given small range of activity. When activity moves beyond that range the cost jumps to a higher level, stays fixed again for a while, and jumps again when the next range is exceeded. Graphed, it forms a series of steps.",
+   "wrongWhy": {
+    "0": "A semi-variable (mixed) cost has a basic fixed component plus a variable component that changes continuously with activity. It rises as a sloped line, not as a series of flat steps.",
+    "2": "A purely variable cost changes in direct proportion to activity, so its total rises as a straight sloped line from the origin and its per-unit amount stays constant.",
+    "3": "A committed fixed cost stays constant in total across the entire relevant range. It does not jump at intervals as activity rises."
+   }
+  },
+  {
+   "q": "Which of the following best distinguishes a semi-variable cost from a semi-fixed cost?",
+   "o": [
+    "A semi-variable cost has both a fixed component and a variable component, whereas a semi-fixed cost is constant over a small range of activity and then jumps to a new constant level.",
+    "A semi-variable cost changes only at the end of the year, whereas a semi-fixed cost changes continuously throughout the year.",
+    "A semi-variable cost is always larger in total than a semi-fixed cost at any level of activity.",
+    "A semi-fixed cost contains a variable component, whereas a semi-variable cost does not."
+   ],
+   "a": 0,
+   "e": "A semi-variable cost has a basic fixed amount that is incurred regardless of activity, plus a variable amount that increases with each additional unit of activity. A semi-fixed cost behaves differently: it is fixed across a narrow band of activity and then steps up to a new fixed amount once activity passes the top of that band.",
+   "wrongWhy": {
+    "1": "Neither cost is defined by when in the year it changes. Both are defined by how the total cost responds to changes in the level of activity.",
+    "2": "There is no general relationship between the magnitudes of the two cost types. Either could be larger depending on the specific costs involved.",
+    "3": "This reverses the definitions. It is the semi-variable cost that contains an explicit variable component that responds continuously to activity."
+   }
+  },
+  {
+   "q": "A factory must employ one production supervisor for every 10 production workers or any part thereof. Each supervisor is paid a salary of $48,000 per year. The factory currently employs 25 production workers and plans to increase this to 31 workers next year. What is the total annual supervisory salary cost at each of these two activity levels?",
+   "o": [
+    "$144,000 currently and $192,000 next year.",
+    "$144,000 currently and $148,800 next year.",
+    "$120,000 currently and $148,800 next year.",
+    "$150,000 currently and $186,000 next year."
+   ],
+   "a": 0,
+   "e": "Supervisory salary is a semi-fixed (step) cost. With 25 workers the factory needs three supervisors, because two supervisors would cover only 20 workers, so the cost is 3 × $48,000 = $144,000. With 31 workers a fourth supervisor is required, because three supervisors cover only 30 workers, so the cost steps up to 4 × $48,000 = $192,000. Note that a 24% increase in workers causes a 33% increase in the cost, because the cost moves in whole steps rather than proportionally.",
+   "wrongWhy": {
+    "1": "This treats the cost as if it rose in proportion to the 24% increase in workers. A step cost does not respond proportionally; it stays flat and then jumps by a whole step.",
+    "2": "This uses 2.5 supervisors for 25 workers. A supervisor cannot be hired in fractions, which is precisely what makes the cost a step cost rather than a variable cost.",
+    "3": "Neither figure is a whole multiple of the $48,000 salary, so neither can represent an actual number of supervisors employed."
+   }
+  },
+  {
+   "q": "Within a single step of a semi-fixed (step) cost, how does the cost behave on a per-unit basis as the level of activity increases?",
+   "o": [
+    "It decreases, because a constant total cost is spread over a larger number of units.",
+    "It increases in direct proportion to the increase in activity.",
+    "It remains constant, because the total cost is constant.",
+    "It first increases and then decreases as the top of the step is approached."
+   ],
+   "a": 0,
+   "e": "Within any one step the total cost does not change, so the behaviour on a per-unit basis is the same as that of a fixed cost: the constant total is divided among a growing number of units, and the cost per unit falls. When activity crosses into the next step, the total jumps and the per-unit cost rises sharply before beginning to fall again.",
+   "wrongWhy": {
+    "1": "A cost that increases in direct proportion to activity is a variable cost, and a variable cost has a constant amount per unit, not an increasing one.",
+    "2": "The total cost is constant within the step, but that is exactly why the per-unit amount cannot also be constant. Dividing an unchanged total by more units must produce a smaller amount per unit.",
+    "3": "The per-unit cost falls continuously within a step. It rises only at the moment activity crosses into the next step and the total jumps."
+   }
+  },
+  {
+   "q": "Which of the following is the best example of a semi-fixed (step) cost?",
+   "o": [
+    "Direct materials consumed in production.",
+    "Straight-line depreciation on the factory building.",
+    "The salaries of quality inspectors, where one additional inspector must be hired for each additional 500 units of daily output.",
+    "Electricity billed as a flat monthly service charge plus a rate per kilowatt-hour consumed."
+   ],
+   "a": 2,
+   "e": "The inspector salaries are fixed across each band of 500 units of daily output and then jump by one full salary when output crosses into the next band. That pattern of flat ranges separated by abrupt jumps is the defining characteristic of a semi-fixed or step cost.",
+   "wrongWhy": {
+    "0": "Direct materials are a variable cost. The total rises in direct proportion to units produced and the cost per unit stays constant.",
+    "1": "Straight-line depreciation on the building is a fixed cost. It remains at the same total amount across the entire relevant range and does not step up as output rises.",
+    "3": "A flat monthly charge plus a usage rate is a semi-variable (mixed) cost. It has a fixed component and a component that varies continuously with consumption, so it graphs as a sloped line rising from the fixed amount rather than as steps."
    }
   }
  ],
@@ -1072,6 +1152,86 @@
     "1": "This is the total overhead applied to Job #231 in both the Tooling and Fabricating Departments. The question asks for the total overhead applied to Job #231 in the Tooling Department only.",
     "3": "This is the total overhead applied to Job #231 in the Fabricating Department.",
     "0": "This results from summing the two departments' application rates ($19.75 + $22.00 = $41.75) and multiplying by the total direct labor hours on Job #231 in both departments (10 + 2 = 12), giving $501.00. Each department's rate must be applied only to that department's own hours, and this question asks for Tooling only."
+   }
+  },
+  {
+   "q": "A company allocates all of its manufacturing overhead using a single plant-wide rate based on direct labour hours. Which of its products are most likely to be under-costed by this system?",
+   "o": [
+    "Low-volume, complex products that consume a disproportionate share of setup, handling and engineering support.",
+    "High-volume, simple products that consume very little setup and support activity.",
+    "All products equally, regardless of their complexity or volume.",
+    "Only products that require no direct labour at all."
+   ],
+   "a": 0,
+   "e": "A volume-based allocation assigns overhead in proportion to direct labour hours, which track with production volume. Much overhead is actually driven by batches and complexity rather than by volume. Low-volume complex products consume a heavy share of setups, handling and engineering but generate few labour hours, so they receive too little overhead and are under-costed.",
+   "wrongWhy": {
+    "1": "High-volume simple products generate a large share of the direct labour hours and therefore absorb a large share of the overhead, while actually consuming relatively little support activity. They are over-costed, not under-costed.",
+    "2": "The distortion is not uniform. It arises precisely because products differ in how much support activity they consume relative to the volume-based measure used to allocate cost.",
+    "3": "A product that used no direct labour would receive no overhead under this system, but that is an extreme case rather than the general pattern of distortion the question describes."
+   }
+  },
+  {
+   "q": "Which of the following best describes product-cost cross-subsidization?",
+   "o": [
+    "The over-costing of one product necessarily results in the under-costing of at least one other product, because the total overhead allocated is unchanged.",
+    "The company charges different customers different prices for the same product.",
+    "One division sells a component to another division at a price above the prevailing market price.",
+    "Manufacturing overhead is treated as a period cost rather than as a product cost."
+   ],
+   "a": 0,
+   "e": "The total pool of overhead assigned to products is the same regardless of the allocation method used. Only the distribution among products changes. Therefore any overhead that is wrongly assigned to one product must have been taken away from another, so over-costing one product always means under-costing one or more others. This is why costing errors travel in pairs.",
+   "wrongWhy": {
+    "1": "Charging different prices to different customers is price discrimination or customer-specific pricing. It concerns revenue policy, not the internal allocation of cost among products.",
+    "2": "That describes a transfer pricing issue between divisions, which is a separate matter from how a single facility's overhead is distributed among the products it makes.",
+    "3": "Manufacturing overhead is a product cost under absorption costing. The classification of overhead as product or period cost is a different question from how accurately it is spread among products."
+   }
+  },
+  {
+   "q": "A company allocates all overhead with a single plant-wide rate based on direct labour hours. Its high-volume standard product shows a thin reported margin, yet competitors profitably sell the same item for less. Its low-volume custom product shows a very high reported margin, yet no competitor pursues that business. What does this pattern most likely indicate?",
+   "o": [
+    "The standard product is being over-costed and the custom product is being under-costed.",
+    "The standard product is being under-costed and the custom product is being over-costed.",
+    "Both products are costed accurately, and the pattern is explained entirely by competitors' advertising.",
+    "The company should immediately raise the selling price of the standard product."
+   ],
+   "a": 0,
+   "e": "This is the classic warning sign of a distorted volume-based costing system. The high-volume standard product absorbs overhead in proportion to its large share of labour hours even though it consumes little support activity, so its reported cost is overstated and its margin looks thin. The low-volume custom product escapes overhead it actually causes, so its reported margin looks attractive. Competitors with better cost information price accordingly, which is why they can undercut the standard product and why they avoid the custom work.",
+   "wrongWhy": {
+    "1": "This reverses the direction of the distortion. Under a volume-based rate it is the high-volume product that absorbs too much overhead and the low-volume complex product that absorbs too little.",
+    "2": "Competitor behaviour that is consistent and one-directional across both product lines points to a systematic cost measurement problem rather than to marketing. Accurate costs would not produce this pattern.",
+    "3": "Raising the price would be acting on the distorted numbers. The reported cost of the standard product is overstated, so its true margin is better than it appears, and a price increase would risk further losing volume to competitors."
+   }
+  },
+  {
+   "q": "Which of the following changes would most directly reduce the over-costing and under-costing of a company's products?",
+   "o": [
+    "Replacing the single plant-wide overhead rate with multiple activity cost pools, each allocated using a driver that reflects what actually causes the cost.",
+    "Increasing the plant-wide overhead rate so that more overhead is absorbed by production.",
+    "Reclassifying all manufacturing overhead as a period cost expensed as incurred.",
+    "Using actual overhead rather than applied overhead when preparing year-end financial statements."
+   ],
+   "a": 0,
+   "e": "The distortion arises because a single volume-based driver is used for costs that are caused by different things. Establishing separate cost pools for activities such as setups, materials handling and engineering, and allocating each with a driver that reflects its actual cause, assigns overhead in line with what each product genuinely consumes. This is the core idea of activity-based costing.",
+   "wrongWhy": {
+    "1": "Raising the rate changes the total amount of overhead absorbed but not the proportions in which it is spread among products. The relative distortion between products would be unchanged or larger in absolute terms.",
+    "2": "Expensing all manufacturing overhead as a period cost is not permitted for external reporting under absorption costing, and it would eliminate product cost information altogether rather than improve its accuracy.",
+    "3": "Substituting actual for applied overhead corrects the total amount charged for the period. It does nothing to correct how that total is distributed among individual products."
+   }
+  },
+  {
+   "q": "Novara Company incurs $600,000 of total manufacturing overhead. It currently allocates this using a plant-wide rate based on direct labour hours: Product A uses 15,000 direct labour hours and Product B uses 5,000. Under a proposed activity-based system, $360,000 of the overhead would be allocated on the number of setups (Product A requires 20 setups, Product B requires 60) and the remaining $240,000 would continue to be allocated on direct labour hours. By how much is Product B under-costed under the current plant-wide system?",
+   "o": [
+    "$180,000",
+    "$120,000",
+    "$150,000",
+    "$330,000"
+   ],
+   "a": 0,
+   "e": "Under the plant-wide system the rate is $600,000 ÷ 20,000 hours = $30 per hour, so Product B absorbs 5,000 × $30 = $150,000. Under the activity-based system, the setup rate is $360,000 ÷ 80 setups = $4,500, so Product B absorbs 60 × $4,500 = $270,000 of setup cost, plus $240,000 ÷ 20,000 hours = $12 per hour × 5,000 hours = $60,000, for a total of $330,000. Product B is therefore under-costed by $330,000 − $150,000 = $180,000. Note that Product A is over-costed by exactly the same $180,000, which illustrates cross-subsidization.",
+   "wrongWhy": {
+    "1": "This does not correspond to either the difference between the two systems or to any component of the calculation.",
+    "2": "$150,000 is the amount of overhead Product B absorbs under the current plant-wide system, not the amount by which it is under-costed.",
+    "3": "$330,000 is the total overhead Product B should absorb under the activity-based system. The under-costing is the difference between this amount and the $150,000 currently assigned."
    }
   }
  ],
@@ -2805,6 +2965,70 @@
     "1": "Return on assets is a ratio — income divided by assets — expressed as a percentage. The measure described in the question is a dollar amount left over after an interest charge is subtracted, not a ratio. Deducting a charge leaves a residual; dividing produces a rate of return.",
     "2": "Return on investment is calculated as income divided by the invested amount. There is no deduction of an imputed interest rate in the calculation of return on investment."
    }
+  },
+  {
+   "q": "Why might a customer that generates a high level of sales revenue still be unprofitable for the company to serve?",
+   "o": [
+    "Because customer-specific costs such as frequent small orders, special packaging, expedited delivery and a high rate of returns can exceed the gross margin that the customer generates.",
+    "Because sales revenue is not a component of customer profitability.",
+    "Because every customer is allocated an identical amount of support cost regardless of the service consumed.",
+    "Because sales revenue is recognised only when cash is collected from the customer."
+   ],
+   "a": 0,
+   "e": "Customer profitability analysis compares the revenue a customer generates with all of the costs of serving that customer, not merely the cost of the goods sold. A customer that places many small orders, demands special handling or expedited shipment, requires frequent sales visits or returns a high proportion of goods can consume more in service costs than the gross margin it produces, making it unprofitable despite high revenue.",
+   "wrongWhy": {
+    "1": "Revenue is very much a component of customer profitability. The point is that revenue alone is insufficient, because the costs of serving customers differ widely between them.",
+    "2": "Allocating identical support costs to every customer is exactly the practice that hides unprofitable customers. Customer profitability analysis works by tracing costs to the specific customers that cause them.",
+    "3": "The timing of cash collection is a working capital and credit matter. It does not determine whether the customer relationship is profitable, although slow payment does add a financing cost."
+   }
+  },
+  {
+   "q": "Meridian Company reports the following for Customer M for the year: sales revenue $400,000 and cost of goods sold $300,000. Customer-specific costs are: 200 orders processed at $150 per order, 40 expedited deliveries at $400 each, and 30 sales visits at $200 each. What is the profit generated by Customer M?",
+   "o": [
+    "$48,000",
+    "$100,000",
+    "$52,000",
+    "$70,000"
+   ],
+   "a": 0,
+   "e": "The gross margin on Customer M is $400,000 − $300,000 = $100,000. Customer-specific costs are order processing of 200 × $150 = $30,000, expedited delivery of 40 × $400 = $16,000 and sales visits of 30 × $200 = $6,000, a total of $52,000. Customer profit is therefore $100,000 − $52,000 = $48,000.",
+   "wrongWhy": {
+    "1": "$100,000 is the gross margin only. It ignores the $52,000 of costs incurred specifically to serve this customer, which is precisely what customer profitability analysis is designed to capture.",
+    "2": "$52,000 is the total of the customer-specific costs, not the profit remaining after those costs are deducted from the gross margin.",
+    "3": "This does not correspond to any correct combination of the figures given."
+   }
+  },
+  {
+   "q": "A customer profitability analysis shows that a particular customer is unprofitable, and the analysis identifies the cause as a very large number of small, frequent orders. Which of the following is the most appropriate first response?",
+   "o": [
+    "Work with the customer to consolidate orders, or introduce a minimum order size or a small-order surcharge.",
+    "Terminate the relationship with the customer immediately.",
+    "Reallocate the order-processing costs to the company's more profitable customers.",
+    "Increase the customer's credit limit so that the customer is encouraged to purchase more."
+   ],
+   "a": 0,
+   "e": "The purpose of customer profitability analysis is to guide action on the specific cost driver identified. Where the cause is order frequency, the company can address it directly by consolidating orders, setting a minimum order quantity or pricing the small orders to recover their cost. Many unprofitable customers become profitable once the underlying behaviour is changed.",
+   "wrongWhy": {
+    "1": "Terminating the relationship discards the customer's contribution before attempting to fix the driver that causes the loss. It may become appropriate later, but it is not the first step, and the freed capacity may not be replaceable.",
+    "2": "Shifting the cost to other customers changes the reporting but not the underlying economics, and it introduces the very cross-subsidization that customer profitability analysis exists to reveal.",
+    "3": "Encouraging larger purchases through credit does nothing about the number of orders placed, and extending more credit to a customer that is currently unprofitable increases the company's exposure."
+   }
+  },
+  {
+   "q": "A product line reports an operating loss after all company costs have been allocated to it. Before deciding whether to discontinue the line, which of the following amounts is most relevant to the decision?",
+   "o": [
+    "The contribution margin the line generates and the fixed costs that would actually be avoided if the line were discontinued.",
+    "The total amount of fixed costs currently allocated to the line.",
+    "The original historical cost of the equipment used to manufacture the product.",
+    "The line's allocated share of depreciation on the corporate headquarters building."
+   ],
+   "a": 0,
+   "e": "A product line should be evaluated on the amounts that change as a result of the decision. If the line is dropped, the company loses its contribution margin but saves only those fixed costs that are actually avoidable. Where the contribution margin exceeds the avoidable fixed costs, discontinuing the line makes the company worse off even though the line reports an allocated loss.",
+   "wrongWhy": {
+    "1": "Total allocated fixed cost is misleading, because much of it is common cost that will simply be reallocated to the remaining lines if this line is dropped. Only the avoidable portion is relevant.",
+    "2": "The historical cost of the equipment is a sunk cost. It has already been incurred and cannot be changed by the decision, so it is not relevant.",
+    "3": "Headquarters depreciation is a common cost that will continue regardless of whether the line is discontinued. It is allocated to the line but not caused by it, so it is not avoidable and not relevant."
+   }
   }
  ],
  "4-5": [
@@ -3241,12 +3465,12 @@
    }
   },
   {
-   "q": "Opportunity costs are",
+   "q": "Which of the following statements about opportunity costs is correct?",
    "o": [
-    "Relevant to decision making.",
-    "Not used for decision making.",
-    "Equal to historical costs.",
-    "The same as variable costs."
+    "They are relevant to decision making.",
+    "They are not used for decision making.",
+    "They are equal to historical costs.",
+    "They are the same as variable costs."
    ],
    "a": 0,
    "e": "Opportunity cost is relevant to decision making. Opportunity cost is the benefit to income (inflow) that is lost by not using a limited resource for its best alternative use.",
@@ -3481,12 +3705,12 @@
    }
   },
   {
-   "q": "Sunk costs",
+   "q": "Which of the following statements about sunk costs is correct?",
    "o": [
-    "In and of themselves are not relevant to decision making.",
-    "Are fixed costs.",
-    "Are relevant to decision making.",
-    "Are substitutes for opportunity costs."
+    "In and of themselves they are not relevant to decision making.",
+    "They are fixed costs.",
+    "They are relevant to decision making.",
+    "They are substitutes for opportunity costs."
    ],
    "a": 0,
    "e": "Sunk costs are past incurred costs that are irrelevant in the decision making process because they have already been incurred and no current decision can change them.",
@@ -3497,7 +3721,7 @@
    }
   },
   {
-   "q": "Relevant costs refer to",
+   "q": "What do relevant costs refer to?",
    "o": [
     "Anticipated future costs that will differ among various alternatives.",
     "All fixed costs.",
@@ -3606,6 +3830,246 @@
     "0": "The marginal cost is the cost of the next unit produced or sold (whichever is appropriate). The breakeven quantity is not the volume where revenues are equal to marginal cost.",
     "1": "Variable costs are costs that are incurred only when a product is made (or sold), such as material or labor or sales commissions. The total variable cost increases as production or sales increases, but the per unit variable cost remains unchanged as production or sales volume increases or decreases. the breakeven quantity is not the volume where revenues are equal to variable costs. Fixed costs also need to be covered, or a loss equal to the amount of the fixed costs will result.",
     "2": "Fixed costs are costs that do not change, regardless of the level of production or sales, as long as the volume remains within the relevant range. The breakeven quantity is not the volume of output at which revenues are equal to fixed costs. Variable costs also need to be covered, or a loss equal to the amount of the variable costs will result."
+   }
+  },
+  {
+   "q": "Which of the following is an assumption underlying cost-volume-profit analysis?",
+   "o": [
+    "The sales mix remains constant as the total number of units sold changes.",
+    "Total fixed costs vary in direct proportion to the number of units produced.",
+    "The unit selling price rises as the volume sold increases.",
+    "Inventory levels change significantly during the period."
+   ],
+   "a": 0,
+   "e": "When a company sells two or more products, cost-volume-profit analysis assumes a constant sales mix. This matters because the weighted-average contribution margin depends on the proportions in which the products are sold. If the mix changes, the quantity of each product that must be sold to break even changes as well.",
+   "wrongWhy": {
+    "1": "Cost-volume-profit analysis assumes the opposite. Total fixed costs are assumed to remain constant in total within the relevant range, which is what makes them fixed.",
+    "2": "The analysis assumes that the unit selling price remains constant over the relevant range. If price varied with volume the revenue line would not be linear and the model would not hold.",
+    "3": "Cost-volume-profit analysis assumes that inventory levels do not change materially, so that units produced approximate units sold. Significant inventory changes would break the link between production volume and profit."
+   }
+  },
+  {
+   "q": "In cost-volume-profit analysis, how are total costs and total revenues assumed to behave in relation to the level of activity?",
+   "o": [
+    "They are linear within the relevant range.",
+    "They are curvilinear at all levels of activity.",
+    "They are step functions at every level of activity.",
+    "They are unrelated to the level of activity."
+   ],
+   "a": 0,
+   "e": "Cost-volume-profit analysis assumes that total costs and total revenues are predictable and linear within the relevant range, meaning each graphs as a straight line. This linearity follows from the assumptions that the unit selling price and the unit variable cost are constant and that total fixed costs do not change within that range.",
+   "wrongWhy": {
+    "1": "Real-world cost and revenue functions may well be curvilinear at extreme volumes, which is exactly why the analysis is confined to the relevant range where a straight line is an acceptable approximation.",
+    "2": "Step behaviour is characteristic of semi-fixed costs. Cost-volume-profit analysis assumes costs have already been separated into fixed and variable components that behave linearly.",
+    "3": "If costs and revenues were unrelated to activity there would be no relationship to analyse. The entire technique rests on the link between volume, costs and profit."
+   }
+  },
+  {
+   "q": "Which of the following is NOT an assumption of cost-volume-profit analysis?",
+   "o": [
+    "Costs can be separated into fixed and variable components.",
+    "The unit variable cost remains constant within the relevant range.",
+    "The number of units produced approximates the number of units sold.",
+    "Total fixed costs change in proportion to the volume of production."
+   ],
+   "a": 3,
+   "e": "Cost-volume-profit analysis assumes that total fixed costs remain constant within the relevant range. A cost that changes in proportion to volume is by definition a variable cost, so this statement contradicts the fixed-cost assumption and is therefore not an assumption of the model.",
+   "wrongWhy": {
+    "0": "This is an assumption of the model. All costs must be either variable or fixed, or already separated into their fixed and variable components, before the analysis can be performed.",
+    "1": "This is an assumption of the model. A constant unit variable cost is what makes the total cost line straight within the relevant range.",
+    "2": "This is an assumption of the model. It ensures that inventory changes do not distort the relationship between volume and profit."
+   }
+  },
+  {
+   "q": "A company using cost-volume-profit analysis negotiates a supplier arrangement under which its variable cost per unit falls once cumulative purchases pass a specified quantity. What is the effect on the standard cost-volume-profit model?",
+   "o": [
+    "The assumption of a constant unit variable cost is violated, so a single breakeven point computed with the original unit contribution margin will be inaccurate above that quantity.",
+    "There is no effect, because cost-volume-profit analysis already allows for variable costs that change with volume.",
+    "Fixed costs must be reclassified as variable costs before the analysis can continue.",
+    "The contribution margin ratio becomes irrelevant to the analysis."
+   ],
+   "a": 0,
+   "e": "The model depends on a constant unit variable cost, which produces a constant unit contribution margin and a straight total cost line. Once the discount takes effect, the unit contribution margin rises, so the relationship between volume and profit changes slope at that point. A breakeven figure computed with the original contribution margin will be wrong for any volume above the discount threshold.",
+   "wrongWhy": {
+    "1": "The model does not accommodate a changing unit variable cost. Constancy of the unit variable cost within the relevant range is one of its core assumptions.",
+    "2": "There is no reason to reclassify fixed costs. The change affects the variable cost per unit; the fixed costs are unaffected.",
+    "3": "The contribution margin ratio remains central to the analysis. What changes is that there are now two different ratios applying to two different volume ranges."
+   }
+  },
+  {
+   "q": "Which of the following best defines the margin of safety?",
+   "o": [
+    "The excess of budgeted or actual sales over breakeven sales.",
+    "The excess of breakeven sales over budgeted sales.",
+    "The excess of the contribution margin over fixed costs at the breakeven point.",
+    "The difference between the selling price per unit and the variable cost per unit."
+   ],
+   "a": 0,
+   "e": "The margin of safety measures the amount by which budgeted or actual sales exceed sales at the breakeven point. It shows how far sales could fall before the company begins to incur a loss, and is therefore a measure of the operating risk in the company's current position.",
+   "wrongWhy": {
+    "1": "This reverses the calculation. If breakeven sales exceeded budgeted sales the company would be planning to operate at a loss, and the margin of safety would be negative.",
+    "2": "At the breakeven point the contribution margin exactly equals fixed costs by definition, so this excess is always zero and cannot describe the margin of safety.",
+    "3": "The difference between selling price and variable cost per unit is the unit contribution margin, which is an input to the breakeven calculation rather than the margin of safety itself."
+   }
+  },
+  {
+   "q": "Halvern Company sells a single product for $80 per unit. The variable cost is $50 per unit and total fixed costs are $420,000. If Halvern budgets sales of 20,000 units for the coming year, what is its margin of safety in units?",
+   "o": [
+    "6,000 units",
+    "14,000 units",
+    "20,000 units",
+    "5,250 units"
+   ],
+   "a": 0,
+   "e": "The unit contribution margin is $80 − $50 = $30. Breakeven in units is $420,000 ÷ $30 = 14,000 units. The margin of safety is budgeted sales less breakeven sales, or 20,000 − 14,000 = 6,000 units. Halvern can therefore lose 6,000 units of sales before it reaches breakeven.",
+   "wrongWhy": {
+    "1": "14,000 units is the breakeven volume. The margin of safety is the amount by which budgeted sales exceed this figure, not the figure itself.",
+    "2": "20,000 units is budgeted sales. Breakeven sales must be deducted from this to arrive at the margin of safety.",
+    "3": "This results from dividing fixed costs by the $80 selling price instead of by the $30 unit contribution margin, which is the error of ignoring variable costs."
+   }
+  },
+  {
+   "q": "Using the same facts as for Halvern Company (selling price $80 per unit, variable cost $50 per unit, total fixed costs $420,000 and budgeted sales of 20,000 units), what is Halvern's margin of safety expressed as a ratio?",
+   "o": [
+    "30%",
+    "70%",
+    "25%",
+    "43%"
+   ],
+   "a": 0,
+   "e": "Breakeven is 14,000 units, or 14,000 × $80 = $1,120,000 of revenue. Budgeted sales are 20,000 × $80 = $1,600,000. The margin of safety in dollars is $1,600,000 − $1,120,000 = $480,000, and the margin of safety ratio is $480,000 ÷ $1,600,000 = 30%. Sales could fall by 30% before Halvern reaches breakeven.",
+   "wrongWhy": {
+    "1": "70% is the proportion of budgeted sales represented by breakeven sales. It is the complement of the margin of safety ratio, not the ratio itself.",
+    "2": "This does not correspond to any correct combination of the figures given.",
+    "3": "This appears to divide the margin of safety by breakeven sales rather than by budgeted sales. The denominator of the margin of safety ratio is budgeted or actual sales."
+   }
+  },
+  {
+   "q": "Kestrel Company has budgeted sales of $900,000, a contribution margin ratio of 40% and total fixed costs of $270,000. What is Kestrel's margin of safety in dollars?",
+   "o": [
+    "$225,000",
+    "$675,000",
+    "$90,000",
+    "$360,000"
+   ],
+   "a": 0,
+   "e": "Breakeven in sales dollars is total fixed costs divided by the contribution margin ratio, or $270,000 ÷ 0.40 = $675,000. The margin of safety is budgeted sales less breakeven sales, or $900,000 − $675,000 = $225,000.",
+   "wrongWhy": {
+    "1": "$675,000 is the breakeven level of sales revenue. The margin of safety is the excess of budgeted sales over this amount.",
+    "2": "$90,000 is Kestrel's budgeted operating income, calculated as ($900,000 × 40%) − $270,000. Operating income and margin of safety are different measures.",
+    "3": "$360,000 is the total contribution margin at budgeted sales, calculated as $900,000 × 40%. It is an input to the analysis rather than the margin of safety."
+   }
+  },
+  {
+   "q": "Two companies report identical sales revenue and identical operating income, but Company X has a substantially higher margin of safety ratio than Company Y. Which of the following is the most reasonable conclusion?",
+   "o": [
+    "Company X's sales can fall by a larger percentage before it begins to incur a loss, indicating lower operating risk.",
+    "Company X has higher fixed costs relative to its contribution margin than Company Y.",
+    "Company Y is more profitable than Company X at their current volumes.",
+    "Company X must have a lower contribution margin ratio than Company Y."
+   ],
+   "a": 0,
+   "e": "The margin of safety ratio expresses how far sales can decline as a percentage of current sales before breakeven is reached. A higher ratio means a larger cushion, so Company X is better protected against a downturn in volume and carries lower operating risk than Company Y.",
+   "wrongWhy": {
+    "1": "Higher fixed costs relative to contribution margin raise the breakeven point and therefore shrink the margin of safety. This describes Company Y, not Company X.",
+    "2": "The two companies report identical operating income on identical sales, so neither is more profitable at current volumes. The difference lies in their cost structures and hence their risk.",
+    "3": "Given equal sales and equal operating income, the company with the larger margin of safety is the one with the lower breakeven point, which is associated with a higher contribution margin ratio and lower fixed costs, not a lower ratio."
+   }
+  },
+  {
+   "q": "Norwood Company has substantial idle capacity and receives a one-time special order for 5,000 units at $18 per unit. At its normal volume, Norwood's unit costs are direct materials $7, direct labour $4, variable overhead $2 and allocated fixed overhead $6. Accepting the order will not affect regular sales and will not change total fixed costs. What is the effect of accepting the order on operating income?",
+   "o": [
+    "An increase of $25,000.",
+    "A decrease of $5,000.",
+    "An increase of $90,000.",
+    "No effect."
+   ],
+   "a": 0,
+   "e": "Only costs that change as a result of the decision are relevant. The relevant unit cost is direct materials $7 plus direct labour $4 plus variable overhead $2, a total of $13. The allocated fixed overhead of $6 is not relevant because total fixed costs do not change. The contribution per unit is $18 − $13 = $5, so operating income increases by 5,000 × $5 = $25,000.",
+   "wrongWhy": {
+    "1": "This results from including the $6 of allocated fixed overhead in the unit cost, giving a total of $19 and an apparent loss of $1 per unit. That fixed overhead will be incurred whether or not the order is accepted, so it is not relevant.",
+    "2": "$90,000 is the total revenue from the order, calculated as 5,000 × $18. The incremental costs of $13 per unit must be deducted to find the effect on operating income.",
+    "3": "The order generates a positive contribution of $5 per unit, so it must affect operating income. It would have no effect only if the price exactly equalled the relevant unit cost."
+   }
+  },
+  {
+   "q": "In a make-or-buy decision, which of the following costs is always irrelevant?",
+   "o": [
+    "Fixed overhead that will continue to be incurred regardless of whether the component is made internally or purchased.",
+    "The purchase price quoted by the outside supplier.",
+    "Direct materials that would be avoided if the component were purchased.",
+    "The contribution margin obtainable from an alternative use of the capacity that purchasing would free up."
+   ],
+   "a": 0,
+   "e": "A relevant cost must differ between the alternatives. Fixed overhead that continues at the same amount whether the company makes or buys the component is identical under both alternatives, so it cannot influence the decision and must be excluded from the analysis even though it is routinely allocated to the component's unit cost.",
+   "wrongWhy": {
+    "1": "The supplier's price is incurred only under the buy alternative, so it differs between the alternatives and is highly relevant.",
+    "2": "Direct materials are incurred only under the make alternative and would be avoided by purchasing, so they differ between the alternatives and are relevant.",
+    "3": "The contribution obtainable from an alternative use of freed capacity is an opportunity cost of continuing to make the component. It is relevant and is one of the most commonly omitted items in these decisions."
+   }
+  },
+  {
+   "q": "Tamsen Company currently manufactures 10,000 units of Component K per year. Its unit costs at that volume are direct materials $9, direct labour $6, variable overhead $3 and fixed overhead $5. An outside supplier has offered to supply the component for $20 per unit. If Tamsen purchases the component, $12,000 of the total fixed overhead would be eliminated and the remainder would continue. The capacity freed up would remain idle. Which alternative should Tamsen choose, and by what amount?",
+   "o": [
+    "Make, with a cost advantage of $8,000.",
+    "Buy, with a cost advantage of $8,000.",
+    "Make, with a cost advantage of $20,000.",
+    "Buy, with a cost advantage of $30,000."
+   ],
+   "a": 0,
+   "e": "The relevant cost to make is the variable cost of $9 + $6 + $3 = $18 per unit, or $180,000 for 10,000 units, plus the $12,000 of fixed overhead that would be avoided if production ceased, giving $192,000. The relevant cost to buy is 10,000 × $20 = $200,000. Making is therefore cheaper by $200,000 − $192,000 = $8,000.",
+   "wrongWhy": {
+    "1": "This has the correct amount but the wrong direction. The total relevant cost of making, $192,000, is lower than the $200,000 cost of buying.",
+    "2": "$20,000 is the difference between the full unit cost of $23 including all fixed overhead and the $20 purchase price. This treats the unavoidable portion of fixed overhead as if it would be saved, which it would not.",
+    "3": "This does not correspond to any correct combination of the figures, and it points in the wrong direction."
+   }
+  },
+  {
+   "q": "Assume the same facts as for Tamsen Company (10,000 units, variable cost $18 per unit, $12,000 of avoidable fixed overhead, supplier price $20 per unit), except that the capacity freed by purchasing Component K could be used to manufacture another product that would generate $15,000 of contribution margin. Which alternative should Tamsen now choose, and by what amount?",
+   "o": [
+    "Buy, with an advantage of $7,000.",
+    "Make, with an advantage of $7,000.",
+    "Buy, with an advantage of $15,000.",
+    "Make, with an advantage of $8,000."
+   ],
+   "a": 0,
+   "e": "The relevant cost to make is unchanged at $192,000, but it now also carries an opportunity cost, because continuing to make the component forgoes $15,000 of contribution margin from the alternative product. The net relevant cost of buying is $200,000 − $15,000 = $185,000, compared with $192,000 to make. Buying is therefore better by $7,000. The alternative use of the capacity reverses the earlier conclusion.",
+   "wrongWhy": {
+    "1": "The amount is correct but the direction is wrong. Once the opportunity cost of the forgone contribution margin is recognised, buying becomes the cheaper alternative.",
+    "2": "$15,000 is the contribution margin from the alternative product on its own. It must be netted against the $8,000 cost disadvantage of buying to arrive at the overall advantage.",
+    "3": "$8,000 is the advantage of making in the original scenario, where the freed capacity would have remained idle. Introducing an alternative use for the capacity changes the analysis."
+   }
+  },
+  {
+   "q": "Which of the following is a qualitative factor that a company should consider in a make-or-buy decision, even when the quantitative analysis favours purchasing from an outside supplier?",
+   "o": [
+    "The reliability and quality control of the outside supplier, and the risk of losing in-house expertise and productive capacity.",
+    "The amount of fixed overhead currently allocated to the component.",
+    "The historical cost of the equipment used to manufacture the component.",
+    "The depreciation method applied to the production equipment."
+   ],
+   "a": 0,
+   "e": "Quantitative analysis captures only what can be measured in the current period. A make-or-buy decision also creates dependence on the supplier's delivery reliability, quality standards and continued willingness to supply at the quoted price, and once internal capability and skilled staff are given up they can be expensive or impossible to rebuild. These factors can outweigh a modest cost advantage.",
+   "wrongWhy": {
+    "1": "Allocated fixed overhead is a quantitative figure, and to the extent that it is unavoidable it is not even relevant to the quantitative analysis, let alone a qualitative consideration.",
+    "2": "The historical cost of the equipment is a sunk cost. It is a quantitative amount and it is irrelevant to the decision under either analysis.",
+    "3": "The depreciation method is an accounting policy choice. It affects reported figures but has no bearing on the economic substance of the make-or-buy decision."
+   }
+  },
+  {
+   "q": "Ardith Company produces 8,000 litres of Compound R at a joint cost of $96,000. Compound R can be sold at the split-off point for $14 per litre, or it can be processed further into Compound R-Plus at an additional cost of $38,000 and sold for $20 per litre. There is no loss of volume in further processing. What should Ardith do?",
+   "o": [
+    "Process further, for an incremental advantage of $10,000.",
+    "Sell at split-off, for an advantage of $10,000.",
+    "Process further, for an incremental advantage of $48,000.",
+    "Sell at split-off, for an advantage of $26,000."
+   ],
+   "a": 0,
+   "e": "The $96,000 joint cost is incurred before the split-off point and is identical under both alternatives, so it is a sunk cost and is irrelevant. The incremental revenue from further processing is 8,000 × ($20 − $14) = $48,000 and the incremental cost is $38,000, giving a net advantage of $10,000 in favour of processing further.",
+   "wrongWhy": {
+    "1": "The direction is wrong. The incremental revenue of $48,000 exceeds the incremental processing cost of $38,000, so further processing improves operating income.",
+    "2": "$48,000 is the incremental revenue only. The additional processing cost of $38,000 must be deducted to arrive at the net advantage.",
+    "3": "This figure results from allocating part of the $96,000 joint cost to the decision. Joint costs incurred before split-off are sunk and must be excluded from a sell-or-process-further analysis."
    }
   }
  ]
