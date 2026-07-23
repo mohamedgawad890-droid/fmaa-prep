@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-23-02 section3-question-bank-180 -->
+<!-- FMAA-BUILD: 2026-07-23-03 quiz-len-25-lesson-edits -->
 <script>
-window.FMAA_BUILD='2026-07-23-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-23-03';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -965,6 +965,7 @@ async function ensureLessons(sectionId){
 }
 async function prewarmLessons(){try{await Promise.all([1,2,3,4,5].map(i=>ensureLessons(i)));}catch(e){}}
 setTimeout(prewarmLessons,4000);
+const LESSON_QUIZ_LEN=25;
 const QUIZ_CACHE={};
 async function ensureQuizzes(sectionId){
   const sid=String(sectionId);if(QUIZ_CACHE[sid])return;
@@ -1054,7 +1055,7 @@ async function doLessonQuiz(lessonId){
   await ensureQuizzes(sec.id);
   const lesson=sec.lessons.find(l=>l.id===lessonId);
   if(!lesson||!lesson.quizzes||lesson.quizzes.length===0){showToast('Quiz for this lesson is being prepared. Check back soon!','info');return;}
-  const questions=shuffle([...lesson.quizzes]).slice(0,15).map(shuffleQuestionOptions);
+  const questions=shuffle([...lesson.quizzes]).slice(0,LESSON_QUIZ_LEN).map(shuffleQuestionOptions);
   STATE.quizState={sId:sec.id,lessonId,questions,idx:0,selected:null,answers:[],isRetry:false,quizStartTime:Date.now(),qTimerStart:Date.now(),qTimerElapsed:null,questionTimes:[]};
   startStudyTimer('quiz-'+lessonId);STATE.tab='quiz-session';render();
 }
