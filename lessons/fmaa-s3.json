@@ -170,7 +170,52 @@
   {
    "t": "ex",
    "l": "Static vs Flexible Budget Comparison",
-   "v": "Master budget was prepared for 24,000 units. Actual sales = 20,000 units.\n                    Actual     Static   Flexible\nUnits sold          20,000     24,000    20,000\nRevenues        $2,500,000  $2,880,000 $2,400,000\nVariable costs  $1,900,200  $2,112,000 $1,760,000\nContrib. margin   $599,800    $768,000   $640,000\nFixed costs       $570,000    $552,000   $552,000\nOperating income   $29,800    $216,000    $88,000\n\nFlexible budget variance = Actual $29,800 − Flexible $88,000 = −$58,200 (Unfavorable)\nSales volume variance = Flexible $88,000 − Static $216,000 = −$128,000 (Unfavorable)\nTotal static budget variance = −$186,200 (Unfavorable)"
+   "v": "Master budget was prepared for 24,000 units. Actual sales = 20,000 units.",
+   "h": [
+    "Line item",
+    "Actual",
+    "Static",
+    "Flexible"
+   ],
+   "r": [
+    [
+     "Units sold",
+     "20,000",
+     "24,000",
+     "20,000"
+    ],
+    [
+     "Revenues",
+     "$2,500,000",
+     "$2,880,000",
+     "$2,400,000"
+    ],
+    [
+     "Variable costs",
+     "$1,900,200",
+     "$2,112,000",
+     "$1,760,000"
+    ],
+    [
+     "Contribution margin",
+     "$599,800",
+     "$768,000",
+     "$640,000"
+    ],
+    [
+     "Fixed costs",
+     "$570,000",
+     "$552,000",
+     "$552,000"
+    ],
+    [
+     "Operating income",
+     "$29,800",
+     "$216,000",
+     "$88,000"
+    ]
+   ],
+   "after": "Flexible budget variance = Actual $29,800 − Flexible $88,000 = −$58,200 (Unfavorable)\nSales volume variance = Flexible $88,000 − Static $216,000 = −$128,000 (Unfavorable)\nTotal static budget variance = −$186,200 (Unfavorable)"
   },
   {
    "t": "tip",
@@ -703,7 +748,7 @@
   },
   {
    "t": "h",
-   "v": "Answering Budgeting Calculation Questions"
+   "v": "Answering Budgeting Calculation Questions (technique — not separately assessed)"
   },
   {
    "t": "p",
