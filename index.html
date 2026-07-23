@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-23-04 aligned-grid-rendering -->
+<!-- FMAA-BUILD: 2026-07-23-05 ex-block-tables -->
 <script>
-window.FMAA_BUILD='2026-07-23-04';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-23-05';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -56,7 +56,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .tip-txt{font-size:calc(13px * var(--fs,1));color:#555;line-height:1.6}
 .ex-block{background:#F0FBF4;border:1.5px solid #27AE6040;border-radius:10px;padding:12px 14px;margin:12px 0}
 .ex-lbl{font-size:calc(10px * var(--fs,1));font-weight:700;color:#1E8449;letter-spacing:.8px;margin-bottom:6px}
-.ex-body{font-size:calc(13px * var(--fs,1));color:#1a1a1a;line-height:1.7;font-family:inherit;white-space:pre-wrap}\n.mono-grid{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:calc(12.5px * var(--fs,1));line-height:1.6;white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:9px 0;padding-bottom:3px;font-variant-numeric:tabular-nums}\n.formula-txt .mono-grid{font-size:calc(13.5px * var(--fs,1));font-weight:500;margin:6px 0}
+.ex-body{font-size:calc(13px * var(--fs,1));color:#1a1a1a;line-height:1.7;font-family:inherit;white-space:pre-wrap}\n.tbl td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}\n.ex-block .tbl-wrap{margin:10px 0 6px;background:#fff;border-color:#27AE6033}\n.mono-grid{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:calc(12.5px * var(--fs,1));line-height:1.6;white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:9px 0;padding-bottom:3px;font-variant-numeric:tabular-nums}\n.formula-txt .mono-grid{font-size:calc(13.5px * var(--fs,1));font-weight:500;margin:6px 0}
 .def-block{background:#EBF3FA;border:1.5px solid #3498DB40;border-radius:10px;padding:12px 14px;margin:12px 0}
 .def-lbl{font-size:calc(10px * var(--fs,1));font-weight:700;color:#1A5276;letter-spacing:.8px;margin-bottom:4px}
 .def-term{font-size:calc(14px * var(--fs,1));font-weight:600;color:#154360;margin-bottom:6px}
@@ -977,7 +977,7 @@ function renderBlock(block,sec){
     case'p':return`<div class="lp">${highlightTerms(block.v)}</div>`;
     case'f':return`<div class="formula" style="background:${bg};border:1px solid ${tx}30"><div class="formula-lbl" style="color:${tx}">${esc(block.l)}</div><div class="formula-txt" style="color:${st}">${fmtAligned(block.v)}</div></div>`;
     case'tip':return`<div class="tip"><div class="tip-lbl">EXAM TIP</div><div class="tip-txt">${highlightTerms(block.v)}</div></div>`;
-    case'ex':return`<div class="ex-block"><div class="ex-lbl">📊 ${esc(block.l||'Worked Example')}</div><div class="ex-body">${fmtAligned(block.v)}</div></div>`;
+    case'ex':{const _lbl=`<div class="ex-lbl">📊 ${esc(block.l||'Worked Example')}</div>`;const _pre=block.v?`<div class="ex-body">${fmtAligned(block.v)}</div>`:'';const _tbl=(block.h&&block.r)?`<div class="tbl-wrap"><table class="tbl"><thead><tr>${block.h.map((h,i)=>`<th style="background:${bg};color:${st}${i?';text-align:right':''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${block.r.map(row=>`<tr>${row.map((c,i)=>`<td${i?' class="num"':''}>${highlightTerms(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:'';const _post=block.after?`<div class="ex-body">${fmtAligned(block.after)}</div>`:'';return`<div class="ex-block">${_lbl}${_pre}${_tbl}${_post}</div>`;}
     case'def':return`<div class="def-block"><div class="def-lbl">DEFINITION</div><div class="def-term">${esc(block.term||'')}</div><div class="def-body">${highlightTerms(block.v)}</div></div>`;
     case'key':return`<div class="key-block"><div class="key-lbl">🔑 KEY TAKEAWAYS</div><ul class="key-list">${block.v.map(i=>`<li>${highlightTerms(i)}</li>`).join('')}</ul></div>`;
     case'b':return`<ul class="blist">${block.v.map(i=>`<li><span style="color:${tx};font-weight:500;flex-shrink:0">•</span><span>${highlightTerms(i)}</span></li>`).join('')}</ul>`;
