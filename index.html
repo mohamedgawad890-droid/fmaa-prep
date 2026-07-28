@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-23-06 css-newline-fix -->
+<!-- FMAA-BUILD: 2026-07-28-01 formula-bank-expansion -->
 <script>
-window.FMAA_BUILD='2026-07-23-06';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-28-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -128,7 +128,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 @keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
 .formula-bank-item{background:#fff;border:.5px solid #e0e0d8;border-radius:10px;padding:12px 14px;margin-bottom:8px}
 .formula-bank-label{font-size:11px;font-weight:600;color:#1A5276;letter-spacing:.5px;margin-bottom:4px}
-.formula-bank-formula{font-size:14px;font-weight:500;color:#154360;line-height:1.5}
+.formula-bank-formula{font-size:14px;font-weight:500;color:#154360;line-height:1.5;white-space:pre-line}
 .formula-bank-note{font-size:12px;color:#888;margin-top:4px;line-height:1.5}
 .quiz-opt{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;margin-bottom:8px;border:.5px solid #e0e0d8;background:#f8f8f6;transition:background .1s}
 .quiz-opt-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;border:.5px solid #bbb;background:#fff}
@@ -1938,6 +1938,15 @@ function renderFormulaBank(){
       {l:'Operating Cycle',f:"Days' Sales in Receivables + Days' Sales in Inventory"},
       {l:'Cash Conversion Cycle',f:"Operating Cycle − Days' Purchases in Accounts Payable"},
       {l:'Cost of Not Taking a Discount',f:'[365 ÷ (Total Period − Discount Period)] × [Discount% ÷ (100% − Discount%)]'},
+      {l:'Cash Collected from Customers',f:'Sales Revenue + Beginning AR − Ending AR = Cash Collected'},
+    ]},
+    {title:'📊 Section A — Financial Statements',items:[
+      {l:'Multi-Step Income Statement',f:'Net Sales − COGS = Gross Profit\n− SG&A Expenses = Operating Income\n+/− Non-operating items = Income Before Tax\n− Income Tax Expense = Net Income'},
+      {l:'Indirect Method (Statement of Cash Flows)',f:'Net Income\n+ Depreciation & Amortization (add back)\n+/− Gains/Losses on asset sales\n+/− Changes in working capital accounts\n= Net Cash from Operating Activities',n:'Add back non-cash expenses; subtract increases in AR/Inventory, add increases in AP.'},
+    ]},
+    {title:'📊 Section A — Inventory Planning',items:[
+      {l:'Reorder Point',f:'Reorder Point = (Average Daily Usage × Average Lead Time) + Safety Stock'},
+      {l:'Average Inventory',f:'Average Inventory = (Order Quantity ÷ 2) + Safety Stock'},
     ]},
     {title:'📋 Section B — Inventory & Assets',items:[
       {l:'COGS (Periodic)',f:'COGS = Beginning Inventory + Purchases − Ending Inventory'},
@@ -1983,20 +1992,65 @@ function renderFormulaBank(){
       {l:'Production Budget',f:'Units to Produce = Budgeted Sales + Desired Ending FG Inventory − Beginning FG Inventory'},
       {l:'Direct Materials Purchases',f:'Materials to Purchase = Production Needs + Desired Ending Materials − Beginning Materials'},
       {l:'Flexible Budget',f:'(Budgeted Variable Cost per Unit × Actual Units) + Budgeted Fixed Costs'},
+      {l:'Cash Collections',f:'Beginning AR + Credit Sales − Ending AR = Cash Collections'},
+      {l:'Purchases Budget',f:'COGS + Desired Ending Inventory − Beginning Inventory = Purchases'},
+      {l:'Budgeted Cash Payments',f:'Purchases + Beginning AP − Ending AP = Cash Payments'},
     ]},
-    {title:'💰 Section D — Overhead & Variances',items:[
-      {l:'Predetermined Overhead Rate',f:'Estimated Total Overhead ÷ Estimated Total Allocation Base'},
-      {l:'Applied Overhead',f:'Predetermined Rate × Actual (or Standard) Activity Base'},
+    {title:'🏭 Section D — Manufacturing Cost Buildup',items:[
+      {l:'Total Manufacturing Cost',f:'DM Cost + DL Cost + OH Cost'},
+      {l:'Direct Materials Cost',f:'DM Quantity Used × DM Cost per Unit'},
+      {l:'Direct Labor Cost',f:'DL Quantity (Hours) Used × DL Cost per Hour'},
+      {l:'Overhead Cost',f:'Variable OH Applied + Fixed OH Applied'},
+      {l:'Applied Variable Overhead',f:'Standard VOH Rate × Standard Hours Allowed for Actual Output'},
+      {l:'Applied Fixed Overhead',f:'Predetermined FOH Rate × Standard Hours Allowed for Actual Output'},
+      {l:'Cost of Goods Manufactured (COGM)',f:'DM Used + DL Used + OH Applied = Total Manufacturing Costs\n+ Beginning WIP − Ending WIP = COGM'},
+      {l:'Cost of Goods Sold (Manufacturing)',f:'Beginning Finished Goods + COGM − Ending Finished Goods = COGS'},
+    ]},
+    {title:'📉 Section D — Cost Behavior',items:[
+      {l:'Total Variable Cost',f:'Variable Cost per Unit × Number of Units Produced'},
+      {l:'Fixed Cost per Unit',f:'Total Fixed Cost ÷ Number of Units Produced',n:'Total fixed cost stays constant; per-unit fixed cost changes with volume.'},
+      {l:'Mixed Cost Structure',f:'Total Mixed Cost = Fixed Component + (Variable Rate × Activity Level)'},
+    ]},
+    {title:'🧾 Section D — Costing Systems',items:[
+      {l:'Absorption Costing Income Statement',f:'Sales − COGS (incl. Fixed MOH) = Gross Profit\n− Operating Expenses = Operating Income'},
+      {l:'Variable Costing Income Statement',f:'Sales − Variable Costs = Contribution Margin\n− Fixed Costs = Operating Income'},
+    ]},
+    {title:'💰 Section D — Budget Variances',items:[
       {l:'Flexible Budget Variance',f:'Actual Results − Flexible Budget Amount'},
       {l:'Sales Volume Variance',f:'Flexible Budget Amount − Static Budget Amount'},
-      {l:'Price (Rate) Variance',f:'(AP − SP) × AQ',n:'AP=Actual Price, SP=Standard Price, AQ=Actual Qty. Positive = unfavorable.'},
-      {l:'Quantity (Efficiency/Usage) Variance',f:'(AQ − SQ) × SP',n:'SQ = Standard Qty allowed for ACTUAL output. Positive = unfavorable.'},
+      {l:'Total Static Budget Variance',f:'Flexible Budget Variance + Sales Volume Variance',n:'Equals Actual Results − Static Budget Amount directly.'},
+    ]},
+    {title:'💰 Section D — Materials & Labor Variances',items:[
+      {l:'DM Price Variance',f:'(AP − SP) × AQ',n:'AP=Actual Price, SP=Standard Price, AQ=Actual Qty. Positive = unfavorable.'},
+      {l:'DM Quantity Variance',f:'(AQ − SQ) × SP',n:'SQ = Standard Qty allowed for ACTUAL output. Positive = unfavorable.'},
+      {l:'Total Materials Variance',f:'(AP × AQ) − (SP × SQ)'},
+      {l:'DL Rate Variance',f:'(AR − SR) × AH',n:'AR=Actual Rate, SR=Standard Rate, AH=Actual Hours.'},
+      {l:'DL Efficiency Variance',f:'(AH − SH) × SR',n:'SH = Standard Hours allowed for actual output.'},
+      {l:'Total Labor Variance',f:'(AR × AH) − (SR × SH)'},
+    ]},
+    {title:'💰 Section D — Overhead Variances',items:[
+      {l:'Predetermined Overhead Rate',f:'Estimated Total Overhead ÷ Estimated Total Allocation Base'},
+      {l:'Applied Overhead',f:'Predetermined Rate × Actual (or Standard) Activity Base'},
+      {l:'VOH Spending Variance',f:'(Actual VOH Rate − Standard VOH Rate) × Actual Hours'},
+      {l:'VOH Efficiency Variance',f:'(Actual Hours − Standard Hours Allowed) × Standard VOH Rate'},
+      {l:'Total Variable OH Variance',f:'Actual Variable OH − Variable OH Applied'},
+      {l:'FOH Spending Variance',f:'Actual Fixed OH − Budgeted Fixed OH'},
+      {l:'FOH Volume Variance',f:'Budgeted Fixed OH − Applied Fixed OH',n:'Also called the production-volume variance.'},
+      {l:'Total Fixed OH Variance',f:'Actual Fixed OH − Fixed OH Applied'},
     ]},
     {title:'💰 Section D — Performance & CVP',items:[
       {l:'Unit Contribution Margin',f:'Selling Price per Unit − Variable Cost per Unit'},
+      {l:'Total Contribution Margin',f:'Unit Contribution Margin × Units Sold  (or Total Revenue − Total Variable Costs)'},
       {l:'Contribution Margin Ratio',f:'Unit Contribution Margin ÷ Selling Price per Unit'},
+      {l:'CVP Income Statement',f:'Sales Revenue − Variable Costs = Contribution Margin\n− Fixed Costs = Operating Income'},
       {l:'Breakeven Volume (Units)',f:'Fixed Costs ÷ Unit Contribution Margin'},
+      {l:'Breakeven in Revenue',f:'Fixed Costs ÷ Contribution Margin Ratio'},
+      {l:'Margin of Safety (Units)',f:'Actual (or Budgeted) Unit Sales − Breakeven Unit Sales'},
+      {l:'Margin of Safety ($)',f:'Actual (or Budgeted) Sales Revenue − Breakeven Sales Revenue'},
+      {l:'Margin of Safety Ratio',f:'Margin of Safety ($) ÷ Actual (or Budgeted) Sales Revenue'},
       {l:'Target-Profit Volume (Units)',f:'(Fixed Costs + Target Profit) ÷ Unit Contribution Margin'},
+      {l:'Revenue for Target Profit',f:'(Fixed Costs + Target Operating Income) ÷ Contribution Margin Ratio'},
+      {l:'Pre-Tax Target Income',f:'After-Tax Target Income ÷ (1 − Tax Rate)',n:'Use when the target profit is stated on an after-tax basis.'},
       {l:'Return on Investment (ROI)',f:'Operating Income ÷ Investment (Operating Assets)'},
       {l:'Residual Income (RI)',f:'Operating Income − (Required Rate of Return × Investment)'},
     ]},
