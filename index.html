@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-29-01 exam-fixes-timing-history -->
+<!-- FMAA-BUILD: 2026-07-30-01 group-content-stale-cache-fix -->
 <script>
-window.FMAA_BUILD='2026-07-29-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-07-30-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -3258,7 +3258,28 @@ async function deleteExam(id){
 }
 // Student-side: load active plan + exam for this student's group (only if approved)
 async function loadGroupContent(){
-  const st=loadStudent();if(!st||!st.groupCode||st.groupCodeStatus==='pending'||st.groupCodeStatus==='rejected')return;
+  // BATCH 2026-07-30-01 (#1): mirrors the loadActiveLecture recheck fix from
+  // 2026-07-22-02. The local cache of the student record only refreshes at
+  // login or on the Register tab, so a mid-session instructor approval left
+  // this function reading a stale groupCodeStatus:'pending'/no-group record
+  // forever — checkin self-healed via Firestore recheck, this never did,
+  // which is exactly why one newly-approved student could check in to a
+  // lecture but never see the group's exam.
+  let st=loadStudent();
+  const blocked=s=>!s||!s.groupCode||s.groupCodeStatus==='pending'||s.groupCodeStatus==='rejected';
+  if(blocked(st)){
+    if(STATE._studentRecheckAt&&Date.now()-STATE._studentRecheckAt<60000)return;
+    STATE._studentRecheckAt=Date.now();
+    try{
+      const doc=await db.collection('fmaa-students').doc(STATE.user.uid).get();
+      if(!doc.exists)return;
+      const fresh=doc.data()||{};
+      if(blocked(fresh))return;
+      try{localStorage.setItem('fmaa-student-v1',JSON.stringify(fresh));}catch{}
+      st=fresh;
+      STATE.groupPlanLoaded=false;STATE.groupExamLoaded=false;
+    }catch(e){return;}
+  }
   const gc=st.groupCode.toUpperCase();
   try{
     const [planSnap,examSnap]=await Promise.all([
@@ -3808,7 +3829,13 @@ function render(){
   if(STATE.tab==='community'&&!STATE.communityLoaded&&!STATE.communityLoading&&!STATE.showAskForm)setTimeout(loadQuestions,0);
   if(STATE.tab==='community'&&isInstructor())markCommunitySeen();
   if(STATE.tab==='dashboard'&&!STATE.dashLoaded&&!STATE.dashLoading&&!STATE.dashError)setTimeout(loadDashboard,0);
-  if(STATE.tab==='study'&&!STATE.lessonId&&!isInstructor()){const _st=loadStudent();if(_st&&_st.groupCode){if(!STATE.groupPlanLoaded||!STATE._groupContentLoadTime||Date.now()-STATE._groupContentLoadTime>120000){STATE._groupContentLoadTime=Date.now();setTimeout(loadGroupContent,0);}}}
+  // BATCH 2026-07-30-01 (#1): dropped the `_st.groupCode` pre-check that used
+  // to gate this call. That check read the local cache, which has no groupCode
+  // field at all while a student is pending (only pendingGroupCode) — so a
+  // student approved mid-session never got this function called, and the
+  // Firestore-recheck fix inside it was unreachable dead code. loadActiveLecture
+  // has no such gate and self-heals fine; this now matches that pattern.
+  if(STATE.tab==='study'&&!STATE.lessonId&&!isInstructor()&&STATE.user){if(!STATE.groupPlanLoaded||!STATE._groupContentLoadTime||Date.now()-STATE._groupContentLoadTime>120000){STATE._groupContentLoadTime=Date.now();setTimeout(loadGroupContent,0);}}
   // Load active lecture/feedback for students (check once per session, refresh every 3 min)
   if(!isInstructor()&&STATE.user&&STATE.tab!=='loading'&&STATE.tab!=='login'&&STATE.tab!=='onboarding'){if(!STATE.activeLectureLoaded||!STATE._lectureLoadTime||Date.now()-STATE._lectureLoadTime>45000){STATE._lectureLoadTime=Date.now();setTimeout(loadActiveLecture,0);}}
   content.style.display='flex';content.style.flexDirection='column';content.style.overflow='auto';
