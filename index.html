@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-07-30-01 group-content-stale-cache-fix -->
+<!-- FMAA-BUILD: 2026-08-04-01 plan-banner-section-exam-datetime -->
 <script>
-window.FMAA_BUILD='2026-07-30-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-04-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -1715,8 +1715,8 @@ function renderStudy(){
   const planBanner=(()=>{
     if(!gc||!STATE.groupPlanLoaded)return'';
     const p=STATE.groupPlan;if(!p)return'';
-    const unitTitles=p.units.map(uid=>{const l=S.flatMap(s=>s.lessons).find(x=>x.id===uid);return l?l.title:null;}).filter(Boolean);
-    return`<div style="background:#EBF5FB;border:1px solid #1A527640;border-radius:12px;padding:12px 14px;margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="font-size:16px">📅</span><div><div style="font-size:13px;font-weight:600;color:#154360">This Week: ${esc(p.weekLabel)}</div>${p.note?`<div style="font-size:11px;color:#1A5276;margin-top:1px">${esc(p.note)}</div>`:''}</div></div>${unitTitles.length?`<div style="display:flex;flex-wrap:wrap;gap:4px">${unitTitles.map(t=>`<span style="font-size:11px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px">${esc(t)}</span>`).join('')}</div>`:''}</div>`;
+    const unitLabels=p.units.map(uid=>{const sec2=S.find(s=>s.lessons.some(x=>x.id===uid));const l=sec2?sec2.lessons.find(x=>x.id===uid):null;return l?`Section ${sec2.id} · Unit ${l.id}: ${l.title}`:null;}).filter(Boolean);
+    return`<div style="background:#EBF5FB;border:1px solid #1A527640;border-radius:12px;padding:12px 14px;margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="font-size:16px">📅</span><div><div style="font-size:13px;font-weight:600;color:#154360">This Week: ${esc(p.weekLabel)}</div>${p.note?`<div style="font-size:11px;color:#1A5276;margin-top:1px">${esc(p.note)}</div>`:''}</div></div>${unitLabels.length?`<div style="display:flex;flex-wrap:wrap;gap:4px">${unitLabels.map(t=>`<span style="font-size:11px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px">${esc(t)}</span>`).join('')}</div>`:''}</div>`;
   })();
   const examBanner=(()=>{
     if(!gc||!STATE.groupExamLoaded)return'';
@@ -3222,11 +3222,27 @@ function toggleExamUnit(lessonId){
   if(idx>-1)u.splice(idx,1);else u.push(lessonId);
   render();
 }
+function updateDtPreview(prefix){
+  const dEl=document.getElementById(prefix+'-date'),tEl=document.getElementById(prefix+'-time');
+  const pEl=document.getElementById(prefix+'-preview');
+  if(!pEl)return;
+  const dv=dEl&&dEl.value,tv=tEl&&tEl.value;
+  if(!dv||!tv){pEl.textContent='';return;}
+  const dt=new Date(dv+'T'+tv);
+  if(isNaN(dt.getTime())){pEl.textContent='';return;}
+  const dd=String(dt.getDate()).padStart(2,'0'),mm=String(dt.getMonth()+1).padStart(2,'0'),yyyy=dt.getFullYear();
+  let h=dt.getHours();const min=String(dt.getMinutes()).padStart(2,'0');const ap=h>=12?'PM':'AM';h=h%12;if(h===0)h=12;
+  pEl.textContent=`${dd}/${mm}/${yyyy} ${String(h).padStart(2,'0')}:${min} ${ap}`;
+}
 async function saveExam(){
   const d=STATE.dashExamDraft;
   if(!d.groupCode.trim()||!d.title.trim()||!d.durationMins||!d.questionCount){showToast('Fill in all exam fields.','warning');return;}
-  const startTs=document.getElementById('exam-start')?.value;
-  const endTs=document.getElementById('exam-end')?.value;
+  const startDate=document.getElementById('exam-start-date')?.value;
+  const startTime=document.getElementById('exam-start-time')?.value;
+  const endDate=document.getElementById('exam-end-date')?.value;
+  const endTime=document.getElementById('exam-end-time')?.value;
+  const startTs=startDate&&startTime?`${startDate}T${startTime}`:'';
+  const endTs=endDate&&endTime?`${endDate}T${endTime}`:'';
   if(!startTs||!endTs){showToast('Set start and end date/time.','warning');return;}
   if(new Date(endTs)<=new Date(startTs)){showToast('End time must be after start time.','warning');return;}
   // Pre-build fixed question pool at creation time
@@ -3675,8 +3691,8 @@ function renderDashboard(){
       </div>
       <div style="margin-bottom:10px"><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Select Units <span style="color:#1A5276">(${(STATE.dashExamDraft.units||[]).length} selected — leave empty for all)</span></label><div style="max-height:200px;overflow-y:auto;border:.5px solid #d0d0d0;border-radius:8px;background:#fafaf8">${S.map(sec=>`<div><div style="font-size:10px;font-weight:600;color:${sec.text};padding:5px 10px 3px;background:${sec.bg};letter-spacing:.5px">${esc(sec.title)}</div>${sec.lessons.map(l=>{const sel=(STATE.dashExamDraft.units||[]).includes(l.id);return `<label style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-bottom:.5px solid #f0f0eb;cursor:pointer;background:${sel?sec.bg:"transparent"}"><input type="checkbox" ${sel?"checked":""} data-lid="${l.id}" onchange="toggleExamUnit(this.dataset.lid)" style="accent-color:${sec.bar};cursor:pointer;flex-shrink:0"><span style="font-size:12px;color:${sel?sec.strong:"#444"};font-weight:${sel?"500":"400"}">${esc(l.title)}</span></label>`;}).join("")}</div>`).join("")}</div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
-        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Start date &amp; time *</label><input type="datetime-local" id="exam-start" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
-        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">End date &amp; time *</label><input type="datetime-local" id="exam-end" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Start date &amp; time *</label><div style="display:flex;gap:6px"><input type="date" id="exam-start-date" oninput="updateDtPreview('exam-start')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><input type="time" id="exam-start-time" oninput="updateDtPreview('exam-start')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div><div id="exam-start-preview" style="font-size:11px;color:#1A5276;margin-top:3px;min-height:14px"></div></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">End date &amp; time *</label><div style="display:flex;gap:6px"><input type="date" id="exam-end-date" oninput="updateDtPreview('exam-end')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><input type="time" id="exam-end-time" oninput="updateDtPreview('exam-end')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div><div id="exam-end-preview" style="font-size:11px;color:#1A5276;margin-top:3px;min-height:14px"></div></div>
       </div>
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#555;cursor:pointer"><input type="checkbox" id="exam-draft-toggle" style="accent-color:#EF9F27;cursor:pointer">Save as draft (hidden from students)</label></div>
       <button onclick="saveExam()" style="width:100%;padding:11px;border-radius:10px;border:none;background:#1E8449;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit">\u{1F3AF} Create Exam</button>
