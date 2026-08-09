@@ -801,7 +801,7 @@
     {
       "t": "ex",
       "l": "Greenworks Balance Sheet Summary (June 30, 20X1)",
-      "v": "ASSETS\nCurrent: Cash+CE $150,517 | AR $79,100 | Inventory $7,100 | Prepaid $22,000 = $258,717\nNon-current: Land $75,000 | Buildings (net) $199,573 | F&E (net) $133,334 = $407,907\nTotal Assets = $666,624\n\nLIABILITIES\nCurrent: AP $53,965 | Taxes Payable $11,415 | Current LTD $14,400 = $79,780\nNon-current: Long-term Debt $56,400\nTotal Liabilities = $136,180\n\nEQUITY\nCommon Stock $50,000 | APIC $450,000 | Retained Earnings $30,444\nTotal Equity = $530,444\nTotal L+E = $666,624 ✓"
+      "v": "ASSETS\nCurrent: Cash+CE $150,517 | AR $79,100 | Inventory $7,100 | Prepaid $22,000 = $258,717\nNon-current: Land $75,000 | Buildings (net) $199,573 | F&E (net) $133,334 = $407,907\nTotal Assets = $666,624\n\nLIABILITIES\nCurrent: AP $53,965 | Taxes Payable $11,415 | Current LTD $14,400 = $79,780\nNon-current: Long-term Debt $56,400\nTotal Liabilities = $136,180\n(Note: the June 1 equipment loan was $72,000; the first month's scheduled principal payment of $1,200 was made on June 30, reducing the loan balance to $70,800 — split $14,400 current / $56,400 non-current above.)\n\nEQUITY\nCommon Stock $50,000 | APIC $450,000 | Retained Earnings $30,444\nTotal Equity = $530,444\nTotal L+E = $666,624 ✓"
     },
     {
       "t": "h",

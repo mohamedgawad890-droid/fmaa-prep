@@ -75,6 +75,53 @@
     },
     {
       "t": "h",
+      "v": "The Fraud Triangle"
+    },
+    {
+      "t": "p",
+      "v": "Criminologist Donald R. Cressey, in his book Other People's Money, identified three conditions that must all be present for a trusted employee to commit fraud against an employer. This model — the Fraud Triangle — is one of the most heavily tested concepts in this unit."
+    },
+    {
+      "t": "def",
+      "term": "Fraud Triangle",
+      "v": "A model identifying three conditions that must all be present for a trusted person to commit fraud: Pressure (a financial or personal motivation), Opportunity (the ability to commit and conceal the act), and Rationalization (the ability to justify the behavior to oneself as acceptable). Remove any one leg and the fraud risk drops sharply."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Leg",
+        "What It Is",
+        "Example"
+      ],
+      "r": [
+        [
+          "Pressure (Incentive)",
+          "A financial or personal problem the person feels cannot be shared, such as debt, gambling losses, or an unmet bonus target",
+          "An employee with a gambling debt needs cash fast"
+        ],
+        [
+          "Opportunity",
+          "A weakness in controls that lets the person commit and conceal the act",
+          "Warehouse doors left open; no segregation of duties; lack of reconciliation"
+        ],
+        [
+          "Rationalization",
+          "A justification that lets the person see the act as acceptable rather than as theft",
+          "\"I am only borrowing it,\" \"I am underpaid anyway,\" \"No one will get hurt\""
+        ]
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Weak Internal Controls Increase Opportunity",
+      "v": "A manufacturer in a low-traffic area leaves its raw-materials warehouse doors open during business hours to speed up workflow. The controller notices inventory shrinkage has been rising.\nAnalysis: leaving the doors open does not create financial pressure and does not rationalize anything for an employee — it simply makes it easier for someone who is already tempted to take material without being seen or caught. This is a textbook increase in OPPORTUNITY, the control-related leg of the triangle."
+    },
+    {
+      "t": "tip",
+      "v": "Exam pattern: a question will describe a scenario and ask which single leg of the triangle is present, absent, or increased. Sort the facts — financial or personal strain = pressure; a control gap or lack of oversight = opportunity; a self-justifying belief or attitude = rationalization. Strong internal controls (segregation of duties, reconciliations, audits) primarily attack OPPORTUNITY — they cannot remove an employee's financial pressure or personal rationalizations, which is why controls alone never reduce fraud risk to zero."
+    },
+    {
+      "t": "h",
       "v": "Stakeholder Theory vs Shareholder Theory"
     },
     {
