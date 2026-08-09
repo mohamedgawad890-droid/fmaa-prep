@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-08-01 group-exam-scaling-review-fixes -->
+<!-- FMAA-BUILD: 2026-08-10-01 exam-timing-results-fixes-content-batch -->
 <script>
-window.FMAA_BUILD='2026-08-08-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-10-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -2366,7 +2366,7 @@ async function startMockExam(){
     const mcqQ=mockSelectMCQ();
     if(mcqQ.length===0){showToast('No quiz questions are loaded yet for the mock exam. Check back once the question banks are added.','info');STATE.mockExam.status='idle';render();return;}
     if(mcqQ.length<MOCK_TARGET){const ok=await showModal({icon:'⚠️',title:`Only ${mcqQ.length} Questions Available`,body:`The target is ${MOCK_TARGET} questions but only ${mcqQ.length} are loaded right now. The exam will run with ${mcqQ.length} questions and the scaled score will be calculated out of ${MOCK_TARGET} (missing questions count as wrong).`,type:'warning',confirmText:'Start Anyway',cancelText:'Cancel'});if(!ok){STATE.mockExam.status='idle';render();return;}}
-    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false,mcqQuestionTimes:[],mcqQTimerStart:Date.now()};render();
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false,deadlineTs:Date.now()+MOCK_SECONDS*1000,mcqQuestionTimes:[],mcqQTimerStart:Date.now()};render();
     mockStartTimer();
   }catch(e){
     console.error('startMockExam failed:',e);
@@ -2381,9 +2381,19 @@ async function startMockExam(){
 function mockStartTimer(){
   STATE.mockExam.mcqInterval=setInterval(()=>{
     if(STATE.tab!=='mock-exam'){mockClearTimers();return;}
-    STATE.mockExam.mcqTime--;
+    // Recompute remaining time from the wall-clock deadline every tick, rather than a plain
+    // decrement. A plain "mcqTime--" only ever subtracts 1 second per tick, so if the browser
+    // throttles setInterval while the tab is backgrounded (phone locked, app switched), the
+    // countdown falls behind real elapsed time and the exam can run well past its duration
+    // before mcqTime finally reaches 0. Deriving mcqTime from Date.now() vs a fixed deadline
+    // is self-correcting: whenever the tick does fire — even late — it reflects true elapsed time.
     const deadlineTs=STATE.mockExam.deadlineTs;
-    const pastDeadline=deadlineTs&&Date.now()>=deadlineTs;
+    if(deadlineTs&&!isNaN(deadlineTs)){
+      STATE.mockExam.mcqTime=Math.max(0,Math.round((deadlineTs-Date.now())/1000));
+    } else {
+      STATE.mockExam.mcqTime--;
+    }
+    const pastDeadline=deadlineTs&&!isNaN(deadlineTs)&&Date.now()>=deadlineTs;
     const tel=document.getElementById('mock-timer');
     if(tel){tel.textContent=mockFmtTime(Math.max(0,STATE.mockExam.mcqTime));tel.style.color=STATE.mockExam.mcqTime<300?'#E24B4A':'#1a1a1a';}
     mockUpdateNav();
@@ -3267,6 +3277,21 @@ function updateDtPreview(prefix){
   let h=dt.getHours();const min=String(dt.getMinutes()).padStart(2,'0');const ap=h>=12?'PM':'AM';h=h%12;if(h===0)h=12;
   pEl.textContent=`${dd}/${mm}/${yyyy} ${String(h).padStart(2,'0')}:${min} ${ap}`;
 }
+// Dropdown time picker: reads the hour/minute/AM-PM <select> elements for the given prefix,
+// computes a 24-hour "HH:MM" value, and writes it into the hidden #<prefix>-time input so
+// all downstream code (saveExam, updateDtPreview) keeps working unchanged.
+function updateTimeDropdown(prefix){
+  const hEl=document.getElementById(prefix+'-hour'),mEl=document.getElementById(prefix+'-min'),apEl=document.getElementById(prefix+'-ampm');
+  const hidden=document.getElementById(prefix+'-time');
+  if(!hidden)return;
+  const hv=hEl&&hEl.value,mv=mEl&&mEl.value,apv=apEl&&apEl.value;
+  if(!hv||!mv||!apv){hidden.value='';updateDtPreview(prefix);return;}
+  let h=parseInt(hv,10);
+  if(apv==='PM'&&h!==12)h+=12;
+  if(apv==='AM'&&h===12)h=0;
+  hidden.value=String(h).padStart(2,'0')+':'+mv;
+  updateDtPreview(prefix);
+}
 async function saveExam(){
   const d=STATE.dashExamDraft;
   if(!d.groupCode.trim()||!d.title.trim()||!d.durationMins||!d.questionCount){showToast('Fill in all exam fields.','warning');return;}
@@ -3378,8 +3403,12 @@ async function startGroupExam(examId){
     // Cap the countdown to whatever's left before the exam's real end time —
     // a student who joins late gets less time, and everyone is force-submitted
     // at the same wall-clock deadline regardless of when they started.
-    const deadlineTs=new Date(exam.endAt).getTime();
+    // Guard against a malformed exam.endAt (e.g. an exam saved before a start/end time was
+    // ever picked) — fall back to "now + full duration" instead of leaving deadlineTs as NaN,
+    // which would silently disable the wall-clock auto-submit check altogether.
+    let deadlineTs=new Date(exam.endAt).getTime();
     const fullDurationSecs=exam.durationMins*60;
+    if(isNaN(deadlineTs))deadlineTs=Date.now()+fullDurationSecs*1000;
     const secsUntilDeadline=Math.max(0,Math.floor((deadlineTs-Date.now())/1000));
     const secs=Math.min(fullDurationSecs,secsUntilDeadline);
     STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode,deadlineTs,mcqQuestionTimes:[],mcqQTimerStart:Date.now()};
@@ -3615,7 +3644,13 @@ function renderDashboard(){
     const exams=STATE.dashExams||[];
     // Group results by examId
     const byExam={};
-    results.forEach(r=>{if(!byExam[r.examId])byExam[r.examId]={examId:r.examId,examTitle:r.examTitle||'Exam',groupCode:r.groupCode||'',results:[]};byExam[r.examId].results.push(r);});
+    // Seed from the exams collection FIRST, so every created exam is visible — including ones
+    // with zero submissions. Previously this list was built purely from `results`, which meant
+    // an exam a student took but whose submission never wrote to Firestore (or hadn't been
+    // submitted yet) was completely invisible here, with no way to tell "never taken" apart
+    // from "submission failed to save."
+    exams.forEach(ex=>{byExam[ex.id]={examId:ex.id,examTitle:ex.title||'Exam',groupCode:ex.groupCode||'',results:[],_noSubmissions:true};});
+    results.forEach(r=>{if(!byExam[r.examId])byExam[r.examId]={examId:r.examId,examTitle:r.examTitle||'Exam',groupCode:r.groupCode||'',results:[]};byExam[r.examId].results.push(r);byExam[r.examId]._noSubmissions=false;});
     // Sort each exam's results by score desc
     Object.values(byExam).forEach(e=>e.results.sort((a,b)=>b.scaled-a.scaled));
     // Group filter
@@ -3623,7 +3658,7 @@ function renderDashboard(){
     const allResultGroups=[...new Set(Object.values(byExam).map(e=>e.groupCode).filter(Boolean))].sort();
     const rgfBtns='<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"><span style="font-size:11px;color:#888;align-self:center">Group:</span><button onclick="STATE.dashResultsGroupFilter=\'\';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid '+(rgf?'#d0d0d0':'#1A5276')+';background:'+(rgf?'#f5f5f0':'#1A5276')+';color:'+(rgf?'#555':'#fff')+'">All</button>'+allResultGroups.map(g=>'<button onclick="STATE.dashResultsGroupFilter=\''+g+'\';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid '+(rgf===g?'#1A5276':'#d0d0d0')+';background:'+(rgf===g?'#1A5276':'#f5f5f0')+';color:'+(rgf===g?'#fff':'#555')+'">'+esc(g)+'</button>').join('')+'</div>';
     const filteredExams=Object.values(byExam).filter(e=>!rgf||e.groupCode===rgf).sort((a,b)=>(b.results[0]?.submittedAt||'')>(a.results[0]?.submittedAt||'')?1:-1);
-    if(!results.length||!filteredExams.length){
+    if(!exams.length&&!results.length){
       bodyHTML=`<div style="padding:14px">${rgfBtns}<div style="text-align:center;padding:60px 20px;color:#aaa"><div style="font-size:40px;margin-bottom:12px">📊</div><div style="font-size:14px">No exam results yet.</div></div></div>`;
     } else {
       const examBlocks=filteredExams.map(ex=>{
@@ -3631,7 +3666,7 @@ function renderDashboard(){
         const failCount=ex.results.length-passCount;
         const isCollapsed=STATE.dashResultsCollapsed[ex.examId]!==false;// default collapsed
         const examObj=exams.find(e=>e.id===ex.examId);
-        const examDate=ex.results[0]?.submittedAt?new Date(ex.results[0].submittedAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'';
+        const examDate=ex.results[0]?.submittedAt?new Date(ex.results[0].submittedAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):(examObj?.createdAt?'Created '+new Date(examObj.createdAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'');
         const studentRows=isCollapsed?'':ex.results.map((r,i)=>{
           const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':String(i+1);
           const{col,bg}=examScoreColor(r);
@@ -3673,14 +3708,14 @@ function renderDashboard(){
               <div style="font-size:11px;color:#888;margin-top:2px">${examDate} · ${ex.results.length} submissions</div>
             </div>
             <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
-              <div style="text-align:right"><div style="font-size:12px;font-weight:600;color:#186A3B">${passCount} passed</div><div style="font-size:11px;color:#E24B4A">${failCount} failed</div></div>
+              ${ex._noSubmissions?'<span style="font-size:11px;color:#B9770E;background:#FEF5E7;padding:3px 8px;border-radius:8px;font-weight:500">No submissions yet</span>':`<div style="text-align:right"><div style="font-size:12px;font-weight:600;color:#186A3B">${passCount} passed</div><div style="font-size:11px;color:#E24B4A">${failCount} failed</div></div>`}
               ${analyticsBtn}
               ${reviewBtn}
               <span style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isCollapsed?'0':'90'}deg)">›</span>
             </div>
           </div>
           ${analyticsHTML}
-          ${isCollapsed?'':studentRows}
+          ${isCollapsed?'':(ex._noSubmissions?'<div style="padding:16px 14px;text-align:center;color:#aaa;font-size:12px">No student has submitted this exam yet. If a student says they completed it, check their connection at submit time — group exam results save directly to the server.</div>':studentRows)}
         </div>`;
       }).join('');
       bodyHTML=`<div style="padding:10px 14px;display:flex;gap:8px;align-items:center">${rgfBtns}<button onclick="exportResultsCSV()" style="padding:6px 12px;border-radius:8px;border:none;background:#186A3B;color:#fff;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap">📥 CSV</button></div><div style="padding:0 14px 14px">${examBlocks}</div>`;
@@ -3723,8 +3758,8 @@ function renderDashboard(){
       </div>
       <div style="margin-bottom:10px"><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Select Units <span style="color:#1A5276">(${(STATE.dashExamDraft.units||[]).length} selected — leave empty for all)</span></label><div style="max-height:200px;overflow-y:auto;border:.5px solid #d0d0d0;border-radius:8px;background:#fafaf8">${S.map(sec=>`<div><div style="font-size:10px;font-weight:600;color:${sec.text};padding:5px 10px 3px;background:${sec.bg};letter-spacing:.5px">${esc(sec.title)}</div>${sec.lessons.map(l=>{const sel=(STATE.dashExamDraft.units||[]).includes(l.id);return `<label style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-bottom:.5px solid #f0f0eb;cursor:pointer;background:${sel?sec.bg:"transparent"}"><input type="checkbox" ${sel?"checked":""} data-lid="${l.id}" onchange="toggleExamUnit(this.dataset.lid)" style="accent-color:${sec.bar};cursor:pointer;flex-shrink:0"><span style="font-size:12px;color:${sel?sec.strong:"#444"};font-weight:${sel?"500":"400"}">${esc(l.title)}</span></label>`;}).join("")}</div>`).join("")}</div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
-        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Start date &amp; time *</label><div style="display:flex;gap:6px"><input type="date" id="exam-start-date" oninput="updateDtPreview('exam-start')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><input type="time" id="exam-start-time" oninput="updateDtPreview('exam-start')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div><div id="exam-start-preview" style="font-size:11px;color:#1A5276;margin-top:3px;min-height:14px"></div></div>
-        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">End date &amp; time *</label><div style="display:flex;gap:6px"><input type="date" id="exam-end-date" oninput="updateDtPreview('exam-end')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><input type="time" id="exam-end-time" oninput="updateDtPreview('exam-end')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"></div><div id="exam-end-preview" style="font-size:11px;color:#1A5276;margin-top:3px;min-height:14px"></div></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">Start date &amp; time *</label><div style="display:flex;gap:6px"><input type="date" id="exam-start-date" oninput="updateDtPreview('exam-start')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><select id="exam-start-hour" onchange="updateTimeDropdown('exam-start')" style="padding:9px 6px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><option value="">HH</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><select id="exam-start-min" onchange="updateTimeDropdown('exam-start')" style="padding:9px 6px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><option value="">MM</option><option value="00">00</option><option value="05">05</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option><option value="30">30</option><option value="35">35</option><option value="40">40</option><option value="45">45</option><option value="50">50</option><option value="55">55</option></select><select id="exam-start-ampm" onchange="updateTimeDropdown('exam-start')" style="padding:9px 6px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><option value="">--</option><option value="AM">AM</option><option value="PM">PM</option></select><input type="hidden" id="exam-start-time"></div><div id="exam-start-preview" style="font-size:11px;color:#1A5276;margin-top:3px;min-height:14px"></div></div>
+        <div><label style="font-size:12px;color:#888;display:block;margin-bottom:4px">End date &amp; time *</label><div style="display:flex;gap:6px"><input type="date" id="exam-end-date" oninput="updateDtPreview('exam-end')" style="flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><select id="exam-end-hour" onchange="updateTimeDropdown('exam-end')" style="padding:9px 6px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><option value="">HH</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><select id="exam-end-min" onchange="updateTimeDropdown('exam-end')" style="padding:9px 6px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><option value="">MM</option><option value="00">00</option><option value="05">05</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option><option value="30">30</option><option value="35">35</option><option value="40">40</option><option value="45">45</option><option value="50">50</option><option value="55">55</option></select><select id="exam-end-ampm" onchange="updateTimeDropdown('exam-end')" style="padding:9px 6px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box"><option value="">--</option><option value="AM">AM</option><option value="PM">PM</option></select><input type="hidden" id="exam-end-time"></div><div id="exam-end-preview" style="font-size:11px;color:#1A5276;margin-top:3px;min-height:14px"></div></div>
       </div>
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#555;cursor:pointer"><input type="checkbox" id="exam-draft-toggle" style="accent-color:#EF9F27;cursor:pointer">Save as draft (hidden from students)</label></div>
       <button onclick="saveExam()" style="width:100%;padding:11px;border-radius:10px;border:none;background:#1E8449;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit">\u{1F3AF} Create Exam</button>
