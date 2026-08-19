@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-10-01 exam-timing-results-fixes-content-batch -->
+<!-- FMAA-BUILD: 2026-08-19-01 wronganswer-explanations-lecture-automation-content-fixes -->
 <script>
-window.FMAA_BUILD='2026-08-10-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-19-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -589,6 +589,18 @@ function getAcc(){const{mcqTotal,mcqRight}=STATE.progress;return mcqTotal>0?Math
 function lessonDone(lid){return _getDoneSet().has(lid);}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function expFor(q,chosen){if(chosen!==null&&chosen!==q.a&&q.wrongWhy&&q.wrongWhy[chosen])return q.wrongWhy[chosen];return q.e;}
+// BATCH: on a wrong answer, show BOTH the distractor-specific reason (wrongWhy) AND the
+// full step-by-step correct-answer explanation (q.e) — previously expFor() silently dropped
+// q.e whenever wrongWhy existed, so students never saw the worked-out correct answer.
+function explanationBody(q,chosen){
+  if(chosen===null)return'';
+  if(chosen===q.a)return`<div>${esc(q.e||'')}</div>`;
+  const ww=(q.wrongWhy&&q.wrongWhy[chosen])?q.wrongWhy[chosen]:'';
+  let html='';
+  if(ww)html+=`<div>${esc(ww)}</div>`;
+  if(q.e)html+=`<div style="margin-top:${ww?'10px':'0'};padding-top:${ww?'10px':'0'};border-top:${ww?'1px solid rgba(0,0,0,.08)':'none'}"><div style="font-weight:700;color:#186A3B;font-size:11px;letter-spacing:.5px;margin-bottom:4px">✅ CORRECT ANSWER EXPLAINED</div>${esc(q.e)}</div>`;
+  return html;
+}
 function dataTableHTML(q){if(!q.data||!q.data.length)return'';const rows=q.data.map(r=>`<tr><td style="padding:6px 10px;border-bottom:.5px solid #ececec;color:#333">${esc(r[0])}</td><td style="padding:6px 10px;border-bottom:.5px solid #ececec;text-align:right;font-weight:500">${esc(r[1])}</td></tr>`).join('');return`<table style="width:100%;border-collapse:collapse;margin:0 0 16px;background:#faf9f5;border:.5px solid #e0e0d8;border-radius:8px;overflow:hidden;font-size:13px">${rows}</table>`;}
 // ── Stem formatting ──────────────────────────────────────────────────────────
 // Turns a raw question stem into HTML: (1) prose gets a line break at each
@@ -1362,7 +1374,7 @@ function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAc
         <div style="background:#f5f5f0;border-radius:10px;padding:14px 16px;font-size:13px;color:#555;line-height:1.6"><strong style="color:#1a1a1a">About me:</strong> I'm currently CFO, with 20 years of experience in Accounting, Inventory Management, Cost Accounting, Financial Planning &amp; Controlling, Forecasting &amp; Budgeting, and Data Analysis.</div>
       </div>
       <!-- QUESTION OF THE DAY (only when student has group + taught units) -->
-      ${(()=>{const qs=STATE.qotdState;if(!qs||!qs.question)return '';const q=qs.question;const sel=qs.selected;const answered=qs.answered;const labels=['A','B','C','D'];const optsHTML=q.o.map((opt,i)=>{let cls='qod-opt';if(answered){if(i===q.a)cls+=' correct';else if(i===sel)cls+=' wrong';}return `<div class="${cls}" ${answered?'':`onclick="qotdAnswer(${i})"`}><div class="qod-opt-letter">${labels[i]}</div><div style="flex:1">${esc(opt)}</div></div>`;}).join('');const explanation=answered?`<div class="qod-exp"><strong>${sel===q.a?'✅ Correct!':'❌ Correct answer: '+labels[q.a]}</strong><div style="margin-top:4px">${esc(expFor(q,sel))}</div></div>`:'';return `<div class="qod-card"><div class="qod-lbl">🎯 QUESTION OF THE DAY</div><div class="qod-meta">${esc(q.secTitle||'')} · ${esc(q.lessonTitle||'')}</div><div class="qod-title">${esc(q.q)}</div>${optsHTML}${explanation}</div>`;})()}
+      ${(()=>{const qs=STATE.qotdState;if(!qs||!qs.question)return '';const q=qs.question;const sel=qs.selected;const answered=qs.answered;const labels=['A','B','C','D'];const optsHTML=q.o.map((opt,i)=>{let cls='qod-opt';if(answered){if(i===q.a)cls+=' correct';else if(i===sel)cls+=' wrong';}return `<div class="${cls}" ${answered?'':`onclick="qotdAnswer(${i})"`}><div class="qod-opt-letter">${labels[i]}</div><div style="flex:1">${esc(opt)}</div></div>`;}).join('');const explanation=answered?`<div class="qod-exp"><strong>${sel===q.a?'✅ Correct!':'❌ Correct answer: '+labels[q.a]}</strong><div style="margin-top:4px">${explanationBody(q,sel)}</div></div>`:'';return `<div class="qod-card"><div class="qod-lbl">🎯 QUESTION OF THE DAY</div><div class="qod-meta">${esc(q.secTitle||'')} · ${esc(q.lessonTitle||'')}</div><div class="qod-title">${esc(q.q)}</div>${optsHTML}${explanation}</div>`;})()}
 
 
       <!-- WHAT IS IMA -->
@@ -1808,7 +1820,7 @@ function renderQuizSession(){
     let bg='#f5f5f0',border='.5px solid #e0e0d8',textC='#1a1a1a',circBg='#e5e5e0',circC='#666',circBorder='.5px solid #bbb',circTxt=String.fromCharCode(65+i);
     if(sel!==null){if(i===q.a){bg='#D5F5E3';border='1px solid #1E8449';textC='#186A3B';circBg='#1E8449';circC='#fff';circBorder='none';circTxt='✓';}else if(i===sel){bg='#FCEBEB';border='1px solid #E24B4A';textC='#791F1F';circBg='#E24B4A';circC='#fff';circBorder='none';circTxt='✕';}}
     return`<div class="quiz-opt" style="background:${bg};border:${border}${sel!==null?';cursor:default':''}" onclick="selectAnswer(${i})"><div class="quiz-opt-circle" style="background:${circBg};color:${circC};border:${circBorder}">${circTxt}</div><div class="quiz-opt-text" style="color:${textC}">${esc(opt)}</div></div>`;}).join('');
-  const explanation=sel!==null?`<div style="background:${sel===q.a?'#D5F5E3':'#FCEBEB'};border:1px solid ${sel===q.a?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-top:12px"><div style="font-size:11px;font-weight:600;color:${sel===q.a?'#186A3B':'#A32D2D'};letter-spacing:.5px;margin-bottom:6px">${sel===q.a?'✅ CORRECT':'❌ INCORRECT — '+q.o[q.a]}</div><div style="font-size:13px;color:#444;line-height:1.6">${esc(expFor(q,sel))}</div></div>`:'';
+  const explanation=sel!==null?`<div style="background:${sel===q.a?'#D5F5E3':'#FCEBEB'};border:1px solid ${sel===q.a?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-top:12px"><div style="font-size:11px;font-weight:600;color:${sel===q.a?'#186A3B':'#A32D2D'};letter-spacing:.5px;margin-bottom:6px">${sel===q.a?'✅ CORRECT':'❌ INCORRECT — '+q.o[q.a]}</div><div style="font-size:13px;color:#444;line-height:1.6">${explanationBody(q,sel)}</div></div>`:'';
   const nextLabel=openCount===0?'See Results →':(qs.idx+1<n?'Next Question →':`Review ${openCount} unanswered →`);
   return`<div class="bh"><button class="bh-back" onclick="STATE.tab='quiz-mode-select';render()">‹</button>
     <div style="flex:1;min-width:0"><div style="font-size:11px;color:#888">Question ${qs.idx+1} of ${n}${qs.isRetry?' · Retry':''}</div>
@@ -1918,7 +1930,7 @@ function renderQuizMode(){
     let bg='#f5f5f0',border='.5px solid #e0e0d8',textC='#1a1a1a',circBg='#e5e5e0',circC='#666',circBorder='.5px solid #bbb',circTxt=String.fromCharCode(65+i);
     if(sel!==null){if(i===q.a){bg='#D5F5E3';border='1px solid #1E8449';textC='#186A3B';circBg='#1E8449';circC='#fff';circBorder='none';circTxt='✓';}else if(i===sel){bg='#FCEBEB';border='1px solid #E24B4A';textC='#791F1F';circBg='#E24B4A';circC='#fff';circBorder='none';circTxt='✕';}}
     return`<div class="quiz-opt" style="background:${bg};border:${border}" onclick="selectAnswer(${i})"><div class="quiz-opt-circle" style="background:${circBg};color:${circC};border:${circBorder}">${circTxt}</div><div class="quiz-opt-text" style="color:${textC}">${esc(opt)}</div></div>`;}).join('');
-  const explanation=sel!==null?`<div style="background:${sel===q.a?'#D5F5E3':'#FCEBEB'};border:1px solid ${sel===q.a?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-top:12px"><div style="font-size:11px;font-weight:600;color:${sel===q.a?'#186A3B':'#A32D2D'};letter-spacing:.5px;margin-bottom:6px">${sel===q.a?'✅ CORRECT':'❌ INCORRECT — '+q.o[q.a]}</div><div style="font-size:13px;color:#444;line-height:1.6">${esc(expFor(q,sel))}</div></div>`:'';
+  const explanation=sel!==null?`<div style="background:${sel===q.a?'#D5F5E3':'#FCEBEB'};border:1px solid ${sel===q.a?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-top:12px"><div style="font-size:11px;font-weight:600;color:${sel===q.a?'#186A3B':'#A32D2D'};letter-spacing:.5px;margin-bottom:6px">${sel===q.a?'✅ CORRECT':'❌ INCORRECT — '+q.o[q.a]}</div><div style="font-size:13px;color:#444;line-height:1.6">${explanationBody(q,sel)}</div></div>`:'';
   return`<div class="bh"><button class="bh-back" onclick="STATE.quizMode={active:false};navTo('quiz-mode-select')">‹</button>
     <div style="flex:1;min-width:0"><div style="font-size:11px;color:#888">Question ${qm.idx+1} of ${qm.questions.length}</div>
     <div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:4px;overflow:hidden"><div style="height:100%;width:${barW}%;background:#1A5276;border-radius:2px;transition:width .3s"></div></div></div>
@@ -2577,7 +2589,7 @@ async function createLecture(){
   try{
     await db.collection('fmaa-lectures').add({
       title:d.title.trim(),groupCode:d.groupCode.trim().toUpperCase(),
-      checkinOpen:false,feedbackOpen:false,
+      checkinOpen:false,checkinOpenedAt:null,feedbackOpen:false,
       feedbackDeadline:null,
       createdAt:new Date().toISOString(),createdBy:STATE.user.uid
     });
@@ -2588,20 +2600,25 @@ async function createLecture(){
 }
 
 // ── Instructor: toggle check-in open/closed ────────────────────────────────
+// BATCH: stamp checkinOpenedAt whenever check-in is turned ON, so autoHealLecture()
+// can auto-close it 5 hours later (see autoHealLecture below).
 async function toggleLectureCheckin(id,currentlyOpen){
   try{
-    await db.collection('fmaa-lectures').doc(id).update({checkinOpen:!currentlyOpen});
+    const updates={checkinOpen:!currentlyOpen};
+    if(!currentlyOpen)updates.checkinOpenedAt=new Date().toISOString();
+    await db.collection('fmaa-lectures').doc(id).update(updates);
     STATE.dashLoaded=false;await loadDashboard();
   }catch(e){showToast('Error: '+e.message,'error');}
 }
 
-// ── Instructor: open feedback window (1 week deadline) ────────────────────
+// ── Instructor: open feedback window (6-day deadline) ─────────────────────
+const LECTURE_FEEDBACK_WINDOW_MS=6*24*60*60*1000; // BATCH: 6 days (was 7)
 async function openLectureFeedback(id){
-  const deadline=new Date(Date.now()+7*24*60*60*1000).toISOString();
+  const deadline=new Date(Date.now()+LECTURE_FEEDBACK_WINDOW_MS).toISOString();
   try{
     await db.collection('fmaa-lectures').doc(id).update({feedbackOpen:true,feedbackDeadline:deadline});
     STATE.dashLoaded=false;await loadDashboard();
-    showToast('Feedback window opened — closes in 1 week ✅','success');
+    showToast('Feedback window opened — closes in 6 days ✅','success');
   }catch(e){showToast('Error: '+e.message,'error');}
 }
 
@@ -2612,6 +2629,42 @@ async function closeLectureFeedback(id){
     STATE.dashLoaded=false;await loadDashboard();
   }catch(e){showToast('Error: '+e.message,'error');}
 }
+
+// ── BATCH: lecture self-healing (Option A — no server cron) ───────────────
+// The app has no background scheduler, so automation only fires the moment
+// someone (instructor or student) opens the app after a deadline has passed.
+// Rule 1: check-in auto-closes 5h after checkinOpenedAt, and immediately opens
+//         a 6-day feedback window if one isn't already open.
+// Rule 2: feedback auto-closes once feedbackDeadline has passed.
+// Called for every lecture doc right after it's fetched from Firestore.
+const LECTURE_CHECKIN_AUTOCLOSE_MS=5*60*60*1000; // 5 hours
+async function autoHealLecture(lec){
+  if(!lec||!lec.id)return lec;
+  const nowMs=Date.now();
+  const updates={};
+  if(lec.checkinOpen&&lec.checkinOpenedAt){
+    const openedMs=new Date(lec.checkinOpenedAt).getTime();
+    if(!isNaN(openedMs)&&nowMs-openedMs>LECTURE_CHECKIN_AUTOCLOSE_MS){
+      updates.checkinOpen=false;
+      if(!lec.feedbackOpen){
+        updates.feedbackOpen=true;
+        updates.feedbackDeadline=new Date(nowMs+LECTURE_FEEDBACK_WINDOW_MS).toISOString();
+      }
+    }
+  }
+  if(lec.feedbackOpen&&lec.feedbackDeadline&&updates.feedbackOpen===undefined){
+    const deadlineMs=new Date(lec.feedbackDeadline).getTime();
+    if(!isNaN(deadlineMs)&&nowMs>deadlineMs)updates.feedbackOpen=false;
+  }
+  if(Object.keys(updates).length){
+    try{
+      await db.collection('fmaa-lectures').doc(lec.id).update(updates);
+      Object.assign(lec,updates);
+    }catch(e){console.warn('autoHealLecture failed (will retry next load):',e);}
+  }
+  return lec;
+}
+async function autoHealLectures(list){await Promise.all((list||[]).map(autoHealLecture));return list;}
 
 // ── Instructor: delete lecture ────────────────────────────────────────────
 async function deleteLecture(id){
@@ -2653,6 +2706,7 @@ async function loadActiveLecture(){
     const snap=await db.collection('fmaa-lectures')
       .where('groupCode','==',gc).get();
     const all=snap.docs.map(d=>({id:d.id,...d.data()}));
+    await autoHealLectures(all); // BATCH: self-heal check-in/feedback state on every student load
 
     // Find active check-in lecture
     const checkinLecture=all.find(l=>l.checkinOpen);
@@ -3167,6 +3221,7 @@ async function loadDashboard(){
         db.collection('fmaa-lecture-feedback').get()
       ]);
       STATE.dashLectures=lecturesSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
+      await autoHealLectures(STATE.dashLectures); // BATCH: self-heal check-in/feedback state on every dashboard load
       STATE.dashAttendance=attendanceSnap.docs.map(d=>({id:d.id,...d.data()}));
       STATE.dashLectureFeedback=lFeedbackSnap.docs.map(d=>({id:d.id,...d.data()}));
     }catch(lecErr){
