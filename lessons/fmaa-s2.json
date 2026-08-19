@@ -510,7 +510,7 @@
     },
     {
       "t": "ex",
-      "l": "Profitability Ratios — Full Calculation from HOCK Example",
+      "l": "Profitability Ratios — Full Worked Example",
       "v": "Income Statement:\n  Net Sales Revenue:        $12,000,000\n  Cost of Goods Sold:        (8,000,000)\n  Gross Profit:               4,000,000   → Gross Profit Margin = 33.3%\n  Operating Expenses:        (2,500,000)\n  Operating Income (EBIT):    1,500,000   → Operating Margin = 12.5%\n  Interest income:               25,000\n  Interest expense:             (40,000)\n  Non-operating gains:           57,857\n  Income before tax:          1,542,857\n  Income tax (21%):            (324,000)\n  Net Income:                $1,218,857   → Net Profit Margin = 10.2%\n\nBalance Sheet:\n  Average Total Assets: $8,500,000 | Average Total Equity: $4,200,000\n\nROA = $1,218,857 ÷ $8,500,000 = 14.3%\nROE = $1,218,857 ÷ $4,200,000 = 29.0%"
     },
     {
