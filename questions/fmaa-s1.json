@@ -4346,7 +4346,7 @@
       }
     },
     {
-      "q": "Last month, a company reported the following revenues and expenses: Sales $87,923 Interest income 5,483 Cost of sales 52,854 Wages and benefits 12,854 Utilities 4,569 Interest expense 3,282 Selling expense 1,629 Depreciation Income tax expense 6,077 Total shares outstanding: 10,000 Based on this information, what was the operating income for the company during this period?",
+      "q": "Last month, a company reported the following revenues and expenses: Sales $87,923 Interest income 5,483 Cost of sales 52,854 Wages and benefits 12,854 Utilities 4,569 Interest expense 3,282 Selling expense 1,629 Depreciation 856 Income tax expense 6,077 Total shares outstanding: 10,000 Based on this information, what was the operating income for the company during this period?",
       "o": [
         "$15,161.",
         "$35,069.",
@@ -4354,7 +4354,7 @@
         "$17,362."
       ],
       "a": 0,
-      "e": "Operating income was as follows: Sales revenue $87,923 Cost of sales 52,854",
+      "e": "Operating income includes only revenues and expenses from normal operating activities — it excludes interest income, interest expense, and income tax expense, which are non-operating or below-the-line items. Sales revenue $87,923 − Cost of sales $52,854 = Gross profit $35,069. Gross profit $35,069 − Wages and benefits $12,854 − Utilities $4,569 − Selling expense $1,629 − Depreciation $856 = Operating income $15,161.",
       "wrongWhy": {
         "1": "This is gross profit, not operating income. Please see the correct answer explanation for more information.",
         "2": "This is net income after tax, not operating income. Please see the correct answer explanation for more information.",
@@ -4830,165 +4830,324 @@
   ],
   "1-16": [
     {
-      "t": "h",
-      "v": "What Is Internal Control? — The COSO Definition"
-    },
-    {
-      "t": "p",
-      "v": "According to the COSO framework (Internal Control — Integrated Framework), internal control is a process, effected by an entity's board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to three categories: Operations, Reporting, and Compliance."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Objective Category",
-        "What It Means",
-        "Example"
+      "q": "According to the COSO framework, internal control is designed to provide reasonable assurance regarding the achievement of objectives in which three categories?",
+      "o": [
+        "Operations, Reporting, and Compliance.",
+        "Planning, Budgeting, and Forecasting.",
+        "Revenue, Expenses, and Assets.",
+        "Efficiency, Profitability, and Growth."
       ],
-      "r": [
-        [
-          "Operations",
-          "Effectiveness and efficiency of operations; safeguarding of assets against loss",
-          "Production efficiency targets; inventory protection"
-        ],
-        [
-          "Reporting",
-          "Reliability, timeliness, and transparency of financial and non-financial reporting",
-          "Accurate financial statements; timely disclosures"
-        ],
-        [
-          "Compliance",
-          "Adherence to all applicable laws and regulations",
-          "Tax compliance; environmental regulations; SEC reporting"
-        ]
-      ]
+      "a": 0,
+      "e": "The COSO framework defines internal control as a process designed to provide reasonable assurance regarding the achievement of objectives relating to three categories: Operations (effectiveness and efficiency of operations, including safeguarding assets), Reporting (reliability, timeliness, and transparency of financial and non-financial reporting), and Compliance (adherence to applicable laws and regulations).",
+      "wrongWhy": {
+        "1": "Planning, Budgeting, and Forecasting are management activities, not the three objective categories COSO's internal control framework is built around.",
+        "2": "Revenue, Expenses, and Assets are financial statement line items, not the three high-level objective categories (Operations, Reporting, Compliance) defined by COSO.",
+        "3": "Efficiency, Profitability, and Growth are business performance goals, not the specific objective categories the COSO framework names."
+      }
     },
     {
-      "t": "h",
-      "v": "5 Fundamental Concepts of Internal Control"
-    },
-    {
-      "t": "b",
-      "v": [
-        "1. Achieves objectives: The purpose is to help the company achieve its objectives in the three categories above.",
-        "2. Ongoing process: Internal control is not a one-time event — it is a journey, a continuous set of tasks and activities, a means to an end.",
-        "3. Effected by people: Internal control is carried out by people at every level — board, management, and staff. Policies written in a manual are not enough; people must implement them.",
-        "4. Reasonable assurance only — NOT absolute assurance: The cost of a control should not exceed its expected benefit. Human error, collusion, and management override mean no control system can guarantee objectives will be met.",
-        "5. Flexible: Internal control must be adaptable to the entity's entire structure or to a specific subsidiary, division, or process."
-      ]
-    },
-    {
-      "t": "h",
-      "v": "COSO Framework — 5 Components of Internal Control"
-    },
-    {
-      "t": "b",
-      "v": [
-        "1. Control Environment: The tone at the top — management's integrity, ethical values, and commitment to competence. The foundation on which all other components rest. Includes the board of directors, organizational structure, and assignment of authority.",
-        "2. Risk Assessment: Identifying and analyzing risks that could prevent the company from achieving its objectives. Includes setting objectives first, then identifying risks related to those objectives, and managing change risk.",
-        "3. Control Activities: The specific policies and procedures that address risks. Examples: segregation of duties, authorizations and approvals, physical controls, reconciliations, information processing controls.",
-        "4. Information & Communication: Systems that capture and communicate relevant, reliable information in a timely manner to those who need it — both internal reporting and external communication to stakeholders.",
-        "5. Monitoring: Ongoing and periodic evaluation of whether the internal control system is functioning effectively. Includes management supervision, internal audits, and separate evaluations."
-      ]
-    },
-    {
-      "t": "tip",
-      "v": "The FMAA exam tests the COSO components by name. Know all five: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring. The Control Environment is always the FOUNDATION — it comes first because all other components are built on it."
-    },
-    {
-      "t": "h",
-      "v": "Internal Control Risk"
-    },
-    {
-      "t": "p",
-      "v": "Internal control risk is the risk that the design or operation of an entity's internal control system will NOT prevent or detect a threat to achieving objectives. Controls can fail because of: (1) human error or faulty judgment, (2) collusion between two or more employees working together to circumvent controls, (3) management override of established controls, (4) controls becoming outdated due to lack of monitoring. Internal control can provide only reasonable assurance — never a guarantee."
-    },
-    {
-      "t": "h",
-      "v": "Segregation of Duties — The Most Critical Control"
-    },
-    {
-      "t": "p",
-      "v": "No single person should have complete control over any transaction from beginning to end. The four functions that must be performed by DIFFERENT people: (1) Authorization, (2) Recordkeeping, (3) Physical Custody, (4) Periodic Reconciliation."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Function",
-        "Who Does It",
-        "Example"
+      "q": "Which of the following is one of the 5 fundamental concepts underlying the COSO internal control framework?",
+      "o": [
+        "Internal control is a one-time event completed during the annual audit.",
+        "Internal control provides absolute assurance that objectives will be achieved.",
+        "Internal control is effected by people at every level of the organization.",
+        "Internal control applies only to the accounting department."
       ],
-      "r": [
-        [
-          "Authorization",
-          "Manager/Supervisor",
-          "Purchasing manager approves purchase orders"
-        ],
-        [
-          "Recordkeeping",
-          "Accounting Department",
-          "Records transactions in journals and ledgers"
-        ],
-        [
-          "Physical Custody",
-          "Warehouse/Cashier",
-          "Controls physical access to inventory or cash"
-        ],
-        [
-          "Reconciliation",
-          "Independent personnel",
-          "Compares physical count to book records"
-        ]
-      ]
+      "a": 2,
+      "e": "One of the five fundamental concepts is that internal control is effected by people — carried out by the board, management, and staff at every level. A policy manual alone is not internal control; people must actually implement it. Internal control is an ongoing process (not a one-time event), provides only reasonable assurance (never absolute), and applies across the entire entity, not just accounting.",
+      "wrongWhy": {
+        "0": "Internal control is an ongoing process built into daily operations, not a one-time event limited to the annual audit.",
+        "1": "COSO explicitly states internal control provides only reasonable assurance, never absolute assurance, due to inherent limitations like human error and collusion.",
+        "3": "Internal control applies company-wide, across every department and level — it is not limited to the accounting department."
+      }
     },
     {
-      "t": "ex",
-      "l": "Why Segregation Matters — Inventory Example",
-      "v": "If the same person has both recordkeeping (#2) AND physical custody (#3) of inventory:\n→ They could steal inventory AND falsify the records to hide the theft.\n→ No independent check exists to detect the discrepancy.\n\nCorrect structure:\n  Recordkeeper counts what the records say should be there.\n  Custodian controls what is actually there.\n  Reconciler compares the two amounts independently.\n\nNote: Collusion — when two or more people work together — can defeat any segregation of duties. This is why collusion risk is a fundamental limitation of internal control."
-    },
-    {
-      "t": "h",
-      "v": "Safeguarding Assets"
-    },
-    {
-      "t": "b",
-      "v": [
-        "Physical controls: Equipment, inventory, securities, and cash are secured in locked or guarded areas. Access is restricted to authorized personnel. Periodic physical counts are compared to records.",
-        "Software controls (Logical security): All data and programs must be protected from unauthorized access. Authentication methods: Something you KNOW (passwords), Something you ARE (biometrics — fingerprints, retina), Something you HAVE (security fob). Two-factor authentication requires two independent methods simultaneously.",
-        "Other access controls: Automatic logoff after inactivity; logging of all login attempts; accounts that automatically expire after a limited time period."
-      ]
-    },
-    {
-      "t": "h",
-      "v": "What Internal Control Can and Cannot Do"
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Internal Control CAN",
-        "Internal Control CANNOT"
+      "q": "A company's internal control system is well-designed on paper but relies entirely on written procedures with no one actually monitoring whether employees follow them. Which fundamental concept of internal control is being violated?",
+      "o": [
+        "Reasonable assurance.",
+        "Flexibility.",
+        "Internal control is effected by people.",
+        "Achieves objectives."
       ],
-      "r": [
-        [
-          "Help the company achieve its performance and profitability goals",
-          "Guarantee objectives will be achieved"
-        ],
-        [
-          "Prevent loss of resources",
-          "Prevent all fraud — human error and collusion remain possible"
-        ],
-        [
-          "Help ensure reliable financial reporting",
-          "Override management — management can and does override controls"
-        ],
-        [
-          "Help ensure compliance with laws and regulations",
-          "Eliminate all risk — it can only provide reasonable assurance"
-        ]
-      ]
+      "a": 2,
+      "e": "Internal control requires action by people — board members, management, and staff — not just documented policies. A control that exists only on paper, with no one actively carrying it out or monitoring compliance, fails the 'effected by people' concept even if the written design looks correct.",
+      "wrongWhy": {
+        "0": "Reasonable assurance concerns the level of certainty control provides, not the fact that no one is monitoring compliance with the procedures.",
+        "1": "Flexibility is not one of COSO's five fundamental concepts, and the scenario doesn't describe an inability to adapt controls.",
+        "3": "'Achieves objectives' describes an intended outcome of internal control, not the specific concept violated by having no one monitor whether written procedures are actually followed."
+      }
     },
     {
-      "t": "tip",
-      "v": "Key exam phrase: Internal control provides REASONABLE ASSURANCE — not absolute assurance and not a guarantee. The cost-benefit principle applies: the cost of a control should not exceed the expected benefit. Some risk is simply accepted because the cost of controlling it exceeds the potential loss."
+      "q": "Which of the following is the foundation on which all other components of the COSO framework rest?",
+      "o": [
+        "Monitoring.",
+        "Control Environment.",
+        "Risk Assessment.",
+        "Information & Communication."
+      ],
+      "a": 1,
+      "e": "The Control Environment — the tone at the top, management's integrity and ethical values, and commitment to competence — is the foundation of the COSO framework. All four other components (Risk Assessment, Control Activities, Information & Communication, and Monitoring) are built on top of it.",
+      "wrongWhy": {
+        "0": "Monitoring evaluates whether controls are still working over time — it depends on the other components already being in place, so it cannot be the foundation.",
+        "2": "Risk Assessment identifies threats to objectives, but it operates within the tone and structure set by the Control Environment, which comes first.",
+        "3": "Information & Communication supports the flow of data needed by all components, but it is not the foundational, tone-setting component — that is the Control Environment."
+      }
+    },
+    {
+      "q": "Which COSO component involves identifying and analyzing risks that could prevent the company from achieving its objectives?",
+      "o": [
+        "Control Activities.",
+        "Risk Assessment.",
+        "Monitoring.",
+        "Control Environment."
+      ],
+      "a": 1,
+      "e": "Risk Assessment is the COSO component concerned with identifying and analyzing risks relevant to achieving the entity's objectives. It begins with setting objectives, then identifies risks related to those objectives, and includes managing the risk of change.",
+      "wrongWhy": {
+        "0": "Control Activities are the policies and procedures that address risks after they have been identified — they follow Risk Assessment rather than performing the identification itself.",
+        "2": "Monitoring evaluates whether controls (including risk responses) are working over time; it does not perform the initial identification and analysis of risks.",
+        "3": "Control Environment sets the overall tone and structure of the organization but does not itself involve identifying and analyzing specific risks."
+      }
+    },
+    {
+      "q": "Segregation of duties, authorizations and approvals, physical controls, and reconciliations are all examples of which COSO component?",
+      "o": [
+        "Control Activities.",
+        "Control Environment.",
+        "Information & Communication.",
+        "Risk Assessment."
+      ],
+      "a": 0,
+      "e": "Control Activities are the specific policies and procedures that address identified risks. Examples include segregation of duties, authorizations and approvals, physical controls over assets, reconciliations, and information processing controls.",
+      "wrongWhy": {
+        "1": "Control Environment refers to the overall tone, integrity, and governance structure of the organization — segregation of duties and reconciliations are specific procedures, not the environment itself.",
+        "2": "Information & Communication concerns how data flows through and outside the organization, not the specific control procedures like authorizations and reconciliations listed here.",
+        "3": "Risk Assessment identifies and analyzes risks; it does not include the actual control procedures (segregation of duties, approvals, reconciliations) used to address those risks."
+      }
+    },
+    {
+      "q": "An internal audit function that periodically evaluates whether a company's internal controls are still functioning effectively is an example of which COSO component?",
+      "o": [
+        "Monitoring.",
+        "Control Activities.",
+        "Risk Assessment.",
+        "Control Environment."
+      ],
+      "a": 0,
+      "e": "Monitoring is the ongoing and periodic evaluation of whether the internal control system is functioning effectively. It includes management supervision, internal audits, and separate evaluations — exactly what an internal audit function performs.",
+      "wrongWhy": {
+        "1": "Control Activities are the policies and procedures themselves (e.g., approvals, reconciliations); periodically evaluating whether those controls are still effective is a Monitoring activity.",
+        "2": "Risk Assessment identifies and analyzes risks to objectives; it is not the ongoing evaluation of whether existing controls are functioning effectively.",
+        "3": "Control Environment describes the organization's overall governance and tone, not the periodic evaluation of control effectiveness performed by internal audit."
+      }
+    },
+    {
+      "q": "Which of the following can cause internal controls to fail?",
+      "o": [
+        "Collusion between two or more employees.",
+        "A well-documented control environment.",
+        "Regular reconciliation of physical counts to records.",
+        "Segregation of the authorization and recordkeeping functions."
+      ],
+      "a": 0,
+      "e": "Collusion — two or more employees working together to circumvent controls — is one of the recognized causes of internal control failure, along with human error or faulty judgment, management override of established controls, and controls becoming outdated from lack of monitoring. The other options describe features of a strong control system, not causes of failure.",
+      "wrongWhy": {
+        "1": "A well-documented control environment strengthens internal control; it is a control strength, not a cause of control failure.",
+        "2": "Regular reconciliation is itself a control activity that helps detect errors and fraud — it reduces, rather than causes, control failure.",
+        "3": "Segregating authorization from recordkeeping is a proper application of segregation of duties, which strengthens controls rather than causing them to fail."
+      }
+    },
+    {
+      "q": "Which statement about internal control risk is correct?",
+      "o": [
+        "Internal control can guarantee that fraud will never occur.",
+        "Internal control can provide only reasonable assurance, never a guarantee, that objectives will be achieved.",
+        "Internal control risk disappears once a company implements segregation of duties.",
+        "Internal control risk applies only to publicly traded companies."
+      ],
+      "a": 1,
+      "e": "Internal control risk is the risk that the design or operation of a control system will not prevent or detect a threat to objectives. Because of human error, collusion, management override, and controls becoming outdated, internal control can never guarantee outcomes — it provides only reasonable assurance. This applies to any organization, not just public companies.",
+      "wrongWhy": {
+        "0": "This overstates what internal control can do — COSO explicitly states control provides only reasonable, not absolute, assurance, so it cannot guarantee fraud will never occur.",
+        "2": "Segregation of duties reduces control risk but does not eliminate it entirely — for example, collusion between employees can still defeat segregated duties.",
+        "3": "Internal control risk applies to all organizations, public or private — it is not limited to publicly traded companies."
+      }
+    },
+    {
+      "q": "Which of the following best describes why segregation of duties is considered the most critical internal control?",
+      "o": [
+        "It eliminates the need for any other controls.",
+        "It ensures no single person can both execute and conceal a wrongful act without an independent check.",
+        "It removes the need for periodic reconciliations.",
+        "It is required only for cash transactions."
+      ],
+      "a": 1,
+      "e": "Segregation of duties works by dividing responsibility so that no one person controls a transaction from beginning to end. If a person had both recordkeeping and physical custody, they could steal an asset and then falsify the records to hide the theft, with no independent check to catch the discrepancy. It complements, rather than replaces, other controls like reconciliation.",
+      "wrongWhy": {
+        "0": "Segregation of duties is a critical control, but it does not eliminate the need for other controls such as risk assessment, monitoring, or reconciliations.",
+        "2": "Segregation of duties reduces certain risks, but periodic reconciliations remain a distinct and necessary control activity for detecting errors or fraud.",
+        "3": "Segregation of duties is important across many transaction cycles (purchasing, payroll, inventory, etc.), not solely for cash transactions."
+      }
+    },
+    {
+      "q": "The four functions that must be performed by different people under proper segregation of duties are",
+      "o": [
+        "Budgeting, forecasting, reporting, and auditing.",
+        "Authorization, recordkeeping, physical custody, and reconciliation.",
+        "Purchasing, receiving, shipping, and billing.",
+        "Planning, directing, controlling, and evaluating."
+      ],
+      "a": 1,
+      "e": "The four functions requiring segregation are Authorization (approving a transaction), Recordkeeping (recording it in the accounting records), Physical Custody (controlling physical access to the related asset), and Reconciliation (independently comparing records to the physical asset). No single person should perform more than one of these for the same transaction.",
+      "wrongWhy": {
+        "0": "Budgeting, forecasting, reporting, and auditing are management/oversight activities, not the four functions (authorization, recordkeeping, custody, reconciliation) segregation of duties specifically separates.",
+        "2": "Purchasing, receiving, shipping, and billing are transaction-cycle roles, not the four generic functional categories that define proper segregation of duties.",
+        "3": "Planning, directing, controlling, and evaluating are general management functions, not the specific four duties (authorization, recordkeeping, custody, reconciliation) segregated for internal control purposes."
+      }
+    },
+    {
+      "q": "A warehouse employee both counts and records the physical inventory AND has the keys to the warehouse. Which segregation-of-duties weakness does this create?",
+      "o": [
+        "Authorization is combined with reconciliation.",
+        "Recordkeeping is combined with physical custody.",
+        "Two reconciliation functions are combined.",
+        "There is no weakness, since one person is more efficient."
+      ],
+      "a": 1,
+      "e": "The employee holds both Recordkeeping (updating the inventory records) and Physical Custody (controlling access to the warehouse). This combination lets the same person take inventory and then adjust the records to hide the shortage, with no independent party positioned to catch the discrepancy through reconciliation.",
+      "wrongWhy": {
+        "0": "The scenario does not describe combining authorization with reconciliation — the employee is counting/recording (recordkeeping) and holding warehouse keys (physical custody).",
+        "2": "No reconciliation function is described in the scenario at all — the issue is that the same person handles recordkeeping and physical custody of inventory.",
+        "3": "Combining recordkeeping with physical custody is a classic segregation-of-duties weakness, since the same person could steal inventory and then alter the records to conceal the theft."
+      }
+    },
+    {
+      "q": "A company requires two independent authentication methods — a password AND a fingerprint scan — before an employee can access the accounting system. This is an example of",
+      "o": [
+        "Physical controls.",
+        "Segregation of duties.",
+        "Two-factor authentication.",
+        "Management override."
+      ],
+      "a": 2,
+      "e": "Two-factor authentication requires two independent methods of proof simultaneously — commonly something you know (a password), something you are (a biometric like a fingerprint), or something you have (a security fob). Combining a password with a fingerprint scan is a textbook example of two-factor authentication, a logical (software) access control.",
+      "wrongWhy": {
+        "0": "Physical controls restrict access to tangible assets or locations (like locks); requiring a password plus fingerprint scan is a logical access control, not a physical one.",
+        "1": "Segregation of duties separates job functions among different people — it does not describe requiring two independent credentials from the same user to log in.",
+        "3": "Management override refers to management bypassing established controls, which is unrelated to a system requiring two authentication factors."
+      }
+    },
+    {
+      "q": "Which of the following is an example of a physical control for safeguarding assets, rather than a logical (software) control?",
+      "o": [
+        "A password required to log into the accounting system.",
+        "A locked storage area for inventory with access restricted to authorized personnel.",
+        "Automatic logoff after a period of inactivity.",
+        "Two-factor authentication for remote system access."
+      ],
+      "a": 1,
+      "e": "Physical controls secure tangible assets — equipment, inventory, securities, and cash — in locked or guarded areas with access restricted to authorized personnel, supported by periodic physical counts compared to records. Passwords, automatic logoff, two-factor authentication, and biometric login are all logical (software) controls that protect data and system access rather than physical assets.",
+      "wrongWhy": {
+        "0": "A password requirement is a logical (software-based) access control, not a physical control over tangible assets.",
+        "2": "Automatic logoff after inactivity is a logical/system-based access control, not a physical control safeguarding a tangible asset.",
+        "3": "Two-factor authentication is a logical access control applied to system access, not a physical control such as a locked storage area."
+      }
+    },
+    {
+      "q": "An accounting system automatically logs off a user after 15 minutes of inactivity and records every login attempt. These are examples of",
+      "o": [
+        "Physical controls.",
+        "Other access controls.",
+        "Segregation of duties.",
+        "Risk assessment."
+      ],
+      "a": 1,
+      "e": "Automatic logoff after inactivity and logging of login attempts fall under 'other access controls' — measures that limit and track who can access a system, alongside accounts that automatically expire after a set period. They are part of safeguarding assets through logical security, distinct from the four segregation-of-duties functions.",
+      "wrongWhy": {
+        "0": "Physical controls involve safeguarding tangible assets or locations (like locks); automatic logoff and login logging are system/logical access controls, not physical ones.",
+        "2": "Segregation of duties separates job responsibilities among different people; automatic logoff and login logging do not involve dividing duties among employees.",
+        "3": "Risk Assessment identifies and analyzes risks to objectives; automatic logoff and login logging are specific control activities, not the risk-identification process itself."
+      }
+    },
+    {
+      "q": "Which of the following is something internal control CAN help a company do?",
+      "o": [
+        "Guarantee that objectives will be achieved.",
+        "Prevent all possible fraud.",
+        "Help ensure reliable financial reporting.",
+        "Override management decisions."
+      ],
+      "a": 2,
+      "e": "Internal control can help a company achieve its performance and profitability goals, prevent loss of resources, help ensure reliable financial reporting, and help ensure compliance with laws and regulations. It cannot guarantee objectives will be achieved, cannot prevent all fraud (human error and collusion remain possible), and cannot override management — management can and does override controls.",
+      "wrongWhy": {
+        "0": "Internal control can only provide reasonable assurance, not a guarantee, that objectives will be achieved — this is an inherent limitation, not something control can do.",
+        "1": "Due to limitations such as collusion, human error, and management override, internal control cannot prevent all possible fraud.",
+        "3": "Internal control operates within management's structure to support objectives — it does not override management's decisions."
+      }
+    },
+    {
+      "q": "Which of the following is something internal control CANNOT do?",
+      "o": [
+        "Help ensure compliance with applicable laws and regulations.",
+        "Help prevent loss of company resources.",
+        "Eliminate all risk facing the organization.",
+        "Support reliable financial reporting."
+      ],
+      "a": 2,
+      "e": "Internal control can only provide reasonable assurance — it cannot eliminate all risk. Some risk is accepted because the cost of controlling it would exceed the potential loss, which is the cost-benefit principle underlying the whole internal control framework.",
+      "wrongWhy": {
+        "0": "Helping ensure compliance with laws and regulations is one of the three objective categories internal control IS designed to support, not something it cannot do.",
+        "1": "Preventing loss of company resources (safeguarding assets) is a core purpose internal control CAN help achieve, not a limitation.",
+        "3": "Supporting reliable financial reporting is one of COSO's three objective categories that internal control is specifically designed to help achieve."
+      }
+    },
+    {
+      "q": "The cost-benefit principle, as it applies to internal control, means that",
+      "o": [
+        "Every possible control should be implemented regardless of cost.",
+        "The cost of a control should not exceed its expected benefit.",
+        "Controls should be eliminated once a company becomes profitable.",
+        "Only publicly traded companies need to consider the cost of controls."
+      ],
+      "a": 1,
+      "e": "The cost-benefit principle holds that the cost of implementing and maintaining a control should not exceed the expected benefit from reducing risk. This is why internal control provides only reasonable, not absolute, assurance — some risks are knowingly accepted because controlling them further would cost more than the potential loss.",
+      "wrongWhy": {
+        "0": "Implementing every possible control regardless of cost ignores the cost-benefit principle, which requires weighing a control's cost against its expected benefit.",
+        "2": "The cost-benefit principle applies on an ongoing basis to individual controls; it is not tied to overall company profitability, and controls shouldn't be eliminated simply because a company becomes profitable.",
+        "3": "The cost-benefit principle applies to all organizations weighing control costs against benefits, not exclusively to publicly traded companies."
+      }
+    },
+    {
+      "q": "A company's internal control system failed to detect a fraud because two employees — one in purchasing and one in accounts payable — worked together to approve and pay a fictitious invoice. This is best described as a control failure due to",
+      "o": [
+        "Management override.",
+        "Collusion.",
+        "Outdated controls.",
+        "Lack of a control environment."
+      ],
+      "a": 1,
+      "e": "Collusion occurs when two or more employees work together to circumvent controls that would otherwise catch a single person acting alone. Because each employee's individual actions might look legitimate, collusion can defeat even a well-designed segregation of duties structure, which is why it is recognized as a fundamental limitation of internal control.",
+      "wrongWhy": {
+        "0": "Management override describes a manager bypassing controls unilaterally — this scenario instead involves two employees at different functions working together, which is collusion.",
+        "2": "The scenario does not describe controls becoming outdated; it describes two employees actively cooperating to defeat an existing control (segregation between purchasing and accounts payable).",
+        "3": "The scenario doesn't describe an absence of a control environment — a segregation-of-duties control existed but was defeated by two employees colluding to circumvent it."
+      }
+    },
+    {
+      "q": "Which of the following best illustrates 'management override' as a limitation of internal control?",
+      "o": [
+        "A CEO instructs the controller to bypass the normal approval process and record a transaction that does not meet the established criteria.",
+        "An employee makes an honest data-entry error while recording a transaction.",
+        "Two clerks collude to approve a fraudulent expense report.",
+        "A control designed five years ago no longer matches current business processes."
+      ],
+      "a": 0,
+      "e": "Management override occurs when someone with sufficient authority directs that an established control be bypassed. Even the best-designed control system cannot fully prevent this, because the people with the authority to enforce controls are also the people most able to instruct others to ignore them. This differs from honest error, collusion between peers, or controls simply becoming outdated.",
+      "wrongWhy": {
+        "1": "An honest data-entry error is a human error limitation of internal control, not management deliberately bypassing established procedures — which is what defines management override.",
+        "2": "Two clerks colluding to approve a fraudulent expense report illustrates collusion between employees, not a manager or executive directing a bypass of controls.",
+        "3": "A control becoming outdated as business processes change is a design/relevance limitation, not management actively overriding an existing control."
+      }
     }
   ],
   "1-17": [
@@ -5072,7 +5231,7 @@
       }
     },
     {
-      "q": "The following are the January 1 and June 30 balance sheets of a company, in millions: January 1 June 30 $ 3 $ 4 Cash Accounts receivable Inventories Fixed assets Total assets $26 $29 Accounts payable Notes payable Accrued wages Long-term debt Stockholders' equity Total liabilities and stockholders' equity $26 $29 From January 1 to June 30, the net working capital:",
+      "q": "The following are the January 1 and June 30 balance sheets of a company, in millions:\n\n                        January 1   June 30\nCash                        $3          $4\nAccounts receivable          6           7\nInventories                  7           7\nFixed assets                10          11\nTotal assets               $26         $29\n\nAccounts payable            $4          $4\nNotes payable                2           3\nAccrued wages                1           1\nLong-term debt                8           9\nStockholders' equity        11          12\nTotal liabilities and stockholders' equity  $26  $29\n\nFrom January 1 to June 30, the net working capital:",
       "o": [
         "Decreased by $1 million.",
         "Stayed the same.",
@@ -5080,7 +5239,7 @@
         "Increased by $1 million."
       ],
       "a": 3,
-      "e": "Net working capital is calculated as current assets minus current liabilities. At January 1, current assets were $16 million and current liabilities were $7 million, giving a net working capital of $9 million. At June 30, current assets were $18 million and current liabilities were $8 million, giving a net working capital of $10 million. Thus, during the period, net working capital increased by $1 million.",
+      "e": "Net working capital is calculated as current assets minus current liabilities. At January 1, current assets were Cash $3 + Accounts receivable $6 + Inventories $7 = $16 million, and current liabilities were Accounts payable $4 + Notes payable $2 + Accrued wages $1 = $7 million, giving a net working capital of $9 million. At June 30, current assets were Cash $4 + Accounts receivable $7 + Inventories $7 = $18 million, and current liabilities were Accounts payable $4 + Notes payable $3 + Accrued wages $1 = $8 million, giving a net working capital of $10 million. Thus, during the period, net working capital increased by $1 million.",
       "wrongWhy": {
         "1": "Net working capital is current assets minus current liabilities. Total assets minus total liabilities, which is equal to stockholders' equity, stayed the same. But net working capital did not stay the same.",
         "2": "Net working capital is current assets minus current liabilities. This answer does not include accrued wages as a current liability in the net working capital calculation. See the correct answer for a complete explanation."
@@ -5119,15 +5278,15 @@
       }
     },
     {
-      "q": "A company has the following account balances. Cash Equipment 50,000 Inventory 35,000 Accounts receivable 25,000 Accrued wages 10,000 Long-term debt 30,000 Accounts payable 5,000 What is the company's net working capital?",
+      "q": "A company has the following account balances. Cash $160,000; Equipment $50,000; Inventory $35,000; Accounts receivable $25,000; Accrued wages $10,000; Long-term debt $30,000; Accounts payable $5,000. What is the company's net working capital?",
       "o": [
         "$225,000.",
         "$180,000.",
         "$205,000.",
-        "$220,000. $160,000"
+        "$220,000."
       ],
       "a": 2,
-      "e": "Net working capital is total current assets minus total current liabilities. Current assets = cash of $160,000 + accounts receivable of $25,000 + inventory of $35,000, which equals $220,000. Current liabilities = accrued wages of $10,000 + accounts payable of $5,000, which equals $15,000. Net working capital is $220,000 − $15,000 = $205,000.",
+      "e": "Net working capital is total current assets minus total current liabilities. Current assets = cash of $160,000 + accounts receivable of $25,000 + inventory of $35,000, which equals $220,000. Current liabilities = accrued wages of $10,000 + accounts payable of $5,000, which equals $15,000. Net working capital is $220,000 − $15,000 = $205,000. Equipment ($50,000) is a non-current asset and long-term debt ($30,000) is a non-current liability, so neither is included in the working capital calculation.",
       "wrongWhy": {
         "0": "Net working capital is total current assets minus total current liabilities. Current assets in this question are cash, inventory, and accounts receivable. Current liabilities in this question are accrued wages and accounts payable. This answer could result from more than one incorrect calculation. 1. It could result from including accrued wages as a current asset. Accrued wages is a current liability.",
         "1": "Net working capital is total current assets minus total current liabilities. Current assets in this question are cash, inventory, and accounts receivable. Current liabilities in this question are accrued wages and accounts payable. This answer could result from more than one incorrect calculation. 1. It could result from excluding accounts receivable from total current assets. 2. It could result from including long-term debt in current liabilities and excluding accounts payable from current liabilities. 3. It could result from excluding inventory from current assets and excluding accrued wages from current liabilities. There may be other ways to calculate this incorrect answer. If you have calculated it another way, please let us know how you did it so we can add that to the explanation of why this Include the full Question ID and the actual incorrect answer choice—not its letter, because that can change with every study session created. The Question ID appears at the top of the question. Thank you in advance for helping us to make your HOCK study materials better.",
@@ -5833,8 +5992,8 @@
         "$820.",
         "$1,020."
       ],
-      "a": 2,
-      "e": "($10,000 × 2%) + ($4,000 × 8%) + ($2,000 × 25%) = $200 + $320 + $500 = $820.",
+      "a": 3,
+      "e": "($10,000 × 2%) + ($4,000 × 8%) + ($2,000 × 25%) = $200 + $320 + $500 = $1,020.",
       "wrongWhy": {
         "0": "$200 only applies the 2% rate to the 0–30 day bucket, ignoring the other two age brackets.",
         "1": "$520 does not match the correct calculation: $200 + $320 + $500 = $820.",
@@ -6195,7 +6354,7 @@
       }
     },
     {
-      "q": "Beginning inventory: 100 units @ $10. Purchases: 200 units @ $12. Sold: 150 units. Using weighted average, what is COGS?",
+      "q": "Beginning inventory: 100 units @ $10.\nPurchases: 200 units @ $12.\nSold: 150 units.\n\nUsing weighted average, what is COGS?",
       "o": [
         "$1,500.",
         "$1,650.",

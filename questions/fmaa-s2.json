@@ -323,77 +323,259 @@
   ],
   "2-2": [
     {
-      "t": "h",
-      "v": "Revenue Recognition — The 5-Step Model (ASC 606 / IFRS 15)"
+      "q": "Under the 5-step revenue recognition model (ASC 606 / IFRS 15), at what point should a company recognize revenue?",
+      "o": [
+        "When cash is collected from the customer.",
+        "When the contract is signed by both parties.",
+        "When the performance obligation is satisfied.",
+        "When the invoice is issued to the customer."
+      ],
+      "a": 2,
+      "e": "Step 5 of the model states that revenue is recognized when (or as) each performance obligation is satisfied — that is, when control of the promised good or service transfers to the customer. This can occur at a point in time (e.g., delivery of goods) or over time (e.g., a service performed over months).",
+      "wrongWhy": {
+        "0": "Cash collection relates to the timing of cash flow, not revenue recognition. A company can recognize revenue before, at, or after cash is received (e.g., credit sales or advance payments).",
+        "1": "Signing the contract is Step 1 of the model (identify the contract) but does not by itself trigger revenue recognition — the obligation must still be satisfied.",
+        "3": "Issuing an invoice is an administrative/billing event. It does not determine when control has transferred to the customer, which is the actual recognition trigger."
+      },
+      "src": "gawad"
     },
     {
-      "t": "p",
-      "v": "The revenue recognition standard (ASC 606 in US GAAP, IFRS 15 internationally) requires revenues to be recognized when performance obligations are satisfied. The standard is principles-based, not rules-based — it requires professional judgment. Revenue should reflect the transfer of promised goods or services to customers in an amount that reflects the consideration the company expects to be entitled to in exchange."
+      "q": "Which of the following is the correct first step in the 5-step revenue recognition model?",
+      "o": [
+        "Determine the transaction price.",
+        "Identify the contract with a customer.",
+        "Allocate the transaction price to performance obligations.",
+        "Identify the separate performance obligations."
+      ],
+      "a": 1,
+      "e": "Step 1 is to identify the contract with a customer — an agreement (written, oral, or implied) that creates enforceable rights and obligations. Only after a valid contract exists can the remaining steps (identifying obligations, determining and allocating price, and recognizing revenue) proceed.",
+      "wrongWhy": {
+        "0": "Determining the transaction price is Step 3 — it happens only after the contract and its performance obligations have already been identified.",
+        "2": "Allocating the transaction price is Step 4, which requires the transaction price (Step 3) and the performance obligations (Step 2) to already be known.",
+        "3": "Identifying performance obligations is Step 2 — it cannot occur before Step 1 confirms that an enforceable contract exists."
+      },
+      "src": "gawad"
     },
     {
-      "t": "s",
-      "v": [
-        "Step 1 — Identify the contract with a customer: A contract is an agreement between two parties that creates enforceable rights and obligations. It can be written, oral, or implied by business practice.",
-        "Step 2 — Identify the separate performance obligations: A performance obligation is a promise to transfer a distinct good or service. A good or service is distinct if the customer can benefit from it on its own or together with readily available resources.",
-        "Step 3 — Determine the transaction price: The transaction price is the amount of consideration expected in exchange for transferring goods or services. Includes variable consideration, financing components, and non-cash consideration.",
-        "Step 4 — Allocate the transaction price to the separate performance obligations: If there are multiple performance obligations, allocate the total price based on their relative standalone selling prices.",
-        "Step 5 — Recognize revenue when (or as) each performance obligation is satisfied: Revenue is recognized at the point in time (or over time) that control of the good or service transfers to the customer."
-      ]
+      "q": "A company sells industrial equipment bundled with a 2-year extended warranty for a total contract price of $9,000. The standalone selling price of the equipment is $8,000 and the standalone selling price of the warranty is $2,000. Using the relative standalone selling price method, how much of the transaction price should be allocated to the warranty performance obligation?",
+      "o": [
+        "$1,800.",
+        "$2,000.",
+        "$900.",
+        "$1,000."
+      ],
+      "a": 0,
+      "e": "Step 4 allocates the transaction price based on relative standalone selling prices. Total standalone value = $8,000 + $2,000 = $10,000. Warranty's share = $2,000 / $10,000 = 20%. Allocated warranty revenue = $9,000 × 20% = $1,800.",
+      "wrongWhy": {
+        "1": "$2,000 is the warranty's standalone selling price, not its allocated share of the actual $9,000 bundled transaction price. The bundle was sold at a discount, so each obligation's allocation must be scaled down proportionally.",
+        "2": "$900 incorrectly applies a flat 10% (the overall bundle discount rate) directly to the transaction price instead of using the warranty's 20% share of total standalone value.",
+        "3": "$1,000 does not result from any correct proportional allocation of the $9,000 transaction price based on the $8,000/$2,000 standalone prices."
+      },
+      "src": "gawad"
     },
     {
-      "t": "ex",
-      "l": "5-Step Model — Bundled Software Contract",
-      "v": "Company sells a software license + 1-year support contract for $1,200 total.\n\nStep 1: Contract exists — written agreement with customer.\nStep 2: Two performance obligations identified:\n  (A) Software license — transferred at a point in time\n  (B) Support services — delivered over 12 months\nStep 3: Transaction price = $1,200 total.\nStep 4: Allocate based on standalone prices:\n  Software license standalone price = $900 (75%)\n  Support services standalone price = $300 (25%)\n  Allocated: License = $1,200 × 75% = $900\n             Support = $1,200 × 25% = $300\nStep 5: Recognize:\n  → $900 at delivery of software license (point in time)\n  → $300 ratably over 12 months = $25/month (over time)"
+      "q": "According to the 5-step revenue recognition model, a good or service is considered 'distinct' when:",
+      "o": [
+        "It appears as a separate line item on the customer invoice.",
+        "The customer can benefit from it either on its own or together with other readily available resources.",
+        "It is delivered to the customer on a different date than other items in the contract.",
+        "It has its own separate legal title that transfers to the customer."
+      ],
+      "a": 1,
+      "e": "A good or service is distinct if the customer can benefit from it on its own or in combination with other resources readily available to them, and the promise to transfer it is separately identifiable from other promises in the contract. This is the criterion used in Step 2 to identify separate performance obligations.",
+      "wrongWhy": {
+        "0": "How an item is itemized on an invoice is a billing/presentation choice — it has no bearing on whether the good or service meets the distinctness criteria under the standard.",
+        "2": "Delivery timing may result from the obligations being distinct, but a different delivery date alone does not define distinctness — two items could be distinct and delivered together, or delivered separately but not distinct.",
+        "3": "Legal title transfer is a factor used later in indicating when control has passed (relevant to Step 5), not the test for whether a promise is a distinct performance obligation in Step 2."
+      },
+      "src": "gawad"
     },
     {
-      "t": "tip",
-      "v": "The exam tests which step is involved in a scenario. Common question: 'When should revenue be recognized?' The answer is always: when the performance obligation is satisfied (Step 5). For goods, this is when control transfers to the customer. For services, this may be over time (e.g., a 12-month maintenance contract recognized monthly)."
+      "q": "A construction contract includes a $50,000 bonus payable to the contractor if the project is completed before a specified date. This variable consideration must be estimated and incorporated in which step of the 5-step revenue recognition model?",
+      "o": [
+        "Step 1 — Identify the contract.",
+        "Step 3 — Determine the transaction price.",
+        "Step 4 — Allocate the transaction price.",
+        "Step 5 — Recognize revenue."
+      ],
+      "a": 1,
+      "e": "Step 3 (determine the transaction price) explicitly requires estimating variable consideration — amounts that depend on the occurrence or non-occurrence of a future event, such as bonuses, penalties, discounts, or rebates — and including it in the transaction price subject to a constraint on overestimation.",
+      "wrongWhy": {
+        "0": "Step 1 only confirms that an enforceable contract exists; it does not deal with quantifying any component of the price, variable or fixed.",
+        "2": "Step 4 allocates a transaction price that has already been determined (including any variable consideration) — it does not itself estimate the variable amount.",
+        "3": "Step 5 recognizes revenue once the transaction price has already been determined and allocated; estimating the bonus happens earlier, in Step 3."
+      },
+      "src": "gawad"
     },
     {
-      "t": "h",
-      "v": "Expense Recognition — 3 Methods"
+      "q": "A software company sells a 12-month technical support contract for $2,400, with revenue recognized ratably over the service period as the performance obligation is satisfied over time. How much revenue should the company recognize after 5 months of the contract?",
+      "o": [
+        "$2,400.",
+        "$1,000.",
+        "$480.",
+        "$1,900."
+      ],
+      "a": 1,
+      "e": "Because the support obligation is satisfied over time, revenue is recognized ratably: $2,400 / 12 months = $200 per month. After 5 months: $200 × 5 = $1,000.",
+      "wrongWhy": {
+        "0": "$2,400 recognizes the full contract value upfront, which is only appropriate for a point-in-time obligation (like delivering a good), not a service performed ratably over 12 months.",
+        "2": "$480 divides the total incorrectly (treats the monthly rate as $96 instead of $200), understating the correct monthly recognition amount.",
+        "3": "$1,900 does not correspond to any correct proration of $2,400 over 12 months for a 5-month period."
+      },
+      "src": "gawad"
     },
     {
-      "t": "b",
-      "v": [
-        "1. Cause and Effect (Matching Principle): Expenses directly linked to revenue are recognized when that revenue is recognized. Example: Cost of goods sold is recognized when the related sale is recognized.",
-        "2. Systematic and Rational Allocation: Expenses that provide benefit over multiple periods are allocated systematically. Example: Depreciation of equipment spread over its useful life.",
-        "3. Immediate Recognition: Expenses that provide no future benefit or whose benefit cannot be reasonably measured are expensed immediately. Example: Advertising costs, officer salaries."
-      ]
+      "q": "Which expense recognition principle recognizes cost of goods sold in the same period as the related sales revenue?",
+      "o": [
+        "Immediate recognition.",
+        "Systematic and rational allocation.",
+        "Cause and effect (the matching principle).",
+        "Realization principle."
+      ],
+      "a": 2,
+      "e": "Cause and effect, also called the matching principle, links an expense directly to the revenue it helped generate. Cost of goods sold is the clearest example: the cost of inventory is expensed in the exact period the related sale — and its revenue — is recognized.",
+      "wrongWhy": {
+        "0": "Immediate recognition applies to costs with no future benefit or whose benefit cannot be reliably measured (e.g., advertising) — COGS has a clear, measurable link to a specific sale, so it does not fall under this method.",
+        "1": "Systematic and rational allocation spreads a cost over multiple periods of benefit (e.g., depreciation) — COGS is expensed all at once when the specific related sale occurs, not spread across periods.",
+        "3": "Realization principle is a revenue concept (when revenue is considered earned/realized), not the name of an expense recognition method."
+      },
+      "src": "gawad"
     },
     {
-      "t": "h",
-      "v": "Gains and Losses on Disposal of Fixed Assets"
+      "q": "A company purchases equipment expected to provide benefits over 5 years and depreciates it over that period. Which expense recognition method does this represent?",
+      "o": [
+        "Cause and effect.",
+        "Systematic and rational allocation.",
+        "Immediate recognition.",
+        "Deferred recognition."
+      ],
+      "a": 1,
+      "e": "Systematic and rational allocation is used when a cost provides benefits across multiple future periods but has no single specific revenue event to match against. Depreciation spreads the equipment's cost evenly (or by another rational method) across its useful life.",
+      "wrongWhy": {
+        "0": "Cause and effect requires a direct, identifiable link between the specific cost and a specific unit of revenue — depreciation benefits many periods generally, with no single matching sale.",
+        "2": "Immediate recognition expenses the full cost in the period incurred — the opposite of spreading the equipment's cost over its 5-year useful life.",
+        "3": "Deferred recognition is not one of the three standard expense recognition methods tested (cause and effect, systematic and rational allocation, immediate recognition)."
+      },
+      "src": "gawad"
     },
     {
-      "t": "p",
-      "v": "When a company sells a fixed asset (PP&E), a gain or loss arises. The gain or loss = Sale proceeds − Book value at disposal. Book value = Original cost − Accumulated depreciation. A gain is reported on the income statement as 'Gain on Sale of Asset'. A loss is reported as 'Loss on Sale of Asset'. Both are non-operating items — they appear below operating income."
+      "q": "A company spends $40,000 on a television advertising campaign during the current quarter. The future benefit of this spending cannot be reliably measured or linked to specific future sales. How should this cost be recognized?",
+      "o": [
+        "Capitalized as an asset and depreciated over 5 years.",
+        "Allocated systematically over the estimated life of the campaign's effect.",
+        "Expensed immediately in the period incurred.",
+        "Deferred until the related future sales occur."
+      ],
+      "a": 2,
+      "e": "When a cost provides no clearly measurable future benefit — as with most advertising spending — it is recognized immediately as an expense in the period incurred, rather than capitalized or spread over future periods.",
+      "wrongWhy": {
+        "0": "Capitalizing and depreciating is used for assets with a measurable useful life (like equipment), not for advertising costs whose future benefit cannot be reliably estimated.",
+        "1": "Systematic and rational allocation requires an identifiable pattern of future benefit to allocate against — advertising's benefit is too uncertain to allocate this way.",
+        "3": "Deferring until future sales occur would require directly tracing the advertising cost to specific future revenue, which is exactly what cannot be reliably done here."
+      },
+      "src": "gawad"
     },
     {
-      "t": "ex",
-      "l": "Gain on Disposal — Example",
-      "v": "Machine: Original cost $50,000. Accumulated depreciation $32,000.\nBook value at disposal = $50,000 − $32,000 = $18,000\nSale proceeds = $22,000\nGain on sale = $22,000 − $18,000 = $4,000 (Favorable — reported as income)\n\nJournal entry:\n  Cash                     22,000\n  Accumulated Depreciation 32,000\n    Equipment                       50,000\n    Gain on Sale of Asset            4,000"
+      "q": "A machine with an original cost of $80,000 and accumulated depreciation of $55,000 is sold for $30,000 cash. What is the gain or loss on disposal?",
+      "o": [
+        "$5,000 gain.",
+        "$5,000 loss.",
+        "$25,000 gain.",
+        "$30,000 gain."
+      ],
+      "a": 0,
+      "e": "Book value at disposal = Original cost − Accumulated depreciation = $80,000 − $55,000 = $25,000. Gain (loss) on sale = Sale proceeds − Book value = $30,000 − $25,000 = $5,000 gain.",
+      "wrongWhy": {
+        "1": "$5,000 loss reverses the correct sign. Since sale proceeds ($30,000) exceed book value ($25,000), the transaction produces a gain, not a loss.",
+        "2": "$25,000 is the machine's book value at disposal, not the gain — the gain is the difference between proceeds and book value, not the book value itself.",
+        "3": "$30,000 is the total sale proceeds received, not the gain — the original cost basis ($80,000, net of depreciation) must be subtracted first to find the gain."
+      },
+      "src": "gawad"
     },
     {
-      "t": "h",
-      "v": "Other Comprehensive Income (OCI)"
+      "q": "Where is a gain on the sale of a fixed asset reported on the income statement?",
+      "o": [
+        "As part of operating revenue.",
+        "As a non-operating item, separate from operating income.",
+        "As a direct increase to retained earnings, bypassing the income statement.",
+        "As part of Other Comprehensive Income."
+      ],
+      "a": 1,
+      "e": "Gains and losses on the sale of fixed assets are non-operating items — they are not part of the company's core operating activities and are reported separately, below operating income, on the income statement.",
+      "wrongWhy": {
+        "0": "Operating revenue reflects a company's core business activities (e.g., sales of goods/services); selling a fixed asset is a peripheral, non-operating transaction.",
+        "2": "The gain does flow through the income statement into net income before affecting retained earnings — it is not posted directly to equity, bypassing the income statement.",
+        "3": "OCI holds specific unrealized items (like AFS security gains or foreign currency translation) — a realized gain on an asset sale flows through net income, not OCI."
+      },
+      "src": "gawad"
     },
     {
-      "t": "p",
-      "v": "Comprehensive Income = Net Income + Other Comprehensive Income (OCI). OCI items are gains and losses that are excluded from net income but still affect stockholders' equity. They are reported in the Statement of Comprehensive Income and accumulated in 'Accumulated Other Comprehensive Income (AOCI)' on the balance sheet."
+      "q": "Which of the following best describes Comprehensive Income?",
+      "o": [
+        "Net Income minus Other Comprehensive Income.",
+        "Net Income plus Other Comprehensive Income.",
+        "Total Revenue minus Total Expenses only.",
+        "Net Income plus Extraordinary Items."
+      ],
+      "a": 1,
+      "e": "Comprehensive Income = Net Income + Other Comprehensive Income (OCI). OCI captures certain gains and losses (such as unrealized AFS securities gains/losses, foreign currency translation adjustments, and pension liability adjustments) that bypass net income but still affect total equity.",
+      "wrongWhy": {
+        "0": "Subtracting OCI reverses the correct relationship — Comprehensive Income adds OCI to Net Income, it does not subtract it.",
+        "2": "Total Revenue minus Total Expenses only describes Net Income, which is just one component of Comprehensive Income, not the full comprehensive income figure.",
+        "3": "Extraordinary items are not a distinct component under current GAAP presentation and are not the additional element that defines Comprehensive Income — OCI is."
+      },
+      "src": "gawad"
     },
     {
-      "t": "b",
-      "v": [
-        "Unrealized gains and losses on available-for-sale securities",
-        "Foreign currency translation adjustments",
-        "Pension liability adjustments",
-        "Effective portion of cash flow hedge gains/losses"
-      ]
+      "q": "Which of the following is classified as an Other Comprehensive Income (OCI) item rather than being included in Net Income?",
+      "o": [
+        "Cost of goods sold.",
+        "Realized gain on sale of equipment.",
+        "Unrealized gain on available-for-sale securities.",
+        "Interest expense on long-term debt."
+      ],
+      "a": 2,
+      "e": "Unrealized gains and losses on available-for-sale securities are a classic OCI item — they are not yet realized through a sale, so they bypass net income but still affect total stockholders' equity through Accumulated Other Comprehensive Income (AOCI).",
+      "wrongWhy": {
+        "0": "Cost of goods sold is a standard operating expense that flows directly through net income; it is not an OCI item.",
+        "1": "A realized gain on the sale of equipment (an actual completed transaction) flows through net income as a non-operating gain, not through OCI.",
+        "3": "Interest expense is a normal recurring expense reported on the income statement and included in net income, not classified as OCI."
+      },
+      "src": "gawad"
     },
     {
-      "t": "tip",
-      "v": "OCI items never appear in Net Income but DO appear in Comprehensive Income (Net Income + OCI). On the exam: if a question asks what affects net income, OCI items do NOT. If a question asks what affects stockholders' equity or comprehensive income, OCI items DO."
+      "q": "A company reports $50,000 of unrealized losses on available-for-sale securities this year. Which statement correctly describes the effect of this OCI item?",
+      "o": [
+        "It reduces Net Income by $50,000 but has no effect on stockholders' equity.",
+        "It has no effect on Net Income but reduces stockholders' equity by $50,000 through Accumulated OCI.",
+        "It has no effect on Net Income or stockholders' equity until the securities are sold.",
+        "It is treated exactly like a realized loss and flows through Net Income."
+      ],
+      "a": 1,
+      "e": "OCI items never flow through Net Income, but they do affect total stockholders' equity immediately — through Accumulated Other Comprehensive Income (AOCI), a separate equity account. So the $50,000 unrealized loss reduces AOCI (part of equity) in the current period, even though it never touches Net Income.",
+      "wrongWhy": {
+        "0": "This reverses the correct treatment: OCI items are specifically excluded from Net Income, not included in it — but they do still affect equity.",
+        "2": "Equity is affected immediately in the period the unrealized loss occurs, through AOCI — the company does not wait until the securities are sold for the equity impact.",
+        "3": "A realized loss flows through Net Income; an unrealized OCI loss, by definition, is excluded from Net Income and only affects equity through AOCI."
+      },
+      "src": "gawad"
+    },
+    {
+      "q": "A U.S. parent company with a foreign subsidiary records a foreign currency translation adjustment when converting the subsidiary's financial statements to U.S. dollars. Where is this adjustment reported?",
+      "o": [
+        "As a non-operating gain or loss on the income statement.",
+        "As part of Other Comprehensive Income, affecting equity but not Net Income.",
+        "As an extraordinary item.",
+        "As a direct adjustment to retained earnings, bypassing equity entirely."
+      ],
+      "a": 1,
+      "e": "Foreign currency translation adjustments are a standard OCI item. They are excluded from Net Income and instead flow into Other Comprehensive Income, ultimately affecting stockholders' equity through Accumulated Other Comprehensive Income (AOCI).",
+      "wrongWhy": {
+        "0": "Translation adjustments specifically bypass the income statement and Net Income — they are reported in OCI, not as a gain/loss on the income statement.",
+        "2": "Extraordinary items are not a distinct reporting category under current GAAP, and translation adjustments are specifically classified as OCI, not as an extraordinary item.",
+        "3": "AOCI is a component of stockholders' equity (not retained earnings specifically) — the adjustment affects equity through this dedicated OCI account, not as a direct hit to retained earnings."
+      },
+      "src": "gawad"
     }
   ],
   "2-3": [
@@ -1648,7 +1830,7 @@
       }
     },
     {
-      "q": "Sylvan Corporation has the following capital structure. Debenture bonds: $10,000,000 Preferred equity: $1,000,000 Common equity: $39,000,000 The financial leverage of Sylvan Corporation would increase as a result of:",
+      "q": "Sylvan Corporation has the following capital structure:\n\nDebenture bonds: $10,000,000\nPreferred equity: $1,000,000\nCommon equity: $39,000,000\n\nThe financial leverage of Sylvan Corporation would increase as a result of:",
       "o": [
         "Financing its future investments with a higher percentage of bonds.",
         "Issuing common stock and using the proceeds to retire preferred stock.",
@@ -1921,7 +2103,7 @@
       }
     },
     {
-      "q": "Lisa, Inc. Statement of Financial Position December 31, 20X4 (in thousands) 20X4 20X3 $ 30 $ 25 Assets Current assets: Cash Marketable securities Accounts receivable (net) Inventories (at lower of cost or net realizable value) Prepaid items $170 $140 $ 25 $ 20 Land (at cost) Building (net) Equipment (net) Total Current Assets Non-current assets: Long-term investments: Equity method investments Property, plant & equipment: Intangible assets: Patents (net) Goodwill (net) Total Non-current Assets $330 $315 Total Assets $500 $455 Liabilities and Equity Current liabilities: < Previous ‫ م‬12:07 2024/‫‏‬8/‫‏‬22 FMAA – Test Bank – HOCK international FMAA - Section ( B ) Financial Statement Preparation and Analysis 123 Q Notes payable $ 23 $ 12 Accounts payable Accrued interest $ 85 $ 55 $ 10 $ 10 Total Current Liabilities Non-current liabilities: Long-term notes payable 10% due 12/31/20X6 Bonds payable 12% due 12/31/20X9 Total Non-current Liabilities $ 25 $ 25 Total Liabilities $110 $ 80 $100 $100 Additional paid-in capital - common Retained earnings Total Equity $390 $375 Total Liabilities & Equity $500 $455 Shareholders' Equity Preferred stock - $100 par, 5% cumulative nonparticipating, 1,000 shares authorized, issued and outstanding Common stock - $10 par, 20,000 shares authorized, 15,000 shares issued and outstanding Assume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000 respectively. Lisa Inc.'s accounts receivable turnover for 20X4 was",
+      "q": "Lisa, Inc. — Statement of Financial Position, December 31, 20X4 (in thousands)\n\nAssets\nCurrent assets:\nCash: $30 (20X4) / $25 (20X3)\nMarketable securities: $20 / $15\nAccounts receivable (net): $45 / $30\nInventories: $60 / $50\nPrepaid items: $15 / $20\nTotal Current Assets: $170 / $140\n\nNon-current assets:\nLong-term investments: $25 / $20\nLand (at cost): $75 / $75\nBuilding (net): $80 / $90\nEquipment (net): $95 / $100\nPatents (net): $35 / $17\nGoodwill (net): $20 / $13\nTotal Non-current Assets: $330 / $315\nTotal Assets: $500 / $455\n\nLiabilities and Equity\nCurrent liabilities:\nNotes payable: $23 / $12\nAccounts payable: $47 / $28\nAccrued interest: $15 / $15\nTotal Current Liabilities: $85 / $55\n\nNon-current liabilities:\nLong-term notes payable, 10% due 12/31/20X6: $10 / $10\nBonds payable, 12% due 12/31/20X9: $15 / $15\nTotal Non-current Liabilities: $25 / $25\nTotal Liabilities: $110 / $80\n\nShareholders' Equity: Total Equity $390 / $375\nTotal Liabilities & Equity: $500 / $455\n\nAssume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively.\n\nLisa Inc.'s accounts receivable turnover for 20X4 was",
       "o": [
         "8.0 times.",
         "6.7 times.",
@@ -1929,15 +2111,15 @@
         "4.9 times."
       ],
       "a": 0,
-      "e": "Accounts receivable turnover is calculated as net credit sales divided by average accounts receivable. Average accounts receivable was $37,500 (the average of $45,000 and $30,000), and given information that credit sales were $300,000, the receivables turnover was $300,000 divided by $37,500, or 8 times.",
+      "e": "Accounts receivable turnover is calculated as net credit sales divided by average accounts receivable. Average accounts receivable was $37,500 (the average of $45,000 and $30,000), and given credit sales of $300,000, the receivables turnover was $300,000 divided by $37,500, or 8 times.",
       "wrongWhy": {
-        "1": "‫ م‬12:07 2024/‫‏‬8/‫‏‬22",
+        "1": "This answer results from using the 20X4 year-end receivables balance ($45,000) instead of the average of the beginning and ending balances in the denominator.",
         "2": "Accounts receivable turnover is calculated as net credit sales divided by average accounts receivable. This answer results from using cost of goods sold (instead of net credit sales) in the numerator.",
         "3": "Accounts receivable turnover is calculated as net credit sales divided by average accounts receivable. This answer results from using cost of goods sold (instead of credit sales) in the numerator and using the 20X4 year end receivables (instead of the average receivables) in the denominator."
       }
     },
     {
-      "q": "Lisa, Inc. Statement of Financial Position December 31, 20X4 (in thousands) 20X4 20X3 $ 30 $ 25 Assets Current assets: Cash Marketable securities Accounts receivable (net) Inventories (at lower of cost or net realizable value) Prepaid items $170 $140 $ 25 $ 20 Land (at cost) Building (net) Equipment (net) Total Current Assets Non-current assets: Long-term investments: Equity method investments Property, plant & equipment: Intangible assets: Patents (net) Goodwill (net) Total Non-current Assets $330 $315 Total Assets $500 $455 < Previous ‫ م‬12:08 2024/‫‏‬8/‫‏‬22 FMAA – Test Bank – HOCK international FMAA - Section ( B ) Financial Statement Preparation and Analysis 123 Q Liabilities and Equity Current liabilities: Notes payable $ 23 $ 12 Accounts payable Accrued interest $ 85 $ 55 $ 10 $ 10 Total Non-current Liabilities $ 25 $ 25 Total Liabilities $110 $ 80 $100 $100 Additional paid-in capital - common Retained earnings Total Equity $390 $375 Total Liabilities & Equity $500 $455 Total Current Liabilities Non-current liabilities: Long-term notes payable 10% due 12/31/20X6 Bonds payable 12% due 12/31/20X9 Shareholders' Equity Preferred stock - $100 par, 5% cumulative nonparticipating, 1,000 shares authorized, issued and outstanding Common stock - $10 par, 20,000 shares authorized, 15,000 shares issued and outstanding Assume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000 respectively. Lisa Inc.'s average collection period for 20X4, using a 365-day year, was",
+      "q": "Lisa, Inc. — Statement of Financial Position, December 31, 20X4 (in thousands)\n\nAssets\nCurrent assets:\nCash: $30 (20X4) / $25 (20X3)\nMarketable securities: $20 / $15\nAccounts receivable (net): $45 / $30\nInventories: $60 / $50\nPrepaid items: $15 / $20\nTotal Current Assets: $170 / $140\n\nNon-current assets:\nLong-term investments: $25 / $20\nLand (at cost): $75 / $75\nBuilding (net): $80 / $90\nEquipment (net): $95 / $100\nPatents (net): $35 / $17\nGoodwill (net): $20 / $13\nTotal Non-current Assets: $330 / $315\nTotal Assets: $500 / $455\n\nLiabilities and Equity\nCurrent liabilities:\nNotes payable: $23 / $12\nAccounts payable: $47 / $28\nAccrued interest: $15 / $15\nTotal Current Liabilities: $85 / $55\n\nNon-current liabilities:\nLong-term notes payable, 10% due 12/31/20X6: $10 / $10\nBonds payable, 12% due 12/31/20X9: $15 / $15\nTotal Non-current Liabilities: $25 / $25\nTotal Liabilities: $110 / $80\n\nShareholders' Equity: Total Equity $390 / $375\nTotal Liabilities & Equity: $500 / $455\n\nAssume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively.\n\nLisa Inc.'s average collection period for 20X4, using a 365-day year, was",
       "o": [
         "45.6 days.",
         "62.2 days.",
@@ -1945,7 +2127,7 @@
         "54.7 days."
       ],
       "a": 0,
-      "e": "‫ م‬12:08 2024/‫‏‬8/‫‏‬22",
+      "e": "The average collection period using a 365-day year is calculated as 365 divided by the accounts receivable turnover. The accounts receivable turnover is net credit sales divided by average accounts receivable. Average accounts receivable was $37,500 (the average of $45,000 and $30,000), and given credit sales of $300,000, the receivables turnover was $300,000 divided by $37,500, or 8 times. The average collection period was therefore 365 divided by 8, or 45.6 days.",
       "wrongWhy": {
         "1": "The average collection period using a 365-day year is calculated as 365 divided by the accounts receivable turnover. The accounts receivable turnover is net credit sales divided by average accounts receivable. This answer results from using cost of goods sold instead of net credit sales to calculate the accounts receivable turnover.",
         "2": "The average collection period using a 365-day year is calculated as 365 divided by the accounts receivable turnover. The accounts receivable turnover is net credit sales divided by average accounts receivable. This answer results from using 20X3 year-end accounts receivable to calculate the accounts receivable turnover instead of average receivables.",
@@ -1953,7 +2135,7 @@
       }
     },
     {
-      "q": "Lisa, Inc. Statement of Financial Position December 31, 20X4 (in thousands) 20X4 20X3 $ 30 $ 25 Assets Current assets: Cash Trading securities Accounts receivable (net) Inventories (at lower of cost of market) Prepaid items $170 $140 $ 25 $ 20 Land (at cost) Building (net) Equipment (net) Total Current Assets Non-current assets: Long-term investments: Available-for-sale investments Property, plant & equipment: Intangible assets: Patents (net) Goodwill (net) Total Non-current Assets $330 $315 Total Assets $500 $455 < Previous ‫ م‬12:09 2024/‫‏‬8/‫‏‬22 FMAA – Test Bank – HOCK international FMAA - Section ( B ) Financial Statement Preparation and Analysis 123 Q Liabilities and Equity Current liabilities: Notes payable $ 23 $ 12 Accounts payable Accrued interest $ 85 $ 55 $ 10 $ 10 Total Non-current Liabilities $ 25 $ 25 Total Liabilities $110 $ 80 $100 $100 shares issued and outstanding Additional paid-in capital - common Retained earnings Total Equity $390 $375 Total Liabilities & Equity $500 $455 Total Current Liabilities Non-current liabilities: Long-term Notes payable 10% due 12/31/20X6 Bonds payable 12% due 12/31/20X9 Shareholders' Equity Preferred stock - 5% cumulative, $100 par, nonparticipating authorized, issued and outstanding, 1,000 shares Common stock - $10 par 20,000 shares authorized, 15,000 Assume sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively. Lisa Inc.'s inventory turnover, using a 360-day year, was",
+      "q": "Lisa, Inc. — Statement of Financial Position, December 31, 20X4 (in thousands)\n\nAssets\nCurrent assets:\nCash: $30 (20X4) / $25 (20X3)\nMarketable securities: $20 / $15\nAccounts receivable (net): $45 / $30\nInventories: $60 / $50\nPrepaid items: $15 / $20\nTotal Current Assets: $170 / $140\n\nNon-current assets:\nLong-term investments: $25 / $20\nLand (at cost): $75 / $75\nBuilding (net): $80 / $90\nEquipment (net): $95 / $100\nPatents (net): $35 / $17\nGoodwill (net): $20 / $13\nTotal Non-current Assets: $330 / $315\nTotal Assets: $500 / $455\n\nLiabilities and Equity\nCurrent liabilities:\nNotes payable: $23 / $12\nAccounts payable: $47 / $28\nAccrued interest: $15 / $15\nTotal Current Liabilities: $85 / $55\n\nNon-current liabilities:\nLong-term notes payable, 10% due 12/31/20X6: $10 / $10\nBonds payable, 12% due 12/31/20X9: $15 / $15\nTotal Non-current Liabilities: $25 / $25\nTotal Liabilities: $110 / $80\n\nShareholders' Equity: Total Equity $390 / $375\nTotal Liabilities & Equity: $500 / $455\n\nAssume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively.\n\nLisa Inc.'s inventory turnover, using a 360-day year, was",
       "o": [
         "4.4 times.",
         "3.7 times.",
@@ -1961,7 +2143,7 @@
         "5.0 times."
       ],
       "a": 2,
-      "e": "‫ م‬12:09 2024/‫‏‬8/‫‏‬22",
+      "e": "The inventory turnover is calculated as annual cost of sales divided by average annual inventory. Annual cost of sales was $220,000. Average inventory was $55,000 (the average of the $60,000 and $50,000 year-end inventory balances). Inventory turnover = $220,000 / $55,000 = 4 times.",
       "wrongWhy": {
         "0": "The inventory turnover is calculated as annual cost of sales divided by the average annual inventory. This answer was calculated using the 20X3 year-end inventory instead of the average inventory during the year.",
         "1": "The inventory turnover is calculated as annual cost of sales divided by the average annual inventory. This answer was calculated using the 20X4 year-end inventory instead of the average inventory during the year.",
