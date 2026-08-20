@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-19-02 remove-hock-branding-content-cleanup -->
+<!-- FMAA-BUILD: 2026-08-20-01 ima-cso-grouping-about-page -->
 <script>
-window.FMAA_BUILD='2026-08-19-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-20-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -1043,6 +1043,13 @@ function studyGo(sectId,lessonId){
   content.innerHTML=renderStudy();content.style.display='flex';content.style.flexDirection='column';content.style.overflow='auto';
   if(lessonId){setTimeout(()=>syncNoteFromCloud(lessonId),0);}
 }
+function toggleAboutGroup(gid){
+  const box=document.getElementById(gid);const icon=document.getElementById(gid+'-icon');
+  if(!box)return;
+  const open=box.style.display!=='none';
+  box.style.display=open?'none':'block';
+  if(icon)icon.style.transform=open?'rotate(0deg)':'rotate(90deg)';
+}
 function toggleSection(secId){
   const wasOpen=STATE.sectId===secId;STATE.sectId=wasOpen?null:secId;
   const listEl=document.getElementById('sec-lessons-'+secId);const iconEl=document.getElementById('sec-icon-'+secId);
@@ -1407,57 +1414,68 @@ function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAc
         <div class="tip"><div class="tip-lbl">WHY FMAA?</div><div class="tip-txt">The FMAA is perfect if you're starting your accounting career, switching to finance, or want a globally recognized credential to validate your fundamentals. It's the ideal stepping stone before pursuing the full CMA designation.</div></div>
       </div>
 
-      <!-- FMAA CONTENT & STRUCTURE — 5 Sections -->
+      <!-- FMAA CONTENT & STRUCTURE — 5 Sections, grouped under IMA's official 18 CSO topics -->
       <div class="info-section">
         <div class="info-title">📚 FMAA Exam — Content &amp; Structure</div>
+        <div style="font-size:11px;color:#888;margin:-4px 0 10px;line-height:1.5">Grouped under the IMA Content Specification Outline (CSO) — 5 sections, 18 official topics. Each topic expands to show the app's study units covering it.</div>
         ${[
-          {id:'A',name:'General Accounting &amp; Financial Management',pct:'25%',units:20,bar:'#1A5276',bg:'#D6EAF8',strong:'#154360',topics:[
-            ['SU 1','A.1. Accounting Terminology and Definitions'],
-            ['SU 2','A.2. Recording Business Transactions'],
-            ['SU 3','A.2. Debits, Credits, and T-Accounts'],
-            ['SU 4','A.2. Transactions for a New Business (Example)'],
-            ['SU 5','A.2. The Unadjusted Trial Balance'],
-            ['SU 6','A.2. Comprehensive Income'],
-            ['SU 7','A.2. Subsidiary Ledger Accounts'],
-            ['SU 8','A.2. Revenue &amp; Expense Transactions (Example)'],
-            ['SU 9','A.2. Other Transactions with Example'],
-            ['SU 10','A.2. Adjusting Entries'],
-            ['SU 11','A.2. Adjusting Entries (Example)'],
-            ['SU 12','A.2. Year-End Close with Example'],
-            ['SU 13','A.2. Accounting Cycle Review &amp; Reversing Entries'],
-            ['SU 14','A.3. Types and Elements of Financial Statements'],
-            ['SU 15','A.4. Statement of Cash Flows'],
-            ['SU 16','A.4. Internal Controls'],
-            ['SU 17','A.5. Managing a Company\'s Daily Finances'],
-            ['SU 18','A.5. Cash Management'],
-            ['SU 19','A.5. Accounts Receivable &amp; Payable Management'],
-            ['SU 20','A.5. Inventory Management']
+          {id:'A',name:'General Accounting &amp; Financial Management',pct:'25%',units:20,bar:'#1A5276',bg:'#D6EAF8',strong:'#154360',groups:[
+            {code:'A.1',title:'Accounting Terminology and Definitions',items:[['SU 1','The Role of Accounting']]},
+            {code:'A.2',title:'Recording Business Transactions',items:[
+              ['SU 2','Double-Entry Bookkeeping and the Accounting Equation'],
+              ['SU 3','Debits, Credits, and T-Accounts'],
+              ['SU 4','Transactions for a New Business (Example)'],
+              ['SU 5','The Unadjusted Trial Balance'],
+              ['SU 7','Subsidiary Ledger Accounts'],
+              ['SU 8','Revenue &amp; Expense Transactions (Example)'],
+              ['SU 9','Other Transactions with Example'],
+              ['SU 10','Adjusting Entries — Why They Are Needed'],
+              ['SU 11','Adjusting Entries (Example)'],
+              ['SU 12','Year-End Close with Example'],
+              ['SU 13','Review of the 8-Step Accounting Cycle']
+            ]},
+            {code:'A.3',title:'Types and Elements of Financial Statements',items:[
+              ['SU 6','Comprehensive Income — What Goes Where'],
+              ['SU 14','The 4 Financial Statements — Structure and Content'],
+              ['SU 15','Statement of Cash Flows']
+            ]},
+            {code:'A.4',title:'Internal Controls',items:[['SU 16','What Is Internal Control? — The COSO Definition']]},
+            {code:'A.5',title:'Managing a Company\'s Daily Finances',items:[
+              ['SU 17','Working Capital'],
+              ['SU 18','Cash Management'],
+              ['SU 19','Accounts Receivable &amp; Payable Management'],
+              ['SU 20','Inventory Management']
+            ]}
           ]},
-          {id:'B',name:'Financial Statement Preparation &amp; Analysis',pct:'25%',units:8,bar:'#1E8449',bg:'#D5F5E3',strong:'#186A3B',topics:[
-            ['SU 21','B.1. Asset and Liability Valuation'],
-            ['SU 22','B.1. Revenue Recognition and Income Measurement'],
-            ['SU 23','B.1. Equity Transactions'],
-            ['SU 24','B.2. Basic Financial Statement Analysis'],
-            ['SU 25','B.3. Liquidity Ratios'],
-            ['SU 26','B.3. Leverage Ratios'],
-            ['SU 27','B.3. Activity Ratios'],
-            ['SU 28','B.3. Profitability Ratios']
+          {id:'B',name:'Financial Statement Preparation &amp; Analysis',pct:'25%',units:8,bar:'#1E8449',bg:'#D5F5E3',strong:'#186A3B',groups:[
+            {code:'B.1',title:'Recognition &amp; Valuation in Financial Statements',items:[
+              ['SU 21','Asset Valuation — AR, Inventory &amp; Fixed Assets'],
+              ['SU 22','Revenue Recognition and Income Measurement'],
+              ['SU 23','Equity Transactions']
+            ]},
+            {code:'B.2',title:'Basic Financial Statement Analysis',items:[['SU 24','Common-Size &amp; Common Base Year Statements']]},
+            {code:'B.3',title:'Financial Statement Ratio Analysis',items:[
+              ['SU 25','Liquidity Ratios'],
+              ['SU 26','Leverage Ratios'],
+              ['SU 27','Activity Ratios'],
+              ['SU 28','Profitability Ratios']
+            ]}
           ]},
-          {id:'C',name:'Planning &amp; Budgeting',pct:'20%',units:3,bar:'#B9770E',bg:'#FAEEDA',strong:'#7E5109',topics:[
-            ['SU 29','C.1. Budgeting Concepts'],
-            ['SU 30','C.2. Budgeting Methodologies'],
-            ['SU 31','C.3. Annual Operating Plan &amp; Supporting Schedules']
+          {id:'C',name:'Planning &amp; Budgeting',pct:'20%',units:3,bar:'#B9770E',bg:'#FAEEDA',strong:'#7E5109',groups:[
+            {code:'C.1',title:'Budgeting Concepts',items:[['SU 29','Why Budgets Matter']]},
+            {code:'C.2',title:'Budgeting Methodologies',items:[['SU 30','Master Budget Structure']]},
+            {code:'C.3',title:'Annual Operating Plan &amp; Supporting Schedules',items:[['SU 31','Building the Budget Schedules']]}
           ]},
-          {id:'D',name:'Cost Management &amp; Performance Metrics',pct:'20%',units:5,bar:'#884EA0',bg:'#F4ECF7',strong:'#6C3483',topics:[
-            ['SU 32','D.1. Cost Measurement Concepts'],
-            ['SU 33','D.2. Variable and Fixed Overhead Expenses'],
-            ['SU 34','D.3. Cost and Variance Measures'],
-            ['SU 35','D.4. Performance Measurement'],
-            ['SU 36','D.5. Cost Information for Decision Making']
+          {id:'D',name:'Cost Management &amp; Performance Metrics',pct:'20%',units:5,bar:'#884EA0',bg:'#F4ECF7',strong:'#6C3483',groups:[
+            {code:'D.1',title:'Cost Measurement Concepts',items:[['SU 32','What Is a Cost? Start Here']]},
+            {code:'D.2',title:'Variable and Fixed Overhead Expenses',items:[['SU 33','Manufacturing Overhead']]},
+            {code:'D.3',title:'Cost and Variance Measures',items:[['SU 34','Variance Analysis']]},
+            {code:'D.4',title:'Performance Measurement',items:[['SU 35','Evaluating Segments and Managers']]},
+            {code:'D.5',title:'Cost Information for Decision Making',items:[['SU 36','Cost-Volume-Profit (CVP) Analysis']]}
           ]},
-          {id:'E',name:'Professional Ethics',pct:'10%',units:2,bar:'#CB4335',bg:'#FADBD8',strong:'#943126',topics:[
-            ['SU 37','E.1. Business Ethics'],
-            ['SU 38','E.2. Ethical Considerations for Accountants in Business']
+          {id:'E',name:'Professional Ethics',pct:'10%',units:2,bar:'#CB4335',bg:'#FADBD8',strong:'#943126',groups:[
+            {code:'E.1',title:'Business Ethics',items:[['SU 37','Business Ethics — Foundations']]},
+            {code:'E.2',title:'Ethical Considerations for Accountants in Business',items:[['SU 38','IMA Statement of Ethical Professional Practice']]}
           ]}
         ].map(sec=>`<div class="part-card" style="margin-bottom:10px">
           <div class="part-header" style="background:${sec.bar}">
@@ -1465,7 +1483,22 @@ function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAc
             <span style="background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;white-space:nowrap">${sec.pct} · ${sec.units} Units</span>
           </div>
           <div class="part-topics" style="background:${sec.bg}">
-            ${sec.topics.map(([su,title])=>`<div class="part-topic"><span style="color:${sec.strong};font-size:13px">${title}</span><span style="font-weight:500;color:${sec.bar};background:rgba(0,0,0,.06);padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap">${su}</span></div>`).join('')}
+            ${sec.groups.map((g,gi)=>{
+              const gid='about-grp-'+sec.id+'-'+gi;
+              const multi=g.items.length>1;
+              return `<div class="part-group" style="margin-bottom:2px">
+                <div class="part-group-header" ${multi?`onclick="toggleAboutGroup('${gid}')"`:''} style="display:flex;align-items:center;justify-content:space-between;padding:9px 4px;cursor:${multi?'pointer':'default'}">
+                  <span style="color:${sec.strong};font-size:13px;font-weight:600">${g.code}. ${g.title}</span>
+                  <span style="display:flex;align-items:center;gap:6px;flex-shrink:0">
+                    <span style="font-weight:500;color:${sec.bar};background:rgba(0,0,0,.06);padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap">${g.items.length} unit${multi?'s':''}</span>
+                    ${multi?`<span id="${gid}-icon" style="font-size:14px;color:${sec.strong};transition:transform .2s;transform:rotate(90deg)">›</span>`:''}
+                  </span>
+                </div>
+                <div id="${gid}" style="padding-left:10px;${multi?'':'display:block'}">
+                  ${g.items.map(([su,title])=>`<div class="part-topic"><span style="color:${sec.strong};font-size:12.5px;opacity:.9">${title}</span><span style="font-weight:500;color:${sec.bar};background:rgba(0,0,0,.05);padding:2px 7px;border-radius:10px;font-size:10.5px;white-space:nowrap">${su}</span></div>`).join('')}
+                </div>
+              </div>`;
+            }).join('')}
           </div>
         </div>`).join('')}
       </div>
