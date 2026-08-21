@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-21-01 fix-exam-results-timing -->
+<!-- FMAA-BUILD: 2026-08-22-01 fix-group-exam-duration-cap -->
 <script>
-window.FMAA_BUILD='2026-08-21-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-22-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -3488,17 +3488,16 @@ async function startGroupExam(examId){
       mcqQ=pool.slice(0,exam.questionCount).map(shuffleQuestionOptions);
     }
     if(!mcqQ.length){showToast('No questions loaded for this exam yet.','warning');STATE.mockExam.status='idle';render();return;}
-    // Cap the countdown to whatever's left before the exam's real end time —
-    // a student who joins late gets less time, and everyone is force-submitted
-    // at the same wall-clock deadline regardless of when they started.
-    // Guard against a malformed exam.endAt (e.g. an exam saved before a start/end time was
-    // ever picked) — fall back to "now + full duration" instead of leaving deadlineTs as NaN,
-    // which would silently disable the wall-clock auto-submit check altogether.
-    let deadlineTs=new Date(exam.endAt).getTime();
+    // Hard deadline is whichever comes first: this student's full duration from
+    // the moment they start, or the exam's scheduled end time. This must be
+    // baked into deadlineTs itself (not just the initial mcqTime) because
+    // mockStartTimer() recomputes mcqTime from deadlineTs on every tick —
+    // a cap applied only to the starting value gets overwritten on the first tick.
     const fullDurationSecs=exam.durationMins*60;
-    if(isNaN(deadlineTs))deadlineTs=Date.now()+fullDurationSecs*1000;
-    const secsUntilDeadline=Math.max(0,Math.floor((deadlineTs-Date.now())/1000));
-    const secs=Math.min(fullDurationSecs,secsUntilDeadline);
+    let examEndTs=new Date(exam.endAt).getTime();
+    if(isNaN(examEndTs))examEndTs=Date.now()+fullDurationSecs*1000;
+    const deadlineTs=Math.min(examEndTs,Date.now()+fullDurationSecs*1000);
+    const secs=Math.max(0,Math.floor((deadlineTs-Date.now())/1000));
     STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode,deadlineTs,mcqQuestionTimes:[],mcqQTimerStart:Date.now()};
     STATE.tab='mock-exam';render();
     if(secs<=0){mockSubmitMCQ(true);return;}
