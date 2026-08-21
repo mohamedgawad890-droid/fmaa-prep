@@ -1,6 +1,7 @@
 {
   "4-1": [
     {
+      "id": "4-1-01",
       "q": "The CEO of an auto manufacturing company would like to have an impartial performance evaluation system so that managers can be fairly rewarded. Under the current costing system, managers may inflate short-term operating income by manipulating inventory levels. To meet the CEO’s expectation, the company should switch from the current",
       "o": [
         "absorption costing approach to the normal costing approach.",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "id": "4-1-02",
       "q": "Smile Labs develops 35mm film using a four-step process that moves progressively through four departments. The company specializes in overnight service and has the largest drug store chain as its primary customer. Currently, direct labor, direct materials, and overhead are accumulated by department. The cost accumulation system that best describes the system Smile Labs is using is",
       "o": [
         "Job-order costing.",
@@ -33,6 +35,7 @@
       }
     },
     {
+      "id": "4-1-03",
       "q": "The estimated unit costs for a company using absorption (full) costing and planning to produce and sell at a level of 12,000 units per month are as follows.\n\nCost Item — Estimated Unit Cost\nDirect materials:  $32\nDirect labor:  $20\nVariable manufacturing overhead:  $15\nFixed manufacturing overhead:  $6\nVariable selling:  $3\nFixed selling:  $4\n\nEstimated total variable costs per unit are:",
       "o": [
         "$70",
@@ -49,6 +52,7 @@
       }
     },
     {
+      "id": "4-1-04",
       "q": "Taylor Corporation is determining the cost behavior of several items in order to budget for the upcoming year. Past trends have indicated the following dollars were spent at three different levels of output.\n\nUnit Levels — Columns:  10,000  |  12,000  |  15,000\nCost A:  $25,000  |  $29,000  |  $35,000\nCost B:  $15,000  |  $15,000  |  $15,000\nCost C:  $15,000  |  $18,000  |  $22,500\n\nIn establishing a budget for 14,000 units, Taylor should treat Costs A, B, and C, respectively, as",
       "o": [
         "semi-variable, semi-variable, and semi-variable.",
@@ -65,6 +69,7 @@
       }
     },
     {
+      "id": "4-1-05",
       "q": "A fixed cost that would be considered a direct cost is",
       "o": [
         "A cost accountant's salary when the cost object is a unit of product.",
@@ -81,6 +86,7 @@
       }
     },
     {
+      "id": "4-1-06",
       "q": "A boutique-style garment company manufactures customized suits. The number of customized suits produced by the company fluctuates widely from month to month. Which of the following costing systems would be most appropriate for the company?",
       "o": [
         "Process costing system and actual costing system.",
@@ -97,6 +103,7 @@
       }
     },
     {
+      "id": "4-1-07",
       "q": "The controller of an online retailer has negotiated a five-year contract with a shipping company to pay the following amounts annually for the delivery of its goods, regardless of the amount. Year 1 €1,000,000 Year 2 1,000,000 Year 3 1,500,000 Year 4 1,500,000 Year 5 2,000,000 What type of costs are these shipping expenditures?",
       "o": [
         "By-product.",
@@ -113,6 +120,7 @@
       }
     },
     {
+      "id": "4-1-08",
       "q": "Which one of the following refers to a cost that remains the same as the volume of activity decreases within the relevant range?",
       "o": [
         "Average cost per unit.",
@@ -129,6 +137,7 @@
       }
     },
     {
+      "id": "4-1-09",
       "q": "Which of the following best describes variable costs?",
       "o": [
         "All costs of manufacturing incurred to produce units of output.",
@@ -145,6 +154,7 @@
       }
     },
     {
+      "id": "4-1-10",
       "q": "A pizza restaurant sells 4,000 pizzas per month for $10 each. The restaurant has the capacity to sell 6,000 pizzas per month. The cost of materials for one pizza is as follows. Dough $0.66 Tomatoes 0.62 Cheese 0.72 Toppings 0.75 Other variable costs 2.50 Total variable costs $5.25 The restaurant also incurs $16,000 of costs per month, which includes rent, salaries, insurance, and depreciation. Management thinks that it can sell 15% more pizzas by reducing the sales price to $9. What would the monthly operating income be if the sales price for a pizza is reduced to $9?",
       "o": [
         "$6,500.",
@@ -161,6 +171,7 @@
       }
     },
     {
+      "id": "4-1-11",
       "q": "Lar Company has found that its total electricity cost has both a fixed component and a variable component within the relevant range. The variable component seems to vary directly with the number of units produced. Which one of the following statements concerning Lar’s electricity cost is incorrect?",
       "o": [
         "The variable electricity cost per unit of production will remain constant as production volume increases.",
@@ -177,6 +188,7 @@
       }
     },
     {
+      "id": "4-1-12",
       "q": "Use of a standard cost system can include all of the following advantages except that it",
       "o": [
         "assists in performance evaluation.",
@@ -193,6 +205,7 @@
       }
     },
     {
+      "id": "4-1-13",
       "q": "Within the relevant range, fixed cost per unit will",
       "o": [
         "decrease as the activity level decreases.",
@@ -209,6 +222,7 @@
       }
     },
     {
+      "id": "4-1-14",
       "q": "A manufacturing company has a continuous flow cycle that employs simplified activities in a short manufacturing cycle. The company produces a single product with a minimal defect rate. The cost accumulation method that this company would most likely use for its manufacturing operations is",
       "o": [
         "Process costing.",
@@ -225,6 +239,7 @@
       }
     },
     {
+      "id": "4-1-15",
       "q": "Roberta Johnson is the manager of Sleep-Well Inn, one of a chain of motels located throughout the U.S. An example of an operating cost at Sleep-Well that is both direct and fixed is",
       "o": [
         "Johnson's salary.",
@@ -241,6 +256,7 @@
       }
     },
     {
+      "id": "4-1-16",
       "q": "Which one of the following is correct regarding a relevant range?",
       "o": [
         "Total fixed costs will not change.",
@@ -257,6 +273,7 @@
       }
     },
     {
+      "id": "4-1-17",
       "q": "A company operates 10 offices. In the prior year, the total cost of operating the offices was $1,000,000 of which $140,000 consisted of fixed costs. All else remaining equal, what will be the budgeted costs if the company were to operate 12 offices?",
       "o": [
         "$1,172,000.",
@@ -273,6 +290,7 @@
       }
     },
     {
+      "id": "4-1-18",
       "q": "A corporation provides management consulting services to hospitals. Consulting engagements vary widely from hospital to hospital, both in terms of the nature of the consulting services provided and the scope of the consulting engagements. The most appropriate product costing system for the corporation is a:",
       "o": [
         "Process costing system.",
@@ -289,6 +307,7 @@
       }
     },
     {
+      "id": "4-1-19",
       "q": "A company has observed the following costs at different production levels.\n\nUnit Production Level — Columns:  25,000  |  50,000  |  75,000\nCost A:  $3,250  |  $5,250  |  $7,250\nCost B:  $7,500  |  $7,500  |  $7,500\nCost C:  $2,750  |  $5,500  |  $8,250\nCost D:  $1,750  |  $2,500  |  $3,000\n\nWhat are the cost behaviors of Costs A, B, C, and D, respectively?",
       "o": [
         "Variable, fixed, variable, mixed.",
@@ -305,6 +324,7 @@
       }
     },
     {
+      "id": "4-1-20",
       "q": "Fowler Co. provides the following summary of its total budgeted production costs at three production levels.\n\nVolume in Units — Columns:  1,000  |  1,500  |  2,000\nCost A:  $1,420  |  $2,130  |  $2,840\nCost B:  $1,550  |  $2,200  |  $2,900\nCost C:  $1,000  |  $1,000  |  $1,000\nCost D:  $1,630  |  $2,445  |  $3,260\n\nThe cost behavior of each of the Costs A through D, respectively, is",
       "o": [
         "variable, fixed, fixed, and variable.",
@@ -321,6 +341,7 @@
       }
     },
     {
+      "id": "4-1-21",
       "q": "A corporation manufactures two brands of barbed wire fencing for sale to wholesalers and large ranchers. Which of the following would be the best type of costing system for such a company to use?",
       "o": [
         "Life-cycle costing.",
@@ -337,6 +358,7 @@
       }
     },
     {
+      "id": "4-1-22",
       "q": "The relevant range refers to the range of activity levels within which",
       "o": [
         "cost relationships hold constant.",
@@ -353,6 +375,7 @@
       }
     },
     {
+      "id": "4-1-23",
       "q": "Companies characterized by the production of basically homogeneous products will most likely use which of the following methods as a cost accumulation method?",
       "o": [
         "Standard costing.",
@@ -369,6 +392,7 @@
       }
     },
     {
+      "id": "4-1-24",
       "q": "Normal costing systems are said to offer a user several distinct benefits when compared with actual costing systems. Which one of the following is not a benefit associated with normal costing systems?",
       "o": [
         "A smoothing of product costs throughout the period.",
@@ -385,6 +409,7 @@
       }
     },
     {
+      "id": "4-1-25",
       "q": "Cell Company has discovered that the cost of processing customer invoices is strictly variable within the relevant range. Which one of the following statements concerning the cost of processing customer invoices is incorrect?",
       "o": [
         "The total cost of processing customer invoices will increase as the volume of customer invoices increases.",
@@ -401,6 +426,7 @@
       }
     },
     {
+      "id": "4-1-26",
       "q": "The marketing manager of Ames Company has learned the following about a new product that is being introduced by Ames. Sales of this product are planned at $100,000 for the first year. Sales commission expense is budgeted at 8% of sales plus the marketing manager's incentive budgeted at an additional 1/2%. The preparation of a product brochure will require 20 hours of marketing salaried staff time at an average rate of $100 per hour, and 10 hours, at $150 per hour, for an outside illustrator's effort. The variable marketing cost for this new product will be",
       "o": [
         "$10,000",
@@ -417,6 +443,7 @@
       }
     },
     {
+      "id": "4-1-27",
       "q": "In which one of the following situations will ending inventory on the balance sheet computed under absorption costing be exactly equal to ending inventory computed under variable costing?",
       "o": [
         "When the denominator variance is zero.",
@@ -433,6 +460,7 @@
       }
     },
     {
+      "id": "4-1-28",
       "q": "When identifying fixed and variable costs, which one of the following is a typical assumption concerning cost behavior?",
       "o": [
         "Cost behavior is assumed to be realistic for all levels of activity from zero to maximum capacity.",
@@ -449,6 +477,7 @@
       }
     },
     {
+      "id": "4-1-29",
       "q": "A standard costing system uses",
       "o": [
         "standard prime costs with overhead applied based upon the actual cost driver units incurred.",
@@ -465,6 +494,7 @@
       }
     },
     {
+      "id": "4-1-30",
       "q": "Which one of the following is the best reason for using variable costing?",
       "o": [
         "Variable costing is acceptable for income tax reporting purposes.",
@@ -481,6 +511,7 @@
       }
     },
     {
+      "id": "4-1-31",
       "q": "Companies characterized by the production of heterogeneous products will most likely use which of the following methods for the purpose of averaging costs and providing management with unit cost data?",
       "o": [
         "Direct costing.",
@@ -497,6 +528,7 @@
       }
     },
     {
+      "id": "4-1-32",
       "q": "A manufacturing company uses machine hours as the only overhead cost allocation base. The accounting records contain the following information.\n\nColumns: Estimated | Actual\nManufacturing overhead costs:  $200,000  |  $240,000\nMachine hours:  40,000  |  50,000\n\nUsing actual costing, the amount of manufacturing overhead costs allocated to jobs is",
       "o": [
         "$200,000.",
@@ -513,6 +545,7 @@
       }
     },
     {
+      "id": "4-1-33",
       "q": "Manchester Airlines is in the process of preparing a contribution margin income statement that will allow a detailed look at its variable costs and profitability of operations. Which one of the following cost combinations should be used to evaluate the variable cost per flight of the company’s Boston-Las Vegas flights?",
       "o": [
         "Communication system operation, food service, and ramp personnel.",
@@ -529,6 +562,7 @@
       }
     },
     {
+      "id": "4-1-34",
       "q": "Which of the following is the best example of a variable cost?",
       "o": [
         "The corporate president's salary.",
@@ -545,6 +579,7 @@
       }
     },
     {
+      "id": "4-1-35",
       "q": "A cost that remains constant over a narrow range of activity and then jumps abruptly to a higher level, where it again remains constant, is best described as which of the following?",
       "o": [
         "A semi-variable (mixed) cost.",
@@ -561,6 +596,7 @@
       }
     },
     {
+      "id": "4-1-36",
       "q": "Which of the following best distinguishes a semi-variable cost from a semi-fixed cost?",
       "o": [
         "A semi-variable cost has both a fixed component and a variable component, whereas a semi-fixed cost is constant over a small range of activity and then jumps to a new constant level.",
@@ -577,6 +613,7 @@
       }
     },
     {
+      "id": "4-1-37",
       "q": "A factory must employ one production supervisor for every 10 production workers or any part thereof. Each supervisor is paid a salary of $48,000 per year. The factory currently employs 25 production workers and plans to increase this to 31 workers next year. What is the total annual supervisory salary cost at each of these two activity levels?",
       "o": [
         "$144,000 currently and $192,000 next year.",
@@ -593,6 +630,7 @@
       }
     },
     {
+      "id": "4-1-38",
       "q": "Within a single step of a semi-fixed (step) cost, how does the cost behave on a per-unit basis as the level of activity increases?",
       "o": [
         "It decreases, because a constant total cost is spread over a larger number of units.",
@@ -609,6 +647,7 @@
       }
     },
     {
+      "id": "4-1-39",
       "q": "Which of the following is the best example of a semi-fixed (step) cost?",
       "o": [
         "Direct materials consumed in production.",
@@ -625,6 +664,7 @@
       }
     },
     {
+      "id": "4-1-40",
       "q": "Larkwood Co. planned to produce 8,000 units using 2 standard direct labor hours per unit at a standard rate of $18/DLH. Actual production was 8,200 units, using 2.1 actual hours per unit at an actual rate of $17.50/DLH. Under STANDARD costing, direct labor cost applied is",
       "o": [
         "$286,650.",
@@ -636,6 +676,7 @@
       "e": "Standard costing applies the standard rate to the standard hours ALLOWED for actual output — never the hours or rate actually used. Standard hours allowed = 2 DLH × 8,200 actual units = 16,400 hours. Direct labor cost applied = 16,400 hours × $18 standard rate = $295,200. The actual figures (2.1 hours/unit, $17.50/DLH) never enter a standard-costing calculation at all — that is precisely what distinguishes standard costing from normal and actual costing."
     },
     {
+      "id": "4-1-41",
       "q": "Deming Industries applies overhead using a predetermined rate of $6.00 per machine hour. Standard machine hours allowed for actual output were 12,500. Actual machine hours used were 12,900, and actual overhead incurred was $79,000. Under NORMAL costing, how much overhead is applied to production?",
       "o": [
         "$75,000.",
@@ -647,6 +688,7 @@
       "e": "Normal costing applies the predetermined overhead rate to the ACTUAL hours used, not the standard hours allowed — that distinction (actual hours vs. standard hours allowed) is exactly what separates normal costing from standard costing. Overhead applied = $6.00 predetermined rate × 12,900 actual machine hours = $77,400. Using the standard hours allowed (12,500) would incorrectly apply standard costing's logic; using actual overhead incurred ($79,000) describes actual costing, not normal costing."
     },
     {
+      "id": "4-1-42",
       "q": "Harrow Company produced 15,000 units and sold 12,000. Fixed manufacturing overhead for the period was $180,000. Under absorption costing, fixed overhead in ending finished goods inventory is",
       "o": [
         "$36,000.",
@@ -658,6 +700,7 @@
       "e": "Under absorption costing, fixed manufacturing overhead is a product cost and is applied to every unit produced, then carried in inventory until the unit is sold. Fixed OH per unit = $180,000 ÷ 15,000 units produced = $12 per unit. Ending inventory = 15,000 produced − 12,000 sold = 3,000 units. Fixed OH held in ending inventory = 3,000 units × $12 = $36,000. Under variable costing, by contrast, this $180,000 would be expensed entirely in the current period regardless of how many units were sold."
     },
     {
+      "id": "4-1-43",
       "q": "A company produced 20,000 units and sold 17,500 units. Variable manufacturing cost is $22/unit and fixed manufacturing overhead is $240,000 for the period. Compared to variable costing operating income, absorption costing operating income for this period will be",
       "o": [
         "$30,000 higher.",
@@ -671,6 +714,7 @@
   ],
   "4-2": [
     {
+      "id": "4-2-01",
       "q": "Patterson Corporation expects to incur $70,000 of factory overhead and $60,000 of general and administrative costs next year. Direct labor costs at $5 per hour are expected to total $50,000. If factory overhead is to be applied per direct labor hour, how much overhead will be applied to a job incurring 20 hours of direct labor?",
       "o": [
         "$140.",
@@ -687,6 +731,7 @@
       }
     },
     {
+      "id": "4-2-02",
       "q": "A company allocates overhead to jobs in process using direct labor costs, raw material costs, and machine hours. The overhead application rates for the current year are:\n\n100% of direct labor\n20% of raw materials\n$117 per machine hour\n\nA particular production run incurred the following costs:\n\nDirect labor: $8,000\nRaw materials: $2,000\nMachine hours used: 140 hours\n\nWhat is the total cost that would be charged to the production run?",
       "o": [
         "$18,000",
@@ -703,6 +748,7 @@
       }
     },
     {
+      "id": "4-2-03",
       "q": "A company’s operations include a high level of fixed costs and produce a variety of products. What type of costing system should be recommended?",
       "o": [
         "Process value analysis.",
@@ -719,6 +765,7 @@
       }
     },
     {
+      "id": "4-2-04",
       "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nThe fixed overhead applied to Franklin's production for the year is:",
       "o": [
         "$594,000.",
@@ -735,6 +782,7 @@
       }
     },
     {
+      "id": "4-2-05",
       "q": "Hitchcock Industries has developed two new products but has only enough plant capacity to introduce one of these products this year. The company controller has gathered the following data to assist management in deciding which product should be selected for production. Hitchcock's fixed overhead includes proportional rent and utilities, machinery depreciation, and supervisory salaries. Selling and administrative expenses are not allocated to products.\n\nCost per unit — Columns: Power Drill | Power Saw\nRaw materials:  $22.00  |  $18.00\nMachining at $12/hr.:  $9.00  |  $7.50\nAssembly at $10/hr.:  $15.00  |  $5.00\nVariable O/H at $8/hr.:  $18.00  |  $9.00\nFixed O/H at $4/hr.:  $9.00  |  $4.50\nTotal unit cost:  $73.00  |  $44.00\nSuggested selling price:  $88.98  |  $49.95\nActual research and development costs:  $180,000  |  $95,000\nProposed advertising and promotion costs:  $300,000  |  $250,000\n\nThe total overhead cost of $13.50 for Hitchcock's power saw is a",
       "o": [
         "Carrying cost.",
@@ -751,6 +799,7 @@
       }
     },
     {
+      "id": "4-2-06",
       "q": "Multiple or departmental overhead rates are considered preferable to a single or plantwide overhead rate when",
       "o": [
         "Manufacturing is limited to a single product flowing through identical departments in a fixed sequence.",
@@ -767,6 +816,7 @@
       }
     },
     {
+      "id": "4-2-07",
       "q": "A company is considering the implementation of an activity-based costing and management program. The company",
       "o": [
         "would normally gain added insights into causes of cost.",
@@ -783,6 +833,7 @@
       }
     },
     {
+      "id": "4-2-08",
       "q": "Which one of the following is not normally measured in a standard cost system?",
       "o": [
         "Variable overhead efficiency.",
@@ -799,6 +850,7 @@
       }
     },
     {
+      "id": "4-2-09",
       "q": "Using the following budget data for Valley Corporation, which produces only one product, calculate the company's predetermined factory overhead application rate for variable overhead.\n\nBudget data — Columns: | Amount\nUnits to be produced: | 11,000\nUnits to be sold: | 10,000\nIndirect materials, varying with production: | $1,000\nIndirect labor, varying with production: | 10,000\nFactory supervisor's salary, incurred regardless of production: | 20,000\nDepreciation on factory building and equipment: | 30,000\nUtilities to operate factory machines: | 12,000\nSecurity lighting for factory: | 2,000\nSelling, general and administrative expenses: | 5,000\n",
       "o": [
         "$4.73.",
@@ -815,6 +867,7 @@
       }
     },
     {
+      "id": "4-2-10",
       "q": "Because of changes that are occurring in the basic operations of many firms, all of the following represent trends in the way indirect costs are allocated except",
       "o": [
         "Treating direct labor as an indirect manufacturing cost in an automated factory.",
@@ -831,6 +884,7 @@
       }
     },
     {
+      "id": "4-2-11",
       "q": "All of the following are likely to be used as a cost allocation base in activity-based costing except the",
       "o": [
         "number of different materials used to manufacture the product.",
@@ -847,6 +901,7 @@
       }
     },
     {
+      "id": "4-2-12",
       "q": "If a manufacturing company uses variable costing to cost inventories, which of the following costs are considered inventoriable costs?",
       "o": [
         "Only raw material and direct labor costs.",
@@ -863,6 +918,7 @@
       }
     },
     {
+      "id": "4-2-13",
       "q": "Bethany Company has just completed the first month of producing a new product but has not yet shipped any of this product. The product incurred variable manufacturing costs of $5,000,000, fixed manufacturing costs of $2,000,000, variable marketing costs of $1,000,000, and fixed marketing costs of $3,000,000. If Bethany uses the variable cost method to value inventory, the inventory value of the new product would be",
       "o": [
         "$8,000.000.",
@@ -879,6 +935,7 @@
       }
     },
     {
+      "id": "4-2-14",
       "q": "A company produces a wide variety of hand-crafted rocking chairs. The most appropriate allocation base for allocating production supervisor salaries to the products is",
       "o": [
         "sales dollars.",
@@ -895,6 +952,7 @@
       }
     },
     {
+      "id": "4-2-15",
       "q": "Zeta Company is preparing its annual profit plan. As part of its analysis of the profitability of individual products, the controller estimates the amount of overhead that should be allocated to the individual product lines from the information given as follows.\n\nColumns: Wall Mirrors | Specialty Windows\nUnits produced:  25  |  25\nMaterial moves per product line:  5  |  15\nDirect labor hours per unit:  200  |  200\n\nBudgeted materials handling costs are $50,000. Under a costing system that allocates overhead on the basis of direct labor hours, the materials handling costs allocated to one unit of wall mirrors would be",
       "o": [
         "$5,000",
@@ -911,6 +969,7 @@
       }
     },
     {
+      "id": "4-2-16",
       "q": "The costing method that determines product cost by identifying the costs of individual tasks and then assigning these costs to products on the basis of the tasks needed to produce each product is known as",
       "o": [
         "activity-based costing.",
@@ -927,6 +986,7 @@
       }
     },
     {
+      "id": "4-2-17",
       "q": "Departmental overhead rates are usually preferred to corporate-wide overhead rates when",
       "o": [
         "The costs of many service departments are being allocated to each of the various departments.",
@@ -943,6 +1003,7 @@
       }
     },
     {
+      "id": "4-2-18",
       "q": "Cost allocation is the process of assigning indirect costs to a cost object. The indirect costs are grouped in cost pools and then allocated by a common allocation base to the cost object. The base that is employed to allocate a homogeneous cost pool should:",
       "o": [
         "Be a nonfinancial measure (e.g., number of setups) because a nonfinancial measure is more objective.",
@@ -959,6 +1020,7 @@
       }
     },
     {
+      "id": "4-2-19",
       "q": "Units of production is an appropriate overhead allocation base when",
       "o": [
         "Only one product is manufactured.",
@@ -975,6 +1037,7 @@
       }
     },
     {
+      "id": "4-2-20",
       "q": "Departmental overhead rates are considered to be preferable to corporate-wide overhead rates when the",
       "o": [
         "corporate-wide rate is related to several identified cost drivers.",
@@ -991,6 +1054,7 @@
       }
     },
     {
+      "id": "4-2-21",
       "q": "John Sheng, cost accountant at Starlet Company, is developing departmental factory overhead application rates for the company's tooling and fabricating departments. The budgeted overhead for each department and the data for one job are shown below.\n\nDepartments — Columns: Tooling | Fabricating\nSupplies:  $850  |  $200\nSupervisors' salaries:  $1,500  |  $2,000\nIndirect labor:  $1,200  |  $4,880\nDepreciation:  $1,000  |  $5,500\nRepairs:  $4,075  |  $3,540\nTotal budgeted overhead:  $8,625  |  $16,120\nTotal direct labor hours:  460  |  620\nDirect labor hours on Job #231:  12  |  3\n\nUsing the departmental overhead application rates, total overhead applied to Job #231 in the Tooling and Fabricating Departments will be",
       "o": [
         "$303.",
@@ -1007,6 +1071,7 @@
       }
     },
     {
+      "id": "4-2-22",
       "q": "The two most appropriate factors for budgeting manufacturing overhead expenses would be",
       "o": [
         "Management judgment and production volume.",
@@ -1023,6 +1088,7 @@
       }
     },
     {
+      "id": "4-2-23",
       "q": "A company manufactures and sells three products. The products are all manufactured at the same facility. The controller of the company has decided to accumulate all budgeted overhead costs for the manufacturing facility into a single cost pool. The cost pool is then allocated to the three products based on the direct labor hours used by each product. What type of overhead rate has the controller most likely used in this allocation methodology?",
       "o": [
         "Fixed rate.",
@@ -1039,6 +1105,7 @@
       }
     },
     {
+      "id": "4-2-24",
       "q": "In practice, items such as wood screws and glue used in the production of school desks and chairs would most likely be classified as",
       "o": [
         "period costs.",
@@ -1055,6 +1122,7 @@
       }
     },
     {
+      "id": "4-2-25",
       "q": "Generally, individual departmental rates rather than a plantwide rate for applying overhead would be used if",
       "o": [
         "The manufactured products differ in the resources consumed from the individual departments in the plant.",
@@ -1071,6 +1139,7 @@
       }
     },
     {
+      "id": "4-2-26",
       "q": "A company that manufactures furniture is establishing its budget for the upcoming year. All of the following items would appear in its overhead budget except for the",
       "o": [
         "freight charges paid for the delivery of raw materials to the company.",
@@ -1087,6 +1156,7 @@
       }
     },
     {
+      "id": "4-2-27",
       "q": "Nanjones Company manufactures a line of products distributed nationally through wholesalers. Presented below are planned manufacturing data for the year and actual data for November of the current year. The company applies overhead based on planned machine hours using a predetermined annual rate.\n\nPlanning Data — Columns: Annual | November\nFixed manufacturing overhead:  $1,200,000  |  $100,000\nVariable manufacturing overhead:  $2,400,000  |  $220,000\nDirect labor hours:  48,000  |  4,000\nMachine hours:  240,000  |  22,000\n\nData for November:\nDirect labor hours (actual):  4,200\nDirect labor hours (plan based on output):  4,000\nMachine hours (actual):  21,600\nMachine hours (plan based on output):  21,000\nFixed manufacturing overhead:  $101,200\nVariable manufacturing overhead:  $214,000\n\nThe predetermined overhead application rate for Nanjones Company is",
       "o": [
         "$15.00.",
@@ -1103,6 +1173,7 @@
       }
     },
     {
+      "id": "4-2-28",
       "q": "Which one of the following would not be an appropriate cost allocation base for an organization?",
       "o": [
         "Supervisor salaries.",
@@ -1119,6 +1190,7 @@
       }
     },
     {
+      "id": "4-2-29",
       "q": "Cynthia Rogers, the cost accountant for Sanford Manufacturing, is preparing a management report which must include an allocation of overhead. The budgeted overhead for each department and the data for one job are shown below.\n\nDepartment — Columns: Tooling | Fabricating\nSupplies:  $690  |  $80\nSupervisors' salaries:  $1,400  |  $1,800\nIndirect labor:  $1,000  |  $4,000\nDepreciation:  $1,200  |  $5,200\nRepairs:  $4,400  |  $3,000\nTotal budgeted overhead:  $8,690  |  $14,080\nTotal direct labor hours:  440  |  640\nDirect labor hours on Job #231:  10  |  2\n\nUsing the departmental overhead application rates, and allocating overhead on the basis of direct labor hours, overhead applied to Job #231 in the Tooling Department would be",
       "o": [
         "$501.00.",
@@ -1135,6 +1207,7 @@
       }
     },
     {
+      "id": "4-2-30",
       "q": "A company allocates all of its manufacturing overhead using a single plant-wide rate based on direct labour hours. Which of its products are most likely to be under-costed by this system?",
       "o": [
         "Low-volume, complex products that consume a disproportionate share of setup, handling and engineering support.",
@@ -1151,6 +1224,7 @@
       }
     },
     {
+      "id": "4-2-31",
       "q": "Which of the following best describes product-cost cross-subsidization?",
       "o": [
         "The over-costing of one product necessarily results in the under-costing of at least one other product, because the total overhead allocated is unchanged.",
@@ -1167,6 +1241,7 @@
       }
     },
     {
+      "id": "4-2-32",
       "q": "A company allocates all overhead with a single plant-wide rate based on direct labour hours. Its high-volume standard product shows a thin reported margin, yet competitors profitably sell the same item for less. Its low-volume custom product shows a very high reported margin, yet no competitor pursues that business. What does this pattern most likely indicate?",
       "o": [
         "The standard product is being over-costed and the custom product is being under-costed.",
@@ -1183,6 +1258,7 @@
       }
     },
     {
+      "id": "4-2-33",
       "q": "Which of the following changes would most directly reduce the over-costing and under-costing of a company's products?",
       "o": [
         "Replacing the single plant-wide overhead rate with multiple activity cost pools, each allocated using a driver that reflects what actually causes the cost.",
@@ -1199,6 +1275,7 @@
       }
     },
     {
+      "id": "4-2-34",
       "q": "Novara Company incurs $600,000 of total manufacturing overhead. It currently allocates this using a plant-wide rate based on direct labour hours: Product A uses 15,000 direct labour hours and Product B uses 5,000. Under a proposed activity-based system, $360,000 of the overhead would be allocated on the number of setups (Product A requires 20 setups, Product B requires 60) and the remaining $240,000 would continue to be allocated on direct labour hours. By how much is Product B under-costed under the current plant-wide system?",
       "o": [
         "$180,000",
@@ -1217,6 +1294,7 @@
   ],
   "4-3": [
     {
+      "id": "4-3-01",
       "q": "An advantage of using a flexible budget compared to a static budget is that in a flexible budget",
       "o": [
         "fixed cost variances are more clearly presented.",
@@ -1233,6 +1311,7 @@
       }
     },
     {
+      "id": "4-3-02",
       "q": "The controller for Durham Skates is reviewing the production cost report for July. An analysis of direct materials costs reflects an unfavorable flexible budget variance of $25. The plant manager believes this is excellent performance on a flexible budget for 5,000 units of direct materials. However, the production supervisor is not pleased with this result because he claims to have saved $1,200 in materials cost on actual production using 4,900 units of direct materials. The standard materials cost is $12 per unit. Actual materials used for the month amounted to $60,025. The actual average cost per unit for materials was",
       "o": [
         "$12.01",
@@ -1249,6 +1328,7 @@
       }
     },
     {
+      "id": "4-3-03",
       "q": "The controller for Durham Skates is reviewing the production cost report for July. An analysis of direct materials costs reflects an unfavorable flexible budget variance of $25. The plant manager believes this is excellent performance on a flexible budget for 5,000 units of direct materials. However, the production supervisor is not pleased with this result because he claims to have saved $1,200 in materials cost on actual production using 4,900 units of direct materials. The standard materials cost is $12 per unit. Actual materials used for the month amounted to $60,025. If the direct materials variance is investigated further, it will reflect a price variance of",
       "o": [
         "$2,500 favorable.",
@@ -1265,6 +1345,7 @@
       }
     },
     {
+      "id": "4-3-04",
       "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  5 pounds  |  $3.60/pound  |  $18.00\nDirect labor:  1.25 hours  |  $12.00/hour  |  $15.00\nTotal standard prime cost:   |    |  $33.00\n\nDuring May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct materials usage (quantity) variance for May is",
       "o": [
         "$7,200 favorable.",
@@ -1281,6 +1362,7 @@
       }
     },
     {
+      "id": "4-3-05",
       "q": "Blaster Inc., a manufacturer of portable radios, purchases the components from subcontractors to use to assemble into a complete radio. Each radio requires three units each of Part XBEZ52, which has a standard cost of $1.45 per unit.\n\nDuring May, Blaster experienced the following with respect to Part XBEZ52.\n\nPart XBEZ52 — Columns: | Units\nPurchases ($18,000): | 12,000\nConsumed in manufacturing: | 10,000\nRadios manufactured: | 3,000\n\nDuring May, Blaster Inc. incurred a materials efficiency variance of",
       "o": [
         "$4,350 unfavorable.",
@@ -1297,6 +1379,7 @@
       }
     },
     {
+      "id": "4-3-06",
       "q": "In a standard cost system, the investigation of an unfavorable material usage variance should involve the",
       "o": [
         "Purchasing manager only.",
@@ -1313,6 +1396,7 @@
       }
     },
     {
+      "id": "4-3-07",
       "q": "Which of the following management practices involves concentrating on areas that deserve attention and placing less attention on areas operating as expected?",
       "o": [
         "Benchmarking.",
@@ -1329,6 +1413,7 @@
       }
     },
     {
+      "id": "4-3-08",
       "q": "A company established its annual direct material budget to produce 300,000 units as follows. 150,000 pounds of material @ $0.75 per pound = $112,500 Throughout the year, the company produced 310,000 units of finished goods using 0.48 pounds per unit at a cost of $0.76 per pound. The direct material efficiency variance is",
       "o": [
         "$4,650 favorable.",
@@ -1345,6 +1430,7 @@
       }
     },
     {
+      "id": "4-3-09",
       "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  8 pounds  |  $1.80 per pound  |  $14.40\nDirect labor:  0.25 hours  |  $8.00 per hour  |  $2.00\nTotal standard prime cost:   |    |  $16.40\n\nDuring November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct materials usage (quantity) variance for November is:",
       "o": [
         "$17,100 unfavorable.",
@@ -1361,6 +1447,7 @@
       }
     },
     {
+      "id": "4-3-10",
       "q": "Which of the following is least likely to cause an unfavorable materials quantity (usage) variance?",
       "o": [
         "Labor that possesses skills equal to those required by the standards.",
@@ -1377,6 +1464,7 @@
       }
     },
     {
+      "id": "4-3-11",
       "q": "David Rogers, purchasing manager at Fairway Manufacturing Corporation, was able to acquire a large quantity of raw material from a new supplier at a discounted price. Marion Conner, inventory supervisor, is concerned because the warehouse has become crowded and some things had to be rearranged. Brian Jones, vice president of production, is concerned about the quality of the discounted material. However, the Engineering Department tested the new raw material and indicated that it is of acceptable quality. At the end of the month, Fairway experienced a favorable materials usage variance, a favorable labor usage variance, and a favorable materials price variance. The usage variances were solely the result of a higher yield from the new raw material. The favorable materials price variance would be considered the responsibility of the",
       "o": [
         "Purchasing manager.",
@@ -1393,6 +1481,7 @@
       }
     },
     {
+      "id": "4-3-12",
       "q": "Using management by exception allows managers to focus their attention on",
       "o": [
         "unfavorable variances.",
@@ -1409,6 +1498,7 @@
       }
     },
     {
+      "id": "4-3-13",
       "q": "The following data pertain to Vavara Inc.'s direct materials for the month of June:\n\nStandard price per unit of input: $16 per pound\nActual price per unit of input: $14 per pound\nActual output: 20,000 units\nStandard input quantity allowed for actual output: 55,000 pounds\nDirect materials price variance: $120,000 favorable\n\nThe actual quantity of materials used per unit of output and the standard quantity of materials allowed per unit of output were:",
       "o": [
         "Actual quantity 3 pounds per unit, standard quantity 2.75 pounds per unit.",
@@ -1425,6 +1515,7 @@
       }
     },
     {
+      "id": "4-3-14",
       "q": "The following data pertain to Vavara Inc.'s direct materials for the month of June:\n\nStandard price per unit of input: $16 per pound\nActual price per unit of input: $14 per pound\nActual output: 20,000 units\nStandard input quantity allowed for actual output: 55,000 pounds\nDirect materials price variance: $120,000 favorable\n\nThe total direct materials variance is",
       "o": [
         "$40,000 unfavorable.",
@@ -1441,6 +1532,7 @@
       }
     },
     {
+      "id": "4-3-15",
       "q": "The following data pertain to Vavara Inc.'s direct materials for the month of June:\n\nStandard price per unit of input: $16 per pound\nActual price per unit of input: $14 per pound\nActual output: 20,000 units\nStandard input quantity allowed for actual output: 55,000 pounds\nDirect materials price variance: $120,000 favorable\n\nWhat is the direct materials quantity variance?",
       "o": [
         "$70,000 unfavorable.",
@@ -1457,6 +1549,7 @@
       }
     },
     {
+      "id": "4-3-16",
       "q": "When compared to static budgets, flexible budgets",
       "o": [
         "offer managers a more realistic comparison of budget and actual revenue and cost items under their control.",
@@ -1473,6 +1566,7 @@
       }
     },
     {
+      "id": "4-3-17",
       "q": "Christopher Akers is the chief executive officer of SBL Inc., a masonry contractor. The financial statements have just arrived showing a $3,000 loss on the new stadium job that was budgeted to show a $6,000 profit. Actual and budget information relating to the materials for the job are as follows. Actual Budget Bricks - number of bundles 3,000 2,850 Bricks - cost per bundle $7.90 $8.00 Which one of the following is a correct statement regarding the stadium job for SBL?",
       "o": [
         "The efficiency variance was unfavorable by $1,185.",
@@ -1489,6 +1583,7 @@
       }
     },
     {
+      "id": "4-3-18",
       "q": "The difference between the actual amounts and the flexible budget amounts for the actual output achieved is the",
       "o": [
         "Flexible budget variance.",
@@ -1505,6 +1600,7 @@
       }
     },
     {
+      "id": "4-3-19",
       "q": "At the beginning of the year, Douglas Company prepared the following monthly budget for direct materials.\n\nUnits produced and sold — Columns:  10,000  |  15,000\nDirect material:  $15,000  |  $22,500\n\nAt the end of the month, the company's records showed that 12,000 units were produced and sold and $20,000 was spent for direct materials. The variance for direct materials is",
       "o": [
         "$2,000 favorable.",
@@ -1521,6 +1617,7 @@
       }
     },
     {
+      "id": "4-3-20",
       "q": "ChemKing uses a standard costing system in the manufacture of its single product. The 35,000 units of raw material in inventory were purchased for $105,000, and two units of raw material are required to produce one unit of final product. In November, the company produced 12,000 units of product. The standard cost for material allowed for the output was $60,000, and there was an unfavorable quantity variance of $2,500. ChemKing's standard price for one unit of material is",
       "o": [
         "$2.00.",
@@ -1537,6 +1634,7 @@
       }
     },
     {
+      "id": "4-3-21",
       "q": "The variance that arises solely because the quantity actually sold differs from the quantity budgeted to be sold is:",
       "o": [
         "Master budget increment.",
@@ -1553,6 +1651,7 @@
       }
     },
     {
+      "id": "4-3-22",
       "q": "Price variances and efficiency variances can be key to the performance measurement within a company. In evaluating the performance within a company, a materials efficiency variance can be caused by all of the following except the:",
       "o": [
         "Performance of the workers using the material.",
@@ -1569,6 +1668,7 @@
       }
     },
     {
+      "id": "4-3-23",
       "q": "A project manager has been asked to provide an explanation regarding a $2,220 favorable material variance on a playground equipment project. After further analysis, the project manager was able to break down the material variance to an unfavorable price variance of $1,700 and a favorable quantity variance of $3,920. The best explanation of the variances is that the",
       "o": [
         "purchasing department purchased a higher quality material, resulting in less wasted materials.",
@@ -1585,6 +1685,7 @@
       }
     },
     {
+      "id": "4-3-24",
       "q": "Richter Company has an unfavorable materials efficiency (usage) variance for a particular month. Which one of the following is least likely to be the cause of this variance?",
       "o": [
         "Poor performance of the shipping employees.",
@@ -1601,6 +1702,7 @@
       }
     },
     {
+      "id": "4-3-25",
       "q": "A company manufactures one product and has a standard cost system. In April the company had the following experience:\n\nColumns: Direct Materials | Direct Labor\nActual $/unit of input (lbs. & hrs.):  $28  |  $18\nStandard price/unit of input:  $24  |  $20\nStandard inputs allowed per unit of output:  10  |  4\nActual units of input:  190,000  |  78,000\nActual units of output:  20,000  |  20,000\n\nThe direct materials efficiency variance for April is:",
       "o": [
         "$760,000 unfavorable.",
@@ -1617,6 +1719,7 @@
       }
     },
     {
+      "id": "4-3-26",
       "q": "A company manufactures one product and has a standard cost system. In April the company had the following experience:\n\nColumns: Direct Materials | Direct Labor\nActual $/unit of input (lbs. & hrs.):  $28  |  $18\nStandard price/unit of input:  $24  |  $20\nStandard inputs allowed per unit of output:  10  |  4\nActual units of input:  190,000  |  78,000\nActual units of output:  20,000  |  20,000\n\nThe direct materials price variance for April is:",
       "o": [
         "$760,000 favorable.",
@@ -1633,6 +1736,7 @@
       }
     },
     {
+      "id": "4-3-27",
       "q": "Tower Company planned to produce 3,000 units of its single product, Titactium, during November. The standard specifications for one unit of Titactium include 6 pounds of materials at $0.30 per pound. Actual production in November was 3,100 units of Titactium. The accountant computed a favorable materials purchase price variance of $380 and an unfavorable materials quantity variance of $120. Based on these variances, one could conclude that",
       "o": [
         "The actual usage of materials was less than the standard allowed.",
@@ -1649,6 +1753,7 @@
       }
     },
     {
+      "id": "4-3-28",
       "q": "The purpose of identifying manufacturing variances and assigning their responsibility to a person/department should be to:",
       "o": [
         "Determine the proper cost of the products produced so that selling prices can be adjusted accordingly.",
@@ -1665,6 +1770,7 @@
       }
     },
     {
+      "id": "4-3-29",
       "q": "During the month of May, Tyler Company experienced a significant unfavorable material efficiency variance in the production of its single product at one of Tyler’s plants. Which one of the following reasons would be least likely to explain why the unfavorable variance arose?",
       "o": [
         "Replacement production equipment had just been installed.",
@@ -1681,6 +1787,7 @@
       }
     },
     {
+      "id": "4-3-30",
       "q": "A favorable materials price variance coupled with an unfavorable materials usage variance would most likely result from",
       "o": [
         "Machine efficiency problems.",
@@ -1697,6 +1804,7 @@
       }
     },
     {
+      "id": "4-3-31",
       "q": "A company’s master budget indicated that 50,000 units of finished goods should be produced using 25,000 feet of materials at $4 per foot. The company actually produced 48,000 units of finished goods, purchased 27,000 feet of materials at $4.25 per foot, and used 25,000 feet of materials in production. The direct material efficiency variance is",
       "o": [
         "$8,000 unfavorable.",
@@ -1713,6 +1821,7 @@
       }
     },
     {
+      "id": "4-3-32",
       "q": "A company reported a significant material quantity variance for the month of January. All of the following are possible explanations for this variance except",
       "o": [
         "An inadequately trained and supervised labor force.",
@@ -1729,6 +1838,7 @@
       }
     },
     {
+      "id": "4-3-33",
       "q": "Under a standard cost system, the materials price variances are usually the responsibility of the",
       "o": [
         "Sales manager.",
@@ -1745,6 +1855,7 @@
       }
     },
     {
+      "id": "4-3-34",
       "q": "Under a standard cost system, the materials efficiency variances are the responsibility of",
       "o": [
         "Purchasing and industrial engineering.",
@@ -1761,6 +1872,7 @@
       }
     },
     {
+      "id": "4-3-35",
       "q": "Which one of the following variances is most controllable by the production control supervisor?",
       "o": [
         "Variable overhead spending variance.",
@@ -1777,6 +1889,7 @@
       }
     },
     {
+      "id": "4-3-36",
       "q": "A major disadvantage of a static budget is that",
       "o": [
         "it is more difficult to develop than a flexible budget.",
@@ -1793,6 +1906,7 @@
       }
     },
     {
+      "id": "4-3-37",
       "q": "A company has a raw material price variance that is unfavorable. An analysis of this variance indicates that the company's only available supplier of one of its raw materials unexpectedly raised the price of the material. The action management should take regarding this situation should be to",
       "o": [
         "change the raw material price standard.",
@@ -1809,6 +1923,7 @@
       }
     },
     {
+      "id": "4-3-38",
       "q": "A manufacturer has the following direct materials standard for one of its products:\n\nDirect materials: 3 pounds @ $1.60/pound = $4.80\n\nThe company records all inventory at standard cost. Data for the current period:\n\nBudgeted production for the period: 8,000 units\nActual production for the period: 7,500 units\nDirect materials purchased: 25,000 pounds, total cost $38,750\nDirect materials put into production: 23,000 pounds\n\nThe materials quantity variance for the current period is",
       "o": [
         "$3,200 favorable.",
@@ -1825,6 +1940,7 @@
       }
     },
     {
+      "id": "4-3-39",
       "q": "An organization that specializes in reviewing and editing technical magazine articles sets the following standards for evaluating the performance of the professional staff:\n\nAnnual budgeted fixed costs for normal capacity level of 10,000 articles reviewed and edited: $600,000\nStandard professional hours per 10 articles: 200 hours\nFlexible budget of standard labor costs to process 10,000 articles: $10,000,000\n\nThe following data apply to the 9,500 articles that were actually reviewed and edited during the current year:\n\nTotal hours used by professional staff: 192,000 hours\nVariable costs: $9,120,000\nTotal cost: $9,738,000\n\nThe labor efficiency variance for the year is",
       "o": [
         "$380,000 favorable.",
@@ -1841,6 +1957,7 @@
       }
     },
     {
+      "id": "4-3-40",
       "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  5 pounds  |  $3.60/pound  |  $18.00\nDirect labor:  1.25 hours  |  $12.00/hour  |  $15.00\nTotal standard prime cost:   |    |  $33.00\n\nDuring May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct labor usage (efficiency) variance for May is",
       "o": [
         "$5,850 unfavorable.",
@@ -1857,6 +1974,7 @@
       }
     },
     {
+      "id": "4-3-41",
       "q": "Jackson Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Jackson has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  5 pounds  |  $3.60/pound  |  $18.00\nDirect labor:  1.25 hours  |  $12.00/hour  |  $15.00\nTotal standard prime cost:   |    |  $33.00\n\nDuring May, Jackson purchased 125,000 pounds of direct materials at a total cost of $475,000. The total factory wages for May were $364,000, 90% of which were for direct labor. Jackson manufactured 22,000 units of product during May using 108,000 pounds of direct materials and 28,000 direct labor hours. The direct labor price (rate) variance for May is",
       "o": [
         "$7,200 unfavorable.",
@@ -1873,6 +1991,7 @@
       }
     },
     {
+      "id": "4-3-42",
       "q": "MinnOil performs oil changes and other minor maintenance services (e.g., tire pressure checks) for cars. The company advertises that all services are completed within 15 minutes for each service. On a recent Saturday, 160 cars were serviced resulting in the following labor variances: rate, $19 unfavorable; efficiency, $14 favorable. If MinnOil's standard labor rate is $7 per hour, determine the actual wage rate per hour and the actual hours worked.",
       "o": [
         "Wage Rate $7.50/hour; Hours Worked 38.00.",
@@ -1889,6 +2008,7 @@
       }
     },
     {
+      "id": "4-3-43",
       "q": "Highlight Inc. uses a standard cost system and applies factory overhead to products on the basis of direct labor hours. If the firm recently reported a favorable direct labor efficiency variance, then the",
       "o": [
         "variable overhead efficiency variance must be favorable.",
@@ -1905,6 +2025,7 @@
       }
     },
     {
+      "id": "4-3-44",
       "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nThe standard hours allowed for actual production for the year ended November 30 total:",
       "o": [
         "400,000.",
@@ -1921,6 +2042,7 @@
       }
     },
     {
+      "id": "4-3-45",
       "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  8 pounds  |  $1.80 per pound  |  $14.40\nDirect labor:  0.25 hours  |  $8.00 per hour  |  $2.00\nTotal standard prime cost:   |    |  $16.40\n\nDuring November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct labor usage (efficiency) variance for November is:",
       "o": [
         "$2,000 favorable.",
@@ -1937,6 +2059,7 @@
       }
     },
     {
+      "id": "4-3-46",
       "q": "Arrow Industries employs a standard cost system in which direct materials inventory is carried at standard cost. Arrow has established the following standards for the prime costs of one unit of product.\n\nColumns: Standard Quantity | Standard Price | Standard Cost\nDirect materials:  8 pounds  |  $1.80 per pound  |  $14.40\nDirect labor:  0.25 hours  |  $8.00 per hour  |  $2.00\nTotal standard prime cost:   |    |  $16.40\n\nDuring November, Arrow purchased 160,000 pounds of direct materials at a total cost of $304,000. The total factory wages for November were $42,000, 90% of which were for direct labor. Arrow manufactured 19,000 units of product during November using 142,500 pounds of direct materials and 5,000 direct labor hours. The direct labor price (rate) variance for November is:",
       "o": [
         "$1,900 unfavorable.",
@@ -1953,6 +2076,7 @@
       }
     },
     {
+      "id": "4-3-47",
       "q": "Water Control Inc. manufactures water pumps and uses a standard cost system. The standard factory overhead costs per water pump are based on direct labor hours and are as follows: Variable overhead (4 hours at $8/hour) - $32 Fixed overhead (4 hours at $5/hour*) - $20 Total overhead cost per unit - $52 * Based on a capacity of 100,000 direct labor hours per month. The following additional information is available for the month of November: 22,000 pumps were produced although 25,000 had been scheduled for production. 94,000 direct labor hours were worked at a total cost of $940,000. The standard direct labor rate is $9 per hour. The standard direct labor time per unit is 4 hours. Variable overhead costs were $740,000. Fixed overhead costs were $540,000. The direct labor efficiency variance for November was",
       "o": [
         "$54,000 unfavorable.",
@@ -1969,6 +2093,7 @@
       }
     },
     {
+      "id": "4-3-48",
       "q": "Water Control Inc. manufactures water pumps and uses a standard cost system. The standard factory overhead costs per water pump are based on direct labor hours and are as follows: Variable overhead (4 hours at $8/hour) - $32 Fixed overhead (4 hours at $5/hour*) - $20 Total overhead cost per unit - $52 * Based on a capacity of 100,000 direct labor hours per month. The following additional information is available for the month of November: 22,000 pumps were produced although 25,000 had been scheduled for production. 94,000 direct labor hours were worked at a total cost of $940,000. The standard direct labor rate is $9 per hour. The standard direct labor time per unit is 4 hours. Variable overhead costs were $740,000. Fixed overhead costs were $540,000. The direct labor price variance for November was",
       "o": [
         "$94,000 unfavorable.",
@@ -1985,6 +2110,7 @@
       }
     },
     {
+      "id": "4-3-49",
       "q": "Of the following pairs of variances found in a flexible budget report, which pair is most likely to be related?",
       "o": [
         "Material price variance and variable overhead efficiency variance.",
@@ -2001,6 +2127,7 @@
       }
     },
     {
+      "id": "4-3-50",
       "q": "Randall Company uses standard costing and flexible budgeting and is evaluating its direct labor. The total direct labor budget variance can usually be broken down into two other variances identified as the",
       "o": [
         "direct labor rate variance and direct labor efficiency variance.",
@@ -2017,6 +2144,7 @@
       }
     },
     {
+      "id": "4-3-51",
       "q": "An unfavorable direct labor efficiency variance could be caused by a(n)",
       "o": [
         "Favorable variable overhead spending variance.",
@@ -2033,6 +2161,7 @@
       }
     },
     {
+      "id": "4-3-52",
       "q": "One of the items produced by a manufacturer of lawn and garden tools is a chain saw. The direct labor standard for assembling and testing a chain saw is 2.5 hours at $8 per hour. Budgeted production for October was 1,200 units. Actual production during the month was 1,000 units, and direct labor cost was $27,840 for 3,200 hours. What was the direct labor price (rate) variance for October?",
       "o": [
         "$5,600 unfavorable.",
@@ -2049,6 +2178,7 @@
       }
     },
     {
+      "id": "4-3-53",
       "q": "One of the items produced by a manufacturer of lawn and garden tools is a chain saw. The direct labor standard for assembling and testing a chain saw is 2.5 hours at $8 per hour. Budgeted production for October was 1,200 units. Actual production during the month was 1,000 units, and direct labor cost was $27,840 for 3,200 hours. What is the direct labor efficiency variance?",
       "o": [
         "$2,240 unfavorable.",
@@ -2065,6 +2195,7 @@
       }
     },
     {
+      "id": "4-3-54",
       "q": "Ardmore Enterprises uses a standard cost system in its small appliance division. The standard cost of manufacturing one unit of Zeb is as follows.\n\nStandard cost per unit — Columns: | Amount\nMaterials — 60 pounds at $1.50 per pound: | $90.00\nLabor — 3 hours at $12 per hour: | 36.00\nFactory overhead — 3 hours at $8 per hour: | 24.00\nTotal standard cost per unit: | $150.00\n\nThe budgeted variable factory overhead rate is $3 per labor hour, and the budgeted fixed factory overhead is $27,000 per month. During May, Ardmore produced 1,650 units of Zeb compared with a normal capacity of 1,800 units. The actual cost per unit was as follows.\n\nActual cost per unit — Columns: | Amount\nMaterials (purchased and used) — 58 pounds at $1.65 per pound: | $95.70\nLabor — 3.1 hours at $12 per hour: | 37.20\nFactory overhead — $39,930 per 1,650 units: | 24.20\nTotal actual cost per unit: | $157.10\n\nThe labor rate variance for May is",
       "o": [
         "$1,920 favorable.",
@@ -2081,6 +2212,7 @@
       }
     },
     {
+      "id": "4-3-55",
       "q": "A company manufactures one product and has a standard cost system. In April the company had the following experience:\n\nColumns: Direct Materials | Direct Labor\nActual $/unit of input (lbs. & hrs.):  $28  |  $18\nStandard price/unit of input:  $24  |  $20\nStandard inputs allowed per unit of output:  10  |  4\nActual units of input:  190,000  |  78,000\nActual units of output:  20,000  |  20,000\n\nThe direct labor rate variance for April is:",
       "o": [
         "$40,000 unfavorable.",
@@ -2097,6 +2229,7 @@
       }
     },
     {
+      "id": "4-3-56",
       "q": "A company had a total labor variance of $15,000 favorable and a labor efficiency variance of $18,000 unfavorable. The labor price variance was",
       "o": [
         "$33,000 unfavorable.",
@@ -2113,6 +2246,7 @@
       }
     },
     {
+      "id": "4-3-57",
       "q": "A manager prepared the following table by which to analyze labor costs for the month:\n\nActual Hours at Actual Rate:  $10,000\nActual Hours at Standard Rate:  $9,800\nStandard Hours at Standard Rate:  $8,820\n\nWhat variance was $980?",
       "o": [
         "Volume variance.",
@@ -2129,6 +2263,7 @@
       }
     },
     {
+      "id": "4-3-58",
       "q": "The following data pertain to Vavara Inc.'s direct labor for the month of June:\n\nActual direct labor hours used per unit of output: 3.5 hours\nActual direct labor rate per hour: $21 per hour\nActual output: 20,000 units\nDirect labor efficiency variance: $200,000 favorable\nTotal direct labor variance: $130,000 favorable\n\nWhat is the direct labor rate variance?",
       "o": [
         "$70,000 favorable.",
@@ -2145,6 +2280,7 @@
       }
     },
     {
+      "id": "4-3-59",
       "q": "The following data pertain to Vavara Inc.'s direct labor for the month of June:\n\nActual direct labor hours used per unit of output: 3.5 hours\nActual direct labor rate per hour: $21 per hour\nActual output: 20,000 units\nDirect labor efficiency variance: $200,000 favorable\nTotal direct labor variance: $130,000 favorable\n\nWhat is the standard direct labor rate per hour?",
       "o": [
         "$22.",
@@ -2161,6 +2297,7 @@
       }
     },
     {
+      "id": "4-3-60",
       "q": "The following data pertain to Vavara Inc.'s direct labor for the month of June:\n\nActual direct labor hours used per unit of output: 3.5 hours\nActual direct labor rate per hour: $21 per hour\nActual output: 20,000 units\nDirect labor efficiency variance: $200,000 favorable\nTotal direct labor variance: $130,000 favorable\n\nWhat is the standard number of direct labor hours allowed per unit of output?",
       "o": [
         "60,000 hours.",
@@ -2177,6 +2314,7 @@
       }
     },
     {
+      "id": "4-3-61",
       "q": "A pizza restaurant has recently experienced a decline in profit margin although sales have remained steady. An analysis of direct cost inputs revealed the following. A favorable materials price variance An unfavorable materials quantity variance A favorable labor rate variance An unfavorable labor efficiency variance Which one of the following is the most likely cause of the decline in the profit margin?",
       "o": [
         "The cheese supplier has raised prices.",
@@ -2193,6 +2331,7 @@
       }
     },
     {
+      "id": "4-3-62",
       "q": "Under a standard cost system, labor price variances are usually not attributable to",
       "o": [
         "Labor rate predictions.",
@@ -2209,6 +2348,7 @@
       }
     },
     {
+      "id": "4-3-63",
       "q": "The total budgeted direct labor cost of a company for the month was set at $75,000 when 5,000 units were planned to be produced. The following standard cost, stated in terms of direct labor hours (DLH), was used to develop the budget for direct labor cost:\n\n1.25 DLH × $12.00/DLH = $15.00/unit produced\n\nThe actual operating results for the month were as follows.\n\nActual results — Columns: | Amount\nActual units produced: | 5,200\nActual direct labor hours worked: | 6,600\nActual direct labor cost: | $77,220\n\nThe direct labor efficiency variance for the month would be",
       "o": [
         "$3,000 unfavorable.",
@@ -2225,6 +2365,7 @@
       }
     },
     {
+      "id": "4-3-64",
       "q": "A factory uses a standard costing system and budgeted $50,000 of fixed overhead based on 25,000 machine hours and production of 10,000 units. During the period, the factory actually produced 12,000 units and incurred 29,000 machine hours. What is the fixed overhead efficiency variance?",
       "o": [
         "$2,000 favorable.",
@@ -2241,6 +2382,7 @@
       }
     },
     {
+      "id": "4-3-65",
       "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nFranklin's fixed overhead volume variance for the year is",
       "o": [
         "$25,000 favorable.",
@@ -2257,6 +2399,7 @@
       }
     },
     {
+      "id": "4-3-66",
       "q": "Franklin Glass Works' production budget for the year ended November 30 was based on 200,000 units. Each unit requires two standard hours of labor for completion. Total overhead was budgeted at $900,000 for the year, and the fixed overhead rate was estimated to be $3.00 per unit. Both fixed and variable overhead are assigned to the product on the basis of direct labor hours.\n\nThe actual data for the year ended November 30 are presented as follows.\n\nActual results — Columns: | Amount\nActual production in units: | 198,000\nActual direct labor hours: | 440,000\nActual variable overhead: | $352,000\nActual fixed overhead: | $575,000\n\nFranklin's fixed overhead spending variance for the year is:",
       "o": [
         "$5,750 favorable.",
@@ -2273,6 +2416,7 @@
       }
     },
     {
+      "id": "4-3-67",
       "q": "Revellay Company budgets and applies production overhead costs on the basis of direct labor hours. The following information is available:\n\nPredetermined standard total overhead application rate: $13.00 per DLH\nVariable overhead spending variance: $8,000 unfavorable\nVariable overhead efficiency variance: $1,600 favorable\nFixed overhead spending (flexible budget) variance: $4,320 unfavorable\nFixed overhead production-volume variance: $14,400 unfavorable\nStandard direct labor hours allowed for actual production: 6,400 DLH\nActual direct labor hours used: 6,000 DLH\nStandard direct labor hours allowed per unit: 8 DLH per unit\n\nWhat is the predetermined standard fixed overhead application rate?",
       "o": [
         "$13.00.",
@@ -2289,6 +2433,7 @@
       }
     },
     {
+      "id": "4-3-68",
       "q": "Which one of the following variances is of least significance from a behavioral control perspective?",
       "o": [
         "Unfavorable material quantity variance amounting to 20% of the quantity allowed for the output attained.",
@@ -2305,6 +2450,7 @@
       }
     },
     {
+      "id": "4-3-69",
       "q": "Tiny Tykes Corporation had the following activity relating to its fixed and variable overhead for the month of July.\n\nJuly overhead — Columns: | Amount\nActual costs — Fixed overhead: | $120,000\nActual costs — Variable overhead: | 80,000\nFlexible budget — Variable overhead: | 90,000\nApplied costs — Fixed overhead: | 125,000\nVariable overhead spending variance: | 2,000 F\nProduction volume variance: | 5,000 U\n\nThe fixed overhead efficiency variance is",
       "o": [
         "Never a meaningful variance.",
@@ -2321,6 +2467,7 @@
       }
     },
     {
+      "id": "4-3-70",
       "q": "Which of these variances is least significant for cost control?",
       "o": [
         "Variable O/H spending variance.",
@@ -2337,6 +2484,7 @@
       }
     },
     {
+      "id": "4-3-71",
       "q": "Azoran Inc. budgets and applies production overhead costs on the basis of direct labor hours. The following information is available:\n\nPredetermined standard variable overhead application rate: $7.50 per DLH\nFlexible budget for variable overhead: $270,000\nBudgeted fixed overhead: $630,000\nActual fixed overhead incurred: $621,000\nVariable overhead spending variance: $16,650 unfavorable\nBudgeted production in units: 5,000 units\nStandard direct labor hours per unit: 6 DLH per unit\nActual direct labor hours used: 37,000 DLH\nStandard direct labor hours allowed for actual output: 36,000 DLH\n\nWhat is the predetermined standard fixed overhead application rate?",
       "o": [
         "$17.50 per direct labor hour.",
@@ -2353,6 +2501,7 @@
       }
     },
     {
+      "id": "4-3-72",
       "q": "Azoran Inc. budgets and applies production overhead costs on the basis of direct labor hours. The following information is available:\n\nPredetermined standard variable overhead application rate: $7.50 per DLH\nFlexible budget for variable overhead: $270,000\nBudgeted fixed overhead: $630,000\nActual fixed overhead incurred: $621,000\nVariable overhead spending variance: $16,650 unfavorable\nBudgeted production in units: 5,000 units\nStandard direct labor hours per unit: 6 DLH per unit\nActual direct labor hours used: 37,000 DLH\nStandard direct labor hours allowed for actual output: 36,000 DLH\n\nWhat is the predetermined standard total overhead application rate?",
       "o": [
         "$28.50 per direct labor hour.",
@@ -2369,6 +2518,7 @@
       }
     },
     {
+      "id": "4-3-73",
       "q": "Azoran Inc. budgets and applies production overhead costs on the basis of direct labor hours. The following information is available:\n\nPredetermined standard variable overhead application rate: $7.50 per DLH\nFlexible budget for variable overhead: $270,000\nBudgeted fixed overhead: $630,000\nActual fixed overhead incurred: $621,000\nVariable overhead spending variance: $16,650 unfavorable\nBudgeted production in units: 5,000 units\nStandard direct labor hours per unit: 6 DLH per unit\nActual direct labor hours used: 37,000 DLH\nStandard direct labor hours allowed for actual output: 36,000 DLH\n\nWhat is the fixed overhead production-volume variance?",
       "o": [
         "$144,000 unfavorable.",
@@ -2385,6 +2535,7 @@
       }
     },
     {
+      "id": "4-3-74",
       "q": "Azoran Inc. budgets and applies production overhead costs on the basis of direct labor hours. The following information is available:\n\nPredetermined standard variable overhead application rate: $7.50 per DLH\nFlexible budget for variable overhead: $270,000\nBudgeted fixed overhead: $630,000\nActual fixed overhead incurred: $621,000\nVariable overhead spending variance: $16,650 unfavorable\nBudgeted production in units: 5,000 units\nStandard direct labor hours allowed per unit: 6 DLH per unit\nActual direct labor hours used: 37,000 DLH\nStandard direct labor hours allowed for actual output: 36,000 DLH\n\nWhat is the fixed overhead spending variance?",
       "o": [
         "$135,000 favorable.",
@@ -2401,6 +2552,7 @@
       }
     },
     {
+      "id": "4-3-75",
       "q": "For a given time period, a company had a favorable material quantity variance, a favorable direct labor efficiency variance, and a favorable fixed overhead volume variance. Of the following, the one factor that could not have caused all three variances is",
       "o": [
         "the use of lower-skilled workers.",
@@ -2417,6 +2569,7 @@
       }
     },
     {
+      "id": "4-3-76",
       "q": "Selo Imports uses flexible budgeting for the control of costs. The company's annual master budget includes $324,000 for fixed production supervisory salaries at a volume of 180,000 units. Supervisory salaries are expected to be incurred uniformly throughout the year. During the month of September 15,750 units were produced, and production supervisory salaries incurred were $28,000. A performance report for September would reflect a fixed overhead spending (flexible budget) variance of",
       "o": [
         "$350 unfavorable.",
@@ -2433,6 +2586,7 @@
       }
     },
     {
+      "id": "4-3-77",
       "q": "A company has a fixed overhead volume variance that is $10,000 unfavorable. The most likely cause for this variance is that",
       "o": [
         "the production supervisory salaries were less than planned.",
@@ -2451,6 +2605,7 @@
   ],
   "4-4": [
     {
+      "id": "4-4-01",
       "q": "A firm earning a profit can increase its return on investment by",
       "o": [
         "Increasing investment and operating expenses by the same dollar amount.",
@@ -2467,6 +2622,7 @@
       }
     },
     {
+      "id": "4-4-02",
       "q": "A company has divided its customers into two groups. Group 1 consists of 20% of the company’s most loyal and reliable customers. Group 2 consists of 80% of the company’s customers who are either small customers or larger customers who order small quantities to test the product before placing larger orders. The most recent results are shown below.\n\nColumns: Group 1 | Group 2\nSales:  $7,500,000  |  $2,000,000\nSales discounts:  $375,000  |  —\nCost of sales:  $5,250,000  |  $1,400,000\nOrder processing:  $40,000  |  $150,000\nDelivery:  $120,000  |  $500,000\nIncome (loss):  $1,715,000  |  $(50,000)\n\nThe best way for the company to improve profitability is to",
       "o": [
         "discontinue sales to Group 2 customers.",
@@ -2483,6 +2639,7 @@
       }
     },
     {
+      "id": "4-4-03",
       "q": "A company has recently implemented responsibility accounting in all 7 segments of the company. The following information is available for Segment W for the last quarter.\n\nSegment W — Columns: | Amount\nNet working capital: | $12,000,000\nProperty, plant and equipment, net: | 31,750,000\nRevenues: | 8,000,000\nCost of sales: | 6,350,000\nGeneral and administrative expenses: | 180,000\n\nBased on the information provided, if the company treats Segment W as an investment center, what is the annual return on investment for Segment W?",
       "o": [
         "3.36%.",
@@ -2499,6 +2656,7 @@
       }
     },
     {
+      "id": "4-4-04",
       "q": "The Leather Goods Division of Zack Corp. had the following information for 20X3:\n\nColumns: | 20X3\nSales: | $500,000\nOperating income: | $50,000\nAssets: | $200,000\nRequired rate of return: | 10%\n\nWhat amount of residual income did the Leather Goods Division have?",
       "o": [
         "$(20,000)",
@@ -2515,6 +2673,7 @@
       }
     },
     {
+      "id": "4-4-05",
       "q": "Residual income is often preferred over return on investment (ROI) as a performance evaluation measure because",
       "o": [
         "average investment is employed with residual income while year-end investment is employed with ROI.",
@@ -2531,6 +2690,7 @@
       }
     },
     {
+      "id": "4-4-06",
       "q": "A company expects to have assets of $825,000 and net operating income of $230,000 next year. In addition, the company is evaluating an investment opportunity that requires an initial investment of $160,000 and is expected to generate $180,000 of sales annually. The investment will have a 70% contribution margin ratio and $42,000 fixed costs. The company’s minimum required rate of return is 14%. What would be the residual income next year if the company proceeds with the investment opportunity?",
       "o": [
         "$61,600.",
@@ -2547,6 +2707,7 @@
       }
     },
     {
+      "id": "4-4-07",
       "q": "TNTNeft has assets of $500,000,000 and its required rate of return on investment is 12%. Its residual income is $35,000,000. What is TNTNeft’s return on investment?",
       "o": [
         "12%",
@@ -2563,6 +2724,7 @@
       }
     },
     {
+      "id": "4-4-08",
       "q": "Listed below is selected financial information for the Western Division of the Hinzel Company for last year.\n\nAccount — Columns: | Amount (thousands)\nCurrent assets: | $625\nGeneral and administrative expenses: | 75\nNet sales: | 4,000\nProperty, plant, and equipment: | 1,775\nCost of goods sold: | 3,525\n\nIf Hinzel treats the Western Division as an investment center for performance measurement purposes, what is the division's return on investment (ROI) for last year?",
       "o": [
         "22.54%",
@@ -2579,6 +2741,7 @@
       }
     },
     {
+      "id": "4-4-09",
       "q": "Which one of the following statements pertaining to the return on investment (ROI) as a performance measurement is incorrect?",
       "o": [
         "When the average age of assets differs substantially across segments of a business, the use of ROI may not be appropriate.",
@@ -2595,6 +2758,7 @@
       }
     },
     {
+      "id": "4-4-10",
       "q": "Performance results for four geographic divisions of a manufacturing company are shown below. Division Target Return on Investment Actual Return on Investment Return on Sales A 18% 18.1% 8% B 16% 20.0% 8% C 14% 15.8% 6% D 12% 11.0% 9% The division with the best performance is",
       "o": [
         "Division B.",
@@ -2611,6 +2775,7 @@
       }
     },
     {
+      "id": "4-4-11",
       "q": "The management team of a company is evaluating the use of either return on investment or residual income as a measure of the performance of the company’s lines of business. In a presentation about the two measures, which of the following statements are correct? I. Both measures include key elements such as revenues, costs, and level of investments, which are critical for top management decision making. II. Both measures avoid all potential goal-congruency problems within the organization. III. The only disadvantage of the measures is that they both have a long-term focus, rather than a short-term focus. IV. Both measures can be manipulated to suit the user’s purposes as the calculation is based on accounting numbers.",
       "o": [
         "I and II only.",
@@ -2627,6 +2792,7 @@
       }
     },
     {
+      "id": "4-4-12",
       "q": "A company has four regional divisions. A summary of financial results for the company is shown below.\n\nColumns: North | South | East | West\nOperating income:  $1,000  |  $5,000  |  $4,000  |  $7,500\nAssets:  $2,500  |  $15,000  |  $8,000  |  $25,000\nTotal equity:  $2,000  |  $8,000  |  $7,000  |  $20,000\n\nWhich division has the highest return on investment?",
       "o": [
         "South",
@@ -2643,6 +2809,7 @@
       }
     },
     {
+      "id": "4-4-13",
       "q": "A company has an 8% required rate of return. It is evaluating the following four mutually exclusive projects as possible investments.\n\nColumns: Estimated Operating Income | Assets\nProject A:  $1,250,000  |  $5,000,000\nProject B:  $1,500,000  |  $7,500,000\nProject C:  $850,000  |  $1,500,000\nProject D:  $750,000  |  $10,000,000\n\nUsing the residual income method, which one of the four projects should the company accept?",
       "o": [
         "Project D.",
@@ -2659,6 +2826,7 @@
       }
     },
     {
+      "id": "4-4-14",
       "q": "Return on investment focuses on income as a percentage of investment, while residual income focuses on",
       "o": [
         "operating income less a capital charge.",
@@ -2675,6 +2843,7 @@
       }
     },
     {
+      "id": "4-4-15",
       "q": "Residual income is a better measure for performance evaluation of an investment center manager than return on investment because",
       "o": [
         "Desirable investment decisions will not be neglected by high return divisions.",
@@ -2691,6 +2860,7 @@
       }
     },
     {
+      "id": "4-4-16",
       "q": "One approach to measuring divisional performance is return on investment. Return on investment is expressed as operating income:",
       "o": [
         "Minus imputed interest charged for invested capital.",
@@ -2707,6 +2877,7 @@
       }
     },
     {
+      "id": "4-4-17",
       "q": "KHD Industries is a multidivisional firm that evaluates its managers based on the return on investment (ROI) earned by their divisions. The evaluation and compensation plans use a targeted ROI of 15% (equal to the cost of capital) and managers receive a bonus of 5% of basic compensation for every one-percentage point that the division's ROI exceeds 15%. David Evans, manager of the Consumer Products Division, has made a forecast of the division's operations and finances for next year that indicates the ROI would be 24%. In addition, new short-term programs were identified by the Consumer Products Division and evaluated by the finance staff as follows. Program Projected ROI A 13% B 19% C 22% D 31% Assuming no restrictions on expenditures, what is the optimal mix of new programs that would add value to KHD Industries?",
       "o": [
         "D only.",
@@ -2723,6 +2894,7 @@
       }
     },
     {
+      "id": "4-4-18",
       "q": "A company’s management is planning on making an investment of UAE Dirham (AED) 1,000,000 to establish a new division in the United Arab Emirates. The new division is expected to generate sales of AED 720,000 and net income of AED 250,000 in Year 1. If the company’s required rate of return is 10%, what is the division’s residual income in Year 1?",
       "o": [
         "AED 100,000.",
@@ -2739,6 +2911,7 @@
       }
     },
     {
+      "id": "4-4-19",
       "q": "The required rate of return used in the residual income approach to performance evaluation can best be described as the:",
       "o": [
         "Average return-on-investments for the company over the last several years.",
@@ -2755,6 +2928,7 @@
       }
     },
     {
+      "id": "4-4-20",
       "q": "A company is considering three independent projects. Projected financial information is shown below.\n\nColumns: Riddler | Joker | Penguin\nSales:  $5,000,000  |  $7,000,000  |  $10,000,000\nContribution margin:  $1,440,000  |  $1,700,000  |  $3,500,000\nOperating income:  $1,000,000  |  $1,650,000  |  $2,520,000\nInvestment:  $9,000,000  |  $10,000,000  |  $14,000,000\n\nThe company’s minimum rate of return for accepting projects is 15% and the total investment for new projects is a maximum of $20,000,000. The company’s goal is to maximize its return on investment. Which project(s) should be accepted if the company uses return on investment to measure investment projects?",
       "o": [
         "Joker and Penguin only.",
@@ -2771,6 +2945,7 @@
       }
     },
     {
+      "id": "4-4-21",
       "q": "The most likely reason a company would switch its performance measurement tool from ROI to RI is because",
       "o": [
         "RI provides a basis to evaluate units with different sizes.",
@@ -2787,6 +2962,7 @@
       }
     },
     {
+      "id": "4-4-22",
       "q": "Outlet Company makes and distributes beach equipment. Last year its sales were $15,000,000, net income was $1,500,000, and the assets used were $35,000,000. The return on investment was",
       "o": [
         "10%.",
@@ -2803,6 +2979,7 @@
       }
     },
     {
+      "id": "4-4-23",
       "q": "A division currently earns an ROI of 15% and has a residual income of $120,000, based on a required rate of return of 10%. If the required rate of return is raised to 12% with operating income and assets unchanged, what happens to the division's ROI and residual income?",
       "o": [
         "ROI stays at 15%; residual income decreases.",
@@ -2814,6 +2991,7 @@
       "e": "ROI = Operating Income ÷ Assets. Since neither operating income nor assets changed, ROI is unaffected by a change in the required rate of return — it stays at 15%. Residual income, however, is Operating Income − (Assets × Required Rate of Return), and the required rate of return is precisely what changed. Raising the required rate increases the imputed charge subtracted from operating income, so residual income falls. This is a key structural difference between the two measures: ROI depends only on the segment's own income and assets, while residual income also depends on the target rate management sets."
     },
     {
+      "id": "4-4-24",
       "q": "Oakmont Company has two divisions: Household Appliances and Construction Equipment. The manager of the Household Appliances Division is evaluated on the basis of return on investment (ROI). The manager of the Construction Equipment Division is evaluated on the basis of residual income. The cost of capital has been 12% and the ROI has been 16% for the two divisions. Each manager is currently considering a project with a 14% rate of return. According to the current evaluation system for managers, which manager(s) would have an incentive to undertake the project?",
       "o": [
         "Neither manager would have an incentive to undertake the project.",
@@ -2830,6 +3008,7 @@
       }
     },
     {
+      "id": "4-4-25",
       "q": "Return-on-investment (ROI) is a term often used to express income earned on a business unit’s assets. A business unit’s ROI will increase if:",
       "o": [
         "Sales decrease by the same dollar amount that expenses increase.",
@@ -2846,6 +3025,7 @@
       }
     },
     {
+      "id": "4-4-26",
       "q": "A company is considering the addition of a new product line. The new product line is expected to generate a return higher than the cost of capital, but lower than the current overall return on investment (ROI). If the company decides to add the potential new product line, residual income will",
       "o": [
         "increase.",
@@ -2862,6 +3042,7 @@
       }
     },
     {
+      "id": "4-4-27",
       "q": "A company's recent operating results are shown below.\n\nOperating results — Columns: | Amount\nSales: | $4,370,000\nExpenses: | 2,728,000\nOperating income: | 1,642,000\nTotal assets: | 9,818,000\nTotal liabilities: | 7,663,000\n\nThe company has set a target return on investment (ROI) of 18%. Management is evaluating the following two plans.\n\nPlan 1: Invest $1,200,000 in a new location that will produce $3,000,000 in sales each year. Operating expenses will increase $2,781,600 each year.\n\nPlan 2: Reduce company costs by improving technology in the manufacturing process. An equipment investment of $730,000 will reduce annual operating costs by $315,000.\n\nWhich plan, if implemented, would result in the company having an ROI at or above the targeted ROI?",
       "o": [
         "Plan 2, since it will increase the company’s ROI to 18.6%.",
@@ -2878,6 +3059,7 @@
       }
     },
     {
+      "id": "4-4-28",
       "q": "Edith Carolina, president of the Deed Corporation, requires a minimum return on investment of 8% for any project to be undertaken by her company. The company is decentralized, and leaves investment decisions up to the discretion of the division managers as long as the 8% return is expected to be realized. Michael Sanders, manager of the Cosmetics Division, has had a return on investment of 14% for his division for the past 3 years and expects the division to have the same return in the coming year. Sanders has the opportunity to invest in a new line of cosmetics which is expected to have a return on investment of 12%. If the Deed Corporation evaluates managerial performance using residual income based on the corporate minimum required rate of return, what will be the preference for taking on the proposed cosmetics line by Edith Carolina and Michael Sanders?",
       "o": [
         "Carolina will accept / Sanders will reject",
@@ -2894,6 +3076,7 @@
       }
     },
     {
+      "id": "4-4-29",
       "q": "Edith Carolina, president of the Deed Corporation, requires a minimum return on investment of 8% for any project to be undertaken by her company. The company is decentralized and leaves investment decisions up to the discretion of the division managers as long as the 8% return is expected to be realized. Michael Sanders, manager of the Cosmetics Division, has had a return on investment of 14% for his division for the past 3 years and expects the division to have the same return in the coming year. Sanders has the opportunity to invest in a new line of cosmetics that is expected to have a return on investment of 12%. If the Deed Corporation evaluates managerial performance using return on investment, what will be the preference for taking on the proposed cosmetics line by Edith Carolina and Michael Sanders?",
       "o": [
         "Carolina will reject / Sanders will reject",
@@ -2910,6 +3093,7 @@
       }
     },
     {
+      "id": "4-4-30",
       "q": "Perma Corporation’s management has determined that the company’s required rate of return on new projects is 8%. The Diddle Division, a highly profitable division, has a current Return on Investment of 13%. The Diddle Division’s manager is considering a new project that would involve manufacturing frazzles. The project is expected to require an investment of $1 million and to have an annual Return on Investment of 10%. What is the project’s projected Residual Income?",
       "o": [
         "$20,000.",
@@ -2926,6 +3110,7 @@
       }
     },
     {
+      "id": "4-4-31",
       "q": "The segment margin of an investment center after deducting the imputed interest on the assets used by the investment center is known as",
       "o": [
         "Operating income.",
@@ -2942,6 +3127,7 @@
       }
     },
     {
+      "id": "4-4-32",
       "q": "Why might a customer that generates a high level of sales revenue still be unprofitable for the company to serve?",
       "o": [
         "Because customer-specific costs such as frequent small orders, special packaging, expedited delivery and a high rate of returns can exceed the gross margin that the customer generates.",
@@ -2958,6 +3144,7 @@
       }
     },
     {
+      "id": "4-4-33",
       "q": "Meridian Company reports the following for Customer M for the year: sales revenue $400,000 and cost of goods sold $300,000. Customer-specific costs are: 200 orders processed at $150 per order, 40 expedited deliveries at $400 each, and 30 sales visits at $200 each. What is the profit generated by Customer M?",
       "o": [
         "$48,000",
@@ -2974,6 +3161,7 @@
       }
     },
     {
+      "id": "4-4-34",
       "q": "A customer profitability analysis shows that a particular customer is unprofitable, and the analysis identifies the cause as a very large number of small, frequent orders. Which of the following is the most appropriate first response?",
       "o": [
         "Work with the customer to consolidate orders, or introduce a minimum order size or a small-order surcharge.",
@@ -2990,6 +3178,7 @@
       }
     },
     {
+      "id": "4-4-35",
       "q": "A product line reports an operating loss after all company costs have been allocated to it. Before deciding whether to discontinue the line, which of the following amounts is most relevant to the decision?",
       "o": [
         "The contribution margin the line generates and the fixed costs that would actually be avoided if the line were discontinued.",
@@ -3008,6 +3197,7 @@
   ],
   "4-5": [
     {
+      "id": "4-5-01",
       "q": "Which of the following would decrease unit contribution margin the most?",
       "o": [
         "A 15% increase in variable expenses.",
@@ -3024,6 +3214,7 @@
       }
     },
     {
+      "id": "4-5-02",
       "q": "The opportunity cost of making a component part in a factory with no excess capacity is the",
       "o": [
         "Fixed manufacturing cost of the component.",
@@ -3040,6 +3231,7 @@
       }
     },
     {
+      "id": "4-5-03",
       "q": "The relevance of a particular cost to a decision is determined by the",
       "o": [
         "Potential effect on the decision.",
@@ -3056,6 +3248,7 @@
       }
     },
     {
+      "id": "4-5-04",
       "q": "In a joint manufacturing process, joint costs incurred prior to a decision as to whether to process the products after the split-off point should be viewed as",
       "o": [
         "differential costs.",
@@ -3072,6 +3265,7 @@
       }
     },
     {
+      "id": "4-5-05",
       "q": "Johnson waits two hours in line to buy a ticket to an NCAA Final Four Tournament. The opportunity cost of buying the $200 ticket is",
       "o": [
         "the value of the $200 to the ticket agent.",
@@ -3088,6 +3282,7 @@
       }
     },
     {
+      "id": "4-5-06",
       "q": "A fuel company can sell 8 units of product at a selling price of $450. However, at a selling price of $445 the company can sell 9 units. What is the marginal revenue that is derived from selling the 9th unit?",
       "o": [
         "($5).",
@@ -3104,6 +3299,7 @@
       }
     },
     {
+      "id": "4-5-07",
       "q": "Which of the following will result in raising the breakeven point?",
       "o": [
         "An increase in the contribution margin per unit.",
@@ -3120,6 +3316,7 @@
       }
     },
     {
+      "id": "4-5-08",
       "q": "A company makes a product that sells for $30. During the coming year, fixed costs are expected to be $180,000, and variable costs are estimated at $26 per unit. How many units must the company sell to break even?",
       "o": [
         "6,000",
@@ -3136,6 +3333,7 @@
       }
     },
     {
+      "id": "4-5-09",
       "q": "Donnelly Corporation manufactures and sells T-shirts imprinted with college names and slogans. Last year, the shirts sold for $7.50 each, and the variable cost to manufacture them was $2.25 per unit. The company needed to sell 20,000 shirts to break even. The net income last year was $5,040. Donnelly's expectations for the coming year include the following: The sales price of the T-shirts will be $9 Variable cost to manufacture will increase by one-third Fixed costs will increase by 10% The income tax rate of 40% will be unchanged The number of T-shirts Donnelly Corporation must sell to break even in the coming year is",
       "o": [
         "17,500",
@@ -3152,6 +3350,7 @@
       }
     },
     {
+      "id": "4-5-10",
       "q": "The data available for the current year are given below.\n\nColumns: Whole company | Division 1 | Division 2\nNet revenue:  $1,000,000  |  $600,000  |  $400,000\nVariable manufacturing costs:  $400,000  |  $220,000  |  $180,000\nVariable selling and administrative costs:  $130,000  |  $70,000  |  $60,000\nFixed costs controllable by division managers (e.g., advertising, engineering supervision costs):  $90,000  |  $50,000  |  $40,000\nFixed costs controllable by others (e.g., depreciation, insurance):  $120,000  |  $70,000  |  $50,000\nUnallocated costs (e.g., president's salary):  $100,000  |  —  |  —\n\nBased upon the information presented above, the contribution margin for the company was:",
       "o": [
         "$400,000",
@@ -3168,6 +3367,7 @@
       }
     },
     {
+      "id": "4-5-11",
       "q": "A company produces and sells 2,000 units of finished goods and incurs $60,000 of fixed costs annually. The contribution margin is $60 per unit, and variable cost is $40 per unit. If the company expects sales quantities to increase by 10% next year, the operating profit will be",
       "o": [
         "$60,000.",
@@ -3184,6 +3384,7 @@
       }
     },
     {
+      "id": "4-5-12",
       "q": "The term that best refers to past costs that have been incurred and are not relevant to any future decisions is",
       "o": [
         "incurred marginal costs.",
@@ -3200,6 +3401,7 @@
       }
     },
     {
+      "id": "4-5-13",
       "q": "A decision-making concept, described as \"the contribution to income that is forgone by not using a limited resource for its best alternative use,\" is called",
       "o": [
         "Opportunity cost.",
@@ -3216,6 +3418,7 @@
       }
     },
     {
+      "id": "4-5-14",
       "q": "Relevant or differential cost analysis",
       "o": [
         "considers only variable costs as they change with each decision alternative.",
@@ -3232,6 +3435,7 @@
       }
     },
     {
+      "id": "4-5-15",
       "q": "When a decision is made in an organization, it is selected from a group of alternative courses of action. The loss associated with choosing the alternative that does not maximize the benefit is the",
       "o": [
         "Incremental cost.",
@@ -3248,6 +3452,7 @@
       }
     },
     {
+      "id": "4-5-16",
       "q": "Bruell Electronics Co. is developing a new product, surge protectors for high-voltage electrical flows. The following cost information relates to the product: Unit Costs Direct materials $3.25 Direct labor 4.00 Distribution 0.75 The company will also be absorbing $120,000 of additional fixed costs associated with this new product. A corporate fixed charge of $20,000 currently absorbed by other products will be allocated to this new product. If the selling price is $14 per unit, the breakeven point in units (rounded to the nearest hundred) for surge protectors is",
       "o": [
         "10,000 units.",
@@ -3264,6 +3469,7 @@
       }
     },
     {
+      "id": "4-5-17",
       "q": "A printing company is considering replacing an old printing press. The old printing press has a book value of $24,000 and a trade-in value of $14,000. A new printing press would cost $85,000 after trade-in of the old press. It is estimated that the new printing press would reduce operating costs by $20,000 per year. If the company decides not to purchase the new press, the $85,000 could instead be used to retire debt that is currently costing $9,000 per year in interest. Which of the given amounts is an example of a sunk cost?",
       "o": [
         "The trade-in value of the old printing press.",
@@ -3280,6 +3486,7 @@
       }
     },
     {
+      "id": "4-5-18",
       "q": "Management accountants are frequently asked to analyze various decision situations, including the following: I. The cost of a special device that is necessary if a special order is accepted. II. The cost proposed annually for the plant service for the grounds at corporate headquarters. III. Joint production costs incurred, to be considered in a sell-at-split versus a processfurther decision. IV. The costs associated with alternative uses of plant space, to be considered in a make/buy decision. V. The cost of obsolete inventory acquired several years ago, to be considered in a keepversus-disposal decision. The costs described in situations III and V are:",
       "o": [
         "Imputed costs.",
@@ -3296,6 +3503,7 @@
       }
     },
     {
+      "id": "4-5-19",
       "q": "Management accountants are frequently asked to analyze various decision situations, including the following: I. The cost of a special device that is necessary if a special order is accepted. II. The cost proposed annually for the plant service for the grounds at corporate headquarters. III. Joint production costs incurred, to be considered in a sell-at-split versus a processfurther decision. IV. The costs associated with alternative uses of plant space, to be considered in a make/buy decision. V. The cost of obsolete inventory acquired several years ago, to be considered in a keep-versus-disposal decision. The costs described in situations I and IV are:",
       "o": [
         "Relevant costs.",
@@ -3312,6 +3520,7 @@
       }
     },
     {
+      "id": "4-5-20",
       "q": "In a management decision process, the cost measurement of the benefits sacrificed due to selecting an alternative use of resources is most often referred to as a(n)",
       "o": [
         "relevant cost.",
@@ -3328,6 +3537,7 @@
       }
     },
     {
+      "id": "4-5-21",
       "q": "Sunk costs are not relevant in the decision-making process because they are",
       "o": [
         "indirect costs.",
@@ -3344,6 +3554,7 @@
       }
     },
     {
+      "id": "4-5-22",
       "q": "A company uses cost-volume-profit analysis to evaluate a new product. The total fixed costs of production per year are $160,000. The unit variable cost is $50. Which one of the following combinations of unit selling price and breakeven number of units sold per year is correct?",
       "o": [
         "$100 selling price and 1,600 breakeven number of units.",
@@ -3360,6 +3571,7 @@
       }
     },
     {
+      "id": "4-5-23",
       "q": "In a manufacturing environment, the best short-term profit maximizing approach would be to",
       "o": [
         "Minimize variable costs per unit times the number of units produced.",
@@ -3376,6 +3588,7 @@
       }
     },
     {
+      "id": "4-5-24",
       "q": "Delphi Company has developed a new project that will be marketed for the first time during the next fiscal year. Although the Marketing Department estimates that 35,000 units could be sold at $36 per unit, Delphi's management has allocated only enough manufacturing capacity to produce a maximum of 25,000 units of the new product annually. The fixed costs associated with the new product are budgeted at $450,000 for the year, which includes $60,000 for depreciation on new manufacturing equipment. Data associated with each unit of product are presented as follows. Delphi is subject to a 40% income tax rate.\n\nColumns: | Variable cost per unit\nDirect material: | $7.00\nDirect labor: | $3.50\nManufacturing overhead: | $4.00\nTotal variable manufacturing cost: | $14.50\nSelling expenses: | $1.50\nTotal variable cost: | $16.00\n\nThe number of units of the new product that Delphi Company must sell during the next fiscal year in order to break even is",
       "o": [
         "20,930.",
@@ -3392,6 +3605,7 @@
       }
     },
     {
+      "id": "4-5-25",
       "q": "Breeze Company has a contribution margin of $4,000 and fixed costs of $1,000. If the total contribution margin increases by $1,000, operating profit would",
       "o": [
         "remain unchanged.",
@@ -3408,6 +3622,7 @@
       }
     },
     {
+      "id": "4-5-26",
       "q": "Unit contribution margin is best defined as the difference between the",
       "o": [
         "unit sales price and variable costs multiplied by the number of units sold.",
@@ -3424,6 +3639,7 @@
       }
     },
     {
+      "id": "4-5-27",
       "q": "When an organization decides on a course of action that is selected from a group of alternative courses of action, the benefit lost by not choosing the best alternative course of action is the",
       "o": [
         "incremental cost.",
@@ -3440,6 +3656,7 @@
       }
     },
     {
+      "id": "4-5-28",
       "q": "Which of the following statements about opportunity costs is correct?",
       "o": [
         "They are relevant to decision making.",
@@ -3456,6 +3673,7 @@
       }
     },
     {
+      "id": "4-5-29",
       "q": "Which one of the following costs would be relevant in short-term decision making?",
       "o": [
         "Incremental fixed costs.",
@@ -3472,6 +3690,7 @@
       }
     },
     {
+      "id": "4-5-30",
       "q": "The opportunity cost of making a component part in a factory with excess capacity for which there is no alternative use is",
       "o": [
         "The total variable cost of the component.",
@@ -3488,6 +3707,7 @@
       }
     },
     {
+      "id": "4-5-31",
       "q": "A company sells a single product at $50 per unit. The company has budgeted to sell 600,000 units in the coming year. The company's budgeted income statement for the coming year is as follows.\n\nBudgeted income statement — Columns: | Amount\nSales ($50 × 600,000): | $30,000,000\nCost of sales: | 20,000,000\nGross profit: | $10,000,000\nSelling, general and administrative expenses: | 7,500,000\nOperating income: | $2,500,000\n\nCost of sales consists of 75% variable cost and 25% fixed cost. Sales, general, and administrative expenses are 40% variable cost and 60% fixed cost. Management wants to know how low sales volume can go without the company having an operating loss. Based on the budget information, what is the company's breakeven point in units?",
       "o": [
         "300,000 units",
@@ -3504,6 +3724,7 @@
       }
     },
     {
+      "id": "4-5-32",
       "q": "In a decision analysis situation, which one of the following costs is generally not relevant to the decision?",
       "o": [
         "Historical cost.",
@@ -3520,6 +3741,7 @@
       }
     },
     {
+      "id": "4-5-33",
       "q": "Capital Company has decided to discontinue a product produced on a machine purchased four years ago at a cost of $70,000. The machine has a current book value of $30,000. Due to technologically improved machinery now available in the marketplace, the existing machine has no current salvage value. The company is reviewing the various aspects involved in the production of a new product. The engineering staff advised that the existing machine can be used to produce the new product. Other costs involved in the production of the new product will be materials of $20,000 and labor priced at $5,000. Ignoring income taxes, the costs relevant to the decision to produce or not to produce the new product would be",
       "o": [
         "$55,000.",
@@ -3536,6 +3758,7 @@
       }
     },
     {
+      "id": "4-5-34",
       "q": "In order to avoid pitfalls in relevant-cost analysis, management should focus on",
       "o": [
         "variable cost items that differ for each alternative.",
@@ -3552,6 +3775,7 @@
       }
     },
     {
+      "id": "4-5-35",
       "q": "A small delivery company received an order that requires nine deliveries lasting two hours each on the same day. The company owns two vans that together can make eight trips per day. The company can rent a van on a daily eight-hour basis for $72, and the fuel cost is $20 per trip. The company has several van drivers, each of whom earns $30,000 annually and is expected to make 1,000 deliveries each year. The marginal cost of the ninth delivery is",
       "o": [
         "$28.",
@@ -3568,6 +3792,7 @@
       }
     },
     {
+      "id": "4-5-36",
       "q": "Management accountants are frequently asked to analyze various decision situations including the following. 1. Alternative uses of plant space, to be considered in a make/buy decision. 2. Joint production costs incurred, to be considered in a sell-at-split versus a processfurther decision. 3. Research and development costs incurred in prior months, to be considered in a productintroduction decision. 4. The cost of a special device that is necessary if a special order is accepted. 5. The cost of obsolete inventory acquired several years ago, to be considered in a keepversus-disposal decision. The costs described in situations 1 and 4 are",
       "o": [
         "Sunk costs.",
@@ -3584,6 +3809,7 @@
       }
     },
     {
+      "id": "4-5-37",
       "q": "Management accountants are frequently asked to analyze various decision situations including the following. 1. Alternative uses of plant space, to be considered in a make/buy decision. 2. Joint production costs incurred, to be considered in a sell-at-split versus a process-further decision. 3. Research and development costs incurred in prior months, to be considered in a productintroduction decision. 4. The cost of a special device that is necessary if a special order is accepted. 5. The cost of obsolete inventory acquired several years ago, to be considered in a keep-versusdisposal decision. The costs described in situations 2, 3, and 5 are",
       "o": [
         "Differential costs.",
@@ -3600,6 +3826,7 @@
       }
     },
     {
+      "id": "4-5-38",
       "q": "A company manufactures a single product. Estimated cost data regarding this product and other information for the product and the company are as follows.\n\nEstimated data — Columns: | Amount\nSales price per unit: | $40\nTotal variable production cost per unit: | $22\nSales commission (on sales): | 5%\nFixed costs and expenses — Manufacturing overhead: | $5,598,720\nFixed costs and expenses — General and administrative: | $3,732,480\nEffective income tax rate: | 40%\n\nThe number of units the company must sell in the coming year in order to reach its breakeven point is:",
       "o": [
         "388,800 units.",
@@ -3616,6 +3843,7 @@
       }
     },
     {
+      "id": "4-5-39",
       "q": "A company produces ready-to-bake pie crusts. In deciding whether to process this product further into complete ready-to-bake pies by adding filling, relevant dollar amounts to consider would include all of the following except the",
       "o": [
         "selling price of the complete pies.",
@@ -3632,6 +3860,7 @@
       }
     },
     {
+      "id": "4-5-40",
       "q": "One of the major assumptions limiting the reliability of breakeven analysis is that",
       "o": [
         "Efficiency and productivity will continually increase.",
@@ -3648,6 +3877,7 @@
       }
     },
     {
+      "id": "4-5-41",
       "q": "Which of the following is a characteristic of a contribution income statement?",
       "o": [
         "Fixed and variable operating expenses are combined as one line item, but fixed manufacturing expenses are shown separately from variable manufacturing expenses.",
@@ -3664,6 +3894,7 @@
       }
     },
     {
+      "id": "4-5-42",
       "q": "A company produced the following data (rounded) on its product: Unit Cost Units Produced Fixed Variable Total $100 $85 $185 The selling price is $90. If two units of product were produced and sold, the total contribution margin would be:",
       "o": [
         "$70",
@@ -3680,6 +3911,7 @@
       }
     },
     {
+      "id": "4-5-43",
       "q": "Which of the following statements about sunk costs is correct?",
       "o": [
         "In and of themselves they are not relevant to decision making.",
@@ -3696,6 +3928,7 @@
       }
     },
     {
+      "id": "4-5-44",
       "q": "What do relevant costs refer to?",
       "o": [
         "Anticipated future costs that will differ among various alternatives.",
@@ -3712,6 +3945,7 @@
       }
     },
     {
+      "id": "4-5-45",
       "q": "Madengrad Company manufactures a single electronic product called Precisionmix. This unit is a batch-density monitoring device attached to large industrial mixing machines used in flour, rubber, petroleum, and chemical manufacturing. Precisionmix sells for $900 per unit. The following variable costs are incurred to produce each Precisionmix device:\n\nColumns: | Variable cost per unit\nDirect labor: | $180\nDirect materials and factory overhead: | $345\nTotal variable production costs: | $525\nMarketing costs: | $75\nTotal variable costs: | $600\n\nMadengrad's income tax rate is 40%, and annual fixed costs are $6,600,000. Except for an operating loss incurred in the year of incorporation, the firm has been profitable over the last 5 years.\n\nThe annual sales volume required for Madengrad Company to break even is",
       "o": [
         "22,000 units.",
@@ -3728,6 +3962,7 @@
       }
     },
     {
+      "id": "4-5-46",
       "q": "In differential cost analysis, which one of the following best fits the description of a sunk cost?",
       "o": [
         "Purchasing department costs incurred in acquiring material.",
@@ -3744,6 +3979,7 @@
       }
     },
     {
+      "id": "4-5-47",
       "q": "Profits that are lost by moving an input from one use to another are referred to as",
       "o": [
         "replacement costs.",
@@ -3760,6 +3996,7 @@
       }
     },
     {
+      "id": "4-5-48",
       "q": "An organization's sales revenue is expected to be $72,600, a 10% increase over last year. For the same period, total fixed costs of $22,000 are expected to be the same as last year. If the number of units sold is expected to increase by 1,100, the marginal revenue per unit will be:",
       "o": [
         "$20",
@@ -3776,6 +4013,7 @@
       }
     },
     {
+      "id": "4-5-49",
       "q": "Gleason Co. has two products, a frozen dessert and ready-to-bake breakfast rolls, ready for introduction. However, plant capacity is limited, and only one product can be introduced at present. Therefore, Gleason has conducted a market study, at a cost of $26,000, to determine which product will be more profitable. The results of the study follow.\n\nSales of Desserts at $1.80/unit — Columns: Volume | Probability\n250,000  |  0.30\n300,000  |  0.40\n350,000  |  0.20\n400,000  |  0.10\n\nSales of Rolls at $1.20/unit — Columns: Volume | Probability\n200,000  |  0.20\n250,000  |  0.50\n300,000  |  0.20\n350,000  |  0.10\n\nThe costs associated with the two products have been estimated by Gleason's cost accounting department and are shown as follows.\n\nEstimated costs — Columns: Dessert | Rolls\nIngredients per unit:  $0.40  |  $0.25\nDirect labor per unit:  $0.35  |  $0.30\nVariable overhead per unit:  $0.40  |  $0.20\nProduction tooling*:  $48,000  |  $25,000\nAdvertising:  $30,000  |  $20,000\n\n*Gleason treats production tooling as a current operating expense rather than capitalizing it as a fixed asset.\n\nThe cost incurred by Gleason for the market study is a(n)",
       "o": [
         "Incremental cost.",
@@ -3792,6 +4030,7 @@
       }
     },
     {
+      "id": "4-5-50",
       "q": "Breakeven quantity is defined as the volume of output at which revenues are equal to",
       "o": [
         "marginal costs.",
@@ -3808,6 +4047,7 @@
       }
     },
     {
+      "id": "4-5-51",
       "q": "Which of the following is an assumption underlying cost-volume-profit analysis?",
       "o": [
         "The sales mix remains constant as the total number of units sold changes.",
@@ -3824,6 +4064,7 @@
       }
     },
     {
+      "id": "4-5-52",
       "q": "In cost-volume-profit analysis, how are total costs and total revenues assumed to behave in relation to the level of activity?",
       "o": [
         "They are linear within the relevant range.",
@@ -3840,6 +4081,7 @@
       }
     },
     {
+      "id": "4-5-53",
       "q": "Which of the following is NOT an assumption of cost-volume-profit analysis?",
       "o": [
         "Costs can be separated into fixed and variable components.",
@@ -3856,6 +4098,7 @@
       }
     },
     {
+      "id": "4-5-54",
       "q": "A company using cost-volume-profit analysis negotiates a supplier arrangement under which its variable cost per unit falls once cumulative purchases pass a specified quantity. What is the effect on the standard cost-volume-profit model?",
       "o": [
         "The assumption of a constant unit variable cost is violated, so a single breakeven point computed with the original unit contribution margin will be inaccurate above that quantity.",
@@ -3872,6 +4115,7 @@
       }
     },
     {
+      "id": "4-5-55",
       "q": "Which of the following best defines the margin of safety?",
       "o": [
         "The excess of budgeted or actual sales over breakeven sales.",
@@ -3888,6 +4132,7 @@
       }
     },
     {
+      "id": "4-5-56",
       "q": "Halvern Company sells a single product for $80 per unit. The variable cost is $50 per unit and total fixed costs are $420,000. If Halvern budgets sales of 20,000 units for the coming year, what is its margin of safety in units?",
       "o": [
         "6,000 units",
@@ -3904,6 +4149,7 @@
       }
     },
     {
+      "id": "4-5-57",
       "q": "Using the same facts as for Halvern Company (selling price $80 per unit, variable cost $50 per unit, total fixed costs $420,000 and budgeted sales of 20,000 units), what is Halvern's margin of safety expressed as a ratio?",
       "o": [
         "30%",
@@ -3920,6 +4166,7 @@
       }
     },
     {
+      "id": "4-5-58",
       "q": "Kestrel Company has budgeted sales of $900,000, a contribution margin ratio of 40% and total fixed costs of $270,000. What is Kestrel's margin of safety in dollars?",
       "o": [
         "$225,000",
@@ -3936,6 +4183,7 @@
       }
     },
     {
+      "id": "4-5-59",
       "q": "Two companies report identical sales revenue and identical operating income, but Company X has a substantially higher margin of safety ratio than Company Y. Which of the following is the most reasonable conclusion?",
       "o": [
         "Company X's sales can fall by a larger percentage before it begins to incur a loss, indicating lower operating risk.",
@@ -3952,6 +4200,7 @@
       }
     },
     {
+      "id": "4-5-60",
       "q": "Norwood Company has substantial idle capacity and receives a one-time special order for 5,000 units at $18 per unit. At its normal volume, Norwood's unit costs are direct materials $7, direct labour $4, variable overhead $2 and allocated fixed overhead $6. Accepting the order will not affect regular sales and will not change total fixed costs. What is the effect of accepting the order on operating income?",
       "o": [
         "An increase of $25,000.",
@@ -3968,6 +4217,7 @@
       }
     },
     {
+      "id": "4-5-61",
       "q": "In a make-or-buy decision, which of the following costs is always irrelevant?",
       "o": [
         "Fixed overhead that will continue to be incurred regardless of whether the component is made internally or purchased.",
@@ -3984,6 +4234,7 @@
       }
     },
     {
+      "id": "4-5-62",
       "q": "Tamsen Company currently manufactures 10,000 units of Component K per year. Its unit costs at that volume are direct materials $9, direct labour $6, variable overhead $3 and fixed overhead $5. An outside supplier has offered to supply the component for $20 per unit. If Tamsen purchases the component, $12,000 of the total fixed overhead would be eliminated and the remainder would continue. The capacity freed up would remain idle. Which alternative should Tamsen choose, and by what amount?",
       "o": [
         "Make, with a cost advantage of $8,000.",
@@ -4000,6 +4251,7 @@
       }
     },
     {
+      "id": "4-5-63",
       "q": "Assume the same facts as for Tamsen Company (10,000 units, variable cost $18 per unit, $12,000 of avoidable fixed overhead, supplier price $20 per unit), except that the capacity freed by purchasing Component K could be used to manufacture another product that would generate $15,000 of contribution margin. Which alternative should Tamsen now choose, and by what amount?",
       "o": [
         "Buy, with an advantage of $7,000.",
@@ -4016,6 +4268,7 @@
       }
     },
     {
+      "id": "4-5-64",
       "q": "Which of the following is a qualitative factor that a company should consider in a make-or-buy decision, even when the quantitative analysis favours purchasing from an outside supplier?",
       "o": [
         "The reliability and quality control of the outside supplier, and the risk of losing in-house expertise and productive capacity.",
@@ -4032,6 +4285,7 @@
       }
     },
     {
+      "id": "4-5-65",
       "q": "Ardith Company produces 8,000 litres of Compound R at a joint cost of $96,000. Compound R can be sold at the split-off point for $14 per litre, or it can be processed further into Compound R-Plus at an additional cost of $38,000 and sold for $20 per litre. There is no loss of volume in further processing. What should Ardith do?",
       "o": [
         "Process further, for an incremental advantage of $10,000.",

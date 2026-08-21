@@ -1,6 +1,7 @@
 {
   "3-1": [
     {
+      "id": "3-1-01",
       "q": "When properly developed and administered, budgets provide the following advantages to the organization except to",
       "o": [
         "promote the efficient allocation of resources.",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "id": "3-1-02",
       "q": "The use of budgetary slack does not allow the preparer to",
       "o": [
         "Increase the probability of achieving budgeted performance.",
@@ -33,6 +35,7 @@
       }
     },
     {
+      "id": "3-1-03",
       "q": "In developing the budget for the next year, which one of the following approaches would produce the greatest amount of positive motivation and goal congruence?",
       "o": [
         "Permit the divisional manager to develop the goal for the division that in the manager's view will generate the greatest amount of profits.",
@@ -49,6 +52,7 @@
       }
     },
     {
+      "id": "3-1-04",
       "q": "The process of creating a formal plan and translating goals into a quantitative format is",
       "o": [
         "Process costing.",
@@ -65,6 +69,7 @@
       }
     },
     {
+      "id": "3-1-05",
       "q": "All of the following are advantages of top-down budgeting as opposed to participatory budgeting, except that it:",
       "o": [
         "May limit the acceptance of proposed goals and objectives.",
@@ -81,6 +86,7 @@
       }
     },
     {
+      "id": "3-1-06",
       "q": "An advantage of participatory budgeting is that it",
       "o": [
         "reduces the effect on the budgetary process of employee biases.",
@@ -97,6 +103,7 @@
       }
     },
     {
+      "id": "3-1-07",
       "q": "The goals and objectives upon which an annual profit plan is most effectively based are",
       "o": [
         "A combination of financial, quantitative, and qualitative measures.",
@@ -113,6 +120,7 @@
       }
     },
     {
+      "id": "3-1-08",
       "q": "The major objectives of budgeting are to",
       "o": [
         "define responsibility centers, facilitate the identification of blame for missed budget predictions, and ensure goal congruence between superiors and subordinates.",
@@ -129,6 +137,7 @@
       }
     },
     {
+      "id": "3-1-09",
       "q": "The following sequence of steps are employed by a company to develop its annual profit plan. Planning guidelines are disseminated downward by top management after receiving input from all levels of management. A sales budget is prepared by individual sales units reflecting the sales targets of the various segments. This provides the basis for departmental production budgets and other related components by the various operating units. Communication is primarily lateral with some upward communication possible. A profit plan is submitted to top management for coordination and review. Top management's recommendations and revisions are acted upon by middle management. A revised profit plan is resubmitted for further review to top management. Top management grants final approval and distributes the formal plan downward to the various operating units. This outline of steps best describes which one of the following approaches to budget development?",
       "o": [
         "Bottom-up approach.",
@@ -145,6 +154,7 @@
       }
     },
     {
+      "id": "3-1-10",
       "q": "Which one of the following best describes a reason why a company’s budgeting should be based on the company’s strategic plans?",
       "o": [
         "Establishes standards to measure employee performance.",
@@ -161,6 +171,7 @@
       }
     },
     {
+      "id": "3-1-11",
       "q": "Suboptimal decision making is not likely to occur when:",
       "o": [
         "The subunits in the organization compete with each other for the same input factors or for the same customers.",
@@ -177,6 +188,7 @@
       }
     },
     {
+      "id": "3-1-12",
       "q": "Which one of the following is most important to a successful budgeting effort?",
       "o": [
         "Experienced analysts",
@@ -193,6 +205,7 @@
       }
     },
     {
+      "id": "3-1-13",
       "q": "When budgets are used to evaluate performance and to set limits on spending, the process will often result in departments adding something \"extra\" to ensure the budgets will be met. This \"extra\" is",
       "o": [
         "Strategic planning.",
@@ -209,6 +222,7 @@
       }
     },
     {
+      "id": "3-1-14",
       "q": "All of the following are disadvantages of top-down budgeting as opposed to participatory budgeting, except that it:",
       "o": [
         "May result in a budget that is not possible to achieve.",
@@ -225,6 +239,7 @@
       }
     },
     {
+      "id": "3-1-15",
       "q": "Budgetary slack can best be described as",
       "o": [
         "The planned overestimation of budgeted expenses.",
@@ -241,6 +256,7 @@
       }
     },
     {
+      "id": "3-1-16",
       "q": "Budgeting problems where departmental managers are repeatedly achieving easy goals or failing to achieve demanding goals can be best minimized by establishing:",
       "o": [
         "Preventive controls.",
@@ -257,6 +273,7 @@
       }
     },
     {
+      "id": "3-1-17",
       "q": "Which of the following best describes a controllable expense?",
       "o": [
         "An expense that will remain semivariable in total over the relevant range in a given time period.",
@@ -273,6 +290,7 @@
       }
     },
     {
+      "id": "3-1-18",
       "q": "A company uses participative budgeting. In order to more easily meet budgetary goals, the controller underestimates the amount of revenue and overestimates fixed selling and administrative expenses. This is an example of",
       "o": [
         "budgetary variance.",
@@ -289,6 +307,7 @@
       }
     },
     {
+      "id": "3-1-19",
       "q": "Each organization plans and budgets its operations for slightly different reasons. Which one of the following is not a significant reason for planning and budgeting?",
       "o": [
         "Providing a basis for controlling operations.",
@@ -305,6 +324,7 @@
       }
     },
     {
+      "id": "3-1-20",
       "q": "The first step in developing a master budget is to prepare the",
       "o": [
         "selling and administrative budget.",
@@ -321,6 +341,7 @@
       }
     },
     {
+      "id": "3-1-21",
       "q": "All of the following are criticisms of the traditional budgeting process except that it",
       "o": [
         "incorporates non-financial measures as well as financial measures into its output.",
@@ -337,6 +358,7 @@
       }
     },
     {
+      "id": "3-1-22",
       "q": "An exercise equipment manufacturer uses the variable costing method and has determined that the total manufacturing costs of its single 30-pound barbell is $27 per unit. The direct material cost per unit is $16. The allocated administration expenses are $6 per unit. The allocated fixed rental costs are $3 per unit. If no other costs are incurred, the direct labor cost per unit is",
       "o": [
         "$11.",
@@ -353,6 +375,7 @@
       }
     },
     {
+      "id": "3-1-23",
       "q": "All of the following are advantages of the use of budgets in a management control system except that budgets:",
       "o": [
         "Promote communication and coordination within the organization.",
@@ -369,6 +392,7 @@
       }
     },
     {
+      "id": "3-1-24",
       "q": "Which of the following types of budget systems most strongly supports the objective of improving communication and promoting coordination?",
       "o": [
         "Top down, fixed budgets.",
@@ -385,6 +409,7 @@
       }
     },
     {
+      "id": "3-1-25",
       "q": "The budgeting process should be one that motivates managers and employees to work toward organizational goals. Which one of the following is least likely to motivate managers?",
       "o": [
         "Participation by subordinates in the budgetary process.",
@@ -401,6 +426,7 @@
       }
     },
     {
+      "id": "3-1-26",
       "q": "Budgets are a necessary component of financial decision making because they help provide a(n)",
       "o": [
         "means to check managerial discretion.",
@@ -417,6 +443,7 @@
       }
     },
     {
+      "id": "3-1-27",
       "q": "Which one of the following best describes the role of top management in the budgeting process? Top management",
       "o": [
         "needs to be involved, including using the budget process to communicate goals.",
@@ -433,6 +460,7 @@
       }
     },
     {
+      "id": "3-1-28",
       "q": "A company pays its production manager an annual bonus based on how well the manager performs against the production department’s annual budgets. The production manager has been overestimating budgeted costs the past few years in order to obtain a higher bonus payment. The production manager’s actions are best described as",
       "o": [
         "balancing production costs.",
@@ -449,6 +477,7 @@
       }
     },
     {
+      "id": "3-1-29",
       "q": "Which one of the following reasons is not a significant reason for planning in an organization?",
       "o": [
         "Monitoring profitable operations.",
@@ -465,6 +494,7 @@
       }
     },
     {
+      "id": "3-1-30",
       "q": "Which one of the following statements concerning approaches for the budget development process is correct?",
       "o": [
         "To prevent ambiguity, once departmental budgeted goals have been developed, they should remain fixed even if the sales forecast upon which they are based proves to be wrong in the middle of the fiscal year.",
@@ -481,6 +511,7 @@
       }
     },
     {
+      "id": "3-1-31",
       "q": "Which one of the following is usually not cited as being an advantage of a formal budgetary process?",
       "o": [
         "Forces management to evaluate the reasonableness of assumptions used and goals identified in the budgetary process.",
@@ -497,6 +528,7 @@
       }
     },
     {
+      "id": "3-1-32",
       "q": "Which one of the following is not an advantage of a participatory budgeting process?",
       "o": [
         "Goal congruence.",
@@ -513,6 +545,7 @@
       }
     },
     {
+      "id": "3-1-33",
       "q": "The budgeting technique that is most likely to motivate managers is",
       "o": [
         "zero-base budgeting.",
@@ -529,6 +562,7 @@
       }
     },
     {
+      "id": "3-1-34",
       "q": "Which budgeting approach is generally fastest to prepare, but carries the highest risk that lower-level managers will not accept the resulting targets?",
       "o": [
         "Participative (bottom-up) budgeting.",
@@ -540,6 +574,7 @@
       "e": "Authoritative (top-down) budgeting is prepared quickly because senior management sets the budget for every segment without a negotiation process. That speed comes at a cost: because lower-level managers had no input, they are more likely to view the targets as imposed and may resist or feel less committed to achieving them. Participative budgeting takes longer because it involves negotiation, but it produces higher acceptance. Zero-based and continuous budgeting describe a different dimension of the budgeting process (justification basis and time horizon), not the top-down/bottom-up distinction."
     },
     {
+      "id": "3-1-35",
       "q": "To meet budgetary goals more easily, a company controller underestimates the amount of revenue and overestimates fixed selling and administrative expenses during the budgeting process. This is an example of",
       "o": [
         "budgetary slack.",
@@ -556,6 +591,7 @@
       }
     },
     {
+      "id": "3-1-36",
       "q": "Which one of the following is not considered to be a benefit of participative budgeting?",
       "o": [
         "When managers set the final targets for the budget, top management need not be concerned with the overall profitability of current operations.",
@@ -572,6 +608,7 @@
       }
     },
     {
+      "id": "3-1-37",
       "q": "Diana Stinson, Cherry Valley Inc.'s factory manager, had lost her patience. Six months ago, she had appointed a team from the production and service departments to finalize the allocation of costs and setting of standard costs. They were still feuding, and so she had hired Brennan and Rose, a large consulting firm, to resolve the matter. All of the following are potential consequences of having the standards set by Brennan and Rose except that",
       "o": [
         "Employees could react negatively since they did not participate in setting the standards.",
@@ -588,6 +625,7 @@
       }
     },
     {
+      "id": "3-1-38",
       "q": "One of the primary advantages of budgeting is that it",
       "o": [
         "bases the profit plan on estimates.",
@@ -604,6 +642,7 @@
       }
     },
     {
+      "id": "3-1-39",
       "q": "Given the following data for Scurry Company, what is the cost of goods sold?\nBeginning inventory of finished goods: | $100,000\nCost of goods manufactured: | 700,000\nEnding inventory of finished goods: | 200,000\nBeginning work-in-process inventory: | 300,000\nEnding work-in-process inventory: | 50,000",
       "o": [
         "$500,000.",
@@ -620,6 +659,7 @@
       }
     },
     {
+      "id": "3-1-40",
       "q": "One approach for developing standard costs incorporates communication, bargaining, and interaction among product line managers; the immediate supervisors for whom the standards are being developed; and the accountants and engineers before the standards are accepted by top management. This approach would best be characterized as a(n):",
       "o": [
         "Centralized top-down approach.",
@@ -636,6 +676,7 @@
       }
     },
     {
+      "id": "3-1-41",
       "q": "From the perspective of corporate management, the use of budgetary slack",
       "o": [
         "Increases the effectiveness of the corporate planning process.",
@@ -652,6 +693,7 @@
       }
     },
     {
+      "id": "3-1-42",
       "q": "The manager of a responsibility center that is accountable for costs incurred but not for revenue earned or for the capital invested in the center is the manager of",
       "o": [
         "A cost center.",
@@ -669,6 +711,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-43",
       "q": "Which one of the following costs is most likely to be controllable by the supervisor of a production department?",
       "o": [
         "Depreciation on the factory building.",
@@ -686,6 +729,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-44",
       "q": "Variances between actual and budgeted costs for a responsibility center should be reported by",
       "o": [
         "The accounting department, because it maintains the accounting records.",
@@ -703,6 +747,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-45",
       "q": "A division manager is evaluated on the division's total reported costs, which include an allocated share of corporate advertising that the manager cannot influence. The most likely consequence is that",
       "o": [
         "The manager will find ways to reduce corporate advertising spending.",
@@ -720,6 +765,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-46",
       "q": "Standards that can be met only under perfect operating conditions, with no machine breakdowns, no waste and no employee downtime, will most likely",
       "o": [
         "Motivate employees to their maximum level of effort.",
@@ -737,6 +783,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-47",
       "q": "A company engages an outside consulting firm to set the standard costs for its production departments. Compared with standards developed by the departments themselves, the most likely consequence is",
       "o": [
         "Greater acceptance of the standards by the people held to them.",
@@ -754,6 +801,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-48",
       "q": "For a standard to work as both a planning tool and a motivational tool, it should be set at a level that is",
       "o": [
         "Easily achieved by every employee.",
@@ -771,6 +819,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-49",
       "q": "Beyond top management support, which of the following is most likely to undermine a budgeting process even if every technical step is performed correctly?",
       "o": [
         "Using a spreadsheet instead of dedicated budgeting software.",
@@ -782,6 +831,7 @@
       "e": "A budgeting process can be technically flawless — correct formulas, accurate data, timely schedules — and still fail behaviorally. If managers are evaluated purely on hitting the budget number regardless of circumstances, they are pushed toward building in budgetary slack, gaming the numbers, or making short-term decisions that hurt the company to protect their own evaluation. This defeats the purpose of budgeting as a planning and coordination tool. The other options are neutral process choices (tooling, frequency, consolidation responsibility) that do not by themselves create this kind of dysfunction."
     },
     {
+      "id": "3-1-50",
       "q": "A company's budget guidelines are vague, submission deadlines are unclear, and operating managers receive the approved budget only after the budget year has begun. The budgeting process most clearly lacks",
       "o": [
         "Budgetary slack.",
@@ -799,6 +849,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-1-51",
       "q": "Which of the following correctly describes the time frames of a company's long-range strategic plan compared with its annual profit plan?",
       "o": [
         "The strategic plan covers one year, and the annual profit plan covers three to five years.",
@@ -815,6 +866,7 @@
       }
     },
     {
+      "id": "3-1-52",
       "q": "Which of the following statements about the time frames used in budgeting is correct?",
       "o": [
         "A short-term budget is usually prepared for a period of one year or less and is generally broken down into shorter interim periods such as months or quarters.",
@@ -833,6 +885,7 @@
   ],
   "3-2": [
     {
+      "id": "3-2-01",
       "q": "Barnes Corporation expected to sell 150,000 board games during the month of November, and the company's master budget contained the following data related to the sale and production of these games:\nRevenue: | $2,400,000\nDirect materials: | 675,000\nDirect labor: | 300,000\nVariable overhead: | 450,000\nContribution: | $975,000\nFixed overhead: | 250,000\nFixed selling/administration: | 500,000\nOperating income: | $225,000\nActual sales during November were 180,000 games. Using a flexible budget, the company expects the operating income for the month of November to be",
       "o": [
         "$420,000.",
@@ -849,6 +902,7 @@
       }
     },
     {
+      "id": "3-2-02",
       "q": "A budget developed by using budgeted prices and budgeted costs based on the actual output in the budget period is a(n)",
       "o": [
         "operating budget.",
@@ -865,6 +919,7 @@
       }
     },
     {
+      "id": "3-2-03",
       "q": "A budgeting approach that requires a manager to justify the entire budget for each budget period is known as:",
       "o": [
         "Incremental budgeting.",
@@ -881,6 +936,7 @@
       }
     },
     {
+      "id": "3-2-04",
       "q": "There are many different budget techniques or processes that business organizations can employ. One of these techniques or processes is zero-base budgeting, which is:",
       "o": [
         "Using the prior year's budget as a base year and adjusting it based on the experiences of the prior year and the expectations for the coming year.",
@@ -897,6 +953,7 @@
       }
     },
     {
+      "id": "3-2-05",
       "q": "A municipal government requires each department supervisor to submit an annual budget request stating the specific goals of the department and listing a series of \"decision packages\" relating to each goal. Each decision package describes a set of desired activities, the benefits of these activities, and the potential consequences of not performing the activities. Funds are allocated based on the estimated costs and benefits of each package. This is an example of",
       "o": [
         "a static budget.",
@@ -913,6 +970,7 @@
       }
     },
     {
+      "id": "3-2-06",
       "q": "A company’s board of directors has requested a full in-depth review of all budgeted items for next fiscal year’s operating budget. The controller of the company subsequently advised all business unit heads that the company will not automatically approve operating budget items for next fiscal year simply because they were approved in the past, and that all operating budget items for next fiscal year will need to be justified. Based on the above information, which one of the following budgeting systems is the company most likely using?",
       "o": [
         "Flexible budgeting.",
@@ -929,6 +987,7 @@
       }
     },
     {
+      "id": "3-2-07",
       "q": "The use of standard costs in the budgeting process signifies that an organization has most likely implemented a",
       "o": [
         "Static budget.",
@@ -945,6 +1004,7 @@
       }
     },
     {
+      "id": "3-2-08",
       "q": "Based on past experience, a company has developed the following budget formula for estimating its shipping expenses. The company's shipments average 12 lbs. per shipment:\nShipping costs = $16,000 + ($0.50 × lbs. shipped)\nThe planned activity and actual activity regarding orders and shipments for the current month are given in the following schedule:\n— Columns: | Planned | Actual\nSales orders: | 800 | 780\nShipments: | 800 | 820\nUnits shipped: | 8,000 | 9,000\nSales: | $120,000 | $144,000\nTotal pounds shipped: | 9,600 | 12,300\nThe actual shipping costs for the month amounted to $21,000. The appropriate monthly flexible budget allowance for shipping costs for the purpose of performance evaluation would be",
       "o": [
         "$22,150",
@@ -961,6 +1021,7 @@
       }
     },
     {
+      "id": "3-2-09",
       "q": "A manufacturing firm has certain peak seasons, the summer season and the last two weeks of February. During these periods of increased output, the firm leases additional production equipment and hires additional temporary employees. Which one of the following budget techniques would best fit this firm’s needs?",
       "o": [
         "Project budgeting because discrete financial information is available.",
@@ -977,6 +1038,7 @@
       }
     },
     {
+      "id": "3-2-10",
       "q": "Which one of the following statements regarding the difference between a flexible budget and a static budget is correct?",
       "o": [
         "A flexible budget is established by operating management, while a static budget is determined by top management.",
@@ -993,6 +1055,7 @@
       }
     },
     {
+      "id": "3-2-11",
       "q": "The controller of Allenwood Steel Company has tasked the newly-hired budget manager with restructuring the company’s budget system. The controller would like her to gather information from each unit on their activities, and, with top management, examine each unit’s contributions to the company as a whole. Then, with the objective of eliminating inefficiency and waste, each unit’s budget for the following year will be determined without regard to past budgets and with little regard for past operating results. This method of budget development is called",
       "o": [
         "activity-based budgeting.",
@@ -1009,6 +1072,7 @@
       }
     },
     {
+      "id": "3-2-12",
       "q": "The use of the master budget throughout the year as a constant comparison with actual results signifies that the master budget is also a",
       "o": [
         "Static budget.",
@@ -1025,6 +1089,7 @@
       }
     },
     {
+      "id": "3-2-13",
       "q": "What do flexible budgets accommodate?",
       "o": [
         "Changes in activity levels.",
@@ -1041,6 +1106,7 @@
       }
     },
     {
+      "id": "3-2-14",
       "q": "The major feature of zero-based budgeting is that it",
       "o": [
         "evaluates each activity and determines whether it should be maintained as it is, reduced, or eliminated.",
@@ -1057,6 +1123,7 @@
       }
     },
     {
+      "id": "3-2-15",
       "q": "Country Ovens is a family restaurant chain. Due to an unexpected road construction project, traffic passing by the Country Ovens restaurant in Newtown has significantly increased. As a result, restaurant volume has similarly increased well beyond the level expected. Which type of budget would be most appropriate in helping the restaurant manager plan for restaurant labor costs?",
       "o": [
         "Zero-based budget.",
@@ -1073,6 +1140,7 @@
       }
     },
     {
+      "id": "3-2-16",
       "q": "Which one of the following statements is correct concerning a flexible budget cost formula? Variable costs are stated",
       "o": [
         "in total and fixed costs are stated in total.",
@@ -1089,6 +1157,7 @@
       }
     },
     {
+      "id": "3-2-17",
       "q": "A flexible budget is a quantitative expression of a plan that",
       "o": [
         "is developed for the actual level of output achieved for the budget period.",
@@ -1105,6 +1174,7 @@
       }
     },
     {
+      "id": "3-2-18",
       "q": "A budget that expresses the operating and financial plans of management for a fiscal year is called a",
       "o": [
         "rolling budget.",
@@ -1121,6 +1191,7 @@
       }
     },
     {
+      "id": "3-2-19",
       "q": "In an organization that plans by using comprehensive budgeting, the master budget refers to:",
       "o": [
         "the booklet containing budget guidelines, policies, and forms to use in the budgeting process.",
@@ -1137,6 +1208,7 @@
       }
     },
     {
+      "id": "3-2-20",
       "q": "A systemized approach known as zero-base budgeting (ZBB)",
       "o": [
         "Divides the activities of individual responsibility centers into a series of packages that are prioritized.",
@@ -1153,6 +1225,7 @@
       }
     },
     {
+      "id": "3-2-21",
       "q": "A flexible budget is appropriate for",
       "o": [
         "Control of direct materials and direct labor but not selling and administrative expenses.",
@@ -1169,6 +1242,7 @@
       }
     },
     {
+      "id": "3-2-22",
       "q": "Which of the following best describes a continuous profit plan?",
       "o": [
         "An annual plan that is part of a 5-year plan.",
@@ -1185,6 +1259,7 @@
       }
     },
     {
+      "id": "3-2-23",
       "q": "A company currently prepares only a static annual budget. Which change would most directly give managers continuous forward visibility of a full year at all times?",
       "o": [
         "Switching to zero-based budgeting.",
@@ -1196,6 +1271,7 @@
       "e": "A rolling (continuous) budget is specifically designed to keep a constant horizon in view: as each month or quarter closes, a new one is added at the far end, so the company always has a full year of budget ahead of it. Zero-based budgeting changes how each period's budget is justified, not the time horizon. A flexible budget is a performance-evaluation tool prepared after actual volume is known, not a forward-planning horizon. Simply shortening the annual cycle to six months still leaves a static endpoint rather than continuous visibility."
     },
     {
+      "id": "3-2-24",
       "q": "A continuous budget is one that",
       "o": [
         "is available for a specified future period by adding a period to the period that just ended.",
@@ -1212,6 +1288,7 @@
       }
     },
     {
+      "id": "3-2-25",
       "q": "A budget in which each quarter is superseded by the next, encouraging management to think about the upcoming quarter is a",
       "o": [
         "sales budget.",
@@ -1228,6 +1305,7 @@
       }
     },
     {
+      "id": "3-2-26",
       "q": "A company prepares a budget covering the next twelve months. At the end of each month it drops the month just completed and adds the same month of the following year, so that twelve months are always budgeted. This budget is best described as",
       "o": [
         "A static budget.",
@@ -1245,6 +1323,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-27",
       "q": "In deciding whether to investigate a variance, management should primarily consider",
       "o": [
         "Whether the variance is favorable or unfavorable.",
@@ -1262,6 +1341,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-28",
       "q": "Which one of the following is the best reason for investigating a favorable variance?",
       "o": [
         "Favorable variances never need to be investigated.",
@@ -1279,6 +1359,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-29",
       "q": "A company investigates any cost variance greater than $10,000 or 5% of the budgeted amount, whichever is lower. Based on the data below, which item must be investigated?\nItem — Columns: | Budgeted cost | Variance\nItem A: | $150,000 | $8,000\nItem B: | $400,000 | $9,000\nItem C: | $60,000 | $2,500\nItem D: | $900,000 | $9,500",
       "o": [
         "Item A.",
@@ -1296,6 +1377,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-30",
       "q": "A small unfavorable direct materials usage variance has appeared in each of the last six months. Management should",
       "o": [
         "Ignore it, because each individual month's amount is immaterial.",
@@ -1313,6 +1395,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-31",
       "q": "Which one of the following is least likely to justify investigating a variance?",
       "o": [
         "The variance is large in both dollar terms and percentage terms.",
@@ -1330,6 +1413,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-32",
       "q": "A project budget differs from the annual operating budget principally because a project budget",
       "o": [
         "Covers exactly one accounting period.",
@@ -1347,6 +1431,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-33",
       "q": "Which situation is best suited to project budgeting?",
       "o": [
         "Budgeting the monthly payroll of the accounting department.",
@@ -1364,6 +1449,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-34",
       "q": "Life-cycle budgeting estimates",
       "o": [
         "Only the manufacturing costs of a product.",
@@ -1381,6 +1467,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-35",
       "q": "Life-cycle budgeting is most useful for a product that",
       "o": [
         "Has been sold unchanged for many years.",
@@ -1398,6 +1485,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-36",
       "q": "Which cost would be included in a product's life-cycle budget but excluded from the conventional product cost reported for a single year?",
       "o": [
         "Direct materials used during the current year.",
@@ -1415,6 +1503,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-37",
       "q": "A company is preparing a life-cycle budget for a new product. Research and development is budgeted at $600,000, design at $200,000, marketing and distribution at $400,000, and customer service at $150,000. Manufacturing cost is budgeted at $18 per unit, and 100,000 units are expected to be sold over the product's life. The budgeted life-cycle cost per unit is",
       "o": [
         "$18.00.",
@@ -1432,6 +1521,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-38",
       "q": "A company budgets variable costs of $6 per unit and fixed costs of $120,000 for the year, based on planned production of 40,000 units. Actual production was 45,000 units. The flexible budget total cost for the actual level of production is",
       "o": [
         "$360,000.",
@@ -1449,6 +1539,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-39",
       "q": "A company's static budget was based on sales of 10,000 units with a budgeted contribution margin of $12 per unit. Actual sales were 11,000 units and the actual contribution margin earned was $126,500. The flexible budget variance for contribution margin is",
       "o": [
         "$6,500 favorable.",
@@ -1466,6 +1557,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-40",
       "q": "A company budgeted a selling price of $25 per unit and planned to sell 8,000 units. It actually sold 8,600 units at an average price of $24. Flexible budget revenue is",
       "o": [
         "$200,000.",
@@ -1483,6 +1575,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-41",
       "q": "Which one of the following is part of the financial budget rather than the operating budget?",
       "o": [
         "The direct labor usage budget.",
@@ -1500,6 +1593,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-42",
       "q": "The operating budget culminates in the",
       "o": [
         "Cash budget.",
@@ -1517,6 +1611,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-2-43",
       "q": "A master budget is best described as",
       "o": [
         "A budget covering the manufacturing function only.",
@@ -1536,6 +1631,7 @@
   ],
   "3-3": [
     {
+      "id": "3-3-01",
       "q": "When sales volume is seasonal in nature, certain items in the budget must be coordinated. The three most significant items to coordinate in budgeting seasonal sales volume are",
       "o": [
         "Raw material inventory, direct labor hours, and manufacturing overhead costs.",
@@ -1552,6 +1648,7 @@
       }
     },
     {
+      "id": "3-3-02",
       "q": "Myers Company uses a calendar-year and prepares a cash budget for each month of the year. Which one of the following items should be considered when developing July's cash budget?",
       "o": [
         "Property taxes levied in the last calendar year scheduled to be paid quarterly in the coming year during the last month of each calendar quarter.",
@@ -1568,6 +1665,7 @@
       }
     },
     {
+      "id": "3-3-03",
       "q": "When budgeting, the items to be considered by a manufacturing firm in going from a sales quantity budget to a production budget would be the",
       "o": [
         "Expected change in the quantity of work-in-process inventories only.",
@@ -1584,6 +1682,7 @@
       }
     },
     {
+      "id": "3-3-04",
       "q": "The most direct way to prepare a cash budget for a manufacturing firm is to include",
       "o": [
         "Projected net income, depreciation, and goodwill impairment.",
@@ -1600,6 +1699,7 @@
       }
     },
     {
+      "id": "3-3-05",
       "q": "In developing a comprehensive annual budget for a manufacturing company, which one of the following items should be done first?",
       "o": [
         "Determination of manufacturing capacity.",
@@ -1616,6 +1716,7 @@
       }
     },
     {
+      "id": "3-3-06",
       "q": "In the budgeting and planning process for a firm, which one of the following should be completed first?",
       "o": [
         "Financial budget",
@@ -1632,6 +1733,7 @@
       }
     },
     {
+      "id": "3-3-07",
       "q": "A company operates on a calendar year but maintains four continuous quarterly budgets for up-to-date budget information. After completing its five-year long-term plan, the company’s management decided to make a capital investment in new equipment. The equipment is expected to have a useful life of nine years. Which one of the following is the most appropriate time period for the capital budget for the evaluation of the capital investment?",
       "o": [
         "Five years.",
@@ -1648,6 +1750,7 @@
       }
     },
     {
+      "id": "3-3-08",
       "q": "Which one of the following schedules would be the last item to be prepared in the normal budget preparation process?",
       "o": [
         "Cost of goods sold budget.",
@@ -1664,6 +1767,7 @@
       }
     },
     {
+      "id": "3-3-09",
       "q": "Which one of the following items should be done first when developing a comprehensive budget for a manufacturing company?",
       "o": [
         "Development of the cash budget.",
@@ -1680,6 +1784,7 @@
       }
     },
     {
+      "id": "3-3-10",
       "q": "Which one of the following may be considered an independent item in the preparation of the master budget?",
       "o": [
         "Ending inventory budget.",
@@ -1696,6 +1801,7 @@
       }
     },
     {
+      "id": "3-3-11",
       "q": "Which one of the following statements regarding selling and administrative budgets is most accurate?",
       "o": [
         "Selling and administrative budgets are difficult to allocate by month and are best presented as one number for the entire year.",
@@ -1712,6 +1818,7 @@
       }
     },
     {
+      "id": "3-3-12",
       "q": "Which of the following statements about the master budget is correct?",
       "o": [
         "It reflects controllable costs only.",
@@ -1728,6 +1835,7 @@
       }
     },
     {
+      "id": "3-3-13",
       "q": "Data regarding Rombus Company's budget are shown below.\nPlanned sales: | 4,000 units\nMaterial cost: | $2.50 per pound\nDirect labor: | 3 hours per unit\nDirect labor rate: | $7 per hour\nFinished goods beginning inventory: | 900 units\nFinished goods ending inventory: | 600 units\nDirect materials beginning inventory: | 4,300 units\nDirect materials ending inventory: | 4,500 units\nMaterials used per unit: | 6 pounds\nRombus Company's production budget will show total units to be produced of",
       "o": [
         "3,700",
@@ -1744,6 +1852,7 @@
       }
     },
     {
+      "id": "3-3-14",
       "q": "Individual budget schedules are prepared to develop an annual comprehensive or master budget. The budget schedule that would provide the necessary input data for the direct labor budget would be the",
       "o": [
         "Raw materials purchases budget.",
@@ -1760,6 +1869,7 @@
       }
     },
     {
+      "id": "3-3-15",
       "q": "Playtime Toys estimates that it will sell 200,000 dolls during the coming year. The beginning inventory is 12,000 dolls; the target ending inventory is 15,000 dolls. Each doll requires two shoes which are purchased from an outside supplier. The beginning inventory of shoes is 20,000; the target ending inventory is 18,000 shoes. The number of shoes that should be purchased during the year is",
       "o": [
         "398,000 shoes.",
@@ -1776,6 +1886,7 @@
       }
     },
     {
+      "id": "3-3-16",
       "q": "Which one of the following best describes the order in which budgets should be prepared when developing the annual master operating budget?",
       "o": [
         "Production budget, revenue budget, direct material budget.",
@@ -1792,6 +1903,7 @@
       }
     },
     {
+      "id": "3-3-17",
       "q": "A company incurred $200,000 of manufacturing cost during the month, with a beginning finished goods inventory of $20,000 and an ending finished goods inventory of $15,000. Assuming no work-in-process inventories, the company’s cost of goods sold was",
       "o": [
         "$200,000.",
@@ -1808,6 +1920,7 @@
       }
     },
     {
+      "id": "3-3-18",
       "q": "When preparing the annual operating budget, management usually starts the process with the",
       "o": [
         "Cash budget.",
@@ -1824,6 +1937,7 @@
       }
     },
     {
+      "id": "3-3-19",
       "q": "In preparing the direct material purchases budget for next quarter, the plant controller has the following information available.\nBudgeted unit sales: | 2,000\nPounds of materials per unit: | 4\nCost of materials per pound: | $3\nPounds of materials on hand: | 400\nFinished units on hand: | 250\nTarget ending units inventory: | 325\nTarget ending inventory of pounds of materials: | 800\nHow many pounds of materials must be purchased?",
       "o": [
         "2,475.",
@@ -1840,6 +1954,7 @@
       }
     },
     {
+      "id": "3-3-20",
       "q": "A company is preparing its cash budget for the coming month. All sales are made on account. Given the following: Beginning Balances Cash $ 50,000 Accounts receivable 180,000 Budgeted Amounts Sales $800,000 Cash disbursements 780,000 Depreciation 25,000 Ending accounts receivable balance 210,000 What is the budgeted cash balance of the company at the end of the coming month?",
       "o": [
         "$45,000",
@@ -1856,6 +1971,7 @@
       }
     },
     {
+      "id": "3-3-21",
       "q": "The upcoming period’s budget information for a company is shown below. Planned sales 4,000 units Finished goods, beginning inventory 900 units Finished goods, ending inventory 600 units Direct materials, beginning inventory 4,300 units Direct materials, ending inventory 4,500 units The company’s production budget will show total units to be produced of",
       "o": [
         "4,600.",
@@ -1872,6 +1988,7 @@
       }
     },
     {
+      "id": "3-3-22",
       "q": "A company is projecting cash sales of $30,000, $28,000, and $32,000 for the first three months of the year. Credit sales for the same period are forecasted at $125,000, $118,000, and $160,000, respectively. The average collections on sales are 55% in the month of the sale, 30% in the month following the sale, and 10% in the second month following the sale. What are the company’s total cash receipts expected during March?",
       "o": [
         "$135,900.",
@@ -1888,6 +2005,7 @@
       }
     },
     {
+      "id": "3-3-23",
       "q": "A firm develops an annual cash budget in order to",
       "o": [
         "Avoid the opportunity costs of non-invested excess cash and minimize the cost of interim financing.",
@@ -1904,6 +2022,7 @@
       }
     },
     {
+      "id": "3-3-24",
       "q": "Wilson Company uses a comprehensive planning and budgeting system. The proper order for Wilson to prepare certain budget schedules would be:",
       "o": [
         "Statement of cash flows, cost of goods sold, income statement, and balance sheet.",
@@ -1920,6 +2039,7 @@
       }
     },
     {
+      "id": "3-3-25",
       "q": "A company reported the following cost information for the last fiscal year when it produced 100,000 units. Direct labor $200,000 Direct materials 100,000 Manufacturing overhead 200,000 Selling and administrative expenses 150,000 All costs are variable except for $100,000 of manufacturing overhead and $100,000 of selling and administrative expenses. Using flexible budgeting, what are the total costs associated with producing and selling 110,000 units?",
       "o": [
         "$695,000.",
@@ -1936,6 +2056,7 @@
       }
     },
     {
+      "id": "3-3-26",
       "q": "Superflite expects April sales of its deluxe model airplane, the C-14, to be 402,000 units at $11 each. Each C-14 requires three purchased components shown below.\nUnit — Columns: | Purchase Cost | Number Needed for each C-14\nA-9: | $0.50 | 1\nB-6: | 0.25 | 2\nD-28: | 1.00 | 3\nFactory direct labor and variable overhead per unit of C-14 totals $3.00. Fixed factory overhead is $1.00 per unit at a production level of 500,000 units. Superflite plans the following beginning and ending inventories for the month of April and uses standard absorption costing for valuing inventory.\nPart No. — Columns: | Units at April 1 | Units at April 30\nC-14: | 12,000 | 10,000\nA-9: | 21,000 | 9,000\nB-6: | 32,000 | 10,000\nD-28: | 14,000 | 6,000\nAssume Superflite plans to manufacture 400,000 units in April. Superflite's April budget for the purchase of A-9 should be",
       "o": [
         "412,000 units.",
@@ -1952,6 +2073,7 @@
       }
     },
     {
+      "id": "3-3-27",
       "q": "Superflite expects April sales of its deluxe model airplane, the C-14, to be 402,000 units at $11 each. Each C-14 requires three purchased components shown below.\nUnit — Columns: | Purchase Cost | Number Needed for each C-14\nA-9: | $0.50 | 1\nB-6: | 0.25 | 2\nD-28: | 1.00 | 3\nFactory direct labor and variable overhead per unit of C-14 totals $3.00. Fixed factory overhead is $1.00 per unit at a production level of 500,000 units. Superflite plans the following beginning and ending inventories for the month of April and uses standard absorption costing for valuing inventory.\nPart No. — Columns: | Units at April 1 | Units at April 30\nC-14: | 12,000 | 10,000\nA-9: | 21,000 | 9,000\nB-6: | 32,000 | 10,000\nD-28: | 14,000 | 6,000\nThe C-14 production budget for April should be based on the manufacture of",
       "o": [
         "424,000 units.",
@@ -1968,6 +2090,7 @@
       }
     },
     {
+      "id": "3-3-28",
       "q": "Within the Financial Budget, which schedule must be prepared immediately before the Cash Budget?",
       "o": [
         "The Budgeted Balance Sheet.",
@@ -1979,6 +2102,7 @@
       "e": "The Financial Budget is prepared in this order: Capital Expenditures Budget, then Cash Budget, then Budgeted Balance Sheet, then Budgeted Statement of Cash Flows. The Capital Expenditures Budget feeds the Cash Budget because planned equipment purchases are one of the disbursements the Cash Budget must project. The Budgeted Balance Sheet and Budgeted Statement of Cash Flows both come after the Cash Budget, not before it, and the Budgeted Income Statement belongs to the Operating Budget, which is completed earlier in the overall sequence."
     },
     {
+      "id": "3-3-29",
       "q": "The budget that is usually the most difficult to forecast is the",
       "o": [
         "Production budget.",
@@ -1995,6 +2119,7 @@
       }
     },
     {
+      "id": "3-3-30",
       "q": "All of the following are useful for forecasting the needed level of inventory except:",
       "o": [
         "Internal accounting allocations of costs to different segments of the company.",
@@ -2011,6 +2136,7 @@
       }
     },
     {
+      "id": "3-3-31",
       "q": "The foundation of a profit plan is the",
       "o": [
         "Cost and expense budget.",
@@ -2027,6 +2153,7 @@
       }
     },
     {
+      "id": "3-3-32",
       "q": "Jordan Auto has developed the following production plan: Month January 10,000 February 8,000 March 9,000 April 12,000 Each unit contains 3 pounds of raw material. The desired raw material ending inventory each month is 120% of the next month's production, plus 500 pounds. (The beginning inventory meets this requirement.) Jordan has developed the following direct labor standards for production of these units: Department 1 Department 2 Hours per unit 2.0 0.5 Hourly rate $6.75 $12.00 Jordan Auto's total budgeted direct labor dollars for February usage should be",
       "o": [
         "$210,600",
@@ -2043,6 +2170,7 @@
       }
     },
     {
+      "id": "3-3-33",
       "q": "The starting point for creating a master budget for an office administration technology school would be",
       "o": [
         "estimating salaries of the instructors.",
@@ -2059,6 +2187,7 @@
       }
     },
     {
+      "id": "3-3-34",
       "q": "The operating budget process usually begins with the",
       "o": [
         "Income statement.",
@@ -2075,6 +2204,7 @@
       }
     },
     {
+      "id": "3-3-35",
       "q": "What would be the correct chronological order of preparation for the following budgets? I. Cost of goods sold budget. II. Production budget. III. Purchases budget. IV. Administrative (nonmanufacturing) budget.",
       "o": [
         "IV, II, III, I",
@@ -2091,6 +2221,7 @@
       }
     },
     {
+      "id": "3-3-36",
       "q": "Maximilian Computer Company uses a comprehensive budgeting system in planning its annual operations. Which of the following best describes the information needed in order to determine the budgeted cost of circuit boards to be purchased for use in building its laptop computer? Assume one circuit board is used in each laptop.",
       "o": [
         "Begin with budgeted laptop sales in units, deduct the desired ending inventory of circuit boards, add the expected beginning inventory of circuit boards, and multiply the resulting amount by the purchase cost per circuit board.",
@@ -2107,6 +2238,7 @@
       }
     },
     {
+      "id": "3-3-37",
       "q": "Swan Company is a maker of men's slacks. The company would like to maintain 20,000 yards of fabric in ending inventory. The beginning fabric inventory is expected to contain 25,000 yards. The expected yards of fabric needed for sales is 90,000. Compute the yards of fabric that Swan needs to purchase.",
       "o": [
         "135,000.",
@@ -2123,6 +2255,7 @@
       }
     },
     {
+      "id": "3-3-38",
       "q": "Rock Industries has four divisions. In the quest to develop a more achievable budget for the coming year, the chief executive officer has elected to develop the company's budget by using a decentralized bottom-up budget approach. Chip Jones is production manager in one of the divisions. Jones’ involvement in the budget process this year will probably",
       "o": [
         "Require development of a production budget based on the prior year's manufacturing activity.",
@@ -2139,6 +2272,7 @@
       }
     },
     {
+      "id": "3-3-39",
       "q": "When preparing the operating and financial budgets, which one of the following is the order in which the component budgets are commonly prepared?",
       "o": [
         "Sales, production, cost of goods, direct materials purchased, administrative.",
@@ -2155,6 +2289,7 @@
       }
     },
     {
+      "id": "3-3-40",
       "q": "The preparation of a comprehensive master budget culminates with the preparation of the",
       "o": [
         "Strategic budget.",
@@ -2171,6 +2306,7 @@
       }
     },
     {
+      "id": "3-3-41",
       "q": "The Jung Corporation's budget calls for the following production:\n\nQtr 1: 45,000 units\nQtr 2: 38,000 units\nQtr 3: 34,000 units\nQtr 4: 48,000 units\n\nEach unit of product requires three pounds of direct material. The company's policy is to begin each quarter with an inventory of direct materials equal to 30% of that quarter's direct material requirements.\n\nBudgeted direct materials purchases for the third quarter would be",
       "o": [
         "38,200 pounds.",
@@ -2187,6 +2323,7 @@
       }
     },
     {
+      "id": "3-3-42",
       "q": "In the preparation of the annual operating budget, the direct materials usage budget should directly follow preparation of the",
       "o": [
         "forecasted balance sheet.",
@@ -2203,6 +2340,7 @@
       }
     },
     {
+      "id": "3-3-43",
       "q": "Ming Company has budgeted sales at 6,300 units for the next fiscal year and desires to have 590 good units on hand at the end of that year. Beginning inventory is 470 units. Ming has found from past experience that 10% of all units produced do not pass final inspection and must therefore be destroyed. How many units should Ming plan to produce in the next fiscal year?",
       "o": [
         "7,186.",
@@ -2219,6 +2357,7 @@
       }
     },
     {
+      "id": "3-3-44",
       "q": "The Yummy Dog Bone Company is anticipating that a major supplier might experience a strike this year. Because of the nature of the product and emphasis on quality, extra production cannot be stored as finished goods inventory. When developing a contingency budget that would anticipate a raw material buildup, the two most significant items that will be affected are",
       "o": [
         "Production and cash flow.",
@@ -2235,6 +2374,7 @@
       }
     },
     {
+      "id": "3-3-45",
       "q": "In preparing a corporate master budget, which one of the following is most likely to be prepared last?",
       "o": [
         "Production budget",
@@ -2251,6 +2391,7 @@
       }
     },
     {
+      "id": "3-3-46",
       "q": "A company is preparing, among others, the following budgets: Sales budget Capital budget Cash budget Production budget The correct sequence of budget preparation is",
       "o": [
         "capital budget, sales budget, production budget; with cash budget prepared separately and independently.",
@@ -2267,6 +2408,7 @@
       }
     },
     {
+      "id": "3-3-47",
       "q": "Which one of the following would cause a company’s production budget to decrease?",
       "o": [
         "A decrease in required ending inventory.",
@@ -2283,6 +2425,7 @@
       }
     },
     {
+      "id": "3-3-48",
       "q": "A company planned to manufacture and sell 5,600 toys for ¥750,000 and incur ¥400,000 in variable expenses and ¥255,000 in fixed expenses. By the end of the year, the company manufactured and sold 4,500 toys for ¥650,000; it incurred ¥375,000 in variable expenses and ¥195,000 in fixed expenses. What is the company’s operating income variance for the year?",
       "o": [
         "¥75,000 unfavorable.",
@@ -2299,6 +2442,7 @@
       }
     },
     {
+      "id": "3-3-49",
       "q": "Which one of following budgets is regarded as the foundation of the master budget?",
       "o": [
         "Cash.",
@@ -2315,6 +2459,7 @@
       }
     },
     {
+      "id": "3-3-50",
       "q": "A company planned to sell 2,000 units in its master budget. Its budgeted sales revenue is €500,000; budgeted variable expense is €350,000; and budgeted fixed expense is €45,000. If the company only manufactured and sold 1,750 units during the year, how much is the company’s flexible budget operating income?",
       "o": [
         "€91,875.",
@@ -2331,6 +2476,7 @@
       }
     },
     {
+      "id": "3-3-51",
       "q": "The production budget process usually begins with the",
       "o": [
         "Direct materials budget.",
@@ -2347,6 +2493,7 @@
       }
     },
     {
+      "id": "3-3-52",
       "q": "All of the following would appear on a projected schedule of cost of goods manufactured except for",
       "o": [
         "ending work-in-process inventory.",
@@ -2363,6 +2510,7 @@
       }
     },
     {
+      "id": "3-3-53",
       "q": "Which one of the following is in a company’s cash budget?",
       "o": [
         "Depreciation of plant equipment.",
@@ -2379,6 +2527,7 @@
       }
     },
     {
+      "id": "3-3-54",
       "q": "Many companies use comprehensive budgeting in planning for the next year's activities. When both an operating budget and a financial budget are prepared, which one of the following is correct concerning the financial budget? Included in the Financial Budget, respectively: Capital Budget, Master Budget Balance Sheet, Cash Budget",
       "o": [
         "Yes, Yes, Yes",
@@ -2395,6 +2544,7 @@
       }
     },
     {
+      "id": "3-3-55",
       "q": "The budgeting cycle includes all of the following except",
       "o": [
         "Planning the performance of the company for the coming budget period.",
@@ -2412,6 +2562,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-56",
       "q": "Throughout the budget period, actual results should be compared with budgeted results",
       "o": [
         "Only at the end of the fiscal year.",
@@ -2429,6 +2580,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-57",
       "q": "Midway through the year an unexpected external event makes the sales budget impossible to achieve. Management should",
       "o": [
         "Hold managers to the original budget so that budget discipline is maintained.",
@@ -2446,6 +2598,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-58",
       "q": "Within the budgeting cycle, management accountants primarily",
       "o": [
         "Set the company's strategic goals.",
@@ -2463,6 +2616,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-59",
       "q": "Monitoring market feedback and external conditions throughout the budget period is important mainly because it",
       "o": [
         "Eliminates variances from the budget.",
@@ -2480,6 +2634,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-60",
       "q": "The direct materials usage budget is developed primarily from the production budget together with the",
       "o": [
         "Cash budget.",
@@ -2497,6 +2652,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-61",
       "q": "A company plans to produce 4,050 birdhouses. Each birdhouse requires 1.5 board feet of oak. The quantity of oak that must be available for production is",
       "o": [
         "2,700 board feet.",
@@ -2514,6 +2670,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-62",
       "q": "A company plans to produce 4,050 units. Each unit requires 1.5 board feet of oak at a budgeted cost of $10 per board foot. The budgeted cost of direct materials to be used in production is",
       "o": [
         "$40,500.",
@@ -2531,6 +2688,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-63",
       "q": "The standard cost per direct labor hour used in the direct labor usage budget should include",
       "o": [
         "Wages only.",
@@ -2548,6 +2706,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-64",
       "q": "A company plans to produce 2,550 benches. Each bench requires 2.0 direct labor hours at a budgeted rate of $20 per hour. The budgeted cost of direct labor for benches is",
       "o": [
         "$51,000.",
@@ -2565,6 +2724,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-65",
       "q": "A company budgets fixed manufacturing overhead of $33,240 and variable manufacturing overhead of $22,160 for a year in which 11,080 direct labor hours are budgeted. Overhead is applied on the basis of direct labor hours. The total predetermined overhead application rate is",
       "o": [
         "$2.00 per direct labor hour.",
@@ -2582,6 +2742,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-66",
       "q": "A company applies manufacturing overhead at $5.00 per direct labor hour. One product requires 1.0 direct labor hour per unit, and 3,550 units of it are budgeted for production. The manufacturing overhead applied to that product is",
       "o": [
         "$3,550.",
@@ -2599,6 +2760,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-67",
       "q": "The number of allocation-base hours used to calculate the predetermined manufacturing overhead rate is taken from the",
       "o": [
         "Sales budget.",
@@ -2616,6 +2778,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-68",
       "q": "A product requires $108 of direct materials, 2.0 direct labor hours at $20 per hour, and manufacturing overhead applied at $5.00 per direct labor hour. The budgeted product cost per unit is",
       "o": [
         "$148.",
@@ -2633,6 +2796,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-69",
       "q": "A company plans to hold 250 units of a product in finished goods inventory at year-end. The budgeted product cost is $158 per unit. The budgeted cost of that ending finished goods inventory is",
       "o": [
         "$37,000.",
@@ -2650,6 +2814,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-70",
       "q": "A company plans to hold 1,100 board feet of oak in direct materials inventory at year-end. The budgeted cost is $12 per board foot. The budgeted cost of that ending direct materials inventory is",
       "o": [
         "$12,000.",
@@ -2667,6 +2832,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-71",
       "q": "A company using FIFO finds that the budgeted cost of its beginning finished goods inventory differs from its budgeted current-year product cost per unit. The reason is that",
       "o": [
         "The company has made an error in the budget.",
@@ -2684,6 +2850,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-72",
       "q": "Budgeted cost of goods manufactured is calculated as",
       "o": [
         "Budgeted direct materials used, plus direct labor used, plus manufacturing overhead applied, adjusted for the change in work-in-process inventory.",
@@ -2701,6 +2868,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-73",
       "q": "A company budgets direct materials used of $371,650, direct labor used of $221,600 and manufacturing overhead applied of $55,400. Beginning and ending work-in-process inventories are both budgeted at $5,000. Budgeted cost of goods manufactured is",
       "o": [
         "$648,650.",
@@ -2718,6 +2886,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-74",
       "q": "If no significant change in work-in-process inventory is planned for the budget period, budgeted cost of goods manufactured will",
       "o": [
         "Exceed total budgeted manufacturing costs.",
@@ -2735,6 +2904,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-75",
       "q": "Budgeted cost of goods sold is calculated as",
       "o": [
         "Budgeted cost of goods manufactured less budgeted ending finished goods inventory.",
@@ -2752,6 +2922,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-76",
       "q": "A company budgets beginning finished goods inventory of $48,300, cost of goods manufactured of $648,650 and ending finished goods inventory of $62,250. Budgeted cost of goods sold is",
       "o": [
         "$634,700.",
@@ -2769,6 +2940,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-77",
       "q": "The budgeted cost of the ending finished goods inventory used in the budgeted cost of goods sold schedule is taken from the",
       "o": [
         "Sales budget.",
@@ -2786,6 +2958,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-78",
       "q": "Which one of the following costs belongs in the selling, marketing and distribution budget?",
       "o": [
         "The factory supervisor's salary.",
@@ -2803,6 +2976,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-79",
       "q": "Which one of the following costs belongs in the administrative and general expense budget?",
       "o": [
         "Advertising and promotion expenses.",
@@ -2820,6 +2994,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-80",
       "q": "The assumptions underlying the amounts in the nonmanufacturing budgets should be documented mainly because",
       "o": [
         "Generally accepted accounting principles require the documentation.",
@@ -2837,6 +3012,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-81",
       "q": "The first draft of the budgeted income statement is used by senior management to",
       "o": [
         "Record the year's results in the general ledger.",
@@ -2854,6 +3030,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-82",
       "q": "Budgeted net income affects the budgeted balance sheet through",
       "o": [
         "Accounts receivable.",
@@ -2871,6 +3048,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-83",
       "q": "The cash budget and the budgeted statement of cash flows differ in that the cash budget",
       "o": [
         "Classifies cash flows as operating, investing and financing.",
@@ -2888,6 +3066,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-84",
       "q": "Which one of the following is the correct order of preparation?",
       "o": [
         "Budgeted balance sheet, then cash budget, then budgeted statement of cash flows.",
@@ -2905,6 +3084,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-85",
       "q": "The ending cash balance calculated in the cash budget appears on the",
       "o": [
         "Budgeted income statement.",
@@ -2922,6 +3102,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-86",
       "q": "Preparing budgeted financial statements monthly rather than only annually is particularly valuable because it allows a company to",
       "o": [
         "Avoid preparing a cash budget.",
@@ -2939,6 +3120,7 @@
       "src": "gawad"
     },
     {
+      "id": "3-3-87",
       "q": "Unrealistic budgeting occurs when management",
       "o": [
         "Prepares a flexible budget in addition to a static budget.",

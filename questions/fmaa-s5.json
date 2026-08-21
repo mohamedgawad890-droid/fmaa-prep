@@ -1,6 +1,7 @@
 {
   "5-1": [
     {
+      "id": "5-1-01",
       "q": "Jeremy Finch, CMA and Certified Fraud Examiner (CFE), is leader of a team reviewing the financial records of CyberRock Networks, a computer-services firm known for its complex accounting. Jeremy’s task is to assess the firm’s operational results, including a recent decline in cash flows despite an increase in reported operating income. Jeremy must also determine how the firm responds to its strict debt covenants. Lastly, Jeremy is to investigate executive management’s compensation packages, including stock options in the firm that are tied to reported profits. The stock options are believed to be quite generous. What is Jeremy specifically investigating?",
       "o": [
         "The cause of the recent decline in cash flows.",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "id": "5-1-02",
       "q": "A fiduciary is a person or an entity that is entrusted to act in the best interests of and for the benefit of another entity or entities. An accountant’s fiduciary responsibility is, first, to act in the best interests of and for the benefit of",
       "o": [
         "his or her client and it is fulfilled by maintaining confidentiality no matter what.",
@@ -33,6 +35,7 @@
       }
     },
     {
+      "id": "5-1-03",
       "q": "As the Chief Financial Officer (CFO) of LuxeFurn Inc., Sarah has been presented with an attractive business opportunity to acquire a smaller competitor, CozyHome. This acquisition promises significant market expansion and cost synergies. However, during the due diligence process, she discovers accounting discrepancies in CozyHome’s financial statements which could be indicative of financial misconduct. Given the potential benefits of the acquisition but mindful of the discovered irregularities, what is the most appropriate action for Sarah to ensure she acts with integrity and due diligence?",
       "o": [
         "Proceed with the acquisition, addressing the financial discrepancies post-merger to avoid any disruptions in the market.",
@@ -49,6 +52,7 @@
       }
     },
     {
+      "id": "5-1-04",
       "q": "Conflicts of interest are obstacles to having integrity and to making ethical decisions. A conflict of interest is",
       "o": [
         "a situation in which disagreements and conflicts arise among colleagues.",
@@ -65,6 +69,7 @@
       }
     },
     {
+      "id": "5-1-05",
       "q": "A scenario is presented where an internal audit at MedTech Solutions Inc. reveals that a procurement officer, Emily, has been favoring a particular supplier, BioEquip, despite there being more cost-effective options available. Emily's decision-making is questioned due to the recent discovery that she shares a close university affiliation with BioEquip’s sales director, and they have been seen at several alumni events together. Considering the four principles of Honesty, Fairness, Objectivity, and Responsibility, which of these principles is most directly at risk of being compromised in Emily's professional conduct?",
       "o": [
         "Fairness, since not all suppliers are given an equal opportunity to compete for MedTech Solutions Inc.'s business.",
@@ -81,6 +86,7 @@
       }
     },
     {
+      "id": "5-1-06",
       "q": "After a confidential executive meeting at OmniTech Inc., where sensitive financial restructuring plans were discussed, one of the managers, Elena, inadvertently mentioned specific details about potential layoffs during a call with an industry analyst. This information was not public and the analyst published the details in a popular tech blog, causing a significant drop in the company's stock price and widespread concern among employees. Which ethical standard did Elena breach?",
       "o": [
         "Confidentiality",
@@ -97,6 +103,7 @@
       }
     },
     {
+      "id": "5-1-07",
       "q": "Kevin, an accountant at FastGrowth Tech Inc., is instructed by his supervisor to record a significant sale of software to a client in the current quarter, even though the transaction is not expected to be finalized until the next quarter. This instruction is given to artificially inflate the company's earnings for the current quarter to meet financial targets. Kevin is aware that following this instruction would misrepresent the company's financial position. What is the most ethical first response to this situation for Kevin to have?",
       "o": [
         "Discuss his concerns directly with the supervisor, explaining the ethical implications and the potential risks to the company and stakeholders.",
@@ -113,6 +120,7 @@
       }
     },
     {
+      "id": "5-1-08",
       "q": "After a competitive bidding process, a company’s purchasing director awarded a contract to the lowest bidder, an organization in which she had a personal interest. Since the winning bidder had the lowest price, she did not disclose her relationship with the entity. In fact, she frequently highlighted the fact that the winning bidder had the most experience servicing contracts of this nature. Which one of the values of ethical decision making did the purchasing director violate?",
       "o": [
         "None, because a competitive bidding process was utilized.",
@@ -128,6 +136,7 @@
       }
     },
     {
+      "id": "5-1-09",
       "q": "The IMA Statement of Ethical Professional Practice identifies four overarching ethical principles. Which of the following is one of those principles?",
       "o": [
         "Profitability.",
@@ -144,6 +153,7 @@
       }
     },
     {
+      "id": "5-1-10",
       "q": "The IMA Statement of Ethical Professional Practice includes which of the following standards?",
       "o": [
         "Competence, Confidentiality, Integrity, and Credibility.",
@@ -160,6 +170,7 @@
       }
     },
     {
+      "id": "5-1-11",
       "q": "Under the IMA's Competence standard, a management accountant is required to:",
       "o": [
         "Never share any company information with outside parties.",
@@ -176,6 +187,7 @@
       }
     },
     {
+      "id": "5-1-12",
       "q": "The fraud triangle consists of three elements. Which of the following correctly identifies all three?",
       "o": [
         "Pressure, Opportunity, and Rationalization.",
@@ -192,6 +204,7 @@
       }
     },
     {
+      "id": "5-1-13",
       "q": "An IMA member who discovers that a colleague is falsifying financial records should first:",
       "o": [
         "Report the colleague directly to law enforcement.",
@@ -208,6 +221,7 @@
       }
     },
     {
+      "id": "5-1-14",
       "q": "The Confidentiality standard of the IMA Statement of Ethical Professional Practice requires management accountants to:",
       "o": [
         "Share financial information with any employee who requests it.",
@@ -224,6 +238,7 @@
       }
     },
     {
+      "id": "5-1-15",
       "q": "Which of the following best describes ethical behavior under the IMA's Integrity standard?",
       "o": [
         "Performing all tasks with maximum speed and efficiency.",
@@ -240,6 +255,7 @@
       }
     },
     {
+      "id": "5-1-16",
       "q": "Under the IMA's Credibility standard, a management accountant must:",
       "o": [
         "Never communicate negative information to management.",
@@ -256,6 +272,7 @@
       }
     },
     {
+      "id": "5-1-17",
       "q": "A management accountant is pressured by a supervisor to alter budget projections to show better results. The accountant should:",
       "o": [
         "Comply — following supervisor instructions is always the ethical course of action.",
@@ -272,6 +289,7 @@
       }
     },
     {
+      "id": "5-1-18",
       "q": "The term 'conflict of interest' in ethics refers to:",
       "o": [
         "A disagreement between two employees over a business decision.",
@@ -288,6 +306,7 @@
       }
     },
     {
+      "id": "5-1-19",
       "q": "Which of the following is NOT a characteristic of a strong ethical culture in an organization?",
       "o": [
         "Clear code of conduct communicated to all employees.",
@@ -304,6 +323,7 @@
       }
     },
     {
+      "id": "5-1-20",
       "q": "An IMA member who cannot resolve an ethical conflict through internal channels should:",
       "o": [
         "Immediately disclose the matter to the media.",
@@ -322,6 +342,7 @@
   ],
   "5-2": [
     {
+      "id": "5-2-01",
       "q": "A manufacturing entity located in a sparsely populated region of the country has a policy of leaving its raw material inventory warehouse doors open during normal business hours to optimize workflow. The controller for the entity has just noticed that some raw material inventory is missing. Using the fraud triangle model, the controller has determined that the entity’s policy most likely increases the risk of fraud by",
       "o": [
         "incentivizing employees to commit the fraud.",
@@ -338,6 +359,7 @@
       }
     },
     {
+      "id": "5-2-02",
       "q": "What are the four overarching ethical principles as expressed in the IMA Statement of Ethical Professional Practice (2017)?",
       "o": [
         "Honesty, Fairness, Objectivity and Responsibility",
@@ -354,6 +376,7 @@
       }
     },
     {
+      "id": "5-2-03",
       "q": "Charlie Benwal was on a team that evaluated a potential acquisition. Both Benwal’s employer and the potential target are publicly-traded companies. A significant portion of Benwal’s personal investment portfolio is composed of the target company’s stock, which Benwal did not disclose. Based on IMA’s Statement of Ethical Professional Practice, Benwal would be in violation of which one of the following statements?",
       "o": [
         "Integrity.",
@@ -370,6 +393,7 @@
       }
     },
     {
+      "id": "5-2-04",
       "q": "What are the four standards of ethical conduct as expressed in the IMA Statement of Ethical Professional Practice (2017)?",
       "o": [
         "Competence, Confidentiality, Objectivity and Responsibility",
@@ -386,6 +410,7 @@
       }
     },
     {
+      "id": "5-2-05",
       "q": "Which of the following actions is not an appropriate course of action when encountering unethical issues or behavior, if your organization does not have established policies?",
       "o": [
         "Discuss the issue with your immediate supervisor or, if the supervisor appears to be involved, present the issue to the next level.",
@@ -402,6 +427,7 @@
       }
     },
     {
+      "id": "5-2-06",
       "q": "Which of the following statements is a responsibility for an IMA member regarding the \"Integrity\" standard of ethical conduct?",
       "o": [
         "Refrain from engaging in any conduct that would prejudice carrying out duties ethically.",
@@ -418,6 +444,7 @@
       }
     },
     {
+      "id": "5-2-07",
       "q": "Which of the following statements is not a responsibility for an IMA member regarding the \"Credibility\" standard of ethical conduct?",
       "o": [
         "To communicate information fairly and objectively.",
@@ -434,6 +461,7 @@
       }
     },
     {
+      "id": "5-2-08",
       "q": "Which of the following statements is a responsibility for an IMA member regarding the \"Competence\" standard of ethical conduct?",
       "o": [
         "To perform professional duties in accordance with relevant laws, regulations, and technical standards.",
@@ -450,6 +478,7 @@
       }
     },
     {
+      "id": "5-2-09",
       "q": "Maryann Johnson, controller of Teenware, Inc., a closely-held, private corporation, was standing in a long checkout line at her local Walmart when she received an urgent call on her cell phone from Michael Cole, CEO of Teenware. Cole was attending a weekend retreat with the members of the company’s board of directors, and the directors had some questions about the financial statements that Cole needed answers to right away. In an effort to accommodate Cole’s needs without losing her place in line, Johnson attempted to answer his questions as best she could. This was a violation of which standard in the IMA Statement of Ethical Professional Practice?",
       "o": [
         "Integrity.",
@@ -466,6 +495,7 @@
       }
     },
     {
+      "id": "5-2-10",
       "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Responsibility.\" \"Responsibility\" means",
       "o": [
         "performing an act or a function completely and in a timely manner; being answerable or accountable for something that is within your own power, control or management.",
@@ -482,6 +512,7 @@
       }
     },
     {
+      "id": "5-2-11",
       "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Fairness.\" \"Fairness\" means",
       "o": [
         "communicating both good and bad news; not just telling your superiors what they want to hear.",
@@ -498,6 +529,7 @@
       }
     },
     {
+      "id": "5-2-12",
       "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Honesty.\" \"Honesty\" means",
       "o": [
         "fairness, straightforwardness of conduct; being upright, having integrity, being truthful, sincere, frank, and free from deceit or fraud.",
@@ -514,6 +546,7 @@
       }
     },
     {
+      "id": "5-2-13",
       "q": "According to the IMA Statement of Ethical Professional Practice, one of the overarching ethical principles is \"Objectivity.\" \"Objectivity\" means",
       "o": [
         "fairness and straightforwardness of conduct.",
@@ -530,6 +563,7 @@
       }
     },
     {
+      "id": "5-2-14",
       "q": "A company has a strong internal control structure in its accounting department. It has a high degree of duty segregation, regular reconciliations, strict reviews, and comprehensive internal audits. A disgruntled fixed assets accountant has been contemplating the embezzlement of cash receipts processed by the accounts receivable department. The accountant plans to use these funds to sustain his gambling problem. Using the Fraud Triangle model, what is the best assessment of fraud risk for the company’s situation?",
       "o": [
         "Medium, because opportunity is absent.",
@@ -545,6 +579,7 @@
       }
     },
     {
+      "id": "5-2-15",
       "q": "How can a management accountant use the Fraud Triangle to identify and manage the risk of fraud?",
       "o": [
         "The Fraud Triangle provides a model for explaining how persuasion, coercion, and conviction influence people to commit fraud.",
@@ -561,6 +596,7 @@
       }
     },
     {
+      "id": "5-2-16",
       "q": "The quality of being truthful and free from deceit or fraud is the definition of",
       "o": [
         "fairness.",
@@ -577,6 +613,7 @@
       }
     },
     {
+      "id": "5-2-17",
       "q": "Which standard in the IMA Statement of Ethical Professional Practice states that IMA members should not engage in activities that might discredit the profession?",
       "o": [
         "Credibility.",
@@ -592,6 +629,7 @@
       }
     },
     {
+      "id": "5-2-18",
       "q": "Of the following, which would be least likely to be a motivating factor for management to overstate net income?",
       "o": [
         "To remain in compliance with bond covenants.",
@@ -603,6 +641,7 @@
       "e": "In negotiating a labor contract, management would have an incentive to understate net income, not overstate it. Meeting earnings expectations, remaining in compliance with bond covenants, and a desire to make the company more attractive for a possible merger are all factors that could motivate management to overstate net income. Note that neither understating nor overstating net income is an acceptable practice. Both are examples of fraudulent financial reporting."
     },
     {
+      "id": "5-2-19",
       "q": "An accountant has discovered unethical conduct in his organization and fails to act because of fear of retaliation. He will be in violation of all of the following IMA ethical standards except",
       "o": [
         "refrain from using confidential information for unethical or illegal advantage.",
@@ -619,6 +658,7 @@
       }
     },
     {
+      "id": "5-2-20",
       "q": "According to Donald R. Cressey in his book, Other People’s Money, three conditions must be present for a trusted employee to commit a fraudulent act against his or her employer. Which of the following conditions is not a component of Cressey’s “Fraud Triangle”?",
       "o": [
         "Opportunity",
@@ -630,6 +670,7 @@
       "e": "The three components of the Fraud Triangle are opportunity, the ability to rationalize the act, and financial pressure. A belief on the part of the employee that he or she will not be caught is not one of them."
     },
     {
+      "id": "5-2-21",
       "q": "An IMA member discovers a problem that could mislead users of the firm’s financial data and has informed his immediate superior. He should report the circumstances to the audit committee and/or the board of directors only if the immediate superior",
       "o": [
         "assures the member that the problem will be resolved.",
@@ -646,6 +687,7 @@
       }
     },
     {
+      "id": "5-2-22",
       "q": "Which one of the following would be most effective in deterring the commission of fraud?",
       "o": [
         "Employee training, segregation of duties, and punishment for unethical behavior.",
@@ -662,6 +704,7 @@
       }
     },
     {
+      "id": "5-2-23",
       "q": "Jim Reebok is the purchasing manager of a major retail company. Jim is also a CMA and IMA member. Recently, Jim has been accused of violating the IMA Statement of Ethical Professional Practice. The allegations put forth against Jim are: 1. Jim is Chair of a private company that supplies most of its goods to the major retailer for which Jim serves as purchasing manager and Jim makes the purchasing decisions relating to that supplier. 2. Jim’s company compensates its senior management with generous stock options. Jim recently exercised his options and was well compensated. 3. Jim recently gave a lecture on activity-based costing (ABC), and he received compensation for the lecture. Of the allegations mentioned, which ones are not a violation of the IMA Statement of Ethical Professional Practice?",
       "o": [
         "Allegations 1 and 3.",
@@ -673,6 +716,7 @@
       "e": "Allegation 2 is not a violation of the IMA Statement of Ethical Professional Practice. Stock options are a popular way to compensate senior management, and exercising them is not an ethical violation. Allegation 3 is also not a violation of the IMA Statement of Ethical Professional Practice. Being compensated for a lecture is not a violation, since there was no apparent conflict of interest."
     },
     {
+      "id": "5-2-24",
       "q": "Andrew Babbitt is a management accountant at Ace Mining Corporation (AMC), a processor of ores and minerals. He learned that AMC had been disposing hazardous waste materials in a nearby residential landfill. Babbitt knew that the waste materials could pose a danger to the residents in the area and that there could be legal ramifications for disposing hazardous waste in a residential landfill. When Babbitt discussed the issue with his supervisor the next morning, he was told to ignore it. Due to the significance of the matter, Babbitt decided to discuss the matter with his attorney and then notified the appropriate authorities. In accordance with IMA’s Statement of Ethical Professional Practice, which one of the following is the correct evaluation of Babbitt’s decision to notify the authorities?",
       "o": [
         "Babbitt’s actions were inappropriate because they violated the confidentiality standard.",
@@ -689,6 +733,7 @@
       }
     },
     {
+      "id": "5-2-25",
       "q": "IMA members are required to adhere to the IMA Statement of Ethical Professional Practice. According to the IMA Statement of Ethical Professional Practice, credibility",
       "o": [
         "involves adhering to the IMA Statement of Ethical Professional Practice.",
@@ -705,6 +750,7 @@
       }
     },
     {
+      "id": "5-2-26",
       "q": "Shelly Smith, CMA, is the consumer electronics buyer for a major chain of department stores. His department’s gross profit margin is monitored by senior management on a quarterly basis. When Smith thinks he may have trouble making the gross profit goal for a quarter, he may claim unauthorized charge-backs on merchandise invoices from the manufacturer. A retailer may obtain specific authorization from the manufacturer to deduct (charge-back) from the invoice for damaged goods, goods returned by customers, mistakes in shipping, and similar specific reasons. In accordance with IMA’s Statement of Ethical Professional Practice, which one of the following statements is most correct?",
       "o": [
         "The unauthorized charge-backs do not violate IMA’s Statement, or any other ethics policy. At worst, the charge-backs will be reversed in a future period.",
@@ -721,6 +767,7 @@
       }
     },
     {
+      "id": "5-2-27",
       "q": "David Lynch, a CMA, works as a financial analyst for HighLevel Securities LLC. David plays soccer on HighLevel’s soccer team. Recently, the company’s team played the team of a rival firm. During the game, a serious altercation occurred between David and a player from the other team. David was at fault. Luckily, no one was seriously injured; however, the police were called and David was charged with a misdemeanor. Is David’s altercation and arrest a violation of the IMA Statement of Ethical Professional Practice standards concerning integrity and credibility?",
       "o": [
         "No, because no one was injured.",
@@ -736,6 +783,7 @@
       }
     },
     {
+      "id": "5-2-28",
       "q": "Mark Tian, a staff accountant, becomes aware of an off-balance sheet bank account where funds have been diverted with offsetting credits approved by his immediate supervisor. His immediate supervisor refuses to discuss it and suggests Tian forget about it. Which one of the following should be Tian’s next course of action in this circumstance?",
       "o": [
         "Communicate his concerns confidentially to the company’s independent auditor.",
@@ -752,6 +800,7 @@
       }
     },
     {
+      "id": "5-2-29",
       "q": "Employee A observes that Employee B is improperly altering department records to meet month end goals. These records are for internal use only and do not impact the company's financial records. Employee A notifies her supervisor of the impropriety, and the supervisor advises Employee A that she instructed Employee B to alter the records and an adjustment would be made the subsequent month to correct the records. Employee A should",
       "o": [
         "follow the organization's established procedures for the resolution of such unethical issues.",
@@ -768,6 +817,7 @@
       }
     },
     {
+      "id": "5-2-30",
       "q": "A company has a December 31 year end. Which one of the following options to increase net income during the last month of the company’s fiscal year would least likely result in a violation of the IMA Statement of Ethical Professional Practice?",
       "o": [
         "Postpone planned marketing expenditures until January.",
@@ -784,6 +834,7 @@
       }
     },
     {
+      "id": "5-2-31",
       "q": "Which one of the following ethics-related actions by management is least effective in encouraging acceptance by employees of an organization's code of conduct?",
       "o": [
         "Management follows ethical principles in decisions made on behalf of the organization.",
@@ -800,6 +851,7 @@
       }
     },
     {
+      "id": "5-2-32",
       "q": "Elite Running Ltd has recently implemented a new evaluation process that bases bonuses primarily on the variance between budgeted and actual cost for cost centers. Individuals with budgeted to actual variances in excess of 20% will receive no bonus. Richard Banes oversees one cost center of Elite and is concerned that his bonus will be adversely impacted. He has a strong personal relationship with the controller, who is responsible for developing, reviewing, and approving budgets. He has asked the controller to accept his budget with estimated costs higher than would be reasonably expected for the next fiscal year. In appreciation for accepting these inflated costs, Banes offered the controller season tickets to the sport of his choice. Which one of the following standards of IMA’s Statement of Ethical Professional Practice is relevant?",
       "o": [
         "Integrity, if the controller accepts the tickets because acceptance would prejudice his ability to carry out his duties.",

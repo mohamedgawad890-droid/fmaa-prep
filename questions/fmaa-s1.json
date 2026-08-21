@@ -1,6 +1,7 @@
 {
   "1-1": [
     {
+      "id": "1-1-01",
       "q": "What is the difference between financial accounting and management accounting?",
       "o": [
         "Financial accounting is primarily used by senior management, whereas management accounting is primarily used by operational management.",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "id": "1-1-02",
       "q": "The definition of an expense is",
       "o": [
         "A reduction of a liability.",
@@ -33,6 +35,7 @@
       }
     },
     {
+      "id": "1-1-03",
       "q": "A nonprofit organization is a business",
       "o": [
         "whose shareholders are prohibited from receiving any dividends.",
@@ -49,6 +52,7 @@
       }
     },
     {
+      "id": "1-1-04",
       "q": "The amount of property that a company owns is referred to as its",
       "o": [
         "equity.",
@@ -65,6 +69,7 @@
       }
     },
     {
+      "id": "1-1-05",
       "q": "What is cash flow?",
       "o": [
         "Cash flow is the total of cash paid out for operations during a period of time.",
@@ -81,6 +86,7 @@
       }
     },
     {
+      "id": "1-1-06",
       "q": "What type of ledger account is used to reduce the value of another account when the accounts are netted?",
       "o": [
         "A dividend account.",
@@ -97,6 +103,7 @@
       }
     },
     {
+      "id": "1-1-07",
       "q": "Elements of financial statements do not include",
       "o": [
         "the name of the company, the name of the financial statement, and the statement date.",
@@ -113,6 +120,7 @@
       }
     },
     {
+      "id": "1-1-08",
       "q": "A reporting entity that is a business can do all of the following except:",
       "o": [
         "Make decisions through governmental agencies",
@@ -129,6 +137,7 @@
       }
     },
     {
+      "id": "1-1-09",
       "q": "A permanent account",
       "o": [
         "is an account whose balances increase and decrease with every accounting entry affecting it and is never reset to zero throughout the entire life of the business.",
@@ -145,6 +154,7 @@
       }
     },
     {
+      "id": "1-1-10",
       "q": "What financial statement shows the financial position of the business as of a specific date?",
       "o": [
         "Income statement.",
@@ -161,6 +171,7 @@
       }
     },
     {
+      "id": "1-1-11",
       "q": "The easiest type of business organization to use when a business is first established is a",
       "o": [
         "Joint venture",
@@ -177,6 +188,7 @@
       }
     },
     {
+      "id": "1-1-12",
       "q": "An owner's claims on the assets of a company are referred to as the company’s",
       "o": [
         "assets.",
@@ -193,6 +205,7 @@
       }
     },
     {
+      "id": "1-1-13",
       "q": "The amount owed by a company to its creditors is referred to as its",
       "o": [
         "expenses.",
@@ -209,6 +222,7 @@
       }
     },
     {
+      "id": "1-1-14",
       "q": "A fiscal year is",
       "o": [
         "a year in which a company earns a profit.",
@@ -225,6 +239,7 @@
       }
     },
     {
+      "id": "1-1-15",
       "q": "A temporary account in an accounting system is",
       "o": [
         "an account used for valuation.",
@@ -241,6 +256,7 @@
       }
     },
     {
+      "id": "1-1-16",
       "q": "Which of the following is true about an accounting period?",
       "o": [
         "It may be any established period of time that is used for analyzing a company’s performance.",
@@ -257,6 +273,7 @@
       }
     },
     {
+      "id": "1-1-17",
       "q": "Which type of business entity involves a formal arrangement between two or more parties to manage and operate a business and share its profits, with the possibility of having partners with limited liability?",
       "o": [
         "Public Company",
@@ -273,6 +290,7 @@
       }
     },
     {
+      "id": "1-1-18",
       "q": "Which of the following best describes the accrual basis of accounting?",
       "o": [
         "Revenue and expenses are recorded only when cash is received or paid.",
@@ -289,6 +307,7 @@
       }
     },
     {
+      "id": "1-1-19",
       "q": "The concept that a business will continue to operate indefinitely is known as the",
       "o": [
         "Materiality principle.",
@@ -305,6 +324,7 @@
       }
     },
     {
+      "id": "1-1-20",
       "q": "Which accounting principle requires that expenses be recorded in the same period as the revenues they helped generate?",
       "o": [
         "Revenue recognition principle.",
@@ -323,6 +343,7 @@
   ],
   "1-2": [
     {
+      "id": "1-2-01",
       "q": "The general ledger includes",
       "o": [
         "all the ledger accounts and all the transaction data needed to produce the financial statements for the period.",
@@ -339,6 +360,7 @@
       }
     },
     {
+      "id": "1-2-02",
       "q": "Which of the following does not represent the accounting equation?",
       "o": [
         "Assets – Liabilities = Equity",
@@ -355,6 +377,7 @@
       }
     },
     {
+      "id": "1-2-03",
       "q": "The correct category in the chart of accounts for cost of goods sold is",
       "o": [
         "assets.",
@@ -371,6 +394,7 @@
       }
     },
     {
+      "id": "1-2-04",
       "q": "ABC Corporation has $2,500,000 in total assets and $1,500,000 in equity. What are ABC’s total liabilities?",
       "o": [
         "$4,000,000",
@@ -387,6 +411,7 @@
       }
     },
     {
+      "id": "1-2-05",
       "q": "Issuing capital stock in exchange for cash will have what effect on the financial statements of the company?",
       "o": [
         "Liabilities will increase.",
@@ -403,6 +428,7 @@
       }
     },
     {
+      "id": "1-2-06",
       "q": "A debit transaction",
       "o": [
         "Is used to record an increase in the balance of an asset.",
@@ -419,6 +445,7 @@
       }
     },
     {
+      "id": "1-2-07",
       "q": "Which of the following ledger accounts normally carry credit balances?",
       "o": [
         "Equipment and Accounts Payable",
@@ -435,6 +462,7 @@
       }
     },
     {
+      "id": "1-2-08",
       "q": "A company buys a piece of equipment for $20,000 and pays cash for it. How will the purchase affect the company’s total assets, liabilities, and equity?",
       "o": [
         "There will be no change in total assets, total liabilities, or total equity.",
@@ -451,6 +479,7 @@
       }
     },
     {
+      "id": "1-2-09",
       "q": "A credit transaction is used to record",
       "o": [
         "an increase in a liability account.",
@@ -467,6 +496,7 @@
       }
     },
     {
+      "id": "1-2-10",
       "q": "ABC Company, a new business, is building its chart of accounts. The chart of accounts will contain:",
       "o": [
         "a list of all the transactions recorded during a period of time.",
@@ -483,6 +513,7 @@
       }
     },
     {
+      "id": "1-2-11",
       "q": "A company has $1,000,000 in assets and $300,000 in liabilities. What is the owner's equity for the company?",
       "o": [
         "$300,000.",
@@ -499,6 +530,7 @@
       }
     },
     {
+      "id": "1-2-12",
       "q": "The accounting equation can be expressed as",
       "o": [
         "liabilities = assets + equity.",
@@ -515,6 +547,7 @@
       }
     },
     {
+      "id": "1-2-13",
       "q": "What is the accounting equation?",
       "o": [
         "Liabilities – Equity = Assets",
@@ -531,6 +564,7 @@
       }
     },
     {
+      "id": "1-2-14",
       "q": "What kind of a transaction could increase an asset and a liability by equal amounts?",
       "o": [
         "Selling common stock for cash",
@@ -547,6 +581,7 @@
       }
     },
     {
+      "id": "1-2-15",
       "q": "What does “double-entry bookkeeping” mean?",
       "o": [
         "Every financial transaction recorded must affect at least two ledger accounts, and the debits must equal the credits.",
@@ -563,6 +598,7 @@
       }
     },
     {
+      "id": "1-2-16",
       "q": "A company purchases office supplies worth $500 on credit. Which journal entry correctly records this?",
       "o": [
         "Debit: Accounts Payable $500; Credit: Office Supplies $500.",
@@ -579,6 +615,7 @@
       }
     },
     {
+      "id": "1-2-17",
       "q": "Which of the following is NOT a source document?",
       "o": [
         "Sales invoice.",
@@ -595,6 +632,7 @@
       }
     },
     {
+      "id": "1-2-18",
       "q": "A company receives $3,000 cash from a customer as payment on account. How is this recorded?",
       "o": [
         "Debit: Revenue $3,000; Credit: Cash $3,000.",
@@ -611,6 +649,7 @@
       }
     },
     {
+      "id": "1-2-19",
       "q": "Recording a transaction in chronological order in the journal is called",
       "o": [
         "Posting.",
@@ -627,6 +666,7 @@
       }
     },
     {
+      "id": "1-2-20",
       "q": "A company pays $2,400 for a 12-month insurance policy on October 1. What is the correct journal entry on October 1?",
       "o": [
         "Debit: Insurance Expense $2,400; Credit: Cash $2,400.",
@@ -645,6 +685,7 @@
   ],
   "1-3": [
     {
+      "id": "1-3-01",
       "q": "What is the purpose of the general journal?",
       "o": [
         "The general journal can be used to prepare financial statements.",
@@ -661,6 +702,7 @@
       }
     },
     {
+      "id": "1-3-02",
       "q": "What is the first step in the accounting cycle?",
       "o": [
         "Record transactions in the general journal.",
@@ -677,6 +719,7 @@
       }
     },
     {
+      "id": "1-3-03",
       "q": "When the individual debits and credits are posted to the correct ledger accounts, the information recorded duplicates the information in the general journal, and it includes some additional information. Which of the following items is not included in the ledger account postings?",
       "o": [
         "The page number in the general journal where the transaction is journalized",
@@ -693,6 +736,7 @@
       }
     },
     {
+      "id": "1-3-04",
       "q": "A compound journal entry is",
       "o": [
         "a journal entry that includes more than one transaction",
@@ -709,6 +753,7 @@
       }
     },
     {
+      "id": "1-3-05",
       "q": "How many money columns are in a general journal?",
       "o": [
         "One: for the amount of the transaction",
@@ -725,6 +770,7 @@
       }
     },
     {
+      "id": "1-3-06",
       "q": "T-accounts are used to",
       "o": [
         "analyze accounting transactions.",
@@ -741,6 +787,7 @@
       }
     },
     {
+      "id": "1-3-07",
       "q": "What information is not included in the general journal?",
       "o": [
         "Ledger accounts",
@@ -757,6 +804,7 @@
       }
     },
     {
+      "id": "1-3-08",
       "q": "To journalize a transaction means to",
       "o": [
         "post the transaction in the correct ledger accounts.",
@@ -773,6 +821,7 @@
       }
     },
     {
+      "id": "1-3-09",
       "q": "What step in the accounting cycle follows recording transactions in the general journal, or journalizing them?",
       "o": [
         "Prepare financial statements",
@@ -789,6 +838,7 @@
       }
     },
     {
+      "id": "1-3-10",
       "q": "A journal entry is",
       "o": [
         "A transaction that records a single business event in the general journal, including all the debits and all the credits for that event",
@@ -805,6 +855,7 @@
       }
     },
     {
+      "id": "1-3-11",
       "q": "What is the second step of the accounting cycle?",
       "o": [
         "Prepare unadjusted trial balance",
@@ -821,6 +872,7 @@
       }
     },
     {
+      "id": "1-3-12",
       "q": "Which of the following statements correctly describes the normal balance of an account?",
       "o": [
         "Assets have a credit normal balance; liabilities have a debit normal balance.",
@@ -837,6 +889,7 @@
       }
     },
     {
+      "id": "1-3-13",
       "q": "A company pays $2,000 cash for office supplies. Which T-account entry correctly records this transaction?",
       "o": [
         "Debit Cash $2,000; Credit Office Supplies $2,000.",
@@ -853,6 +906,7 @@
       }
     },
     {
+      "id": "1-3-14",
       "q": "When a company receives cash from a customer as payment on account, which of the following journal entries is correct?",
       "o": [
         "Debit Accounts Receivable; Credit Cash.",
@@ -869,6 +923,7 @@
       }
     },
     {
+      "id": "1-3-15",
       "q": "Which of the following accounts has a credit normal balance?",
       "o": [
         "Accounts Receivable.",
@@ -885,6 +940,7 @@
       }
     },
     {
+      "id": "1-3-16",
       "q": "The left side of a T-account is always called the:",
       "o": [
         "Credit side.",
@@ -901,6 +957,7 @@
       }
     },
     {
+      "id": "1-3-17",
       "q": "A company borrows $15,000 from a bank. How should this transaction be recorded?",
       "o": [
         "Debit Notes Payable $15,000; Credit Cash $15,000.",
@@ -917,6 +974,7 @@
       }
     },
     {
+      "id": "1-3-18",
       "q": "After posting all journal entries, the balance of an account is determined by:",
       "o": [
         "Adding all credits and subtracting all debits.",
@@ -933,6 +991,7 @@
       }
     },
     {
+      "id": "1-3-19",
       "q": "Which of the following correctly states the rules of debits and credits for expense accounts?",
       "o": [
         "Expenses increase with credits and decrease with debits.",
@@ -949,6 +1008,7 @@
       }
     },
     {
+      "id": "1-3-20",
       "q": "A company purchases equipment worth $10,000, paying $4,000 cash and financing the remainder on credit. Which entry correctly records this transaction?",
       "o": [
         "Debit Equipment $10,000; Credit Cash $10,000.",
@@ -967,6 +1027,7 @@
   ],
   "1-4": [
     {
+      "id": "1-4-01",
       "q": "A company purchased some office desks and chairs for $20,000, paying $5,000 in cash and agreeing to pay the remainder in 30 days. Which journal entry correctly records the purchase?",
       "o": [
         "Debit cash for $5,000; debit accounts payable for $15,000; credit office furniture for $20,000.",
@@ -983,6 +1044,7 @@
       }
     },
     {
+      "id": "1-4-02",
       "q": "A company buys inventory on credit. How does this transaction impact the chart of accounts?",
       "o": [
         "Debit: assets; credit: liabilities.",
@@ -999,6 +1061,7 @@
       }
     },
     {
+      "id": "1-4-03",
       "q": "Hessler received cash in the amount of $180,000 on March 11 for 10,000 shares of common stock sold. Hessler's common stock has $5 per share par value. The amount recorded as a credit to common stock for this transaction would have been",
       "o": [
         "$180,000",
@@ -1015,6 +1078,7 @@
       }
     },
     {
+      "id": "1-4-04",
       "q": "The correct category in the chart of accounts for additional paid-in capital is",
       "o": [
         "liabilities.",
@@ -1031,6 +1095,7 @@
       }
     },
     {
+      "id": "1-4-05",
       "q": "A company purchased inventory on credit for $6,500, and the supplier added the shipping charges to the invoice. The shipping charges were $500. How should the transaction be accounted for?",
       "o": [
         "Debit accounts payable $7,000, credit inventory $6,500, credit equity $500.",
@@ -1047,6 +1112,7 @@
       }
     },
     {
+      "id": "1-4-06",
       "q": "A company purchases $80,000 of inventory on credit and before it pays for the inventory, the company returns $7,000 of the inventory for credit. How should the company account for the return?",
       "o": [
         "Debit accounts payable for $73,000; credit inventory for $73,000.",
@@ -1063,6 +1129,7 @@
       }
     },
     {
+      "id": "1-4-07",
       "q": "A company that is using a perpetual inventory system purchased some inventory from a wholesale and then returned a portion of it with a cost of $750 to the wholesaler before paying for it. The wholesaler gave the company full credit for the return. How should the transaction be recorded?",
       "o": [
         "Debit inventory $750, credit cash $750.",
@@ -1079,6 +1146,7 @@
       }
     },
     {
+      "id": "1-4-08",
       "q": "Which one of the following transactions would properly reflect the debits and credits used to record the purchase of $10,000 in inventory using $6,000 cash with $4,000 still owed to the vendor?",
       "o": [
         "Debit: inventory $6,000; debit: accounts receivable $4,000; credit: cash $6,000; credit: accounts payable $4,000.",
@@ -1095,6 +1163,7 @@
       }
     },
     {
+      "id": "1-4-09",
       "q": "Sale of 1,000 shares of common stock with a par value of $1.00 per share are sold for are sold for 15.00 per share. How should the sale be recorded in the accounting system?",
       "o": [
         "Debit common stock for $15,000, credit cash for $15,000.",
@@ -1111,6 +1180,7 @@
       }
     },
     {
+      "id": "1-4-10",
       "q": "An owner invests $50,000 cash into a newly formed corporation in exchange for common stock. How does this transaction affect the accounting equation?",
       "o": [
         "Assets increase $50,000; Liabilities increase $50,000.",
@@ -1127,6 +1197,7 @@
       }
     },
     {
+      "id": "1-4-11",
       "q": "A new business purchases office furniture for $3,000 on account. What is the effect on the accounting equation?",
       "o": [
         "Assets increase $3,000; Equity increases $3,000.",
@@ -1143,6 +1214,7 @@
       }
     },
     {
+      "id": "1-4-12",
       "q": "A new company pays $1,200 for a one-year insurance policy on the first day of the year. How should this be recorded?",
       "o": [
         "Debit Insurance Expense $1,200; Credit Cash $1,200.",
@@ -1159,6 +1231,7 @@
       }
     },
     {
+      "id": "1-4-13",
       "q": "A company performs services for a client and immediately receives $5,000 cash. What is the correct journal entry?",
       "o": [
         "Debit Revenue $5,000; Credit Cash $5,000.",
@@ -1175,6 +1248,7 @@
       }
     },
     {
+      "id": "1-4-14",
       "q": "On the first day of business, a company signs a lease and pays $2,400 for six months of rent in advance. Which entry records this payment?",
       "o": [
         "Debit Rent Expense $2,400; Credit Cash $2,400.",
@@ -1191,6 +1265,7 @@
       }
     },
     {
+      "id": "1-4-15",
       "q": "Which of the following best describes a chart of accounts?",
       "o": [
         "A list of all transactions recorded during the period.",
@@ -1207,6 +1282,7 @@
       }
     },
     {
+      "id": "1-4-16",
       "q": "A new business owner withdraws $3,000 cash from the business for personal use. In a sole proprietorship, how is this recorded?",
       "o": [
         "Debit Salaries Expense $3,000; Credit Cash $3,000.",
@@ -1223,6 +1299,7 @@
       }
     },
     {
+      "id": "1-4-17",
       "q": "A company sells goods on account for $8,000. The cost of the goods sold was $5,000. Which of the following correctly records the revenue portion of this transaction?",
       "o": [
         "Debit Cash $8,000; Credit Sales Revenue $8,000.",
@@ -1239,6 +1316,7 @@
       }
     },
     {
+      "id": "1-4-18",
       "q": "When a new business pays its first month's utility bill of $500 in cash, which accounts are affected?",
       "o": [
         "Utilities Expense increases; Cash increases.",
@@ -1255,6 +1333,7 @@
       }
     },
     {
+      "id": "1-4-19",
       "q": "A new business receives a $10,000 advance payment from a customer for services to be performed next month. How should this be recorded?",
       "o": [
         "Debit Cash $10,000; Credit Service Revenue $10,000.",
@@ -1271,6 +1350,7 @@
       }
     },
     {
+      "id": "1-4-20",
       "q": "Which of the following is the correct sequence for the accounting cycle in a new business?",
       "o": [
         "Prepare financial statements → Post to ledger → Record journal entries → Analyze transactions.",
@@ -1289,6 +1369,7 @@
   ],
   "1-5": [
     {
+      "id": "1-5-01",
       "q": "Which of the following is not a limitation of a properly prepared unadjusted trial balance report that balances?",
       "o": [
         "It does not mean that all transactions have been posted to the correct accounts.",
@@ -1305,6 +1386,7 @@
       }
     },
     {
+      "id": "1-5-02",
       "q": "A bookkeeper completed the daily transaction posting, and according to the accounting department policy, prepared an unadjusted trial balance. Total debits were $1,045,300 and total credits were $1,040,300. What does this mean?",
       "o": [
         "The trial balance is out of balance, so an error has been made in the preparation of the trial balance.",
@@ -1321,6 +1403,7 @@
       }
     },
     {
+      "id": "1-5-03",
       "q": "An unadjusted trial balance in which total debits equal total credits means that",
       "o": [
         "all transactions that need to be posted have been posted.",
@@ -1337,6 +1420,7 @@
       }
     },
     {
+      "id": "1-5-04",
       "q": "What is the purpose of a trial balance?",
       "o": [
         "To ensure that total debits equal total credits.",
@@ -1353,6 +1437,7 @@
       }
     },
     {
+      "id": "1-5-05",
       "q": "What is the primary purpose of preparing an unadjusted trial balance?",
       "o": [
         "To ensure that all revenues and expenses are properly matched.",
@@ -1369,6 +1454,7 @@
       }
     },
     {
+      "id": "1-5-06",
       "q": "An unadjusted trial balance lists which of the following?",
       "o": [
         "Only balance sheet accounts.",
@@ -1385,6 +1471,7 @@
       }
     },
     {
+      "id": "1-5-07",
       "q": "Which of the following errors would be detected by preparing a trial balance?",
       "o": [
         "A transaction was recorded with the correct amounts but to the wrong accounts.",
@@ -1401,6 +1488,7 @@
       }
     },
     {
+      "id": "1-5-08",
       "q": "After posting all journal entries, a company's accounts show total debits of $185,000 and total credits of $172,000. What is the most likely cause?",
       "o": [
         "A revenue account was understated.",
@@ -1417,6 +1505,7 @@
       }
     },
     {
+      "id": "1-5-09",
       "q": "On the unadjusted trial balance, which of the following accounts would normally appear with a credit balance?",
       "o": [
         "Prepaid Expenses.",
@@ -1433,6 +1522,7 @@
       }
     },
     {
+      "id": "1-5-10",
       "q": "Which step in the accounting cycle immediately precedes the preparation of the unadjusted trial balance?",
       "o": [
         "Preparing adjusting entries.",
@@ -1449,6 +1539,7 @@
       }
     },
     {
+      "id": "1-5-11",
       "q": "A trial balance shows total debits of $420,000 and total credits of $415,000. Which of the following could explain the $5,000 difference?",
       "o": [
         "A $5,000 expense was recorded as revenue.",
@@ -1465,6 +1556,7 @@
       }
     },
     {
+      "id": "1-5-12",
       "q": "Which of the following statements about the unadjusted trial balance is correct?",
       "o": [
         "A balanced trial balance guarantees the financial statements are free of errors.",
@@ -1481,6 +1573,7 @@
       }
     },
     {
+      "id": "1-5-13",
       "q": "The unadjusted trial balance of a company shows a Supplies account balance of $8,000. A physical count reveals only $3,000 of supplies remain. What entry is needed?",
       "o": [
         "No entry is needed on the unadjusted trial balance.",
@@ -1497,6 +1590,7 @@
       }
     },
     {
+      "id": "1-5-14",
       "q": "Which of the following accounts would NOT appear on an unadjusted trial balance?",
       "o": [
         "Prepaid Insurance.",
@@ -1513,6 +1607,7 @@
       }
     },
     {
+      "id": "1-5-15",
       "q": "A company's unadjusted trial balance shows Rent Revenue of $24,000. However, $6,000 of this amount has not yet been earned. What type of adjustment is needed?",
       "o": [
         "Deferred revenue adjustment — reduce revenue and increase a liability.",
@@ -1529,6 +1624,7 @@
       }
     },
     {
+      "id": "1-5-16",
       "q": "In the unadjusted trial balance, Accounts Receivable shows a balance of $45,000. During the period, the company collected $30,000 from customers but recorded it incorrectly as a credit to Revenue instead of Accounts Receivable. What is the correct Accounts Receivable balance?",
       "o": [
         "$45,000.",
@@ -1545,6 +1641,7 @@
       }
     },
     {
+      "id": "1-5-17",
       "q": "How does the unadjusted trial balance differ from the adjusted trial balance?",
       "o": [
         "The unadjusted trial balance includes only permanent accounts; the adjusted includes all accounts.",
@@ -1561,6 +1658,7 @@
       }
     },
     {
+      "id": "1-5-18",
       "q": "Which of the following describes the correct format of a trial balance?",
       "o": [
         "Account names in alphabetical order with assets listed first.",
@@ -1577,6 +1675,7 @@
       }
     },
     {
+      "id": "1-5-19",
       "q": "A bookkeeper notices that the trial balance does not balance — debits exceed credits by $180. Which of the following is a possible cause?",
       "o": [
         "A $90 transaction was completely omitted.",
@@ -1593,6 +1692,7 @@
       }
     },
     {
+      "id": "1-5-20",
       "q": "When preparing an unadjusted trial balance, a company finds that its Retained Earnings account has a credit balance of $75,000. This indicates:",
       "o": [
         "The company has a net loss accumulated over its life.",
@@ -1611,6 +1711,7 @@
   ],
   "1-6": [
     {
+      "id": "1-6-01",
       "q": "Revenue, gain, expense, and loss accounts reported on the income statement provide the detail behind",
       "o": [
         "the increases and decreases that they cause in cash flow.",
@@ -1627,6 +1728,7 @@
       }
     },
     {
+      "id": "1-6-02",
       "q": "What is other comprehensive income?",
       "o": [
         "The equity account in the chart of accounts where specific gains and losses not reported in net income are reported.",
@@ -1643,6 +1745,7 @@
       }
     },
     {
+      "id": "1-6-03",
       "q": "The correct category in the chart of accounts for the Accumulated Other Comprehensive Income account is",
       "o": [
         "liabilities.",
@@ -1659,6 +1762,7 @@
       }
     },
     {
+      "id": "1-6-04",
       "q": "A credit transaction",
       "o": [
         "decreases equity, increases revenue, and decreases expenses.",
@@ -1675,6 +1779,7 @@
       }
     },
     {
+      "id": "1-6-05",
       "q": "Which of the following is a source of increases to owners’ equity?",
       "o": [
         "Investments",
@@ -1691,6 +1796,7 @@
       }
     },
     {
+      "id": "1-6-06",
       "q": "The income statement reports",
       "o": [
         "The summarized revenues, gains, expenses, and losses for the period, other than the items recorded in the Accumulated Other Comprehensive Income account.",
@@ -1707,6 +1813,7 @@
       }
     },
     {
+      "id": "1-6-07",
       "q": "Comprehensive income includes",
       "o": [
         "All credits less all debits recorded in the ledger during the period.",
@@ -1723,6 +1830,7 @@
       }
     },
     {
+      "id": "1-6-08",
       "q": "Which of the following best defines comprehensive income?",
       "o": [
         "Net income plus dividends paid to shareholders.",
@@ -1739,6 +1847,7 @@
       }
     },
     {
+      "id": "1-6-09",
       "q": "Which of the following is an example of an item reported in Other Comprehensive Income (OCI)?",
       "o": [
         "Gain on sale of equipment.",
@@ -1755,6 +1864,7 @@
       }
     },
     {
+      "id": "1-6-10",
       "q": "Accumulated Other Comprehensive Income (AOCI) appears on which financial statement?",
       "o": [
         "Income statement.",
@@ -1771,6 +1881,7 @@
       }
     },
     {
+      "id": "1-6-11",
       "q": "A company reports net income of $200,000 and an unrealized loss of $30,000 on available-for-sale securities. What is the company's total comprehensive income?",
       "o": [
         "$230,000.",
@@ -1787,6 +1898,7 @@
       }
     },
     {
+      "id": "1-6-12",
       "q": "Which of the following correctly describes the relationship between net income and comprehensive income?",
       "o": [
         "Net income always equals comprehensive income.",
@@ -1803,6 +1915,7 @@
       }
     },
     {
+      "id": "1-6-13",
       "q": "Foreign currency translation adjustments are reported in:",
       "o": [
         "Net income on the income statement.",
@@ -1819,6 +1932,7 @@
       }
     },
     {
+      "id": "1-6-14",
       "q": "Which statement format presents both net income and other comprehensive income items in a single continuous statement?",
       "o": [
         "Single-step income statement.",
@@ -1835,6 +1949,7 @@
       }
     },
     {
+      "id": "1-6-15",
       "q": "Which of the following pension-related items is typically reported as Other Comprehensive Income?",
       "o": [
         "Current period pension service cost.",
@@ -1851,6 +1966,7 @@
       }
     },
     {
+      "id": "1-6-16",
       "q": "When an available-for-sale investment is sold and a previously unrealized gain is realized, what happens to the OCI amount?",
       "o": [
         "It remains in AOCI permanently.",
@@ -1867,6 +1983,7 @@
       }
     },
     {
+      "id": "1-6-17",
       "q": "A company reports the following for the year: net income $150,000; unrealized gain on investment securities $20,000; and foreign currency translation loss $8,000. What is total comprehensive income?",
       "o": [
         "$150,000.",
@@ -1883,6 +2000,7 @@
       }
     },
     {
+      "id": "1-6-18",
       "q": "Which of the following is NOT a component of other comprehensive income under US GAAP?",
       "o": [
         "Unrealized gains on available-for-sale securities.",
@@ -1899,6 +2017,7 @@
       }
     },
     {
+      "id": "1-6-19",
       "q": "Why are certain items reported in OCI rather than directly in net income?",
       "o": [
         "To overstate earnings and appear more profitable to investors.",
@@ -1915,6 +2034,7 @@
       }
     },
     {
+      "id": "1-6-20",
       "q": "The statement of comprehensive income begins with which line item?",
       "o": [
         "Total revenues.",
@@ -1933,6 +2053,7 @@
   ],
   "1-7": [
     {
+      "id": "1-7-01",
       "q": "A control account contains",
       "o": [
         "the totals of the transactions and the balances in its related sub-ledger accounts.",
@@ -1949,6 +2070,7 @@
       }
     },
     {
+      "id": "1-7-02",
       "q": "A subsidiary ledger contains",
       "o": [
         "a compilation of all the transactions and balances for all the individual components of the ledger.",
@@ -1965,6 +2087,7 @@
       }
     },
     {
+      "id": "1-7-03",
       "q": "What is the purpose of a subsidiary ledger?",
       "o": [
         "To maintain separate accounting records for each subsidiary of a multinational company.",
@@ -1981,6 +2104,7 @@
       }
     },
     {
+      "id": "1-7-04",
       "q": "A subsidiary ledger account is an account",
       "o": [
         "in a subsidiary ledger that contains transactions for a single entity.",
@@ -1997,6 +2121,7 @@
       }
     },
     {
+      "id": "1-7-05",
       "q": "ABC Company had the following transactions on December 1, 20X4: Credit sale made to TriState Services 11,500.00 Purchase made on credit from Signet Enterprises 4,025.00 Credit sale made to Punch Bowl Company 7,350.00 Payment on account received from Argonaut Inc. 6,300.00 Payment made to ACT, Inc. on account 9,665.00 Payment on account received from CTA Corp. 2,500.00 Purchase made on credit from Ace LLC 7,800.00 Payment made to ZXC, Inc. on account 1,750.00 What transaction or transactions should be posted in the Accounts Receivable control account for December 1?",
       "o": [
         "Credit Accounts Receivable $10,050.",
@@ -2013,6 +2138,7 @@
       }
     },
     {
+      "id": "1-7-06",
       "q": "What is the primary purpose of a subsidiary ledger?",
       "o": [
         "To replace the general ledger for small businesses.",
@@ -2029,6 +2155,7 @@
       }
     },
     {
+      "id": "1-7-07",
       "q": "The accounts receivable control account in the general ledger shows a balance of $85,000. Which of the following must also be true?",
       "o": [
         "Each individual customer owes exactly $85,000.",
@@ -2045,6 +2172,7 @@
       }
     },
     {
+      "id": "1-7-08",
       "q": "Which of the following is an example of a control account?",
       "o": [
         "Cash.",
@@ -2061,6 +2189,7 @@
       }
     },
     {
+      "id": "1-7-09",
       "q": "After posting all transactions, the accounts receivable control account has a balance of $42,000, but the subsidiary ledger totals $38,000. What should be done?",
       "o": [
         "Accept the control account balance as correct since it is in the general ledger.",
@@ -2077,6 +2206,7 @@
       }
     },
     {
+      "id": "1-7-10",
       "q": "When a sale is made on account to a customer, which ledgers are updated?",
       "o": [
         "Only the general ledger control account for Accounts Receivable.",
@@ -2093,6 +2223,7 @@
       }
     },
     {
+      "id": "1-7-11",
       "q": "Which of the following subsidiary ledgers tracks individual supplier balances?",
       "o": [
         "Accounts Receivable subsidiary ledger.",
@@ -2109,6 +2240,7 @@
       }
     },
     {
+      "id": "1-7-12",
       "q": "A company maintains a fixed assets subsidiary ledger. Which of the following information would most likely be found in this ledger?",
       "o": [
         "Each customer's credit limit and outstanding balance.",
@@ -2125,6 +2257,7 @@
       }
     },
     {
+      "id": "1-7-13",
       "q": "How does using subsidiary ledgers improve internal controls?",
       "o": [
         "They eliminate the need for the general ledger.",
@@ -2141,6 +2274,7 @@
       }
     },
     {
+      "id": "1-7-14",
       "q": "Which of the following best describes a schedule of accounts receivable?",
       "o": [
         "A list of all sales transactions made during the period.",
@@ -2157,6 +2291,7 @@
       }
     },
     {
+      "id": "1-7-15",
       "q": "A payment received from a customer is posted to the accounts receivable subsidiary ledger but not to the Accounts Receivable control account. What is the result?",
       "o": [
         "The trial balance will be out of balance.",
@@ -2173,6 +2308,7 @@
       }
     },
     {
+      "id": "1-7-16",
       "q": "In addition to accounts receivable and accounts payable, which of the following might commonly have a subsidiary ledger?",
       "o": [
         "Accumulated Depreciation.",
@@ -2189,6 +2325,7 @@
       }
     },
     {
+      "id": "1-7-17",
       "q": "The general ledger Accounts Payable control account balance is $56,000. An accountant reviews the accounts payable subsidiary ledger and finds three vendor accounts: Vendor A $22,000; Vendor B $18,000; Vendor C $14,000. Is the control account in agreement with the subsidiary ledger?",
       "o": [
         "No — the subsidiary ledger total is $54,000, which is $2,000 less than the control account.",
@@ -2205,6 +2342,7 @@
       }
     },
     {
+      "id": "1-7-18",
       "q": "Which of the following statements is true regarding the relationship between a control account and its subsidiary ledger?",
       "o": [
         "The control account is updated daily; the subsidiary ledger is updated monthly.",
@@ -2221,6 +2359,7 @@
       }
     },
     {
+      "id": "1-7-19",
       "q": "What does it mean to 'post' a transaction to the accounts receivable subsidiary ledger?",
       "o": [
         "To mail an invoice to a customer.",
@@ -2237,6 +2376,7 @@
       }
     },
     {
+      "id": "1-7-20",
       "q": "A company sells on account to 500 customers. Why is maintaining individual customer accounts in a subsidiary ledger more practical than recording each customer in the general ledger?",
       "o": [
         "The general ledger has a maximum account limit that would be exceeded.",
@@ -2255,6 +2395,7 @@
   ],
   "1-8": [
     {
+      "id": "1-8-01",
       "q": "An invoice in the amount of $457.00 for telephone service from October 1 through October 31 is received on November 15, payable November 25. The company’s fiscal year end is December 31. How should the invoice and its payment on November 25 be posted in the accounting system?",
       "o": [
         "Transaction date November 25: Debit Telephone Service Expense $457.00; Credit Cash $457.00.",
@@ -2271,6 +2412,7 @@
       }
     },
     {
+      "id": "1-8-02",
       "q": "JK Industries sold inventory for $300,000 that had cost JK Industries $200,000 to Row Products on June 25, 20X4, and Row Products picked up the inventory the same day. Payment from Row Products was due on July 25, 20X4, and Row Products paid for the inventory on July 24, 20X4. JK uses a perpetual inventory system. How should the sale to Row Products be reflected in JK Industries’ June 30, 20X4 financial statements?",
       "o": [
         "As credits of $300,000 to sales revenue and accounts receivable and debits of $200,000 to cost of goods sold and inventory.",
@@ -2287,6 +2429,7 @@
       }
     },
     {
+      "id": "1-8-03",
       "q": "A company makes sales totaling $15,600 on credit. The cost of the inventory sold is $6,700, and the company uses a perpetual inventory system. How should the sale be accounted for?",
       "o": [
         "Debit accounts receivable $15,600, credit sales revenue $15,600.",
@@ -2303,6 +2446,7 @@
       }
     },
     {
+      "id": "1-8-04",
       "q": "What is the impact on the accounting equation when a current period expense is paid?",
       "o": [
         "Both sides of the equation decrease.",
@@ -2319,6 +2463,7 @@
       }
     },
     {
+      "id": "1-8-05",
       "q": "During the month of October, a company purchased 1,000 units of inventory for $500 per unit and sold 900 of these units which represented 10% of the company’s annual sales budget in units. The company also incurred administrative costs of $300,000 during October. By applying the matching principle, the total amount of the company’s expenses on its October income statement is",
       "o": [
         "$800,000",
@@ -2335,6 +2480,7 @@
       }
     },
     {
+      "id": "1-8-06",
       "q": "When an expense is incurred in the process of providing a product to a customer, the expense is properly recognized",
       "o": [
         "when the related revenue is recognized.",
@@ -2351,6 +2497,7 @@
       }
     },
     {
+      "id": "1-8-07",
       "q": "On April 10, Glenoak Lighting Products received a request from Entertaining Events for a special spotlight that Glenoak does not normally carry in inventory and thus needed to be specially ordered. The price of the spotlight was $4,000 and its cost to Glenoak Lighting was $2,500. Glenoak’s policy for special order items is to require a 50% deposit before the item can be ordered. Entertaining Events paid the required $2,000 deposit on April 12. How should Glenoak Lighting account for the deposit?",
       "o": [
         "April 12: Debit Prepaid Expense $2,000; Credit Cash $2,000.",
@@ -2367,6 +2514,7 @@
       }
     },
     {
+      "id": "1-8-08",
       "q": "A company receives an electric utility bill for $2,500 for electricity used from November 1 through November 30. The bill is paid on December 15. How should the bill be accounted for?",
       "o": [
         "As of December 15, debit utility expense for $2,500 and credit accounts payable for $2,500.",
@@ -2383,6 +2531,7 @@
       }
     },
     {
+      "id": "1-8-09",
       "q": "What is the impact on the accounting equation when a sale is made?",
       "o": [
         "Both sides of the equation decrease.",
@@ -2399,6 +2548,7 @@
       }
     },
     {
+      "id": "1-8-10",
       "q": "When cash for sales that have been made on credit is collected, how should the receipt of the cash be recorded in the accounting system?",
       "o": [
         "Debit cash, credit accounts receivable.",
@@ -2415,6 +2565,7 @@
       }
     },
     {
+      "id": "1-8-11",
       "q": "Under the accrual basis of accounting, revenue is recognized when:",
       "o": [
         "Cash is received from the customer.",
@@ -2431,6 +2582,7 @@
       }
     },
     {
+      "id": "1-8-12",
       "q": "A company provides consulting services worth $12,000. The client pays $5,000 immediately and agrees to pay the remaining $7,000 next month. What is the correct journal entry?",
       "o": [
         "Debit Cash $5,000; Credit Revenue $5,000.",
@@ -2447,6 +2599,7 @@
       }
     },
     {
+      "id": "1-8-13",
       "q": "Under the matching principle, expenses should be recognized:",
       "o": [
         "When cash is paid.",
@@ -2463,6 +2616,7 @@
       }
     },
     {
+      "id": "1-8-14",
       "q": "A company pays $24,000 on January 1 for a two-year advertising campaign. How much advertising expense should be recorded each month?",
       "o": [
         "$24,000 immediately on January 1.",
@@ -2479,6 +2633,7 @@
       }
     },
     {
+      "id": "1-8-15",
       "q": "Which of the following is an example of an accrued expense?",
       "o": [
         "Rent paid in advance for the next three months.",
@@ -2495,6 +2650,7 @@
       }
     },
     {
+      "id": "1-8-16",
       "q": "A customer returns merchandise worth $800 that was originally purchased on account. What is the correct journal entry on the seller's books?",
       "o": [
         "Debit Cash $800; Credit Accounts Receivable $800.",
@@ -2511,6 +2667,7 @@
       }
     },
     {
+      "id": "1-8-17",
       "q": "At year-end, a company has earned $3,000 of interest on a bank deposit but has not yet received the cash. What adjusting entry is required?",
       "o": [
         "Debit Cash $3,000; Credit Interest Revenue $3,000.",
@@ -2527,6 +2684,7 @@
       }
     },
     {
+      "id": "1-8-18",
       "q": "A company records $15,000 of salary expense at month-end for employees who will be paid next month. Which accounts are affected?",
       "o": [
         "Debit Cash $15,000; Credit Salaries Expense $15,000.",
@@ -2543,6 +2701,7 @@
       }
     },
     {
+      "id": "1-8-19",
       "q": "Which of the following transactions results in both an asset and a revenue being recorded simultaneously?",
       "o": [
         "Receiving cash in advance from a customer for future services.",
@@ -2559,6 +2718,7 @@
       }
     },
     {
+      "id": "1-8-20",
       "q": "A retail store sells merchandise for $5,000 cash. The cost of the merchandise was $3,000. What is gross profit from this transaction?",
       "o": [
         "$5,000.",
@@ -2577,6 +2737,7 @@
   ],
   "1-9": [
     {
+      "id": "1-9-01",
       "q": "On October 1, 20X3, the board of directors of Discounts4U Company declared a cash dividend of $0.50 per share, payable on November 15, 20X3, to common stockholders of record as of November 1, 20X3. The company had 80,000 common shares outstanding as of October 1. How will the declaration of the dividend affect Discounts4U’s balance sheet and/or income statement?",
       "o": [
         "Net Income is decreased by $40,000 and Equity is decreased by $40,000 on October 1, 20X3.",
@@ -2593,6 +2754,7 @@
       }
     },
     {
+      "id": "1-9-02",
       "q": "Investment instruments with maturity dates of less than 90 days when purchased that can be easily converted into cash without a significant loss in value are classified on the balance sheet as",
       "o": [
         "convertible bonds.",
@@ -2609,6 +2771,7 @@
       }
     },
     {
+      "id": "1-9-03",
       "q": "On July 1, 20X4, NLF Corporation pays an insurance premium of $12,000 for insurance coverage on its facilities from July 1, 20X4 to June 30, 20X5. What is the impact of the payment on the accounting equation for NLF Corporation on July 1, 20X4?",
       "o": [
         "No change.",
@@ -2625,6 +2788,7 @@
       }
     },
     {
+      "id": "1-9-04",
       "q": "A company makes a $1,000 mortgage payment every month to pay for its manufacturing plant; $200 of this payment is for interest on the loan. What is the correct journal entry to record this transaction?",
       "o": [
         "Debit: building $1,000; credit: loans payable $1,000.",
@@ -2641,6 +2805,7 @@
       }
     },
     {
+      "id": "1-9-05",
       "q": "The correct category in the chart of accounts for the Prepaid Expenses account is",
       "o": [
         "Assets",
@@ -2657,6 +2822,7 @@
       }
     },
     {
+      "id": "1-9-06",
       "q": "TBS Inc. purchases an automated mail folder and inserter machine for $10,000. The company makes a $1,000 down payment on the equipment and finances the remaining $9,000 on a fiveyear loan secured by the equipment. How should the purchase be recorded?",
       "o": [
         "Debit Equipment for $10,000, credit Cash for $1,000, credit Long-term Debt for $9,000.",
@@ -2673,6 +2839,7 @@
       }
     },
     {
+      "id": "1-9-07",
       "q": "The Dividends account is",
       "o": [
         "A contra-expense account used for recording dividends declared.",
@@ -2689,6 +2856,7 @@
       }
     },
     {
+      "id": "1-9-08",
       "q": "On December 10, PET Company received an order from YU Industries for $5,000 for items costing PET $2,000. Since the items required a special order, PET requested and received a deposit from YU in the amount of $1,500 on December 12. How should the deposit be recorded in the accounting system?",
       "o": [
         "Debit Cash for $1,500 and credit Deferred Revenue for $1,500.",
@@ -2705,6 +2873,7 @@
       }
     },
     {
+      "id": "1-9-09",
       "q": "DFI Inc. rents a warehouse for which it pays rent of $120,000 per year, payable in advance. On January 1, 20X4, DFI makes its 20X4 rent payment in cash. How should the rent payment be recorded in the accounting system on January 1?",
       "o": [
         "Debit Prepaid Expenses $120,000, credit Cash $120,000",
@@ -2721,6 +2890,7 @@
       }
     },
     {
+      "id": "1-9-10",
       "q": "A company declares and pays a $5,000 cash dividend to its shareholders. Which of the following correctly records this transaction?",
       "o": [
         "Debit Dividends Expense $5,000; Credit Cash $5,000.",
@@ -2737,6 +2907,7 @@
       }
     },
     {
+      "id": "1-9-11",
       "q": "A company purchases its own shares of stock (treasury stock) for $20,000 cash. What is the effect on the balance sheet?",
       "o": [
         "Total assets increase $20,000; Total equity increases $20,000.",
@@ -2753,6 +2924,7 @@
       }
     },
     {
+      "id": "1-9-12",
       "q": "A company issues common stock at $15 per share when the par value is $1 per share. For 1,000 shares issued, what is recorded?",
       "o": [
         "Debit Cash $1,000; Credit Common Stock $1,000.",
@@ -2769,6 +2941,7 @@
       }
     },
     {
+      "id": "1-9-13",
       "q": "A company writes off a customer's account balance of $2,500 as uncollectible (using the allowance method). What is the correct journal entry?",
       "o": [
         "Debit Bad Debt Expense $2,500; Credit Accounts Receivable $2,500.",
@@ -2785,6 +2958,7 @@
       }
     },
     {
+      "id": "1-9-14",
       "q": "A company exchanges old equipment (book value $8,000) for new equipment worth $15,000, paying $7,000 cash to complete the exchange. What is the gain or loss on this transaction?",
       "o": [
         "$7,000 gain.",
@@ -2801,6 +2975,7 @@
       }
     },
     {
+      "id": "1-9-15",
       "q": "A company receives a $10,000 bank loan. Six months later, it repays $5,000 of principal plus $300 interest. Which entry records the repayment?",
       "o": [
         "Debit Notes Payable $5,300; Credit Cash $5,300.",
@@ -2817,6 +2992,7 @@
       }
     },
     {
+      "id": "1-9-16",
       "q": "A company sells a building with a cost of $500,000 and accumulated depreciation of $180,000 for $340,000 cash. What is the result?",
       "o": [
         "$20,000 gain.",
@@ -2833,6 +3009,7 @@
       }
     },
     {
+      "id": "1-9-17",
       "q": "A company converts $50,000 of accounts payable into a long-term note payable. What is the effect on the balance sheet?",
       "o": [
         "Total liabilities decrease by $50,000.",
@@ -2849,6 +3026,7 @@
       }
     },
     {
+      "id": "1-9-18",
       "q": "A company receives a $2,000 utility bill that will be paid next month. How does this affect the accounting equation?",
       "o": [
         "Assets decrease $2,000; Equity decreases $2,000.",
@@ -2865,6 +3043,7 @@
       }
     },
     {
+      "id": "1-9-19",
       "q": "A company purchases land for $200,000, paying $50,000 cash and signing a mortgage for the remaining $150,000. How is this transaction classified on the statement of cash flows?",
       "o": [
         "Operating activity outflow of $200,000.",
@@ -2881,6 +3060,7 @@
       }
     },
     {
+      "id": "1-9-20",
       "q": "A corporation declares a stock dividend that distributes additional shares to existing shareholders. What is the effect on total stockholders' equity?",
       "o": [
         "Total equity increases by the market value of shares distributed.",
@@ -2899,6 +3079,7 @@
   ],
   "1-10": [
     {
+      "id": "1-10-01",
       "q": "Which of the following is not a reporting period that would be covered by a set of interim financial statements?",
       "o": [
         "A quarter",
@@ -2915,6 +3096,7 @@
       }
     },
     {
+      "id": "1-10-02",
       "q": "Which of the following is not one of the methods by which expenses are recognized?",
       "o": [
         "Systematic and rational allocation",
@@ -2931,6 +3113,7 @@
       }
     },
     {
+      "id": "1-10-03",
       "q": "A publishing company sold $7,000 in magazine subscriptions. To date, the company has received payments totaling $5,000 of the $7,000 total subscriptions. According to the accrual accounting rulings, when should revenue be recognized?",
       "o": [
         "When the magazine is sent to subscribers.",
@@ -2947,6 +3130,7 @@
       }
     },
     {
+      "id": "1-10-04",
       "q": "The balance sheet of Sumner Company reports retained earnings of $140,000. Total assets are $720,000 and are twice the balance of total liabilities. What is the balance of capital stock (common stock plus additional paid-in capital)?",
       "o": [
         "$360,000",
@@ -2963,6 +3147,7 @@
       }
     },
     {
+      "id": "1-10-05",
       "q": "An Accumulated Depreciation account is",
       "o": [
         "An expense account",
@@ -2979,6 +3164,7 @@
       }
     },
     {
+      "id": "1-10-06",
       "q": "Which of the following is not a requirement for a business transaction to be recorded in accounting records?",
       "o": [
         "It must be something that affects the financial information presented in the organization’s financial statements",
@@ -2995,6 +3181,7 @@
       }
     },
     {
+      "id": "1-10-07",
       "q": "XYZ Corporation pays ABC Corporation $120,000 in advance on January 1 for it to conduct a 12-month study on possible acquisitions. What is the impact on the accounting equation of this transaction on ABC’s books in February?",
       "o": [
         "Assets, $0; liability, $(10,000); equity, $10,000.",
@@ -3011,6 +3198,7 @@
       }
     },
     {
+      "id": "1-10-08",
       "q": "Which of the following best describes the purpose of adjusting entries?",
       "o": [
         "To correct errors made in journal entries during the period.",
@@ -3027,6 +3215,7 @@
       }
     },
     {
+      "id": "1-10-09",
       "q": "On October 1, a company pays $6,000 for a 12-month insurance policy. What is the adjusting entry on December 31?",
       "o": [
         "Debit Insurance Expense $6,000; Credit Prepaid Insurance $6,000.",
@@ -3043,6 +3232,7 @@
       }
     },
     {
+      "id": "1-10-10",
       "q": "A company receives $18,000 cash in January for services to be performed evenly over 6 months (January–June). By March 31, what is the balance in Unearned Revenue?",
       "o": [
         "$18,000.",
@@ -3059,6 +3249,7 @@
       }
     },
     {
+      "id": "1-10-11",
       "q": "Depreciation of $3,600 for the year has not been recorded. What adjusting entry is required?",
       "o": [
         "Debit Equipment $3,600; Credit Accumulated Depreciation $3,600.",
@@ -3075,6 +3266,7 @@
       }
     },
     {
+      "id": "1-10-12",
       "q": "At year-end, employees have earned $4,200 in wages that will be paid in the next period. What adjusting entry is required?",
       "o": [
         "Debit Salaries Payable $4,200; Credit Cash $4,200.",
@@ -3091,6 +3283,7 @@
       }
     },
     {
+      "id": "1-10-13",
       "q": "Which of the following is an example of a deferred revenue adjusting entry?",
       "o": [
         "Recording interest earned but not yet received.",
@@ -3107,6 +3300,7 @@
       }
     },
     {
+      "id": "1-10-14",
       "q": "A company earns $800 of interest on a note receivable by December 31 but will not receive the cash until next year. What adjusting entry is required?",
       "o": [
         "Debit Interest Revenue $800; Credit Interest Receivable $800.",
@@ -3123,6 +3317,7 @@
       }
     },
     {
+      "id": "1-10-15",
       "q": "If adjusting entries are not recorded at period-end, which of the following will occur?",
       "o": [
         "Net income will always be overstated.",
@@ -3139,6 +3334,7 @@
       }
     },
     {
+      "id": "1-10-16",
       "q": "The Supplies account shows a debit balance of $5,500 before adjustment. A physical count reveals $1,800 of supplies on hand. What is the adjusting entry?",
       "o": [
         "Debit Supplies Expense $1,800; Credit Supplies $1,800.",
@@ -3155,6 +3351,7 @@
       }
     },
     {
+      "id": "1-10-17",
       "q": "Which type of adjusting entry is made when a company has incurred an expense that will be paid in the next accounting period?",
       "o": [
         "Deferred expense adjustment.",
@@ -3171,6 +3368,7 @@
       }
     },
     {
+      "id": "1-10-18",
       "q": "A company rents out office space and receives $24,000 on November 1 for 12 months of rent. On December 31, how much should be in the Unearned Rent Revenue account?",
       "o": [
         "$24,000.",
@@ -3187,6 +3385,7 @@
       }
     },
     {
+      "id": "1-10-19",
       "q": "After recording all adjusting entries, which document is prepared next?",
       "o": [
         "Unadjusted trial balance.",
@@ -3203,6 +3402,7 @@
       }
     },
     {
+      "id": "1-10-20",
       "q": "Which of the following adjusting entries would increase net income?",
       "o": [
         "Recording wages earned but unpaid at period-end.",
@@ -3221,6 +3421,7 @@
   ],
   "1-11": [
     {
+      "id": "1-11-01",
       "q": "How are fixed assets accounted for?",
       "o": [
         "They are initially recorded as assets on the balance sheet at their historical cost, and subsequently their values are decreased as they wear out by decreasing their historical cost.",
@@ -3237,6 +3438,7 @@
       }
     },
     {
+      "id": "1-11-02",
       "q": "The combined balance of a fixed asset account and its related accumulated depreciation account is the asset’s",
       "o": [
         "Replacement value",
@@ -3253,6 +3455,7 @@
       }
     },
     {
+      "id": "1-11-03",
       "q": "What is the relationship between the adjusted trial balance and the financial statements?",
       "o": [
         "The adjusted trial balance is used as the basis for preparing the financial statements.",
@@ -3269,6 +3472,7 @@
       }
     },
     {
+      "id": "1-11-04",
       "q": "After the period-end adjusting entries have been recorded in the accounting system, the next step in the accounting cycle is to",
       "o": [
         "prepare an adjusted trial balance.",
@@ -3285,6 +3489,7 @@
       }
     },
     {
+      "id": "1-11-05",
       "q": "Over how many years should the cost of the land on which a building is constructed be depreciated?",
       "o": [
         "Thirty years.",
@@ -3301,6 +3506,7 @@
       }
     },
     {
+      "id": "1-11-06",
       "q": "DFI Inc. rents a warehouse for which it pays rent of $120,000 per year, payable in advance. On January 1, 20X4, DFI makes its 20X4 rent payment in cash. DFI issues financial statements twice a year: interim financial statements on June 30 and the annual financial statements at the end of its fiscal year on December 31. What adjusting entry should be made on June 30, 20X4 for the rent?",
       "o": [
         "Debit Rent Expense for $60,000 and credit Prepaid Expense for $60,000.",
@@ -3317,6 +3523,7 @@
       }
     },
     {
+      "id": "1-11-07",
       "q": "On June 15, Camping Supply, a retail store, borrowed $50,000 on a short-term note at an annual interest rate of 6.935% to purchase inventory. The principal plus accrued interest is due in 90 days, on September 13. Camping Supply publishes monthly financial statements and accrues the interest expense monthly. Using a 365-day year, how much interest expense should Camping Supply accrue on August 31?",
       "o": [
         "$152.00",
@@ -3333,6 +3540,7 @@
       }
     },
     {
+      "id": "1-11-08",
       "q": "At the end of a reporting period, estimating costs incurred through the closing date of the period and recording them in the accounting system if invoices have not been received",
       "o": [
         "is called deferring the expenses and is a necessary part of the accounting cycle.",
@@ -3349,6 +3557,7 @@
       }
     },
     {
+      "id": "1-11-09",
       "q": "At the end of the fiscal year, Hub Corporation records depreciation on its fixed assets according to the depreciation schedules developed when the assets were purchased. How are the depreciation amounts recorded in the accounting system?",
       "o": [
         "Debit Depreciation Expense, credit Cash",
@@ -3365,6 +3574,7 @@
       }
     },
     {
+      "id": "1-11-10",
       "q": "On December 31, a company earned $800 in interest on a note receivable but has not yet received cash. What adjusting entry is required?",
       "o": [
         "Debit: Cash $800; Credit: Interest Revenue $800.",
@@ -3381,6 +3591,7 @@
       }
     },
     {
+      "id": "1-11-11",
       "q": "A company paid $6,000 for rent on November 1 covering 6 months. On December 31, what adjusting entry is needed?",
       "o": [
         "Debit: Prepaid Rent $2,000; Credit: Rent Expense $2,000.",
@@ -3397,6 +3608,7 @@
       }
     },
     {
+      "id": "1-11-12",
       "q": "Which of the following is an example of an accrued expense?",
       "o": [
         "Rent paid in advance for the next quarter.",
@@ -3413,6 +3625,7 @@
       }
     },
     {
+      "id": "1-11-13",
       "q": "At year-end, $1,500 of supplies have been used. The Supplies account had a balance of $4,000. What is the adjusting entry?",
       "o": [
         "Debit: Supplies $1,500; Credit: Supplies Expense $1,500.",
@@ -3429,6 +3642,7 @@
       }
     },
     {
+      "id": "1-11-14",
       "q": "A company borrowed $50,000 on December 1 at 6% annual interest. What adjusting entry is needed on December 31?",
       "o": [
         "Debit: Interest Expense $3,000; Credit: Interest Payable $3,000.",
@@ -3445,6 +3659,7 @@
       }
     },
     {
+      "id": "1-11-15",
       "q": "What type of adjusting entry converts a liability into revenue?",
       "o": [
         "Accrued revenue adjustment.",
@@ -3461,6 +3676,7 @@
       }
     },
     {
+      "id": "1-11-16",
       "q": "Equipment costing $24,000 with an 8-year useful life and no salvage value. What is the monthly straight-line depreciation adjusting entry?",
       "o": [
         "Debit: Depreciation Expense $3,000; Credit: Accumulated Depreciation $3,000.",
@@ -3477,6 +3693,7 @@
       }
     },
     {
+      "id": "1-11-17",
       "q": "Unearned Service Revenue shows $9,000 before adjustment. $6,000 of services have been performed by year-end. What adjusting entry is required?",
       "o": [
         "Debit: Service Revenue $6,000; Credit: Unearned Service Revenue $6,000.",
@@ -3493,6 +3710,7 @@
       }
     },
     {
+      "id": "1-11-18",
       "q": "Which statement about adjusting entries is correct?",
       "o": [
         "Adjusting entries always involve cash.",
@@ -3509,6 +3727,7 @@
       }
     },
     {
+      "id": "1-11-19",
       "q": "A company signed a 3-month consulting contract for $12,000 starting November 1. By December 31, two months of work are complete but no cash has been received. What adjusting entry is needed?",
       "o": [
         "Debit: Accounts Receivable $12,000; Credit: Consulting Revenue $12,000.",
@@ -3525,6 +3744,7 @@
       }
     },
     {
+      "id": "1-11-20",
       "q": "After adjusting entries are posted, which account would appear on the adjusted trial balance but NOT on the unadjusted trial balance?",
       "o": [
         "Cash.",
@@ -3543,6 +3763,7 @@
   ],
   "1-12": [
     {
+      "id": "1-12-01",
       "q": "On the post-closing trial balance, the Dividends account will have a balance",
       "o": [
         "equal to the total dividends declared during the year.",
@@ -3559,6 +3780,7 @@
       }
     },
     {
+      "id": "1-12-02",
       "q": "What happens to a temporary ledger account in the year-end close?",
       "o": [
         "It is marked as closed, and its ending balance becomes its beginning balance for the next year.",
@@ -3575,6 +3797,7 @@
       }
     },
     {
+      "id": "1-12-03",
       "q": "What happens to a permanent ledger account in the year-end close?",
       "o": [
         "The Dividends account is the only permanent account whose balance changes in the year-end close, and the other permanent account balances do not change.",
@@ -3590,6 +3813,7 @@
       }
     },
     {
+      "id": "1-12-04",
       "q": "On the post-closing trial balance, the Income Summary account will have a balance",
       "o": [
         "Equal to total dividends declared during the year.",
@@ -3606,6 +3830,7 @@
       }
     },
     {
+      "id": "1-12-05",
       "q": "The steps in the year-end closing process, in the correct order, are",
       "o": [
         "Close the income statement accounts to the Income Summary account; close the Dividends account to the Income Summary account; close the Income Summary account to Retained Earnings",
@@ -3622,6 +3847,7 @@
       }
     },
     {
+      "id": "1-12-06",
       "q": "How is the Income Summary account classified in the Chart of Accounts?",
       "o": [
         "As an Asset account",
@@ -3638,6 +3864,7 @@
       }
     },
     {
+      "id": "1-12-07",
       "q": "The purpose of the year-end close is to",
       "o": [
         "transfer the balances in the temporary ledger accounts to the retained earnings account.",
@@ -3654,6 +3881,7 @@
       }
     },
     {
+      "id": "1-12-08",
       "q": "What is the primary purpose of closing entries?",
       "o": [
         "To correct errors found in the adjusted trial balance.",
@@ -3670,6 +3898,7 @@
       }
     },
     {
+      "id": "1-12-09",
       "q": "Which of the following accounts is closed at year-end?",
       "o": [
         "Accounts Payable.",
@@ -3686,6 +3915,7 @@
       }
     },
     {
+      "id": "1-12-10",
       "q": "When closing revenue accounts, which of the following entries is correct?",
       "o": [
         "Debit Revenue; Credit Retained Earnings.",
@@ -3702,6 +3932,7 @@
       }
     },
     {
+      "id": "1-12-11",
       "q": "What is the Income Summary account used for?",
       "o": [
         "To record revenues and expenses throughout the period as an alternative to the income statement.",
@@ -3718,6 +3949,7 @@
       }
     },
     {
+      "id": "1-12-12",
       "q": "A company has total revenues of $180,000 and total expenses of $135,000. What entry closes Income Summary to Retained Earnings?",
       "o": [
         "Debit Income Summary $180,000; Credit Retained Earnings $180,000.",
@@ -3734,6 +3966,7 @@
       }
     },
     {
+      "id": "1-12-13",
       "q": "After all closing entries are posted, which accounts will have a zero balance?",
       "o": [
         "All asset and liability accounts.",
@@ -3750,6 +3983,7 @@
       }
     },
     {
+      "id": "1-12-14",
       "q": "Which of the following is the correct sequence of closing entries?",
       "o": [
         "Close expenses → Close revenues → Close Income Summary → Close dividends.",
@@ -3766,6 +4000,7 @@
       }
     },
     {
+      "id": "1-12-15",
       "q": "A company has a net loss of $12,000. What is the entry to close Income Summary to Retained Earnings?",
       "o": [
         "Debit Income Summary $12,000; Credit Retained Earnings $12,000.",
@@ -3782,6 +4017,7 @@
       }
     },
     {
+      "id": "1-12-16",
       "q": "Which statement is true about permanent accounts?",
       "o": [
         "They are closed at year-end and restarted at zero.",
@@ -3798,6 +4034,7 @@
       }
     },
     {
+      "id": "1-12-17",
       "q": "What is the post-closing trial balance?",
       "o": [
         "A trial balance prepared before adjusting entries.",
@@ -3814,6 +4051,7 @@
       }
     },
     {
+      "id": "1-12-18",
       "q": "Dividends declared and paid during the year are closed by which entry?",
       "o": [
         "Debit Retained Earnings; Credit Dividends.",
@@ -3830,6 +4068,7 @@
       }
     },
     {
+      "id": "1-12-19",
       "q": "If a company forgets to close its expense accounts at year-end, what is the effect on the next period's financial statements?",
       "o": [
         "Next period's expenses will be understated.",
@@ -3846,6 +4085,7 @@
       }
     },
     {
+      "id": "1-12-20",
       "q": "After closing entries, Retained Earnings shows a balance of $95,000. During the period, revenues were $200,000, expenses were $155,000, and dividends were $10,000. What was the opening Retained Earnings balance?",
       "o": [
         "$60,000.",
@@ -3864,6 +4104,7 @@
   ],
   "1-13": [
     {
+      "id": "1-13-01",
       "q": "After adjusting entries have been posted at the end of an accounting period, what is the next step in the accounting cycle?",
       "o": [
         "Prepare an adjusted trial balance.",
@@ -3880,6 +4121,7 @@
       }
     },
     {
+      "id": "1-13-02",
       "q": "A company had the pre-closing trial balance at December 31 shown. Additional information: The balance of opening inventory was 140,000. The long-term debt pays interest at a rate of 10% per annum, payable every 12 months. The debt was issued on July 1 of the current year and originally had 5 years to maturity. The assets classified as property, plant, and equipment (exclusive of land) have a 10year estimated useful life and were 1 year old at the start of the current year. Straight-line depreciation is used by the company. Cash 80,000 Accounts receivable 100,000 Inventory 230,000 Gross property, plant, and equipment 600,000 Accumulated depreciation 60,000 Accounts payable 200,000 Long-term debt 1,000,000 Share capital 2,000,000 Retained earnings (Jan. 1) 500,000 Sales revenue 750,000 Purchases 530,000 Administrative expenses 200,000 Which is the correct order of the following four steps in the accounting cycle? Step 1 - make adjusting journal entries Step 2 - prepare a post-closing trial balance Step 3 - prepare an adjusted trial balance Step 4 - make reversing entries",
       "o": [
         "4, 1, 3, 2",
@@ -3896,6 +4138,7 @@
       }
     },
     {
+      "id": "1-13-03",
       "q": "After journalized transactions have been posted to ledger accounts, what is the next step in the accounting cycle?",
       "o": [
         "Prepare an adjusted trial balance",
@@ -3912,6 +4155,7 @@
       }
     },
     {
+      "id": "1-13-04",
       "q": "Which of the following sets of accounting cycle steps is in the correct order?",
       "o": [
         "Post journalized transactions to ledger accounts, prepare financial statements, prepare adjusted trial balance",
@@ -3928,6 +4172,7 @@
       }
     },
     {
+      "id": "1-13-05",
       "q": "In addition to the 8-step accounting cycle, an additional activity that needs to be performed at the beginning of the next year’s accounting period is",
       "o": [
         "Post the ending balances of balance sheet accounts to the accounts as their beginning balances for the next year.",
@@ -3944,6 +4189,7 @@
       }
     },
     {
+      "id": "1-13-06",
       "q": "Which of the following correctly lists the steps of the accounting cycle in order?",
       "o": [
         "Post to ledger → Analyze transactions → Journalize → Prepare trial balance → Prepare financial statements → Adjust → Close.",
@@ -3960,6 +4206,7 @@
       }
     },
     {
+      "id": "1-13-07",
       "q": "What is the purpose of reversing entries?",
       "o": [
         "To correct errors in adjusting entries.",
@@ -3976,6 +4223,7 @@
       }
     },
     {
+      "id": "1-13-08",
       "q": "Which of the following adjusting entries is most commonly reversed at the start of the next period?",
       "o": [
         "Depreciation of long-term assets.",
@@ -3992,6 +4240,7 @@
       }
     },
     {
+      "id": "1-13-09",
       "q": "On December 31, a company recorded accrued wages of $3,000 (Debit Wages Expense; Credit Wages Payable). On January 1, a reversing entry is made. On January 10, the company pays $8,000 in wages for the full two-week period. What is the January 10 entry?",
       "o": [
         "Debit Wages Expense $5,000; Debit Wages Payable $3,000; Credit Cash $8,000.",
@@ -4008,6 +4257,7 @@
       }
     },
     {
+      "id": "1-13-10",
       "q": "Which of the following best describes a temporary account?",
       "o": [
         "An account whose balance is carried forward indefinitely.",
@@ -4024,6 +4274,7 @@
       }
     },
     {
+      "id": "1-13-11",
       "q": "What document is used immediately after the post-closing trial balance to begin the next accounting period?",
       "o": [
         "The adjusted trial balance from the prior period.",
@@ -4040,6 +4291,7 @@
       }
     },
     {
+      "id": "1-13-12",
       "q": "In the complete accounting cycle, at which point are financial statements prepared?",
       "o": [
         "After the unadjusted trial balance, before adjusting entries.",
@@ -4056,6 +4308,7 @@
       }
     },
     {
+      "id": "1-13-13",
       "q": "A reversing entry on January 1 for accrued interest revenue of $500 would be recorded as:",
       "o": [
         "Debit Interest Receivable $500; Credit Interest Revenue $500.",
@@ -4072,6 +4325,7 @@
       }
     },
     {
+      "id": "1-13-14",
       "q": "Which of the following statements about reversing entries is correct?",
       "o": [
         "Reversing entries are required by GAAP for all accrual-based companies.",
@@ -4088,6 +4342,7 @@
       }
     },
     {
+      "id": "1-13-15",
       "q": "How many formal trial balances are typically prepared in a complete accounting cycle?",
       "o": [
         "One.",
@@ -4104,6 +4359,7 @@
       }
     },
     {
+      "id": "1-13-16",
       "q": "Which of the following accounts would appear on a post-closing trial balance?",
       "o": [
         "Service Revenue.",
@@ -4120,6 +4376,7 @@
       }
     },
     {
+      "id": "1-13-17",
       "q": "A company does NOT use reversing entries. On December 31, it accrued wages of $2,500. On January 8, it pays $6,000 for the full two-week payroll period. What is the January 8 journal entry?",
       "o": [
         "Debit Wages Expense $6,000; Credit Cash $6,000.",
@@ -4136,6 +4393,7 @@
       }
     },
     {
+      "id": "1-13-18",
       "q": "Which step immediately follows the preparation of financial statements in the accounting cycle?",
       "o": [
         "Preparing the adjusted trial balance.",
@@ -4152,6 +4410,7 @@
       }
     },
     {
+      "id": "1-13-19",
       "q": "Why is the accounting cycle considered a 'cycle'?",
       "o": [
         "Because it involves the same amounts each period.",
@@ -4168,6 +4427,7 @@
       }
     },
     {
+      "id": "1-13-20",
       "q": "What is the effect on the financial statements if closing entries are not made at year-end?",
       "o": [
         "The balance sheet will be correct, but the income statement will be wrong.",
@@ -4186,6 +4446,7 @@
   ],
   "1-14": [
     {
+      "id": "1-14-01",
       "q": "Which one of the following correctly describes the statement of shareholders’ equity?",
       "o": [
         "It reconciles the beginning and ending balances in the retained earnings account.",
@@ -4202,6 +4463,7 @@
       }
     },
     {
+      "id": "1-14-02",
       "q": "A company borrowed money from the bank to fund necessary inventory purchases. As a result, the company must pay the bank monthly interest of $5,241. This month, the company showed a gross profit of $17,934 and SG&A expenses of $9,964. The income tax rate for the company is 33%. Based on this information, what should the company report as its net income before taxes?",
       "o": [
         "$2,729.",
@@ -4218,6 +4480,7 @@
       }
     },
     {
+      "id": "1-14-03",
       "q": "A statement of financial position provides a basis for all of the following except",
       "o": [
         "assessing liquidity and financial flexibility.",
@@ -4234,6 +4497,7 @@
       }
     },
     {
+      "id": "1-14-04",
       "q": "All of the following are components of comprehensive income except",
       "o": [
         "revenue.",
@@ -4250,6 +4514,7 @@
       }
     },
     {
+      "id": "1-14-05",
       "q": "The historical cost convention",
       "o": [
         "has been replaced in accounting records by a system of current cost accounting.",
@@ -4266,6 +4531,7 @@
       }
     },
     {
+      "id": "1-14-06",
       "q": "A company owns a building that still has a mortgage on it. What is the proper accounting classification for the building?",
       "o": [
         "Current liability.",
@@ -4282,6 +4548,7 @@
       }
     },
     {
+      "id": "1-14-07",
       "q": "The primary objective of financial statement reporting is to meet the needs of",
       "o": [
         "officers and auditors.",
@@ -4298,6 +4565,7 @@
       }
     },
     {
+      "id": "1-14-08",
       "q": "Which one of the following financial statements best reflects the accounting equation?",
       "o": [
         "Statement of cash flows.",
@@ -4314,6 +4582,7 @@
       }
     },
     {
+      "id": "1-14-09",
       "q": "A company has decided to include certain financial ratios in its year-end annual report to shareholders. Selected information relating to its most recent fiscal year is provided below. Cash $ 10,000 Accounts receivable 20,000 Prepaid expenses 8,000 Inventory 42,000 Accounts payable 15,000 Notes payable (due in 90 days) 25,000 Bonds payable (due in 10 years) 35,000 Net credit sales for year 220,000 Cost of goods sold 140,000 The company’s net working capital at year end is",
       "o": [
         "$10,000",
@@ -4330,6 +4599,7 @@
       }
     },
     {
+      "id": "1-14-10",
       "q": "The financial statement that provides a summary of the firm’s operations for a period of time is the",
       "o": [
         "statement of financial position.",
@@ -4346,6 +4616,7 @@
       }
     },
     {
+      "id": "1-14-11",
       "q": "Last month, a company reported the following revenues and expenses: Sales $87,923 Interest income 5,483 Cost of sales 52,854 Wages and benefits 12,854 Utilities 4,569 Interest expense 3,282 Selling expense 1,629 Depreciation 856 Income tax expense 6,077 Total shares outstanding: 10,000 Based on this information, what was the operating income for the company during this period?",
       "o": [
         "$15,161.",
@@ -4362,6 +4633,7 @@
       }
     },
     {
+      "id": "1-14-12",
       "q": "The income statement recognizes all of the following except",
       "o": [
         "interest expense of a retail organization.",
@@ -4378,6 +4650,7 @@
       }
     },
     {
+      "id": "1-14-13",
       "q": "Something that a business owes and that is payable within the next 12 months is called a",
       "o": [
         "long-term liability.",
@@ -4394,6 +4667,7 @@
       }
     },
     {
+      "id": "1-14-14",
       "q": "Blue Fox Industries had the following account balances at year end. Sales $452,000 Cash 23,400 Accounts payable 14,300 Rent expense 3,700 Accounts receivable 9,400 Cost of goods sold 214,000 Land 104,000 Contract liability 6,800 Gain on sale 17,500 Equipment 28,800 Inventories 2,200 Notes payable 67,000 What is the amount of total current assets reported on the balance sheet?",
       "o": [
         "$35,000.",
@@ -4410,6 +4684,7 @@
       }
     },
     {
+      "id": "1-14-15",
       "q": "A full set of financial statements presents the elements of financial statements. Which of the following is not an element of financial statements?",
       "o": [
         "Distributions to owners",
@@ -4426,6 +4701,7 @@
       }
     },
     {
+      "id": "1-14-16",
       "q": "Prepaid expenses are valued on the Statement of Financial Position at the",
       "o": [
         "Cost to acquire the asset.",
@@ -4442,6 +4718,7 @@
       }
     },
     {
+      "id": "1-14-17",
       "q": "All of the following are limitations of the balance sheet except that",
       "o": [
         "the balance sheet provides information on the liquidity and solvency of the company.",
@@ -4458,6 +4735,7 @@
       }
     },
     {
+      "id": "1-14-18",
       "q": "Which financial statement shows a company's revenues and expenses over a specific period?",
       "o": [
         "Balance sheet.",
@@ -4474,6 +4752,7 @@
       }
     },
     {
+      "id": "1-14-19",
       "q": "On a classified balance sheet, which item would be listed under current liabilities?",
       "o": [
         "Bonds payable due in 5 years.",
@@ -4490,6 +4769,7 @@
       }
     },
     {
+      "id": "1-14-20",
       "q": "Which element represents the residual interest in assets after deducting liabilities?",
       "o": [
         "Revenue.",
@@ -4508,6 +4788,7 @@
   ],
   "1-15": [
     {
+      "id": "1-15-01",
       "q": "An accountant is preparing a company’s cash flow statement and is evaluating how to classify certain transactions. The company paid dividends, invested in the stock of other corporations, sold plant and equipment, and reacquired some of its own stock. Which of these would be in the cash flow from financing activities in the statement of cash flow?",
       "o": [
         "The selling of plant and equipment and the reacquiring of some of its stock.",
@@ -4524,6 +4805,7 @@
       }
     },
     {
+      "id": "1-15-02",
       "q": "Which one of the following is not provided by the statement of cash flows?",
       "o": [
         "The company’s ability to pay dividends and meet obligations.",
@@ -4540,6 +4822,7 @@
       }
     },
     {
+      "id": "1-15-03",
       "q": "The purchase of fixed assets should be accounted for on the statement of cash flows as a(n)",
       "o": [
         "financing activity.",
@@ -4556,6 +4839,7 @@
       }
     },
     {
+      "id": "1-15-04",
       "q": "A statement of cash flows would have cash activities listed in which of the following orders?",
       "o": [
         "Operating, financing, investing.",
@@ -4572,6 +4856,7 @@
       }
     },
     {
+      "id": "1-15-05",
       "q": "Which one of the following items could be identified on the cash flow statement prepared using the indirect method?",
       "o": [
         "The terms of a settlement of a lawsuit that was previously accrued.",
@@ -4588,6 +4873,7 @@
       }
     },
     {
+      "id": "1-15-06",
       "q": "For a manufacturing firm, which of the following would be included in cash outflows from financing activities on the Statement of Cash Flows?",
       "o": [
         "Payment of salaries and wages.",
@@ -4604,6 +4890,7 @@
       }
     },
     {
+      "id": "1-15-07",
       "q": "Three years ago, James Company purchased stock in Zebra Inc. at a cost of $100,000. The stock was sold for $150,000 during the current fiscal year. The result of this transaction should be shown in the investing activities section of James’s statement of cash flows as:",
       "o": [
         "Zero",
@@ -4620,6 +4907,7 @@
       }
     },
     {
+      "id": "1-15-08",
       "q": "During the year, Deltech Inc. acquired a long-term productive asset for $5,000 and also borrowed $10,000 from a local bank. These transactions should be reported on Deltech’s Statement of Cash Flows as",
       "o": [
         "Outflows for Financing Activities, $5,000; Inflows from Investing Activities, $10,000.",
@@ -4636,6 +4924,7 @@
       }
     },
     {
+      "id": "1-15-09",
       "q": "Kelli Company acquired land by assuming a mortgage for the full acquisition cost. This transaction should be disclosed on Kelli’s statement of cash flows as a(n)",
       "o": [
         "Noncash financing and investing activity.",
@@ -4652,6 +4941,7 @@
       }
     },
     {
+      "id": "1-15-10",
       "q": "Which one of the following should be classified as an operating activity on the statement of cash flows?",
       "o": [
         "An increase in cash resulting from the issuance of previously authorized common stock.",
@@ -4668,6 +4958,7 @@
       }
     },
     {
+      "id": "1-15-11",
       "q": "All of the following are categories on the statement of cash flows except",
       "o": [
         "financing activity.",
@@ -4684,6 +4975,7 @@
       }
     },
     {
+      "id": "1-15-12",
       "q": "Dividends paid to company shareholders would be shown on the statement of cash flows as:",
       "o": [
         "Operating cash inflows.",
@@ -4700,6 +4992,7 @@
       }
     },
     {
+      "id": "1-15-13",
       "q": "Under the indirect method, which adjustment is ADDED to net income when calculating cash from operations?",
       "o": [
         "An increase in accounts receivable.",
@@ -4716,6 +5009,7 @@
       }
     },
     {
+      "id": "1-15-14",
       "q": "Net income $80,000; depreciation $15,000; increase in A/R $10,000; decrease in A/P $5,000. What is cash from operating activities?",
       "o": [
         "$90,000.",
@@ -4732,6 +5026,7 @@
       }
     },
     {
+      "id": "1-15-15",
       "q": "Proceeds from issuing long-term bonds appear in which section of the statement of cash flows?",
       "o": [
         "Operating activities.",
@@ -4748,6 +5043,7 @@
       }
     },
     {
+      "id": "1-15-16",
       "q": "A decrease in inventory is treated how in the indirect method operating activities section?",
       "o": [
         "Subtracted from net income.",
@@ -4764,6 +5060,7 @@
       }
     },
     {
+      "id": "1-15-17",
       "q": "Which transaction appears as a cash outflow in investing activities?",
       "o": [
         "Payment of dividends to shareholders.",
@@ -4780,6 +5077,7 @@
       }
     },
     {
+      "id": "1-15-18",
       "q": "Which is a non-cash transaction disclosed as a supplemental item on the statement of cash flows?",
       "o": [
         "Purchase of equipment financed entirely by a bank loan.",
@@ -4796,6 +5094,7 @@
       }
     },
     {
+      "id": "1-15-19",
       "q": "A company sold equipment with book value $20,000 for $25,000 cash. How is this reported on the cash flow statement?",
       "o": [
         "$25,000 inflow in investing; $5,000 gain added in operating.",
@@ -4812,6 +5111,7 @@
       }
     },
     {
+      "id": "1-15-20",
       "q": "An increase in accounts payable is treated how in the indirect method operating activities section?",
       "o": [
         "Subtracted from net income, representing additional cash paid.",
@@ -4830,6 +5130,7 @@
   ],
   "1-16": [
     {
+      "id": "1-16-01",
       "q": "According to the COSO framework, internal control is designed to provide reasonable assurance regarding the achievement of objectives in which three categories?",
       "o": [
         "Operations, Reporting, and Compliance.",
@@ -4846,6 +5147,7 @@
       }
     },
     {
+      "id": "1-16-02",
       "q": "Which of the following is one of the 5 fundamental concepts underlying the COSO internal control framework?",
       "o": [
         "Internal control is a one-time event completed during the annual audit.",
@@ -4862,6 +5164,7 @@
       }
     },
     {
+      "id": "1-16-03",
       "q": "A company's internal control system is well-designed on paper but relies entirely on written procedures with no one actually monitoring whether employees follow them. Which fundamental concept of internal control is being violated?",
       "o": [
         "Reasonable assurance.",
@@ -4878,6 +5181,7 @@
       }
     },
     {
+      "id": "1-16-04",
       "q": "Which of the following is the foundation on which all other components of the COSO framework rest?",
       "o": [
         "Monitoring.",
@@ -4894,6 +5198,7 @@
       }
     },
     {
+      "id": "1-16-05",
       "q": "Which COSO component involves identifying and analyzing risks that could prevent the company from achieving its objectives?",
       "o": [
         "Control Activities.",
@@ -4910,6 +5215,7 @@
       }
     },
     {
+      "id": "1-16-06",
       "q": "Segregation of duties, authorizations and approvals, physical controls, and reconciliations are all examples of which COSO component?",
       "o": [
         "Control Activities.",
@@ -4926,6 +5232,7 @@
       }
     },
     {
+      "id": "1-16-07",
       "q": "An internal audit function that periodically evaluates whether a company's internal controls are still functioning effectively is an example of which COSO component?",
       "o": [
         "Monitoring.",
@@ -4942,6 +5249,7 @@
       }
     },
     {
+      "id": "1-16-08",
       "q": "Which of the following can cause internal controls to fail?",
       "o": [
         "Collusion between two or more employees.",
@@ -4958,6 +5266,7 @@
       }
     },
     {
+      "id": "1-16-09",
       "q": "Which statement about internal control risk is correct?",
       "o": [
         "Internal control can guarantee that fraud will never occur.",
@@ -4974,6 +5283,7 @@
       }
     },
     {
+      "id": "1-16-10",
       "q": "Which of the following best describes why segregation of duties is considered the most critical internal control?",
       "o": [
         "It eliminates the need for any other controls.",
@@ -4990,6 +5300,7 @@
       }
     },
     {
+      "id": "1-16-11",
       "q": "The four functions that must be performed by different people under proper segregation of duties are",
       "o": [
         "Budgeting, forecasting, reporting, and auditing.",
@@ -5006,6 +5317,7 @@
       }
     },
     {
+      "id": "1-16-12",
       "q": "A warehouse employee both counts and records the physical inventory AND has the keys to the warehouse. Which segregation-of-duties weakness does this create?",
       "o": [
         "Authorization is combined with reconciliation.",
@@ -5022,6 +5334,7 @@
       }
     },
     {
+      "id": "1-16-13",
       "q": "A company requires two independent authentication methods — a password AND a fingerprint scan — before an employee can access the accounting system. This is an example of",
       "o": [
         "Physical controls.",
@@ -5038,6 +5351,7 @@
       }
     },
     {
+      "id": "1-16-14",
       "q": "Which of the following is an example of a physical control for safeguarding assets, rather than a logical (software) control?",
       "o": [
         "A password required to log into the accounting system.",
@@ -5054,6 +5368,7 @@
       }
     },
     {
+      "id": "1-16-15",
       "q": "An accounting system automatically logs off a user after 15 minutes of inactivity and records every login attempt. These are examples of",
       "o": [
         "Physical controls.",
@@ -5070,6 +5385,7 @@
       }
     },
     {
+      "id": "1-16-16",
       "q": "Which of the following is something internal control CAN help a company do?",
       "o": [
         "Guarantee that objectives will be achieved.",
@@ -5086,6 +5402,7 @@
       }
     },
     {
+      "id": "1-16-17",
       "q": "Which of the following is something internal control CANNOT do?",
       "o": [
         "Help ensure compliance with applicable laws and regulations.",
@@ -5102,6 +5419,7 @@
       }
     },
     {
+      "id": "1-16-18",
       "q": "The cost-benefit principle, as it applies to internal control, means that",
       "o": [
         "Every possible control should be implemented regardless of cost.",
@@ -5118,6 +5436,7 @@
       }
     },
     {
+      "id": "1-16-19",
       "q": "A company's internal control system failed to detect a fraud because two employees — one in purchasing and one in accounts payable — worked together to approve and pay a fictitious invoice. This is best described as a control failure due to",
       "o": [
         "Management override.",
@@ -5134,6 +5453,7 @@
       }
     },
     {
+      "id": "1-16-20",
       "q": "Which of the following best illustrates 'management override' as a limitation of internal control?",
       "o": [
         "A CEO instructs the controller to bypass the normal approval process and record a transaction that does not meet the established criteria.",
@@ -5152,6 +5472,7 @@
   ],
   "1-17": [
     {
+      "id": "1-17-01",
       "q": "Which one of the following would increase the working capital of a firm?",
       "o": [
         "Purchase of a new plant financed by a 20-year mortgage.",
@@ -5168,6 +5489,7 @@
       }
     },
     {
+      "id": "1-17-02",
       "q": "Net working capital is the difference between",
       "o": [
         "Current assets and current liabilities.",
@@ -5184,6 +5506,7 @@
       }
     },
     {
+      "id": "1-17-03",
       "q": "As a company becomes more conservative about its working capital management policy, it would most likely tend to have a(n)",
       "o": [
         "Increase in the ratio of current assets to noncurrent assets.",
@@ -5200,6 +5523,7 @@
       }
     },
     {
+      "id": "1-17-04",
       "q": "Shaw Corporation is considering a plant expansion that will increase its sales and net income. The following data represent management's estimate of the impact the proposal will have on the company: Current Proposal Cash $100,000 $120,000 Accounts payable 350,000 430,000 Accounts receivable 400,000 500,000 Inventory 380,000 460,000 Marketable securities 200,000 200,000 Mortgage payable (current) 175,000 325,000 Fixed assets 2,500,000 3,500,000 Net income 500,000 650,000 The effect of the plant expansion on Shaw's working capital will be a(n)",
       "o": [
         "Decrease of $30,000.",
@@ -5215,6 +5539,7 @@
       }
     },
     {
+      "id": "1-17-05",
       "q": "Which one of the following combined transactions would cause net working capital to decrease?",
       "o": [
         "A $1 million decrease in cash, and a $1 million increase in fixed assets.",
@@ -5231,6 +5556,7 @@
       }
     },
     {
+      "id": "1-17-06",
       "q": "The following are the January 1 and June 30 balance sheets of a company, in millions:\n\n                        January 1   June 30\nCash                        $3          $4\nAccounts receivable          6           7\nInventories                  7           7\nFixed assets                10          11\nTotal assets               $26         $29\n\nAccounts payable            $4          $4\nNotes payable                2           3\nAccrued wages                1           1\nLong-term debt                8           9\nStockholders' equity        11          12\nTotal liabilities and stockholders' equity  $26  $29\n\nFrom January 1 to June 30, the net working capital:",
       "o": [
         "Decreased by $1 million.",
@@ -5246,6 +5572,7 @@
       }
     },
     {
+      "id": "1-17-07",
       "q": "A growing company is assessing current working capital requirements. An average of 58 days is required to convert raw materials into finished goods and to sell them. Then an average of 32 days is required to collect on receivables. If the average time the company takes to pay for its raw materials is 15 days after they are received, then the total cash conversion cycle for this company is:",
       "o": [
         "75 days.",
@@ -5262,6 +5589,7 @@
       }
     },
     {
+      "id": "1-17-08",
       "q": "During the year, Mason Company's current assets increased by $120, current liabilities decreased by $50, and net working capital",
       "o": [
         "Did not change.",
@@ -5278,6 +5606,7 @@
       }
     },
     {
+      "id": "1-17-09",
       "q": "A company has the following account balances. Cash $160,000; Equipment $50,000; Inventory $35,000; Accounts receivable $25,000; Accrued wages $10,000; Long-term debt $30,000; Accounts payable $5,000. What is the company's net working capital?",
       "o": [
         "$225,000.",
@@ -5294,6 +5623,7 @@
       }
     },
     {
+      "id": "1-17-10",
       "q": "Finan Corporation's management is considering a plant expansion that will increase its sales and have commensurate impact on its net working capital position. The following information presents management's estimate of the impact the proposal will have on Finan. Current Proposal Cash $100,000 $110,000 Accounts payable 400,000 470,000 Accounts receivable 560,000 690,000 Inventory 350,000 380,000 Marketable securities 200,000 200,000 Fixed assets 2,500,000 3,500,000 Net income 500,000 650,000 The impact of the plant expansion on Finan's working capital would be",
       "o": [
         "A decrease of $950,000.",
@@ -5310,6 +5640,7 @@
       }
     },
     {
+      "id": "1-17-11",
       "q": "The PRIMARY reason a company maintains a cash budget is to",
       "o": [
         "Determine how much profit the company will earn.",
@@ -5326,6 +5657,7 @@
       }
     },
     {
+      "id": "1-17-12",
       "q": "The cash conversion cycle measures",
       "o": [
         "The time between purchasing inventory and collecting cash from its sale.",
@@ -5342,6 +5674,7 @@
       }
     },
     {
+      "id": "1-17-13",
       "q": "A company has DSO of 45 days and credit terms of net 30. This indicates that",
       "o": [
         "The company is collecting receivables ahead of schedule.",
@@ -5358,6 +5691,7 @@
       }
     },
     {
+      "id": "1-17-14",
       "q": "Which action would REDUCE a company's cash conversion cycle?",
       "o": [
         "Increasing the average collection period for receivables.",
@@ -5374,6 +5708,7 @@
       }
     },
     {
+      "id": "1-17-15",
       "q": "A company has excess cash. Which is the MOST appropriate short-term investment?",
       "o": [
         "Real estate investments.",
@@ -5390,6 +5725,7 @@
       }
     },
     {
+      "id": "1-17-16",
       "q": "Which best describes the purpose of a line of credit for daily financial management?",
       "o": [
         "A long-term loan used to finance capital expenditures.",
@@ -5406,6 +5742,7 @@
       }
     },
     {
+      "id": "1-17-17",
       "q": "Float refers to",
       "o": [
         "The difference between book and bank cash balances.",
@@ -5422,6 +5759,7 @@
       }
     },
     {
+      "id": "1-17-18",
       "q": "Total current assets $500,000; total current liabilities $200,000; inventory $150,000. What is the quick ratio?",
       "o": [
         "2.50.",
@@ -5438,6 +5776,7 @@
       }
     },
     {
+      "id": "1-17-19",
       "q": "Which BEST describes working capital management?",
       "o": [
         "Managing long-term investments in plant, property, and equipment.",
@@ -5454,6 +5793,7 @@
       }
     },
     {
+      "id": "1-17-20",
       "q": "Terms 2/10, net 30 are offered to customers. If customers take the discount, the company",
       "o": [
         "Collects more cash but has a longer cash conversion cycle.",
@@ -5472,6 +5812,7 @@
   ],
   "1-18": [
     {
+      "id": "1-18-01",
       "q": "If the average age of inventory is 90 days, the average age of accounts payable is 60 days, and the average age of accounts receivable is 65 days, the number of days in the cash flow cycle is:",
       "o": [
         "215 days",
@@ -5488,6 +5829,7 @@
       }
     },
     {
+      "id": "1-18-02",
       "q": "All of the following are reasons for holding cash except for the",
       "o": [
         "motive to meet future needs.",
@@ -5504,6 +5846,7 @@
       }
     },
     {
+      "id": "1-18-03",
       "q": "A company holding cash for a speculative motive is holding cash to",
       "o": [
         "take advantage of future investment opportunities.",
@@ -5520,6 +5863,7 @@
       }
     },
     {
+      "id": "1-18-04",
       "q": "Which of the following best describes the primary goal of cash management?",
       "o": [
         "To maximize the company's cash balance at all times.",
@@ -5536,6 +5880,7 @@
       }
     },
     {
+      "id": "1-18-05",
       "q": "A bank reconciliation is performed to:",
       "o": [
         "Determine whether the company has enough cash to pay upcoming bills.",
@@ -5552,6 +5897,7 @@
       }
     },
     {
+      "id": "1-18-06",
       "q": "Which of the following items would appear as a deduction on the bank side of a bank reconciliation?",
       "o": [
         "A deposit in transit.",
@@ -5568,6 +5914,7 @@
       }
     },
     {
+      "id": "1-18-07",
       "q": "A company's books show a cash balance of $16,100. The bank statement shows $18,500. Outstanding checks total $2,400 and a deposit in transit is $800. What is the correct reconciled cash balance?",
       "o": [
         "$16,100.",
@@ -5584,6 +5931,7 @@
       }
     },
     {
+      "id": "1-18-08",
       "q": "Which of the following is an internal control over cash disbursements?",
       "o": [
         "Allowing any employee to sign company checks without approval.",
@@ -5600,6 +5948,7 @@
       }
     },
     {
+      "id": "1-18-09",
       "q": "A company holds a $500 petty cash fund. During the month, petty cash vouchers total $380. What entry replenishes the fund?",
       "o": [
         "Debit Petty Cash $380; Credit Cash $380.",
@@ -5616,6 +5965,7 @@
       }
     },
     {
+      "id": "1-18-10",
       "q": "Which of the following is a characteristic of a good cash management system?",
       "o": [
         "Delaying the collection of accounts receivable to build customer goodwill.",
@@ -5632,6 +5982,7 @@
       }
     },
     {
+      "id": "1-18-11",
       "q": "The cash conversion cycle measures:",
       "o": [
         "The time from when cash is spent on inventory to when cash is collected from customers.",
@@ -5648,6 +5999,7 @@
       }
     },
     {
+      "id": "1-18-12",
       "q": "Which of the following would lengthen a company's cash conversion cycle?",
       "o": [
         "Collecting receivables more quickly.",
@@ -5664,6 +6016,7 @@
       }
     },
     {
+      "id": "1-18-13",
       "q": "A company maintains a compensating balance of $25,000 in its bank account as required by its loan agreement. This balance:",
       "o": [
         "Is freely available for daily operations.",
@@ -5680,6 +6033,7 @@
       }
     },
     {
+      "id": "1-18-14",
       "q": "Which of the following is an example of a deposit in transit?",
       "o": [
         "A check written by the company that the payee has not yet cashed.",
@@ -5696,6 +6050,7 @@
       }
     },
     {
+      "id": "1-18-15",
       "q": "Float in cash management refers to:",
       "o": [
         "The difference between the bank balance and the book balance caused by deposits in transit.",
@@ -5712,6 +6067,7 @@
       }
     },
     {
+      "id": "1-18-16",
       "q": "A company's bank statement shows a $150 NSF (non-sufficient funds) check that was returned. This was from a customer payment deposited last month. What entry does the company record?",
       "o": [
         "Debit Cash $150; Credit Accounts Receivable $150.",
@@ -5728,6 +6084,7 @@
       }
     },
     {
+      "id": "1-18-17",
       "q": "Which of the following is NOT a valid reason for a company to hold cash?",
       "o": [
         "Transaction motive — to pay for routine operating expenses.",
@@ -5744,6 +6101,7 @@
       }
     },
     {
+      "id": "1-18-18",
       "q": "Which of the following is the correct formula for net working capital?",
       "o": [
         "Total Assets minus Total Liabilities.",
@@ -5760,6 +6118,7 @@
       }
     },
     {
+      "id": "1-18-19",
       "q": "A company with strong cash management would most likely do which of the following?",
       "o": [
         "Keep all cash in a non-interest-bearing checking account.",
@@ -5776,6 +6135,7 @@
       }
     },
     {
+      "id": "1-18-20",
       "q": "A $450 check issued by the company has not yet cleared the bank. This is classified as",
       "o": [
         "A deposit in transit.",
@@ -5794,6 +6154,7 @@
   ],
   "1-19": [
     {
+      "id": "1-19-01",
       "q": "Richardson Supply has a $100 invoice payable with payment terms of 2/10, net 60. Richardson can either take the discount or place the funds in a money market account paying 6% interest. Using a 360-day year, Richardson's cost of not taking the cash discount is",
       "o": [
         "12.2%.",
@@ -5809,6 +6170,7 @@
       }
     },
     {
+      "id": "1-19-02",
       "q": "If a retailer's terms of trade are 3/10, net 45 with a particular supplier, what is the cost on an annual basis of not taking the discount? Assume a 360-day year.",
       "o": [
         "37.11%",
@@ -5825,6 +6187,7 @@
       }
     },
     {
+      "id": "1-19-03",
       "q": "Using a 360-day year, what is the opportunity cost to a buyer of not accepting terms of 3/10, net 45?",
       "o": [
         "22.27%",
@@ -5841,6 +6204,7 @@
       }
     },
     {
+      "id": "1-19-04",
       "q": "A firm is given payment terms of 3/10, net 90 and forgoes the discount, paying on the net due date. Using a 360-day year and ignoring the effects of compounding, what is the effective annual interest rate cost?",
       "o": [
         "12.4%.",
@@ -5857,6 +6221,7 @@
       }
     },
     {
+      "id": "1-19-05",
       "q": "Assume that each day a company writes and receives checks totaling $10,000. If it takes 2 days for the checks to clear and be deducted from the company's account and only 1 day for the deposits to clear, what is the net float?",
       "o": [
         "$(10,000)",
@@ -5873,6 +6238,7 @@
       }
     },
     {
+      "id": "1-19-06",
       "q": "Garo Company, a retail store, is considering foregoing cash discounts offered by its suppliers for paying within the discount period in order to delay using its cash. Supplier credit terms are 2/10, net 30. Assuming a 360-day year, what is the annual cost of credit if the cash discount is not taken and Garo pays net 30?",
       "o": [
         "36.7%",
@@ -5889,6 +6255,7 @@
       }
     },
     {
+      "id": "1-19-07",
       "q": "If a supplier's credit terms require payment within 45 days but allow a discount of 2% if paid within 15 days (using a 360-day year), the approximate cost or benefit to the customer of the trade credit terms is",
       "o": [
         "48%.",
@@ -5905,6 +6272,7 @@
       }
     },
     {
+      "id": "1-19-08",
       "q": "Global Manufacturing Company has a cost of borrowing of 12%. One of the firm's suppliers has just offered new terms for purchases. The old terms were cash on delivery and the new terms are 2/10, net 45. Should Global pay within the first ten days? Use 365 days to annualize.",
       "o": [
         "No, the cost of not taking the discount exceeds the cost of borrowing.",
@@ -5921,6 +6289,7 @@
       }
     },
     {
+      "id": "1-19-09",
       "q": "A company has two outstanding accounts payable as shown below. Vendor Name Invoice Amount Payment Terms Jones Corp. $20,000 1/15, net 45 Baker Inc. $20,000 2/10, net 90 With regard to the effective annual interest cost of not taking the cash discount on the above invoices, the annual interest cost for the",
       "o": [
         "Jones invoice is the same as the Baker invoice.",
@@ -5937,6 +6306,7 @@
       }
     },
     {
+      "id": "1-19-10",
       "q": "Northville Products is changing its credit terms from net 30 to 2/10, net 30. The least likely effect of this change would be a(n)",
       "o": [
         "lower number-of-days-receivables-held ratio.",
@@ -5953,6 +6323,7 @@
       }
     },
     {
+      "id": "1-19-11",
       "q": "When a company analyzes credit applicants and increases the quality of the accounts rejected, the company is attempting to:",
       "o": [
         "Increase credit losses.",
@@ -5969,6 +6340,7 @@
       }
     },
     {
+      "id": "1-19-12",
       "q": "Which one of the following statements concerning cash discounts is correct?",
       "o": [
         "The cost of not taking a 2/10, net 30 cash discount is usually less than the prime rate.",
@@ -5985,6 +6357,7 @@
       }
     },
     {
+      "id": "1-19-13",
       "q": "The aging of accounts receivable shows: 0–30 days $10,000 (2%), 31–60 days $4,000 (8%), over 60 days $2,000 (25%). What is the required allowance for doubtful accounts?",
       "o": [
         "$200.",
@@ -6001,6 +6374,7 @@
       }
     },
     {
+      "id": "1-19-14",
       "q": "The allowance for doubtful accounts has a $500 credit balance before adjustment. The required balance is $1,800. What is bad debt expense for the period?",
       "o": [
         "$500.",
@@ -6017,6 +6391,7 @@
       }
     },
     {
+      "id": "1-19-15",
       "q": "A customer's account of $600 is written off under the allowance method. Which entry is correct?",
       "o": [
         "Debit: Bad Debt Expense $600; Credit: Accounts Receivable $600.",
@@ -6033,6 +6408,7 @@
       }
     },
     {
+      "id": "1-19-16",
       "q": "Terms of 'net 60' on an invoice mean that",
       "o": [
         "The buyer receives a 60% discount for paying early.",
@@ -6049,6 +6425,7 @@
       }
     },
     {
+      "id": "1-19-17",
       "q": "A company factors $50,000 of receivables at a 3% fee. What is the correct journal entry?",
       "o": [
         "Debit: Cash $50,000; Credit: Accounts Receivable $50,000.",
@@ -6065,6 +6442,7 @@
       }
     },
     {
+      "id": "1-19-18",
       "q": "The primary purpose of accounts payable management is to",
       "o": [
         "Maximize the speed at which the company pays suppliers.",
@@ -6081,6 +6459,7 @@
       }
     },
     {
+      "id": "1-19-19",
       "q": "A previously written-off account of $300 is unexpectedly collected. Under the allowance method, how is the recovery recorded?",
       "o": [
         "Debit: Cash $300; Credit: Bad Debt Expense $300.",
@@ -6097,6 +6476,7 @@
       }
     },
     {
+      "id": "1-19-20",
       "q": "Which credit policy would MOST likely increase sales but also increase bad debt expense?",
       "o": [
         "Shortening credit terms from net 60 to net 30.",
@@ -6115,6 +6495,7 @@
   ],
   "1-20": [
     {
+      "id": "1-20-01",
       "q": "All of the following are carrying costs of inventory except",
       "o": [
         "insurance.",
@@ -6131,6 +6512,7 @@
       }
     },
     {
+      "id": "1-20-02",
       "q": "If a just-in-time purchasing policy is successful in reducing the total inventory costs of a manufacturing company, which of the following combinations of cost changes would be most likely to occur?",
       "o": [
         "An increase in purchasing costs and a decrease in quality costs.",
@@ -6146,6 +6528,7 @@
       }
     },
     {
+      "id": "1-20-03",
       "q": "Which one of the following would not be considered a carrying cost associated with inventory?",
       "o": [
         "Shipping costs.",
@@ -6162,6 +6545,7 @@
       }
     },
     {
+      "id": "1-20-04",
       "q": "The amount of inventory that a company would tend to hold in safety stock would increase as the",
       "o": [
         "Sales level falls to a permanently lower level.",
@@ -6178,6 +6562,7 @@
       }
     },
     {
+      "id": "1-20-05",
       "q": "James Smith is the new manager of inventory at American Electronics, a major retailer. He is developing an inventory control system, and knows he should consider establishing a safety stock level. The safety stock can protect against all of the following risks, except for the possibility that",
       "o": [
         "new competition may open in the company's market area.",
@@ -6194,6 +6579,7 @@
       }
     },
     {
+      "id": "1-20-06",
       "q": "Which one of the following is a benefit of implementing a just-in-time manufacturing system?",
       "o": [
         "Lower foreign exchange risk when working with international suppliers.",
@@ -6210,6 +6596,7 @@
       }
     },
     {
+      "id": "1-20-07",
       "q": "Which of the following is not a correct comparison of a just-in-time system with a traditional system?",
       "o": [
         "Lot size is based on immediate need under a traditional system and lot size is based on formulas under a just-in-time system.",
@@ -6226,6 +6613,7 @@
       }
     },
     {
+      "id": "1-20-08",
       "q": "An example of a carrying cost is",
       "o": [
         "Handling costs.",
@@ -6242,6 +6630,7 @@
       }
     },
     {
+      "id": "1-20-09",
       "q": "The level of safety stock in inventory management depends on all of the following except the:",
       "o": [
         "Cost of running out of inventory.",
@@ -6258,6 +6647,7 @@
       }
     },
     {
+      "id": "1-20-10",
       "q": "If a company implements a just-in-time inventory management program, it would expect that its inventory turnover ratio will",
       "o": [
         "decrease, and its days' sales in inventory will decrease.",
@@ -6274,6 +6664,7 @@
       }
     },
     {
+      "id": "1-20-11",
       "q": "A production system in which a unit is produced only when needed in the next step in the production line is called a",
       "o": [
         "material requirements planning system.",
@@ -6290,6 +6681,7 @@
       }
     },
     {
+      "id": "1-20-12",
       "q": "A company is planning to implement a just-in-time (JIT) inventory management system. All of the following are benefits expected from implementing JIT inventory management except",
       "o": [
         "lower investment in inventory.",
@@ -6306,6 +6698,7 @@
       }
     },
     {
+      "id": "1-20-13",
       "q": "Which of the following would not be considered an inventory cost?",
       "o": [
         "The cost of the inventory itself.",
@@ -6322,6 +6715,7 @@
       }
     },
     {
+      "id": "1-20-14",
       "q": "The economic order quantity (EOQ) model minimizes",
       "o": [
         "The total purchase price of inventory.",
@@ -6338,6 +6732,7 @@
       }
     },
     {
+      "id": "1-20-15",
       "q": "During a period of rising prices, compared to LIFO, FIFO will result in",
       "o": [
         "Higher cost of goods sold and lower ending inventory.",
@@ -6354,6 +6749,7 @@
       }
     },
     {
+      "id": "1-20-16",
       "q": "Beginning inventory: 100 units @ $10.\nPurchases: 200 units @ $12.\nSold: 150 units.\n\nUsing weighted average, what is COGS?",
       "o": [
         "$1,500.",
@@ -6370,6 +6766,7 @@
       }
     },
     {
+      "id": "1-20-17",
       "q": "A just-in-time (JIT) inventory system is designed to",
       "o": [
         "Maximize inventory levels to prevent stockouts.",
@@ -6386,6 +6783,7 @@
       }
     },
     {
+      "id": "1-20-18",
       "q": "Which is a carrying cost of holding inventory?",
       "o": [
         "Cost of placing purchase orders.",
@@ -6402,6 +6800,7 @@
       }
     },
     {
+      "id": "1-20-19",
       "q": "A company's reorder point is 500 units. The company should place a new order when",
       "o": [
         "The inventory has been held for 500 days.",
@@ -6418,6 +6817,7 @@
       }
     },
     {
+      "id": "1-20-20",
       "q": "During a period of FALLING prices, which inventory method produces the HIGHEST net income?",
       "o": [
         "FIFO.",

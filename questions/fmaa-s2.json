@@ -1,6 +1,7 @@
 {
   "2-1": [
     {
+      "id": "2-1-01",
       "q": "On October 1, a company purchased 50 units of inventory at $8 per unit. On October 5, the company bought another 100 units at $6 per unit. If the company sold 25 units on October 7, what would be the value of its ending inventory according to the FIFO method of inventory valuation?",
       "o": [
         "$150.",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "id": "2-1-02",
       "q": "A rental car company recently purchased a fleet of automobiles at a cost of $1,000,000. At the end of their five-year life cycle, the automobiles will only be worth $15,000. Using straight-line depreciation, what would be the accumulated depreciation at the end of Year 3?",
       "o": [
         "$594,000.",
@@ -33,6 +35,7 @@
       }
     },
     {
+      "id": "2-1-03",
       "q": "A construction company purchases a new truck for $480,000. The truck is expected to last 10 years. At the end of its useful life, the company will be able to sell some of the truck parts for $10,000. What is the Year 1 depreciation of this asset using the declining balance depreciation method?",
       "o": [
         "$9,400.",
@@ -49,6 +52,7 @@
       }
     },
     {
+      "id": "2-1-04",
       "q": "The following information is available for ABD Industries for 20X4: Sales revenue $750,000 Accounts receivable, January 1 $65,000 Accounts receivable, December 31 $80,000 Allowance for credit losses (unadjusted) $710 Account balances written off during the year $4,000 $200,000 of the sales were cash sales and the remainder were credit sales. Historical information indicates that 1% of credit sales will be uncollectible. The journal entry needed to record credit loss expense for 20X4 is",
       "o": [
         "Debit Credit Loss Expense $5,500; credit Accounts Receivable $5,500.",
@@ -65,6 +69,7 @@
       }
     },
     {
+      "id": "2-1-05",
       "q": "During inflationary periods, last-in, first-out inventory accounting will generally have a",
       "o": [
         "higher cost of goods sold and lower inventory value.",
@@ -81,6 +86,7 @@
       }
     },
     {
+      "id": "2-1-06",
       "q": "During inflationary periods, compared to LIFO inventory accounting, FIFO inventory accounting will generally show",
       "o": [
         "lower cost of goods sold and lower inventory value.",
@@ -97,6 +103,7 @@
       }
     },
     {
+      "id": "2-1-07",
       "q": "A convenience store owner purchased three cartons of milk on June 1 for a total of $9 and six cartons of milk on June 15 for a total of $12. If the store sold five cartons of milk during June, what would be the value of its ending inventory as of June 30 under the LIFO method?",
       "o": [
         "$11.",
@@ -113,6 +120,7 @@
       }
     },
     {
+      "id": "2-1-08",
       "q": "A company purchases five laptops at $2,000 each. The anticipated life of the laptops is four years with no salvage value. What is the book value of the computers at the end of the first year using the sum-of-the-years digits depreciation method?",
       "o": [
         "$1,500.",
@@ -129,6 +137,7 @@
       }
     },
     {
+      "id": "2-1-09",
       "q": "On March 31, Company X declares a $0.52 per share dividend for all holders of record. There are 90,000 shares outstanding as of March 15 and 100,000 shares outstanding as of March 31. What is the correct entry to record the dividend declaration?",
       "o": [
         "Debit: dividends $52,000; credit: dividends payable $52,000.",
@@ -145,6 +154,7 @@
       }
     },
     {
+      "id": "2-1-10",
       "q": "On the Statement of Financial Position, accounts receivable is valued at the",
       "o": [
         "Amount payable when due.",
@@ -161,6 +171,7 @@
       }
     },
     {
+      "id": "2-1-11",
       "q": "How are costs for shipment of inventory accounted for?",
       "o": [
         "They are debited to Inventory to increase the inventory balance.",
@@ -177,6 +188,7 @@
       }
     },
     {
+      "id": "2-1-12",
       "q": "When a fixed asset is sold for less than book value, which one of the following will decrease?",
       "o": [
         "Net working capital.",
@@ -193,6 +205,7 @@
       }
     },
     {
+      "id": "2-1-13",
       "q": "Which one of the following statements reflects a disadvantage of the LIFO inventory valuation method?",
       "o": [
         "It rarely approximates the physical flow of inventory.",
@@ -209,6 +222,7 @@
       }
     },
     {
+      "id": "2-1-14",
       "q": "Under US GAAP, most long-term assets are initially recorded at",
       "o": [
         "Fair market value at the balance sheet date.",
@@ -225,6 +239,7 @@
       }
     },
     {
+      "id": "2-1-15",
       "q": "A contingent liability should be recorded on the balance sheet when",
       "o": [
         "It is reasonably possible and can be estimated.",
@@ -241,6 +256,7 @@
       }
     },
     {
+      "id": "2-1-16",
       "q": "A machine costs $50,000; delivery $2,000; installation $3,000; 1-year maintenance contract $1,500. What is the capitalized cost?",
       "o": [
         "$50,000.",
@@ -257,6 +273,7 @@
       }
     },
     {
+      "id": "2-1-17",
       "q": "The book value of an asset is best described as",
       "o": [
         "The original cost of the asset.",
@@ -273,6 +290,7 @@
       }
     },
     {
+      "id": "2-1-18",
       "q": "Intangible assets differ from tangible assets in that they",
       "o": [
         "Are always expensed immediately when acquired.",
@@ -289,6 +307,7 @@
       }
     },
     {
+      "id": "2-1-19",
       "q": "A $100,000 note payable at 6% annual interest is due in 5 years. How should it be classified?",
       "o": [
         "Current liability for the full $100,000.",
@@ -305,6 +324,7 @@
       }
     },
     {
+      "id": "2-1-20",
       "q": "When a company recognizes an impairment loss on a long-term asset, the accounting treatment is",
       "o": [
         "The asset is written up to fair value and a gain is recognized.",
@@ -323,6 +343,7 @@
   ],
   "2-2": [
     {
+      "id": "2-2-01",
       "q": "Under the 5-step revenue recognition model (ASC 606 / IFRS 15), at what point should a company recognize revenue?",
       "o": [
         "When cash is collected from the customer.",
@@ -340,6 +361,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-02",
       "q": "Which of the following is the correct first step in the 5-step revenue recognition model?",
       "o": [
         "Determine the transaction price.",
@@ -357,6 +379,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-03",
       "q": "A company sells industrial equipment bundled with a 2-year extended warranty for a total contract price of $9,000. The standalone selling price of the equipment is $8,000 and the standalone selling price of the warranty is $2,000. Using the relative standalone selling price method, how much of the transaction price should be allocated to the warranty performance obligation?",
       "o": [
         "$1,800.",
@@ -374,6 +397,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-04",
       "q": "According to the 5-step revenue recognition model, a good or service is considered 'distinct' when:",
       "o": [
         "It appears as a separate line item on the customer invoice.",
@@ -391,6 +415,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-05",
       "q": "A construction contract includes a $50,000 bonus payable to the contractor if the project is completed before a specified date. This variable consideration must be estimated and incorporated in which step of the 5-step revenue recognition model?",
       "o": [
         "Step 1 — Identify the contract.",
@@ -408,6 +433,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-06",
       "q": "A software company sells a 12-month technical support contract for $2,400, with revenue recognized ratably over the service period as the performance obligation is satisfied over time. How much revenue should the company recognize after 5 months of the contract?",
       "o": [
         "$2,400.",
@@ -425,6 +451,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-07",
       "q": "Which expense recognition principle recognizes cost of goods sold in the same period as the related sales revenue?",
       "o": [
         "Immediate recognition.",
@@ -442,6 +469,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-08",
       "q": "A company purchases equipment expected to provide benefits over 5 years and depreciates it over that period. Which expense recognition method does this represent?",
       "o": [
         "Cause and effect.",
@@ -459,6 +487,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-09",
       "q": "A company spends $40,000 on a television advertising campaign during the current quarter. The future benefit of this spending cannot be reliably measured or linked to specific future sales. How should this cost be recognized?",
       "o": [
         "Capitalized as an asset and depreciated over 5 years.",
@@ -476,6 +505,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-10",
       "q": "A machine with an original cost of $80,000 and accumulated depreciation of $55,000 is sold for $30,000 cash. What is the gain or loss on disposal?",
       "o": [
         "$5,000 gain.",
@@ -493,6 +523,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-11",
       "q": "Where is a gain on the sale of a fixed asset reported on the income statement?",
       "o": [
         "As part of operating revenue.",
@@ -510,6 +541,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-12",
       "q": "Which of the following best describes Comprehensive Income?",
       "o": [
         "Net Income minus Other Comprehensive Income.",
@@ -527,6 +559,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-13",
       "q": "Which of the following is classified as an Other Comprehensive Income (OCI) item rather than being included in Net Income?",
       "o": [
         "Cost of goods sold.",
@@ -544,6 +577,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-14",
       "q": "A company reports $50,000 of unrealized losses on available-for-sale securities this year. Which statement correctly describes the effect of this OCI item?",
       "o": [
         "It reduces Net Income by $50,000 but has no effect on stockholders' equity.",
@@ -561,6 +595,7 @@
       "src": "gawad"
     },
     {
+      "id": "2-2-15",
       "q": "A U.S. parent company with a foreign subsidiary records a foreign currency translation adjustment when converting the subsidiary's financial statements to U.S. dollars. Where is this adjustment reported?",
       "o": [
         "As a non-operating gain or loss on the income statement.",
@@ -580,6 +615,7 @@
   ],
   "2-3": [
     {
+      "id": "2-3-01",
       "q": "The legal capital of a corporation is defined as",
       "o": [
         "the amount of capital approved for issuance by shareholders.",
@@ -596,6 +632,7 @@
       }
     },
     {
+      "id": "2-3-02",
       "q": "A publicly-traded corporation issues 10,000 shares of new common stock for $50 per share. The common stock has a par value of $5 per share. Which one of the following statements is correct?",
       "o": [
         "Cash increases by $500,000, and common stock increases by $500,000.",
@@ -612,6 +649,7 @@
       }
     },
     {
+      "id": "2-3-03",
       "q": "Excerpts from the statement of financial position for Landau Corporation as of September 30 of the current year are presented as follows. Cash $ 950,000 Accounts receivable (net) 1,675,000 Inventories 2,806,000 Total current assets $5,431,000 Accounts payable $1,004,000 Accrued liabilities 785,000 Total current liabilities $1,789,000 The board of directors of Landau Corporation met on October 4 of the current year and declared the regular quarterly cash dividend amounting to $750,000 ($0.60 per share). The dividend is payable on October 25 of the current year to all shareholders of record as of October 12 of the current year. Assume that the only transactions to affect Landau Corporation during October of the current year are the dividend transactions and that the closing entries have been made. Landau Corporation's total equity was",
       "o": [
         "Unchanged by the dividend declaration and decreased by the dividend payment.",
@@ -628,6 +666,7 @@
       }
     },
     {
+      "id": "2-3-04",
       "q": "The balance in the Retained Earnings account of a corporation is affected by all of the following except for",
       "o": [
         "issuance of stock by the corporation.",
@@ -644,6 +683,7 @@
       }
     },
     {
+      "id": "2-3-05",
       "q": "Which of the following correctly describes par value of common stock?",
       "o": [
         "The current market price of the stock.",
@@ -660,6 +700,7 @@
       }
     },
     {
+      "id": "2-3-06",
       "q": "A corporation repurchases 1,000 shares of its own stock at $25 per share. The original issue price was $15 per share. At what amount is Treasury Stock recorded?",
       "o": [
         "$15,000 — at the original issue price.",
@@ -676,6 +717,7 @@
       }
     },
     {
+      "id": "2-3-07",
       "q": "How does treasury stock affect stockholders' equity?",
       "o": [
         "It increases stockholders' equity.",
@@ -692,6 +734,7 @@
       }
     },
     {
+      "id": "2-3-08",
       "q": "A company declares a $2 per share cash dividend on 50,000 shares outstanding. The entry to record the declaration is:",
       "o": [
         "Debit Cash $100,000; Credit Dividends Payable $100,000.",
@@ -708,6 +751,7 @@
       }
     },
     {
+      "id": "2-3-09",
       "q": "What effect does a stock split have on stockholders' equity?",
       "o": [
         "Total equity increases by the market value of new shares issued.",
@@ -724,6 +768,7 @@
       }
     },
     {
+      "id": "2-3-10",
       "q": "Additional Paid-in Capital (APIC) represents:",
       "o": [
         "The total dividends paid to shareholders since incorporation.",
@@ -740,6 +785,7 @@
       }
     },
     {
+      "id": "2-3-11",
       "q": "A company issues 5,000 shares of $2 par value common stock at $18 per share. The journal entry includes a credit to Additional Paid-in Capital of:",
       "o": [
         "$10,000.",
@@ -756,6 +802,7 @@
       }
     },
     {
+      "id": "2-3-12",
       "q": "Which of the following statements about preferred stock is correct?",
       "o": [
         "Preferred stockholders always have voting rights.",
@@ -772,6 +819,7 @@
       }
     },
     {
+      "id": "2-3-13",
       "q": "When treasury stock is reissued at a price higher than its cost, the excess is credited to:",
       "o": [
         "Gain on Sale of Treasury Stock (income statement).",
@@ -788,6 +836,7 @@
       }
     },
     {
+      "id": "2-3-14",
       "q": "Cumulative preferred stock means:",
       "o": [
         "Dividends on preferred stock grow at a fixed annual rate.",
@@ -804,6 +853,7 @@
       }
     },
     {
+      "id": "2-3-15",
       "q": "How is stockholders' equity typically presented on the balance sheet?",
       "o": [
         "As a single line item called 'Owners' Investment.'",
@@ -820,6 +870,7 @@
       }
     },
     {
+      "id": "2-3-16",
       "q": "A company has 100,000 authorized shares, 80,000 issued shares, and 10,000 shares of treasury stock. How many shares are outstanding?",
       "o": [
         "100,000 shares.",
@@ -836,6 +887,7 @@
       }
     },
     {
+      "id": "2-3-17",
       "q": "Retained Earnings represents:",
       "o": [
         "The amount of cash held by the company.",
@@ -852,6 +904,7 @@
       }
     },
     {
+      "id": "2-3-18",
       "q": "A small stock dividend is declared on 100,000 shares at a market price of $30 per share and a par value of $1 per share. The dividend is 5%. What amount is transferred from Retained Earnings?",
       "o": [
         "$5,000 (at par value).",
@@ -868,6 +921,7 @@
       }
     },
     {
+      "id": "2-3-19",
       "q": "When a company retires treasury stock, what happens to the treasury stock account?",
       "o": [
         "It is transferred to Common Stock at market value.",
@@ -884,6 +938,7 @@
       }
     },
     {
+      "id": "2-3-20",
       "q": "Which of the following events would cause Retained Earnings to decrease?",
       "o": [
         "Issuance of common stock above par value.",
@@ -902,6 +957,7 @@
   ],
   "2-4": [
     {
+      "id": "2-4-01",
       "q": "Truman Enterprises is in the process of comparing its current financial performance for Year 3 with the prior two years. Truman experienced exceptionally strong growth between Years 1 and 2, with a slight decrease in sales between Years 2 and 3. Year 1 Year 2 Year 3 Net sales $4,560,000 $30,980,400 $26,583,220 Cost of goods sold 2,378,900 24,655,340 21,444,985 Selling expenses 490,000 1,289,466 2,099,800 General and administrative expenses 290,500 500,000 600,000 Which one of the following statements is correct when using common-size analysis to compare the results?",
       "o": [
         "Truman's profitability increased each year due to more efficient production processes.",
@@ -918,6 +974,7 @@
       }
     },
     {
+      "id": "2-4-02",
       "q": "After a company’s preliminary financial statements were prepared, the CFO asked an accountant to prepare a horizontal analysis of the income statement. A summary of the income statements for the current and prior year is shown below. Prior year Current year $130,000 $133,000 Cost of goods sold 70,000 80,000 Gross margin 60,000 53,000 Operating expenses 45,000 43,000 Operating profit 15,000 10,000 Other income/expense 1,000 1,000 Profit before tax 14,000 9,000 Income tax 4,200 2,700 Revenue Net profit $ 9,800 $ 6,300 Which one of the following is an example of horizontal analysis?",
       "o": [
         "Analyzing the decrease in gross margin.",
@@ -933,6 +990,7 @@
       }
     },
     {
+      "id": "2-4-03",
       "q": "A company reported its results for the first half of its fiscal year. Shown below are income statement summaries for the first half of the current year compared to the first half of last year. 1st Half Prior Year 1st Half Current Year $130,000 $160,000 70,000 80,000 $ 60,000 $ 80,000 46% 50% 45,000 50,000 $ 15,000 $ 30,000 Operating profit % 12% 19% Other income/(expense) 1,000 1,500 $ 14,000 $ 28,500 Revenue Cost of revenue Gross profit Gross margin % Operating expenses Operating profit Profit before tax Income tax 4,200 8,550 Net profit $ 9,800 $19,950 Net profit % 8% 12% During a conference call with a financial analyst, the CFO was asked to comment on notable aspects of the income statement. Which one of the following statements is correct?",
       "o": [
         "Gross profit rose by 25% with an 11% rise in operating expenses.",
@@ -949,6 +1007,7 @@
       }
     },
     {
+      "id": "2-4-04",
       "q": "In financial statement analysis, expressing all financial statement items as a percentage of base-year figures is called",
       "o": [
         "horizontal common size analysis.",
@@ -965,6 +1024,7 @@
       }
     },
     {
+      "id": "2-4-05",
       "q": "Select information from a company’s year-end balance sheet is shown below. Balance Sheet As of December 31, Year 1 Cash $ 50,000 Accounts receivable 120,000 Inventory 75,000 Property, plant and equipment, net 250,000 Total assets $495,000 Accounts payable $ 35,000 Long-term debt 100,000 Total liabilities $135,000 Common stock $300,000 Retained earnings Total equity Total liabilities and equity 60,000 $360,000 $495,000 Based on the above information, a common-size balance sheet for the company will show",
       "o": [
         "property, plant and equipment, net at 69%.",
@@ -981,6 +1041,7 @@
       }
     },
     {
+      "id": "2-4-06",
       "q": "Shown below are components of a company’s financial statements. Sales revenue $600,000 Cost of goods sold 300,000 Total assets 2,400,000 Total equity 1,500,000 Net income 120,000 What percentage value would net income be on a common size financial statement?",
       "o": [
         "20%",
@@ -997,6 +1058,7 @@
       }
     },
     {
+      "id": "2-4-07",
       "q": "Farmworks Inc. is a manufacturer of farming equipment. Stan Larson, the accounting manager, was asked by the CFO to analyze the company’s last 5 years of operations. Larson accordingly prepared the following analysis. Farmworks, Inc. Common Base Year Income Statement Base Year - December 31, Year 1 Year 2 Year 3 Year 4 Year 5 Year 6 Sales 1.01 1.03 1.05 1.07 1.10 Cost of goods sold 1.05 1.03 1.02 1.00 0.98 Selling & administrative expenses 1.01 1.01 1.01 1.02 1.03 Research and development 1.00 0.98 0.99 1.00 1.01 Income from operations 1.02 1.02 1.03 1.05 1.09 Which one of the following statements is consistent with this analysis?",
       "o": [
         "The new production process has successfully reduced manufacturing expenses.",
@@ -1013,6 +1075,7 @@
       }
     },
     {
+      "id": "2-4-08",
       "q": "A financial analyst is reviewing a company’s most recent fiscal year financial statements. The relevant data is shown below. Assets ($000) Liabilities and Equity ($000) Cash Accounts receivable Notes payable Inventory Long-term debt Plant and equipment, net 1,200 Common equity 1,000 Total assets $2,000 Total Liabilities & Equity $2,000 $ 150 Accounts payable $ 300 The analyst would like to examine the company in relation to other firms in the industry utilizing common-size financial statements. The appropriate comparative value for current assets is",
       "o": [
         "40%.",
@@ -1029,6 +1092,7 @@
       }
     },
     {
+      "id": "2-4-09",
       "q": "A company had sales in its first year of operation of $3,450,800 and $4,576,000 in the second year. Salary expense for the business was $568,920 in year one and $622,310 in year two. What is the annual growth rate in salaries?",
       "o": [
         "9.38%",
@@ -1045,6 +1109,7 @@
       }
     },
     {
+      "id": "2-4-10",
       "q": "In assessing the financial prospects for a firm, financial analysts use various techniques. An example of vertical, common-size analysis is",
       "o": [
         "Advertising expense is 4% of sales.",
@@ -1061,6 +1126,7 @@
       }
     },
     {
+      "id": "2-4-11",
       "q": "The following financial information is given for Niska Corporation. Year 1 Year 2 Book value of assets $18,000 $26,000 Market value of equity 18,000 60,000 12 months ended Year 1 12 months ended Year 2 $1,000 $1,300 $ 500 $ 600 Depreciation expense Interest expense Pretax income $ 200 $ 300 Income tax expense Net income $ 120 $ 180 Sales Cost of goods sold Gross profit Using a common-size income statement, did gross profit and net income for Niska increase or decrease?",
       "o": [
         "Gross profit increased; Net income increased.",
@@ -1077,6 +1143,7 @@
       }
     },
     {
+      "id": "2-4-12",
       "q": "The dollar value of a company’s ending inventory on its balance sheet was $500,000, $600,000, and $400,000 for Years 1, 2, and 3, respectively. In preparing a horizontal analysis with Year 1 as the base year, the percentage change shown for Year 3 would be",
       "o": [
         "20%.",
@@ -1093,6 +1160,7 @@
       }
     },
     {
+      "id": "2-4-13",
       "q": "A financial analyst is reviewing a competitor’s income statements for the past two years. Year 1 Year 2 Sales £250,000 £275,000 Cost of goods sold 155,000 160,000 Gross profit £ 95,000 £115,000 Selling expenses 35,000 40,000 General expenses 45,000 50,000 £ 15,000 £ 25,000 2,500 3,500 £ 12,500 £ 21,500 Operating income before income taxes Taxes related to operations Net income The financial analyst is able to conclude that the competitor’s",
       "o": [
         "common size income statements will show operating income before income taxes at 22% for Year 2.",
@@ -1108,6 +1176,7 @@
       }
     },
     {
+      "id": "2-4-14",
       "q": "Preparation of common-size financial statements is also referred to as",
       "o": [
         "activity analysis.",
@@ -1124,6 +1193,7 @@
       }
     },
     {
+      "id": "2-4-15",
       "q": "Vertical analysis of an income statement expresses each line item as a percentage of",
       "o": [
         "Total assets.",
@@ -1140,6 +1210,7 @@
       }
     },
     {
+      "id": "2-4-16",
       "q": "Sales grew from $2,000,000 to $2,500,000. Using horizontal analysis with the prior year as base, the percentage change is",
       "o": [
         "20%.",
@@ -1156,6 +1227,7 @@
       }
     },
     {
+      "id": "2-4-17",
       "q": "Which limitation applies to ratio analysis?",
       "o": [
         "Ratios can only be used for large publicly traded companies.",
@@ -1172,6 +1244,7 @@
       }
     },
     {
+      "id": "2-4-18",
       "q": "A company's net profit margin is 8% and total asset turnover is 2.0. What is return on assets (ROA)?",
       "o": [
         "4%.",
@@ -1188,6 +1261,7 @@
       }
     },
     {
+      "id": "2-4-19",
       "q": "Which type of analysis compares a company's current figures with the same company's prior year figures?",
       "o": [
         "Industry analysis.",
@@ -1204,6 +1278,7 @@
       }
     },
     {
+      "id": "2-4-20",
       "q": "Net income $120,000; interest expense $30,000; income tax expense $50,000. What is times interest earned?",
       "o": [
         "2.0.",
@@ -1222,6 +1297,7 @@
   ],
   "2-5": [
     {
+      "id": "2-5-01",
       "q": "Birch Products Inc. has the following current assets. Cash Marketable securities 100,000 Accounts receivable 800,000 Inventories 1,450,000 Total current assets $2,600,000 $ 250,000 If Birch's current liabilities are $1,300,000, the firm's",
       "o": [
         "quick ratio will decrease if a payment of $100,000 cash is used to purchase inventory.",
@@ -1238,6 +1314,7 @@
       }
     },
     {
+      "id": "2-5-02",
       "q": "Davis Retail Inc. has total assets of $7,500,000 and a current ratio of 2.3 times before purchasing $750,000 of merchandise on credit for resale. After this purchase, the current ratio will",
       "o": [
         "be exactly 2.53 times.",
@@ -1254,6 +1331,7 @@
       }
     },
     {
+      "id": "2-5-03",
       "q": "When reviewing a credit application, the credit manager should be most concerned with the applicant's",
       "o": [
         "profit margin and return on assets.",
@@ -1270,6 +1348,7 @@
       }
     },
     {
+      "id": "2-5-04",
       "q": "The acid test ratio shows the ability of a company to pay its current liabilities without having to",
       "o": [
         "borrow additional funds.",
@@ -1286,6 +1365,7 @@
       }
     },
     {
+      "id": "2-5-05",
       "q": "If a company has a current ratio of 2.1 and pays off a portion of its accounts payable with cash, the current ratio will",
       "o": [
         "remain unchanged.",
@@ -1302,6 +1382,7 @@
       }
     },
     {
+      "id": "2-5-06",
       "q": "Given an acid test ratio of 2.0, current assets of $5,000, and inventory of $2,000, the value of current liabilities is",
       "o": [
         "$1,500",
@@ -1318,6 +1399,7 @@
       }
     },
     {
+      "id": "2-5-07",
       "q": "Which of the following financial ratios is used to assess the liquidity of a company?",
       "o": [
         "Current Ratio.",
@@ -1334,6 +1416,7 @@
       }
     },
     {
+      "id": "2-5-08",
       "q": "A condensed comparative balance sheet for a company appears below: 12-31-Year 1 12-31-Year 2 Cash $ 40,000 $ 30,000 Accounts receivable 120,000 100,000 Inventory 200,000 300,000 Property, plant & equipment 500,000 550,000 Accumulated depreciation (280,000) (340,000) Total assets $580,000 $640,000 Current liabilities $60,000 $100,000 Long-term liabilities 390,000 420,000 Stockholders' equity 130,000 120,000 Total liabilities and equity $580,000 $640,000 In looking at liquidity ratios at both balance sheet dates, what happened to the (1) current ratio and (2) acid-test (quick) ratio?",
       "o": [
         "(1) Increased (2) Increased",
@@ -1350,6 +1433,7 @@
       }
     },
     {
+      "id": "2-5-09",
       "q": "The balance sheet of a luggage manufacturer reports the following. Cash $531,000 Accounts receivable 439,000 Inventory 300,000 Marketable securities 200,000 Current liabilities 500,000 Long term liabilities 676,000 Based on the information provided, the luggage manufacturer’s quick ratio is",
       "o": [
         "1.25",
@@ -1366,6 +1450,7 @@
       }
     },
     {
+      "id": "2-5-10",
       "q": "Norton Inc. has a 2 to 1 current ratio. This ratio would increase to more than 2 to 1 if",
       "o": [
         "the company sold merchandise on open account that earned a normal gross margin.",
@@ -1382,6 +1467,7 @@
       }
     },
     {
+      "id": "2-5-11",
       "q": "In analyzing the short-term liquidity of a company, many analysts prefer to use the quick ratio rather than the current ratio. The primary reason for this preference is that the",
       "o": [
         "pro-forma cash flow statements focus on cash only.",
@@ -1398,6 +1484,7 @@
       }
     },
     {
+      "id": "2-5-12",
       "q": "Which one of the following changes will most likely increase the quick ratio?",
       "o": [
         "Increase in short-term government bonds.",
@@ -1414,6 +1501,7 @@
       }
     },
     {
+      "id": "2-5-13",
       "q": "All of the following are included when calculating the acid test ratio except",
       "o": [
         "six-month treasury bills.",
@@ -1430,6 +1518,7 @@
       }
     },
     {
+      "id": "2-5-14",
       "q": "Shown below are beginning and ending balances for certain of Grimaldi Inc.'s accounts. January 1 December 31 $ 48,000 $ 62,000 Cash Marketable securities 42,000 35,000 Accounts receivable 68,000 47,000 Inventory 125,000 138,000 Plant & equipment 325,000 424,000 Accounts payable 32,000 84,000 Accrued liabilities 14,000 11,000 7% bonds payable 95,000 77,000 Grimaldi's acid test ratio or quick ratio at the end of the year is",
       "o": [
         "0.83.",
@@ -1446,6 +1535,7 @@
       }
     },
     {
+      "id": "2-5-15",
       "q": "Both the current ratio and the quick ratio for Spartan Corporation have been slowly decreasing. For the past two years, the current ratio has been 2.3 to 1 and 2.0 to 1. During the same time period, the quick ratio has decreased from 1.2 to 1 to 1.0 to 1. The disparity between the current and quick ratios can be explained by which one of the following?",
       "o": [
         "The inventory balance is unusually high.",
@@ -1462,6 +1552,7 @@
       }
     },
     {
+      "id": "2-5-16",
       "q": "CPZ Enterprises had the following account information. Accounts receivable $200,000 Accounts payable 80,000 Bonds payable, due in ten years 300,000 Cash 100,000 Interest payable, due in three months 10,000 Inventory 400,000 Land 250,000 Notes payable, due in six months 50,000 Prepaid expenses 40,000 The company has an operating cycle of five months. What will happen to the current and quick ratios if CPZ Enterprises uses cash to pay 50 percent of the accounts payable?",
       "o": [
         "Both ratios will increase.",
@@ -1478,6 +1569,7 @@
       }
     },
     {
+      "id": "2-5-17",
       "q": "CPZ Enterprises had the following account information. Accounts receivable $200,000 Accounts payable 80,000 Bonds payable, due in ten years 300,000 Cash 100,000 Interest payable, due in three months 10,000 Inventory 400,000 Land 250,000 Notes payable, due in six months 50,000 Prepaid expenses 40,000 The company has an operating cycle of five months. What is the company's acid test (quick) ratio?",
       "o": [
         "1.68",
@@ -1493,6 +1585,7 @@
       }
     },
     {
+      "id": "2-5-18",
       "q": "Dedham Corporation has decided to include certain financial ratios in its year-end annual report to shareholders. Selected information relating to its most recent fiscal year is provided below. Cash $ 10,000 Accounts receivable 20,000 Prepaid expenses 8,000 Inventory 30,000 Available-for-sale debt securities classified as current assets At cost 9,000 Fair value at year end 12,000 Accounts payable 15,000 Notes payable (due in 90 days) 25,000 Bonds payable (due in 10 years) 35,000 Dedham's quick (acid-test) ratio at year end is",
       "o": [
         "1.05 to 1.",
@@ -1508,6 +1601,7 @@
       }
     },
     {
+      "id": "2-5-19",
       "q": "Windham Company has current assets of $400,000 and current liabilities of $500,000. Windham Company's current ratio would be increased by",
       "o": [
         "The purchase of $100,000 of inventory on account.",
@@ -1524,6 +1618,7 @@
       }
     },
     {
+      "id": "2-5-20",
       "q": "A company has a current ratio of 1.4, a quick, or acid test, ratio of 1.2, and the following partial summary balance sheet: Cash $ 10 Current liabilities Accounts receivable ___ Long-term liabilities Inventory ___ Shareholders' equity Fixed Assets ___ Total assets $100 $ Total liabilities and equity $100 The company has a fixed assets balance of:",
       "o": [
         "$16",
@@ -1540,6 +1635,7 @@
       }
     },
     {
+      "id": "2-5-21",
       "q": "A company has a current ratio of 1.4, a quick, or acid test, ratio of 1.2, and the following partial summary balance sheet: Cash $ 10 Current liabilities Accounts receivable ___ Long-term liabilities Inventory ___ Shareholders' equity Fixed Assets ___ Total assets $100 Total liabilities and equity $ $100 The company has an accounts receivable balance of:",
       "o": [
         "$36",
@@ -1556,6 +1652,7 @@
       }
     },
     {
+      "id": "2-5-22",
       "q": "All of the following are affected when merchandise is purchased on credit except",
       "o": [
         "net working capital.",
@@ -1572,6 +1669,7 @@
       }
     },
     {
+      "id": "2-5-23",
       "q": "A company has a current ratio of 2.0. Cash is 20%, accounts receivable is 40%, and inventory is 40% of total current assets. What is the acid-test ratio for the company?",
       "o": [
         "1.6.",
@@ -1588,6 +1686,7 @@
       }
     },
     {
+      "id": "2-5-24",
       "q": "A mobile home manufacturer has a quick ratio of 2.0. Assuming nothing else changes, which of the following actions would decrease the firm’s quick ratio?",
       "o": [
         "Converting short-term debt into long-term debt.",
@@ -1604,6 +1703,7 @@
       }
     },
     {
+      "id": "2-5-25",
       "q": "A company has current liabilities of $2,000,000 and net working capital of $300,000. If the company has a quick ratio of 0.8, the company has inventory of",
       "o": [
         "$240,000.",
@@ -1622,6 +1722,7 @@
   ],
   "2-6": [
     {
+      "id": "2-6-01",
       "q": "A measure of its long-term debt-paying ability is a company's",
       "o": [
         "Times-interest-earned.",
@@ -1638,6 +1739,7 @@
       }
     },
     {
+      "id": "2-6-02",
       "q": "The following information has been derived from the financial statements of Boutwell Company. Current assets $640,000 Total assets 990,000 Long-term liabilities 130,000 Current ratio 3.2 The company's debt-to-equity ratio is",
       "o": [
         "0.37 to 1.",
@@ -1654,6 +1756,7 @@
       }
     },
     {
+      "id": "2-6-03",
       "q": "A company has earnings before interest and taxes of $100,000, income taxes of $30,000, and interest expense of $10,000. The company’s interest coverage ratio is",
       "o": [
         "6.",
@@ -1670,6 +1773,7 @@
       }
     },
     {
+      "id": "2-6-04",
       "q": "If a high percentage of a firm’s total costs is fixed, the firm’s operating leverage will be:",
       "o": [
         "Unchanged.",
@@ -1686,6 +1790,7 @@
       }
     },
     {
+      "id": "2-6-05",
       "q": "A company’s income statement shows interest expense of $5 million, sales revenue of $50 million, earnings before interest and taxes of $20 million, and net income of $8 million. This company has a times interest earned (or interest coverage) ratio of",
       "o": [
         "1.6.",
@@ -1702,6 +1807,7 @@
       }
     },
     {
+      "id": "2-6-06",
       "q": "A higher degree of operating leverage compared with the industry average implies that the firm",
       "o": [
         "has profits that are more sensitive to changes in sales volume.",
@@ -1718,6 +1824,7 @@
       }
     },
     {
+      "id": "2-6-07",
       "q": "The degree of operating leverage (DOL) is",
       "o": [
         "lower if the degree of total leverage is higher, other things held constant.",
@@ -1734,6 +1841,7 @@
       }
     },
     {
+      "id": "2-6-08",
       "q": "Firms with high degrees of financial leverage would be best characterized as having",
       "o": [
         "zero coupon bonds in their capital structures.",
@@ -1750,6 +1858,7 @@
       }
     },
     {
+      "id": "2-6-09",
       "q": "The Liabilities and Shareholders' Equity section of Mica Corporation's Statement of Financial Position is shown below. January 1 December 31 Accounts payable $ 32,000 $ 84,000 Accrued liabilities 14,000 11,000 7% bonds payable 95,000 77,000 Common stock ($10 par value) 300,000 300,000 Reserve for bond retirement 12,000 28,000 Retained earnings 155,000 206,000 Total liabilities and shareholders' equity $608,000 $706,000 Mica's debt/equity ratio is",
       "o": [
         "25.6%.",
@@ -1766,6 +1875,7 @@
       }
     },
     {
+      "id": "2-6-10",
       "q": "Selected data from Ostrander Corporation's financial statements for the years indicated are presented in thousands. 20X2 Operations Net sales $4,175 Cost of goods sold 2,880 Interest expense Income tax Gain on disposal of a segment (net of tax) Net income December 31, 20X2 Cash 20X2 20X1 $ $ Trading debt securities Accounts receivable (net) Merchandise inventory Tangible fixed assets Total assets 1,397 1,320 Current liabilities Total liabilities Common stock outstanding Retained earnings The total debt-to-equity ratio for Ostrander Corporation in 20X2 is",
       "o": [
         "2.07",
@@ -1782,6 +1892,7 @@
       }
     },
     {
+      "id": "2-6-11",
       "q": "The interest expense for a company is equal to its earnings before interest and taxes (EBIT). The company's tax rate is 40%. The company's times-interest earned ratio is equal to",
       "o": [
         "1.0.",
@@ -1798,6 +1909,7 @@
       }
     },
     {
+      "id": "2-6-12",
       "q": "Redimaker Inc., a small but growing product assembler, has been able to profitably ride the ups and downs of several economic cycles, largely due to its low level of long-term assets. The firm relies more heavily on labor than its competitors, and contracts for needed facilities only on a short-term lease basis. Working capital is largely provided through short-term loans. Although Redimaker’s variable costs are much higher than its competitors’ variable costs, its income is much less volatile. All of the above factors are consistent with Redimaker having a lower level of financial and operating",
       "o": [
         "liquidity.",
@@ -1814,6 +1926,7 @@
       }
     },
     {
+      "id": "2-6-13",
       "q": "Assume the information below for Ramer Company, for Matson Company, and for their common industry represents a recent year. Ramer Matson Industry Average Current ratio 3.50 2.80 3.00 Accounts receivable turnover 5.00 8.10 6.00 Inventory turnover 6.20 8.00 6.10 Times interest earned 9.00 12.30 10.40 Debt-to-equity ratio 0.70 0.40 0.55 Return on investment 0.15 0.12 0.15 Dividend payout ratio 0.80 0.60 0.55 Earnings per share $3.00 $2.00 -- The attitudes of both Ramer and Matson concerning risk are best explained by the",
       "o": [
         "Dividend payout ratio and earnings per share.",
@@ -1830,6 +1943,7 @@
       }
     },
     {
+      "id": "2-6-14",
       "q": "Sylvan Corporation has the following capital structure:\n\nDebenture bonds: $10,000,000\nPreferred equity: $1,000,000\nCommon equity: $39,000,000\n\nThe financial leverage of Sylvan Corporation would increase as a result of:",
       "o": [
         "Financing its future investments with a higher percentage of bonds.",
@@ -1846,6 +1960,7 @@
       }
     },
     {
+      "id": "2-6-15",
       "q": "The capital structure of four corporations is as follows. Corporation Sterling Cooper Warwick Pane Short-term debt 10% 10% 15% 10% Long-term debt 40% 35% 30% 30% Preferred stock 30% 30% 30% 30% Common equity 20% 25% 25% 30% Which corporation is the most highly leveraged?",
       "o": [
         "Warwick.",
@@ -1861,6 +1976,7 @@
       }
     },
     {
+      "id": "2-6-16",
       "q": "The use of debt in the capital structure of a firm",
       "o": [
         "increases its operating leverage.",
@@ -1877,6 +1993,7 @@
       }
     },
     {
+      "id": "2-6-17",
       "q": "Which one of the following is the best indicator of long-term debt paying ability?",
       "o": [
         "Asset turnover.",
@@ -1893,6 +2010,7 @@
       }
     },
     {
+      "id": "2-6-18",
       "q": "Which one of the following effects does the use of debt in the capital structure of a company have?",
       "o": [
         "Decreases the company’s operating leverage.",
@@ -1909,6 +2027,7 @@
       }
     },
     {
+      "id": "2-6-19",
       "q": "Total debt $400,000; total equity $600,000. What is the debt-to-equity ratio?",
       "o": [
         "0.40.",
@@ -1925,6 +2044,7 @@
       }
     },
     {
+      "id": "2-6-20",
       "q": "A high debt-to-total assets ratio indicates that a company",
       "o": [
         "Has a strong equity base and low financial risk.",
@@ -1943,6 +2063,7 @@
   ],
   "2-7": [
     {
+      "id": "2-7-01",
       "q": "A change in credit policy has caused an increase in sales, an increase in discounts taken, a decrease in the amount of credit losses, and a decrease in the investment in accounts receivable. Based upon this information, the company's",
       "o": [
         "Accounts receivable turnover has decreased.",
@@ -1959,6 +2080,7 @@
       }
     },
     {
+      "id": "2-7-02",
       "q": "In computing inventory turnover, the base to use is the",
       "o": [
         "Cost of sales base because it eliminates any changes due solely to sales price changes.",
@@ -1975,6 +2097,7 @@
       }
     },
     {
+      "id": "2-7-03",
       "q": "On its year-end financial statements, Caper Corporation showed sales of $3,000,000, net fixed assets of $1,300,000, and total assets of $2,000,000. The company's fixed asset turnover is",
       "o": [
         "66.7%.",
@@ -1991,6 +2114,7 @@
       }
     },
     {
+      "id": "2-7-04",
       "q": "A company had $6 million in credit sales last fiscal year. The company’s beginning accounts receivable balance was $1 million and its ending receivable balance was $1.25 million on its year-end financial statements. If the industry average period for the collection of accounts receivables is 90 days, the company’s accounts receivable collection period is less than the industry average by approximately",
       "o": [
         "68 days.",
@@ -2007,6 +2131,7 @@
       }
     },
     {
+      "id": "2-7-05",
       "q": "A financial analyst is analyzing the accounts receivable period for three companies by comparing their days’ sales in receivables. The financial analyst has collected the following information for the companies. Company A Company B Company C $175,000 $145,000 $225,000 Net credit sales Average accounts receivable, net 10,000 20,000 11,500 Average allowance for credit losses 3,500 6,500 4,500 If each of the companies has credit terms of net 30 days, the financial analyst is most likely to conclude which one of the following?",
       "o": [
         "Company B is the least efficient in collecting payment.",
@@ -2023,6 +2148,7 @@
       }
     },
     {
+      "id": "2-7-06",
       "q": "The ratio that measures a firm's ability to generate earnings from its resources is",
       "o": [
         "Sales to working capital.",
@@ -2039,6 +2165,7 @@
       }
     },
     {
+      "id": "2-7-07",
       "q": "The annual sales revenue of an enterprise is $3,000,000. Half of the sales are on credit terms; half are cash sales. Accounts receivable at the balance sheet date are $165,000. What is the average receivables collection period, to the nearest day, using a 365 day year?",
       "o": [
         "20 days",
@@ -2055,6 +2182,7 @@
       }
     },
     {
+      "id": "2-7-08",
       "q": "Maydale Inc.'s financial statements show the following information. Gross accounts receivable, end of Year 1 $ 320,000 Credit sales for Year 2 3,600,000 Gross accounts receivable, end of Year 2 400,000 Maydale's accounts receivable turnover ratio is",
       "o": [
         "10.00.",
@@ -2071,6 +2199,7 @@
       }
     },
     {
+      "id": "2-7-09",
       "q": "Garland Corporation's Income Statement for the year just ended is shown below. Net sales Cost of goods sold: $900,000 Inventory - beginning $125,000 Purchases 540,000 Goods available for sale 665,000 Inventory - ending 138,000 Cost of goods sold 527,000 Gross profit 373,000 Operating expenses 175,000 Income from operations $198,000 Garland's average inventory turnover ratio is",
       "o": [
         "6.84.",
@@ -2087,6 +2216,7 @@
       }
     },
     {
+      "id": "2-7-10",
       "q": "Lancaster Inc. had gross accounts receivable of $168,000 and $147,000 at the beginning and end of the year, respectively. The company’s net income for the year was $204,000 on $1,700,000 in total sales. Cash sales were 6% of total sales. Lancaster's average accounts receivable turnover ratio for the year is",
       "o": [
         "9.51.",
@@ -2103,6 +2233,7 @@
       }
     },
     {
+      "id": "2-7-11",
       "q": "Lisa, Inc. — Statement of Financial Position, December 31, 20X4 (in thousands)\n\nAssets\nCurrent assets:\nCash: $30 (20X4) / $25 (20X3)\nMarketable securities: $20 / $15\nAccounts receivable (net): $45 / $30\nInventories: $60 / $50\nPrepaid items: $15 / $20\nTotal Current Assets: $170 / $140\n\nNon-current assets:\nLong-term investments: $25 / $20\nLand (at cost): $75 / $75\nBuilding (net): $80 / $90\nEquipment (net): $95 / $100\nPatents (net): $35 / $17\nGoodwill (net): $20 / $13\nTotal Non-current Assets: $330 / $315\nTotal Assets: $500 / $455\n\nLiabilities and Equity\nCurrent liabilities:\nNotes payable: $23 / $12\nAccounts payable: $47 / $28\nAccrued interest: $15 / $15\nTotal Current Liabilities: $85 / $55\n\nNon-current liabilities:\nLong-term notes payable, 10% due 12/31/20X6: $10 / $10\nBonds payable, 12% due 12/31/20X9: $15 / $15\nTotal Non-current Liabilities: $25 / $25\nTotal Liabilities: $110 / $80\n\nShareholders' Equity: Total Equity $390 / $375\nTotal Liabilities & Equity: $500 / $455\n\nAssume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively.\n\nLisa Inc.'s accounts receivable turnover for 20X4 was",
       "o": [
         "8.0 times.",
@@ -2119,6 +2250,7 @@
       }
     },
     {
+      "id": "2-7-12",
       "q": "Lisa, Inc. — Statement of Financial Position, December 31, 20X4 (in thousands)\n\nAssets\nCurrent assets:\nCash: $30 (20X4) / $25 (20X3)\nMarketable securities: $20 / $15\nAccounts receivable (net): $45 / $30\nInventories: $60 / $50\nPrepaid items: $15 / $20\nTotal Current Assets: $170 / $140\n\nNon-current assets:\nLong-term investments: $25 / $20\nLand (at cost): $75 / $75\nBuilding (net): $80 / $90\nEquipment (net): $95 / $100\nPatents (net): $35 / $17\nGoodwill (net): $20 / $13\nTotal Non-current Assets: $330 / $315\nTotal Assets: $500 / $455\n\nLiabilities and Equity\nCurrent liabilities:\nNotes payable: $23 / $12\nAccounts payable: $47 / $28\nAccrued interest: $15 / $15\nTotal Current Liabilities: $85 / $55\n\nNon-current liabilities:\nLong-term notes payable, 10% due 12/31/20X6: $10 / $10\nBonds payable, 12% due 12/31/20X9: $15 / $15\nTotal Non-current Liabilities: $25 / $25\nTotal Liabilities: $110 / $80\n\nShareholders' Equity: Total Equity $390 / $375\nTotal Liabilities & Equity: $500 / $455\n\nAssume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively.\n\nLisa Inc.'s average collection period for 20X4, using a 365-day year, was",
       "o": [
         "45.6 days.",
@@ -2135,6 +2267,7 @@
       }
     },
     {
+      "id": "2-7-13",
       "q": "Lisa, Inc. — Statement of Financial Position, December 31, 20X4 (in thousands)\n\nAssets\nCurrent assets:\nCash: $30 (20X4) / $25 (20X3)\nMarketable securities: $20 / $15\nAccounts receivable (net): $45 / $30\nInventories: $60 / $50\nPrepaid items: $15 / $20\nTotal Current Assets: $170 / $140\n\nNon-current assets:\nLong-term investments: $25 / $20\nLand (at cost): $75 / $75\nBuilding (net): $80 / $90\nEquipment (net): $95 / $100\nPatents (net): $35 / $17\nGoodwill (net): $20 / $13\nTotal Non-current Assets: $330 / $315\nTotal Assets: $500 / $455\n\nLiabilities and Equity\nCurrent liabilities:\nNotes payable: $23 / $12\nAccounts payable: $47 / $28\nAccrued interest: $15 / $15\nTotal Current Liabilities: $85 / $55\n\nNon-current liabilities:\nLong-term notes payable, 10% due 12/31/20X6: $10 / $10\nBonds payable, 12% due 12/31/20X9: $15 / $15\nTotal Non-current Liabilities: $25 / $25\nTotal Liabilities: $110 / $80\n\nShareholders' Equity: Total Equity $390 / $375\nTotal Liabilities & Equity: $500 / $455\n\nAssume net credit sales and cost of goods sold for 20X4 were $300,000 and $220,000, respectively.\n\nLisa Inc.'s inventory turnover, using a 360-day year, was",
       "o": [
         "4.4 times.",
@@ -2151,6 +2284,7 @@
       }
     },
     {
+      "id": "2-7-14",
       "q": "All of the following financial indicators are measures of either liquidity or activity except the",
       "o": [
         "Merchandise inventory turnover.",
@@ -2167,6 +2301,7 @@
       }
     },
     {
+      "id": "2-7-15",
       "q": "The average collection period for a firm measures the number of days",
       "o": [
         "beyond the end of the credit period before a typical customer payment is received.",
@@ -2183,6 +2318,7 @@
       }
     },
     {
+      "id": "2-7-16",
       "q": "The following inventory and sales data are available for the current year for Volpone Company. Volpone uses a 365-day year when computing ratios. November 30, 20X2 November 30, 20X1 Net credit sales $6,205,000 Gross receivables 350,000 320,000 Inventory 960,000 780,000 Cost of goods sold Volpone Company's average number of days to sell inventory for the current year is",
       "o": [
         "51.18 days.",
@@ -2198,6 +2334,7 @@
       }
     },
     {
+      "id": "2-7-17",
       "q": "The following inventory and sales data are available for the current year for Volpone Company. Volpone uses a 365-day year when computing ratios. November 30, 20X2 November 30, 20X1 Net credit sales $6,205,000 Gross receivables 350,000 320,000 Inventory 960,000 780,000 Cost of goods sold 4,380,000 Volpone Company's average number of days to collect accounts receivable for the current year is",
       "o": [
         "18.82 days.",
@@ -2213,6 +2350,7 @@
       }
     },
     {
+      "id": "2-7-18",
       "q": "McKeon Company — actual figures for the fiscal year ended May 31, 20X0, and budget figures for the 20X1 fiscal year. McKeon's controller is reviewing the 20X1 budget and calculating key ratios. McKeon monitors yield/return ratios using the average financial position of the company. (Round all calculations to three decimal places if necessary.)\n\nBalance Sheet items: 20X1 (budget) / 20X0 (actual)\nCurrent assets: $210,000 / $180,000\nNoncurrent assets: $275,000 / $255,000\nCurrent liabilities: $78,000 / $85,000\nLong-term debt: $75,000 / $30,000\nCommon stock ($30 par value): $300,000 / $300,000\nRetained earnings: $32,000 / $20,000\n\n20X1 Operations (budget):\nSales* (all sales are credit sales): $350,000\nCost of goods sold: $160,000\nInterest expense: $3,000\nIncome taxes (40% rate): $48,000\nDividends declared and paid in 20X1: $60,000\nAdministrative expense: $67,000\n\nComposition of Current Assets: 20X1 (budget) / 20X0 (actual)\nCash: $20,000 / $10,000\nAccounts receivable: $100,000 / $70,000\nInventory: $70,000 / $80,000\nOther: $20,000 / $20,000\n\nMcKeon Company's total asset turnover for 20X1 is",
       "o": [
         "0.348",
@@ -2229,6 +2367,7 @@
       }
     },
     {
+      "id": "2-7-19",
       "q": "McKeon Company — actual figures for the fiscal year ended May 31, 20X0, and budget figures for the 20X1 fiscal year. McKeon's controller is reviewing the 20X1 budget and calculating key ratios. McKeon monitors yield/return ratios using the average financial position of the company. (Round all calculations to three decimal places if necessary.)\n\nBalance Sheet items: 20X1 (budget) / 20X0 (actual)\nCurrent assets: $210,000 / $180,000\nNoncurrent assets: $275,000 / $255,000\nCurrent liabilities: $78,000 / $85,000\nLong-term debt: $75,000 / $30,000\nCommon stock ($30 par value): $300,000 / $300,000\nRetained earnings: $32,000 / $20,000\n\n20X1 Operations (budget):\nSales* (all sales are credit sales): $350,000\nCost of goods sold: $160,000\nInterest expense: $3,000\nIncome taxes (40% rate): $48,000\nDividends declared and paid in 20X1: $60,000\nAdministrative expense: $67,000\n\nComposition of Current Assets: 20X1 (budget) / 20X0 (actual)\nCash: $20,000 / $10,000\nAccounts receivable: $100,000 / $70,000\nInventory: $70,000 / $80,000\nOther: $20,000 / $20,000\n\nUsing a 365-day year, McKeon's days' sales in inventory is",
       "o": [
         "171 days.",
@@ -2245,6 +2384,7 @@
       }
     },
     {
+      "id": "2-7-20",
       "q": "McKeon Company — actual figures for the fiscal year ended May 31, 20X0, and budget figures for the 20X1 fiscal year. McKeon's controller is reviewing the 20X1 budget and calculating key ratios. McKeon monitors yield/return ratios using the average financial position of the company. (Round all calculations to three decimal places if necessary.)\n\nBalance Sheet items: 20X1 (budget) / 20X0 (actual)\nCurrent assets: $210,000 / $180,000\nNoncurrent assets: $275,000 / $255,000\nCurrent liabilities: $78,000 / $85,000\nLong-term debt: $75,000 / $30,000\nCommon stock ($30 par value): $300,000 / $300,000\nRetained earnings: $32,000 / $20,000\n\n20X1 Operations (budget):\nSales* (all sales are credit sales): $350,000\nCost of goods sold: $160,000\nInterest expense: $3,000\nIncome taxes (40% rate): $48,000\nDividends declared and paid in 20X1: $60,000\nAdministrative expense: $67,000\n\nComposition of Current Assets: 20X1 (budget) / 20X0 (actual)\nCash: $20,000 / $10,000\nAccounts receivable: $100,000 / $70,000\nInventory: $70,000 / $80,000\nOther: $20,000 / $20,000\n\nThe 20X1 accounts receivable turnover for McKeon Company is",
       "o": [
         "5.000",
@@ -2261,6 +2401,7 @@
       }
     },
     {
+      "id": "2-7-21",
       "q": "Cornwall Corporation's gross accounts receivable were $68,000 and $47,000 at the beginning and end of the year, respectively. Cornwall's condensed Income Statement is shown below. Sales $900,000 Cost of goods sold 527,000 Operating expenses 175,000 Operating income 198,000 Income tax Net income 79,000 $119,000 Cornwall's average number of days' sales in accounts receivable (using a 365-day year) is",
       "o": [
         "7.8 days.",
@@ -2276,6 +2417,7 @@
       }
     },
     {
+      "id": "2-7-22",
       "q": "The following information was obtained from a company’s financial statements. Beginning of the Year End of the Year Accounts receivable 2,140 3,060 Accounts payable 3,320 3,680 Total sales for the year were $85,900, of which $62,400 were credit sales. The cost of goods sold was $24,500. The company's payable turnover was",
       "o": [
         "7.0 times.",
@@ -2291,6 +2433,7 @@
       }
     },
     {
+      "id": "2-7-23",
       "q": "A wholesale supplier has collected the following financial data on three companies that only purchase their products for resale to retail consumers. Company A Company B Company C £1,000,000 £1,250,000 £2,450,000 Sales Gross profit margin 20% 30% 25% Beginning inventory £35,000 £80,000 £155,000 Ending inventory £65,000 £225,000 £175,000 On the basis of the information provided above, the supplier is able to conclude that",
       "o": [
         "Company C is turning the product inventory the fastest.",
@@ -2307,6 +2450,7 @@
       }
     },
     {
+      "id": "2-7-24",
       "q": "Selected financial information from Ferguson Inc.’s financial statements is shown below. Statement of Financial Position ($000s) Current Year Prior Year Total current assets Total long-term assets 1,045 $1,700 $1,635 Total current liabilities Total long-term liabilities Shareholders' equity 1,291 1,270 Total liabilities and equity $1,700 $1,635 Total assets Income Statement (000's) Net sales Cost of goods sold Gross profit Operating expenses Operating income Interest expense Income taxes Net income $1,646 $ 101 Ferguson Inc.’s asset turnover for the current year is",
       "o": [
         "1.94 times",
@@ -2323,6 +2467,7 @@
       }
     },
     {
+      "id": "2-7-25",
       "q": "Lowell Corporation has decided to include certain financial ratios in its year-end annual report to shareholders. Selected information relating to its most recent fiscal year is provided below. Cash $ 10,000 Accounts receivable (end of year) 20,000 Accounts receivable (beginning of year) 24,000 Inventory (end of year) 30,000 Inventory (beginning of year) 26,000 Notes payable (due in 90 days) 25,000 Bonds payable (due in 10 years) 35,000 Net credit sales for year 220,000 Cost of goods sold 140,000 Using a 365-day year, compute Lowell's accounts receivable turnover in days.",
       "o": [
         "39.8 days.",
@@ -2339,6 +2484,7 @@
       }
     },
     {
+      "id": "2-7-26",
       "q": "Peggy Monahan, controller, has gathered the following information regarding Lampasso Company. Beginning of the year End of the year Inventory $6,400 $7,600 Accounts receivable $2,140 $3,060 Accounts payable $3,320 $3,680 Total sales for the year were $85,900, of which $61,400 were credit sales. The cost of goods sold was $24,500. Lampasso's inventory turnover ratio for the year was",
       "o": [
         "3.2 times.",
@@ -2355,6 +2501,7 @@
       }
     },
     {
+      "id": "2-7-27",
       "q": "Makay Corporation has decided to include certain financial ratios in its year-end annual report to shareholders. Selected information relating to its most recent fiscal year is provided below. Cash $ 10,000 Accounts receivable (end of year) 20,000 Accounts receivable (beginning of year) 24,000 Inventory (end of year) 30,000 Inventory (beginning of year) 26,000 Notes payable (due in 90 days) 25,000 Bonds payable (due in 10 years) 35,000 Net credit sales for year 220,000 Cost of goods sold 140,000 Makay's average inventory turnover for the year was",
       "o": [
         "7.9 times.",
@@ -2373,6 +2520,7 @@
   ],
   "2-8": [
     {
+      "id": "2-8-01",
       "q": "A company purchased $250,000 in inventory during the month of July. Inventory balances were $750,000 on July 1 and $89,000 on July 31. What was the company’s cost of sales during the month of July?",
       "o": [
         "$911,000.",
@@ -2389,6 +2537,7 @@
       }
     },
     {
+      "id": "2-8-02",
       "q": "A company’s year-end selected financial data is shown below. Year 2 Year 1 Current assets $250,000 $175,000 Total assets 600,000 500,000 Total liabilities 300,000 225,000 Net sales 200,000 150,000 Net income 75,000 60,000 The company’s rate of return on assets and rate of return on equity for Year 2 are",
       "o": [
         "36% and 25%, respectively.",
@@ -2405,6 +2554,7 @@
       }
     },
     {
+      "id": "2-8-03",
       "q": "A company's capital structure is as follows (in millions of dollars): 12/31/X6 12/31/X7 Long-term debt @ 6% Common stock Retained earnings The following items appear in the company's financial statements for the year ended December 31, December 20X7 (in millions of dollars): Income Before Interest & Taxes Interest Expense ( 6) Income before Taxes Income Tax (14) Net income Dividends (15) Increase to retained earnings for the year What is the company's return on equity for 20X7?",
       "o": [
         "4.94%",
@@ -2421,6 +2571,7 @@
       }
     },
     {
+      "id": "2-8-04",
       "q": "A company’s Year 4 gross profit margin remained unchanged from Year 3. However, the company’s Year 4 net profit margin increased from Year 3. Which one of the following could explain the change from Year 3 to Year 4?",
       "o": [
         "Corporate income tax rates decreased.",
@@ -2437,6 +2588,7 @@
       }
     },
     {
+      "id": "2-8-05",
       "q": "Douglas Company purchased 10,000 shares of its common stock at the beginning of the year for cash. This transaction will affect all of the following except the",
       "o": [
         "earnings per share.",
@@ -2453,6 +2605,7 @@
       }
     },
     {
+      "id": "2-8-06",
       "q": "Selected financial data for TVX Corporation for the year is shown below. Sales $22,000,000 Earnings before interest and taxes $1,700,000 Interest expense Tax rate $500,000 40% Beginning of Year End of Year Assets $9,600,000 $10,000,000 Liabilities $6,200,000 $6,800,000 Shares outstanding 1,400,000 1,500,000 Market price per share $2.40 $2.50 Using the above data, the firm’s return on equity is",
       "o": [
         "22%",
@@ -2469,6 +2622,7 @@
       }
     },
     {
+      "id": "2-8-07",
       "q": "Selected financial information for Company A and Company B is shown below. Company A Company B Net sales $3,000,000 $3,000,000 Cost of sales 1,500,000 1,000,000 Net income 180,000 150,000 Total assets 2,000,000 3,000,000 When comparing the two companies, which one of the following statements is correct?",
       "o": [
         "Company A has a higher gross profit margin and a lower net profit margin.",
@@ -2485,6 +2639,7 @@
       }
     },
     {
+      "id": "2-8-08",
       "q": "A company’s annual sales were $350,500. Operating expenses were 25%, and cost of goods sold was 40% during this period. What was the company’s gross profit during this period?",
       "o": [
         "$122,675.",
@@ -2501,6 +2656,7 @@
       }
     },
     {
+      "id": "2-8-09",
       "q": "Acme Company has sales of $100,000, cost of sales of $40,000, interest expense of $4,000, taxes of $18,000, and operating expenses of $15,000. What is Acme's operating profit margin?",
       "o": [
         "41%.",
@@ -2517,6 +2673,7 @@
       }
     },
     {
+      "id": "2-8-10",
       "q": "A company had $5 million in sales, $3 million in cost of goods sold, and $1 million in selling and administrative expenses during the last fiscal year. If the company’s income tax rate was 25%, what was the company’s gross profit margin percentage?",
       "o": [
         "30%.",
@@ -2533,6 +2690,7 @@
       }
     },
     {
+      "id": "2-8-11",
       "q": "The president of Reading Manufacturing, Inc. is establishing performance goals for each of the company's manufacturing plants. The data below represent prior year results for one of the plants. Revenue $ 400,000 Variable costs 100,000 Fixed costs 200,000 Average assets 1,000,000 Average liabilities 200,000 The plant's return on assets is",
       "o": [
         "30.0%",
@@ -2549,6 +2707,7 @@
       }
     },
     {
+      "id": "2-8-12",
       "q": "A company is currently reviewing the most recent fiscal year’s results of operations and noted an increase in the return on assets ratio when compared to the prior year. Which one of the following could have caused the increase?",
       "o": [
         "Sales decreased by the same dollar amount that expenses increased.",
@@ -2565,6 +2724,7 @@
       }
     },
     {
+      "id": "2-8-13",
       "q": "McKeon Company — actual figures for the fiscal year ended May 31, 20X0, and budget figures for the 20X1 fiscal year. McKeon's controller is reviewing the 20X1 budget and calculating key ratios. McKeon monitors yield/return ratios using the average financial position of the company. (Round all calculations to three decimal places if necessary.)\n\nBalance Sheet items: 20X1 (budget) / 20X0 (actual)\nCurrent assets: $210,000 / $180,000\nNoncurrent assets: $275,000 / $255,000\nCurrent liabilities: $78,000 / $85,000\nLong-term debt: $75,000 / $30,000\nCommon stock ($30 par value): $300,000 / $300,000\nRetained earnings: $32,000 / $20,000\n\n20X1 Operations (budget):\nSales* (all sales are credit sales): $350,000\nCost of goods sold: $160,000\nInterest expense: $3,000\nIncome taxes (40% rate): $48,000\nDividends declared and paid in 20X1: $60,000\nAdministrative expense: $67,000\n\nComposition of Current Assets: 20X1 (budget) / 20X0 (actual)\nCash: $20,000 / $10,000\nAccounts receivable: $100,000 / $70,000\nInventory: $70,000 / $80,000\nOther: $20,000 / $20,000\n\nThe 20X1 return on assets for McKeon Company is",
       "o": [
         "0.156",
@@ -2581,6 +2741,7 @@
       }
     },
     {
+      "id": "2-8-14",
       "q": "At the end of Year 1, a company had average total assets of ¥450 million, average total liabilities of ¥150 million, and net income of ¥135 million. The company’s management projects average total assets to increase by ¥50 million in Year 2 due to the planned purchase of a new manufacturing plant. The company will issue ¥30 million in new debt at the beginning of Year 2. No debt was paid down during Year 1. If the company’s management projects net income to increase by 25% in Year 2, by approximately how much does the company’s return on total assets increase between Year 1 and Year 2?",
       "o": [
         "17%",
@@ -2596,6 +2757,7 @@
       }
     },
     {
+      "id": "2-8-15",
       "q": "An analyst is reviewing the financial statements of a company whose operating income has declined from the prior year. The following ratios have been calculated. Prior Year Current Year Gross profit margin 15% 20% Operating profit margin 12% 10% Inventory turnover 10.4 times 9.8 times Based on the above, the analyst could infer that the decrease in operating income may be due to",
       "o": [
         "lower revenue per unit sold.",
@@ -2612,6 +2774,7 @@
       }
     },
     {
+      "id": "2-8-16",
       "q": "A company has net sales of $4,000,000 and net income of $800,000. It has operating income of $1,200,000. Average total assets are $18,000,000 and average total liabilities are $8,000,000. The company has a return on equity of",
       "o": [
         "40%.",
@@ -2628,6 +2791,7 @@
       }
     },
     {
+      "id": "2-8-17",
       "q": "Net sales $500,000; COGS $300,000; operating expenses $100,000. What is the gross profit margin?",
       "o": [
         "20%.",
@@ -2644,6 +2808,7 @@
       }
     },
     {
+      "id": "2-8-18",
       "q": "Return on equity (ROE) measures",
       "o": [
         "How efficiently all assets generate profit.",
@@ -2660,6 +2825,7 @@
       }
     },
     {
+      "id": "2-8-19",
       "q": "Net income $90,000; average total assets $900,000. What is return on assets (ROA)?",
       "o": [
         "5%.",
@@ -2676,6 +2842,7 @@
       }
     },
     {
+      "id": "2-8-20",
       "q": "Which action would INCREASE return on equity (ROE), all else constant?",
       "o": [
         "Issuing new stock, increasing total equity.",
