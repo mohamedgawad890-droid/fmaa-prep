@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-22-01 fix-group-exam-duration-cap -->
+<!-- FMAA-BUILD: 2026-08-22-02 balanced-exam-question-distribution -->
 <script>
-window.FMAA_BUILD='2026-08-22-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-22-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -3380,6 +3380,45 @@ function updateTimeDropdown(prefix){
   hidden.value=String(h).padStart(2,'0')+':'+mv;
   updateDtPreview(prefix);
 }
+// Builds an exam's question set with BALANCED representation:
+// 1) qCount is split evenly across the selected sections (or all 5 sections if none selected)
+// 2) each section's share is split evenly across its selected units (or all its units if none selected)
+// 3) within each unit, questions are picked at random up to that unit's quota
+// A shortfall in any unit (not enough questions to meet its quota) is carried forward and
+// topped up at the end from the remaining pool, so the exam still hits qCount when possible.
+function pickQuestionsBalanced(examUnits,qCount){
+  const secUnits={};
+  S.forEach(sec=>{sec.lessons.forEach(l=>{if(!examUnits||examUnits.includes(l.id)){if(!secUnits[sec.id])secUnits[sec.id]=[];secUnits[sec.id].push(l.id);}});});
+  const secIds=Object.keys(secUnits).map(Number);
+  if(!secIds.length)return[];
+  const shuffledSecIds=mockShuffle(secIds.slice());
+  const base=Math.floor(qCount/shuffledSecIds.length),rem=qCount%shuffledSecIds.length;
+  const secQuota={};shuffledSecIds.forEach((sid,i)=>{secQuota[sid]=base+(i<rem?1:0);});
+  const pickedIds=new Set();let picked=[];let leftover=0;
+  shuffledSecIds.forEach(sid=>{
+    let quota=secQuota[sid]+leftover;leftover=0;
+    const units=secUnits[sid];const shuffledUnits=mockShuffle(units.slice());
+    const ubase=Math.floor(quota/shuffledUnits.length),urem=quota%shuffledUnits.length;
+    const sec=S.find(s=>s.id===sid);
+    shuffledUnits.forEach((lid,i)=>{
+      const uquota=ubase+(i<urem?1:0);
+      const lesson=sec.lessons.find(l=>l.id===lid);
+      let qs=((lesson&&lesson.quizzes)||[]).filter(isValidQuestion);
+      qs=mockShuffle(qs.slice());
+      const take=qs.slice(0,uquota);
+      take.forEach(q=>{const qid=q.id||q.q.slice(0,32);if(!pickedIds.has(qid)){pickedIds.add(qid);picked.push({...q,sid:sec.id});}});
+      if(take.length<uquota)leftover+=(uquota-take.length);
+    });
+  });
+  if(picked.length<qCount){
+    let fullPool=[];
+    secIds.forEach(sid=>{const sec=S.find(s=>s.id===sid);secUnits[sid].forEach(lid=>{const lesson=sec.lessons.find(l=>l.id===lid);((lesson&&lesson.quizzes)||[]).forEach(q=>{if(isValidQuestion(q)){const qid=q.id||q.q.slice(0,32);if(!pickedIds.has(qid))fullPool.push({...q,sid:sec.id,_qid:qid});}});});});
+    fullPool=mockShuffle(fullPool);
+    const need=qCount-picked.length;
+    fullPool.slice(0,need).forEach(q=>{pickedIds.add(q._qid);picked.push(q);});
+  }
+  return mockShuffle(picked).slice(0,qCount);
+}
 async function saveExam(){
   const d=STATE.dashExamDraft;
   if(!d.groupCode.trim()||!d.title.trim()||!d.durationMins||!d.questionCount){showToast('Fill in all exam fields.','warning');return;}
@@ -3391,17 +3430,14 @@ async function saveExam(){
   const endTs=endDate&&endTime?`${endDate}T${endTime}`:'';
   if(!startTs||!endTs){showToast('Set start and end date/time.','warning');return;}
   if(new Date(endTs)<=new Date(startTs)){showToast('End time must be after start time.','warning');return;}
-  // Pre-build fixed question pool at creation time
+  // Pre-build fixed question pool at creation time — balanced evenly across
+  // selected sections, then evenly across each section's selected units.
   let _examQuestionIds=null;
   try{
     const examUnits=d.units&&d.units.length?d.units:null;
     const qCount=Number(d.questionCount);
     await Promise.all([1,2,3,4,5].map(i=>ensureQuizzes(i)));
-    let pool=[];
-    if(examUnits){S.forEach(sec=>{sec.lessons.forEach(l=>{if(examUnits.includes(l.id)&&l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id}));});});}
-    else{S.forEach(sec=>{sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>pool.push({...q,sid:sec.id}));});});}
-    pool=mockShuffle(pool);
-    const picked=pool.slice(0,qCount);
+    const picked=pickQuestionsBalanced(examUnits,qCount);
     _examQuestionIds=picked.map(q=>q.id||q.q.slice(0,32)).filter(Boolean);
   }catch(e){console.warn('Could not pre-build question pool:',e);}
   try{
@@ -3470,11 +3506,6 @@ async function startGroupExam(examId){
     const sid=exam.sectionId;
     if(examUnits){const secIds=[...new Set(examUnits.map(uid=>uid.split('-')[0]))];for(const si of secIds)await ensureQuizzes(Number(si));}
     else if(sid)await ensureQuizzes(sid);else for(const s of S)await ensureQuizzes(s.id);
-    // Build question pool from selected units or section
-    let pool=[];
-    if(examUnits){S.forEach(sec=>{sec.lessons.forEach(l=>{if(examUnits.includes(l.id)&&l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>{if(isValidQuestion(q))pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight});});});});}
-    else if(sid){const sec=S.find(s=>s.id===sid);if(sec)sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>{if(isValidQuestion(q))pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight});});});}
-    else{S.forEach(sec=>{sec.lessons.forEach(l=>{if(l.quizzes&&l.quizzes.length)l.quizzes.forEach(q=>{if(isValidQuestion(q))pool.push({...q,sid:sec.id,stitle:sec.title,sbar:sec.bar,sweight:sec.weight});});});});}
     // Use fixed question IDs if stored (guarantees same questions for all students)
     let mcqQ;
     if(exam.questionIds&&exam.questionIds.length){
@@ -3484,8 +3515,10 @@ async function startGroupExam(examId){
       // Sort by original order, then shuffle options per student only
       mcqQ=exam.questionIds.map(qid=>fixedPool.find(q=>(q.id||q.q.slice(0,32))===qid)).filter(Boolean).map(shuffleQuestionOptions);
     } else {
-      pool=mockShuffle(pool);
-      mcqQ=pool.slice(0,exam.questionCount).map(shuffleQuestionOptions);
+      // Fallback for older exams saved without pre-built questionIds — same balanced
+      // section/unit distribution as saveExam(), just computed on the fly here.
+      const picked=pickQuestionsBalanced(examUnits,exam.questionCount);
+      mcqQ=picked.map(q=>{const sec=S.find(s=>s.id===q.sid);return{...q,stitle:sec?sec.title:'',sbar:sec?sec.bar:''};}).map(shuffleQuestionOptions);
     }
     if(!mcqQ.length){showToast('No questions loaded for this exam yet.','warning');STATE.mockExam.status='idle';render();return;}
     // Hard deadline is whichever comes first: this student's full duration from
