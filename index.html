@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-22-02 balanced-exam-question-distribution -->
+<!-- FMAA-BUILD: 2026-08-24-01 signup-login-autofill-race-fix -->
 <script>
-window.FMAA_BUILD='2026-08-22-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-24-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -1065,16 +1065,33 @@ function toggleSection(secId){
 
 // ─── AUTH FUNCTIONS ────────────────────────────────────────────────────────────
 async function login(){
-  const email=document.getElementById('auth-email')?.value?.trim()||'';
-  const pw=document.getElementById('auth-pw')?.value||'';
+  let email=document.getElementById('auth-email')?.value?.trim()||'';
+  let pw=document.getElementById('auth-pw')?.value||'';
+  if(!email||!pw){
+    // BATCH 2026-08-24-01 (#1) — Chrome autofill commit race: on a dynamically
+    // rendered form, the browser can paint autofilled values a beat before it
+    // actually commits them to the DOM's .value property. If the user's first
+    // interaction is the submit click, we can read "" even though the fields
+    // look filled. Recheck once after a short delay before rejecting.
+    await new Promise(r=>setTimeout(r,80));
+    email=document.getElementById('auth-email')?.value?.trim()||'';
+    pw=document.getElementById('auth-pw')?.value||'';
+  }
   if(!email||!pw){showToast('Please enter your email and password.','warning');return;}
   STATE.authLoading=true;STATE.authError='';render();
   try{await auth.signInWithEmailAndPassword(email,pw);}
   catch(e){STATE.authLoading=false;STATE.authError=e.code==='auth/user-not-found'||e.code==='auth/wrong-password'?'Incorrect email or password. Please try again.':'Error: '+e.message;render();}
 }
 async function signup(){
-  const email=document.getElementById('auth-email')?.value?.trim()||'';
-  const pw=document.getElementById('auth-pw')?.value||'';
+  let email=document.getElementById('auth-email')?.value?.trim()||'';
+  let pw=document.getElementById('auth-pw')?.value||'';
+  if(!email||!pw){
+    // BATCH 2026-08-24-01 (#1) — see note in login(): recheck once for the
+    // Chrome autofill commit race before showing the empty-fields warning.
+    await new Promise(r=>setTimeout(r,80));
+    email=document.getElementById('auth-email')?.value?.trim()||'';
+    pw=document.getElementById('auth-pw')?.value||'';
+  }
   if(!email||!pw){showToast('Please enter your email and password.','warning');return;}
   if(pw.length<6){showToast('Password must be at least 6 characters.','warning');return;}
   STATE.authLoading=true;STATE.authError='';render();
