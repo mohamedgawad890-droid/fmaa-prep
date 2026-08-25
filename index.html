@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-24-01 signup-login-autofill-race-fix -->
+<!-- FMAA-BUILD: 2026-08-25-01 topic-grouping-unit-search-termdict-activity-tracking -->
 <script>
-window.FMAA_BUILD='2026-08-24-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-25-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -424,11 +424,68 @@ async function syncNoteFromCloud(lid){
 function loadStreak(){try{const d=localStorage.getItem('fmaa-streak-v1');return d?JSON.parse(d):{count:0,lastDate:''};}catch{return{count:0,lastDate:''};}}
 function saveStreak(s){try{localStorage.setItem('fmaa-streak-v1',JSON.stringify(s));}catch{}}
 function updateStreak(){const today=new Date().toDateString();const s=loadStreak();if(s.lastDate===today)return;const yesterday=new Date(Date.now()-86400000).toDateString();const newCount=s.lastDate===yesterday?s.count+1:1;saveStreak({count:newCount,lastDate:today});}
-let _studyTimerStart=null,_studyTimerScreen=null;
-function loadStudyTime(){try{const d=localStorage.getItem('fmaa-studytime-v1');return d?JSON.parse(d):{totalMinutes:0,todayDate:'',todayMinutes:0};}catch{return{totalMinutes:0,todayDate:'',todayMinutes:0};}}
+let _studyTimerStart=null,_studyTimerScreen=null,_lastCloudSyncAt=0;
+// dailyLog: {'YYYY-MM-DD': minutes} — trimmed to the last 14 days, used to
+// compute a rolling "this week" total for the instructor dashboard.
+function loadStudyTime(){try{const d=localStorage.getItem('fmaa-studytime-v1');return d?JSON.parse(d):{totalMinutes:0,todayDate:'',todayMinutes:0,dailyLog:{}};}catch{return{totalMinutes:0,todayDate:'',todayMinutes:0,dailyLog:{}};}}
 function saveStudyTime(d){try{localStorage.setItem('fmaa-studytime-v1',JSON.stringify(d));}catch{}}
 function startStudyTimer(screen){if(_studyTimerScreen===screen)return;endStudyTimer();_studyTimerStart=Date.now();_studyTimerScreen=screen;}
-function endStudyTimer(){if(!_studyTimerStart)return;const elapsed=Math.round((Date.now()-_studyTimerStart)/60000);_studyTimerStart=null;_studyTimerScreen=null;if(elapsed<1)return;const st=loadStudyTime();const today=new Date().toDateString();const todayMin=st.todayDate===today?st.todayMinutes:0;saveStudyTime({totalMinutes:(st.totalMinutes||0)+elapsed,todayDate:today,todayMinutes:todayMin+elapsed});}
+function _addStudyMinutes(elapsed){
+  const st=loadStudyTime();const today=new Date().toDateString();const todayMin=st.todayDate===today?(st.todayMinutes||0):0;
+  const dailyLog={...(st.dailyLog||{})};const dk=_todayKey();dailyLog[dk]=(dailyLog[dk]||0)+elapsed;
+  const keys=Object.keys(dailyLog).sort();while(keys.length>14){delete dailyLog[keys.shift()];}
+  const next={totalMinutes:(st.totalMinutes||0)+elapsed,todayDate:today,todayMinutes:todayMin+elapsed,dailyLog};
+  saveStudyTime(next);
+  return next;
+}
+function getWeekStudyMinutes(dailyLog){
+  dailyLog=dailyLog||(loadStudyTime().dailyLog||{});
+  let total=0;const d=new Date();
+  for(let i=0;i<7;i++){const dt=new Date(d);dt.setDate(d.getDate()-i);const k=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');total+=dailyLog[k]||0;}
+  return total;
+}
+// Pushes study-time + last-active fields onto the student's own Firestore doc
+// (merge — no rules change needed, fmaa-students already allows self-write).
+// Throttled to at most once per 90s so this can be called from a frequent
+// interval without hammering Firestore.
+async function syncStudyTimeToCloud(st){
+  if(!STATE.user||!db)return;
+  const now=Date.now();if(now-_lastCloudSyncAt<90000)return;_lastCloudSyncAt=now;
+  const weekMinutes=getWeekStudyMinutes(st.dailyLog);
+  try{
+    await db.collection('fmaa-students').doc(STATE.user.uid).set({
+      studyTotalMinutes:st.totalMinutes||0,
+      studyTodayMinutes:st.todayDate===new Date().toDateString()?(st.todayMinutes||0):0,
+      studyWeekMinutes:weekMinutes,
+      studyStreak:getStudyStreak(),
+      lastActiveAt:new Date().toISOString()
+    },{merge:true});
+  }catch(e){console.log('Study-time sync error',e);}
+  // Also on the public leaderboard doc — same visibility level as the
+  // existing lessons/accuracy fields there, powers "Most Active This Week".
+  try{await db.collection('fmaa-leaderboard').doc(STATE.user.uid).set({weekMinutes},{merge:true});}catch(e){}
+}
+function endStudyTimer(){
+  if(!_studyTimerStart)return;
+  const elapsed=Math.round((Date.now()-_studyTimerStart)/60000);
+  _studyTimerStart=null;_studyTimerScreen=null;
+  if(elapsed<1)return;
+  const next=_addStudyMinutes(elapsed);
+  syncStudyTimeToCloud(next);
+}
+// Flushes partial time for a still-open study session without stopping the
+// timer — called on an interval so long single-screen sessions (no navigation
+// to trigger endStudyTimer) still reach the dashboard within a few minutes.
+function flushStudyTime(){
+  if(!_studyTimerStart)return;
+  const elapsed=Math.round((Date.now()-_studyTimerStart)/60000);
+  if(elapsed<1)return;
+  _studyTimerStart=Date.now();
+  const next=_addStudyMinutes(elapsed);
+  syncStudyTimeToCloud(next);
+}
+setInterval(flushStudyTime,180000);
+try{document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')flushStudyTime();});}catch{}
 function fmtStudyTime(mins){if(!mins||mins<1)return'0 min';if(mins<60)return`${mins} min`;const h=Math.floor(mins/60),m=mins%60;return m>0?`${h}h ${m}m`:`${h}h`;}
 
 // ─── PWA INSTALL ──────────────────────────────────────────────────────────────
@@ -475,7 +532,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},examHistory:[],examHistoryLoaded:false,examHistoryLoading:false,examHistoryReview:null,dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashResultsGroupFilter:'',dashResultsCollapsed:{},dashResultsTimeOpen:{},dashExamReview:null,dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false,notesList:[],notesLoaded:false,flashcards:[],flashcardsIdx:0,flashcardsFlipped:false,flashcardsFilter:'all',flashcardsMode:'study',dashTeachingLog:[],dashTeachingLogLoaded:false,dashTeachingDraft:{groupCode:'',lectureId:'',date:'',unitIds:[],notes:''},qotdState:{dateKey:'',question:null,selected:null,answered:false,taughtUnitCount:0},dailyGoalMinutes:30,fontSize:'md',
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},examHistory:[],examHistoryLoaded:false,examHistoryLoading:false,examHistoryReview:null,dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashActivityGroupFilter:'',dashActivitySort:'lastActive',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashResultsGroupFilter:'',dashResultsCollapsed:{},dashResultsTimeOpen:{},dashExamReview:null,dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false,notesList:[],notesLoaded:false,flashcards:[],flashcardsIdx:0,flashcardsFlipped:false,flashcardsFilter:'all',flashcardsMode:'study',dashTeachingLog:[],dashTeachingLogLoaded:false,dashTeachingDraft:{groupCode:'',lectureId:'',date:'',unitIds:[],notes:''},qotdState:{dateKey:'',question:null,selected:null,answered:false,taughtUnitCount:0},dailyGoalMinutes:30,fontSize:'md',
 // New batch: announcements, pending group approval, offline status, lesson search, quiz flagging, quiz history, instructor notes, exam analytics
 announcements:[],announcementsLoaded:false,dashPendingRequests:[],dashRequestsLoaded:false,dashRequestReasons:{},lessonSearchQ:'',isOffline:false,dashAnnounceDraft:{groupCode:'',title:'',body:''},dashAnnouncements:[],dashAnnouncementsLoaded:false,dashInstructorNotes:{},dashExamAnalytics:null,dashCommunityUnread:0,dashCommunityLastSeen:null};
 
@@ -543,7 +600,19 @@ const TERM_DICT={
   'Conflict of Interest':'تعارض المصالح','Whistleblowing':'الإبلاغ عن المخالفات','Fiduciary Duty':'الواجب الائتماني','Due Diligence':'العناية الواجبة','Professional Skepticism':'الشك المهني',
   'Corporate Governance':'حوكمة الشركات','Audit Committee':'لجنة المراجعة','Independent Auditor':'المدقق المستقل','Internal Auditor':'المدقق الداخلي','Sarbanes-Oxley Act':'قانون ساربينز-أوكسلي',
   'Fraud':'الاحتيال','Embezzlement':'الاختلاس','Money Laundering':'غسيل الأموال','Bribery':'الرشوة','Whistleblower Protection':'حماية المبلغين عن المخالفات',
-  'Ethical Dilemma':'معضلة أخلاقية','Stakeholder':'أصحاب المصلحة','Corporate Social Responsibility':'المسؤولية الاجتماعية للشركات','Sustainability':'الاستدامة','Triple Bottom Line':'الخط السفلي الثلاثي'
+  'Ethical Dilemma':'معضلة أخلاقية','Stakeholder':'أصحاب المصلحة','Corporate Social Responsibility':'المسؤولية الاجتماعية للشركات','Sustainability':'الاستدامة','Triple Bottom Line':'الخط السفلي الثلاثي',
+  // ── BATCH 2026-08-25-01: def-block audit additions ──
+  'Fraud Triangle':'مثلث الاحتيال','Imputed Cost':'التكلفة الافتراضية','Investment Center':'مركز الاستثمار','Make-or-Buy Decision':'قرار الصنع أو الشراء','Marginal Analysis':'التحليل الحدي','Over-costed Product':'منتج محمّل بتكلفة زائدة','Under-costed Product':'منتج محمّل بتكلفة ناقصة','Production-Volume Variance':'انحراف حجم الإنتاج','Relevant Cost':'التكلفة الملائمة','Sales Volume Variance':'انحراف حجم المبيعات','Sell-or-Process-Further Decision':'قرار البيع أو الإكمال','Semi-Fixed Cost':'التكلفة شبه الثابتة','Standard Cost':'التكلفة المعيارية','Target Profit Volume':'حجم الربح المستهدف','Value Chain':'سلسلة القيمة',
+  // ── BATCH 2026-08-25-01: broader table/heading audit additions ──
+  'Sole Proprietorship':'المنشأة الفردية','Partnership':'شركة تضامن','Corporation':'شركة مساهمة','Public Company':'شركة عامة مطروحة للاكتتاب','Private Company':'شركة خاصة',
+  'Physical Custody':'العهدة المادية','Recordkeeping':'مسك السجلات','Reconciliation':'المطابقة','Authorization':'التفويض','Logical Security':'الأمن المنطقي',
+  'Carrying Costs':'تكاليف الاحتفاظ بالمخزون','Ordering Costs':'تكاليف الطلب','Stockout Costs':'تكاليف نفاد المخزون','Shrinkage':'عجز المخزون','Economic Order Quantity':'الكمية الاقتصادية للطلب','Just-in-Time':'الإنتاج في الوقت المحدد','Materials Requirements Planning':'تخطيط احتياجات المواد',
+  'Sum-of-Years\'-Digits':'طريقة مجموع أرقام السنين',
+  'Days\' Sales in Inventory':'أيام بيع المخزون','Days\' Sales in Receivables':'أيام تحصيل الذمم المدينة','Days\' Purchases in Payables':'أيام سداد الذمم الدائنة','Interest Coverage Ratio':'نسبة تغطية الفوائد','Long-Term Debt to Equity Ratio':'نسبة الدين طويل الأجل إلى حقوق الملكية','Net Working Capital Ratio':'نسبة صافي رأس المال العامل','Debt to Total Assets Ratio':'نسبة الدين إلى إجمالي الأصول','Quick (Acid Test) Ratio':'نسبة السيولة السريعة (الاختبار الحمضي)',
+  'Declaration Date':'تاريخ الإعلان','Record Date':'تاريخ الاستحقاق','Payment Date':'تاريخ الدفع',
+  'Cost Center':'مركز التكلفة','Profit Center':'مركز الربح','Revenue Center':'مركز الإيراد','Consultative Budgeting':'الموازنة الاستشارية',
+  'Plantwide Allocation':'التوزيع على مستوى المصنع','Departmental Allocation':'التوزيع على مستوى الأقسام',
+  'Corruption':'الفساد','Espionage':'التجسس','Ponzi Scheme':'مخطط بونزي'
 };
 
 // ─── DICTIONARY DATA ──────────────────────────────────────────────────────────
@@ -552,7 +621,7 @@ function escRx(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function highlightTerms(text){
   let out=esc(text);
   const terms=Object.keys(TERM_DICT).sort((a,b)=>b.length-a.length);
-  for(const term of terms){const ar=TERM_DICT[term];const re=new RegExp('\\b'+escRx(term)+'(?![^<]*>)','g');out=out.replace(re,`<span class="ar-term" onclick="toggleTip(this)">${term}<span class="ar-tip">${ar}</span></span>`);}
+  for(const term of terms){const ar=TERM_DICT[term];const re=new RegExp('\\b'+escRx(term)+'\\b(?![^<]*>)','g');out=out.replace(re,`<span class="ar-term" onclick="toggleTip(this)">${term}<span class="ar-tip">${ar}</span></span>`);}
   return out;
 }
 function toggleTip(el){
@@ -1005,6 +1074,103 @@ function renderBlock(block,sec){
   }
 }
 
+// ─── TOPIC GROUPING (collapsible sections per unit) ──────────────────────────
+// BATCH 2026-08-25-01: splits a unit's blocks into groups, one per 'h' heading,
+// so each topic can be expanded/collapsed independently while reading.
+function groupLessonBlocks(blocks){
+  const groups=[];
+  (blocks||[]).forEach(b=>{
+    if(b.t==='h'){groups.push({heading:b,blocks:[]});}
+    else{if(!groups.length)groups.push({heading:null,blocks:[]});groups[groups.length-1].blocks.push(b);}
+  });
+  return groups;
+}
+function toggleLessonTopic(lessonId,idx){
+  STATE.topicOpen=STATE.topicOpen||{};
+  const key=lessonId+'::'+idx;
+  STATE.topicOpen[key]=!STATE.topicOpen[key];
+  render();
+}
+function setAllLessonTopics(lessonId,groupCount,open){
+  STATE.topicOpen=STATE.topicOpen||{};
+  for(let i=0;i<groupCount;i++)STATE.topicOpen[lessonId+'::'+i]=open;
+  render();
+}
+function lessonVideoPlaceholder(lesson){
+  const hasVideo=lesson.blocks&&lesson.blocks.some(b=>b.t==='video');
+  return hasVideo?'':`<div style="margin:14px 0 4px;background:#f5f5f0;border:.5px dashed #c0c0b8;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px"><div style="width:36px;height:36px;background:#D6EAF8;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px">🎬</div><div><div style="font-size:13px;font-weight:500;color:#555">Video coming soon</div><div style="font-size:11px;color:#999;margin-top:2px">Gawad will record this lesson shortly</div></div></div>`;
+}
+
+// ─── IN-UNIT SEARCH ───────────────────────────────────────────────────────────
+function _blockSearchText(b){
+  if(!b)return'';
+  const parts=[];
+  if(b.v!=null){if(Array.isArray(b.v))parts.push(b.v.join(' '));else parts.push(String(b.v));}
+  if(b.l)parts.push(b.l);
+  if(b.term)parts.push(b.term);
+  if(b.after)parts.push(b.after);
+  if(b.h)parts.push(b.h.join(' '));
+  if(b.r)parts.push(b.r.map(row=>row.join(' ')).join(' '));
+  return parts.join(' ');
+}
+function _topicMatchesQuery(g,ql){
+  if((g.heading?g.heading.v:'').toLowerCase().includes(ql))return true;
+  return g.blocks.some(b=>_blockSearchText(b).toLowerCase().includes(ql));
+}
+// Renders the topic-grouped body for a unit. When a search query is active,
+// matching topics auto-expand (and non-matching ones auto-collapse) so the
+// text-node highlighter below can find and mark the hits.
+function lessonTopicsHTML(lesson,sec,videoPlaceholder){
+  const q=(STATE.lessonSearchQ||'').trim();
+  const ql=q.toLowerCase();
+  const groups=groupLessonBlocks(lesson.blocks||[]);
+  let anyMatch=false;
+  const topicsHtml=groups.map((g,gi)=>{
+    const key=lesson.id+'::'+gi;
+    const matches=q?_topicMatchesQuery(g,ql):false;
+    if(matches)anyMatch=true;
+    const open=q?matches:!!(STATE.topicOpen&&STATE.topicOpen[key]);
+    const title=g.heading?g.heading.v:'Overview';
+    return`<div style="border:.5px solid ${sec.text}25;border-radius:10px;margin-bottom:8px;overflow:hidden"><button onclick="toggleLessonTopic('${lesson.id}',${gi})" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:none;background:${open?sec.bg:'#fff'};cursor:pointer;font-family:inherit;text-align:left"><span style="font-size:14px;font-weight:600;color:${sec.strong}">${esc(title)}</span><span style="font-size:12px;color:${sec.text};flex-shrink:0">${open?'▾ Hide':'▸ Show'}</span></button>${open?`<div style="padding:4px 14px 14px">${g.blocks.map(b=>renderBlock(b,sec)).join('')}</div>`:''}</div>`;
+  }).join('');
+  const expandControls=(!q&&groups.length>1)?`<div style="display:flex;gap:8px;margin-bottom:10px"><button onclick="setAllLessonTopics('${lesson.id}',${groups.length},true)" style="flex:1;padding:8px;border-radius:8px;border:.5px solid ${sec.text}40;background:#fff;color:${sec.strong};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Expand All</button><button onclick="setAllLessonTopics('${lesson.id}',${groups.length},false)" style="flex:1;padding:8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Collapse All</button></div>`:'';
+  const noResults=(q&&!anyMatch)?`<div style="text-align:center;padding:24px 10px;color:#aaa;font-size:13px">No matches for "${esc(q)}" in this unit.</div>`:'';
+  return`${expandControls}${noResults}${topicsHtml}${videoPlaceholder}`;
+}
+// Wraps matched text in <mark> inside the rendered unit body. Reused by the
+// full render() path (via the effects block) and by the live-typing path
+// (updateLessonSearch), which patches only #lesson-body-* to avoid stealing
+// focus from the search input on every keystroke.
+function applyLessonSearchHighlight(lessonId){
+  const body=document.getElementById('lesson-body-'+lessonId);if(!body)return;
+  const q=(STATE.lessonSearchQ||'').trim();
+  const countEl=document.getElementById('lesson-search-count');
+  if(!q){if(countEl)countEl.textContent='';return;}
+  const rx=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+  const walk=n=>{if(n.nodeType===3){if(rx.test(n.textContent)){const span=document.createElement('span');span.innerHTML=n.textContent.replace(rx,'<mark style="background:#F6D860;color:#000;padding:0 2px;border-radius:3px">$1</mark>');n.parentNode.replaceChild(span,n);}}else if(n.nodeType===1&&n.tagName!=='SCRIPT'&&n.tagName!=='STYLE'&&n.tagName!=='MARK'){Array.from(n.childNodes).forEach(walk);}};
+  walk(body);
+  const marks=body.querySelectorAll('mark');
+  if(countEl)countEl.textContent=marks.length?`${marks.length} match${marks.length===1?'':'es'}`:'No matches';
+  const first=body.querySelector('mark');if(first)first.scrollIntoView({behavior:'smooth',block:'center'});
+}
+// Live-typing handler: patches only the unit body (not the whole screen), so
+// the search <input> keeps focus and cursor position on every keystroke.
+function updateLessonSearch(lessonId){
+  const sec=S.find(s=>s.lessons.some(l=>l.id===lessonId));if(!sec)return;
+  const lesson=sec.lessons.find(l=>l.id===lessonId);if(!lesson)return;
+  const input=document.getElementById('lesson-search-input');
+  STATE.lessonSearchQ=input?input.value:'';
+  const body=document.getElementById('lesson-body-'+lessonId);
+  if(body)body.innerHTML=lessonTopicsHTML(lesson,sec,lessonVideoPlaceholder(lesson));
+  applyLessonSearchHighlight(lessonId);
+}
+function toggleLessonSearch(lessonId){
+  STATE.lessonSearchOpen=!STATE.lessonSearchOpen;
+  if(!STATE.lessonSearchOpen)STATE.lessonSearchQ='';
+  render();
+  if(STATE.lessonSearchOpen)setTimeout(()=>{const el=document.getElementById('lesson-search-input');if(el)el.focus();},50);
+}
+
 // ─── LAZY LOADERS ────────────────────────────────────────────────────────────
 const LESSON_CACHE={};
 async function ensureLessons(sectionId){
@@ -1105,11 +1271,29 @@ async function logout(){
 }
 
 // ─── MARK DONE ────────────────────────────────────────────────────────────────
+// BATCH 2026-08-25-01: one-time milestone toasts (lesson-count and % thresholds)
+function _loadMilestonesFired(){try{return JSON.parse(localStorage.getItem('fmaa-milestones-v1')||'[]');}catch{return[];}}
+function _saveMilestonesFired(arr){try{localStorage.setItem('fmaa-milestones-v1',JSON.stringify(arr));}catch{}}
+function checkMilestones(doneCount){
+  const fired=_loadMilestonesFired();
+  const pct=Math.round(doneCount/TOTAL_LESSONS*100);
+  const checks=[
+    {id:'lessons-10',cond:doneCount>=10,msg:'🎉 10 lessons done — great momentum!'},
+    {id:'lessons-20',cond:doneCount>=20,msg:'🎉 20 lessons done — over halfway on units!'},
+    {id:'lessons-30',cond:doneCount>=30,msg:'🎉 30 lessons done — almost there!'},
+    {id:'pct-50',cond:pct>=50,msg:'🚀 50% of the course complete!'},
+    {id:'pct-100',cond:pct>=100,msg:'🏆 All lessons complete! Time to focus on quizzes and the mock exam.'}
+  ];
+  let delay=1600;
+  checks.forEach(c=>{if(c.cond&&!fired.includes(c.id)){fired.push(c.id);setTimeout(()=>showToast(c.msg,'success',4200),delay);delay+=600;}});
+  if(fired.length)_saveMilestonesFired(fired);
+}
 function markDone(lid){
   const p=STATE.progress;const done=lessonDone(lid);
   if(done){studyGo(STATE.sectId,null);}
   else{
     const newDone=[...p.done,lid];saveProg({...p,done:newDone});updateStreak();syncLeaderboard();
+    checkMilestones(newDone.length);
     // Undo toast (5s window)
     const toast=document.createElement('div');
     toast.id='undo-mark-toast';
@@ -1333,7 +1517,7 @@ async function toggleBestAnswer(replyId,currentlyBest){
 // ─── LEADERBOARD ──────────────────────────────────────────────────────────────
 async function syncLeaderboard(){
   if(!STATE.user||!db)return;const{progress}=STATE;const st=loadStudent();if(!st||!st.name)return;
-  const score={name:st.name,country:st.country||'',studentId:st.studentId||'',lessons:progress.done.length,accuracy:getAcc(),mcqTotal:progress.mcqTotal||0,mcqRight:progress.mcqRight||0,updatedAt:new Date().toISOString()};
+  const score={name:st.name,country:st.country||'',studentId:st.studentId||'',lessons:progress.done.length,accuracy:getAcc(),mcqTotal:progress.mcqTotal||0,mcqRight:progress.mcqRight||0,streak:getStudyStreak(),updatedAt:new Date().toISOString()};
   try{await db.collection('fmaa-leaderboard').doc(STATE.user.uid).set(score);}catch(e){console.log('LB sync error',e);}
 }
 
@@ -1395,6 +1579,8 @@ function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAc
       <div class="info-section">
         <div class="welcome-box">Welcome to FMAA Prep! 🎓 Great to meet you! I'm your FMAA instructor. I've helped students from complete beginners to finance professionals master accounting fundamentals — and I know exactly what it takes to pass this exam. Let's get you certified together!</div>
         ${(()=>{const diff=(()=>{if(!st||!st.examdate)return null;const d=new Date(st.examdate+'-01');const today=new Date();const dd=Math.ceil((d-today)/(1000*60*60*24));return dd>0?dd:null;})();return`<div style="display:flex;gap:10px;margin-bottom:12px"><div style="flex:1;background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span style="font-size:28px">📅</span><div><div style="font-size:12px;color:rgba(255,255,255,.75)">Exam countdown</div><div style="font-size:22px;font-weight:600;color:#fff">${diff?diff+' days':'Set exam date'}</div>${!diff?`<div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:2px">→ Add in Profile tab</div>`:''}</div></div><div style="flex:1;background:linear-gradient(135deg,#1E6B3B,#27AE60);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span style="font-size:28px">🔥</span><div><div style="font-size:12px;color:rgba(255,255,255,.75)">Study streak</div><div style="font-size:22px;font-weight:600;color:#fff">${streak} day${streak===1?'':'s'}</div></div></div></div>`;})()}
+        <!-- BATCH 2026-08-25-01: streak-at-risk nudge — only when the student has an active streak but hasn't studied yet today -->
+        ${(()=>{if(streak>0&&todayStudyMinutes()<1){return`<div style="background:#FFF8E7;border:1px solid #F6D860;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px"><span style="font-size:20px">🔥</span><div style="font-size:12px;color:#633806;line-height:1.5">Study a few minutes today to keep your <strong>${streak}-day streak</strong> alive!</div></div>`;}return'';})()}
         <div style="background:#f5f5f0;border-radius:10px;padding:14px 16px;font-size:13px;color:#555;line-height:1.6"><strong style="color:#1a1a1a">About me:</strong> I'm currently CFO, with 20 years of experience in Accounting, Inventory Management, Cost Accounting, Financial Planning &amp; Controlling, Forecasting &amp; Budgeting, and Data Analysis.</div>
       </div>
       <!-- QUESTION OF THE DAY (only when student has group + taught units) -->
@@ -1761,12 +1947,12 @@ function renderStudy(){
       }
     }
     const lessonIdx=sec.lessons.findIndex(l=>l.id===STATE.lessonId);const done=lessonDone(lesson.id);
-    const hasVideo=lesson.blocks&&lesson.blocks.some(b=>b.t==='video');
-    const videoPlaceholder=hasVideo?'':`<div style="margin:14px 0 4px;background:#f5f5f0;border:.5px dashed #c0c0b8;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px"><div style="width:36px;height:36px;background:#D6EAF8;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px">🎬</div><div><div style="font-size:13px;font-weight:500;color:#555">Video coming soon</div><div style="font-size:11px;color:#999;margin-top:2px">Gawad will record this lesson shortly</div></div></div>`;
+    const videoPlaceholder=lessonVideoPlaceholder(lesson);
     const _lessonHistory=loadQuizHistory()[lesson.id]||[];
     const _lessonSearchQ=(STATE.lessonSearchQ||'').trim();
-    return`<div class="bh"><button class="bh-back" onclick="studyGo(STATE.sectId,null)">‹</button><div style="min-width:0;flex:1"><div style="font-size:11px;font-weight:500;color:${sec.text}">${sec.emoji} ${esc(sec.title)}</div><div class="ellipsis" style="font-size:15px;font-weight:500;margin-top:1px">${lessonIdx+1}. ${esc(lesson.title)}</div></div><div style="display:flex;gap:4px;align-items:center;flex-shrink:0"><button onclick="const s={sm:'md',md:'lg',lg:'sm'}[STATE.fontSize||'md'];saveFontSize(s);showToast('Font: '+s.toUpperCase(),'info',1200)" title="Text size" style="padding:5px 8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">${STATE.fontSize==='sm'?'A':STATE.fontSize==='lg'?'A':'A'}${STATE.fontSize==='sm'?'−':STATE.fontSize==='lg'?'+':'·'}</button><button onclick="const q=prompt('Search this lesson:',STATE.lessonSearchQ||'');if(q!==null){STATE.lessonSearchQ=q.trim();render();}" title="Find in lesson" style="padding:5px 8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;cursor:pointer;font-family:inherit">🔍</button></div></div>
-    <div class="scroll-area pad">${_lessonSearchQ?`<div style="background:#FFF8E7;border:1px solid #F6D860;border-radius:8px;padding:8px 12px;margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px"><span>🔍 Highlighting: <b>${esc(_lessonSearchQ)}</b></span><button onclick="STATE.lessonSearchQ='';render()" style="padding:3px 10px;border-radius:6px;border:none;background:#856404;color:#fff;font-size:11px;cursor:pointer;font-family:inherit">Clear</button></div>`:''}${_lessonHistory.length>0?`<div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:8px;padding:8px 12px;margin-top:10px;font-size:12px;color:#154360"><b>Quiz history:</b> ${_lessonHistory.length} attempt${_lessonHistory.length===1?'':'s'} · latest ${_lessonHistory[_lessonHistory.length-1].pct}% · best ${Math.max(..._lessonHistory.map(a=>a.pct))}%</div>`:''}<div class="card" style="margin-top:14px;padding:4px 16px 16px" id="lesson-body-${lesson.id}">${(lesson.blocks||[]).map(b=>renderBlock(b,sec)).join('')}${videoPlaceholder}</div>
+    const _searchBar=STATE.lessonSearchOpen?`<div style="padding:8px 16px;border-bottom:.5px solid #e0e0d8;background:#fafaf8;display:flex;align-items:center;gap:8px"><input id="lesson-search-input" type="text" value="${esc(STATE.lessonSearchQ||'')}" oninput="updateLessonSearch('${lesson.id}')" placeholder="Search this unit…" style="flex:1;padding:8px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;color:#1a1a1a"><span id="lesson-search-count" style="font-size:11px;color:#888;flex-shrink:0;white-space:nowrap"></span><button onclick="toggleLessonSearch('${lesson.id}')" style="padding:6px 10px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;cursor:pointer;font-family:inherit">✕</button></div>`:'';
+    return`<div class="bh"><button class="bh-back" onclick="studyGo(STATE.sectId,null)">‹</button><div style="min-width:0;flex:1"><div style="font-size:11px;font-weight:500;color:${sec.text}">${sec.emoji} ${esc(sec.title)}</div><div class="ellipsis" style="font-size:15px;font-weight:500;margin-top:1px">${lessonIdx+1}. ${esc(lesson.title)}</div></div><div style="display:flex;gap:4px;align-items:center;flex-shrink:0"><button onclick="const s={sm:'md',md:'lg',lg:'sm'}[STATE.fontSize||'md'];saveFontSize(s);showToast('Font: '+s.toUpperCase(),'info',1200)" title="Text size" style="padding:5px 8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">${STATE.fontSize==='sm'?'A':STATE.fontSize==='lg'?'A':'A'}${STATE.fontSize==='sm'?'−':STATE.fontSize==='lg'?'+':'·'}</button><button onclick="toggleLessonSearch('${lesson.id}')" title="Search this unit" style="padding:5px 8px;border-radius:8px;border:.5px solid ${STATE.lessonSearchOpen?'#1A5276':'#d0d0d0'};background:${STATE.lessonSearchOpen?'#EBF5FB':'#fff'};color:#555;font-size:12px;cursor:pointer;font-family:inherit">🔍</button></div></div>${_searchBar}
+    <div class="scroll-area pad">${_lessonHistory.length>0?`<div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:8px;padding:8px 12px;margin-top:10px;font-size:12px;color:#154360"><b>Quiz history:</b> ${_lessonHistory.length} attempt${_lessonHistory.length===1?'':'s'} · latest ${_lessonHistory[_lessonHistory.length-1].pct}% · best ${Math.max(..._lessonHistory.map(a=>a.pct))}%</div>`:''}<div class="card" style="margin-top:14px;padding:4px 16px 16px" id="lesson-body-${lesson.id}">${lessonTopicsHTML(lesson,sec,videoPlaceholder)}</div>
     <button class="btn" onclick="markDone('${lesson.id}')" style="margin-top:14px;background:${done?'#D5F5E3':sec.bar};color:${done?'#186A3B':'#fff'}">${done?'✓ Completed — Back':'Mark as Complete ✓'}</button>
     ${(()=>{const pv=getPrevLesson(sec.id,lesson.id);const nx=getNextLesson(sec.id,lesson.id);if(!pv&&!nx)return '';return `<div class="lesson-nav-footer">${pv?`<button class="lesson-nav-btn" onclick="studyGo(${pv.sec.id},'${pv.lesson.id}')"><div class="lesson-nav-btn-lbl">‹ Previous</div><div class="lesson-nav-btn-title">${esc(pv.lesson.title)}</div></button>`:'<div style="flex:1"></div>'}${nx?`<button class="lesson-nav-btn next" onclick="studyGo(${nx.sec.id},'${nx.lesson.id}')"><div class="lesson-nav-btn-lbl">Next ›</div><div class="lesson-nav-btn-title">${esc(nx.lesson.title)}</div></button>`:'<div style="flex:1"></div>'}</div>`;})()}
     <div style="margin-top:12px"><div style="font-size:12px;font-weight:500;color:#888;margin-bottom:6px">📝 My Notes</div><textarea id="lesson-notes-${lesson.id}" placeholder="Write your notes here... (saved automatically)" oninput="saveLessonNote('${lesson.id}',this.value)" style="width:100%;padding:10px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fafaf8;color:#1a1a1a;resize:vertical;line-height:1.5;box-sizing:border-box;min-height:120px" rows="7">${esc(loadLessonNote(lesson.id))}</textarea></div>
@@ -1805,7 +1991,8 @@ function renderProgress(){
   const{progress}=STATE;const pct=getPct();const acc=getAcc();const studyTime=loadStudyTime();
   return`${renderSubNav(SUB_PROGRESS,'progress')}<div class="sh"><h2>My Progress</h2><p>${pct}% complete · ${acc}% accuracy</p></div>
   <div class="scroll-area pad" style="padding-top:14px">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">${[['📚',progress.done.length+'/'+TOTAL_LESSONS,'Lessons Done','#D6EAF8','#154360'],['🎯',acc+'%','MCQ Accuracy','#D5F5E3','#186A3B'],['⏱️',fmtStudyTime(studyTime.totalMinutes),'Total Study','#f5f5f0','#1a1a1a'],['🔥',getStudyStreak()+'🔥','Day Streak','#FAEEDA','#854F0B']].map(([icon,val,label,bg,color])=>`<div style="background:${bg};border-radius:12px;padding:14px;text-align:center"><div style="font-size:24px;margin-bottom:4px">${icon}</div><div style="font-size:20px;font-weight:700;color:${color}">${val}</div><div style="font-size:11px;color:#888;margin-top:2px">${label}</div></div>`).join('')}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px">${[['📚',progress.done.length+'/'+TOTAL_LESSONS,'Lessons Done','#D6EAF8','#154360'],['🎯',acc+'%','MCQ Accuracy','#D5F5E3','#186A3B'],['⏱️',fmtStudyTime(studyTime.totalMinutes),'Total Study','#f5f5f0','#1a1a1a'],['🔥',getStudyStreak()+'🔥','Day Streak','#FAEEDA','#854F0B']].map(([icon,val,label,bg,color])=>`<div style="background:${bg};border-radius:12px;padding:14px;text-align:center"><div style="font-size:24px;margin-bottom:4px">${icon}</div><div style="font-size:20px;font-weight:700;color:${color}">${val}</div><div style="font-size:11px;color:#888;margin-top:2px">${label}</div></div>`).join('')}</div>
+    <div style="font-size:10px;color:#aaa;margin-bottom:14px;text-align:center">Study time is approximate — tracked while the app is open and in the foreground.</div>
     
     ${(()=>{const todayMins=todayStudyMinutes();const goal=STATE.dailyGoalMinutes||30;const pctGoal=Math.min(100,Math.round(todayMins/goal*100));const circ=2*Math.PI*26;const off=circ-(pctGoal/100)*circ;const col=pctGoal>=100?'#1E8449':pctGoal>=60?'#EF9F27':'#1A5276';return `<div class="goal-ring-wrap"><div class="goal-ring"><svg width="64" height="64"><circle cx="32" cy="32" r="26" stroke="#f0f0eb" stroke-width="7" fill="none"/><circle cx="32" cy="32" r="26" stroke="${col}" stroke-width="7" fill="none" stroke-dasharray="${circ}" stroke-dashoffset="${off}" stroke-linecap="round" style="transition:stroke-dashoffset .5s"/></svg><div class="goal-ring-val">${pctGoal}%</div></div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:600;color:#1a1a1a">Today's study goal</div><div style="font-size:12px;color:#888;margin-top:2px">${todayMins} / ${goal} min · ${pctGoal>=100?'Goal reached! 🎉':(goal-todayMins)+' min to go'}</div></div></div>`;})()}
     ${(()=>{const rem=estimatedTimeRemaining();if(!rem)return `<div style="background:#D5F5E3;border:1px solid #1E844960;border-radius:12px;padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:12px"><span style="font-size:22px">🎉</span><div><div style="font-size:13px;font-weight:600;color:#186A3B">All lessons complete!</div><div style="font-size:11px;color:#186A3B;margin-top:2px">Focus on quizzes and mock exams now.</div></div></div>`;const daysAt30=Math.ceil(rem/30);const daysAt60=Math.ceil(rem/60);return `<div style="background:#EBF5FB;border:1px solid #1A527640;border-radius:12px;padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:12px"><span style="font-size:22px">⏳</span><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:600;color:#154360">Estimated time remaining</div><div style="font-size:11px;color:#1A5276;margin-top:2px">${fmtRemaining(rem)} of content left · about ${daysAt30} days @30min/day, or ${daysAt60} days @1h/day</div></div></div>`;})()}
@@ -2182,6 +2369,8 @@ function renderLeaderboard(){
   return`${renderSubNav(SUB_PROGRESS,'leaderboard')}<div class="sh"><h2>Leaderboard</h2><p>Top ${lb.length} FMAA students</p></div>
   <div class="scroll-area pad" style="padding-top:14px">
     ${myRank>0?`<div style="background:#FAEEDA;border:1px solid #EF9F2730;border-radius:10px;padding:10px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="font-size:20px">🎯</span><div><div style="font-size:13px;font-weight:500;color:#854F0B">Your Rank: #${myRank}</div><div style="font-size:11px;color:#BA7517">${lb.find(e=>e.uid===myUid)?.lessons||0} lessons · ${getAcc()}% accuracy</div></div></div>`:''}
+    <!-- BATCH 2026-08-25-01: Most Active This Week callout -->
+    ${(()=>{const withTime=lb.filter(e=>(e.weekMinutes||0)>0).sort((a,b)=>(b.weekMinutes||0)-(a.weekMinutes||0));if(!withTime.length)return'';const top=withTime[0];const isMe=top.uid===myUid;return`<div style="background:#EBF5FB;border:1px solid #1A527640;border-radius:10px;padding:10px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="font-size:20px">🚀</span><div><div style="font-size:13px;font-weight:500;color:#154360">Most Active This Week: ${esc(top.name||'Student')}${isMe?' (You!)':''}</div><div style="font-size:11px;color:#1A5276">${fmtStudyTime(top.weekMinutes||0)} studied in the last 7 days</div></div></div>`;})()}
     ${lb.map((entry,i)=>{const isMe=entry.uid===myUid;const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':`${i+1}`;return`<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:.5px solid #f0f0eb${isMe?';background:#FAEEDA;border-radius:8px;padding:10px;margin:-2px':''}"><div style="font-size:${i<3?'20':'14'}px;font-weight:500;min-width:28px;text-align:center">${medal}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:500${isMe?';color:#854F0B':''}">${esc(entry.name||'Student')}${isMe?' (You)':''}</div><div style="font-size:11px;color:#888">${entry.country||''}</div></div><div style="text-align:right;flex-shrink:0"><div style="font-size:13px;font-weight:500;color:#1A5276">${entry.lessons||0} lessons</div><div style="font-size:11px;color:#888">${entry.accuracy||0}% acc.</div></div></div>`;}).join('')}
     <div style="text-align:center;margin-top:14px"><button class="btn btn-outline" onclick="STATE.leaderboardLoaded=false;STATE.leaderboardData=[];render()" style="font-size:12px">🔄 Refresh</button></div>
     <div style="height:20px"></div>
@@ -3257,7 +3446,9 @@ async function loadDashboard(){
       const sd=d.data();
       const lb=lbMap[d.id]||{};
       const sid=sd.studentId||d.id.slice(-6).toUpperCase();
-      return{uid:d.id,sid,name:sd.name||'—',email:sd.email||'—',mobile:sd.mobile||'',country:sd.country||'—',city:sd.city||'',examdate:sd.examdate||'',photo:sd.photo||'',groupCode:sd.groupCode||'',level:sd.level||'',goal:sd.goal||'',role:sd.role||'',company:sd.company||'',studyHours:sd.studyHours||'',heardFrom:sd.heardFrom||'',whatsapp:sd.whatsapp||'',nextCert:sd.nextCert||'',university:sd.university||'',gradYear:sd.gradYear||'',expYears:sd.expYears||'',prevStudy:sd.prevStudy||'',registeredAt:sd.registeredAt||'',lessons:lb.lessons||0,accuracy:lb.accuracy||0,mcqTotal:lb.mcqTotal||0,streak:lb.streak||0,updatedAt:lb.updatedAt||''};
+      return{uid:d.id,sid,name:sd.name||'—',email:sd.email||'—',mobile:sd.mobile||'',country:sd.country||'—',city:sd.city||'',examdate:sd.examdate||'',photo:sd.photo||'',groupCode:sd.groupCode||'',level:sd.level||'',goal:sd.goal||'',role:sd.role||'',company:sd.company||'',studyHours:sd.studyHours||'',heardFrom:sd.heardFrom||'',whatsapp:sd.whatsapp||'',nextCert:sd.nextCert||'',university:sd.university||'',gradYear:sd.gradYear||'',expYears:sd.expYears||'',prevStudy:sd.prevStudy||'',registeredAt:sd.registeredAt||'',lessons:lb.lessons||0,accuracy:lb.accuracy||0,mcqTotal:lb.mcqTotal||0,streak:lb.streak||0,updatedAt:lb.updatedAt||'',
+        // BATCH 2026-08-25-01: synced study-time fields for the Activity tab
+        studyTotalMinutes:sd.studyTotalMinutes||0,studyTodayMinutes:sd.studyTodayMinutes||0,studyWeekMinutes:sd.studyWeekMinutes||0,lastActiveAt:sd.lastActiveAt||''};
     }).sort((a,b)=>b.lessons-a.lessons);
     STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
@@ -3640,6 +3831,7 @@ function renderDashboard(){
     {id:'students',icon:'\u{1F465}',label:'Students',short:'Students'},
     {id:'requests',icon:'\u{2705}',label:'Requests',short:'Requests'},
     {id:'progress',icon:'\u{1F4C8}',label:'Progress',short:'Progress'},
+    {id:'activity',icon:'\u23F1\uFE0F',label:'Activity',short:'Activity'},
     {id:'leaderboard',icon:'\u{1F3C6}',label:'Leaderboard',short:'Leaders'},
     {id:'results',icon:'\u{1F4CA}',label:'Exam Results',short:'Results'},
     {id:'plan',icon:'\u{1F4C5}',label:'Weekly Plan',short:'Plan'},
@@ -3725,6 +3917,67 @@ function renderDashboard(){
       </div>`;
     }).join('');
     bodyHTML=`${progressGroupFilter}<div>${rows.length?rows:`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No data yet.</div>`}</div>`;
+  } else if(tab==='activity'){
+    // BATCH 2026-08-25-01: Student Activity — study-time monitoring + Needs Attention
+    const actGf=(STATE.dashActivityGroupFilter||'').toUpperCase().trim();
+    let actFiltered=actGf?students.filter(s=>s.groupCode===actGf):students;
+    const now=Date.now();
+    const withMeta=actFiltered.map(s=>{
+      const lastMs=s.lastActiveAt?new Date(s.lastActiveAt).getTime():0;
+      const daysSince=lastMs?Math.floor((now-lastMs)/86400000):null;
+      // studyTodayMinutes was only valid on the calendar day it was synced —
+      // if lastActiveAt isn't today, treat "today" as 0 rather than showing
+      // a stale figure from a previous day.
+      const lastActiveIsToday=lastMs&&new Date(lastMs).toDateString()===new Date().toDateString();
+      const todayMin=lastActiveIsToday?(s.studyTodayMinutes||0):0;
+      const examSoon=(()=>{if(!s.examdate)return false;const d=new Date(s.examdate+'-01');const dd=Math.ceil((d-new Date())/86400000);return dd>0&&dd<=30;})();
+      const lowAccuracy=(s.mcqTotal||0)>=10&&s.accuracy<50;
+      const inactive=daysSince===null||daysSince>=3;
+      const needsAttention=(inactive&&(examSoon||s.groupCode))||lowAccuracy;
+      let reason='';
+      if(inactive&&examSoon)reason='Inactive '+(daysSince===null?'(never active)':daysSince+'d')+' · exam soon';
+      else if(inactive)reason='Inactive '+(daysSince===null?'(never active)':daysSince+'d');
+      else if(lowAccuracy)reason='Low accuracy ('+s.accuracy+'%)';
+      return{...s,daysSince,todayMin,needsAttention,reason};
+    });
+    const attention=withMeta.filter(s=>s.needsAttention).sort((a,b)=>(b.daysSince??999)-(a.daysSince??999));
+    const sortKey=STATE.dashActivitySort||'lastActive';
+    const sorters={
+      lastActive:(a,b)=>(a.daysSince??999)-(b.daysSince??999),
+      week:(a,b)=>(b.studyWeekMinutes||0)-(a.studyWeekMinutes||0),
+      today:(a,b)=>(b.todayMin||0)-(a.todayMin||0),
+      streak:(a,b)=>(b.streak||0)-(a.streak||0),
+      accuracy:(a,b)=>(b.accuracy||0)-(a.accuracy||0)
+    };
+    const sortedAll=[...withMeta].sort(sorters[sortKey]||sorters.lastActive);
+    const actGroupFilter=groups.length?`<div style="padding:8px 14px;border-bottom:.5px solid #e0e0d8;background:#f8f8f6;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:11px;color:#888">Group:</span><button onclick="STATE.dashActivityGroupFilter='';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${!actGf?'#1A5276':'#d0d0d0'};background:${!actGf?'#1A5276':'#f5f5f0'};color:${!actGf?'#fff':'#555'}">All</button>${groups.map(g=>`<button onclick="STATE.dashActivityGroupFilter='${g}';render()" style="padding:3px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${actGf===g?'#1A5276':'#d0d0d0'};background:${actGf===g?'#1A5276':'#f5f5f0'};color:${actGf===g?'#fff':'#555'}">${esc(g)}</button>`).join('')}</div>`:'';
+    const sortBtns=[['lastActive','Last Active'],['week','This Week'],['today','Today'],['streak','Streak'],['accuracy','Accuracy']].map(([k,lbl])=>`<button onclick="STATE.dashActivitySort='${k}';render()" style="padding:4px 10px;border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit;border:.5px solid ${sortKey===k?'#1A5276':'#d0d0d0'};background:${sortKey===k?'#1A5276':'#fff'};color:${sortKey===k?'#fff':'#555'}">${lbl}</button>`).join('');
+    const attentionHTML=attention.length?`<div style="padding:12px 14px;background:#FCEBEB;border-bottom:1px solid #E24B4A30">
+      <div style="font-size:12px;font-weight:700;color:#791F1F;letter-spacing:.5px;margin-bottom:8px">⚠️ NEEDS ATTENTION (${attention.length})</div>
+      ${attention.slice(0,10).map(s=>`<div onclick="openStudentModal('${s.uid}')" style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:.5px solid #E24B4A20;cursor:pointer">
+        <div style="flex:1;min-width:0"><span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>${s.groupCode?` <span style="font-size:10px;background:#fff;color:#791F1F;padding:1px 6px;border-radius:8px">${esc(s.groupCode)}</span>`:''}</div>
+        <div style="font-size:11px;color:#A32D2D;font-weight:500;flex-shrink:0">${esc(s.reason)}</div>
+      </div>`).join('')}
+      ${attention.length>10?`<div style="font-size:11px;color:#A32D2D;margin-top:6px">+${attention.length-10} more</div>`:''}
+    </div>`:`<div style="padding:12px 14px;background:#D5F5E3;border-bottom:1px solid #1E844930;font-size:12px;color:#186A3B;font-weight:500">✅ No students need attention right now.</div>`;
+    const tableRows=sortedAll.map(s=>{
+      const inactiveColor=s.daysSince===null?'#E24B4A':s.daysSince>=3?'#E24B4A':s.daysSince>=1?'#EF9F27':'#1E8449';
+      const lastActiveLabel=s.daysSince===null?'Never':s.daysSince===0?'Today':s.daysSince===1?'Yesterday':s.daysSince+'d ago';
+      return`<div onclick="openStudentModal('${s.uid}')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid #f0f0eb;cursor:pointer">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(s.name)}</span>${s.groupCode?`<span style="font-size:10px;background:#F4ECF7;color:#6C3483;padding:1px 6px;border-radius:8px">${esc(s.groupCode)}</span>`:''}</div>
+          <div style="font-size:11px;color:#888;margin-top:2px">Today ${fmtStudyTime(s.todayMin)} · Week ${fmtStudyTime(s.studyWeekMinutes||0)} · ${s.streak||0}🔥</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-size:11px;font-weight:600;color:${inactiveColor}">${lastActiveLabel}</div>
+          <div style="font-size:11px;color:#888">${s.lessons}/${TOTAL_LESSONS} · ${s.accuracy}%</div>
+        </div>
+      </div>`;
+    }).join('');
+    bodyHTML=`${actGroupFilter}${attentionHTML}
+      <div style="padding:10px 14px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;border-bottom:.5px solid #e0e0d8"><span style="font-size:11px;color:#888">Sort:</span>${sortBtns}</div>
+      <div>${tableRows||`<div style="text-align:center;padding:40px 20px;color:#aaa;font-size:13px">No data yet.</div>`}</div>
+      <div style="font-size:10px;color:#aaa;padding:10px 14px;text-align:center">Study time is approximate — tracked while a student has the app open and in the foreground.</div>`;
   } else if(tab==='leaderboard'){
     const lbGf=(STATE.dashLbGroupFilter||'').toUpperCase().trim();
     let lbFiltered=lbGf?students.filter(s=>s.groupCode===lbGf):students;
@@ -4036,8 +4289,9 @@ function render(){
   if(STATE.tab===_prevTab&&_savedScroll>0){const nsa=content.querySelector('.scroll-area');if(nsa)nsa.scrollTop=_savedScroll;}
   render._lastTab=STATE.tab;
   if(STATE.tab==='study'&&STATE.lessonId){setTimeout(()=>syncNoteFromCloud(STATE.lessonId),0);
-    // Highlight lesson search matches
-    if(STATE.lessonSearchQ){setTimeout(()=>{const body=document.getElementById('lesson-body-'+STATE.lessonId);if(!body)return;const q=STATE.lessonSearchQ;if(!q)return;const rx=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');const walk=n=>{if(n.nodeType===3){if(rx.test(n.textContent)){const span=document.createElement('span');span.innerHTML=n.textContent.replace(rx,'<mark style="background:#F6D860;color:#000;padding:0 2px;border-radius:3px">$1</mark>');n.parentNode.replaceChild(span,n);}}else if(n.nodeType===1&&n.tagName!=='SCRIPT'&&n.tagName!=='STYLE'&&n.tagName!=='MARK'){Array.from(n.childNodes).forEach(walk);}};walk(body);const first=body.querySelector('mark');if(first)first.scrollIntoView({behavior:'smooth',block:'center'});},50);}
+    // Highlight lesson search matches (topics matching the query are already
+    // auto-expanded by lessonTopicsHTML, so the text-node walk can find them)
+    if(STATE.lessonSearchQ)setTimeout(()=>applyLessonSearchHighlight(STATE.lessonId),50);
   }
   if(STATE.tab==='search'){setTimeout(()=>{const inp=document.getElementById('search-input');if(inp)inp.focus();},50);if(!STATE._searchPrewarmed){STATE._searchPrewarmed=true;prewarmLessons().then(()=>{if(STATE.tab==='search'&&STATE.searchQ.length>=2)updateSearchResults();});}}
   if(STATE.tab==='dictionary'){if(!STATE.dictLoaded)setTimeout(ensureDictionary,0);setTimeout(()=>{const i=document.getElementById('dict-input');if(i)i.focus();},50);}
