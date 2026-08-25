@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-25-01 topic-grouping-unit-search-termdict-activity-tracking -->
+<!-- FMAA-BUILD: 2026-08-25-02 unit-download-pdf -->
 <script>
-window.FMAA_BUILD='2026-08-25-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-25-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -197,6 +197,17 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .teach-entry{background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:10px}
 .teach-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
 .teach-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
+#print-lesson-area{display:none}
+#print-lesson-area .print-hdr{margin-bottom:14px}
+#print-lesson-area .print-hdr-sec{font-size:11px;color:#888;margin-bottom:2px}
+#print-lesson-area .print-hdr-title{font-size:20px;margin:0 0 6px;color:#1a1a1a}
+#print-lesson-area .print-ftr{margin-top:20px;padding-top:8px;border-top:.5px solid #d0d0d0;font-size:10px;color:#999;text-align:center}
+@media print{
+  body *{visibility:hidden}
+  #print-lesson-area,#print-lesson-area *{visibility:visible}
+  #print-lesson-area{display:block;position:absolute;left:0;top:0;width:100%;padding:0 6mm}
+  @page{margin:14mm 12mm}
+}
 </style>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
@@ -1171,6 +1182,28 @@ function toggleLessonSearch(lessonId){
   if(STATE.lessonSearchOpen)setTimeout(()=>{const el=document.getElementById('lesson-search-input');if(el)el.focus();},50);
 }
 
+// ─── DOWNLOAD UNIT AS PDF ─────────────────────────────────────────────────────
+// BATCH 2026-08-25-02: builds a hidden print-only copy of the unit content and
+// triggers the browser's native print dialog (student picks "Save as PDF").
+// No external library needed — works fully offline, matches the PWA's model.
+function downloadLessonPDF(lessonId){
+  const sec=S.find(s=>s.lessons.some(l=>l.id===lessonId));if(!sec)return;
+  const lesson=sec.lessons.find(l=>l.id===lessonId);if(!lesson)return;
+  if(!lesson.blocks||!lesson.blocks.length){showToast('Unit still loading — try again in a second.','error');return;}
+  let area=document.getElementById('print-lesson-area');
+  if(!area){area=document.createElement('div');area.id='print-lesson-area';document.body.appendChild(area);}
+  const lessonIdx=sec.lessons.findIndex(l=>l.id===lessonId);
+  const printableBlocks=lesson.blocks.filter(b=>b.t!=='video'); // skip video embeds in the PDF
+  const bodyHtml=printableBlocks.map(b=>renderBlock(b,sec)).join('');
+  area.innerHTML=`<div class="print-hdr"><div class="print-hdr-sec">${esc(sec.emoji||'')} ${esc(sec.title)} — FMAA Prep by Gawad</div><h1 class="print-hdr-title">${lessonIdx+1}. ${esc(lesson.title)}</h1></div>${bodyHtml}<div class="print-ftr">FMAA Prep by Gawad · ${esc(lesson.title)}</div>`;
+  const prevTitle=document.title;
+  document.title='FMAA - '+lesson.title.replace(/[\\/:*?"<>|]/g,'');
+  setTimeout(()=>{
+    window.print();
+    setTimeout(()=>{document.title=prevTitle;},500);
+  },50);
+}
+
 // ─── LAZY LOADERS ────────────────────────────────────────────────────────────
 const LESSON_CACHE={};
 async function ensureLessons(sectionId){
@@ -1951,7 +1984,7 @@ function renderStudy(){
     const _lessonHistory=loadQuizHistory()[lesson.id]||[];
     const _lessonSearchQ=(STATE.lessonSearchQ||'').trim();
     const _searchBar=STATE.lessonSearchOpen?`<div style="padding:8px 16px;border-bottom:.5px solid #e0e0d8;background:#fafaf8;display:flex;align-items:center;gap:8px"><input id="lesson-search-input" type="text" value="${esc(STATE.lessonSearchQ||'')}" oninput="updateLessonSearch('${lesson.id}')" placeholder="Search this unit…" style="flex:1;padding:8px 12px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;color:#1a1a1a"><span id="lesson-search-count" style="font-size:11px;color:#888;flex-shrink:0;white-space:nowrap"></span><button onclick="toggleLessonSearch('${lesson.id}')" style="padding:6px 10px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;cursor:pointer;font-family:inherit">✕</button></div>`:'';
-    return`<div class="bh"><button class="bh-back" onclick="studyGo(STATE.sectId,null)">‹</button><div style="min-width:0;flex:1"><div style="font-size:11px;font-weight:500;color:${sec.text}">${sec.emoji} ${esc(sec.title)}</div><div class="ellipsis" style="font-size:15px;font-weight:500;margin-top:1px">${lessonIdx+1}. ${esc(lesson.title)}</div></div><div style="display:flex;gap:4px;align-items:center;flex-shrink:0"><button onclick="const s={sm:'md',md:'lg',lg:'sm'}[STATE.fontSize||'md'];saveFontSize(s);showToast('Font: '+s.toUpperCase(),'info',1200)" title="Text size" style="padding:5px 8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">${STATE.fontSize==='sm'?'A':STATE.fontSize==='lg'?'A':'A'}${STATE.fontSize==='sm'?'−':STATE.fontSize==='lg'?'+':'·'}</button><button onclick="toggleLessonSearch('${lesson.id}')" title="Search this unit" style="padding:5px 8px;border-radius:8px;border:.5px solid ${STATE.lessonSearchOpen?'#1A5276':'#d0d0d0'};background:${STATE.lessonSearchOpen?'#EBF5FB':'#fff'};color:#555;font-size:12px;cursor:pointer;font-family:inherit">🔍</button></div></div>${_searchBar}
+    return`<div class="bh"><button class="bh-back" onclick="studyGo(STATE.sectId,null)">‹</button><div style="min-width:0;flex:1"><div style="font-size:11px;font-weight:500;color:${sec.text}">${sec.emoji} ${esc(sec.title)}</div><div class="ellipsis" style="font-size:15px;font-weight:500;margin-top:1px">${lessonIdx+1}. ${esc(lesson.title)}</div></div><div style="display:flex;gap:4px;align-items:center;flex-shrink:0"><button onclick="const s={sm:'md',md:'lg',lg:'sm'}[STATE.fontSize||'md'];saveFontSize(s);showToast('Font: '+s.toUpperCase(),'info',1200)" title="Text size" style="padding:5px 8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">${STATE.fontSize==='sm'?'A':STATE.fontSize==='lg'?'A':'A'}${STATE.fontSize==='sm'?'−':STATE.fontSize==='lg'?'+':'·'}</button><button onclick="toggleLessonSearch('${lesson.id}')" title="Search this unit" style="padding:5px 8px;border-radius:8px;border:.5px solid ${STATE.lessonSearchOpen?'#1A5276':'#d0d0d0'};background:${STATE.lessonSearchOpen?'#EBF5FB':'#fff'};color:#555;font-size:12px;cursor:pointer;font-family:inherit">🔍</button><button onclick="downloadLessonPDF('${lesson.id}')" title="Download this unit as PDF" style="padding:5px 8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;cursor:pointer;font-family:inherit">⬇️</button></div></div>${_searchBar}
     <div class="scroll-area pad">${_lessonHistory.length>0?`<div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:8px;padding:8px 12px;margin-top:10px;font-size:12px;color:#154360"><b>Quiz history:</b> ${_lessonHistory.length} attempt${_lessonHistory.length===1?'':'s'} · latest ${_lessonHistory[_lessonHistory.length-1].pct}% · best ${Math.max(..._lessonHistory.map(a=>a.pct))}%</div>`:''}<div class="card" style="margin-top:14px;padding:4px 16px 16px" id="lesson-body-${lesson.id}">${lessonTopicsHTML(lesson,sec,videoPlaceholder)}</div>
     <button class="btn" onclick="markDone('${lesson.id}')" style="margin-top:14px;background:${done?'#D5F5E3':sec.bar};color:${done?'#186A3B':'#fff'}">${done?'✓ Completed — Back':'Mark as Complete ✓'}</button>
     ${(()=>{const pv=getPrevLesson(sec.id,lesson.id);const nx=getNextLesson(sec.id,lesson.id);if(!pv&&!nx)return '';return `<div class="lesson-nav-footer">${pv?`<button class="lesson-nav-btn" onclick="studyGo(${pv.sec.id},'${pv.lesson.id}')"><div class="lesson-nav-btn-lbl">‹ Previous</div><div class="lesson-nav-btn-title">${esc(pv.lesson.title)}</div></button>`:'<div style="flex:1"></div>'}${nx?`<button class="lesson-nav-btn next" onclick="studyGo(${nx.sec.id},'${nx.lesson.id}')"><div class="lesson-nav-btn-lbl">Next ›</div><div class="lesson-nav-btn-title">${esc(nx.lesson.title)}</div></button>`:'<div style="flex:1"></div>'}</div>`;})()}
