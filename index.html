@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-25-02 unit-download-pdf -->
+<!-- FMAA-BUILD: 2026-08-26-01 exam-progress-retake-custom-section-pdf -->
 <script>
-window.FMAA_BUILD='2026-08-25-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-08-26-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -202,10 +202,12 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 #print-lesson-area .print-hdr-sec{font-size:11px;color:#888;margin-bottom:2px}
 #print-lesson-area .print-hdr-title{font-size:20px;margin:0 0 6px;color:#1a1a1a}
 #print-lesson-area .print-ftr{margin-top:20px;padding-top:8px;border-top:.5px solid #d0d0d0;font-size:10px;color:#999;text-align:center}
+#print-lesson-area .print-unit-title{font-size:16px;margin:0 0 8px;color:#1A5276;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
 @media print{
   body *{visibility:hidden}
   #print-lesson-area,#print-lesson-area *{visibility:visible}
   #print-lesson-area{display:block;position:absolute;left:0;top:0;width:100%;padding:0 6mm}
+  #print-lesson-area .print-unit-break{page-break-before:always}
   @page{margin:14mm 12mm}
 }
 </style>
@@ -543,7 +545,7 @@ function showToast(message,type='info',duration=3600){
 }
 
 // ─── GLOBAL STATE ─────────────────────────────────────────────────────────────
-const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},examHistory:[],examHistoryLoaded:false,examHistoryLoading:false,examHistoryReview:null,dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashActivityGroupFilter:'',dashActivitySort:'lastActive',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},dashPlans:[],dashExams:[],dashExamResults:[],dashResultsGroupFilter:'',dashResultsCollapsed:{},dashResultsTimeOpen:{},dashExamReview:null,dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false,notesList:[],notesLoaded:false,flashcards:[],flashcardsIdx:0,flashcardsFlipped:false,flashcardsFilter:'all',flashcardsMode:'study',dashTeachingLog:[],dashTeachingLogLoaded:false,dashTeachingDraft:{groupCode:'',lectureId:'',date:'',unitIds:[],notes:''},qotdState:{dateKey:'',question:null,selected:null,answered:false,taughtUnitCount:0},dailyGoalMinutes:30,fontSize:'md',
+const STATE={tab:'loading',searchQ:'',leaderboardData:[],leaderboardLoaded:false,dictQ:'',dictData:[],dictLoaded:false,quizMode:{active:false,sectionId:null,idx:0,questions:[],answers:[],selected:null},user:null,authScreen:'login',authError:'',authLoading:false,communityFilter:'all',questionDetail:null,showAskForm:false,communityQuestions:[],communityLastDoc:null,communityHasMore:false,communityLoading:false,communityLoaded:false,questionReplies:[],draftTitle:'',draftBody:'',draftSection:'General',draftReply:'',trackerOpenSects:[],sectId:null,lessonId:null,quizState:null,showProfileWarning:false,progress:{done:[],lessonScores:{},mcqTotal:0,mcqRight:0},showReset:false,mockExam:{status:'idle',mcqQ:[],mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:7200,mcqInterval:null,results:null,navOpen:false},examHistory:[],examHistoryLoaded:false,examHistoryLoading:false,examHistoryReview:null,dashTab:'students',dashStudents:[],dashLoaded:false,dashLoading:false,dashSearchQ:'',dashError:false,dashGroupFilter:'',dashProgressGroupFilter:'',dashLbGroupFilter:'',dashActivityGroupFilter:'',dashActivitySort:'lastActive',dashPlanDraft:{groupCode:'',weekLabel:'',units:[],note:''},dashExamDraft:{groupCode:'',title:'',durationMins:60,questionCount:20,sectionId:null,units:[]},customExamDraft:{units:[],questionCount:20,durationMins:30},dashPlans:[],dashExams:[],dashExamResults:[],dashExamProgress:[],dashResultsGroupFilter:'',dashResultsCollapsed:{},dashResultsTimeOpen:{},dashExamReview:null,dashLectures:[],dashAttendance:[],dashLectureFeedback:[],dashLectureDraft:{title:'',groupCode:''},dashGroups:[],dashGroupsLoaded:false,dashAttendanceGroupFilter:'',groupExam:null,groupExamLoaded:false,groupPlan:null,groupPlanLoaded:false,activeLecture:null,activeLectureLoaded:false,lectureCheckedIn:false,activeFeedback:null,activeFeedbackLoaded:false,lectureFeedbackDone:false,notesList:[],notesLoaded:false,flashcards:[],flashcardsIdx:0,flashcardsFlipped:false,flashcardsFilter:'all',flashcardsMode:'study',dashTeachingLog:[],dashTeachingLogLoaded:false,dashTeachingDraft:{groupCode:'',lectureId:'',date:'',unitIds:[],notes:''},qotdState:{dateKey:'',question:null,selected:null,answered:false,taughtUnitCount:0},dailyGoalMinutes:30,fontSize:'md',
 // New batch: announcements, pending group approval, offline status, lesson search, quiz flagging, quiz history, instructor notes, exam analytics
 announcements:[],announcementsLoaded:false,dashPendingRequests:[],dashRequestsLoaded:false,dashRequestReasons:{},lessonSearchQ:'',isOffline:false,dashAnnounceDraft:{groupCode:'',title:'',body:''},dashAnnouncements:[],dashAnnouncementsLoaded:false,dashInstructorNotes:{},dashExamAnalytics:null,dashCommunityUnread:0,dashCommunityLastSeen:null};
 
@@ -1198,6 +1200,30 @@ function downloadLessonPDF(lessonId){
   area.innerHTML=`<div class="print-hdr"><div class="print-hdr-sec">${esc(sec.emoji||'')} ${esc(sec.title)} — FMAA Prep by Gawad</div><h1 class="print-hdr-title">${lessonIdx+1}. ${esc(lesson.title)}</h1></div>${bodyHtml}<div class="print-ftr">FMAA Prep by Gawad · ${esc(lesson.title)}</div>`;
   const prevTitle=document.title;
   document.title='FMAA - '+lesson.title.replace(/[\\/:*?"<>|]/g,'');
+  setTimeout(()=>{
+    window.print();
+    setTimeout(()=>{document.title=prevTitle;},500);
+  },50);
+}
+// ─── DOWNLOAD ENTIRE SECTION AS ONE PDF ─────────────────────────────────────
+// BATCH 2026-08-26-01: same print-only approach as downloadLessonPDF, but
+// stitches every unit in the section into one document with a page break
+// before each unit (except the first) so it prints/saves as a single PDF.
+async function downloadSectionPDF(sectionId){
+  const sec=S.find(s=>s.id===sectionId);if(!sec)return;
+  await ensureLessons(sectionId);
+  if(!sec.lessons.some(l=>l.blocks&&l.blocks.length)){showToast('Section still loading — try again in a second.','error');return;}
+  let area=document.getElementById('print-lesson-area');
+  if(!area){area=document.createElement('div');area.id='print-lesson-area';document.body.appendChild(area);}
+  const unitsHtml=sec.lessons.map((lesson,idx)=>{
+    if(!lesson.blocks||!lesson.blocks.length)return'';
+    const printableBlocks=lesson.blocks.filter(b=>b.t!=='video');
+    const bodyHtml=printableBlocks.map(b=>renderBlock(b,sec)).join('');
+    return`<div class="${idx>0?'print-unit-break':''}"><h2 class="print-unit-title">${idx+1}. ${esc(lesson.title)}</h2>${bodyHtml}</div>`;
+  }).join('');
+  area.innerHTML=`<div class="print-hdr"><div class="print-hdr-sec">${esc(sec.emoji||'')} FMAA Prep by Gawad</div><h1 class="print-hdr-title">${esc(sec.title)} — Full Section</h1></div>${unitsHtml}<div class="print-ftr">FMAA Prep by Gawad · ${esc(sec.title)}</div>`;
+  const prevTitle=document.title;
+  document.title='FMAA - '+sec.title.replace(/[\\/:*?"<>|]/g,'');
   setTimeout(()=>{
     window.print();
     setTimeout(()=>{document.title=prevTitle;},500);
@@ -2015,7 +2041,7 @@ function renderStudy(){
     const lessonsDone=sec.lessons.filter(l=>lessonDone(l.id)).length;const sp=Math.round(lessonsDone/sec.lessons.length*100);
     const secQuizDone=sec.lessons.filter(l=>progress.lessonScores?.[l.id]).length;const isOpen=STATE.sectId===sec.id;
     const ll=isOpen?renderLessonListHTML(sec,progress):'';
-    return`<div id="sec-card-${sec.id}" class="card" style="cursor:pointer;border-color:${isOpen?sec.text+'60':'#e0e0d8'};border-width:${isOpen?'1px':'.5px'}" onclick="toggleSection(${sec.id})"><div style="display:flex;align-items:center;gap:10px"><div class="sect-icon" style="background:${sec.bg}">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${sec.weight}% of exam · ${lessonsDone}/${sec.lessons.length} lessons · ${secQuizDone}/${sec.lessons.length} quizzes</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0"><span class="badge" style="background:${sec.bg};color:${sec.strong}">${sp}%</span><span id="sec-icon-${sec.id}" style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isOpen?'90deg':'0deg'})">›</span></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:10px;overflow:hidden"><div style="height:100%;width:${sp}%;background:${sec.bar};border-radius:2px"></div></div><div id="sec-lessons-${sec.id}" style="${isOpen?'':'display:none'}">${ll}</div></div>`;
+    return`<div id="sec-card-${sec.id}" class="card" style="cursor:pointer;border-color:${isOpen?sec.text+'60':'#e0e0d8'};border-width:${isOpen?'1px':'.5px'}" onclick="toggleSection(${sec.id})"><div style="display:flex;align-items:center;gap:10px"><div class="sect-icon" style="background:${sec.bg}">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:14px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888;margin-top:2px">${sec.weight}% of exam · ${lessonsDone}/${sec.lessons.length} lessons · ${secQuizDone}/${sec.lessons.length} quizzes</div></div><div style="display:flex;align-items:center;gap:6px;flex-shrink:0"><button onclick="event.stopPropagation();downloadSectionPDF(${sec.id})" title="Download entire section as PDF" style="padding:5px 7px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;cursor:pointer;font-family:inherit;line-height:1">⬇️</button><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="badge" style="background:${sec.bg};color:${sec.strong}">${sp}%</span><span id="sec-icon-${sec.id}" style="font-size:16px;color:#bbb;transition:transform .2s;transform:rotate(${isOpen?'90deg':'0deg'})">›</span></div></div></div><div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:10px;overflow:hidden"><div style="height:100%;width:${sp}%;background:${sec.bar};border-radius:2px"></div></div><div id="sec-lessons-${sec.id}" style="${isOpen?'':'display:none'}">${ll}</div></div>`;
   }).join('');
   return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
 }
@@ -2062,11 +2088,87 @@ function renderQuizModeSelect(){
   return`${renderSubNav(SUB_PRACTICE,'quiz-mode-select')}<div class="sh"><h2>Practice Mode</h2><p>Choose a quiz type to practice</p></div>
   <div class="scroll-area pad" style="padding-top:14px">
     <div onclick="navTo('mock-exam')" style="cursor:pointer;background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px;display:flex;align-items:center;gap:14px"><div style="font-size:30px">🏆</div><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:700;color:#fff">Full Mock Exam</div><div style="font-size:12px;color:rgba(255,255,255,.85);margin-top:2px">80 MCQs · 2 hours · exam simulation</div></div><div style="font-size:20px;color:rgba(255,255,255,.7)">›</div></div>
+    <div onclick="navTo('custom-exam-setup')" style="cursor:pointer;background:linear-gradient(135deg,#186A3B,#28B463);border-radius:14px;padding:16px 18px;margin-bottom:14px;display:flex;align-items:center;gap:14px"><div style="font-size:30px">🛠️</div><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:700;color:#fff">Custom Exam</div><div style="font-size:12px;color:rgba(255,255,255,.85);margin-top:2px">Pick your own units, question count &amp; time limit</div></div><div style="font-size:20px;color:rgba(255,255,255,.7)">›</div></div>
     <div class="card" style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:12px">🎯 By Section</div>${S.map(sec=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:32px;height:32px;border-radius:8px;background:${sec.bg};display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div class="ellipsis" style="font-size:13px;font-weight:500">${esc(sec.title)}</div><div style="font-size:11px;color:#888">${sec.weight}% of exam</div></div><button onclick="startQuizMode(${sec.id},50)" style="padding:8px 14px;border-radius:8px;border:none;background:${sec.bg};color:${sec.strong};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;flex-shrink:0">50 MCQs</button></div>`).join('')}</div>
     <div class="card" style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:8px">📚 Mixed Practice</div><div style="font-size:13px;color:#888;margin-bottom:12px">Mix from all sections — great for exam simulation.</div><div style="display:flex;gap:8px"><button onclick="startQuizMode(null,30)" style="flex:1;padding:11px;border-radius:8px;border:none;background:#D6EAF8;color:#154360;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">30 MCQs</button><button onclick="startQuizMode(null,50)" style="flex:1;padding:11px;border-radius:8px;border:none;background:#D6EAF8;color:#154360;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">50 MCQs</button><button onclick="startQuizMode(null,100)" style="flex:1;padding:11px;border-radius:8px;border:none;background:#1A5276;color:#fff;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">100 MCQs</button></div></div>
     <button onclick="navTo('wrong-answers')" style="width:100%;padding:13px;border-radius:10px;border:1px solid #E24B4A40;background:#FCEBEB;color:#791F1F;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">❌ Review Wrong Answers</button>
     <div style="height:20px"></div>
   </div>`;}
+
+// ─── STUDENT CUSTOM EXAM BUILDER ─────────────────────────────────────────────
+// BATCH 2026-08-26-01: lets a student pick their own units (per section),
+// question count, and time limit, then reuses pickQuestionsBalanced() — the
+// same balanced-distribution logic the instructor's group exams use — to
+// build the set. Runs through the normal mock-exam MCQ flow with
+// groupExamId:null so it scores/times like a group exam but never writes to
+// the instructor's Results tab (it's pure self-practice).
+function toggleCustomExamUnit(lessonId){
+  if(!STATE.customExamDraft)STATE.customExamDraft={units:[],questionCount:20,durationMins:30};
+  const u=STATE.customExamDraft.units;
+  const idx=u.indexOf(lessonId);
+  if(idx>-1)u.splice(idx,1);else u.push(lessonId);
+  render();
+}
+function customExamSelectAll(on){
+  if(!STATE.customExamDraft)STATE.customExamDraft={units:[],questionCount:20,durationMins:30};
+  STATE.customExamDraft.units=on?S.flatMap(s=>s.lessons.map(l=>l.id)):[];
+  render();
+}
+function customExamSetCount(n){if(!STATE.customExamDraft)STATE.customExamDraft={units:[],questionCount:20,durationMins:30};STATE.customExamDraft.questionCount=n;render();}
+function customExamSetDuration(m){if(!STATE.customExamDraft)STATE.customExamDraft={units:[],questionCount:20,durationMins:30};STATE.customExamDraft.durationMins=m;render();}
+async function startCustomExam(){
+  const d=STATE.customExamDraft||{units:[],questionCount:20,durationMins:30};
+  const qCount=Number(d.questionCount)||20;
+  const durationMins=Number(d.durationMins)||30;
+  const units=d.units&&d.units.length?d.units:null;
+  STATE.mockExam.status='loading';STATE.tab='mock-exam';render();
+  try{
+    if(units){const secIds=[...new Set(units.map(u=>u.split('-')[0]))];for(const si of secIds)await ensureQuizzes(Number(si));}
+    else for(const s of S)await ensureQuizzes(s.id);
+    const picked=pickQuestionsBalanced(units,qCount);
+    const mcqQ=picked.map(q=>{const sec=S.find(s=>s.id===q.sid);return{...q,stitle:sec?sec.title:'',sbar:sec?sec.bar:''};}).map(shuffleQuestionOptions);
+    if(!mcqQ.length){showToast('No questions available for the selected units.','warning');STATE.mockExam.status='idle';STATE.tab='custom-exam-setup';render();return;}
+    const secs=durationMins*60;
+    const retakeCriteria={units,questionCount:mcqQ.length,durationMins};
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:null,groupExamTitle:'Custom Exam',groupExamGroupCode:'',deadlineTs:Date.now()+secs*1000,mcqQuestionTimes:[],mcqQTimerStart:Date.now(),retakeCriteria};
+    render();mockStartTimer();
+  }catch(e){
+    console.error('startCustomExam failed:',e);
+    showToast('Something went wrong. Please try again.','error');
+    STATE.mockExam.status='idle';STATE.tab='custom-exam-setup';render();
+  }
+}
+function renderCustomExamSetup(){
+  if(!STATE.customExamDraft)STATE.customExamDraft={units:[],questionCount:20,durationMins:30};
+  const d=STATE.customExamDraft;
+  const allUnitIds=S.flatMap(s=>s.lessons.map(l=>l.id));
+  const allSelected=d.units.length>0&&d.units.length===allUnitIds.length;
+  const poolCount=S.reduce((sum,sec)=>sum+sec.lessons.filter(l=>!d.units.length||d.units.includes(l.id)).reduce((a,l)=>a+((l.quizzes&&l.quizzes.length)||0),0),0);
+  const unitSelector=`<div style="max-height:260px;overflow-y:auto;border:.5px solid #d0d0d0;border-radius:8px;background:#fafaf8">${S.map(sec=>`<div><div style="font-size:10px;font-weight:600;color:${sec.text};padding:6px 10px 4px;background:${sec.bg};letter-spacing:.5px">${esc(sec.title)}</div>${sec.lessons.map(l=>{const sel=d.units.includes(l.id);const qn=(l.quizzes&&l.quizzes.length)||0;return`<label style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:.5px solid #f0f0eb;cursor:pointer;background:${sel?sec.bg:'transparent'}"><input type="checkbox" ${sel?'checked':''} onchange="toggleCustomExamUnit('${l.id}')" style="accent-color:${sec.bar};cursor:pointer;flex-shrink:0"><span style="flex:1;min-width:0;font-size:12px;color:${sel?sec.strong:'#444'};font-weight:${sel?'500':'400'}">${esc(l.title)}</span><span style="font-size:10px;color:#aaa;flex-shrink:0">${qn}q</span></label>`;}).join('')}</div>`).join('')}</div>`;
+  const countPresets=[10,20,30,50,80];
+  const durationPresets=[15,30,45,60,90,120];
+  return`<div class="bh"><button class="bh-back" onclick="navTo('quiz-mode-select')">‹</button><div style="font-size:14px;font-weight:500">🛠️ Custom Exam</div></div>
+  <div class="scroll-area pad" style="padding-top:14px">
+    <div class="card" style="margin-bottom:14px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div style="font-size:13px;font-weight:600">📚 Units <span style="font-weight:400;color:#888">(${d.units.length?d.units.length+' selected':'all units'})</span></div><button onclick="customExamSelectAll(${allSelected?'false':'true'})" style="padding:4px 10px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:11px;cursor:pointer;font-family:inherit">${allSelected?'Clear All':'Select All'}</button></div>
+      <div style="font-size:11px;color:#888;margin-bottom:8px">Leave nothing checked to pull from every unit.</div>
+      ${unitSelector}
+    </div>
+    <div class="card" style="margin-bottom:14px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px">🔢 Number of Questions</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">${countPresets.map(n=>`<button onclick="customExamSetCount(${n})" style="padding:8px 14px;border-radius:8px;border:.5px solid ${d.questionCount===n?'#1A5276':'#d0d0d0'};background:${d.questionCount===n?'#1A5276':'#fff'};color:${d.questionCount===n?'#fff':'#555'};font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">${n}</button>`).join('')}</div>
+      <input type="number" min="5" max="200" value="${d.questionCount}" oninput="customExamSetCount(Math.max(5,Math.min(200,parseInt(this.value)||20)))" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box;color:#1a1a1a" placeholder="Custom number...">
+      <div style="font-size:11px;color:${poolCount<d.questionCount?'#E24B4A':'#888'};margin-top:6px">${poolCount} question${poolCount!==1?'s':''} available in the selected units</div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px">⏱ Time Limit</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">${durationPresets.map(m=>`<button onclick="customExamSetDuration(${m})" style="padding:8px 14px;border-radius:8px;border:.5px solid ${d.durationMins===m?'#1A5276':'#d0d0d0'};background:${d.durationMins===m?'#1A5276':'#fff'};color:${d.durationMins===m?'#fff':'#555'};font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">${m<60?m+' min':(m/60)+' hr'+(m>60?'s':'')}</button>`).join('')}</div>
+      <input type="number" min="5" max="300" value="${d.durationMins}" oninput="customExamSetDuration(Math.max(5,Math.min(300,parseInt(this.value)||30)))" style="width:100%;padding:9px 10px;border-radius:8px;border:.5px solid #d0d0d0;font-size:13px;font-family:inherit;outline:none;background:#fff;box-sizing:border-box;color:#1a1a1a" placeholder="Custom minutes...">
+    </div>
+    <button onclick="startCustomExam()" style="width:100%;padding:15px;border-radius:12px;border:none;background:#186A3B;color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit">🚀 Start Custom Exam</button>
+    <div style="height:20px"></div>
+  </div>`;
+}
 
 function renderQuizSession(){
   const qs=STATE.quizState;if(!qs)return'';
@@ -2613,7 +2715,7 @@ function renderExamHistory(){
     const a=STATE.examHistoryReview;
     const answersForReview=(a.answers||[]).map(x=>({selected:x.selected,correct:x.correct}));
     const questionsWithTime=(a.questions||[]).map((q,i)=>({...q,_timeTaken:(a.answers||[])[i]?.timeMs||null}));
-    return`<div class="bh"><button class="bh-back" onclick="STATE.examHistoryReview=null;render()">‹</button><div style="font-size:14px;font-weight:500">Back to History</div></div>
+    return`<div class="bh"><button class="bh-back" onclick="STATE.examHistoryReview=null;render()">‹</button><div style="font-size:14px;font-weight:500;flex:1">Back to History</div><button onclick="retakeCurrentReview()" title="Retake this exam" style="padding:7px 12px;border-radius:8px;border:none;background:#1A5276;color:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;flex-shrink:0;white-space:nowrap">\uD83D\uDD04 Retake</button></div>
     <div style="display:flex;flex-direction:column;flex:1;overflow:hidden">${renderQuestionReview(questionsWithTime,answersForReview,a.title||'Exam')}</div>`;
   }
   const list=STATE.examHistory||[];
@@ -2623,14 +2725,17 @@ function renderExamHistory(){
       const{col,bg}=examScoreColor(a);
       const hasReview=!!(a.questions&&a.questions.length);
       const avgStr=a.avgTimeMs?fmtTime(a.avgTimeMs):null;
-      return`<div onclick="${hasReview?`openExamHistoryAttempt(${i})`:''}" style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:10px;${hasReview?'cursor:pointer':''}">
+      return`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:10px">
         <div style="display:flex;align-items:center;gap:12px">
+          <div onclick="${hasReview?`openExamHistoryAttempt(${i})`:''}" style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;${hasReview?'cursor:pointer':''}">
           <div style="width:52px;height:48px;border-radius:10px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:${col};flex-shrink:0">${a.scaled!=null?a.scaled:Math.round((a.correct/a.total)*100)+'%'}</div>
           <div style="flex:1;min-width:0">
             <div style="font-size:13px;font-weight:600;color:#1a1a1a">${esc(a.title||(a.isGroupExam?'Group Exam':'Mock Exam'))}</div>
             <div style="font-size:11px;color:#888;margin-top:2px">${a.correct}/${a.total} correct · ${a.date||''}${avgStr?` · ~${avgStr}/question`:''}</div>
           </div>
           ${hasReview?`<span style="font-size:18px;color:#bbb;flex-shrink:0">›</span>`:`<span style="font-size:10px;color:#aaa;flex-shrink:0">No detail saved</span>`}
+          </div>
+          <button onclick="retakeAttemptFromHistory(${i})" title="Retake this exam" style="padding:7px 10px;border-radius:8px;border:.5px solid #1A527640;background:#EBF5FB;color:#154360;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;flex-shrink:0;white-space:nowrap">\uD83D\uDD04 Retake</button>
         </div>
       </div>`;
     }).join('');
@@ -2748,7 +2853,10 @@ function mockSubmitMCQ(autoSubmit){
   // Compact question snapshot (just what's needed to review later — no duplicated section labels)
   const questionsSnapshot=mcqQ.map(q=>({q:q.q,o:q.o,a:q.a,e:q.e,data:q.data||null,sid:q.sid}));
   const answersSnapshot=mcqQ.map((q,i)=>({selected:mcqA[i]!==undefined?mcqA[i]:null,correct:mcqA[i]===q.a,timeMs:questionTimes[i]||0}));
-  saveMockResult({date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}),dateTs:Date.now(),correct,total:attempted,scoreDenom,scaleMax,rawPct,scaled,pass,questions:questionsSnapshot,answers:answersSnapshot,totalTimeMs,avgTimeMs,title:isGroup?(STATE.mockExam.groupExamTitle||'Group Exam'):'Mock Exam',isGroupExam:isGroup});
+  // retakeCriteria travels with the saved attempt so "Retake" (from history, later)
+  // can rebuild an equivalent freshly-shuffled exam without needing the original
+  // instructor exam doc to still exist or be open.
+  saveMockResult({date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}),dateTs:Date.now(),correct,total:attempted,scoreDenom,scaleMax,rawPct,scaled,pass,questions:questionsSnapshot,answers:answersSnapshot,totalTimeMs,avgTimeMs,title:isGroup?(STATE.mockExam.groupExamTitle||'Group Exam'):'Mock Exam',isGroupExam:isGroup,retakeCriteria:isGroup?(STATE.mockExam.retakeCriteria||null):null});
   // Save group exam result to Firestore (includes full Q&A + timing so students and the instructor can review it any time)
   if(isGroup&&STATE.mockExam.groupExamId&&STATE.user&&db){
     const _st=loadStudent();
@@ -2761,10 +2869,42 @@ function mockSubmitMCQ(autoSubmit){
       autoSubmitted:!!autoSubmit,
       submittedAt:new Date().toISOString()
     }).catch(e=>console.warn('Group result save error:',e));
+    // This student is no longer "in progress" — clear the live-tracking doc the
+    // instructor's Results tab reads (see startGroupExam / loadDashboard).
+    db.collection('fmaa-exam-progress').doc(STATE.mockExam.groupExamId+'_'+STATE.user.uid).delete().catch(()=>{});
   }
   updateStreak();render();
   if(autoSubmit)showToast('Time\u2019s up \u2014 your exam was submitted automatically.','info',3500);
 }
+// ─── RETAKE AN ATTEMPT FROM HISTORY ─────────────────────────────────────────
+// BATCH 2026-08-26-01: rebuilds a fresh, freshly-shuffled attempt from a past
+// history record. A plain Mock Exam just restarts startMockExam(). A group/
+// custom attempt is rebuilt from its saved retakeCriteria (units, question
+// count, duration) via the same pickQuestionsBalanced() the instructor uses —
+// launched with groupExamId:null so it scores locally but never writes a
+// duplicate submission into the instructor's Results tab.
+async function retakeAttempt(record){
+  if(!record){showToast('Attempt data not available.','info');return;}
+  if(!record.isGroupExam){await startMockExam();return;}
+  const rc=record.retakeCriteria;
+  if(!rc||!rc.questionCount){showToast('This attempt can\u2019t be retaken directly \u2014 try a Custom Exam instead.','info');return;}
+  STATE.examHistoryReview=null;STATE._mockReviewMode=false;
+  STATE.mockExam.status='loading';STATE.tab='mock-exam';render();
+  try{
+    const units=rc.units&&rc.units.length?rc.units:null;
+    if(units){const secIds=[...new Set(units.map(u=>String(u).split('-')[0]))];for(const si of secIds)await ensureQuizzes(Number(si));}
+    else for(const s of S)await ensureQuizzes(s.id);
+    const picked=pickQuestionsBalanced(units,rc.questionCount);
+    const mcqQ=picked.map(q=>{const sec=S.find(s=>s.id===q.sid);return{...q,stitle:sec?sec.title:'',sbar:sec?sec.bar:''};}).map(shuffleQuestionOptions);
+    if(!mcqQ.length){showToast('No questions available to retake this exam right now.','warning');STATE.mockExam.status='idle';render();return;}
+    const secs=(rc.durationMins||60)*60;
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:null,groupExamTitle:(record.title||'Exam')+' (Retake)',groupExamGroupCode:'',deadlineTs:Date.now()+secs*1000,mcqQuestionTimes:[],mcqQTimerStart:Date.now(),retakeCriteria:rc};
+    render();mockStartTimer();
+  }catch(e){console.error('retakeAttempt failed:',e);showToast('Something went wrong. Please try again.','error');STATE.mockExam.status='idle';render();}
+}
+function retakeAttemptFromIntro(i){retakeAttempt((STATE._mockIntroHistoryCache||[])[i]);}
+function retakeAttemptFromHistory(i){retakeAttempt((STATE.examHistory||[])[i]);}
+function retakeCurrentReview(){retakeAttempt(STATE.examHistoryReview);}
 function renderMockExamScreen(){
   const me=STATE.mockExam;
   if(me.status==='results'&&STATE._mockReviewMode){
@@ -2779,7 +2919,7 @@ function renderMockExamScreen(){
   if(me.status==='results')return renderMockResults();
   return renderMockIntro();
 }
-function renderMockIntro(){const loading=STATE.mockExam.status==='loading';const history=loadMockResults();STATE._mockIntroHistoryCache=history;const historyHTML=history.length===0?'':`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCC8 Your Attempt History <span style="font-weight:400;color:#aaa;font-size:11px">(tap to review)</span></div>${history.map((r,i)=>{const{col,bg}=examScoreColor(r);const statusTxt=r.isGroupExam?(r.pass?`\u2705 Pass (\u2265${GROUP_EXAM_PASS_PCT}%)`:`\u274C Below ${GROUP_EXAM_PASS_PCT}%`):(r.pass?'\u2705 Pass estimate':'\u274C Below 200');return`<div onclick="openMockHistoryAttempt(${i})" style="display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:${i<history.length-1?'.5px solid #f0f0eb':'none'};cursor:pointer;border-radius:8px" onmouseover="this.style.background='#faf9f5'" onmouseout="this.style.background='transparent'"><div style="width:50px;height:46px;border-radius:10px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:${col};flex-shrink:0">${r.scaled}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${statusTxt}</div><div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.total} correct (${r.rawPct}%) \u00B7 ${r.date}</div></div>${i===0?`<span style="font-size:10px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px;font-weight:500">Latest</span>`:''}<span style="font-size:14px;color:#c0c0c0">\u203A</span></div>`;}).join('')}</div>`;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:16px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83C\uDFC6 Mock Exam</div><div style="font-size:12px;color:#888;margin-top:3px">FMAA \u2014 Full Simulation</div></div><div style="flex:1;overflow-y:auto;padding:16px"><div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:16px;padding:20px;color:#fff;margin-bottom:16px;text-align:center"><div style="font-size:36px;margin-bottom:8px">\uD83D\uDCCB</div><div style="font-size:19px;font-weight:700;margin-bottom:4px">Full Exam Simulation</div><div style="font-size:13px;opacity:.85">Conditions as close to exam day as possible</div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#D6EAF8;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#154360">80</div><div style="font-size:11px;color:#555;margin-top:3px">MCQs</div></div><div style="background:#D5F5E3;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#186A3B">2 hrs</div><div style="font-size:11px;color:#555;margin-top:3px">Time limit</div></div><div style="background:#FAEEDA;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#854F0B">200</div><div style="font-size:11px;color:#555;margin-top:3px">Pass (of 300)</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCCA Question Distribution</div>${S.map(sec=>{const totalW=S.reduce((a,s)=>a+(s.weight||0),0)||1;const take=Math.round((sec.weight/totalW)*MOCK_TARGET);const pool=sec.lessons.reduce((a,l)=>a+(l.quizzes&&l.quizzes.length?l.quizzes.length:0),0);const poolOk=pool>=take;return`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:28px;height:28px;border-radius:8px;background:${sec.bar}20;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:500;color:#333">${esc(sec.title)}</div><div style="font-size:10px;color:${poolOk?'#888':'#E24B4A'};margin-top:1px">${pool} questions loaded</div></div><div style="font-size:13px;font-weight:700;color:${sec.bar}">~${take} Qs</div></div>`;}).join('')}</div>${historyHTML}<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:12px;padding:12px;margin-bottom:12px;font-size:13px;color:#633806;line-height:1.6">\u26A0\uFE0F <strong>Rules:</strong> Once you start, the timer runs. You can flag questions and move freely between them. Submit when done, or the exam auto-submits when time runs out.</div><div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:12px;padding:12px;margin-bottom:16px;font-size:12px;color:#154360;line-height:1.6">\u2139\uFE0F The score shown is an <strong>estimated</strong> scaled score (0\u2013300). The real FMAA exam uses statistical equating, so 200 does not equal a fixed percentage \u2014 treat this as practice guidance, not an official prediction.</div><button onclick="startMockExam()" ${loading?'disabled':''} style="width:100%;padding:15px;border-radius:12px;border:none;background:${loading?'#888':'#1A5276'};color:#fff;font-size:16px;font-weight:700;cursor:${loading?'default':'pointer'};font-family:inherit">${loading?'\u23F3 Loading questions...':'\uD83D\uDE80 Start Mock Exam'}</button></div></div>`;}
+function renderMockIntro(){const loading=STATE.mockExam.status==='loading';const history=loadMockResults();STATE._mockIntroHistoryCache=history;const historyHTML=history.length===0?'':`<div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCC8 Your Attempt History <span style="font-weight:400;color:#aaa;font-size:11px">(tap to review)</span></div>${history.map((r,i)=>{const{col,bg}=examScoreColor(r);const statusTxt=r.isGroupExam?(r.pass?`\u2705 Pass (\u2265${GROUP_EXAM_PASS_PCT}%)`:`\u274C Below ${GROUP_EXAM_PASS_PCT}%`):(r.pass?'\u2705 Pass estimate':'\u274C Below 200');return`<div style="display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:${i<history.length-1?'.5px solid #f0f0eb':'none'};border-radius:8px"><div onclick="openMockHistoryAttempt(${i})" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;cursor:pointer" onmouseover="this.parentNode.style.background='#faf9f5'" onmouseout="this.parentNode.style.background='transparent'"><div style="width:50px;height:46px;border-radius:10px;background:${bg};display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:${col};flex-shrink:0">${r.scaled}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:500;color:#1a1a1a">${statusTxt}</div><div style="font-size:11px;color:#888;margin-top:2px">${r.correct}/${r.total} correct (${r.rawPct}%) \u00B7 ${r.date}</div></div>${i===0?`<span style="font-size:10px;background:#D6EAF8;color:#154360;padding:2px 8px;border-radius:10px;font-weight:500">Latest</span>`:''}<span style="font-size:14px;color:#c0c0c0">\u203A</span></div><button onclick="event.stopPropagation();retakeAttemptFromIntro(${i})" title="Retake this exam" style="padding:6px 9px;border-radius:8px;border:.5px solid #1A527640;background:#EBF5FB;color:#154360;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;flex-shrink:0;white-space:nowrap">\uD83D\uDD04 Retake</button></div>`;}).join('')}</div>`;return`<div style="display:flex;flex-direction:column;height:100%;overflow:hidden"><div style="padding:16px 16px 12px;border-bottom:.5px solid #e0e0d8;flex-shrink:0"><div style="font-size:18px;font-weight:600">\uD83C\uDFC6 Mock Exam</div><div style="font-size:12px;color:#888;margin-top:3px">FMAA \u2014 Full Simulation</div></div><div style="flex:1;overflow-y:auto;padding:16px"><div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:16px;padding:20px;color:#fff;margin-bottom:16px;text-align:center"><div style="font-size:36px;margin-bottom:8px">\uD83D\uDCCB</div><div style="font-size:19px;font-weight:700;margin-bottom:4px">Full Exam Simulation</div><div style="font-size:13px;opacity:.85">Conditions as close to exam day as possible</div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div style="background:#D6EAF8;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#154360">80</div><div style="font-size:11px;color:#555;margin-top:3px">MCQs</div></div><div style="background:#D5F5E3;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#186A3B">2 hrs</div><div style="font-size:11px;color:#555;margin-top:3px">Time limit</div></div><div style="background:#FAEEDA;border-radius:12px;padding:14px;text-align:center"><div style="font-size:22px;font-weight:700;color:#854F0B">200</div><div style="font-size:11px;color:#555;margin-top:3px">Pass (of 300)</div></div></div><div style="background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:16px"><div style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px">\uD83D\uDCCA Question Distribution</div>${S.map(sec=>{const totalW=S.reduce((a,s)=>a+(s.weight||0),0)||1;const take=Math.round((sec.weight/totalW)*MOCK_TARGET);const pool=sec.lessons.reduce((a,l)=>a+(l.quizzes&&l.quizzes.length?l.quizzes.length:0),0);const poolOk=pool>=take;return`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:28px;height:28px;border-radius:8px;background:${sec.bar}20;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">${sec.emoji}</div><div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:500;color:#333">${esc(sec.title)}</div><div style="font-size:10px;color:${poolOk?'#888':'#E24B4A'};margin-top:1px">${pool} questions loaded</div></div><div style="font-size:13px;font-weight:700;color:${sec.bar}">~${take} Qs</div></div>`;}).join('')}</div>${historyHTML}<div style="background:#FAEEDA;border:.5px solid #EF9F27;border-radius:12px;padding:12px;margin-bottom:12px;font-size:13px;color:#633806;line-height:1.6">\u26A0\uFE0F <strong>Rules:</strong> Once you start, the timer runs. You can flag questions and move freely between them. Submit when done, or the exam auto-submits when time runs out.</div><div style="background:#EBF5FB;border:.5px solid #1A527630;border-radius:12px;padding:12px;margin-bottom:16px;font-size:12px;color:#154360;line-height:1.6">\u2139\uFE0F The score shown is an <strong>estimated</strong> scaled score (0\u2013300). The real FMAA exam uses statistical equating, so 200 does not equal a fixed percentage \u2014 treat this as practice guidance, not an official prediction.</div><button onclick="startMockExam()" ${loading?'disabled':''} style="width:100%;padding:15px;border-radius:12px;border:none;background:${loading?'#888':'#1A5276'};color:#fff;font-size:16px;font-weight:700;cursor:${loading?'default':'pointer'};font-family:inherit">${loading?'\u23F3 Loading questions...':'\uD83D\uDE80 Start Mock Exam'}</button></div></div>`;}
 function renderMockMCQ(){
   const me=STATE.mockExam;const q=me.mcqQ[me.mcqCurr];if(!q)return'';
   const n=me.mcqQ.length;const answeredCount=Object.keys(me.mcqA).length;const barW=Math.round(answeredCount/n*100);
@@ -3466,12 +3606,13 @@ async function loadDashboard(){
   STATE.dashLoading=true;STATE.dashError=false;
   try{
     // Core dashboard data — these must succeed
-    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap]=await Promise.all([
+    const [studentsSnap,lbSnap,plansSnap,examsSnap,resultsSnap,progressSnap]=await Promise.all([
       db.collection('fmaa-students').get(),
       db.collection('fmaa-leaderboard').get(),
       db.collection('fmaa-plans').get(),
       db.collection('fmaa-exams').get(),
-      db.collection('fmaa-exam-results').get()
+      db.collection('fmaa-exam-results').get(),
+      db.collection('fmaa-exam-progress').get().catch(e=>{console.warn('Exam progress load failed:',e);return{docs:[]};})
     ]);
     const lbMap={};
     lbSnap.docs.forEach(d=>{lbMap[d.id]=d.data();});
@@ -3486,6 +3627,11 @@ async function loadDashboard(){
     STATE.dashPlans=plansSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExams=examsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.createdAt>a.createdAt?1:-1);
     STATE.dashExamResults=resultsSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.submittedAt>a.submittedAt?1:-1);
+    // BATCH 2026-08-26-01: live "in progress" tracking — students write a lightweight
+    // doc here the instant they start a group exam (see startGroupExam), and it's
+    // deleted the instant they submit (see mockSubmitMCQ). What's left after that
+    // merge is exactly "started, hasn't submitted yet" — shown in the Results tab.
+    STATE.dashExamProgress=progressSnap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.startedAt||'')>(a.startedAt||'')?1:-1);
     STATE.dashLoaded=true;
     // Lecture data — loaded separately so a failure here never breaks the dashboard
     try{
@@ -3772,8 +3918,24 @@ async function startGroupExam(examId){
     if(isNaN(examEndTs))examEndTs=Date.now()+fullDurationSecs*1000;
     const deadlineTs=Math.min(examEndTs,Date.now()+fullDurationSecs*1000);
     const secs=Math.max(0,Math.floor((deadlineTs-Date.now())/1000));
-    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode,deadlineTs,mcqQuestionTimes:[],mcqQTimerStart:Date.now()};
+    // Criteria needed to rebuild an equivalent (freshly-shuffled) attempt later via
+    // the student-side "Retake" action — kept separate from questionIds so a retake
+    // never reuses the exact fixed set (or writes to the instructor's Results tab).
+    const retakeCriteria={units:examUnits,questionCount:exam.questionCount||mcqQ.length,durationMins:exam.durationMins};
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode,deadlineTs,mcqQuestionTimes:[],mcqQTimerStart:Date.now(),retakeCriteria};
     STATE.tab='mock-exam';render();
+    // BATCH 2026-08-26-01: mark this student "in progress" for the instructor's live
+    // Results view the instant the exam actually starts (questions loaded, timer set).
+    // Deterministic doc id (examId_uid) means a page reload just overwrites in place
+    // rather than creating duplicates. Deleted on submit in mockSubmitMCQ.
+    if(STATE.user&&db){
+      const _st=loadStudent();
+      db.collection('fmaa-exam-progress').doc(examId+'_'+STATE.user.uid).set({
+        examId,groupCode:exam.groupCode||'',uid:STATE.user.uid,
+        studentName:_st?.name||'Student',studentId:_st?.studentId||'',
+        startedAt:new Date().toISOString()
+      }).catch(e=>console.warn('Progress write failed:',e));
+    }
     if(secs<=0){mockSubmitMCQ(true);return;}
     mockStartTimer();
   }catch(e){
@@ -4072,10 +4234,21 @@ function renderDashboard(){
     // an exam a student took but whose submission never wrote to Firestore (or hadn't been
     // submitted yet) was completely invisible here, with no way to tell "never taken" apart
     // from "submission failed to save."
-    exams.forEach(ex=>{byExam[ex.id]={examId:ex.id,examTitle:ex.title||'Exam',groupCode:ex.groupCode||'',results:[],_noSubmissions:true};});
-    results.forEach(r=>{if(!byExam[r.examId])byExam[r.examId]={examId:r.examId,examTitle:r.examTitle||'Exam',groupCode:r.groupCode||'',results:[]};byExam[r.examId].results.push(r);byExam[r.examId]._noSubmissions=false;});
+    exams.forEach(ex=>{byExam[ex.id]={examId:ex.id,examTitle:ex.title||'Exam',groupCode:ex.groupCode||'',results:[],inProgress:[],_noSubmissions:true};});
+    results.forEach(r=>{if(!byExam[r.examId])byExam[r.examId]={examId:r.examId,examTitle:r.examTitle||'Exam',groupCode:r.groupCode||'',results:[],inProgress:[]};byExam[r.examId].results.push(r);byExam[r.examId]._noSubmissions=false;});
     // Sort each exam's results by score desc
     Object.values(byExam).forEach(e=>e.results.sort((a,b)=>b.scaled-a.scaled));
+    // BATCH 2026-08-26-01: merge in-progress students (started, not yet submitted).
+    // A progress doc left over from a student who DID submit (write raced the
+    // delete, or it simply failed) is dropped here rather than shown as "in
+    // progress" — the submitted result is always the source of truth.
+    (STATE.dashExamProgress||[]).forEach(p=>{
+      if(!byExam[p.examId])byExam[p.examId]={examId:p.examId,examTitle:p.examTitle||'Exam',groupCode:p.groupCode||'',results:[],inProgress:[]};
+      const ex=byExam[p.examId];
+      if(ex.results.some(r=>r.uid===p.uid))return;
+      ex.inProgress.push(p);
+    });
+    Object.values(byExam).forEach(e=>e.inProgress.sort((a,b)=>(a.startedAt||'')>(b.startedAt||'')?1:-1));
     // Group filter
     const rgf=(STATE.dashResultsGroupFilter||'').toUpperCase().trim();
     const allResultGroups=[...new Set(Object.values(byExam).map(e=>e.groupCode).filter(Boolean))].sort();
@@ -4090,6 +4263,25 @@ function renderDashboard(){
         const isCollapsed=STATE.dashResultsCollapsed[ex.examId]!==false;// default collapsed
         const examObj=exams.find(e=>e.id===ex.examId);
         const examDate=ex.results[0]?.submittedAt?new Date(ex.results[0].submittedAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):(examObj?.createdAt?'Created '+new Date(examObj.createdAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'');
+        // A student who started but the exam window has since closed is no longer
+        // meaningfully "in progress" — label it as a stalled/incomplete attempt instead.
+        const examClosed=!!(examObj&&examObj.endAt&&new Date(examObj.endAt)<new Date());
+        const inProgressRows=(ex.inProgress||[]).map(p=>{
+          const startedAgo=timeAgo(p.startedAt);
+          const label=examClosed?'⚠️ Started, not submitted':'⏳ In Progress';
+          const bg2=examClosed?'#FCEBEB':'#FFFBEB',bd2=examClosed?'#E24B4A40':'#EF9F2740',tc2=examClosed?'#A32D2D':'#854F0B';
+          return`<div style="display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:.5px solid #f0f0eb;background:${bg2}10">
+            <div style="width:28px;height:28px;border-radius:50%;background:${bg2};border:.5px solid ${bd2};display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">${examClosed?'⚠️':'⏳'}</div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:13px;font-weight:500;color:#1a1a1a">${esc(p.studentName||'Student')}</span>
+                <span style="font-size:10px;background:#EBF5FB;color:#1A5276;padding:1px 6px;border-radius:8px;font-family:monospace">${esc(p.studentId||'')}</span>
+                <span style="font-size:10px;background:${bg2};color:${tc2};padding:1px 6px;border-radius:8px;font-weight:600;border:.5px solid ${bd2}">${label}</span>
+              </div>
+              <div style="font-size:11px;color:#888;margin-top:2px">Started ${startedAgo}</div>
+            </div>
+          </div>`;
+        }).join('');
         const studentRows=isCollapsed?'':ex.results.map((r,i)=>{
           const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':String(i+1);
           const{col,bg}=examScoreColor(r);
@@ -4131,6 +4323,7 @@ function renderDashboard(){
               <div style="font-size:11px;color:#888;margin-top:2px">${examDate} · ${ex.results.length} submissions</div>
             </div>
             <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+              ${!examClosed&&ex.inProgress.length?`<span style="font-size:11px;color:#854F0B;background:#FFFBEB;border:.5px solid #EF9F2740;padding:3px 8px;border-radius:8px;font-weight:600;white-space:nowrap">⏳ ${ex.inProgress.length} in progress</span>`:''}
               ${ex._noSubmissions?'<span style="font-size:11px;color:#B9770E;background:#FEF5E7;padding:3px 8px;border-radius:8px;font-weight:500">No submissions yet</span>':`<div style="text-align:right"><div style="font-size:12px;font-weight:600;color:#186A3B">${passCount} passed</div><div style="font-size:11px;color:#E24B4A">${failCount} failed</div></div>`}
               ${analyticsBtn}
               ${reviewBtn}
@@ -4138,10 +4331,10 @@ function renderDashboard(){
             </div>
           </div>
           ${analyticsHTML}
-          ${isCollapsed?'':(ex._noSubmissions?'<div style="padding:16px 14px;text-align:center;color:#aaa;font-size:12px">No student has submitted this exam yet. If a student says they completed it, check their connection at submit time — group exam results save directly to the server.</div>':studentRows)}
+          ${isCollapsed?'':(ex._noSubmissions&&!ex.inProgress.length?'<div style="padding:16px 14px;text-align:center;color:#aaa;font-size:12px">No student has submitted this exam yet. If a student says they completed it, check their connection at submit time — group exam results save directly to the server.</div>':inProgressRows+studentRows)}
         </div>`;
       }).join('');
-      bodyHTML=`<div style="padding:10px 14px;display:flex;gap:8px;align-items:center">${rgfBtns}<button onclick="exportResultsCSV()" style="padding:6px 12px;border-radius:8px;border:none;background:#186A3B;color:#fff;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap">📥 CSV</button></div><div style="padding:0 14px 14px">${examBlocks}</div>`;
+      bodyHTML=`<div style="padding:10px 14px;display:flex;gap:8px;align-items:center">${rgfBtns}<button onclick="STATE.dashLoaded=false;loadDashboard()" title="Refresh to see students who just started" style="padding:6px 12px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap">🔄 Refresh</button><button onclick="exportResultsCSV()" style="padding:6px 12px;border-radius:8px;border:none;background:#186A3B;color:#fff;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap">📥 CSV</button></div><div style="padding:0 14px 14px">${examBlocks}</div>`;
     }
     } // end dashExamReview else
   } else if(tab==='plan'){
@@ -4253,7 +4446,7 @@ function getNavTabs(){return isInstructor()?[...TABS,{id:'dashboard',label:'Dash
 function activeNavTab(){
   const t=STATE.tab;
   if(t==='study'||t==='quiz-session'||t==='quiz-results')return'study';
-  if(t==='quiz-mode-select'||t==='quiz-mode'||t==='wrong-answers'||t==='mock-exam')return'quiz-mode-select';
+  if(t==='quiz-mode-select'||t==='quiz-mode'||t==='wrong-answers'||t==='mock-exam'||t==='custom-exam-setup')return'quiz-mode-select';
   if(t==='progress'||t==='tracker'||t==='leaderboard')return'progress';
   if(t==='formula-bank'||t==='dictionary'||t==='flashcards'||t==='my-notes')return'formula-bank';
   if(t==='search')return'search';
@@ -4313,6 +4506,7 @@ function render(){
     case'flashcards':html=renderFlashcards();break;
     case'my-notes':html=renderNotes();break;
     case'mock-exam':html=renderMockExamScreen();break;
+    case'custom-exam-setup':html=renderCustomExamSetup();break;
     case'exam-history':html=renderExamHistory();break;
     case'feedback':html=renderFeedback();break;
     case'dashboard':html=isInstructor()?renderDashboard():'';break;
