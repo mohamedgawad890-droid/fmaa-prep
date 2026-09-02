@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-08-26-01 exam-progress-retake-custom-section-pdf -->
+<!-- FMAA-BUILD: 2026-09-02-01 sidebar-collapse -->
 <script>
-window.FMAA_BUILD='2026-08-26-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-09-02-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -134,6 +134,24 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .quiz-opt-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;border:.5px solid #bbb;background:#fff}
 .quiz-opt-text{font-size:14px;color:#333;line-height:1.5;flex:1;padding-top:4px}
 @media(min-width:900px){#app{flex-direction:row;align-items:stretch;height:100vh;height:100dvh;overflow:hidden}.bottom-nav{position:fixed;top:0;left:max(0px,calc(50vw - 850px));bottom:0;width:200px;flex-direction:column;padding:14px 10px;border-top:none;border-right:.5px solid #e0e0d8;gap:2px;overflow-y:auto;z-index:100}.content{flex:1;min-width:0;height:100vh;height:100dvh;overflow:hidden;margin-left:200px}.desktop-brand{padding:10px 10px 14px;border-bottom:.5px solid #e0e0d8;margin-bottom:6px;display:flex;flex-direction:column;gap:8px}}
+/* BATCH 2026-09-02-01 — collapsible desktop sidebar */
+.nav-collapse-btn{display:none}
+@media(min-width:900px){
+.bottom-nav{transition:width .18s ease}.content{transition:margin-left .18s ease}
+.nav-collapse-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;padding:9px 10px;border:1px solid #e0e0d8;border-radius:10px;background:#f8f8f6;color:#666;cursor:pointer;font-family:inherit;font-size:12px;font-weight:500;flex-shrink:0}
+.nav-collapse-btn:hover{background:#EBF5FB;color:#1A5276}
+.nav-collapse-btn .nav-collapse-arrow{font-size:16px;line-height:1;transition:transform .18s}
+body.nav-collapsed .bottom-nav{width:64px;padding:14px 8px}
+body.nav-collapsed .content{margin-left:64px}
+body.nav-collapsed .nav-btn{justify-content:center;gap:0;padding:10px 0}
+body.nav-collapsed .nav-btn span:last-child{display:none}
+body.nav-collapsed .nav-btn .nav-badge{top:0;right:2px}
+body.nav-collapsed .desktop-brand{padding:6px 0 12px;justify-content:center!important}
+body.nav-collapsed .desktop-brand .brand-text,body.nav-collapsed .desktop-brand .brand-install{display:none!important}
+body.nav-collapsed .nav-collapse-btn{padding:9px 0}
+body.nav-collapsed .nav-collapse-btn .nav-collapse-label{display:none}
+body.nav-collapsed .nav-collapse-btn .nav-collapse-arrow{transform:rotate(180deg)}
+}
 .profile-hero{background:linear-gradient(160deg,#1A5276,#2980B9);padding:20px 20px 16px;text-align:center;flex-shrink:0}
 .profile-img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid rgba(255,255,255,.8);margin:0 auto 12px;display:block}
 .profile-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:4px}
@@ -551,6 +569,7 @@ announcements:[],announcementsLoaded:false,dashPendingRequests:[],dashRequestsLo
 
 // ─── PREFERENCES BOOTSTRAP ───────────────────────────────────────────────
 STATE.fontSize=(function(){try{return localStorage.getItem('fmaa-fontsize-v1')||'md';}catch{return 'md';}})();
+STATE.navCollapsed=(function(){try{return localStorage.getItem('fmaa-nav-collapsed-v1')==='1';}catch{return false;}})();
 STATE.dailyGoalMinutes=(function(){try{const v=parseInt(localStorage.getItem('fmaa-goal-v1'));return v>0?v:30;}catch{return 30;}})();
 
 // ─── ARABIC TERM TOOLTIPS ─────────────────────────────────────────────────────
@@ -747,6 +766,10 @@ function timeAgo(iso){if(!iso)return'';try{const diff=Date.now()-new Date(iso).g
 function isInstructor(){return STATE.user&&STATE.user.uid===INSTRUCTOR_UID;}
 
 // ─── FONT SIZE / DAILY GOAL ───────────────────────────────────────────────
+// BATCH 2026-09-02-01 — collapsible desktop sidebar (state persists per device)
+function loadNavCollapsed(){try{return localStorage.getItem('fmaa-nav-collapsed-v1')==='1';}catch{return false;}}
+function applyNavCollapsed(){document.body.classList.toggle('nav-collapsed',!!STATE.navCollapsed);}
+function toggleNavCollapse(){STATE.navCollapsed=!STATE.navCollapsed;try{localStorage.setItem('fmaa-nav-collapsed-v1',STATE.navCollapsed?'1':'0');}catch{}applyNavCollapsed();}
 function loadFontSize(){try{return localStorage.getItem('fmaa-fontsize-v1')||'md';}catch{return 'md';}}
 function saveFontSize(v){try{localStorage.setItem('fmaa-fontsize-v1',v);}catch{}STATE.fontSize=v;applyFontSize();}
 function applyFontSize(){const c=document.getElementById('content-area');if(!c)return;const map={sm:'0.9',md:'1',lg:'1.15'};c.style.setProperty('--fs',map[STATE.fontSize]||'1');c.style.zoom='';}
@@ -4549,8 +4572,8 @@ function render(){
     const _navSignature=active+'|'+(STATE.dashCommunityUnread||0);
     if(_navSignature!==render._lastNavActive){
       render._lastNavActive=_navSignature;
-      const brandHeader=`<div class="desktop-brand" style="display:flex;align-items:center;justify-content:space-between;gap:10px"><div style="display:flex;align-items:center;gap:10px;min-width:0"><img src="./gawad-avatar.webp" alt="Gawad" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #D6EAF8"><div style="min-width:0"><div style="font-size:13px;font-weight:600;color:#1A5276;letter-spacing:.5px">FMAA Prep</div><div style="font-size:10px;color:#888;margin-top:1px">With Gawad</div></div></div>${!window.matchMedia("(display-mode: standalone)").matches?`<button onclick="installApp()" title="Install App" style="display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:8px;border:1px solid #d0d8e8;background:#D6EAF8;color:#1A5276;cursor:pointer;font-size:12px;font-weight:500;font-family:inherit;flex-shrink:0"><span style="font-size:14px">⬇</span><span>Install App</span></button>`:''}</div>`;
-      nav.innerHTML=brandHeader+getNavTabs().map(t=>{const badge=(t.id==='community'&&isInstructor()&&STATE.dashCommunityUnread>0)?`<span style="position:absolute;top:2px;right:6px;background:#E24B4A;color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px">${STATE.dashCommunityUnread}</span>`:'';return `<button class="nav-btn${t.id===active?' active':''}" onclick="navTo('${t.id}')" style="position:relative"><span class="nav-icon">${t.icon}</span><span>${t.label}</span>${badge}</button>`;}).join('');
+      const brandHeader=`<div class="desktop-brand" style="display:flex;align-items:center;justify-content:space-between;gap:10px"><div style="display:flex;align-items:center;gap:10px;min-width:0"><img src="./gawad-avatar.webp" alt="Gawad" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #D6EAF8"><div class="brand-text" style="min-width:0"><div style="font-size:13px;font-weight:600;color:#1A5276;letter-spacing:.5px">FMAA Prep</div><div style="font-size:10px;color:#888;margin-top:1px">With Gawad</div></div></div>${!window.matchMedia("(display-mode: standalone)").matches?`<button class="brand-install" onclick="installApp()" title="Install App" style="display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:8px;border:1px solid #d0d8e8;background:#D6EAF8;color:#1A5276;cursor:pointer;font-size:12px;font-weight:500;font-family:inherit;flex-shrink:0"><span style="font-size:14px">⬇</span><span>Install App</span></button>`:''}</div>`;
+      nav.innerHTML=brandHeader+getNavTabs().map(t=>{const badge=(t.id==='community'&&isInstructor()&&STATE.dashCommunityUnread>0)?`<span class="nav-badge" style="position:absolute;top:2px;right:6px;background:#E24B4A;color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px">${STATE.dashCommunityUnread}</span>`:'';return `<button class="nav-btn${t.id===active?' active':''}" onclick="navTo('${t.id}')" title="${esc(t.label)}" style="position:relative"><span class="nav-icon">${t.icon}</span><span>${t.label}</span>${badge}</button>`;}).join('')+`<button class="nav-collapse-btn" onclick="toggleNavCollapse()" title="Collapse / expand sidebar"><span class="nav-collapse-arrow">«</span><span class="nav-collapse-label">Collapse</span></button>`;
     }
   }
   if(STATE.tab==='quiz-session'&&STATE.quizState){const _qs=STATE.quizState;const _r=_qs.answers[_qs.idx];if(!(_r&&_r.selected!=null)&&_qs.qTimerStart){setTimeout(()=>startQTimer(()=>STATE.quizState.qTimerStart),20);}}
@@ -4562,6 +4585,7 @@ function render(){
 // Paint the loading screen directly via DOM — no Firebase dependency.
 // auth.onAuthStateChanged will call render() again once Firebase responds.
 document.addEventListener('DOMContentLoaded', function() {
+  applyNavCollapsed();
   // Show loading immediately without needing firebase to be ready
   const content = document.getElementById('content-area');
   const nav = document.getElementById('bottom-nav');
