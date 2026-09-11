@@ -571,7 +571,12 @@
         "Continuous (rolling) budgeting."
       ],
       "a": 1,
-      "e": "Authoritative (top-down) budgeting is prepared quickly because senior management sets the budget for every segment without a negotiation process. That speed comes at a cost: because lower-level managers had no input, they are more likely to view the targets as imposed and may resist or feel less committed to achieving them. Participative budgeting takes longer because it involves negotiation, but it produces higher acceptance. Zero-based and continuous budgeting describe a different dimension of the budgeting process (justification basis and time horizon), not the top-down/bottom-up distinction."
+      "e": "Authoritative (top-down) budgeting is prepared quickly because senior management sets the budget for every segment without a negotiation process. That speed comes at a cost: because lower-level managers had no input, they are more likely to view the targets as imposed and may resist or feel less committed to achieving them. Participative budgeting takes longer because it involves negotiation, but it produces higher acceptance. Zero-based and continuous budgeting describe a different dimension of the budgeting process (justification basis and time horizon), not the top-down/bottom-up distinction.",
+      "wrongWhy": {
+        "0": "Participative (bottom-up) budgeting is the opposite of fastest — it takes longer because lower-level managers negotiate and contribute to their own targets — but that same involvement is what makes managers more likely to accept and commit to the resulting budget, not less.",
+        "2": "Zero-based budgeting requires every line item to be justified from a zero base each period, which makes it one of the more time-consuming approaches to prepare, not the fastest. It doesn't carry the acceptance problem described here, since it isn't defined by an imposed, top-down target.",
+        "3": "Rolling budgeting is defined by how often the budget horizon is updated (a new period is added as each one closes), not by how it's negotiated or imposed, so it doesn't carry the same manager-acceptance risk as authoritative budgeting, and it isn't notably fast to prepare since a new segment must be re-forecast every period."
+      }
     },
     {
       "id": "3-1-35",
@@ -828,7 +833,12 @@
         "Assigning the finance department to consolidate the individual departmental budgets."
       ],
       "a": 1,
-      "e": "A budgeting process can be technically flawless — correct formulas, accurate data, timely schedules — and still fail behaviorally. If managers are evaluated purely on hitting the budget number regardless of circumstances, they are pushed toward building in budgetary slack, gaming the numbers, or making short-term decisions that hurt the company to protect their own evaluation. This defeats the purpose of budgeting as a planning and coordination tool. The other options are neutral process choices (tooling, frequency, consolidation responsibility) that do not by themselves create this kind of dysfunction."
+      "e": "A budgeting process can be technically flawless — correct formulas, accurate data, timely schedules — and still fail behaviorally. If managers are evaluated purely on hitting the budget number regardless of circumstances, they are pushed toward building in budgetary slack, gaming the numbers, or making short-term decisions that hurt the company to protect their own evaluation. This defeats the purpose of budgeting as a planning and coordination tool. The other options are neutral process choices (tooling, frequency, consolidation responsibility) that do not by themselves create this kind of dysfunction.",
+      "wrongWhy": {
+        "0": "The choice of tool (spreadsheet vs. dedicated budgeting software) is an operational detail that can affect efficiency, but it doesn't undermine the budgeting process behaviorally the way a poorly designed performance-evaluation policy does.",
+        "2": "The frequency of the budgeting cycle (monthly vs. quarterly) is a scheduling choice, not a behavioral flaw — it doesn't by itself create the incentive problems that come from evaluating managers rigidly against a fixed budget regardless of changed conditions.",
+        "3": "Having the finance department consolidate the individual departmental budgets into one master budget is a normal, necessary step in the budgeting process, not a source of dysfunction."
+      }
     },
     {
       "id": "3-1-50",
@@ -1268,7 +1278,12 @@
         "Shortening the annual budget cycle from twelve months to six."
       ],
       "a": 1,
-      "e": "A rolling (continuous) budget is specifically designed to keep a constant horizon in view: as each month or quarter closes, a new one is added at the far end, so the company always has a full year of budget ahead of it. Zero-based budgeting changes how each period's budget is justified, not the time horizon. A flexible budget is a performance-evaluation tool prepared after actual volume is known, not a forward-planning horizon. Simply shortening the annual cycle to six months still leaves a static endpoint rather than continuous visibility."
+      "e": "A rolling (continuous) budget is specifically designed to keep a constant horizon in view: as each month or quarter closes, a new one is added at the far end, so the company always has a full year of budget ahead of it. Zero-based budgeting changes how each period's budget is justified, not the time horizon. A flexible budget is a performance-evaluation tool prepared after actual volume is known, not a forward-planning horizon. Simply shortening the annual cycle to six months still leaves a static endpoint rather than continuous visibility.",
+      "wrongWhy": {
+        "0": "Zero-based budgeting changes how each period's budget is justified (starting from zero rather than the prior year), not the length of the forward-looking horizon — it doesn't by itself give managers continuous visibility of a full year ahead.",
+        "2": "A flexible budget is a performance-evaluation tool prepared after actual volume is known, comparing actual results to what the budget would have been at that volume — it doesn't extend the forward-looking planning horizon the way a rolling budget does.",
+        "3": "Shortening the annual cycle to six months would actually reduce the forward-looking horizon to half a year at any point, rather than maintaining continuous visibility of a full year ahead as a rolling budget does."
+      }
     },
     {
       "id": "3-2-24",
@@ -2099,7 +2114,12 @@
         "The Budgeted Income Statement."
       ],
       "a": 1,
-      "e": "The Financial Budget is prepared in this order: Capital Expenditures Budget, then Cash Budget, then Budgeted Balance Sheet, then Budgeted Statement of Cash Flows. The Capital Expenditures Budget feeds the Cash Budget because planned equipment purchases are one of the disbursements the Cash Budget must project. The Budgeted Balance Sheet and Budgeted Statement of Cash Flows both come after the Cash Budget, not before it, and the Budgeted Income Statement belongs to the Operating Budget, which is completed earlier in the overall sequence."
+      "e": "The Financial Budget is prepared in this order: Capital Expenditures Budget, then Cash Budget, then Budgeted Balance Sheet, then Budgeted Statement of Cash Flows. The Capital Expenditures Budget feeds the Cash Budget because planned equipment purchases are one of the disbursements the Cash Budget must project. The Budgeted Balance Sheet and Budgeted Statement of Cash Flows both come after the Cash Budget, not before it, and the Budgeted Income Statement belongs to the Operating Budget, which is completed earlier in the overall sequence.",
+      "wrongWhy": {
+        "0": "The Budgeted Balance Sheet is prepared after the Cash Budget, not before it — it needs the Cash Budget's ending cash balance as an input, so it can't be the schedule that comes immediately before it.",
+        "2": "The Budgeted Statement of Cash Flows is prepared last in the Financial Budget sequence, after the Budgeted Balance Sheet, so it comes well after the Cash Budget rather than immediately before it.",
+        "3": "The Budgeted Income Statement is part of the Operating Budget, prepared earlier in the overall budgeting process, and it feeds the Financial Budget schedules — it is not the schedule that directly precedes the Cash Budget within the Financial Budget."
+      }
     },
     {
       "id": "3-3-29",

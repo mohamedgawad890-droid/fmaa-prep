@@ -673,7 +673,12 @@
         "$288,000."
       ],
       "a": 1,
-      "e": "Standard costing applies the standard rate to the standard hours ALLOWED for actual output — never the hours or rate actually used. Standard hours allowed = 2 DLH × 8,200 actual units = 16,400 hours. Direct labor cost applied = 16,400 hours × $18 standard rate = $295,200. The actual figures (2.1 hours/unit, $17.50/DLH) never enter a standard-costing calculation at all — that is precisely what distinguishes standard costing from normal and actual costing."
+      "e": "Standard costing applies the standard rate to the standard hours ALLOWED for actual output — never the hours or rate actually used. Standard hours allowed = 2 DLH × 8,200 actual units = 16,400 hours. Direct labor cost applied = 16,400 hours × $18 standard rate = $295,200. The actual figures (2.1 hours/unit, $17.50/DLH) never enter a standard-costing calculation at all — that is precisely what distinguishes standard costing from normal and actual costing.",
+      "wrongWhy": {
+        "0": "This does not result from correctly applying standard costing to this scenario. Standard costing applies the standard rate ($18) to the standard hours allowed for actual output (2 hours × 8,200 actual units = 16,400 hours), giving $295,200. Recheck that neither the actual hours per unit (2.1) nor the actual rate ($17.50) — figures that never enter a standard-costing calculation — were mixed into this result.",
+        "2": "This is close to what you'd get by multiplying the actual hours worked (2.1 hours/unit × 8,200 units ≈ 17,220 hours) by the actual rate ($17.50/DLH) — roughly the actual cost incurred. Standard costing never uses actual hours or actual rates; it applies the standard rate to the standard hours allowed for the actual output achieved (16,400 hours × $18 = $295,200).",
+        "3": "This results from using the standard hours allowed for the PLANNED production level (8,000 units) instead of the ACTUAL output (8,200 units): 8,000 × 2 hours × $18 = $288,000. Standard hours allowed must always be based on actual output, not the original plan."
+      }
     },
     {
       "id": "4-1-41",
@@ -685,7 +690,12 @@
         "$81,000."
       ],
       "a": 1,
-      "e": "Normal costing applies the predetermined overhead rate to the ACTUAL hours used, not the standard hours allowed — that distinction (actual hours vs. standard hours allowed) is exactly what separates normal costing from standard costing. Overhead applied = $6.00 predetermined rate × 12,900 actual machine hours = $77,400. Using the standard hours allowed (12,500) would incorrectly apply standard costing's logic; using actual overhead incurred ($79,000) describes actual costing, not normal costing."
+      "e": "Normal costing applies the predetermined overhead rate to the ACTUAL hours used, not the standard hours allowed — that distinction (actual hours vs. standard hours allowed) is exactly what separates normal costing from standard costing. Overhead applied = $6.00 predetermined rate × 12,900 actual machine hours = $77,400. Using the standard hours allowed (12,500) would incorrectly apply standard costing's logic; using actual overhead incurred ($79,000) describes actual costing, not normal costing.",
+      "wrongWhy": {
+        "0": "This applies the predetermined rate to the standard hours ALLOWED (12,500) rather than the actual hours used: $6.00 × 12,500 = $75,000. That calculation describes standard costing, not normal costing — normal costing always uses the actual quantity of the allocation base.",
+        "2": "This is the actual overhead incurred for the period ($79,000), which is what actual costing (not normal costing) would apply to production. Normal costing applies a predetermined rate to actual hours, giving $6.00 × 12,900 = $77,400, not the actual overhead dollars incurred.",
+        "3": "This does not result from correctly applying normal costing to this scenario. Normal costing applies the predetermined rate ($6.00) to the actual machine hours used (12,900), giving $77,400. Recheck which hours figure and which rate were used to arrive at this result."
+      }
     },
     {
       "id": "4-1-42",
@@ -697,7 +707,12 @@
         "$0 — fixed overhead is never inventoried under absorption costing."
       ],
       "a": 0,
-      "e": "Under absorption costing, fixed manufacturing overhead is a product cost and is applied to every unit produced, then carried in inventory until the unit is sold. Fixed OH per unit = $180,000 ÷ 15,000 units produced = $12 per unit. Ending inventory = 15,000 produced − 12,000 sold = 3,000 units. Fixed OH held in ending inventory = 3,000 units × $12 = $36,000. Under variable costing, by contrast, this $180,000 would be expensed entirely in the current period regardless of how many units were sold."
+      "e": "Under absorption costing, fixed manufacturing overhead is a product cost and is applied to every unit produced, then carried in inventory until the unit is sold. Fixed OH per unit = $180,000 ÷ 15,000 units produced = $12 per unit. Ending inventory = 15,000 produced − 12,000 sold = 3,000 units. Fixed OH held in ending inventory = 3,000 units × $12 = $36,000. Under variable costing, by contrast, this $180,000 would be expensed entirely in the current period regardless of how many units were sold.",
+      "wrongWhy": {
+        "1": "This results from computing the fixed-overhead rate using units sold (12,000) instead of units produced (15,000) as the denominator: $180,000 ÷ 12,000 = $15/unit, then $15 × 3,000 units in ending inventory = $45,000. Under absorption costing, the per-unit fixed overhead rate is always based on units produced, since that's the activity the overhead is applied to.",
+        "2": "This applies the correct $12 fixed-overhead rate per unit, but to the 12,000 units sold instead of the 3,000 units remaining in ending inventory (15,000 produced − 12,000 sold): 12,000 × $12 = $144,000. Only unsold units carry fixed overhead forward in ending inventory; the overhead attached to units sold flows through to cost of goods sold instead.",
+        "3": "This describes variable costing, not absorption costing. Under variable costing, all fixed manufacturing overhead is expensed in the period incurred and none of it is inventoried. Absorption costing does the opposite — it treats fixed manufacturing overhead as a product cost applied to units produced and carried in inventory until those units are sold, which is why $36,000 of fixed overhead sits in the 3,000 unsold units."
+      }
     },
     {
       "id": "4-1-43",
@@ -709,7 +724,12 @@
         "$240,000 higher."
       ],
       "a": 0,
-      "e": "When production exceeds sales, absorption costing reports higher income than variable costing, because part of the period's fixed overhead is deferred in ending inventory instead of being expensed immediately. Fixed OH per unit = $240,000 ÷ 20,000 units produced = $12/unit. Units in ending inventory = 20,000 − 17,500 = 2,500 units. Fixed OH deferred in ending inventory = 2,500 × $12 = $30,000. That $30,000 is expensed under variable costing (all fixed OH hits the period) but held back on the balance sheet under absorption costing, making absorption income $30,000 higher."
+      "e": "When production exceeds sales, absorption costing reports higher income than variable costing, because part of the period's fixed overhead is deferred in ending inventory instead of being expensed immediately. Fixed OH per unit = $240,000 ÷ 20,000 units produced = $12/unit. Units in ending inventory = 20,000 − 17,500 = 2,500 units. Fixed OH deferred in ending inventory = 2,500 × $12 = $30,000. That $30,000 is expensed under variable costing (all fixed OH hits the period) but held back on the balance sheet under absorption costing, making absorption income $30,000 higher.",
+      "wrongWhy": {
+        "1": "This reverses the direction of the effect. When production (20,000 units) exceeds sales (17,500 units), absorption costing income is HIGHER than variable costing income, not lower, because part of the period's fixed overhead is deferred in the 2,500 units of ending inventory instead of being expensed immediately.",
+        "2": "Production and sales are not close enough for the difference to be immaterial here — 2,500 units, or 12.5% of production, remain in ending inventory. That's enough to defer $30,000 of fixed overhead ($240,000 ÷ 20,000 units × 2,500 units) under absorption costing, creating a real difference between the two methods' reported income.",
+        "3": "This is the entire period's fixed manufacturing overhead, not the amount deferred in ending inventory. Only the fixed overhead attached to the unsold units (2,500 of the 20,000 produced) is deferred under absorption costing: $240,000 ÷ 20,000 units × 2,500 units = $30,000, not the full $240,000."
+      }
     }
   ],
   "4-2": [
@@ -2988,7 +3008,12 @@
         "ROI stays at 15%; residual income increases."
       ],
       "a": 0,
-      "e": "ROI = Operating Income ÷ Assets. Since neither operating income nor assets changed, ROI is unaffected by a change in the required rate of return — it stays at 15%. Residual income, however, is Operating Income − (Assets × Required Rate of Return), and the required rate of return is precisely what changed. Raising the required rate increases the imputed charge subtracted from operating income, so residual income falls. This is a key structural difference between the two measures: ROI depends only on the segment's own income and assets, while residual income also depends on the target rate management sets."
+      "e": "ROI = Operating Income ÷ Assets. Since neither operating income nor assets changed, ROI is unaffected by a change in the required rate of return — it stays at 15%. Residual income, however, is Operating Income − (Assets × Required Rate of Return), and the required rate of return is precisely what changed. Raising the required rate increases the imputed charge subtracted from operating income, so residual income falls. This is a key structural difference between the two measures: ROI depends only on the segment's own income and assets, while residual income also depends on the target rate management sets.",
+      "wrongWhy": {
+        "1": "This reverses which metric is affected. ROI = Operating Income ÷ Assets, and neither figure changed, so ROI is unaffected by the change in required rate of return and stays at 15%. It's Residual Income — Operating Income minus (Assets × Required Rate of Return) — that changes, because the required rate is exactly the input that was raised.",
+        "2": "ROI is a percentage, not a dollar figure, so it cannot 'decrease by a dollar amount' — and in this case it doesn't change at all, since neither operating income nor assets changed. Only Residual Income, a dollar figure, is affected by the higher required rate of return.",
+        "3": "This gets the direction of the Residual Income effect backwards. Raising the required rate of return increases the imputed capital charge (Assets × Required Rate) subtracted from operating income, which decreases Residual Income, not increases it."
+      }
     },
     {
       "id": "4-4-24",
