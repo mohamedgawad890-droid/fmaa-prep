@@ -1,0 +1,400 @@
+[
+  {
+    "en": "Sole Proprietorship",
+    "ar": "المنشأة الفردية",
+    "cat": "Fundamentals",
+    "enDef": "A business owned and run by one person, with no legal separation between the owner and the business; the owner is personally liable for all debts.",
+    "arDef": "منشأة يملكها ويديرها شخص واحد، ولا يوجد فصل قانوني بين المالك والمنشأة، ويكون المالك مسؤولاً شخصياً عن جميع الديون."
+  },
+  {
+    "en": "Partnership",
+    "ar": "شركة أشخاص (شراكة)",
+    "cat": "Fundamentals",
+    "enDef": "A business owned by two or more people who share profits, losses, and management responsibilities according to a partnership agreement.",
+    "arDef": "منشأة يملكها شخصان أو أكثر يتقاسمون الأرباح والخسائر ومسؤوليات الإدارة وفقاً لعقد الشراكة."
+  },
+  {
+    "en": "Corporation",
+    "ar": "الشركة المساهمة",
+    "cat": "Fundamentals",
+    "enDef": "A business entity that is legally separate from its owners (shareholders), giving owners limited liability and the ability to raise capital by issuing stock.",
+    "arDef": "كيان تجاري منفصل قانونياً عن مالكيه (المساهمين)، مما يمنح الملاك مسؤولية محدودة وقدرة على جمع رأس المال عن طريق إصدار الأسهم."
+  },
+  {
+    "en": "Private Company",
+    "ar": "الشركة الخاصة",
+    "cat": "Fundamentals",
+    "enDef": "A company whose shares are not traded on a public stock exchange and are held by a limited number of owners.",
+    "arDef": "شركة لا يتم تداول أسهمها في سوق مالية عامة، ويحتفظ بها عدد محدود من الملاك."
+  },
+  {
+    "en": "Deferred Expense (Prepaid)",
+    "ar": "المصروف المؤجل (المدفوع مقدماً)",
+    "cat": "Accounting Cycle",
+    "enDef": "A payment made in advance for goods or services to be received in the future; recorded as an asset until the benefit is used up.",
+    "arDef": "دفعة تُسدد مقدماً مقابل سلع أو خدمات سيتم الحصول عليها لاحقاً، وتُسجل كأصل حتى يتم استهلاك منفعتها."
+  },
+  {
+    "en": "Asset Valuation Adjustment",
+    "ar": "تسوية تقييم الأصل",
+    "cat": "Assets",
+    "enDef": "An adjusting entry that changes the recorded (book) value of an asset to reflect its current fair value, impairment, or an updated estimate.",
+    "arDef": "قيد تسوية يغيّر القيمة الدفترية المسجلة للأصل ليعكس قيمته العادلة الحالية أو انخفاض قيمته أو تقديراً محدثاً."
+  },
+  {
+    "en": "Operating Activities",
+    "ar": "الأنشطة التشغيلية",
+    "cat": "Statements",
+    "enDef": "The section of the statement of cash flows showing cash inflows and outflows from a company's core, day-to-day business operations.",
+    "arDef": "قسم من قائمة التدفقات النقدية يوضح التدفقات النقدية الداخلة والخارجة من الأنشطة التشغيلية الأساسية اليومية للشركة."
+  },
+  {
+    "en": "Investing Activities",
+    "ar": "الأنشطة الاستثمارية",
+    "cat": "Statements",
+    "enDef": "The section of the statement of cash flows showing cash used for or generated from buying and selling long-term assets and investments.",
+    "arDef": "قسم من قائمة التدفقات النقدية يوضح النقد المستخدم في أو الناتج عن شراء وبيع الأصول والاستثمارات طويلة الأجل."
+  },
+  {
+    "en": "Financing Activities",
+    "ar": "الأنشطة التمويلية",
+    "cat": "Statements",
+    "enDef": "The section of the statement of cash flows showing cash flows related to debt, equity, and dividends — how the company raises and repays capital.",
+    "arDef": "قسم من قائمة التدفقات النقدية يوضح التدفقات النقدية المتعلقة بالديون وحقوق الملكية والأرباح الموزعة — أي كيفية جمع الشركة لرأس المال وسداده."
+  },
+  {
+    "en": "Materials Requirements Planning",
+    "ar": "تخطيط احتياجات المواد",
+    "cat": "Inventory",
+    "enDef": "A production planning system that calculates the materials and components needed, and when, based on a master production schedule.",
+    "arDef": "نظام لتخطيط الإنتاج يحسب المواد والمكونات المطلوبة وتوقيت الحاجة إليها بناءً على جدول الإنتاج الرئيسي.",
+    "abbr": "MRP"
+  },
+  {
+    "en": "Double Declining Balance Method",
+    "ar": "طريقة القسط المتناقص المضاعف",
+    "cat": "Assets",
+    "enDef": "An accelerated depreciation method that applies twice the straight-line rate to the asset's declining book value each period.",
+    "arDef": "طريقة إهلاك متسارعة تطبق ضعف معدل القسط الثابت على القيمة الدفترية المتناقصة للأصل في كل فترة.",
+    "abbr": "DDB"
+  },
+  {
+    "en": "Sum-of-the-Years'-Digits Method",
+    "ar": "طريقة مجموع أرقام السنين",
+    "cat": "Assets",
+    "enDef": "An accelerated depreciation method that applies a declining fraction (based on the sum of the years of useful life) to the depreciable cost each year.",
+    "arDef": "طريقة إهلاك متسارعة تطبق كسراً متناقصاً (بناءً على مجموع سنوات العمر الإنتاجي) على التكلفة القابلة للإهلاك كل سنة.",
+    "abbr": "SYD"
+  },
+  {
+    "en": "Units of Production Method",
+    "ar": "طريقة وحدات الإنتاج",
+    "cat": "Assets",
+    "enDef": "A depreciation method that allocates an asset's cost based on actual usage or output, rather than the passage of time.",
+    "arDef": "طريقة إهلاك توزع تكلفة الأصل بناءً على الاستخدام أو الإنتاج الفعلي بدلاً من مرور الزمن.",
+    "abbr": "UOP"
+  },
+  {
+    "en": "Quick (Acid-Test) Ratio",
+    "ar": "نسبة السيولة السريعة",
+    "cat": "Ratios",
+    "enDef": "A liquidity ratio measuring a company's ability to meet short-term obligations using only its most liquid assets (cash, marketable securities, and receivables), excluding inventory.",
+    "arDef": "نسبة سيولة تقيس قدرة الشركة على سداد التزاماتها قصيرة الأجل باستخدام أكثر أصولها سيولة (النقد والأوراق المالية والذمم المدينة) باستثناء المخزون."
+  },
+  {
+    "en": "Debt to Equity Ratio",
+    "ar": "نسبة الدين إلى حقوق الملكية",
+    "cat": "Ratios",
+    "enDef": "A leverage ratio comparing total liabilities to total shareholders' equity, showing how much of the company is financed by debt versus owners' capital.",
+    "arDef": "نسبة رافعة مالية تقارن إجمالي الالتزامات بإجمالي حقوق المساهمين، وتوضح مدى تمويل الشركة بالديون مقابل رأس مال الملاك.",
+    "abbr": "D/E"
+  },
+  {
+    "en": "Interest Coverage Ratio",
+    "ar": "نسبة تغطية الفائدة",
+    "cat": "Ratios",
+    "enDef": "A leverage ratio (EBIT divided by interest expense) measuring how easily a company can pay interest on its outstanding debt.",
+    "arDef": "نسبة رافعة مالية (الأرباح قبل الفوائد والضرائب مقسومة على مصروف الفائدة) تقيس مدى سهولة سداد الشركة لفوائد ديونها القائمة.",
+    "abbr": "TIE"
+  },
+  {
+    "en": "Days' Sales in Receivables",
+    "ar": "متوسط فترة تحصيل الذمم المدينة",
+    "cat": "Ratios",
+    "enDef": "The average number of days it takes a company to collect payment after a credit sale; calculated as 365 divided by receivables turnover.",
+    "arDef": "متوسط عدد الأيام التي تستغرقها الشركة لتحصيل قيمة المبيعات الآجلة، ويُحسب بقسمة 365 على معدل دوران الذمم المدينة."
+  },
+  {
+    "en": "Days' Sales in Inventory",
+    "ar": "متوسط فترة بقاء المخزون",
+    "cat": "Ratios",
+    "enDef": "The average number of days inventory is held before being sold; calculated as 365 divided by inventory turnover.",
+    "arDef": "متوسط عدد الأيام التي يبقى فيها المخزون قبل بيعه، ويُحسب بقسمة 365 على معدل دوران المخزون."
+  },
+  {
+    "en": "Accounts Payable Turnover",
+    "ar": "معدل دوران الذمم الدائنة",
+    "cat": "Ratios",
+    "enDef": "An activity ratio measuring how many times per year a company pays off its average accounts payable balance.",
+    "arDef": "نسبة نشاط تقيس عدد مرات سداد الشركة لمتوسط رصيد ذممها الدائنة خلال السنة."
+  },
+  {
+    "en": "Days' Purchases in Payables",
+    "ar": "متوسط فترة سداد الذمم الدائنة",
+    "cat": "Ratios",
+    "enDef": "The average number of days a company takes to pay its suppliers; calculated as 365 divided by accounts payable turnover.",
+    "arDef": "متوسط عدد الأيام التي تستغرقها الشركة لسداد مورديها، ويُحسب بقسمة 365 على معدل دوران الذمم الدائنة."
+  },
+  {
+    "en": "Total Asset Turnover",
+    "ar": "معدل دوران إجمالي الأصول",
+    "cat": "Ratios",
+    "enDef": "An activity ratio measuring how efficiently a company uses its total assets to generate sales; calculated as sales divided by average total assets.",
+    "arDef": "نسبة نشاط تقيس كفاءة استخدام الشركة لإجمالي أصولها في توليد المبيعات، وتُحسب بقسمة المبيعات على متوسط إجمالي الأصول."
+  },
+  {
+    "en": "Consultative Budgeting",
+    "ar": "الموازنة الاستشارية",
+    "cat": "Budgeting",
+    "enDef": "A budgeting approach in which management sets the final targets but consults lower-level managers for input before finalizing them.",
+    "arDef": "أسلوب موازنة تضع فيه الإدارة الأهداف النهائية لكن بعد استشارة المديرين في المستويات الأدنى قبل اعتمادها."
+  },
+  {
+    "en": "Direct Materials Purchases Budget",
+    "ar": "موازنة مشتريات المواد المباشرة",
+    "cat": "Budgeting",
+    "enDef": "A schedule that determines the quantity and cost of direct materials to be purchased during a period, based on production needs and desired inventory levels.",
+    "arDef": "جدول يحدد كمية وتكلفة المواد المباشرة الواجب شراؤها خلال فترة معينة، بناءً على احتياجات الإنتاج ومستويات المخزون المطلوبة."
+  },
+  {
+    "en": "Manufacturing Overhead Budget",
+    "ar": "موازنة التكاليف الصناعية غير المباشرة",
+    "cat": "Budgeting",
+    "enDef": "A schedule that projects the variable and fixed manufacturing overhead costs expected to be incurred to support the production budget.",
+    "arDef": "جدول يقدّر التكاليف الصناعية غير المباشرة المتغيرة والثابتة المتوقع تكبدها لدعم موازنة الإنتاج."
+  },
+  {
+    "en": "Budgeted Cost of Goods Manufactured",
+    "ar": "التكلفة المقدرة للبضاعة المصنعة",
+    "cat": "Budgeting",
+    "enDef": "The total budgeted cost of direct materials, direct labor, and manufacturing overhead used in production during a period, adjusted for work-in-process inventory.",
+    "arDef": "إجمالي التكلفة المقدرة للمواد المباشرة والعمل المباشر والتكاليف الصناعية غير المباشرة المستخدمة في الإنتاج خلال فترة، معدلة بمخزون الإنتاج تحت التشغيل."
+  },
+  {
+    "en": "Budgeted Cost of Goods Sold",
+    "ar": "تكلفة البضاعة المباعة المقدرة",
+    "cat": "Budgeting",
+    "enDef": "The projected cost of the finished goods a company expects to sell during a period, based on beginning inventory, cost of goods manufactured, and ending inventory targets.",
+    "arDef": "التكلفة المتوقعة للبضاعة التامة الصنع التي تتوقع الشركة بيعها خلال فترة، بناءً على المخزون الأول والتكلفة المصنعة ومستهدفات المخزون الآخر."
+  },
+  {
+    "en": "Nonmanufacturing Budget",
+    "ar": "موازنة الأنشطة غير الصناعية",
+    "cat": "Budgeting",
+    "enDef": "The budget covering selling, general, and administrative expenses that are not part of the manufacturing (product cost) process.",
+    "arDef": "الموازنة التي تغطي مصروفات البيع والمصروفات العمومية والإدارية التي لا تُعد جزءاً من عملية التصنيع (تكلفة المنتج)."
+  },
+  {
+    "en": "Budgeted Income Statement",
+    "ar": "قائمة الدخل المقدرة",
+    "cat": "Budgeting",
+    "enDef": "The final schedule of the operating budget, projecting a company's revenues, expenses, and net income for the budget period.",
+    "arDef": "الجدول النهائي للموازنة التشغيلية، ويقدّر إيرادات الشركة ومصروفاتها وصافي دخلها خلال فترة الموازنة."
+  },
+  {
+    "en": "Semi-Fixed (Step) Cost",
+    "ar": "التكلفة شبه الثابتة (المتدرجة)",
+    "cat": "Cost Management",
+    "enDef": "A cost that stays fixed over a range of activity but jumps to a new level once activity exceeds that range, such as adding a supervisor for a new shift.",
+    "arDef": "تكلفة تبقى ثابتة ضمن نطاق معين من النشاط ثم تقفز إلى مستوى جديد عند تجاوز النشاط لهذا النطاق، مثل تعيين مشرف إضافي عند إضافة وردية جديدة."
+  },
+  {
+    "en": "Actual Costing",
+    "ar": "نظام التكلفة الفعلية",
+    "cat": "Cost Management",
+    "enDef": "A costing method that assigns actual direct material and labor costs, and actual overhead rates applied to actual input, to units produced.",
+    "arDef": "طريقة تكلفة تُحمّل الوحدات المنتجة بالتكلفة الفعلية للمواد والعمل المباشر ومعدل التكاليف الصناعية غير المباشرة الفعلي المطبق على المدخلات الفعلية."
+  },
+  {
+    "en": "Allocation Base (Cost Driver)",
+    "ar": "أساس التوزيع (محرك التكلفة)",
+    "cat": "Cost Management",
+    "enDef": "The activity measure — such as direct labor hours or machine hours — used to allocate overhead costs to products or cost objects.",
+    "arDef": "مقياس النشاط — مثل ساعات العمل المباشر أو ساعات الآلة — المستخدم لتوزيع التكاليف الصناعية غير المباشرة على المنتجات أو أوعية التكلفة."
+  },
+  {
+    "en": "Plant-Wide Overhead Allocation",
+    "ar": "توزيع التكاليف الصناعية غير المباشرة على مستوى المصنع",
+    "cat": "Cost Management",
+    "enDef": "An overhead allocation method that pools all of a plant's overhead costs together and allocates them using a single, plant-wide allocation base.",
+    "arDef": "طريقة توزيع تجمع كل التكاليف الصناعية غير المباشرة للمصنع في وعاء واحد وتوزعها باستخدام أساس توزيع واحد على مستوى المصنع."
+  },
+  {
+    "en": "Departmental Overhead Allocation",
+    "ar": "توزيع التكاليف الصناعية غير المباشرة على مستوى الأقسام",
+    "cat": "Cost Management",
+    "enDef": "An overhead allocation method that pools each department's overhead costs separately and allocates them using an allocation base suited to that department.",
+    "arDef": "طريقة توزيع تجمع تكاليف كل قسم صناعية غير مباشرة على حدة وتوزعها باستخدام أساس توزيع مناسب لذلك القسم."
+  },
+  {
+    "en": "Over-Costed Product",
+    "ar": "المنتج المحمّل بتكلفة أعلى من الفعلي",
+    "cat": "Cost Management",
+    "enDef": "A product that, under a given overhead allocation method, is assigned more cost than the resources it actually consumes.",
+    "arDef": "منتج يتم تحميله، وفق طريقة توزيع معينة للتكاليف الصناعية غير المباشرة، بتكلفة أكبر من الموارد التي يستهلكها فعلياً."
+  },
+  {
+    "en": "Under-Costed Product",
+    "ar": "المنتج المحمّل بتكلفة أقل من الفعلي",
+    "cat": "Cost Management",
+    "enDef": "A product that, under a given overhead allocation method, is assigned less cost than the resources it actually consumes.",
+    "arDef": "منتج يتم تحميله، وفق طريقة توزيع معينة للتكاليف الصناعية غير المباشرة، بتكلفة أقل من الموارد التي يستهلكها فعلياً."
+  },
+  {
+    "en": "Direct Materials Price Variance",
+    "ar": "انحراف سعر المواد المباشرة",
+    "cat": "Variance Analysis",
+    "enDef": "The difference between the actual price paid and the standard price for direct materials, multiplied by the actual quantity purchased.",
+    "arDef": "الفرق بين السعر الفعلي المدفوع والسعر المعياري للمواد المباشرة، مضروباً في الكمية الفعلية المشتراة."
+  },
+  {
+    "en": "Direct Materials Quantity Variance",
+    "ar": "انحراف كمية المواد المباشرة",
+    "cat": "Variance Analysis",
+    "enDef": "The difference between the actual quantity of materials used and the standard quantity allowed for actual output, multiplied by the standard price.",
+    "arDef": "الفرق بين الكمية الفعلية للمواد المستخدمة والكمية المعيارية المسموح بها للإنتاج الفعلي، مضروباً في السعر المعياري."
+  },
+  {
+    "en": "Direct Labor Rate Variance",
+    "ar": "انحراف معدل أجر العمل المباشر",
+    "cat": "Variance Analysis",
+    "enDef": "The difference between the actual hourly labor rate paid and the standard rate, multiplied by the actual hours worked.",
+    "arDef": "الفرق بين معدل الأجر الفعلي للساعة المدفوع والمعدل المعياري، مضروباً في عدد ساعات العمل الفعلية."
+  },
+  {
+    "en": "Direct Labor Efficiency Variance",
+    "ar": "انحراف كفاءة العمل المباشر",
+    "cat": "Variance Analysis",
+    "enDef": "The difference between the actual labor hours used and the standard hours allowed for actual output, multiplied by the standard rate.",
+    "arDef": "الفرق بين ساعات العمل الفعلية المستخدمة والساعات المعيارية المسموح بها للإنتاج الفعلي، مضروباً في المعدل المعياري."
+  },
+  {
+    "en": "Fixed Overhead Production-Volume Variance",
+    "ar": "انحراف حجم إنتاج التكاليف الصناعية الثابتة",
+    "cat": "Variance Analysis",
+    "enDef": "The difference between budgeted fixed overhead and the fixed overhead applied to production (standard rate × standard input allowed); it measures capacity utilization, not spending.",
+    "arDef": "الفرق بين التكاليف الصناعية الثابتة المدرجة في الموازنة والتكاليف الثابتة المحملة على الإنتاج (المعدل المعياري × المدخلات المعيارية المسموح بها)، وهو يقيس مدى استغلال الطاقة الإنتاجية وليس الإنفاق."
+  },
+  {
+    "en": "Required Rate of Return (Hurdle Rate)",
+    "ar": "معدل العائد المطلوب (معدل العتبة)",
+    "cat": "Performance Metrics",
+    "enDef": "The minimum rate of return a segment or project must earn to justify the investment of company resources, often based on the weighted average cost of capital.",
+    "arDef": "الحد الأدنى لمعدل العائد الذي يجب أن يحققه قطاع أو مشروع لتبرير استثمار موارد الشركة، ويُبنى غالباً على المتوسط المرجح لتكلفة رأس المال."
+  },
+  {
+    "en": "Imputed Cost of Investment",
+    "ar": "التكلفة الافتراضية للاستثمار",
+    "cat": "Performance Metrics",
+    "enDef": "The notional charge for capital used in computing residual income, equal to a segment's asset base multiplied by the required rate of return.",
+    "arDef": "الرسم الافتراضي لرأس المال المستخدم عند احتساب الدخل المتبقي، ويساوي قاعدة أصول القطاع مضروبة في معدل العائد المطلوب."
+  },
+  {
+    "en": "Target Profit Volume",
+    "ar": "حجم الربح المستهدف",
+    "cat": "Decision Making",
+    "enDef": "The sales volume required to earn a specific target profit, calculated as (fixed costs + target profit) divided by contribution margin per unit.",
+    "arDef": "حجم المبيعات المطلوب لتحقيق ربح مستهدف محدد، ويُحسب بقسمة (التكاليف الثابتة + الربح المستهدف) على هامش المساهمة للوحدة."
+  },
+  {
+    "en": "Marginal Analysis",
+    "ar": "التحليل الحدي",
+    "cat": "Decision Making",
+    "enDef": "A decision-making approach that compares the additional (marginal) revenue and additional (marginal) cost of one more unit of activity.",
+    "arDef": "أسلوب لاتخاذ القرار يقارن الإيراد الإضافي (الحدي) والتكلفة الإضافية (الحدية) لوحدة نشاط واحدة إضافية."
+  },
+  {
+    "en": "Avoidable Cost",
+    "ar": "التكلفة القابلة للتجنب",
+    "cat": "Decision Making",
+    "enDef": "A cost that will not be incurred if a particular decision, such as dropping a product line, is made; it is relevant to that decision.",
+    "arDef": "تكلفة لن يتم تكبدها في حال اتخاذ قرار معين، مثل إلغاء خط إنتاج، وتُعد ذات صلة بذلك القرار."
+  },
+  {
+    "en": "Unavoidable Cost",
+    "ar": "التكلفة غير القابلة للتجنب",
+    "cat": "Decision Making",
+    "enDef": "A cost that will continue to be incurred regardless of a particular decision; it is not relevant to that decision.",
+    "arDef": "تكلفة ستستمر بغض النظر عن اتخاذ قرار معين، ولا تُعد ذات صلة بذلك القرار."
+  },
+  {
+    "en": "Special Order Decision",
+    "ar": "قرار الطلب الخاص",
+    "cat": "Decision Making",
+    "enDef": "A decision about whether to accept a one-time order, usually at a price below the normal selling price, typically evaluated using only relevant (incremental) costs.",
+    "arDef": "قرار بشأن قبول طلبية استثنائية، غالباً بسعر أقل من سعر البيع المعتاد، ويُقيَّم عادة باستخدام التكاليف ذات الصلة (الإضافية) فقط."
+  },
+  {
+    "en": "Make-or-Buy Decision",
+    "ar": "قرار التصنيع أو الشراء",
+    "cat": "Decision Making",
+    "enDef": "A decision about whether to produce a component or product internally or purchase it from an outside supplier.",
+    "arDef": "قرار بشأن تصنيع مكوّن أو منتج داخلياً أو شراؤه من مورد خارجي."
+  },
+  {
+    "en": "Sell-or-Process-Further Decision",
+    "ar": "قرار البيع أو المعالجة الإضافية",
+    "cat": "Decision Making",
+    "enDef": "A decision about whether to sell a joint product at the split-off point or process it further into a more finished product before selling it.",
+    "arDef": "قرار بشأن بيع منتج مشترك عند نقطة الانفصال أو معالجته أكثر لإنتاج سلعة أكثر اكتمالاً قبل بيعها."
+  },
+  {
+    "en": "Fairness (Business Ethics)",
+    "ar": "الإنصاف (في أخلاقيات الأعمال)",
+    "cat": "Professional Ethics",
+    "enDef": "Acting free from bias, dishonesty, or injustice — treating stakeholders equitably and impartially in business decisions.",
+    "arDef": "التصرف بعيداً عن التحيز أو عدم الأمانة أو الظلم — أي معاملة أصحاب المصلحة بإنصاف وحياد في قرارات الأعمال."
+  },
+  {
+    "en": "Fraud Triangle",
+    "ar": "مثلث الاحتيال",
+    "cat": "Professional Ethics",
+    "enDef": "A model identifying the three conditions — pressure, opportunity, and rationalization — that together create the conditions for a trusted person to commit fraud.",
+    "arDef": "نموذج يحدد ثلاثة شروط — الضغط والفرصة والتبرير — تجتمع معاً لتهيئة الظروف التي تدفع شخصاً موثوقاً به لارتكاب الاحتيال."
+  },
+  {
+    "en": "Pressure (Fraud Triangle)",
+    "ar": "الضغط (في مثلث الاحتيال)",
+    "cat": "Professional Ethics",
+    "enDef": "A financial or personal problem, often one the individual feels cannot be shared with others, that motivates someone to commit fraud.",
+    "arDef": "مشكلة مالية أو شخصية، غالباً ما يشعر الشخص بأنه لا يستطيع مشاركتها مع الآخرين، تدفعه لارتكاب الاحتيال."
+  },
+  {
+    "en": "Opportunity (Fraud Triangle)",
+    "ar": "الفرصة (في مثلث الاحتيال)",
+    "cat": "Professional Ethics",
+    "enDef": "A weakness in internal controls or oversight that allows a person to commit and conceal a fraudulent act.",
+    "arDef": "ضعف في الرقابة الداخلية أو الإشراف يتيح لشخص ما ارتكاب فعل احتيالي وإخفاءه."
+  },
+  {
+    "en": "Rationalization (Fraud Triangle)",
+    "ar": "التبرير (في مثلث الاحتيال)",
+    "cat": "Professional Ethics",
+    "enDef": "The internal justification that allows a person to view a fraudulent act as acceptable rather than as wrongdoing.",
+    "arDef": "التبرير الداخلي الذي يجعل الشخص ينظر إلى الفعل الاحتيالي على أنه مقبول وليس خطأً."
+  },
+  {
+    "en": "Honesty (IMA Principle)",
+    "ar": "الأمانة (كمبدأ في بيان IMA الأخلاقي)",
+    "cat": "Professional Ethics",
+    "enDef": "One of the four IMA ethical principles: truthfulness and trustworthiness, and freedom from deceit or fraud.",
+    "arDef": "أحد المبادئ الأخلاقية الأربعة لمعهد المحاسبين الإداريين: الصدق والجدارة بالثقة والتحرر من الخداع أو الاحتيال."
+  },
+  {
+    "en": "Manufacturing Overhead",
+    "ar": "التكاليف الصناعية غير المباشرة",
+    "cat": "Cost Management",
+    "enDef": "All manufacturing costs other than direct materials and direct labor — including indirect materials, indirect labor, and factory costs like utilities and depreciation.",
+    "arDef": "جميع تكاليف التصنيع باستثناء المواد المباشرة والعمل المباشر — وتشمل المواد غير المباشرة والعمل غير المباشر وتكاليف المصنع مثل المرافق والإهلاك."
+  }
+]
