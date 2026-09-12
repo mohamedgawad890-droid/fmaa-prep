@@ -107,6 +107,68 @@
     {
       "t": "tip",
       "v": "DDB key rule: NEVER depreciate below salvage value. In Year 4, DDB gives $6,250 but book value would drop to $6,250 which is below the $10,000 salvage — so only record $2,500 to reach exactly $10,000."
+    },
+    {
+      "t": "h",
+      "v": "Valuation of Intangible Assets"
+    },
+    {
+      "t": "p",
+      "v": "Intangible assets (patents, trademarks, copyrights, customer lists, purchased goodwill) are recorded at cost — the amount paid to acquire them, including legal/registration fees needed to get them ready for use. Internally generated intangibles (a patent a company develops itself, self-built customer goodwill) are generally NOT capitalized, because the value did not arise from a past exchange transaction — only the direct legal/filing fees may be capitalized. Related R&D costs are expensed as incurred."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Useful Life",
+        "Treatment",
+        "Example"
+      ],
+      "r": [
+        [
+          "Finite (determinable) life",
+          "Amortized over useful life; amount = Cost − Residual Value (residual is usually $0)",
+          "A purchased patent with a 10-year remaining legal life"
+        ],
+        [
+          "Indefinite life",
+          "NOT amortized; tested for impairment at least annually",
+          "Purchased goodwill; a trademark renewable indefinitely"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "v": "All intangible assets — amortized or not — must be evaluated regularly for impairment. If the carrying amount is not recoverable, an impairment loss is recognized to write the asset down to fair value."
+    },
+    {
+      "t": "tip",
+      "v": "Exam distinction: Finite-life intangibles = amortize (like depreciation, but for intangibles). Indefinite-life intangibles (goodwill is the classic example) = never amortized, only impairment-tested. Internally generated goodwill and self-developed patents are never recorded as assets — only purchased/acquired intangibles are capitalized."
+    },
+    {
+      "t": "h",
+      "v": "Valuation of Liabilities"
+    },
+    {
+      "t": "p",
+      "v": "A liability is a present obligation of an entity to transfer cash, goods, services, or other economic benefits to another party in the future, arising from a past transaction or event. To be a liability, the entity must be presently obligated — legally or otherwise bound to settle the obligation."
+    },
+    {
+      "t": "b",
+      "v": [
+        "A liability may require paying cash, providing services, delivering goods, or transferring other assets (including shares).",
+        "Liabilities routinely arise from exchange transactions to acquire funds (borrowing money) or acquire goods/services needed to operate.",
+        "Selling a product with a warranty or guarantee creates a liability — the entity is obligated to repair, replace, or refund if the product is defective.",
+        "A cash receipt itself can create a liability if the company is obligated to provide a good/service or refund the cash by a certain date (e.g., unearned/deferred revenue)."
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Liability Valuation — Warranty Obligation",
+      "v": "A company sells 10,000 units with a 1-year warranty. Based on historical experience, it expects 3% of units to require repair at an average cost of $40 per unit.\n\nEstimated warranty liability = 10,000 × 3% × $40 = $12,000\n\nJournal entry at time of sale (matching principle — expense recognized with the related revenue):\n  Dr  Warranty Expense          12,000\n      Cr  Estimated Warranty Liability   12,000\n\nAs actual repairs are performed, the liability is reduced (not re-expensed):\n  Dr  Estimated Warranty Liability   (actual repair cost)\n      Cr  Cash / Parts Inventory"
+    },
+    {
+      "t": "tip",
+      "v": "Most liabilities are valued at the amount expected to be paid (face value for accounts/notes payable maturing soon). Estimated liabilities — like warranties — are valued at the best estimate of the future outflow, recognized in the SAME period as the related revenue (matching principle), not when the cash is actually paid out."
     }
   ],
   "2-2": [
@@ -182,6 +244,32 @@
     {
       "t": "tip",
       "v": "OCI items never appear in Net Income but DO appear in Comprehensive Income (Net Income + OCI). On the exam: if a question asks what affects net income, OCI items do NOT. If a question asks what affects stockholders' equity or comprehensive income, OCI items DO."
+    },
+    {
+      "t": "h",
+      "v": "Income Statement Classification — Continuing vs Discontinued Operations"
+    },
+    {
+      "t": "p",
+      "v": "A multi-step income statement separates results into components so users can judge which earnings are likely to recur. The two headline components are Income from Continuing Operations and Income (Loss) from Discontinued Operations, reported separately, net of tax."
+    },
+    {
+      "t": "def",
+      "term": "Discontinued Operations",
+      "v": "A component of an entity (a separate major line of business or geographic area) that the company has either disposed of or classified as held for sale, AND whose disposal represents a strategic shift that has (or will have) a major effect on the entity's operations and financial results. Its results are removed from continuing operations and reported separately, net of tax, below Income from Continuing Operations."
+    },
+    {
+      "t": "ex",
+      "l": "Income Statement — Continuing vs Discontinued Operations",
+      "v": "Income from continuing operations (before tax)     $500,000\nIncome tax expense                                 (125,000)\nIncome from continuing operations                   375,000\n\nDiscontinued operations:\n  Loss from operations of discontinued division      (80,000)\n  Income tax benefit                                   20,000\n  Loss on discontinued operations, net of tax          (60,000)\n\nNet Income                                         $ 315,000"
+    },
+    {
+      "t": "p",
+      "v": "Items that do NOT qualify as discontinued operations — but are unusual, infrequent, or non-operating — are instead reported within continuing operations, typically as a separate line before tax (e.g., 'Loss on litigation settlement', 'Restructuring costs', 'Gain on sale of a minor asset'). They are NOT shown net of tax and are NOT shown below net income the way discontinued operations are."
+    },
+    {
+      "t": "tip",
+      "v": "Exam trap: not every unusual or one-time gain/loss is a 'discontinued operation.' The strict test is (1) it's a separate major line of business or geographic area being exited or held for sale, AND (2) it's a strategic shift with a major effect on results. A one-off asset sale, a lawsuit settlement, or closing one branch of a multi-branch business usually does NOT qualify — it stays in continuing operations."
     }
   ],
   "2-3": [
@@ -231,6 +319,66 @@
       "t": "ex",
       "l": "Treasury Stock Buy and Reissue",
       "v": "Buy back 1,000 shares at $20/share:\n  Dr  Treasury Stock    20,000\n      Cr  Cash               20,000\n\nReissue 500 shares at $25/share:\n  Dr  Cash (500 × $25)                  12,500\n      Cr  Treasury Stock (500 × $20 cost)   10,000\n      Cr  APIC-Treasury Stock                2,500\n(Gain goes to APIC — never to income statement)"
+    },
+    {
+      "t": "h",
+      "v": "Stock Dividends — Small vs Large"
+    },
+    {
+      "t": "p",
+      "v": "A stock dividend distributes additional shares of the company's own stock to existing shareholders instead of cash. It transfers an amount from Retained Earnings to the contributed-capital accounts (Common Stock and, for a small stock dividend, APIC) — total equity does NOT change, and no asset (cash) leaves the company."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "",
+        "Small Stock Dividend (< 20–25%)",
+        "Large Stock Dividend (> 20–25%)"
+      ],
+      "r": [
+        [
+          "Valued at",
+          "Fair market value (FMV) per share on declaration date",
+          "Par (or stated) value per share"
+        ],
+        [
+          "Retained Earnings reduced by",
+          "Shares issued × FMV",
+          "Shares issued × Par value"
+        ],
+        [
+          "Rationale",
+          "Small enough that it shouldn't materially affect market price, so FMV is used",
+          "Large enough that it behaves like a stock split, so only par value is capitalized"
+        ]
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Small Stock Dividend Journal Entry",
+      "v": "Company has 100,000 shares outstanding ($1 par). Board declares a 10% stock dividend (small — under 20–25%). FMV per share on declaration date = $8.\n\nShares issued = 100,000 × 10% = 10,000 shares\nRetained Earnings reduced by = 10,000 × $8 (FMV) = $80,000\n\nDr  Retained Earnings                 80,000\n    Cr  Common Stock (10,000 × $1 par)      10,000\n    Cr  APIC — Common Stock                 70,000\n\n(No cash moves. Total stockholders' equity is unchanged — value simply shifts from Retained Earnings to contributed capital.)"
+    },
+    {
+      "t": "tip",
+      "v": "Stock dividends and cash dividends both reduce Retained Earnings, but only a CASH dividend reduces total equity and creates a liability (Dividends Payable). A stock dividend just reclassifies equity from Retained Earnings into Common Stock/APIC — total stockholders' equity, total assets, and total liabilities are all unaffected."
+    },
+    {
+      "t": "h",
+      "v": "Classification of Shares"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Authorized shares: the maximum number of shares a corporation is legally permitted to issue, per its corporate charter.",
+        "Issued shares: the total number of authorized shares that have actually been sold/distributed to shareholders (issued shares can never exceed authorized shares).",
+        "Outstanding shares: issued shares currently held by shareholders — i.e., issued shares MINUS treasury shares.",
+        "Treasury shares: issued shares the company has repurchased and is holding; they are issued but NOT outstanding."
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Authorized / Issued / Outstanding — Relationship",
+      "v": "Authorized shares:      1,000,000\nIssued shares:             400,000  (sold to shareholders over time)\nTreasury shares:            25,000  (repurchased, not retired)\n\nOutstanding shares = Issued − Treasury = 400,000 − 25,000 = 375,000\n\nDividends, voting rights, and EPS calculations are based on OUTSTANDING shares — treasury shares receive no dividends and have no voting rights."
     }
   ],
   "2-4": [

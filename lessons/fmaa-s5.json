@@ -75,6 +75,107 @@
     },
     {
       "t": "h",
+      "v": "Whistleblowing"
+    },
+    {
+      "t": "p",
+      "v": "Whistleblowing is reporting suspected illegal, unethical, or fraudulent activity — either internally (to management, an audit committee, or an internal hotline) or externally (to a regulator, auditor, or the media) — usually after internal channels have failed or are not trusted."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Type",
+        "Reported To",
+        "When Typically Used"
+      ],
+      "r": [
+        [
+          "Internal whistleblowing",
+          "Management, internal audit, ethics hotline, board/audit committee",
+          "First step under most codes of conduct and the IMA escalation process"
+        ],
+        [
+          "External whistleblowing",
+          "Regulators (e.g., SEC), law enforcement, external auditors, media",
+          "When internal channels are exhausted, compromised, or the matter is not resolved"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "v": "Many jurisdictions provide legal protection against retaliation for good-faith whistleblowers (e.g., anti-retaliation provisions in securities law). Ethically, an employee is expected to exhaust reasonable internal channels before going external, unless there is an immediate risk of serious harm."
+    },
+    {
+      "t": "h",
+      "v": "Due Diligence"
+    },
+    {
+      "t": "p",
+      "v": "Due diligence is the reasonable, thorough investigation a professional or organization is expected to perform before making a decision or taking an action — verifying facts and assessing risk rather than relying on assumptions or unverified claims."
+    },
+    {
+      "t": "b",
+      "v": [
+        "Financial due diligence: verifying the accuracy of financial statements and disclosures before a merger, acquisition, or major investment.",
+        "Professional due diligence: an accountant confirming figures and support before signing off on a report or recommendation, rather than accepting management's numbers at face value.",
+        "Failure to exercise due diligence can itself be an ethics violation — e.g., under the IMA Competence standard, which requires providing decision support that is accurate and based on adequate analysis."
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Fiduciary Responsibility"
+    },
+    {
+      "t": "def",
+      "term": "Fiduciary Responsibility",
+      "v": "A legal and ethical duty to act in the best interest of another party — placing that party's interests ahead of one's own personal interests. Fiduciaries include corporate officers and directors (duty to shareholders), trustees, and financial advisors."
+    },
+    {
+      "t": "b",
+      "v": [
+        "Duty of Care: making informed, prudent decisions with the diligence a reasonably careful person would use.",
+        "Duty of Loyalty: avoiding self-dealing and conflicts of interest; not using one's position for personal gain at the other party's expense."
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Fiduciary responsibility is the broad legal/ethical duty of loyalty and care owed to another party (e.g., a board member to shareholders). A conflict of interest is a SPECIFIC situation that threatens that duty. Due diligence is the PROCESS used to fulfill the duty of care responsibly."
+    },
+    {
+      "t": "h",
+      "v": "Foreign Corrupt Practices Act (FCPA)"
+    },
+    {
+      "t": "p",
+      "v": "The FCPA is a U.S. law that prohibits U.S. companies (and their officers, employees, and agents) from bribing foreign government officials to obtain or retain business. It has two main parts: anti-bribery provisions and accounting/recordkeeping provisions."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Provision",
+        "What It Requires"
+      ],
+      "r": [
+        [
+          "Anti-bribery",
+          "Prohibits offering, promising, or giving anything of value to a foreign official to influence an official act or secure improper business advantage"
+        ],
+        [
+          "Books and records",
+          "Requires accurate books, records, and accounts that fairly reflect transactions"
+        ],
+        [
+          "Internal controls",
+          "Requires a system of internal accounting controls sufficient to prevent and detect improper payments"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The FCPA applies even to bribes paid through third parties/agents on the company's behalf, and even if the bribe is never actually paid — merely offering or authorizing it is a violation. Facilitating small payments to speed up routine, non-discretionary government action (a narrow 'facilitating payments' exception) are treated differently from bribes intended to win or retain business — but this exception is narrow and heavily scrutinized."
+    },
+    {
+      "t": "h",
       "v": "The Fraud Triangle"
     },
     {
