@@ -357,6 +357,43 @@
       "v": "If the trial balance doesn't balance, an error exists. Common errors: a transaction posted to only one account (omitted one side), wrong amount, or debiting instead of crediting. Equal totals confirm mathematical accuracy but NOT completeness — a transaction omitted entirely still leaves the trial balance balanced."
     },
     {
+      "t": "h",
+      "v": "Purpose and Limitations of the Trial Balance"
+    },
+    {
+      "t": "p",
+      "v": "The trial balance's only real purpose is to confirm that total debits equal total credits after posting. That's a mathematical check, not a completeness or correctness check — several categories of error leave the trial balance perfectly balanced."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Errors the Trial Balance WILL Catch",
+        "Errors the Trial Balance Will NOT Catch"
+      ],
+      "r": [
+        [
+          "A transaction posted with only one side entered (debit or credit omitted)",
+          "A transaction omitted entirely — both sides never recorded, so nothing is out of balance"
+        ],
+        [
+          "A debit and credit posted for different amounts",
+          "A transaction posted to the wrong account, but with equal debit and credit amounts (e.g., debiting Supplies instead of Equipment)"
+        ],
+        [
+          "A single-sided math error in a ledger account",
+          "Two offsetting errors that cancel each other out (e.g., overstating Cash by $500 and overstating Revenue by $500)"
+        ],
+        [
+          "",
+          "A transaction recorded twice, with equal debits and credits both times"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Exam pattern: if a question describes an error and asks 'would this be detected by the trial balance?' — check whether the error breaks the debit-credit EQUALITY. If both sides are still equal (wrong account, omitted entirely, duplicated, or offsetting), the trial balance will NOT catch it, no matter how serious the error is."
+    },
+    {
       "t": "ex",
       "l": "Greenworks Unadjusted Trial Balance (May 20, 20X1)",
       "v": "Account                     Debits        Credits\nCash                        225,000\nInventory                    49,500\nLand                         75,000\nBuildings                   200,000\nFurniture & Equipment        55,000\nAccounts Payable                           104,500\nCommon Stock                                50,000\nAdditional Paid-in Capital                 450,000\n                          ─────────      ─────────\nTotals                      604,500        604,500  ✓"
@@ -779,6 +816,58 @@
     {
       "t": "p",
       "v": "Under U.S. GAAP, a full set of financial statements consists of 4 statements plus footnotes. They are prepared in this order: (1) Income Statement → (2) Statement of Changes in Stockholders' Equity → (3) Balance Sheet → (4) Statement of Cash Flows."
+    },
+    {
+      "t": "h",
+      "v": "Users of Financial Statements"
+    },
+    {
+      "t": "p",
+      "v": "Financial statements are prepared for two broad user groups, and this distinction is the same one tested in Study Unit 1 (financial vs. management accounting) — here applied specifically to who reads the 4 statements."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "User Group",
+        "Who",
+        "What They Use the Statements For"
+      ],
+      "r": [
+        [
+          "External users",
+          "Investors/shareholders",
+          "Deciding whether to buy, hold, or sell stock"
+        ],
+        [
+          "",
+          "Lenders and creditors",
+          "Assessing creditworthiness before extending a loan or credit terms"
+        ],
+        [
+          "",
+          "Regulators (e.g., SEC)",
+          "Confirming compliance with reporting and disclosure requirements"
+        ],
+        [
+          "",
+          "Tax authorities",
+          "Verifying reported income for tax purposes"
+        ],
+        [
+          "",
+          "Suppliers and customers",
+          "Evaluating the company's ability to honor long-term contracts"
+        ],
+        [
+          "Internal users",
+          "Management",
+          "Planning, controlling operations, and making resource-allocation decisions"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Exam distinction: external users generally receive only the audited, GAAP-based statements plus footnotes — they don't have access to internal management accounting reports (budgets, cost analyses). Internal users (management) have full access to both."
     },
     {
       "t": "h",
