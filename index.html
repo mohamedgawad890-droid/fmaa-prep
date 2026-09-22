@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-09-02-01 sidebar-collapse -->
+<!-- FMAA-BUILD: 2026-09-22-01 clockdrift-and-ci-terms -->
 <script>
-window.FMAA_BUILD='2026-09-02-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-09-22-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -311,6 +311,39 @@ const auth=firebase.auth();
 const db=firebase.firestore();
 const CLD_CLOUD='dvr6ygjhe';
 const CLD_PRESET='fmaa_students';
+
+// ─── SERVER TIME SYNC (clock-drift protection for exam deadlines) ────────────
+// Exam deadlines are computed as Date.now()+duration on the STUDENT'S device.
+// If their device clock/timezone is wrong, the exam silently gets less (or
+// more) time than intended with no warning to anyone. nowServer() corrects
+// for this by piggybacking a serverTimestamp() write+read on the student's
+// own always-writable fmaa-progress doc once per session, and applying the
+// measured clock offset to every deadline calculation below.
+let _serverTimeOffsetMs=0,_serverTimeSynced=false;
+async function syncServerTimeOffset(){
+  if(!STATE.user||!db)return;
+  try{
+    const ref=db.collection('fmaa-progress').doc(STATE.user.uid);
+    const t0=Date.now();
+    await ref.set({_clockCheck:firebase.firestore.FieldValue.serverTimestamp()},{merge:true});
+    const snap=await ref.get({source:'server'});
+    const t1=Date.now();
+    const stamp=snap.data()&&snap.data()._clockCheck;
+    if(stamp&&stamp.toMillis){
+      const serverMs=stamp.toMillis();
+      const rtt=t1-t0;
+      // Assume the write landed roughly at the network round-trip midpoint.
+      _serverTimeOffsetMs=serverMs-(t0+rtt/2);
+      if(Math.abs(_serverTimeOffsetMs)>60000){console.warn('[Clock drift] Device clock is off by ~'+Math.round(_serverTimeOffsetMs/60000)+' min vs server.');}
+    }
+    _serverTimeSynced=true;
+  }catch(e){console.warn('Server time sync failed (falling back to device clock):',e);}
+}
+// Use this instead of Date.now() anywhere an exam deadline is computed or
+// checked — it returns the device clock corrected by the measured drift
+// against Firestore's server clock, so a wrong device timezone/clock no
+// longer silently shortens (or extends) a student's exam time.
+function nowServer(){return Date.now()+_serverTimeOffsetMs;}
 
 // ─── FMAA SECTIONS DATA ───────────────────────────────────────────────────────
 const S=[
@@ -653,7 +686,13 @@ function escRx(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function highlightTerms(text){
   let out=esc(text);
   const terms=Object.keys(TERM_DICT).sort((a,b)=>b.length-a.length);
-  for(const term of terms){const ar=TERM_DICT[term];const re=new RegExp('\\b'+escRx(term)+'\\b(?![^<]*>)','g');out=out.replace(re,`<span class="ar-term" onclick="toggleTip(this)">${term}<span class="ar-tip">${ar}</span></span>`);}
+  // Case-insensitive ('i' flag) so mid-sentence occurrences like "trial balance"
+  // still match the Title-Case dictionary key "Trial Balance" — the original
+  // case-sensitive match silently skipped most in-text occurrences. The
+  // replacement uses the ACTUAL matched text (m), not the dictionary's
+  // canonical casing, so a lowercase mid-sentence mention still displays
+  // lowercase and only the Arabic tooltip comes from the dictionary.
+  for(const term of terms){const ar=TERM_DICT[term];const re=new RegExp('\\b'+escRx(term)+'\\b(?![^<]*>)','gi');out=out.replace(re,m=>`<span class="ar-term" onclick="toggleTip(this)">${m}<span class="ar-tip">${ar}</span></span>`);}
   return out;
 }
 function toggleTip(el){
@@ -2052,7 +2091,7 @@ function renderStudy(){
   const examBanner=(()=>{
     if(!gc||!STATE.groupExamLoaded)return'';
     const e=STATE.groupExam;if(!e)return'';
-    const now=new Date();const start=new Date(e.startAt);const end=new Date(e.endAt);
+    const now=new Date(nowServer());const start=new Date(e.startAt);const end=new Date(e.endAt);
     if(now>end)return'';
     const isLive=now>=start;
     const bg=isLive?'#FCEBEB':'#FAEEDA';const border=isLive?'#E24B4A':'#EF9F27';const tc=isLive?'#791F1F':'#633806';
@@ -2154,7 +2193,7 @@ async function startCustomExam(){
     if(!mcqQ.length){showToast('No questions available for the selected units.','warning');STATE.mockExam.status='idle';STATE.tab='custom-exam-setup';render();return;}
     const secs=durationMins*60;
     const retakeCriteria={units,questionCount:mcqQ.length,durationMins};
-    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:null,groupExamTitle:'Custom Exam',groupExamGroupCode:'',deadlineTs:Date.now()+secs*1000,mcqQuestionTimes:[],mcqQTimerStart:Date.now(),retakeCriteria};
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:null,groupExamTitle:'Custom Exam',groupExamGroupCode:'',deadlineTs:nowServer()+secs*1000,mcqQuestionTimes:[],mcqQTimerStart:nowServer(),retakeCriteria};
     render();mockStartTimer();
   }catch(e){
     console.error('startCustomExam failed:',e);
@@ -2779,7 +2818,7 @@ async function startMockExam(){
     const mcqQ=mockSelectMCQ();
     if(mcqQ.length===0){showToast('No quiz questions are loaded yet for the mock exam. Check back once the question banks are added.','info');STATE.mockExam.status='idle';render();return;}
     if(mcqQ.length<MOCK_TARGET){const ok=await showModal({icon:'⚠️',title:`Only ${mcqQ.length} Questions Available`,body:`The target is ${MOCK_TARGET} questions but only ${mcqQ.length} are loaded right now. The exam will run with ${mcqQ.length} questions and the scaled score will be calculated out of ${MOCK_TARGET} (missing questions count as wrong).`,type:'warning',confirmText:'Start Anyway',cancelText:'Cancel'});if(!ok){STATE.mockExam.status='idle';render();return;}}
-    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false,deadlineTs:Date.now()+MOCK_SECONDS*1000,mcqQuestionTimes:[],mcqQTimerStart:Date.now()};render();
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:MOCK_SECONDS,mcqInterval:null,results:null,navOpen:false,deadlineTs:nowServer()+MOCK_SECONDS*1000,mcqQuestionTimes:[],mcqQTimerStart:nowServer()};render();
     mockStartTimer();
   }catch(e){
     console.error('startMockExam failed:',e);
@@ -2802,11 +2841,11 @@ function mockStartTimer(){
     // is self-correcting: whenever the tick does fire — even late — it reflects true elapsed time.
     const deadlineTs=STATE.mockExam.deadlineTs;
     if(deadlineTs&&!isNaN(deadlineTs)){
-      STATE.mockExam.mcqTime=Math.max(0,Math.round((deadlineTs-Date.now())/1000));
+      STATE.mockExam.mcqTime=Math.max(0,Math.round((deadlineTs-nowServer())/1000));
     } else {
       STATE.mockExam.mcqTime--;
     }
-    const pastDeadline=deadlineTs&&!isNaN(deadlineTs)&&Date.now()>=deadlineTs;
+    const pastDeadline=deadlineTs&&!isNaN(deadlineTs)&&nowServer()>=deadlineTs;
     const tel=document.getElementById('mock-timer');
     if(tel){tel.textContent=mockFmtTime(Math.max(0,STATE.mockExam.mcqTime));tel.style.color=STATE.mockExam.mcqTime<300?'#E24B4A':'#1a1a1a';}
     mockUpdateNav();
@@ -2922,7 +2961,7 @@ async function retakeAttempt(record){
     const mcqQ=picked.map(q=>{const sec=S.find(s=>s.id===q.sid);return{...q,stitle:sec?sec.title:'',sbar:sec?sec.bar:''};}).map(shuffleQuestionOptions);
     if(!mcqQ.length){showToast('No questions available to retake this exam right now.','warning');STATE.mockExam.status='idle';render();return;}
     const secs=(rc.durationMins||60)*60;
-    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:null,groupExamTitle:(record.title||'Exam')+' (Retake)',groupExamGroupCode:'',deadlineTs:Date.now()+secs*1000,mcqQuestionTimes:[],mcqQTimerStart:Date.now(),retakeCriteria:rc};
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:null,groupExamTitle:(record.title||'Exam')+' (Retake)',groupExamGroupCode:'',deadlineTs:nowServer()+secs*1000,mcqQuestionTimes:[],mcqQTimerStart:nowServer(),retakeCriteria:rc};
     render();mockStartTimer();
   }catch(e){console.error('retakeAttempt failed:',e);showToast('Something went wrong. Please try again.','error');STATE.mockExam.status='idle';render();}
 }
@@ -3915,7 +3954,7 @@ async function loadGroupContent(){
 async function startGroupExam(examId){
   if(!STATE.groupExam)return;
   const exam=STATE.groupExam;
-  const now=new Date();
+  const now=new Date(nowServer());
   if(now<new Date(exam.startAt)){showToast('This exam has not started yet.','warning');return;}
   if(now>new Date(exam.endAt)){showToast('This exam window has closed.','warning');return;}
   STATE.mockExam.status='loading';render();
@@ -3946,14 +3985,14 @@ async function startGroupExam(examId){
     // a cap applied only to the starting value gets overwritten on the first tick.
     const fullDurationSecs=exam.durationMins*60;
     let examEndTs=new Date(exam.endAt).getTime();
-    if(isNaN(examEndTs))examEndTs=Date.now()+fullDurationSecs*1000;
-    const deadlineTs=Math.min(examEndTs,Date.now()+fullDurationSecs*1000);
-    const secs=Math.max(0,Math.floor((deadlineTs-Date.now())/1000));
+    if(isNaN(examEndTs))examEndTs=nowServer()+fullDurationSecs*1000;
+    const deadlineTs=Math.min(examEndTs,nowServer()+fullDurationSecs*1000);
+    const secs=Math.max(0,Math.floor((deadlineTs-nowServer())/1000));
     // Criteria needed to rebuild an equivalent (freshly-shuffled) attempt later via
     // the student-side "Retake" action — kept separate from questionIds so a retake
     // never reuses the exact fixed set (or writes to the instructor's Results tab).
     const retakeCriteria={units:examUnits,questionCount:exam.questionCount||mcqQ.length,durationMins:exam.durationMins};
-    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode,deadlineTs,mcqQuestionTimes:[],mcqQTimerStart:Date.now(),retakeCriteria};
+    STATE.mockExam={status:'mcq',mcqQ,mcqA:{},mcqFlagged:[],mcqCurr:0,mcqTime:secs,mcqInterval:null,results:null,navOpen:false,isGroupExam:true,groupExamId:examId,groupExamTitle:exam.title,groupExamGroupCode:exam.groupCode,deadlineTs,mcqQuestionTimes:[],mcqQTimerStart:nowServer(),retakeCriteria};
     STATE.tab='mock-exam';render();
     // BATCH 2026-08-26-01: mark this student "in progress" for the instructor's live
     // Results view the instant the exam actually starts (questions loaded, timer set).
@@ -3964,7 +4003,7 @@ async function startGroupExam(examId){
       db.collection('fmaa-exam-progress').doc(examId+'_'+STATE.user.uid).set({
         examId,groupCode:exam.groupCode||'',uid:STATE.user.uid,
         studentName:_st?.name||'Student',studentId:_st?.studentId||'',
-        startedAt:new Date().toISOString()
+        startedAt:new Date(nowServer()).toISOString()
       }).catch(e=>console.warn('Progress write failed:',e));
     }
     if(secs<=0){mockSubmitMCQ(true);return;}
@@ -4624,6 +4663,7 @@ setTimeout(function() {
 auth.onAuthStateChanged(async(user)=>{
   if(user){
     STATE.user=user;STATE.authLoading=false;
+    syncServerTimeOffset(); // fire-and-forget — non-blocking, ready before a student can reach an exam
     try{
       const[pd,sd,td]=await Promise.all([
         db.collection('fmaa-progress').doc(user.uid).get(),
