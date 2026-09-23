@@ -1,673 +1,681 @@
 {
-  "2-1": [
-    {
-      "t": "h",
-      "v": "Asset Valuation — AR, Inventory & Fixed Assets"
-    },
-    {
-      "t": "p",
-      "v": "Accounts receivable are reported at net realizable value — the amount the company actually expects to collect. Because some customers will inevitably not pay, the gross AR balance is reduced by an Allowance for Credit Losses (a contra-asset account with a credit balance)."
-    },
-    {
-      "t": "ex",
-      "l": "Balance Sheet Presentation of Net AR",
-      "v": "Accounts receivable (gross)         $100,000\nLess: Allowance for credit losses       (3,750)\nNet accounts receivable               $ 96,250\n\nThe $3,750 allowance represents management's estimate of future uncollectible amounts. The $3,750 is also recorded as Credit Loss Expense on the income statement."
-    },
-    {
-      "t": "h",
-      "v": "Inventory Cost Flow Assumptions — FIFO and LIFO"
-    },
-    {
-      "t": "p",
-      "v": "When inventory is purchased at different prices at different times, the company must choose which unit cost flows to COGS when items are sold. For the FMAA exam, only FIFO and LIFO are tested (LIFO is prohibited under IFRS)."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "",
-        "FIFO (First In, First Out)",
-        "LIFO (Last In, First Out)"
-      ],
-      "r": [
-        [
-          "Units sold assumed to be",
-          "Oldest purchased first",
-          "Newest purchased first"
-        ],
-        [
-          "Ending inventory valued at",
-          "Most recent (current) costs",
-          "Oldest (historical) costs"
-        ],
-        [
-          "In rising prices, COGS",
-          "Lower (older, cheaper costs)",
-          "Higher (newer, expensive costs)"
-        ],
-        [
-          "In rising prices, Net income",
-          "Higher (lower COGS)",
-          "Lower (higher COGS)"
-        ],
-        [
-          "In rising prices, Income tax",
-          "Higher (more taxable income)",
-          "Lower (more COGS shields income)"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Medina Company FIFO vs LIFO Example",
-      "v": "Beginning inventory:    1,000 units @ $5.00\nPurchase March 3:       1,500 units @ $6.00\nPurchase March 20:      1,000 units @ $7.00\nTotal available:        3,500 units; 2,400 sold; 1,100 in ending inventory\nTotal cost of available: (1,000×$5) + (1,500×$6) + (1,000×$7) = $5,000 + $9,000 + $7,000 = $21,000\n\nFIFO:\n  Ending inventory (newest 1,100 units): (1,000×$7) + (100×$6) = $7,000 + $600 = $7,600\n  COGS: $21,000 − $7,600 = $13,400\n\nLIFO:\n  Ending inventory (oldest 1,100 units): (1,000×$5) + (100×$6) = $5,000 + $600 = $5,600\n  COGS: $21,000 − $5,600 = $15,400\n\nDifference: FIFO COGS is $2,000 LOWER than LIFO COGS in a period of rising prices."
-    },
-    {
-      "t": "h",
-      "v": "Depreciation of Fixed Assets"
-    },
-    {
-      "t": "p",
-      "v": "Fixed assets (PP&E) are recorded at historical cost (all costs needed to get the asset ready for use). Depreciation allocates that cost over the asset's useful life — matching the cost to the periods that benefit. Land is NEVER depreciated."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Method",
-        "Formula",
-        "Best For"
-      ],
-      "r": [
-        [
-          "Straight-Line (SL)",
-          "(Cost − Salvage) ÷ Useful Life = same amount each year",
-          "Assets that generate equal benefit each year — easiest method"
-        ],
-        [
-          "Double Declining Balance (DDB)",
-          "Book Value (beginning of year) × (2 ÷ Useful Life) = accelerated",
-          "Assets that provide more benefit in early years; stops when BV = salvage"
-        ],
-        [
-          "Sum-of-Years'-Digits (SYD)",
-          "Depreciable Base × (Remaining Life ÷ SYD)",
-          "Accelerated — similar effect to DDB but different calculation"
-        ],
-        [
-          "Units of Production (UOP)",
-          "(Cost − Salvage) ÷ Estimated Total Units × Actual Units Produced",
-          "Usage-based assets like machinery; depreciation varies with production"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Depreciation Comparison — $100,000 Asset, $10,000 Salvage, 4-Year Life",
-      "v": "Straight-Line annual depreciation: ($100,000 − $10,000) ÷ 4 = $22,500/year\n\nDouble Declining Balance (DDB rate = 2 ÷ 4 = 50%):\n  Year 1: $100,000 × 50% = $50,000 | BV = $50,000\n  Year 2: $50,000 × 50% = $25,000 | BV = $25,000\n  Year 3: $25,000 × 50% = $12,500 | BV = $12,500\n  Year 4: $12,500 − $10,000 salvage = $2,500 (stop at salvage value)\n  Total depreciation: $50,000 + $25,000 + $12,500 + $2,500 = $90,000 = Depreciable base ✓\n\nBalance sheet presentation:\n  Fixed assets (cost)         $100,000\n  Less: Accumulated depreciation (23,750)\n  Book (carrying) value       $ 76,250"
-    },
-    {
-      "t": "tip",
-      "v": "DDB key rule: NEVER depreciate below salvage value. In Year 4, DDB gives $6,250 but book value would drop to $6,250 which is below the $10,000 salvage — so only record $2,500 to reach exactly $10,000."
-    },
-    {
-      "t": "h",
-      "v": "Valuation of Intangible Assets"
-    },
-    {
-      "t": "p",
-      "v": "Intangible assets (patents, trademarks, copyrights, customer lists, purchased goodwill) are recorded at cost — the amount paid to acquire them, including legal/registration fees needed to get them ready for use. Internally generated intangibles (a patent a company develops itself, self-built customer goodwill) are generally NOT capitalized, because the value did not arise from a past exchange transaction — only the direct legal/filing fees may be capitalized. Related R&D costs are expensed as incurred."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Useful Life",
-        "Treatment",
-        "Example"
-      ],
-      "r": [
-        [
-          "Finite (determinable) life",
-          "Amortized over useful life; amount = Cost − Residual Value (residual is usually $0)",
-          "A purchased patent with a 10-year remaining legal life"
-        ],
-        [
-          "Indefinite life",
-          "NOT amortized; tested for impairment at least annually",
-          "Purchased goodwill; a trademark renewable indefinitely"
-        ]
-      ]
-    },
-    {
-      "t": "p",
-      "v": "All intangible assets — amortized or not — must be evaluated regularly for impairment. If the carrying amount is not recoverable, an impairment loss is recognized to write the asset down to fair value."
-    },
-    {
-      "t": "tip",
-      "v": "Exam distinction: Finite-life intangibles = amortize (like depreciation, but for intangibles). Indefinite-life intangibles (goodwill is the classic example) = never amortized, only impairment-tested. Internally generated goodwill and self-developed patents are never recorded as assets — only purchased/acquired intangibles are capitalized."
-    },
-    {
-      "t": "h",
-      "v": "Valuation of Liabilities"
-    },
-    {
-      "t": "p",
-      "v": "A liability is a present obligation of an entity to transfer cash, goods, services, or other economic benefits to another party in the future, arising from a past transaction or event. To be a liability, the entity must be presently obligated — legally or otherwise bound to settle the obligation."
-    },
-    {
-      "t": "b",
-      "v": [
-        "A liability may require paying cash, providing services, delivering goods, or transferring other assets (including shares).",
-        "Liabilities routinely arise from exchange transactions to acquire funds (borrowing money) or acquire goods/services needed to operate.",
-        "Selling a product with a warranty or guarantee creates a liability — the entity is obligated to repair, replace, or refund if the product is defective.",
-        "A cash receipt itself can create a liability if the company is obligated to provide a good/service or refund the cash by a certain date (e.g., unearned/deferred revenue)."
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Liability Valuation — Warranty Obligation",
-      "v": "A company sells 10,000 units with a 1-year warranty. Based on historical experience, it expects 3% of units to require repair at an average cost of $40 per unit.\n\nEstimated warranty liability = 10,000 × 3% × $40 = $12,000\n\nJournal entry at time of sale (matching principle — expense recognized with the related revenue):\n  Dr  Warranty Expense          12,000\n      Cr  Estimated Warranty Liability   12,000\n\nAs actual repairs are performed, the liability is reduced (not re-expensed):\n  Dr  Estimated Warranty Liability   (actual repair cost)\n      Cr  Cash / Parts Inventory"
-    },
-    {
-      "t": "tip",
-      "v": "Most liabilities are valued at the amount expected to be paid (face value for accounts/notes payable maturing soon). Estimated liabilities — like warranties — are valued at the best estimate of the future outflow, recognized in the SAME period as the related revenue (matching principle), not when the cash is actually paid out."
-    }
-  ],
-  "2-2": [
-    {
-      "t": "h",
-      "v": "Revenue Recognition — The 5-Step Model (ASC 606 / IFRS 15)"
-    },
-    {
-      "t": "p",
-      "v": "The revenue recognition standard (ASC 606 in US GAAP, IFRS 15 internationally) requires revenues to be recognized when performance obligations are satisfied. The standard is principles-based, not rules-based — it requires professional judgment. Revenue should reflect the transfer of promised goods or services to customers in an amount that reflects the consideration the company expects to be entitled to in exchange."
-    },
-    {
-      "t": "s",
-      "v": [
-        "Step 1 — Identify the contract with a customer: A contract is an agreement between two parties that creates enforceable rights and obligations. It can be written, oral, or implied by business practice.",
-        "Step 2 — Identify the separate performance obligations: A performance obligation is a promise to transfer a distinct good or service. A good or service is distinct if the customer can benefit from it on its own or together with readily available resources.",
-        "Step 3 — Determine the transaction price: The transaction price is the amount of consideration expected in exchange for transferring goods or services. Includes variable consideration, financing components, and non-cash consideration.",
-        "Step 4 — Allocate the transaction price to the separate performance obligations: If there are multiple performance obligations, allocate the total price based on their relative standalone selling prices.",
-        "Step 5 — Recognize revenue when (or as) each performance obligation is satisfied: Revenue is recognized at the point in time (or over time) that control of the good or service transfers to the customer."
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "5-Step Model — Bundled Software Contract",
-      "v": "Company sells a software license + 1-year support contract for $1,200 total.\n\nStep 1: Contract exists — written agreement with customer.\nStep 2: Two performance obligations identified:\n  (A) Software license — transferred at a point in time\n  (B) Support services — delivered over 12 months\nStep 3: Transaction price = $1,200 total.\nStep 4: Allocate based on standalone prices:\n  Software license standalone price = $900 (75%)\n  Support services standalone price = $300 (25%)\n  Allocated: License = $1,200 × 75% = $900\n             Support = $1,200 × 25% = $300\nStep 5: Recognize:\n  → $900 at delivery of software license (point in time)\n  → $300 ratably over 12 months = $25/month (over time)"
-    },
-    {
-      "t": "tip",
-      "v": "The exam tests which step is involved in a scenario. Common question: 'When should revenue be recognized?' The answer is always: when the performance obligation is satisfied (Step 5). For goods, this is when control transfers to the customer. For services, this may be over time (e.g., a 12-month maintenance contract recognized monthly)."
-    },
-    {
-      "t": "h",
-      "v": "Expense Recognition — 3 Methods"
-    },
-    {
-      "t": "b",
-      "v": [
-        "1. Cause and Effect (Matching Principle): Expenses directly linked to revenue are recognized when that revenue is recognized. Example: Cost of goods sold is recognized when the related sale is recognized.",
-        "2. Systematic and Rational Allocation: Expenses that provide benefit over multiple periods are allocated systematically. Example: Depreciation of equipment spread over its useful life.",
-        "3. Immediate Recognition: Expenses that provide no future benefit or whose benefit cannot be reasonably measured are expensed immediately. Example: Advertising costs, officer salaries."
-      ]
-    },
-    {
-      "t": "h",
-      "v": "Gains and Losses on Disposal of Fixed Assets"
-    },
-    {
-      "t": "p",
-      "v": "When a company sells a fixed asset (PP&E), a gain or loss arises. The gain or loss = Sale proceeds − Book value at disposal. Book value = Original cost − Accumulated depreciation. A gain is reported on the income statement as 'Gain on Sale of Asset'. A loss is reported as 'Loss on Sale of Asset'. Both are non-operating items — they appear below operating income."
-    },
-    {
-      "t": "ex",
-      "l": "Gain on Disposal — Example",
-      "v": "Machine: Original cost $50,000. Accumulated depreciation $32,000.\nBook value at disposal = $50,000 − $32,000 = $18,000\nSale proceeds = $22,000\nGain on sale = $22,000 − $18,000 = $4,000 (Favorable — reported as income)\n\nJournal entry:\n  Cash                     22,000\n  Accumulated Depreciation 32,000\n    Equipment                       50,000\n    Gain on Sale of Asset            4,000"
-    },
-    {
-      "t": "h",
-      "v": "Other Comprehensive Income (OCI)"
-    },
-    {
-      "t": "p",
-      "v": "Comprehensive Income = Net Income + Other Comprehensive Income (OCI). OCI items are gains and losses that are excluded from net income but still affect stockholders' equity."
-    },
-    {
-      "t": "b",
-      "v": [
-        "Unrealized gains and losses on available-for-sale securities",
-        "Foreign currency translation adjustments",
-        "Pension liability adjustments",
-        "Effective portion of cash flow hedge gains/losses"
-      ]
-    },
-    {
-      "t": "tip",
-      "v": "OCI items never appear in Net Income but DO appear in Comprehensive Income (Net Income + OCI). On the exam: if a question asks what affects net income, OCI items do NOT. If a question asks what affects stockholders' equity or comprehensive income, OCI items DO."
-    },
-    {
-      "t": "h",
-      "v": "Income Statement Classification — Continuing vs Discontinued Operations"
-    },
-    {
-      "t": "p",
-      "v": "A multi-step income statement separates results into components so users can judge which earnings are likely to recur. The two headline components are Income from Continuing Operations and Income (Loss) from Discontinued Operations, reported separately, net of tax."
-    },
-    {
-      "t": "def",
-      "term": "Discontinued Operations",
-      "v": "A component of an entity (a separate major line of business or geographic area) that the company has either disposed of or classified as held for sale, AND whose disposal represents a strategic shift that has (or will have) a major effect on the entity's operations and financial results. Its results are removed from continuing operations and reported separately, net of tax, below Income from Continuing Operations."
-    },
-    {
-      "t": "ex",
-      "l": "Income Statement — Continuing vs Discontinued Operations",
-      "v": "Income from continuing operations (before tax)     $500,000\nIncome tax expense                                 (125,000)\nIncome from continuing operations                   375,000\n\nDiscontinued operations:\n  Loss from operations of discontinued division      (80,000)\n  Income tax benefit                                   20,000\n  Loss on discontinued operations, net of tax          (60,000)\n\nNet Income                                         $ 315,000"
-    },
-    {
-      "t": "p",
-      "v": "Items that do NOT qualify as discontinued operations — but are unusual, infrequent, or non-operating — are instead reported within continuing operations, typically as a separate line before tax (e.g., 'Loss on litigation settlement', 'Restructuring costs', 'Gain on sale of a minor asset'). They are NOT shown net of tax and are NOT shown below net income the way discontinued operations are."
-    },
-    {
-      "t": "tip",
-      "v": "Exam trap: not every unusual or one-time gain/loss is a 'discontinued operation.' The strict test is (1) it's a separate major line of business or geographic area being exited or held for sale, AND (2) it's a strategic shift with a major effect on results. A one-off asset sale, a lawsuit settlement, or closing one branch of a multi-branch business usually does NOT qualify — it stays in continuing operations."
-    }
-  ],
-  "2-3": [
-    {
-      "t": "h",
-      "v": "Equity Transactions"
-    },
-    {
-      "t": "h",
-      "v": "Issuing Common Stock"
-    },
-    {
-      "t": "p",
-      "v": "When shares are issued, the par value goes to the Common Stock account; everything above par goes to Additional Paid-in Capital (APIC). Par value is always a very small stated amount and bears no relation to market price."
-    },
-    {
-      "t": "ex",
-      "l": "Stock Issuance — Par vs No-Par",
-      "v": "Example: Issue 10,000 shares at $15/share; par value = $1/share:\n  Dr  Cash                        150,000\n      Cr  Common Stock (10,000 × $1)    10,000\n      Cr  APIC-Common Stock            140,000\n\nNo-par stock: Issue 10,000 shares at $15/share:\n  Dr  Cash                        150,000\n      Cr  Common Stock (full amount)   150,000"
-    },
-    {
-      "t": "h",
-      "v": "Cash Dividends — 3 Dates"
-    },
-    {
-      "t": "b",
-      "v": [
-        "Declaration date: Dr Dividends (or Retained Earnings) / Cr Dividends Payable — liability created",
-        "Record date: No journal entry — determines which shareholders receive dividend",
-        "Payment date: Dr Dividends Payable / Cr Cash — liability settled"
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Dividend Journal Entries",
-      "v": "Board declares $0.50/share dividend on 100,000 shares = $50,000 total.\n\nDeclaration date:\n  Dr  Retained Earnings (or Dividends)    50,000\n      Cr  Dividends Payable                   50,000\n\nPayment date:\n  Dr  Dividends Payable    50,000\n      Cr  Cash                   50,000"
-    },
-    {
-      "t": "h",
-      "v": "Treasury Stock"
-    },
-    {
-      "t": "p",
-      "v": "Treasury stock is common stock that was issued and later repurchased by the company. It reduces equity (shown as a negative). It is recorded at cost; when reissued, any difference from cost goes to APIC, not to income."
-    },
-    {
-      "t": "ex",
-      "l": "Treasury Stock Buy and Reissue",
-      "v": "Buy back 1,000 shares at $20/share:\n  Dr  Treasury Stock    20,000\n      Cr  Cash               20,000\n\nReissue 500 shares at $25/share:\n  Dr  Cash (500 × $25)                  12,500\n      Cr  Treasury Stock (500 × $20 cost)   10,000\n      Cr  APIC-Treasury Stock                2,500\n(Gain goes to APIC — never to income statement)"
-    },
-    {
-      "t": "h",
-      "v": "Stock Dividends — Small vs Large"
-    },
-    {
-      "t": "p",
-      "v": "A stock dividend distributes additional shares of the company's own stock to existing shareholders instead of cash. It transfers an amount from Retained Earnings to the contributed-capital accounts (Common Stock and, for a small stock dividend, APIC) — total equity does NOT change, and no asset (cash) leaves the company."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "",
-        "Small Stock Dividend (< 20–25%)",
-        "Large Stock Dividend (> 20–25%)"
-      ],
-      "r": [
-        [
-          "Valued at",
-          "Fair market value (FMV) per share on declaration date",
-          "Par (or stated) value per share"
-        ],
-        [
-          "Retained Earnings reduced by",
-          "Shares issued × FMV",
-          "Shares issued × Par value"
-        ],
-        [
-          "Rationale",
-          "Small enough that it shouldn't materially affect market price, so FMV is used",
-          "Large enough that it behaves like a stock split, so only par value is capitalized"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Small Stock Dividend Journal Entry",
-      "v": "Company has 100,000 shares outstanding ($1 par). Board declares a 10% stock dividend (small — under 20–25%). FMV per share on declaration date = $8.\n\nShares issued = 100,000 × 10% = 10,000 shares\nRetained Earnings reduced by = 10,000 × $8 (FMV) = $80,000\n\nDr  Retained Earnings                 80,000\n    Cr  Common Stock (10,000 × $1 par)      10,000\n    Cr  APIC — Common Stock                 70,000\n\n(No cash moves. Total stockholders' equity is unchanged — value simply shifts from Retained Earnings to contributed capital.)"
-    },
-    {
-      "t": "tip",
-      "v": "Stock dividends and cash dividends both reduce Retained Earnings, but only a CASH dividend reduces total equity and creates a liability (Dividends Payable). A stock dividend just reclassifies equity from Retained Earnings into Common Stock/APIC — total stockholders' equity, total assets, and total liabilities are all unaffected."
-    },
-    {
-      "t": "h",
-      "v": "Classification of Shares"
-    },
-    {
-      "t": "b",
-      "v": [
-        "Authorized shares: the maximum number of shares a corporation is legally permitted to issue, per its corporate charter.",
-        "Issued shares: the total number of authorized shares that have actually been sold/distributed to shareholders (issued shares can never exceed authorized shares).",
-        "Outstanding shares: issued shares currently held by shareholders — i.e., issued shares MINUS treasury shares.",
-        "Treasury shares: issued shares the company has repurchased and is holding; they are issued but NOT outstanding."
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Authorized / Issued / Outstanding — Relationship",
-      "v": "Authorized shares:      1,000,000\nIssued shares:             400,000  (sold to shareholders over time)\nTreasury shares:            25,000  (repurchased, not retired)\n\nOutstanding shares = Issued − Treasury = 400,000 − 25,000 = 375,000\n\nDividends, voting rights, and EPS calculations are based on OUTSTANDING shares — treasury shares receive no dividends and have no voting rights."
-    }
-  ],
-  "2-4": [
-    {
-      "t": "h",
-      "v": "Basic Financial Statement Analysis"
-    },
-    {
-      "t": "h",
-      "v": "Vertical (Common-Size) Analysis"
-    },
-    {
-      "t": "p",
-      "v": "Every line item expressed as a percentage of a base amount. For the income statement, base = net sales revenue. For the balance sheet, base = total assets. This removes the effect of size differences, enabling comparison between companies or periods."
-    },
-    {
-      "t": "ex",
-      "l": "Common-Size Income Statement",
-      "v": "Net sales revenue:   $12,000,000   100.0%\nCost of goods sold:   (8,000,000)   66.7%\nGross profit:          4,000,000    33.3%\nOperating expenses:   (2,500,000)   20.8%\nOperating income:      1,500,000    12.5%\nNet income:            1,218,857    10.2%\n\nInsight: If COGS% rises from 66.7% to 70% next year, costs are rising faster than revenue — a warning signal."
-    },
-    {
-      "t": "h",
-      "v": "Horizontal (Trend) Analysis"
-    },
-    {
-      "t": "p",
-      "v": "Compare the same line item across multiple periods. Each amount is expressed as a percentage change from the base year. Reveals trends — is revenue growing? Are expenses growing faster than revenue?"
-    },
-    {
-      "t": "ex",
-      "l": "Trend Analysis",
-      "v": "Sales 20X1: $10,000,000 (base year = 100%)\nSales 20X2: $11,500,000 → 115% (15% growth)\nSales 20X3: $12,000,000 → 120% (20% growth over base)\n\nCOGS 20X1: $6,500,000 (65% of sales)\nCOGS 20X3: $8,000,000 (66.7% of sales)\n→ COGS growing faster than sales: gross margin is shrinking."
-    },
-    {
-      "t": "tip",
-      "v": "Vertical = one year, compare items within that year. Horizontal = one item, compare across multiple years. Both together tell a more complete story."
-    }
-  ],
-  "2-5": [
-    {
-      "t": "h",
-      "v": "Liquidity Ratios — Measuring Short-Term Solvency"
-    },
-    {
-      "t": "p",
-      "v": "Liquidity ratios evaluate a company's ability to meet short-term obligations as they come due using current assets. The standard benchmarks below are general guidelines — ratios must always be compared to industry averages and the company's own trend over time."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Ratio",
-        "Formula",
-        "Standard",
-        "What It Measures"
-      ],
-      "r": [
-        [
-          "Current Ratio",
-          "Current Assets ÷ Current Liabilities",
-          "2:1",
-          "General short-term liquidity; ability to pay current liabilities with current assets"
-        ],
-        [
-          "Quick (Acid Test) Ratio",
-          "(Cash + Mkt Securities + Net AR) ÷ Current Liabilities",
-          "1:1",
-          "More conservative — excludes inventory and prepaid expenses (less liquid)"
-        ],
-        [
-          "Cash Ratio",
-          "(Cash + Cash Equivalents + Mkt Securities) ÷ Current Liabilities",
-          "—",
-          "Most conservative — only most liquid assets; ability to pay from cash position alone"
-        ],
-        [
-          "Cash Flow Ratio",
-          "Operating Cash Flow ÷ Period-End Current Liabilities",
-          "≥0.40",
-          "Ability to generate cash from operations to pay current obligations"
-        ],
-        [
-          "Net Working Capital Ratio",
-          "(Current Assets − Current Liabilities) ÷ Total Assets",
-          "—",
-          "Proportion of total assets represented by working capital; declining trend signals problems"
-        ]
-      ]
-    },
-    {
-      "t": "p",
-      "v": "Why inventory is EXCLUDED from the quick ratio: Inventory requires two steps to become cash (sell it, then collect the receivable). It cannot always be quickly liquidated. Prepaid expenses are also excluded — they cannot be converted to cash at all. Accounts receivable IS included because it is only one step from cash (collect it), and can usually be factored immediately."
-    },
-    {
-      "t": "ex",
-      "l": "Liquidity Ratios — Complete Calculation Example",
-      "v": "Balance Sheet data:\n  Cash: $50,000 | Marketable Securities: $30,000\n  Accounts Receivable (net): $80,000 | Inventory: $120,000\n  Prepaid Expenses: $10,000 | Total Current Assets: $290,000\n  Total Current Liabilities: $140,000 | Total Assets: $800,000\n  Operating Cash Flow (annual): $70,000\n\nCurrent Ratio = $290,000 ÷ $140,000 = 2.07 ✓ (above 2:1 standard)\nQuick Ratio = ($50K + $30K + $80K) ÷ $140K = $160K ÷ $140K = 1.14 ✓ (above 1:1)\nCash Ratio = ($50K + $30K) ÷ $140K = 0.57\nCash Flow Ratio = $70K ÷ $140K = 0.50 ✓ (above 0.40 standard)\nNWC Ratio = ($290K − $140K) ÷ $800K = $150K ÷ $800K = 0.19"
-    },
-    {
-      "t": "tip",
-      "v": "Exam interpretation questions: A HIGH current ratio is NOT always good. It may indicate excess inventory (poor management) or too much idle cash. A DECREASING quick ratio trend is more concerning than a single low reading — it signals deteriorating short-term liquidity over time. Always compare ratios to industry benchmarks and prior periods, not just to the standard benchmarks."
-    }
-  ],
-  "2-6": [
-    {
-      "t": "h",
-      "v": "Leverage (Solvency) Ratios — Measuring Long-Term Debt Capacity"
-    },
-    {
-      "t": "p",
-      "v": "Solvency is the ability to pay long-term obligations from earnings. Leverage ratios analyze the composition of the capital structure (how much debt vs equity) and the company's ability to service that debt from earnings. Financial leverage = using debt to magnify returns to equity holders. The more debt, the higher the interest burden and the greater the solvency risk."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Ratio",
-        "Formula",
-        "Interpretation"
-      ],
-      "r": [
-        [
-          "Debt to Equity Ratio",
-          "Total Liabilities ÷ Total Equity",
-          "Higher ratio = greater reliance on debt; 2:1 triggers deeper analysis"
-        ],
-        [
-          "Long-Term Debt to Equity Ratio",
-          "(Total Debt − Current Liabilities) ÷ Total Equity",
-          "Focuses on non-current debt; > 1:1 means more LT debt than equity"
-        ],
-        [
-          "Debt to Total Assets Ratio",
-          "Total Liabilities ÷ Total Assets",
-          "Proportion of assets financed by creditors; lower is safer"
-        ],
-        [
-          "Interest Coverage Ratio (TIE)",
-          "EBIT ÷ Interest Expense",
-          "Times interest earned; > 3.0 is excellent; < 1.5 signals default risk"
-        ]
-      ]
-    },
-    {
-      "t": "p",
-      "v": "The Debt to Total Assets ratio includes ALL liabilities in the numerator — even accounts payable which don't bear interest. This makes it more conservative than ratios that include only interest-bearing debt. Lenders want this ratio as low as possible."
-    },
-    {
-      "t": "ex",
-      "l": "Leverage Ratios — Calculation Example",
-      "v": "Balance Sheet: Total Liabilities $800,000 | Current Liabilities $200,000\n              Total Equity $400,000 | Total Assets $1,200,000\nIncome Statement: EBIT $150,000 | Interest Expense $40,000\n\nDebt to Equity = $800,000 ÷ $400,000 = 2.0 (High — 2:1 warrants analysis)\nLT Debt to Equity = ($800K − $200K) ÷ $400K = $600K ÷ $400K = 1.5 (> 1:1)\nDebt to Total Assets = $800,000 ÷ $1,200,000 = 0.67 (67% debt-financed)\nInterest Coverage = $150,000 ÷ $40,000 = 3.75 ✓ (above 3.0 — excellent)\n\nConclusion: High debt levels but strong earnings coverage. Focus on sustainability of EBIT."
-    },
-    {
-      "t": "tip",
-      "v": "Key distinction: LIQUIDITY ratios measure ability to pay SHORT-TERM obligations (current liabilities). SOLVENCY/LEVERAGE ratios measure ability to pay LONG-TERM obligations from earnings. The Interest Coverage Ratio uses EBIT (not net income) because interest is paid BEFORE taxes — so pre-tax earnings are available to pay interest."
-    }
-  ],
-  "2-7": [
-    {
-      "t": "h",
-      "v": "Activity (Efficiency) Ratios — Managing Assets and Liabilities"
-    },
-    {
-      "t": "p",
-      "v": "Activity ratios measure how efficiently a company manages its current assets (receivables and inventory) and how quickly it pays its suppliers. All activity ratios should be compared to industry averages and prior periods — a single ratio in isolation has limited meaning."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Ratio",
-        "Formula",
-        "What It Tells You"
-      ],
-      "r": [
-        [
-          "AR Turnover",
-          "Net Annual Credit Sales ÷ Average Gross AR",
-          "Times receivables collected and replaced per year; higher = faster collection"
-        ],
-        [
-          "Days' Sales in Receivables",
-          "365 ÷ AR Turnover  OR  Avg AR ÷ Avg Daily Credit Sales",
-          "Average days to collect; should not exceed credit terms offered"
-        ],
-        [
-          "Inventory Turnover",
-          "Annual COGS ÷ Average Inventory",
-          "Times inventory sold and replaced per year; higher = faster moving inventory"
-        ],
-        [
-          "Days' Sales in Inventory",
-          "365 ÷ Inventory Turnover  OR  Avg Inventory ÷ Avg Daily COGS",
-          "Average days inventory sits before being sold; lower is better"
-        ],
-        [
-          "AP Turnover",
-          "Annual Credit Purchases ÷ Average Accounts Payable",
-          "Times payables paid and replaced per year"
-        ],
-        [
-          "Days' Purchases in Payables",
-          "365 ÷ AP Turnover  OR  Avg AP ÷ Avg Daily Credit Purchases",
-          "Average days company takes to pay suppliers"
-        ],
-        [
-          "Total Asset Turnover",
-          "Sales ÷ Average Total Assets",
-          "Revenue generated per dollar of total assets invested"
-        ],
-        [
-          "Fixed Asset Turnover",
-          "Sales ÷ Average Net PP&E",
-          "Revenue generated per dollar invested in fixed assets"
-        ]
-      ]
-    },
-    {
-      "t": "p",
-      "v": "Note on averages: When a ratio combines an income statement item (annual flow) with a balance sheet item (point in time), always use the AVERAGE balance sheet amount: (Beginning + Ending) ÷ 2."
-    },
-    {
-      "t": "ex",
-      "l": "Activity Ratios — Full Calculation Example",
-      "v": "Annual net credit sales: $1,200,000 | Annual COGS: $800,000\nAnnual credit purchases: $600,000\nBeginning AR: $90,000 | Ending AR: $110,000 → Average AR: $100,000\nBeginning Inventory: $60,000 | Ending Inventory: $80,000 → Average Inventory: $70,000\nBeginning AP: $40,000 | Ending AP: $60,000 → Average AP: $50,000\nAverage Total Assets: $2,000,000 | Average Net PP&E: $800,000\n\nAR Turnover = $1,200,000 ÷ $100,000 = 12.0 times\nDays' Sales in AR = 365 ÷ 12 = 30.4 days\n\nInventory Turnover = $800,000 ÷ $70,000 = 11.4 times\nDays' Sales in Inventory = 365 ÷ 11.4 = 32.0 days\n\nAP Turnover = $600,000 ÷ $50,000 = 12.0 times\nDays' Purchases in Payables = 365 ÷ 12 = 30.4 days\n\nTotal Asset Turnover = $1,200,000 ÷ $2,000,000 = 0.60\nFixed Asset Turnover = $1,200,000 ÷ $800,000 = 1.50"
-    },
-    {
-      "t": "tip",
-      "v": "The Cash Conversion Cycle (CCC) = Days in Inventory + Days in Receivables − Days in Payables. It measures the net days cash is tied up in operations. From the example: CCC = 32.0 + 30.4 − 30.4 = 32 days. A SHORTER CCC is better — the company collects cash quickly and pays suppliers slowly. A negative CCC means the company collects cash before paying suppliers — very efficient."
-    }
-  ],
-  "2-8": [
-    {
-      "t": "h",
-      "v": "Profitability Ratios — Measuring Earnings Performance"
-    },
-    {
-      "t": "p",
-      "v": "Profitability ratios measure how effectively a company generates profit from its revenues and assets. All margin ratios use Net Sales Revenue in the denominator."
-    },
-    {
-      "t": "tbl",
-      "h": [
-        "Ratio",
-        "Formula",
-        "What It Measures"
-      ],
-      "r": [
-        [
-          "Gross Profit Margin",
-          "Gross Profit ÷ Net Sales Revenue",
-          "Percentage of revenue remaining after COGS; ability to cover operating expenses"
-        ],
-        [
-          "Operating Profit Margin",
-          "Operating Income (EBIT) ÷ Net Sales Revenue",
-          "Percentage kept as operating income; efficiency of core operations"
-        ],
-        [
-          "Net Profit Margin",
-          "Net Income ÷ Net Sales Revenue",
-          "Percentage of revenue that becomes bottom-line profit after all costs and taxes"
-        ],
-        [
-          "Return on Assets (ROA)",
-          "Net Income ÷ Average Total Assets",
-          "How much profit generated per dollar of total assets invested"
-        ],
-        [
-          "Return on Equity (ROE)",
-          "Net Income ÷ Average Total Equity",
-          "Return earned on stockholders' investment"
-        ],
-        [
-          "Return on Common Equity",
-          "(Net Income − Preferred Dividends) ÷ Average Common Equity",
-          "Return to common shareholders only; excludes preferred"
-        ]
-      ]
-    },
-    {
-      "t": "ex",
-      "l": "Profitability Ratios — Full Worked Example",
-      "v": "Income Statement:\n  Net Sales Revenue:        $12,000,000\n  Cost of Goods Sold:        (8,000,000)\n  Gross Profit:               4,000,000   → Gross Profit Margin = 33.3%\n  Operating Expenses:        (2,500,000)\n  Operating Income (EBIT):    1,500,000   → Operating Margin = 12.5%\n  Interest income:               25,000\n  Interest expense:             (40,000)\n  Non-operating gains:           57,857\n  Income before tax:          1,542,857\n  Income tax (21%):            (324,000)\n  Net Income:                $1,218,857   → Net Profit Margin = 10.2%\n\nBalance Sheet:\n  Average Total Assets: $8,500,000 | Average Total Equity: $4,200,000\n\nROA = $1,218,857 ÷ $8,500,000 = 14.3%\nROE = $1,218,857 ÷ $4,200,000 = 29.0%"
-    },
-    {
-      "t": "p",
-      "v": "Relationship between margins: Gross Profit Margin − Operating Profit Margin = SG&A as % of sales. Operating Profit Margin − Net Profit Margin = Effect of non-operating items and taxes."
-    },
-    {
-      "t": "tip",
-      "v": "ROA uses AVERAGE total assets because net income is earned over the whole year while the balance sheet is a point-in-time snapshot. ROE will always be higher than ROA for a leveraged company — the difference is the effect of financial leverage (using debt to amplify returns to equity holders)."
-    }
-  ]
+ "2-1": [
+  {
+   "t": "h",
+   "v": "Asset Valuation — AR, Inventory & Fixed Assets"
+  },
+  {
+   "t": "p",
+   "v": "Accounts receivable are reported at net realizable value — the amount the company actually expects to collect. Because some customers will inevitably not pay, the gross AR balance is reduced by an Allowance for Credit Losses (a contra-asset account with a credit balance)."
+  },
+  {
+   "t": "ex",
+   "l": "Balance Sheet Presentation of Net AR",
+   "v": "Accounts receivable (gross)         $100,000\nLess: Allowance for credit losses       (3,750)\nNet accounts receivable               $ 96,250\n\nThe $3,750 allowance represents management's estimate of future uncollectible amounts. The $3,750 is also recorded as Credit Loss Expense on the income statement."
+  },
+  {
+   "t": "h",
+   "v": "Inventory Cost Flow Assumptions — FIFO and LIFO"
+  },
+  {
+   "t": "p",
+   "v": "When inventory is purchased at different prices at different times, the company must choose which unit cost flows to COGS when items are sold. For the FMAA exam, only FIFO and LIFO are tested (LIFO is prohibited under IFRS)."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "",
+    "FIFO (First In, First Out)",
+    "LIFO (Last In, First Out)"
+   ],
+   "r": [
+    [
+     "Units sold assumed to be",
+     "Oldest purchased first",
+     "Newest purchased first"
+    ],
+    [
+     "Ending inventory valued at",
+     "Most recent (current) costs",
+     "Oldest (historical) costs"
+    ],
+    [
+     "In rising prices, COGS",
+     "Lower (older, cheaper costs)",
+     "Higher (newer, expensive costs)"
+    ],
+    [
+     "In rising prices, Net income",
+     "Higher (lower COGS)",
+     "Lower (higher COGS)"
+    ],
+    [
+     "In rising prices, Income tax",
+     "Higher (more taxable income)",
+     "Lower (more COGS shields income)"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Medina Company FIFO vs LIFO Example",
+   "v": "Beginning inventory:    1,000 units @ $5.00\nPurchase March 3:       1,500 units @ $6.00\nPurchase March 20:      1,000 units @ $7.00\nTotal available:        3,500 units; 2,400 sold; 1,100 in ending inventory\nTotal cost of available: (1,000×$5) + (1,500×$6) + (1,000×$7) = $5,000 + $9,000 + $7,000 = $21,000\n\nFIFO:\n  Ending inventory (newest 1,100 units): (1,000×$7) + (100×$6) = $7,000 + $600 = $7,600\n  COGS: $21,000 − $7,600 = $13,400\n\nLIFO:\n  Ending inventory (oldest 1,100 units): (1,000×$5) + (100×$6) = $5,000 + $600 = $5,600\n  COGS: $21,000 − $5,600 = $15,400\n\nDifference: FIFO COGS is $2,000 LOWER than LIFO COGS in a period of rising prices."
+  },
+  {
+   "t": "h",
+   "v": "Depreciation of Fixed Assets"
+  },
+  {
+   "t": "p",
+   "v": "Fixed assets (PP&E) are recorded at historical cost (all costs needed to get the asset ready for use). Depreciation allocates that cost over the asset's useful life — matching the cost to the periods that benefit. Land is NEVER depreciated."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Method",
+    "Formula",
+    "Best For"
+   ],
+   "r": [
+    [
+     "Straight-Line (SL)",
+     "(Cost − Salvage) ÷ Useful Life = same amount each year",
+     "Assets that generate equal benefit each year — easiest method"
+    ],
+    [
+     "Double Declining Balance (DDB)",
+     "Book Value (beginning of year) × (2 ÷ Useful Life) = accelerated",
+     "Assets that provide more benefit in early years; stops when BV = salvage"
+    ],
+    [
+     "Sum-of-Years'-Digits (SYD)",
+     "Depreciable Base × (Remaining Life ÷ SYD)",
+     "Accelerated — similar effect to DDB but different calculation"
+    ],
+    [
+     "Units of Production (UOP)",
+     "(Cost − Salvage) ÷ Estimated Total Units × Actual Units Produced",
+     "Usage-based assets like machinery; depreciation varies with production"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Depreciation Comparison — $100,000 Asset, $10,000 Salvage, 4-Year Life",
+   "v": "Straight-Line annual depreciation: ($100,000 − $10,000) ÷ 4 = $22,500/year\n\nDouble Declining Balance (DDB rate = 2 ÷ 4 = 50%):\n  Year 1: $100,000 × 50% = $50,000 | BV = $50,000\n  Year 2: $50,000 × 50% = $25,000 | BV = $25,000\n  Year 3: $25,000 × 50% = $12,500 | BV = $12,500\n  Year 4: $12,500 − $10,000 salvage = $2,500 (stop at salvage value)\n  Total depreciation: $50,000 + $25,000 + $12,500 + $2,500 = $90,000 = Depreciable base ✓\n\nBalance sheet presentation:\n  Fixed assets (cost)         $100,000\n  Less: Accumulated depreciation (23,750)\n  Book (carrying) value       $ 76,250"
+  },
+  {
+   "t": "tip",
+   "v": "DDB key rule: NEVER depreciate below salvage value. In Year 4, DDB gives $6,250 but book value would drop to $6,250 which is below the $10,000 salvage — so only record $2,500 to reach exactly $10,000."
+  },
+  {
+   "t": "h",
+   "v": "Valuation of Intangible Assets"
+  },
+  {
+   "t": "p",
+   "v": "Intangible assets (patents, trademarks, copyrights, customer lists, purchased goodwill) are recorded at cost — the amount paid to acquire them, including legal/registration fees needed to get them ready for use. Internally generated intangibles (a patent a company develops itself, self-built customer goodwill) are generally NOT capitalized, because the value did not arise from a past exchange transaction — only the direct legal/filing fees may be capitalized. Related R&D costs are expensed as incurred."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Useful Life",
+    "Treatment",
+    "Example"
+   ],
+   "r": [
+    [
+     "Finite (determinable) life",
+     "Amortized over useful life; amount = Cost − Residual Value (residual is usually $0)",
+     "A purchased patent with a 10-year remaining legal life"
+    ],
+    [
+     "Indefinite life",
+     "NOT amortized; tested for impairment at least annually",
+     "Purchased goodwill; a trademark renewable indefinitely"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "v": "All intangible assets — amortized or not — must be evaluated regularly for impairment. If the carrying amount is not recoverable, an impairment loss is recognized to write the asset down to fair value."
+  },
+  {
+   "t": "tip",
+   "v": "Exam distinction: Finite-life intangibles = amortize (like depreciation, but for intangibles). Indefinite-life intangibles (goodwill is the classic example) = never amortized, only impairment-tested. Internally generated goodwill and self-developed patents are never recorded as assets — only purchased/acquired intangibles are capitalized."
+  },
+  {
+   "t": "h",
+   "v": "Valuation of Liabilities"
+  },
+  {
+   "t": "p",
+   "v": "A liability is a present obligation of an entity to transfer cash, goods, services, or other economic benefits to another party in the future, arising from a past transaction or event. To be a liability, the entity must be presently obligated — legally or otherwise bound to settle the obligation."
+  },
+  {
+   "t": "b",
+   "v": [
+    "A liability may require paying cash, providing services, delivering goods, or transferring other assets (including shares).",
+    "Liabilities routinely arise from exchange transactions to acquire funds (borrowing money) or acquire goods/services needed to operate.",
+    "Selling a product with a warranty or guarantee creates a liability — the entity is obligated to repair, replace, or refund if the product is defective.",
+    "A cash receipt itself can create a liability if the company is obligated to provide a good/service or refund the cash by a certain date (e.g., unearned/deferred revenue)."
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Liability Valuation — Warranty Obligation",
+   "v": "A company sells 10,000 units with a 1-year warranty. Based on historical experience, it expects 3% of units to require repair at an average cost of $40 per unit.\n\nEstimated warranty liability = 10,000 × 3% × $40 = $12,000\n\nJournal entry at time of sale (matching principle — expense recognized with the related revenue):\n  Dr  Warranty Expense          12,000\n      Cr  Estimated Warranty Liability   12,000\n\nAs actual repairs are performed, the liability is reduced (not re-expensed):\n  Dr  Estimated Warranty Liability   (actual repair cost)\n      Cr  Cash / Parts Inventory"
+  },
+  {
+   "t": "tip",
+   "v": "Most liabilities are valued at the amount expected to be paid (face value for accounts/notes payable maturing soon). Estimated liabilities — like warranties — are valued at the best estimate of the future outflow, recognized in the SAME period as the related revenue (matching principle), not when the cash is actually paid out."
+  }
+ ],
+ "2-2": [
+  {
+   "t": "h",
+   "v": "Revenue Recognition — The 5-Step Model (ASC 606 / IFRS 15)"
+  },
+  {
+   "t": "p",
+   "v": "The revenue recognition standard (ASC 606 in US GAAP, IFRS 15 internationally) requires revenues to be recognized when performance obligations are satisfied. The standard is principles-based, not rules-based — it requires professional judgment. Revenue should reflect the transfer of promised goods or services to customers in an amount that reflects the consideration the company expects to be entitled to in exchange."
+  },
+  {
+   "t": "s",
+   "v": [
+    "Step 1 — Identify the contract with a customer: A contract is an agreement between two parties that creates enforceable rights and obligations. It can be written, oral, or implied by business practice.",
+    "Step 2 — Identify the separate performance obligations: A performance obligation is a promise to transfer a distinct good or service. A good or service is distinct if the customer can benefit from it on its own or together with readily available resources.",
+    "Step 3 — Determine the transaction price: The transaction price is the amount of consideration expected in exchange for transferring goods or services. Includes variable consideration, financing components, and non-cash consideration.",
+    "Step 4 — Allocate the transaction price to the separate performance obligations: If there are multiple performance obligations, allocate the total price based on their relative standalone selling prices.",
+    "Step 5 — Recognize revenue when (or as) each performance obligation is satisfied: Revenue is recognized at the point in time (or over time) that control of the good or service transfers to the customer."
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "5-Step Model — Bundled Software Contract",
+   "v": "Company sells a software license + 1-year support contract for $1,200 total.\n\nStep 1: Contract exists — written agreement with customer.\nStep 2: Two performance obligations identified:\n  (A) Software license — transferred at a point in time\n  (B) Support services — delivered over 12 months\nStep 3: Transaction price = $1,200 total.\nStep 4: Allocate based on standalone prices:\n  Software license standalone price = $900 (75%)\n  Support services standalone price = $300 (25%)\n  Allocated: License = $1,200 × 75% = $900\n             Support = $1,200 × 25% = $300\nStep 5: Recognize:\n  → $900 at delivery of software license (point in time)\n  → $300 ratably over 12 months = $25/month (over time)"
+  },
+  {
+   "t": "tip",
+   "v": "The exam tests which step is involved in a scenario. Common question: 'When should revenue be recognized?' The answer is always: when the performance obligation is satisfied (Step 5). For goods, this is when control transfers to the customer. For services, this may be over time (e.g., a 12-month maintenance contract recognized monthly)."
+  },
+  {
+   "t": "h",
+   "v": "Expense Recognition — 3 Methods"
+  },
+  {
+   "t": "b",
+   "v": [
+    "1. Cause and Effect (Matching Principle): Expenses directly linked to revenue are recognized when that revenue is recognized. Example: Cost of goods sold is recognized when the related sale is recognized.",
+    "2. Systematic and Rational Allocation: Expenses that provide benefit over multiple periods are allocated systematically. Example: Depreciation of equipment spread over its useful life.",
+    "3. Immediate Recognition: Expenses that provide no future benefit or whose benefit cannot be reasonably measured are expensed immediately. Example: Advertising costs, officer salaries."
+   ]
+  },
+  {
+   "t": "h",
+   "v": "Gains and Losses on Disposal of Fixed Assets"
+  },
+  {
+   "t": "p",
+   "v": "When a company sells a fixed asset (PP&E), a gain or loss arises. The gain or loss = Sale proceeds − Book value at disposal. Book value = Original cost − Accumulated depreciation. A gain is reported on the income statement as 'Gain on Sale of Asset'. A loss is reported as 'Loss on Sale of Asset'. Both are non-operating items — they appear below operating income."
+  },
+  {
+   "t": "ex",
+   "l": "Gain on Disposal — Example",
+   "v": "Machine: Original cost $50,000. Accumulated depreciation $32,000.\nBook value at disposal = $50,000 − $32,000 = $18,000\nSale proceeds = $22,000\nGain on sale = $22,000 − $18,000 = $4,000 (Favorable — reported as income)\n\nJournal entry:\n  Cash                     22,000\n  Accumulated Depreciation 32,000\n    Equipment                       50,000\n    Gain on Sale of Asset            4,000"
+  },
+  {
+   "t": "h",
+   "v": "Other Comprehensive Income (OCI)"
+  },
+  {
+   "t": "p",
+   "v": "Comprehensive Income = Net Income + Other Comprehensive Income (OCI). OCI items are gains and losses that are excluded from net income but still affect stockholders' equity."
+  },
+  {
+   "t": "b",
+   "v": [
+    "Unrealized gains and losses on available-for-sale securities",
+    "Foreign currency translation adjustments",
+    "Pension liability adjustments",
+    "Effective portion of cash flow hedge gains/losses"
+   ]
+  },
+  {
+   "t": "tip",
+   "v": "OCI items never appear in Net Income but DO appear in Comprehensive Income (Net Income + OCI). On the exam: if a question asks what affects net income, OCI items do NOT. If a question asks what affects stockholders' equity or comprehensive income, OCI items DO."
+  },
+  {
+   "t": "h",
+   "v": "Income Statement Classification — Continuing vs Discontinued Operations"
+  },
+  {
+   "t": "p",
+   "v": "A multi-step income statement separates results into components so users can judge which earnings are likely to recur. The two headline components are Income from Continuing Operations and Income (Loss) from Discontinued Operations, reported separately, net of tax."
+  },
+  {
+   "t": "def",
+   "term": "Discontinued Operations",
+   "v": "A component of an entity (a separate major line of business or geographic area) that the company has either disposed of or classified as held for sale, AND whose disposal represents a strategic shift that has (or will have) a major effect on the entity's operations and financial results. Its results are removed from continuing operations and reported separately, net of tax, below Income from Continuing Operations."
+  },
+  {
+   "t": "ex",
+   "l": "Income Statement — Continuing vs Discontinued Operations",
+   "v": "Income from continuing operations (before tax)     $500,000\nIncome tax expense                                 (125,000)\nIncome from continuing operations                   375,000\n\nDiscontinued operations:\n  Loss from operations of discontinued division      (80,000)\n  Income tax benefit                                   20,000\n  Loss on discontinued operations, net of tax          (60,000)\n\nNet Income                                         $ 315,000"
+  },
+  {
+   "t": "p",
+   "v": "Items that do NOT qualify as discontinued operations — but are unusual, infrequent, or non-operating — are instead reported within continuing operations, typically as a separate line before tax (e.g., 'Loss on litigation settlement', 'Restructuring costs', 'Gain on sale of a minor asset'). They are NOT shown net of tax and are NOT shown below net income the way discontinued operations are."
+  },
+  {
+   "t": "tip",
+   "v": "Exam trap: not every unusual or one-time gain/loss is a 'discontinued operation.' The strict test is (1) it's a separate major line of business or geographic area being exited or held for sale, AND (2) it's a strategic shift with a major effect on results. A one-off asset sale, a lawsuit settlement, or closing one branch of a multi-branch business usually does NOT qualify — it stays in continuing operations."
+  }
+ ],
+ "2-3": [
+  {
+   "t": "h",
+   "v": "Overview: How Equity Changes"
+  },
+  {
+   "t": "p",
+   "v": "Shareholders' equity changes in two ways: through transactions with owners (issuing shares, buying shares back as treasury stock, and paying cash or stock dividends) and through the company's own results, as net income flows into retained earnings. This unit covers the owner transactions. The key idea to hold onto: transactions with owners never create a gain or loss on the income statement. They only move amounts between cash, contributed capital and retained earnings."
+  },
+  {
+   "t": "h",
+   "v": "Issuing Common Stock"
+  },
+  {
+   "t": "p",
+   "v": "When shares are issued, the par value goes to the Common Stock account; everything above par goes to Additional Paid-in Capital (APIC). Par value is always a very small stated amount and bears no relation to market price."
+  },
+  {
+   "t": "ex",
+   "l": "Stock Issuance — Par vs No-Par",
+   "v": "Example: Issue 10,000 shares at $15/share; par value = $1/share:\n  Dr  Cash                        150,000\n      Cr  Common Stock (10,000 × $1)    10,000\n      Cr  APIC-Common Stock            140,000\n\nNo-par stock: Issue 10,000 shares at $15/share:\n  Dr  Cash                        150,000\n      Cr  Common Stock (full amount)   150,000"
+  },
+  {
+   "t": "h",
+   "v": "Cash Dividends — 3 Dates"
+  },
+  {
+   "t": "b",
+   "v": [
+    "Declaration date: Dr Dividends (or Retained Earnings) / Cr Dividends Payable — liability created",
+    "Record date: No journal entry — determines which shareholders receive dividend",
+    "Payment date: Dr Dividends Payable / Cr Cash — liability settled"
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Dividend Journal Entries",
+   "v": "Board declares $0.50/share dividend on 100,000 shares = $50,000 total.\n\nDeclaration date:\n  Dr  Retained Earnings (or Dividends)    50,000\n      Cr  Dividends Payable                   50,000\n\nPayment date:\n  Dr  Dividends Payable    50,000\n      Cr  Cash                   50,000"
+  },
+  {
+   "t": "h",
+   "v": "Treasury Stock"
+  },
+  {
+   "t": "p",
+   "v": "Treasury stock is common stock that was issued and later repurchased by the company. It reduces equity (shown as a negative). It is recorded at cost; when reissued, any difference from cost goes to APIC, not to income."
+  },
+  {
+   "t": "ex",
+   "l": "Treasury Stock Buy and Reissue",
+   "v": "Buy back 1,000 shares at $20/share:\n  Dr  Treasury Stock    20,000\n      Cr  Cash               20,000\n\nReissue 500 shares at $25/share:\n  Dr  Cash (500 × $25)                  12,500\n      Cr  Treasury Stock (500 × $20 cost)   10,000\n      Cr  APIC-Treasury Stock                2,500\n(Gain goes to APIC — never to income statement)"
+  },
+  {
+   "t": "h",
+   "v": "Stock Dividends — Small vs Large"
+  },
+  {
+   "t": "p",
+   "v": "A stock dividend distributes additional shares of the company's own stock to existing shareholders instead of cash. It transfers an amount from Retained Earnings to the contributed-capital accounts (Common Stock and, for a small stock dividend, APIC) — total equity does NOT change, and no asset (cash) leaves the company."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "",
+    "Small Stock Dividend (< 20–25%)",
+    "Large Stock Dividend (> 20–25%)"
+   ],
+   "r": [
+    [
+     "Valued at",
+     "Fair market value (FMV) per share on declaration date",
+     "Par (or stated) value per share"
+    ],
+    [
+     "Retained Earnings reduced by",
+     "Shares issued × FMV",
+     "Shares issued × Par value"
+    ],
+    [
+     "Rationale",
+     "Small enough that it shouldn't materially affect market price, so FMV is used",
+     "Large enough that it behaves like a stock split, so only par value is capitalized"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Small Stock Dividend Journal Entry",
+   "v": "Company has 100,000 shares outstanding ($1 par). Board declares a 10% stock dividend (small — under 20–25%). FMV per share on declaration date = $8.\n\nShares issued = 100,000 × 10% = 10,000 shares\nRetained Earnings reduced by = 10,000 × $8 (FMV) = $80,000\n\nDr  Retained Earnings                 80,000\n    Cr  Common Stock (10,000 × $1 par)      10,000\n    Cr  APIC — Common Stock                 70,000\n\n(No cash moves. Total stockholders' equity is unchanged — value simply shifts from Retained Earnings to contributed capital.)"
+  },
+  {
+   "t": "tip",
+   "v": "Stock dividends and cash dividends both reduce Retained Earnings, but only a CASH dividend reduces total equity and creates a liability (Dividends Payable). A stock dividend just reclassifies equity from Retained Earnings into Common Stock/APIC — total stockholders' equity, total assets, and total liabilities are all unaffected."
+  },
+  {
+   "t": "h",
+   "v": "Classification of Shares"
+  },
+  {
+   "t": "b",
+   "v": [
+    "Authorized shares: the maximum number of shares a corporation is legally permitted to issue, per its corporate charter.",
+    "Issued shares: the total number of authorized shares that have actually been sold/distributed to shareholders (issued shares can never exceed authorized shares).",
+    "Outstanding shares: issued shares currently held by shareholders — i.e., issued shares MINUS treasury shares.",
+    "Treasury shares: issued shares the company has repurchased and is holding; they are issued but NOT outstanding."
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Authorized / Issued / Outstanding — Relationship",
+   "v": "Authorized shares:      1,000,000\nIssued shares:             400,000  (sold to shareholders over time)\nTreasury shares:            25,000  (repurchased, not retired)\n\nOutstanding shares = Issued − Treasury = 400,000 − 25,000 = 375,000\n\nDividends, voting rights, and EPS calculations are based on OUTSTANDING shares — treasury shares receive no dividends and have no voting rights."
+  }
+ ],
+ "2-4": [
+  {
+   "t": "h",
+   "v": "Overview: Why Analyze Financial Statements"
+  },
+  {
+   "t": "p",
+   "v": "Raw financial statement amounts are hard to compare. A $2 million profit means something very different for a company with $10 million of sales than for one with $500 million. Financial statement analysis converts amounts into relationships that can be compared across periods and across companies. The two foundation tools are vertical (common-size) analysis, which compares each line to a base amount within the same period, and horizontal (trend) analysis, which compares the same line across periods. The ratio analysis in the next four units builds on both."
+  },
+  {
+   "t": "h",
+   "v": "Vertical (Common-Size) Analysis"
+  },
+  {
+   "t": "p",
+   "v": "Every line item expressed as a percentage of a base amount. For the income statement, base = net sales revenue. For the balance sheet, base = total assets. This removes the effect of size differences, enabling comparison between companies or periods."
+  },
+  {
+   "t": "ex",
+   "l": "Common-Size Income Statement",
+   "v": "Net sales revenue:   $12,000,000   100.0%\nCost of goods sold:   (8,000,000)   66.7%\nGross profit:          4,000,000    33.3%\nOperating expenses:   (2,500,000)   20.8%\nOperating income:      1,500,000    12.5%\nNet income:            1,218,857    10.2%\n\nInsight: If COGS% rises from 66.7% to 70% next year, costs are rising faster than revenue — a warning signal."
+  },
+  {
+   "t": "h",
+   "v": "Horizontal (Trend) Analysis"
+  },
+  {
+   "t": "p",
+   "v": "Compare the same line item across multiple periods. Each amount is expressed as a percentage change from the base year. Reveals trends — is revenue growing? Are expenses growing faster than revenue?"
+  },
+  {
+   "t": "ex",
+   "l": "Trend Analysis",
+   "v": "Sales 20X1: $10,000,000 (base year = 100%)\nSales 20X2: $11,500,000 → 115% (15% growth)\nSales 20X3: $12,000,000 → 120% (20% growth over base)\n\nCOGS 20X1: $6,500,000 (65% of sales)\nCOGS 20X3: $8,000,000 (66.7% of sales)\n→ COGS growing faster than sales: gross margin is shrinking."
+  },
+  {
+   "t": "tip",
+   "v": "Vertical = one year, compare items within that year. Horizontal = one item, compare across multiple years. Both together tell a more complete story."
+  }
+ ],
+ "2-5": [
+  {
+   "t": "h",
+   "v": "Liquidity Ratios — Measuring Short-Term Solvency"
+  },
+  {
+   "t": "p",
+   "v": "Liquidity ratios evaluate a company's ability to meet short-term obligations as they come due using current assets. The standard benchmarks below are general guidelines — ratios must always be compared to industry averages and the company's own trend over time."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Ratio",
+    "Formula",
+    "Standard",
+    "What It Measures"
+   ],
+   "r": [
+    [
+     "Current Ratio",
+     "Current Assets ÷ Current Liabilities",
+     "2:1",
+     "General short-term liquidity; ability to pay current liabilities with current assets"
+    ],
+    [
+     "Quick (Acid Test) Ratio",
+     "(Cash + Mkt Securities + Net AR) ÷ Current Liabilities",
+     "1:1",
+     "More conservative — excludes inventory and prepaid expenses (less liquid)"
+    ],
+    [
+     "Cash Ratio",
+     "(Cash + Cash Equivalents + Mkt Securities) ÷ Current Liabilities",
+     "—",
+     "Most conservative — only most liquid assets; ability to pay from cash position alone"
+    ],
+    [
+     "Cash Flow Ratio",
+     "Operating Cash Flow ÷ Period-End Current Liabilities",
+     "≥0.40",
+     "Ability to generate cash from operations to pay current obligations"
+    ],
+    [
+     "Net Working Capital Ratio",
+     "(Current Assets − Current Liabilities) ÷ Total Assets",
+     "—",
+     "Proportion of total assets represented by working capital; declining trend signals problems"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "v": "Why inventory is EXCLUDED from the quick ratio: Inventory requires two steps to become cash (sell it, then collect the receivable). It cannot always be quickly liquidated. Prepaid expenses are also excluded — they cannot be converted to cash at all. Accounts receivable IS included because it is only one step from cash (collect it), and can usually be factored immediately."
+  },
+  {
+   "t": "ex",
+   "l": "Liquidity Ratios — Complete Calculation Example",
+   "v": "Balance Sheet data:\n  Cash: $50,000 | Marketable Securities: $30,000\n  Accounts Receivable (net): $80,000 | Inventory: $120,000\n  Prepaid Expenses: $10,000 | Total Current Assets: $290,000\n  Total Current Liabilities: $140,000 | Total Assets: $800,000\n  Operating Cash Flow (annual): $70,000\n\nCurrent Ratio = $290,000 ÷ $140,000 = 2.07 ✓ (above 2:1 standard)\nQuick Ratio = ($50K + $30K + $80K) ÷ $140K = $160K ÷ $140K = 1.14 ✓ (above 1:1)\nCash Ratio = ($50K + $30K) ÷ $140K = 0.57\nCash Flow Ratio = $70K ÷ $140K = 0.50 ✓ (above 0.40 standard)\nNWC Ratio = ($290K − $140K) ÷ $800K = $150K ÷ $800K = 0.19"
+  },
+  {
+   "t": "tip",
+   "v": "Exam interpretation questions: A HIGH current ratio is NOT always good. It may indicate excess inventory (poor management) or too much idle cash. A DECREASING quick ratio trend is more concerning than a single low reading — it signals deteriorating short-term liquidity over time. Always compare ratios to industry benchmarks and prior periods, not just to the standard benchmarks."
+  }
+ ],
+ "2-6": [
+  {
+   "t": "h",
+   "v": "Leverage (Solvency) Ratios — Measuring Long-Term Debt Capacity"
+  },
+  {
+   "t": "p",
+   "v": "Solvency is the ability to pay long-term obligations from earnings. Leverage ratios analyze the composition of the capital structure (how much debt vs equity) and the company's ability to service that debt from earnings. Financial leverage = using debt to magnify returns to equity holders. The more debt, the higher the interest burden and the greater the solvency risk."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Ratio",
+    "Formula",
+    "Interpretation"
+   ],
+   "r": [
+    [
+     "Debt to Equity Ratio",
+     "Total Liabilities ÷ Total Equity",
+     "Higher ratio = greater reliance on debt; 2:1 triggers deeper analysis"
+    ],
+    [
+     "Long-Term Debt to Equity Ratio",
+     "(Total Debt − Current Liabilities) ÷ Total Equity",
+     "Focuses on non-current debt; > 1:1 means more LT debt than equity"
+    ],
+    [
+     "Debt to Total Assets Ratio",
+     "Total Liabilities ÷ Total Assets",
+     "Proportion of assets financed by creditors; lower is safer"
+    ],
+    [
+     "Interest Coverage Ratio (TIE)",
+     "EBIT ÷ Interest Expense",
+     "Times interest earned; > 3.0 is excellent; < 1.5 signals default risk"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "v": "The Debt to Total Assets ratio includes ALL liabilities in the numerator — even accounts payable which don't bear interest. This makes it more conservative than ratios that include only interest-bearing debt. Lenders want this ratio as low as possible."
+  },
+  {
+   "t": "ex",
+   "l": "Leverage Ratios — Calculation Example",
+   "v": "Balance Sheet: Total Liabilities $800,000 | Current Liabilities $200,000\n              Total Equity $400,000 | Total Assets $1,200,000\nIncome Statement: EBIT $150,000 | Interest Expense $40,000\n\nDebt to Equity = $800,000 ÷ $400,000 = 2.0 (High — 2:1 warrants analysis)\nLT Debt to Equity = ($800K − $200K) ÷ $400K = $600K ÷ $400K = 1.5 (> 1:1)\nDebt to Total Assets = $800,000 ÷ $1,200,000 = 0.67 (67% debt-financed)\nInterest Coverage = $150,000 ÷ $40,000 = 3.75 ✓ (above 3.0 — excellent)\n\nConclusion: High debt levels but strong earnings coverage. Focus on sustainability of EBIT."
+  },
+  {
+   "t": "tip",
+   "v": "Key distinction: LIQUIDITY ratios measure ability to pay SHORT-TERM obligations (current liabilities). SOLVENCY/LEVERAGE ratios measure ability to pay LONG-TERM obligations from earnings. The Interest Coverage Ratio uses EBIT (not net income) because interest is paid BEFORE taxes — so pre-tax earnings are available to pay interest."
+  }
+ ],
+ "2-7": [
+  {
+   "t": "h",
+   "v": "Activity (Efficiency) Ratios — Managing Assets and Liabilities"
+  },
+  {
+   "t": "p",
+   "v": "Activity ratios measure how efficiently a company manages its current assets (receivables and inventory) and how quickly it pays its suppliers. All activity ratios should be compared to industry averages and prior periods — a single ratio in isolation has limited meaning."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Ratio",
+    "Formula",
+    "What It Tells You"
+   ],
+   "r": [
+    [
+     "AR Turnover",
+     "Net Annual Credit Sales ÷ Average Gross AR",
+     "Times receivables collected and replaced per year; higher = faster collection"
+    ],
+    [
+     "Days' Sales in Receivables",
+     "365 ÷ AR Turnover  OR  Avg AR ÷ Avg Daily Credit Sales",
+     "Average days to collect; should not exceed credit terms offered"
+    ],
+    [
+     "Inventory Turnover",
+     "Annual COGS ÷ Average Inventory",
+     "Times inventory sold and replaced per year; higher = faster moving inventory"
+    ],
+    [
+     "Days' Sales in Inventory",
+     "365 ÷ Inventory Turnover  OR  Avg Inventory ÷ Avg Daily COGS",
+     "Average days inventory sits before being sold; lower is better"
+    ],
+    [
+     "AP Turnover",
+     "Annual Credit Purchases ÷ Average Accounts Payable",
+     "Times payables paid and replaced per year"
+    ],
+    [
+     "Days' Purchases in Payables",
+     "365 ÷ AP Turnover  OR  Avg AP ÷ Avg Daily Credit Purchases",
+     "Average days company takes to pay suppliers"
+    ],
+    [
+     "Total Asset Turnover",
+     "Sales ÷ Average Total Assets",
+     "Revenue generated per dollar of total assets invested"
+    ],
+    [
+     "Fixed Asset Turnover",
+     "Sales ÷ Average Net PP&E",
+     "Revenue generated per dollar invested in fixed assets"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "v": "Note on averages: When a ratio combines an income statement item (annual flow) with a balance sheet item (point in time), always use the AVERAGE balance sheet amount: (Beginning + Ending) ÷ 2."
+  },
+  {
+   "t": "ex",
+   "l": "Activity Ratios — Full Calculation Example",
+   "v": "Annual net credit sales: $1,200,000 | Annual COGS: $800,000\nAnnual credit purchases: $600,000\nBeginning AR: $90,000 | Ending AR: $110,000 → Average AR: $100,000\nBeginning Inventory: $60,000 | Ending Inventory: $80,000 → Average Inventory: $70,000\nBeginning AP: $40,000 | Ending AP: $60,000 → Average AP: $50,000\nAverage Total Assets: $2,000,000 | Average Net PP&E: $800,000\n\nAR Turnover = $1,200,000 ÷ $100,000 = 12.0 times\nDays' Sales in AR = 365 ÷ 12 = 30.4 days\n\nInventory Turnover = $800,000 ÷ $70,000 = 11.4 times\nDays' Sales in Inventory = 365 ÷ 11.4 = 32.0 days\n\nAP Turnover = $600,000 ÷ $50,000 = 12.0 times\nDays' Purchases in Payables = 365 ÷ 12 = 30.4 days\n\nTotal Asset Turnover = $1,200,000 ÷ $2,000,000 = 0.60\nFixed Asset Turnover = $1,200,000 ÷ $800,000 = 1.50"
+  },
+  {
+   "t": "tip",
+   "v": "The Cash Conversion Cycle (CCC) = Days in Inventory + Days in Receivables − Days in Payables. It measures the net days cash is tied up in operations. From the example: CCC = 32.0 + 30.4 − 30.4 = 32 days. A SHORTER CCC is better — the company collects cash quickly and pays suppliers slowly. A negative CCC means the company collects cash before paying suppliers — very efficient."
+  }
+ ],
+ "2-8": [
+  {
+   "t": "h",
+   "v": "Profitability Ratios — Measuring Earnings Performance"
+  },
+  {
+   "t": "p",
+   "v": "Profitability ratios measure how effectively a company generates profit from its revenues and assets. All margin ratios use Net Sales Revenue in the denominator."
+  },
+  {
+   "t": "tbl",
+   "h": [
+    "Ratio",
+    "Formula",
+    "What It Measures"
+   ],
+   "r": [
+    [
+     "Gross Profit Margin",
+     "Gross Profit ÷ Net Sales Revenue",
+     "Percentage of revenue remaining after COGS; ability to cover operating expenses"
+    ],
+    [
+     "Operating Profit Margin",
+     "Operating Income (EBIT) ÷ Net Sales Revenue",
+     "Percentage kept as operating income; efficiency of core operations"
+    ],
+    [
+     "Net Profit Margin",
+     "Net Income ÷ Net Sales Revenue",
+     "Percentage of revenue that becomes bottom-line profit after all costs and taxes"
+    ],
+    [
+     "Return on Assets (ROA)",
+     "Net Income ÷ Average Total Assets",
+     "How much profit generated per dollar of total assets invested"
+    ],
+    [
+     "Return on Equity (ROE)",
+     "Net Income ÷ Average Total Equity",
+     "Return earned on stockholders' investment"
+    ],
+    [
+     "Return on Common Equity",
+     "(Net Income − Preferred Dividends) ÷ Average Common Equity",
+     "Return to common shareholders only; excludes preferred"
+    ]
+   ]
+  },
+  {
+   "t": "ex",
+   "l": "Profitability Ratios — Full Worked Example",
+   "v": "Income Statement:\n  Net Sales Revenue:        $12,000,000\n  Cost of Goods Sold:        (8,000,000)\n  Gross Profit:               4,000,000   → Gross Profit Margin = 33.3%\n  Operating Expenses:        (2,500,000)\n  Operating Income (EBIT):    1,500,000   → Operating Margin = 12.5%\n  Interest income:               25,000\n  Interest expense:             (40,000)\n  Non-operating gains:           57,857\n  Income before tax:          1,542,857\n  Income tax (21%):            (324,000)\n  Net Income:                $1,218,857   → Net Profit Margin = 10.2%\n\nBalance Sheet:\n  Average Total Assets: $8,500,000 | Average Total Equity: $4,200,000\n\nROA = $1,218,857 ÷ $8,500,000 = 14.3%\nROE = $1,218,857 ÷ $4,200,000 = 29.0%"
+  },
+  {
+   "t": "p",
+   "v": "Relationship between margins: Gross Profit Margin − Operating Profit Margin = SG&A as % of sales. Operating Profit Margin − Net Profit Margin = Effect of non-operating items and taxes."
+  },
+  {
+   "t": "tip",
+   "v": "ROA uses AVERAGE total assets because net income is earned over the whole year while the balance sheet is a point-in-time snapshot. ROE will always be higher than ROA for a leveraged company — the difference is the effect of financial leverage (using debt to amplify returns to equity holders)."
+  }
+ ]
 }
