@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-09-22-01 clockdrift-and-ci-terms -->
+<!-- FMAA-BUILD: 2026-09-23-01 phase1-tooltips-appcheck-readiness -->
 <script>
-window.FMAA_BUILD='2026-09-22-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-09-23-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -232,6 +232,7 @@ body.nav-collapsed .nav-collapse-btn .nav-collapse-arrow{transform:rotate(180deg
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-check-compat.js"></script>
 </head>
 <body>
 <div id="app">
@@ -307,6 +308,19 @@ firebase.initializeApp({
   messagingSenderId:"651971966851",
   appId:"1:651971966851:web:2da18b58a355313ffb28b6"
 });
+// BATCH 2026-09-23 (#3) — Firebase App Check (reCAPTCHA Enterprise, score-based,
+// invisible to students). Must activate BEFORE the first Auth/Firestore call so
+// every request carries a token. Currently in MONITOR mode in the console —
+// nothing is rejected until Firestore/Auth are switched to "Enforce".
+// Fully guarded: if the SDK fails to load (offline, blocked), the app runs
+// exactly as before instead of crashing.
+const APP_CHECK_SITE_KEY='6Le-wMotAAAAACgMCaAkMXuf6UujZqGlIm0CeGTl';
+try{
+  if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){self.FIREBASE_APPCHECK_DEBUG_TOKEN=true;}
+  if(firebase.appCheck&&firebase.appCheck.ReCaptchaEnterpriseProvider){
+    firebase.appCheck().activate(new firebase.appCheck.ReCaptchaEnterpriseProvider(APP_CHECK_SITE_KEY),true);
+  }else{console.warn('[AppCheck] SDK unavailable — running without attestation');}
+}catch(e){console.warn('[AppCheck] activation failed (non-fatal):',e);}
 const auth=firebase.auth();
 const db=firebase.firestore();
 const CLD_CLOUD='dvr6ygjhe';
@@ -354,17 +368,17 @@ const S=[
       {id:"1-3",title:"Double-Entry Mechanics: Debits, Credits & Ledgers",dur:"25 min",blocks:[],quizzes:[]},
       {id:"1-4",title:"Worked Example: A New Business's First Transactions",dur:"20 min",blocks:[],quizzes:[]},
       {id:"1-5",title:"Checkpoint: Building the Unadjusted Trial Balance",dur:"15 min",blocks:[],quizzes:[]},
-      {id:"1-6",title:"Net Income vs. Comprehensive Income",dur:"20 min",blocks:[],quizzes:[]},
+      {id:"1-6",title:"Beyond Net Income: Reporting OCI",dur:"20 min",blocks:[],quizzes:[]},
       {id:"1-7",title:"Subsidiary Ledgers & Control Accounts",dur:"15 min",blocks:[],quizzes:[]},
       {id:"1-8",title:"Worked Example: Booking Revenue and Expenses",dur:"20 min",blocks:[],quizzes:[]},
       {id:"1-9",title:"Additional Transaction Types, Illustrated",dur:"25 min",blocks:[],quizzes:[]},
       {id:"1-10",title:"Period-End Adjusting Entries",dur:"30 min",blocks:[],quizzes:[]},
-      {id:"1-11",title:"Example: Adjusting Entries",dur:"20 min",blocks:[],quizzes:[]},
+      {id:"1-11",title:"Walkthrough: Recording Period-End Adjustments",dur:"20 min",blocks:[],quizzes:[]},
       {id:"1-12",title:"Closing the Books at Year-End",dur:"25 min",blocks:[],quizzes:[]},
       {id:"1-13",title:"Accounting Cycle Recap & Reversing Entries",dur:"15 min",blocks:[],quizzes:[]},
       {id:"1-14",title:"Anatomy of the Financial Statements",dur:"30 min",blocks:[],quizzes:[]},
       {id:"1-15",title:"Building the Cash Flow Statement",dur:"30 min",blocks:[],quizzes:[]},
-      {id:"1-16",title:"Internal Control Fundamentals",dur:"25 min",blocks:[],quizzes:[]},
+      {id:"1-16",title:"Safeguarding Assets: The Control Framework",dur:"25 min",blocks:[],quizzes:[]},
       {id:"1-17",title:"Day-to-Day Corporate Finance & Working Capital",dur:"20 min",blocks:[],quizzes:[]},
       {id:"1-18",title:"Managing Company Cash & Float",dur:"15 min",blocks:[],quizzes:[]},
       {id:"1-19",title:"Managing Receivables & Payables",dur:"25 min",blocks:[],quizzes:[]},
@@ -683,17 +697,29 @@ const TERM_DICT={
 // ─── DICTIONARY DATA ──────────────────────────────────────────────────────────
 let FMAA_DICT=[];
 function escRx(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+// BATCH 2026-09-23 (#1) — single-pass term highlighting.
+// The old version ran one regex per dictionary term (377 passes). After a long
+// term such as "Inventory Turnover" was wrapped, the shorter "Inventory" still
+// matched inside the wrapped text, producing nested spans and the WRONG Arabic
+// tooltip on tap. One combined alternation (longest terms first) consumes each
+// region of text exactly once, so nesting is impossible — and it is ~377× fewer
+// regex executions per lesson render. Keys are matched against the HTML-escaped
+// text, so terms containing "&" (e.g. "R&D") now match too.
+let _termRx=null,_termMap=null,_termCount=-1;
+function _buildTermIndex(){
+  const keys=Object.keys(TERM_DICT);
+  _termMap=new Map();
+  const escKeys=keys.map(k=>{const ek=esc(k);_termMap.set(ek.toLowerCase(),TERM_DICT[k]);return ek;})
+    .sort((a,b)=>b.length-a.length);
+  _termRx=new RegExp('\\b(?:'+escKeys.map(escRx).join('|')+')\\b','gi');
+  _termCount=keys.length;
+}
 function highlightTerms(text){
-  let out=esc(text);
-  const terms=Object.keys(TERM_DICT).sort((a,b)=>b.length-a.length);
-  // Case-insensitive ('i' flag) so mid-sentence occurrences like "trial balance"
-  // still match the Title-Case dictionary key "Trial Balance" — the original
-  // case-sensitive match silently skipped most in-text occurrences. The
-  // replacement uses the ACTUAL matched text (m), not the dictionary's
-  // canonical casing, so a lowercase mid-sentence mention still displays
-  // lowercase and only the Arabic tooltip comes from the dictionary.
-  for(const term of terms){const ar=TERM_DICT[term];const re=new RegExp('\\b'+escRx(term)+'\\b(?![^<]*>)','gi');out=out.replace(re,m=>`<span class="ar-term" onclick="toggleTip(this)">${m}<span class="ar-tip">${ar}</span></span>`);}
-  return out;
+  if(!_termRx||_termCount!==Object.keys(TERM_DICT).length)_buildTermIndex();
+  return esc(text).replace(_termRx,m=>{
+    const ar=_termMap.get(m.toLowerCase());
+    return ar?`<span class="ar-term" onclick="toggleTip(this)">${m}<span class="ar-tip">${ar}</span></span>`:m;
+  });
 }
 function toggleTip(el){
   // Get or create the global popover element
@@ -1171,9 +1197,11 @@ function setAllLessonTopics(lessonId,groupCount,open){
   for(let i=0;i<groupCount;i++)STATE.topicOpen[lessonId+'::'+i]=open;
   render();
 }
+// BATCH 2026-09-23 (#13) — the "Video coming soon" card appeared on every
+// unit and made the app look unfinished. Units without a video now show
+// nothing; units with a video render it through the normal 'video' block.
 function lessonVideoPlaceholder(lesson){
-  const hasVideo=lesson.blocks&&lesson.blocks.some(b=>b.t==='video');
-  return hasVideo?'':`<div style="margin:14px 0 4px;background:#f5f5f0;border:.5px dashed #c0c0b8;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px"><div style="width:36px;height:36px;background:#D6EAF8;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px">🎬</div><div><div style="font-size:13px;font-weight:500;color:#555">Video coming soon</div><div style="font-size:11px;color:#999;margin-top:2px">Gawad will record this lesson shortly</div></div></div>`;
+  return'';
 }
 
 // ─── IN-UNIT SEARCH ───────────────────────────────────────────────────────────
@@ -1206,6 +1234,14 @@ function lessonTopicsHTML(lesson,sec,videoPlaceholder){
     if(matches)anyMatch=true;
     const open=q?matches:!!(STATE.topicOpen&&STATE.topicOpen[key]);
     const title=g.heading?g.heading.v:'Overview';
+    // BATCH 2026-09-23 (#6) — a heading followed directly by another heading
+    // (an umbrella title like "IMA Ethical Standards" over its sub-topics) used
+    // to render as an accordion that opened onto nothing. Render it as a plain
+    // group label instead, so no panel is ever empty.
+    if(!g.blocks.length){
+      if(q&&!_topicMatchesQuery(g,ql))return'';
+      return`<div style="margin:14px 2px 6px;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:${sec.text}">${esc(title)}</div>`;
+    }
     return`<div style="border:.5px solid ${sec.text}25;border-radius:10px;margin-bottom:8px;overflow:hidden"><button onclick="toggleLessonTopic('${lesson.id}',${gi})" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:none;background:${open?sec.bg:'#fff'};cursor:pointer;font-family:inherit;text-align:left"><span style="font-size:14px;font-weight:600;color:${sec.strong}">${esc(title)}</span><span style="font-size:12px;color:${sec.text};flex-shrink:0">${open?'▾ Hide':'▸ Show'}</span></button>${open?`<div style="padding:4px 14px 14px">${g.blocks.map(b=>renderBlock(b,sec)).join('')}</div>`:''}</div>`;
   }).join('');
   const expandControls=(!q&&groups.length>1)?`<div style="display:flex;gap:8px;margin-bottom:10px"><button onclick="setAllLessonTopics('${lesson.id}',${groups.length},true)" style="flex:1;padding:8px;border-radius:8px;border:.5px solid ${sec.text}40;background:#fff;color:${sec.strong};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Expand All</button><button onclick="setAllLessonTopics('${lesson.id}',${groups.length},false)" style="flex:1;padding:8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Collapse All</button></div>`:'';
@@ -1676,12 +1712,9 @@ function renderIntro(){const st=loadStudent();const pct=getPct();const acc=getAc
         <span class="cred-badge">MBA</span><span class="cred-badge">TOT</span>
         <span class="cred-badge">20 Years Experience</span>
       </div>
-      <div style="display:flex;gap:10px;justify-content:center;margin-top:8px">
-        <a href="tel:+201019641390" style="display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:12px 22px;text-decoration:none;color:#fff;min-width:88px"><span style="font-size:26px">📞</span><span style="font-size:12px;font-weight:500">Call</span></a>
-        <a href="https://wa.me/201019641390" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:12px 22px;text-decoration:none;color:#fff;min-width:88px"><span style="font-size:26px">💬</span><span style="font-size:12px;font-weight:500">WhatsApp</span></a>
+      <!-- BATCH 2026-09-23 (#7): Call & WhatsApp removed; Email merged into the social row -->
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:8px;flex-wrap:wrap">
         <a href="mailto:Mohamed.Gawad890@gmail.com" style="display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:12px 22px;text-decoration:none;color:#fff;min-width:88px"><span style="font-size:26px">✉️</span><span style="font-size:12px;font-weight:500">Email</span></a>
-      </div>
-      <div style="display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap">
         <a href="https://www.facebook.com/profile.php?id=61550958763803" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:12px 22px;text-decoration:none;color:#fff;min-width:88px"><span style="font-size:26px">📘</span><span style="font-size:12px;font-weight:500">Facebook</span></a>
         <a href="https://www.facebook.com/share/1BSdcgufdL/?mibextid=wwXIfr" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:12px 22px;text-decoration:none;color:#fff;min-width:88px"><span style="font-size:26px">👥</span><span style="font-size:12px;font-weight:500">FB Group</span></a>
         <a href="https://www.linkedin.com/in/mohamed-abdelgawad890" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:12px 22px;text-decoration:none;color:#fff;min-width:88px"><span style="font-size:26px">💼</span><span style="font-size:12px;font-weight:500">LinkedIn</span></a>
@@ -2108,12 +2141,43 @@ function renderStudy(){
   return`<div style="padding:0 16px;overflow-y:auto;flex:1"><div style="padding:16px 0 4px">${examBanner}${planBanner}<div style="background:linear-gradient(135deg,#1A5276,#2980B9);border-radius:14px;padding:16px 18px;margin-bottom:14px"><h1 style="font-size:20px;font-weight:500;color:#fff;margin-bottom:2px">FMAA Exam Prep</h1><p style="font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px">Financial &amp; Managerial Accounting Associate</p>${st&&st.examdate?(()=>{const d=new Date(st.examdate+'-01');const diff=Math.ceil((d-new Date())/(1000*60*60*24));return diff>0?`<div style="background:rgba(255,255,255,.15);border-radius:8px;padding:7px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span>📅</span><span style="font-size:12px;color:#fff;font-weight:500">${diff} days to exam!</span></div>`:'';})():''}<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:rgba(255,255,255,.85)">Overall Progress</span><span style="color:#fff;font-weight:500">${pct}%</span></div><div style="height:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:#fff;border-radius:3px;transition:width .5s"></div></div><div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:6px">${doneCount} of ${TOTAL_LESSONS} lessons completed</div></div></div><div style="font-size:12px;font-weight:500;color:#888;letter-spacing:.5px;margin-bottom:8px">ALL SECTIONS</div>${sectCards}<div style="height:20px"></div></div>`;
 }
 
+// BATCH 2026-09-23 (#14) — exam readiness score.
+// Per section: the average of every unit's latest quiz accuracy (as stored in lessonScores; wrong-answer retries raise it), where a unit
+// with no quiz attempt counts as 0 — so the score rewards BOTH coverage and
+// accuracy (acing two units out of twenty is not "ready"). Overall readiness
+// weights each section by its share of the exam (S[].weight, summing to 100).
+function examReadiness(){
+  const ls=(STATE.progress&&STATE.progress.lessonScores)||{};
+  const secs=S.map(sec=>{
+    let sum=0,attempted=0;
+    sec.lessons.forEach(l=>{const sc=ls[l.id];if(sc&&sc.total){sum+=sc.correct/sc.total;attempted++;}});
+    return{sec,score:Math.round(sum/sec.lessons.length*100),attempted,units:sec.lessons.length};
+  });
+  const wTot=S.reduce((a,s)=>a+s.weight,0)||1;
+  const overall=Math.round(secs.reduce((a,r)=>a+r.score*r.sec.weight,0)/wTot);
+  return{overall,secs};
+}
+function readinessBand(v){
+  if(v>=75)return{label:'Exam-ready',col:'#1E8449',bg:'#D5F5E3'};
+  if(v>=60)return{label:'Almost there',col:'#B9770E',bg:'#FAEEDA'};
+  if(v>=40)return{label:'Building',col:'#1A5276',bg:'#D6EAF8'};
+  return{label:'Early stage',col:'#888',bg:'#f0f0eb'};
+}
+function readinessCardHTML(){
+  const{overall,secs}=examReadiness();const b=readinessBand(overall);
+  const rows=secs.map(r=>{const rb=readinessBand(r.score);return`<div style="margin-bottom:10px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px"><div style="min-width:0;flex:1"><div class="ellipsis" style="font-size:12px;font-weight:500;color:#333">${r.sec.emoji} ${esc(r.sec.title)}</div><div style="font-size:10.5px;color:#999">${r.attempted}/${r.units} units quizzed · ${r.sec.weight}% of exam</div></div><span style="font-size:13px;font-weight:700;color:${rb.col}">${r.score}%</span></div><div style="height:6px;background:#f0f0eb;border-radius:3px;overflow:hidden"><div style="height:100%;width:${r.score}%;background:${rb.col};border-radius:3px;transition:width .4s"></div></div></div>`;}).join('');
+  // Largest achievable gain = section weight × remaining headroom.
+  const weakest=secs.slice().sort((a,c)=>c.sec.weight*(100-c.score)-a.sec.weight*(100-a.score))[0];
+  const tip=overall>=75?'You are in exam shape — keep it sharp with full mock exams.':`Biggest gain next: <b>${esc(weakest.sec.title)}</b> (${weakest.sec.weight}% of the exam).`;
+  return`<div class="card" style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:14px;margin-bottom:14px"><div style="width:68px;height:68px;border-radius:50%;background:${b.bg};display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0"><div style="font-size:20px;font-weight:800;color:${b.col}">${overall}%</div></div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:600;color:#1a1a1a">🎓 Exam Readiness</div><div style="font-size:12px;font-weight:600;color:${b.col};margin-top:2px">${b.label}</div><div style="font-size:11px;color:#888;margin-top:3px;line-height:1.5">${tip}</div></div></div>${rows}<div style="font-size:10px;color:#aaa;margin-top:4px;line-height:1.5">Based on your latest unit-quiz accuracy, weighted by each section's share of the exam. Units not yet quizzed count as 0.</div></div>`;
+}
 function renderProgress(){
   const{progress}=STATE;const pct=getPct();const acc=getAcc();const studyTime=loadStudyTime();
   return`${renderSubNav(SUB_PROGRESS,'progress')}<div class="sh"><h2>My Progress</h2><p>${pct}% complete · ${acc}% accuracy</p></div>
   <div class="scroll-area pad" style="padding-top:14px">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px">${[['📚',progress.done.length+'/'+TOTAL_LESSONS,'Lessons Done','#D6EAF8','#154360'],['🎯',acc+'%','MCQ Accuracy','#D5F5E3','#186A3B'],['⏱️',fmtStudyTime(studyTime.totalMinutes),'Total Study','#f5f5f0','#1a1a1a'],['🔥',getStudyStreak()+'🔥','Day Streak','#FAEEDA','#854F0B']].map(([icon,val,label,bg,color])=>`<div style="background:${bg};border-radius:12px;padding:14px;text-align:center"><div style="font-size:24px;margin-bottom:4px">${icon}</div><div style="font-size:20px;font-weight:700;color:${color}">${val}</div><div style="font-size:11px;color:#888;margin-top:2px">${label}</div></div>`).join('')}</div>
     <div style="font-size:10px;color:#aaa;margin-bottom:14px;text-align:center">Study time is approximate — tracked while the app is open and in the foreground.</div>
+    ${readinessCardHTML()}
     
     ${(()=>{const todayMins=todayStudyMinutes();const goal=STATE.dailyGoalMinutes||30;const pctGoal=Math.min(100,Math.round(todayMins/goal*100));const circ=2*Math.PI*26;const off=circ-(pctGoal/100)*circ;const col=pctGoal>=100?'#1E8449':pctGoal>=60?'#EF9F27':'#1A5276';return `<div class="goal-ring-wrap"><div class="goal-ring"><svg width="64" height="64"><circle cx="32" cy="32" r="26" stroke="#f0f0eb" stroke-width="7" fill="none"/><circle cx="32" cy="32" r="26" stroke="${col}" stroke-width="7" fill="none" stroke-dasharray="${circ}" stroke-dashoffset="${off}" stroke-linecap="round" style="transition:stroke-dashoffset .5s"/></svg><div class="goal-ring-val">${pctGoal}%</div></div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:600;color:#1a1a1a">Today's study goal</div><div style="font-size:12px;color:#888;margin-top:2px">${todayMins} / ${goal} min · ${pctGoal>=100?'Goal reached! 🎉':(goal-todayMins)+' min to go'}</div></div></div>`;})()}
     ${(()=>{const rem=estimatedTimeRemaining();if(!rem)return `<div style="background:#D5F5E3;border:1px solid #1E844960;border-radius:12px;padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:12px"><span style="font-size:22px">🎉</span><div><div style="font-size:13px;font-weight:600;color:#186A3B">All lessons complete!</div><div style="font-size:11px;color:#186A3B;margin-top:2px">Focus on quizzes and mock exams now.</div></div></div>`;const daysAt30=Math.ceil(rem/30);const daysAt60=Math.ceil(rem/60);return `<div style="background:#EBF5FB;border:1px solid #1A527640;border-radius:12px;padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:12px"><span style="font-size:22px">⏳</span><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:600;color:#154360">Estimated time remaining</div><div style="font-size:11px;color:#1A5276;margin-top:2px">${fmtRemaining(rem)} of content left · about ${daysAt30} days @30min/day, or ${daysAt60} days @1h/day</div></div></div>`;})()}
@@ -2233,6 +2297,15 @@ function renderCustomExamSetup(){
   </div>`;
 }
 
+// BATCH 2026-09-23 (#8) — unit quizzes show which unit is being tested.
+// Mixed-source sessions (retries, mock retries, custom/group exams) have no
+// lessonId and render nothing here, so their headers are unchanged.
+function quizUnitLabelHTML(lessonId){
+  if(!lessonId)return'';
+  const sec=S.find(s=>s.lessons.some(l=>l.id===lessonId));if(!sec)return'';
+  const lesson=sec.lessons.find(l=>l.id===lessonId);
+  return`<div style="display:flex;align-items:center;gap:6px;min-width:0;margin-bottom:2px"><span style="flex-shrink:0;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:6px;background:${sec.bg};color:${sec.strong}">Unit ${esc(lessonId.replace('-','.'))}</span><span style="font-size:13px;font-weight:600;color:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0">${esc(lesson.title)}</span></div>`;
+}
 function renderQuizSession(){
   const qs=STATE.quizState;if(!qs)return'';
   const sec=sect(qs.sId);const q=qs.questions[qs.idx];
@@ -2258,7 +2331,7 @@ function renderQuizSession(){
   const explanation=sel!==null?`<div style="background:${sel===q.a?'#D5F5E3':'#FCEBEB'};border:1px solid ${sel===q.a?'#1E8449':'#E24B4A'};border-radius:10px;padding:12px 14px;margin-top:12px"><div style="font-size:11px;font-weight:600;color:${sel===q.a?'#186A3B':'#A32D2D'};letter-spacing:.5px;margin-bottom:6px">${sel===q.a?'✅ CORRECT':'❌ INCORRECT — '+q.o[q.a]}</div><div style="font-size:13px;color:#444;line-height:1.6">${explanationBody(q,sel)}</div></div>`:'';
   const nextLabel=openCount===0?'See Results →':(qs.idx+1<n?'Next Question →':`Review ${openCount} unanswered →`);
   return`<div class="bh"><button class="bh-back" onclick="STATE.tab='quiz-mode-select';render()">‹</button>
-    <div style="flex:1;min-width:0"><div style="font-size:11px;color:#888">Question ${qs.idx+1} of ${n}${qs.isRetry?' · Retry':''}</div>
+    <div style="flex:1;min-width:0">${quizUnitLabelHTML(qs.lessonId)}<div style="font-size:11px;color:#888">Question ${qs.idx+1} of ${n}${qs.isRetry?' · Retry':''}</div>
     <div style="height:4px;background:#f0f0eb;border-radius:2px;margin-top:4px;overflow:hidden"><div style="height:100%;width:${barW}%;background:#1A5276;border-radius:2px;transition:width .3s"></div></div></div>
     <div>${timerBadgeHTML(sel===null?(qs.qTimerStart?Date.now()-qs.qTimerStart:0):(qs.qTimerElapsed||0),sel!==null)}</div>
   </div>
