@@ -1,398 +1,432 @@
 {
- "5-1": [
-  {
-   "t": "h",
-   "v": "Business Ethics — Foundations"
-  },
-  {
-   "t": "p",
-   "v": "Ethics is the set of moral principles and values that guide behavior. Business ethics analyzes organizational practices and values to determine whether they are acceptable. It operates within a framework of legal requirements, industry norms, company policies, and personal values."
-  },
-  {
-   "t": "h",
-   "v": "3 Building Blocks of Business Ethics"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Principles: Specific boundaries for behavior that should not be violated — human rights, freedom of speech, fundamentals of justice. Principles are the basis for rules.",
-    "Values: Beliefs and ideals that are socially enforced. Examples: teamwork, trust, integrity. An individual's values reflect what they consider important.",
-    "Norms: Standards of behavior that are judged to be proper and acceptable in a society or profession."
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Key Business Ethics Concepts"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Concept",
-    "Definition",
-    "Business Relevance"
-   ],
-   "r": [
-    [
-     "Fairness",
-     "Acting free from bias, dishonesty, or injustice; equality, reciprocity, and optimization",
-     "Fair employee compensation, fair competitive practices, no discrimination"
-    ],
-    [
-     "Integrity",
-     "Adhering firmly to a code of values; consistency with principles even under pressure",
-     "Refusing to falsify records; disclosing conflicts of interest promptly"
-    ],
-    [
-     "Conflict of Interest",
-     "Situation where personal interests could compromise independent professional judgment",
-     "Auditor auditing a company where their spouse is CFO"
-    ],
-    [
-     "Corporate Governance",
-     "System of rules and practices by which a company is directed and controlled; aligns interests of shareholders, management, and other stakeholders",
-     "Board of directors oversight, executive compensation design"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Types of Business Misconduct"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Financial misconduct: taking inappropriate risks that harm stakeholders; falsifying financial statements; insider trading",
-    "Ponzi schemes: using new investor funds to pay earlier investors — no actual investment returns being generated",
-    "Intellectual property infringement: copyright, patent, trademark violations",
-    "Espionage: theft of proprietary information; manipulation of IT systems",
-    "Corruption: illegal gratuities, bribes, kickbacks, conflicts of interest in business dealings"
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Subprime Mortgage Crisis — Financial Misconduct Example",
-   "v": "Loan officers received commissions for originating loans with no clawback if borrowers defaulted.\n→ Officers had incentive to approve unqualified borrowers and encourage inflated appraisals.\n→ Home values rose unsustainably; when borrowers defaulted, values collapsed.\n→ Banks became insolvent; Federal Reserve/FDIC interventions required.\n\nEthics failures: (1) Conflicts of interest (commission structure rewarded quantity over quality)\n(2) Lack of integrity (knowingly approving unqualified borrowers)\n(3) Harm to stakeholders (homeowners, taxpayers, entire financial system)"
-  },
-  {
-   "t": "h",
-   "v": "Whistleblowing"
-  },
-  {
-   "t": "p",
-   "v": "Whistleblowing is reporting suspected illegal, unethical, or fraudulent activity — either internally (to management, an audit committee, or an internal hotline) or externally (to a regulator, auditor, or the media) — usually after internal channels have failed or are not trusted."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Type",
-    "Reported To",
-    "When Typically Used"
-   ],
-   "r": [
-    [
-     "Internal whistleblowing",
-     "Management, internal audit, ethics hotline, board/audit committee",
-     "First step under most codes of conduct and the IMA escalation process"
-    ],
-    [
-     "External whistleblowing",
-     "Regulators (e.g., SEC), law enforcement, external auditors, media",
-     "When internal channels are exhausted, compromised, or the matter is not resolved"
-    ]
-   ]
-  },
-  {
-   "t": "p",
-   "v": "Many jurisdictions provide legal protection against retaliation for good-faith whistleblowers (e.g., anti-retaliation provisions in securities law). Ethically, an employee is expected to exhaust reasonable internal channels before going external, unless there is an immediate risk of serious harm."
-  },
-  {
-   "t": "h",
-   "v": "Due Diligence"
-  },
-  {
-   "t": "p",
-   "v": "Due diligence is the reasonable, thorough investigation a professional or organization is expected to perform before making a decision or taking an action — verifying facts and assessing risk rather than relying on assumptions or unverified claims."
-  },
-  {
-   "t": "b",
-   "v": [
-    "Financial due diligence: verifying the accuracy of financial statements and disclosures before a merger, acquisition, or major investment.",
-    "Professional due diligence: an accountant confirming figures and support before signing off on a report or recommendation, rather than accepting management's numbers at face value.",
-    "Failure to exercise due diligence can itself be an ethics violation — e.g., under the IMA Competence standard, which requires providing decision support that is accurate and based on adequate analysis."
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Fiduciary Responsibility"
-  },
-  {
-   "t": "def",
-   "term": "Fiduciary Responsibility",
-   "v": "A legal and ethical duty to act in the best interest of another party — placing that party's interests ahead of one's own personal interests. Fiduciaries include corporate officers and directors (duty to shareholders), trustees, and financial advisors."
-  },
-  {
-   "t": "b",
-   "v": [
-    "Duty of Care: making informed, prudent decisions with the diligence a reasonably careful person would use.",
-    "Duty of Loyalty: avoiding self-dealing and conflicts of interest; not using one's position for personal gain at the other party's expense."
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Fiduciary responsibility is the broad legal/ethical duty of loyalty and care owed to another party (e.g., a board member to shareholders). A conflict of interest is a SPECIFIC situation that threatens that duty. Due diligence is the PROCESS used to fulfill the duty of care responsibly."
-  },
-  {
-   "t": "h",
-   "v": "Foreign Corrupt Practices Act (FCPA)"
-  },
-  {
-   "t": "p",
-   "v": "The FCPA is a U.S. law that prohibits U.S. companies (and their officers, employees, and agents) from bribing foreign government officials to obtain or retain business. It has two main parts: anti-bribery provisions and accounting/recordkeeping provisions."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Provision",
-    "What It Requires"
-   ],
-   "r": [
-    [
-     "Anti-bribery",
-     "Prohibits offering, promising, or giving anything of value to a foreign official to influence an official act or secure improper business advantage"
-    ],
-    [
-     "Books and records",
-     "Requires accurate books, records, and accounts that fairly reflect transactions"
-    ],
-    [
-     "Internal controls",
-     "Requires a system of internal accounting controls sufficient to prevent and detect improper payments"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "The FCPA applies even to bribes paid through third parties/agents on the company's behalf, and even if the bribe is never actually paid — merely offering or authorizing it is a violation. Facilitating small payments to speed up routine, non-discretionary government action (a narrow 'facilitating payments' exception) are treated differently from bribes intended to win or retain business — but this exception is narrow and heavily scrutinized."
-  },
-  {
-   "t": "h",
-   "v": "The Fraud Triangle"
-  },
-  {
-   "t": "p",
-   "v": "Criminologist Donald R. Cressey, in his book Other People's Money, identified three conditions that must all be present for a trusted employee to commit fraud against an employer. This model — the Fraud Triangle — is one of the most heavily tested concepts in this unit."
-  },
-  {
-   "t": "def",
-   "term": "Fraud Triangle",
-   "v": "A model identifying three conditions that must all be present for a trusted person to commit fraud: Pressure (a financial or personal motivation), Opportunity (the ability to commit and conceal the act), and Rationalization (the ability to justify the behavior to oneself as acceptable). Remove any one leg and the fraud risk drops sharply."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Leg",
-    "What It Is",
-    "Example"
-   ],
-   "r": [
-    [
-     "Pressure (Incentive)",
-     "A financial or personal problem the person feels cannot be shared, such as debt, gambling losses, or an unmet bonus target",
-     "An employee with a gambling debt needs cash fast"
-    ],
-    [
-     "Opportunity",
-     "A weakness in controls that lets the person commit and conceal the act",
-     "Warehouse doors left open; no segregation of duties; lack of reconciliation"
-    ],
-    [
-     "Rationalization",
-     "A justification that lets the person see the act as acceptable rather than as theft",
-     "\"I am only borrowing it,\" \"I am underpaid anyway,\" \"No one will get hurt\""
-    ]
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Weak Internal Controls Increase Opportunity",
-   "v": "A manufacturer in a low-traffic area leaves its raw-materials warehouse doors open during business hours to speed up workflow. The controller notices inventory shrinkage has been rising.\nAnalysis: leaving the doors open does not create financial pressure and does not rationalize anything for an employee — it simply makes it easier for someone who is already tempted to take material without being seen or caught. This is a textbook increase in OPPORTUNITY, the control-related leg of the triangle."
-  },
-  {
-   "t": "tip",
-   "v": "Exam pattern: a question will describe a scenario and ask which single leg of the triangle is present, absent, or increased. Sort the facts — financial or personal strain = pressure; a control gap or lack of oversight = opportunity; a self-justifying belief or attitude = rationalization. Strong internal controls (segregation of duties, reconciliations, audits) primarily attack OPPORTUNITY — they cannot remove an employee's financial pressure or personal rationalizations, which is why controls alone never reduce fraud risk to zero."
-  },
-  {
-   "t": "h",
-   "v": "Stakeholder Theory vs Shareholder Theory"
-  },
-  {
-   "t": "p",
-   "v": "Shareholder theory: the purpose of a corporation is to maximize value for shareholders. Stakeholder theory: corporations have obligations to ALL stakeholders — employees, customers, suppliers, communities, and the environment — not just shareholders. Modern corporate governance increasingly embraces the stakeholder view."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Stakeholder",
-    "Primary Concern",
-    "Ethical Obligation"
-   ],
-   "r": [
-    [
-     "Shareholders",
-     "Return on investment",
-     "Honest reporting; responsible capital allocation"
-    ],
-    [
-     "Employees",
-     "Fair wages, safe working conditions, job security",
-     "Non-discrimination; workplace safety; honest communication"
-    ],
-    [
-     "Customers",
-     "Safe products, honest advertising, fair prices",
-     "Product safety; no deceptive marketing"
-    ],
-    [
-     "Suppliers",
-     "Timely payment, fair contract terms",
-     "Honoring agreements; no abuse of market power"
-    ],
-    [
-     "Community/Environment",
-     "Clean environment, local economic impact",
-     "Environmental compliance; community investment"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "The FMAA exam tests practical application of ethics concepts. When presented with a scenario, identify: (1) What principle/value is at stake? (2) Who are the affected stakeholders? (3) What action aligns with ethical principles and IMA standards?"
-  }
- ],
- "5-2": [
-  {
-   "t": "h",
-   "v": "IMA Statement of Ethical Professional Practice"
-  },
-  {
-   "t": "p",
-   "v": "The Institute of Management Accountants (IMA) has established the Statement of Ethical Professional Practice. All IMA members must comply with both the overarching PRINCIPLES and the specific STANDARDS. Knowing which are principles and which are standards is tested on the exam."
-  },
-  {
-   "t": "h",
-   "v": "IMA Ethical PRINCIPLES (4)"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Principle",
-    "Definition"
-   ],
-   "r": [
-    [
-     "Honesty",
-     "Truthfulness and trustworthiness; telling the truth to the best of your knowledge; freedom from deceit or fraud"
-    ],
-    [
-     "Fairness",
-     "Acting impartially, free from bias, dishonesty, or injustice; being just, equitable, and impartial"
-    ],
-    [
-     "Objectivity",
-     "Basing judgment on an established set of criteria; unbiased; free from personal feelings or prejudice; decisions based on facts alone"
-    ],
-    [
-     "Responsibility",
-     "Performing an act or function completely and in a timely manner; being answerable or accountable for something within one's own power, control, or management"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "IMA Ethical Standards (4)"
-  },
-  {
-   "t": "p",
-   "v": "The four principles describe the values; the four standards describe the conduct expected of every IMA member. Members must comply with and uphold all four standards: Competence, Confidentiality, Integrity and Credibility. Failure to comply may result in disciplinary action. Exam questions usually describe a situation and ask which standard has been violated, so learn the specific duties listed under each standard below."
-  },
-  {
-   "t": "h",
-   "v": "I. Competence"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Maintain appropriate level of professional leadership and expertise by enhancing knowledge and skills",
-    "Perform professional duties in accordance with relevant laws, regulations, and technical standards",
-    "Provide decision support information and recommendations that are accurate, clear, concise, and timely. Recognize and help manage risk"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "II. Confidentiality"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Keep information confidential except when disclosure is authorized or legally required",
-    "Inform all relevant parties regarding appropriate use of confidential information; monitor to ensure compliance",
-    "Refrain from using confidential information for unethical or illegal advantage"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "III. Integrity"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Mitigate actual conflicts of interest; regularly communicate with business associates to avoid apparent conflicts; advise all parties of any potential conflicts",
-    "Refrain from engaging in any conduct that would prejudice carrying out duties ethically",
-    "Abstain from engaging in or supporting any activity that might discredit the profession",
-    "Contribute to a positive ethical culture and place integrity of the profession above personal interests"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "IV. Credibility"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Communicate information fairly and objectively",
-    "Provide all relevant information that could reasonably be expected to influence an intended user's understanding",
-    "Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law",
-    "Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance"
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Which Standard? — Scenario Practice",
-   "v": "Scenario 1: A management accountant discovers the company's financial statements contain a material error. She is told to 'fix it quietly without disclosure.'\n→ Violated: CREDIBILITY (must report deficiencies) and INTEGRITY (refrain from prejudicial conduct)\n\nScenario 2: An accountant uses insider knowledge of an upcoming acquisition to trade company stock.\n→ Violated: CONFIDENTIALITY (using confidential info for personal advantage) and INTEGRITY\n\nScenario 3: A CFO prepares a budget using outdated industry data because learning the current data would take time.\n→ Violated: COMPETENCE (must maintain expertise; provide accurate, timely information)"
-  },
-  {
-   "t": "h",
-   "v": "Resolving Ethical Issues — The Escalation Process"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Step 1: Follow the organization's established ethics policies (anonymous reporting systems if available)",
-    "Step 2: If no policies exist, or the issue involves the supervisor: discuss with immediate supervisor (unless supervisor is implicated)",
-    "Step 3: If supervisor is involved: escalate to the next level of management",
-    "Step 4: Contact IMA's anonymous ethics helpline to request guidance on applying the Statement",
-    "Step 5: Consult personal attorney to understand legal obligations and protections",
-    "Last resort: If resolution is impossible and the situation is severe, consider dissociating from the organization"
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "The exam frequently tests the four PRINCIPLES (Honesty, Fairness, Objectivity, Responsibility) vs the four STANDARDS (Competence, Confidentiality, Integrity, Credibility). Principles are overarching VALUES. Standards are BEHAVIORAL REQUIREMENTS. Both must be followed. Failure to comply with standards may result in disciplinary action."
-  },
-  {
-   "t": "ex",
-   "l": "Principles vs Standards — Quick Test",
-   "v": "'Tell the truth and don't deceive' → HONESTY (principle)\n'Keep client data private' → CONFIDENTIALITY (standard)\n'Be answerable for your actions' → RESPONSIBILITY (principle)\n'Avoid conflicts of interest' → INTEGRITY (standard)\n'Stay current with GAAP changes' → COMPETENCE (standard)\n'Provide unbiased analysis' → OBJECTIVITY (principle)\n'Disclose limitations that affect your work' → CREDIBILITY (standard)"
-  }
- ]
+  "5-1": [
+    {
+      "t": "h",
+      "v": "Business Ethics — Foundations"
+    },
+    {
+      "t": "p",
+      "v": "Ethics is the set of moral principles and values that guide behavior. Business ethics analyzes organizational practices and values to determine whether they are acceptable. It operates within a framework of legal requirements, industry norms, company policies, and personal values."
+    },
+    {
+      "t": "h",
+      "v": "3 Building Blocks of Business Ethics"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Principles: Specific boundaries for behavior that should not be violated — human rights, freedom of speech, fundamentals of justice. Principles are the basis for rules.",
+        "Values: Beliefs and ideals that are socially enforced. Examples: teamwork, trust, integrity. An individual's values reflect what they consider important.",
+        "Norms: Standards of behavior that are judged to be proper and acceptable in a society or profession."
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Key Business Ethics Concepts"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Concept",
+        "Definition",
+        "Business Relevance"
+      ],
+      "r": [
+        [
+          "Fairness",
+          "Acting free from bias, dishonesty, or injustice; equality, reciprocity, and optimization",
+          "Fair employee compensation, fair competitive practices, no discrimination"
+        ],
+        [
+          "Integrity",
+          "Adhering firmly to a code of values; consistency with principles even under pressure",
+          "Refusing to falsify records; disclosing conflicts of interest promptly"
+        ],
+        [
+          "Conflict of Interest",
+          "Situation where personal interests could compromise independent professional judgment",
+          "Auditor auditing a company where their spouse is CFO"
+        ],
+        [
+          "Corporate Governance",
+          "System of rules and practices by which a company is directed and controlled; aligns interests of shareholders, management, and other stakeholders",
+          "Board of directors oversight, executive compensation design"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Types of Business Misconduct"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Financial misconduct: taking inappropriate risks that harm stakeholders; falsifying financial statements; insider trading",
+        "Ponzi schemes: using new investor funds to pay earlier investors — no actual investment returns being generated",
+        "Intellectual property infringement: copyright, patent, trademark violations",
+        "Espionage: theft of proprietary information; manipulation of IT systems",
+        "Corruption: illegal gratuities, bribes, kickbacks, conflicts of interest in business dealings"
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Subprime Mortgage Crisis — Financial Misconduct Example",
+      "v": "Loan officers received commissions for originating loans with no clawback if borrowers defaulted.\n→ Officers had incentive to approve unqualified borrowers and encourage inflated appraisals.\n→ Home values rose unsustainably; when borrowers defaulted, values collapsed.\n→ Banks became insolvent; Federal Reserve/FDIC interventions required.\n\nEthics failures: (1) Conflicts of interest (commission structure rewarded quantity over quality)\n(2) Lack of integrity (knowingly approving unqualified borrowers)\n(3) Harm to stakeholders (homeowners, taxpayers, entire financial system)"
+    },
+    {
+      "t": "h",
+      "v": "Whistleblowing"
+    },
+    {
+      "t": "p",
+      "v": "Whistleblowing is reporting suspected illegal, unethical, or fraudulent activity — either internally (to management, an audit committee, or an internal hotline) or externally (to a regulator, auditor, or the media) — usually after internal channels have failed or are not trusted."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Type",
+        "Reported To",
+        "When Typically Used"
+      ],
+      "r": [
+        [
+          "Internal whistleblowing",
+          "Management, internal audit, ethics hotline, board/audit committee",
+          "First step under most codes of conduct and the IMA escalation process"
+        ],
+        [
+          "External whistleblowing",
+          "Regulators (e.g., SEC), law enforcement, external auditors, media",
+          "When internal channels are exhausted, compromised, or the matter is not resolved"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "v": "Many jurisdictions provide legal protection against retaliation for good-faith whistleblowers (e.g., anti-retaliation provisions in securities law). Ethically, an employee is expected to exhaust reasonable internal channels before going external, unless there is an immediate risk of serious harm."
+    },
+    {
+      "t": "h",
+      "v": "Due Diligence"
+    },
+    {
+      "t": "p",
+      "v": "Due diligence is the reasonable, thorough investigation a professional or organization is expected to perform before making a decision or taking an action — verifying facts and assessing risk rather than relying on assumptions or unverified claims."
+    },
+    {
+      "t": "b",
+      "v": [
+        "Financial due diligence: verifying the accuracy of financial statements and disclosures before a merger, acquisition, or major investment.",
+        "Professional due diligence: an accountant confirming figures and support before signing off on a report or recommendation, rather than accepting management's numbers at face value.",
+        "Failure to exercise due diligence can itself be an ethics violation — e.g., under the IMA Competence standard, which requires providing decision support that is accurate and based on adequate analysis."
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Fiduciary Responsibility"
+    },
+    {
+      "t": "def",
+      "term": "Fiduciary Responsibility",
+      "v": "A legal and ethical duty to act in the best interest of another party — placing that party's interests ahead of one's own personal interests. Fiduciaries include corporate officers and directors (duty to shareholders), trustees, and financial advisors."
+    },
+    {
+      "t": "b",
+      "v": [
+        "Duty of Care: making informed, prudent decisions with the diligence a reasonably careful person would use.",
+        "Duty of Loyalty: avoiding self-dealing and conflicts of interest; not using one's position for personal gain at the other party's expense."
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Fiduciary responsibility is the broad legal/ethical duty of loyalty and care owed to another party (e.g., a board member to shareholders). A conflict of interest is a SPECIFIC situation that threatens that duty. Due diligence is the PROCESS used to fulfill the duty of care responsibly."
+    },
+    {
+      "t": "h",
+      "v": "Foreign Corrupt Practices Act (FCPA)"
+    },
+    {
+      "t": "p",
+      "v": "The FCPA is a U.S. law that prohibits U.S. companies (and their officers, employees, and agents) from bribing foreign government officials to obtain or retain business. It has two main parts: anti-bribery provisions and accounting/recordkeeping provisions."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Provision",
+        "What It Requires"
+      ],
+      "r": [
+        [
+          "Anti-bribery",
+          "Prohibits offering, promising, or giving anything of value to a foreign official to influence an official act or secure improper business advantage"
+        ],
+        [
+          "Books and records",
+          "Requires accurate books, records, and accounts that fairly reflect transactions"
+        ],
+        [
+          "Internal controls",
+          "Requires a system of internal accounting controls sufficient to prevent and detect improper payments"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The FCPA applies even to bribes paid through third parties/agents on the company's behalf, and even if the bribe is never actually paid — merely offering or authorizing it is a violation. Facilitating small payments to speed up routine, non-discretionary government action (a narrow 'facilitating payments' exception) are treated differently from bribes intended to win or retain business — but this exception is narrow and heavily scrutinized."
+    },
+    {
+      "t": "h",
+      "v": "The Fraud Triangle"
+    },
+    {
+      "t": "p",
+      "v": "Criminologist Donald R. Cressey, in his book Other People's Money, identified three conditions that must all be present for a trusted employee to commit fraud against an employer. This model — the Fraud Triangle — is one of the most heavily tested concepts in this unit."
+    },
+    {
+      "t": "def",
+      "term": "Fraud Triangle",
+      "v": "A model identifying three conditions that must all be present for a trusted person to commit fraud: Pressure (a financial or personal motivation), Opportunity (the ability to commit and conceal the act), and Rationalization (the ability to justify the behavior to oneself as acceptable). Remove any one leg and the fraud risk drops sharply."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Leg",
+        "What It Is",
+        "Example"
+      ],
+      "r": [
+        [
+          "Pressure (Incentive)",
+          "A financial or personal problem the person feels cannot be shared, such as debt, gambling losses, or an unmet bonus target",
+          "An employee with a gambling debt needs cash fast"
+        ],
+        [
+          "Opportunity",
+          "A weakness in controls that lets the person commit and conceal the act",
+          "Warehouse doors left open; no segregation of duties; lack of reconciliation"
+        ],
+        [
+          "Rationalization",
+          "A justification that lets the person see the act as acceptable rather than as theft",
+          "\"I am only borrowing it,\" \"I am underpaid anyway,\" \"No one will get hurt\""
+        ]
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Weak Internal Controls Increase Opportunity",
+      "v": "A manufacturer in a low-traffic area leaves its raw-materials warehouse doors open during business hours to speed up workflow. The controller notices inventory shrinkage has been rising.\nAnalysis: leaving the doors open does not create financial pressure and does not rationalize anything for an employee — it simply makes it easier for someone who is already tempted to take material without being seen or caught. This is a textbook increase in OPPORTUNITY, the control-related leg of the triangle."
+    },
+    {
+      "t": "tip",
+      "v": "Exam pattern: a question will describe a scenario and ask which single leg of the triangle is present, absent, or increased. Sort the facts — financial or personal strain = pressure; a control gap or lack of oversight = opportunity; a self-justifying belief or attitude = rationalization. Strong internal controls (segregation of duties, reconciliations, audits) primarily attack OPPORTUNITY — they cannot remove an employee's financial pressure or personal rationalizations, which is why controls alone never reduce fraud risk to zero."
+    },
+    {
+      "t": "h",
+      "v": "Stakeholder Theory vs Shareholder Theory"
+    },
+    {
+      "t": "p",
+      "v": "Shareholder theory: the purpose of a corporation is to maximize value for shareholders. Stakeholder theory: corporations have obligations to ALL stakeholders — employees, customers, suppliers, communities, and the environment — not just shareholders. Modern corporate governance increasingly embraces the stakeholder view."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Stakeholder",
+        "Primary Concern",
+        "Ethical Obligation"
+      ],
+      "r": [
+        [
+          "Shareholders",
+          "Return on investment",
+          "Honest reporting; responsible capital allocation"
+        ],
+        [
+          "Employees",
+          "Fair wages, safe working conditions, job security",
+          "Non-discrimination; workplace safety; honest communication"
+        ],
+        [
+          "Customers",
+          "Safe products, honest advertising, fair prices",
+          "Product safety; no deceptive marketing"
+        ],
+        [
+          "Suppliers",
+          "Timely payment, fair contract terms",
+          "Honoring agreements; no abuse of market power"
+        ],
+        [
+          "Community/Environment",
+          "Clean environment, local economic impact",
+          "Environmental compliance; community investment"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The FMAA exam tests practical application of ethics concepts. When presented with a scenario, identify: (1) What principle/value is at stake? (2) Who are the affected stakeholders? (3) What action aligns with ethical principles and IMA standards?"
+    },
+    {
+      "t": "ar",
+      "v": [
+        "أخلاقيات الأعمال تحليل لممارسات المنشأة وقيمها لتحديد مدى قبولها، في إطار القوانين وأعراف الصناعة وسياسات المنشأة والقيم الشخصية.",
+        "الإبلاغ عن المخالفات يكون داخلياً أولاً، ولا يُلجأ إلى الجهات الخارجية إلا بعد استنفاد القنوات الداخلية أو عند وجود خطر جسيم وشيك.",
+        "العناية الواجبة تعني التحقق الجاد من الحقائق وتقييم المخاطر قبل اتخاذ القرار بدلاً من الاعتماد على الافتراضات.",
+        "قانون مكافحة ممارسات الفساد الأجنبية الأمريكي يحظر رشوة المسؤولين الحكوميين الأجانب، ويُلزم بدقة السجلات المحاسبية ووجود نظام رقابة داخلية كافٍ.",
+        "مثلث الاحتيال يتكون من الضغط والفرصة والتبرير، ويجب توافر العناصر الثلاثة لوقوع الاحتيال."
+      ]
+    }
+  ],
+  "5-2": [
+    {
+      "t": "h",
+      "v": "IMA Statement of Ethical Professional Practice"
+    },
+    {
+      "t": "p",
+      "v": "The Institute of Management Accountants (IMA) has established the Statement of Ethical Professional Practice. All IMA members must comply with both the overarching PRINCIPLES and the specific STANDARDS. Knowing which are principles and which are standards is tested on the exam."
+    },
+    {
+      "t": "h",
+      "v": "IMA Ethical PRINCIPLES (4)"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Principle",
+        "Definition"
+      ],
+      "r": [
+        [
+          "Honesty",
+          "Truthfulness and trustworthiness; telling the truth to the best of your knowledge; freedom from deceit or fraud"
+        ],
+        [
+          "Fairness",
+          "Acting impartially, free from bias, dishonesty, or injustice; being just, equitable, and impartial"
+        ],
+        [
+          "Objectivity",
+          "Basing judgment on an established set of criteria; unbiased; free from personal feelings or prejudice; decisions based on facts alone"
+        ],
+        [
+          "Responsibility",
+          "Performing an act or function completely and in a timely manner; being answerable or accountable for something within one's own power, control, or management"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "IMA Ethical Standards (4)"
+    },
+    {
+      "t": "p",
+      "v": "The four principles describe the values; the four standards describe the conduct expected of every IMA member. Members must comply with and uphold all four standards: Competence, Confidentiality, Integrity and Credibility. Failure to comply may result in disciplinary action. Exam questions usually describe a situation and ask which standard has been violated, so learn the specific duties listed under each standard below."
+    },
+    {
+      "t": "h",
+      "v": "I. Competence"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Maintain appropriate level of professional leadership and expertise by enhancing knowledge and skills",
+        "Perform professional duties in accordance with relevant laws, regulations, and technical standards",
+        "Provide decision support information and recommendations that are accurate, clear, concise, and timely. Recognize and help manage risk"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "II. Confidentiality"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Keep information confidential except when disclosure is authorized or legally required",
+        "Inform all relevant parties regarding appropriate use of confidential information; monitor to ensure compliance",
+        "Refrain from using confidential information for unethical or illegal advantage"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "III. Integrity"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Mitigate actual conflicts of interest; regularly communicate with business associates to avoid apparent conflicts; advise all parties of any potential conflicts",
+        "Refrain from engaging in any conduct that would prejudice carrying out duties ethically",
+        "Abstain from engaging in or supporting any activity that might discredit the profession",
+        "Contribute to a positive ethical culture and place integrity of the profession above personal interests"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "IV. Credibility"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Communicate information fairly and objectively",
+        "Provide all relevant information that could reasonably be expected to influence an intended user's understanding",
+        "Report any delays or deficiencies in information, timeliness, processing, or internal controls in conformance with organization policy and/or applicable law",
+        "Communicate professional limitations or other constraints that would preclude responsible judgment or successful performance"
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Which Standard? — Scenario Practice",
+      "v": "Scenario 1: A management accountant discovers the company's financial statements contain a material error. She is told to 'fix it quietly without disclosure.'\n→ Violated: CREDIBILITY (must report deficiencies) and INTEGRITY (refrain from prejudicial conduct)\n\nScenario 2: An accountant uses insider knowledge of an upcoming acquisition to trade company stock.\n→ Violated: CONFIDENTIALITY (using confidential info for personal advantage) and INTEGRITY\n\nScenario 3: A CFO prepares a budget using outdated industry data because learning the current data would take time.\n→ Violated: COMPETENCE (must maintain expertise; provide accurate, timely information)"
+    },
+    {
+      "t": "h",
+      "v": "Resolving Ethical Issues — The Escalation Process"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Step 1: Follow the organization's established ethics policies (anonymous reporting systems if available)",
+        "Step 2: If no policies exist, or the issue involves the supervisor: discuss with immediate supervisor (unless supervisor is implicated)",
+        "Step 3: If supervisor is involved: escalate to the next level of management",
+        "Step 4: Contact IMA's anonymous ethics helpline to request guidance on applying the Statement",
+        "Step 5: Consult personal attorney to understand legal obligations and protections",
+        "Last resort: If resolution is impossible and the situation is severe, consider dissociating from the organization"
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The exam frequently tests the four PRINCIPLES (Honesty, Fairness, Objectivity, Responsibility) vs the four STANDARDS (Competence, Confidentiality, Integrity, Credibility). Principles are overarching VALUES. Standards are BEHAVIORAL REQUIREMENTS. Both must be followed. Failure to comply with standards may result in disciplinary action."
+    },
+    {
+      "t": "ex",
+      "l": "Principles vs Standards — Quick Test",
+      "v": "'Tell the truth and don't deceive' → HONESTY (principle)\n'Keep client data private' → CONFIDENTIALITY (standard)\n'Be answerable for your actions' → RESPONSIBILITY (principle)\n'Avoid conflicts of interest' → INTEGRITY (standard)\n'Stay current with GAAP changes' → COMPETENCE (standard)\n'Provide unbiased analysis' → OBJECTIVITY (principle)\n'Disclose limitations that affect your work' → CREDIBILITY (standard)"
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Mixing up principles and standards. Honesty, Fairness, Objectivity and Responsibility are PRINCIPLES; Competence, Confidentiality, Integrity and Credibility are STANDARDS.",
+        "Thinking confidentiality is absolute. Confidential information may be disclosed when disclosure is authorized or legally required.",
+        "Going to the media or authorities first. The IMA process starts with the organization's own policies and the chain of management; external disclosure is appropriate only when legally required.",
+        "Discussing the issue with a supervisor who is involved in it. If the supervisor is implicated, the matter goes to the next level of management.",
+        "Treating resignation as an early step. Dissociating from the organization is the last resort, after internal resolution has failed."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "يُلزم بيان الممارسة المهنية الأخلاقية الصادر عن معهد المحاسبين الإداريين أعضاءه بأربعة مبادئ وأربعة معايير.",
+        "المبادئ الأربعة قيم عامة: الأمانة، والعدالة، والموضوعية، والمسؤولية.",
+        "المعايير الأربعة سلوكيات ملزمة: الكفاءة المهنية، والسرية، والنزاهة، والمصداقية، وقد يترتب على مخالفتها إجراء تأديبي.",
+        "عند مواجهة مشكلة أخلاقية تُتّبع سياسات المنشأة أولاً، ثم يُناقش الأمر مع الرئيس المباشر ما لم يكن طرفاً فيه، ثم المستوى الإداري الأعلى، مع إمكانية طلب الإرشاد من الخط الساخن للمعهد واستشارة محامٍ.",
+        "الانفصال عن المنشأة هو الملاذ الأخير عندما يتعذر حل المشكلة وتكون جسيمة."
+      ]
+    }
+  ]
 }

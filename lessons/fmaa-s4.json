@@ -520,6 +520,16 @@
         "Absorption costing (GAAP) puts fixed OH into product cost. Variable costing (internal only) expenses it as a period cost. The two differ in fixed OH treatment AND in income statement presentation; when production exceeds sales, absorption income is higher.",
         "Process costing = many identical units, costs accumulated by department. Job order costing = distinct units, costs accumulated by job or project."
       ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "التكلفة المتغيرة يتغير إجماليها مع حجم النشاط بينما يبقى نصيب الوحدة منها ثابتاً.",
+        "التكلفة الثابتة يبقى إجماليها ثابتاً داخل المدى الملائم بينما ينخفض نصيب الوحدة منها كلما زاد الإنتاج.",
+        "التكلفة المختلطة تجمع بين جزء ثابت وجزء متغير، والتكلفة شبه الثابتة ترتفع على شكل درجات عند تجاوز مستويات معينة من النشاط.",
+        "في التكاليف الكلية تُضاف التكاليف الصناعية الثابتة إلى تكلفة المخزون، أما في التكاليف المتغيرة فتُحمَّل مصروفاً على الفترة.",
+        "عندما يزيد الإنتاج على المبيعات يكون الدخل وفق التكاليف الكلية أعلى منه وفق التكاليف المتغيرة."
+      ]
     }
   ],
   "4-2": [
@@ -733,6 +743,16 @@
         "Departmental allocation is more accurate than plant-wide allocation when different departments consume overhead differently.",
         "A plant-wide rate OVER-costs high-volume simple products and UNDER-costs low-volume complex ones. The total allocated is always right — the error is in how it is split.",
         "ABC is more accurate but more expensive. Use it when products differ significantly in volume, complexity, or the activities they consume."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "التكاليف الصناعية غير المباشرة هي تكاليف الإنتاج التي لا يمكن تتبّعها مباشرة إلى الوحدات المنتجة بطريقة اقتصادية.",
+        "معدل التحميل المحدد مقدماً = التكاليف غير المباشرة المقدّرة ÷ مستوى النشاط المقدّر لأساس التوزيع.",
+        "إذا زادت التكاليف الفعلية على المحمَّلة فالتحميل ناقص، وإذا قلّت عنها فالتحميل زائد.",
+        "نظام التكاليف على أساس الأنشطة يوزّع التكاليف بدقة أكبر باستخدام مسببات تكلفة متعددة، لكنه أعلى تكلفة في التطبيق.",
+        "المعدل الموحد على مستوى المصنع يؤدي غالباً إلى تحميل المنتجات منخفضة الحجم وعالية التعقيد بأقل من تكلفتها الحقيقية."
       ]
     }
   ],
@@ -1138,6 +1158,15 @@
         "Fixed OH has ONLY TWO sub-variances: Spending (Actual − Budgeted) and Production-Volume (Budgeted − Applied). There is NO fixed OH efficiency variance.",
         "Favorable variance for a cost = actual lower than standard (good). Unfavorable = actual higher (bad). Opposite for revenue."
       ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "انحراف الموازنة المرنة = النتائج الفعلية − الموازنة المرنة، وانحراف حجم المبيعات = الموازنة المرنة − الموازنة الثابتة.",
+        "انحراف سعر المواد = (السعر الفعلي − السعر المعياري) × الكمية الفعلية، وانحراف كمية المواد = (الكمية الفعلية − الكمية المعيارية) × السعر المعياري.",
+        "انحراف معدل الأجر = (المعدل الفعلي − المعدل المعياري) × الساعات الفعلية، وانحراف الكفاءة = (الساعات الفعلية − الساعات المعيارية) × المعدل المعياري.",
+        "للتكاليف غير المباشرة المتغيرة انحرافا إنفاق وكفاءة، أما الثابتة فلها انحرافا إنفاق وحجم إنتاج ولا يوجد لها انحراف كفاءة."
+      ]
     }
   ],
   "4-4": [
@@ -1415,6 +1444,15 @@
         "ROI's weakness: goal incongruence. Managers may reject profitable projects that lower the division's ROI, even when the project earns more than the company's required rate.",
         "RI's weakness: cannot compare divisions of different sizes. A larger division naturally has a larger RI even at the same rate of return.",
         "Accept a project if its RI is positive — this means the project earns more than the required rate, regardless of the division's current ROI."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "مركز الاستثمار يتحمل مديره مسؤولية الإيرادات والتكاليف والأصول المستخدمة معاً.",
+        "العائد على الاستثمار = الدخل التشغيلي ÷ أصول الوحدة.",
+        "الدخل المتبقي = الدخل التشغيلي − (أصول الوحدة × معدل العائد المطلوب).",
+        "قد يرفض المدير المقيَّم بالعائد على الاستثمار مشروعاً مربحاً للمنشأة إذا كان عائده أقل من العائد الحالي لوحدته، ويعالج الدخل المتبقي هذا التعارض في الأهداف."
       ]
     }
   ],
@@ -1744,6 +1782,16 @@
         "A cost is relevant only if it is BOTH future AND differs between alternatives. Sunk costs are NEVER relevant, regardless of size.",
         "Opportunity cost exists only under constrained capacity. With idle capacity, accepting a new order does not require giving anything up.",
         "CVP rests on eight assumptions. The most tested: fixed costs constant within the relevant range, unit variable cost and unit selling price constant, and a constant sales mix for a multi-product company."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "هامش المساهمة = سعر البيع − التكلفة المتغيرة، وهو ما تساهم به كل وحدة في تغطية التكاليف الثابتة ثم تحقيق الربح.",
+        "نقطة التعادل بالوحدات = التكاليف الثابتة ÷ هامش مساهمة الوحدة، وبالقيمة = التكاليف الثابتة ÷ نسبة هامش المساهمة.",
+        "هامش الأمان هو مقدار انخفاض المبيعات المتوقعة أو الفعلية قبل الوصول إلى نقطة التعادل.",
+        "في القرارات قصيرة الأجل تُعد التكاليف الغارقة غير ملائمة، وتُحتسب تكلفة الفرصة البديلة عندما تكون الطاقة محدودة.",
+        "في قرار البيع أو الاستمرار في التصنيع تُهمل التكاليف المشتركة السابقة لنقطة الانفصال، ويُقارَن الإيراد الإضافي بالتكلفة الإضافية فقط."
       ]
     }
   ]

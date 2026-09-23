@@ -158,6 +158,19 @@
       "v": "Contra accounts carry a balance opposite to their related account. Accumulated Depreciation is a contra-asset — it has a credit balance and reduces the asset's book value. Dividends is a contra-equity account — debit balance reduces Retained Earnings."
     },
     {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Accepting the cash basis as GAAP. U.S. GAAP requires the accrual basis; the cash basis is not acceptable for GAAP financial statements.",
+        "Treating dividends as an expense. Dividends are a distribution of earnings to owners and reduce retained earnings directly; they never appear on the income statement.",
+        "Forgetting that dividends are a temporary account. Like revenues and expenses, the dividends account is closed at year-end.",
+        "Thinking management accounting must follow GAAP. Internal reports have no required format — they only need to be useful for decisions."
+      ]
+    },
+    {
       "t": "ar",
       "v": [
         "المحاسبة هي عملية تسجيل المعاملات المالية وتلخيصها وتحليلها والتقرير عنها، وهي لغة الأعمال.",
@@ -263,6 +276,19 @@
         "Step 6: Prepare adjusted trial balance",
         "Step 7: Prepare financial statements",
         "Step 8: Perform year-end close (then post-closing trial balance)"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Reading 'debit' as 'increase'. A debit increases assets, expenses and dividends but DECREASES liabilities, equity and revenue.",
+        "Assuming a transaction must change total assets. Buying equipment for cash swaps one asset for another; total assets are unchanged.",
+        "Mixing up the order of the accounting cycle. Adjusting entries (Step 5) come before the financial statements (Step 7); closing (Step 8) is always last.",
+        "Forgetting that the accounting equation must balance after EVERY transaction, not only at period-end."
       ]
     },
     {
@@ -466,6 +492,19 @@
     {
       "t": "tip",
       "v": "Debits = Credits = $604,500. The accounting equation holds: Assets ($604,500) = Liabilities ($104,500) + Equity ($500,000). Verify this after every trial balance."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Concluding that a balanced trial balance means the books are correct. It proves only that debits equal credits.",
+        "Expecting the trial balance to catch a transaction that was omitted entirely or posted to the wrong account. Both sides remain equal, so it cannot.",
+        "Confusing the unadjusted trial balance (before adjusting entries) with the adjusted trial balance (the source for the financial statements).",
+        "Treating the trial balance as a financial statement. It is an internal working document and is not published."
+      ]
     },
     {
       "t": "ar",
@@ -775,6 +814,19 @@
       "v": "Prepaid expenses start as assets (benefit not yet used) → become expenses over time. Deferred revenue starts as a liability (obligation not yet fulfilled) → becomes revenue over time. Both require adjusting entries."
     },
     {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Treating a transfer from cash to a money market account as an investing outflow. A cash equivalent is part of 'cash and cash equivalents', so the total does not change.",
+        "Recording the full cost of equipment bought partly on a loan as a cash payment. Only the down payment leaves cash; the rest is a liability.",
+        "Expensing a prepaid insurance premium when paid. At payment it is an ASSET; it becomes an expense month by month as the coverage is used.",
+        "Recording a customer deposit as revenue. Cash received before the goods or service are delivered is a LIABILITY (deferred revenue)."
+      ]
+    },
+    {
       "t": "ar",
       "v": [
         "إيداع النقدية الزائدة في حساب سوق نقدي يُعد تحويلاً إلى ما يعادل النقدية ولا يغيّر إجمالي النقدية وما في حكمها.",
@@ -854,6 +906,68 @@
       "v": "1. DEPRECIATION\n   Equipment cost $60,000, useful life 5 years, no salvage value.\n   Annual depreciation = $60,000 ÷ 5 = $12,000\n   Dr Depreciation Expense      12,000\n   Cr Accumulated Depreciation              12,000\n\n2. DEFERRED REVENUE (earned during period)\n   Received $3,600 advance for 12 months of service.\n   At month-end, 1 month has been earned: $3,600 ÷ 12 = $300\n   Dr Contract Liabilities      300\n   Cr Service Revenue                  300\n\n3. ACCRUED EXPENSE (incurred, not yet paid)\n   Salaries of $5,000 earned by employees but not yet paid at period end.\n   Dr Salaries Expense          5,000\n   Cr Salaries Payable                 5,000\n\n4. DEFERRED EXPENSE (prepaid, partially used)\n   Paid $1,200 for 12 months of insurance on Jan 1.\n   At June 30, 6 months used: $1,200 × 6/12 = $600\n   Dr Insurance Expense         600\n   Cr Prepaid Insurance                600"
     },
     {
+      "t": "h",
+      "v": "Worked Example: What Happens If an Adjustment Is Omitted?"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Adjusting entry omitted",
+        "Assets",
+        "Liabilities",
+        "Net income and equity"
+      ],
+      "r": [
+        [
+          "Depreciation not recorded",
+          "Overstated",
+          "No effect",
+          "Overstated"
+        ],
+        [
+          "Accrued wages not recorded",
+          "No effect",
+          "Understated",
+          "Overstated"
+        ],
+        [
+          "Accrued interest revenue not recorded",
+          "Understated",
+          "No effect",
+          "Understated"
+        ],
+        [
+          "Used portion of prepaid insurance not expensed",
+          "Overstated",
+          "No effect",
+          "Overstated"
+        ],
+        [
+          "Earned portion of deferred revenue not recognized",
+          "No effect",
+          "Overstated",
+          "Understated"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Fast method for omission questions: write the missing entry, then reverse its effect. Every missing EXPENSE overstates net income; every missing REVENUE understates it."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Including Cash in an adjusting entry. Adjusting entries record accruals, deferrals and estimates; they never involve cash.",
+        "Mixing up deferrals and accruals. Deferral = cash first, recognition later. Accrual = recognition first, cash later.",
+        "Crediting the asset account for depreciation. The credit goes to Accumulated Depreciation, a contra-asset account; the original cost stays unchanged.",
+        "Forgetting that an omitted adjustment affects TWO statements: the income statement and the balance sheet."
+      ]
+    },
+    {
       "t": "ar",
       "v": [
         "تهدف قيود التسوية إلى الفصل الدقيق بين الفترات بحيث تُحمَّل كل فترة بإيراداتها ومصروفاتها.",
@@ -904,6 +1018,19 @@
     {
       "t": "tip",
       "v": "The adjusted trial balance is the source for preparing the financial statements. Income statement accounts go to the income statement; balance sheet accounts go to the balance sheet. Retained Earnings on the balance sheet = prior RE ($0 new company) + Net Income ($42,943.89) − Dividends ($12,500) = $30,443.89."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Recording inventory shrinkage as a gain or a separate asset. The shortfall found in the physical count increases Cost of Goods Sold and reduces Inventory.",
+        "Expensing the whole year's prepaid insurance in the first month. Only the portion used in the period is expensed ($2,000 of $24,000 for one month).",
+        "Waiting for the bill to record a utility cost. An expense incurred in the period is accrued at period-end even if the invoice arrives later.",
+        "Preparing the financial statements from the unadjusted trial balance. The adjusted trial balance is the correct source."
+      ]
     },
     {
       "t": "ar",
@@ -958,6 +1085,19 @@
     {
       "t": "tip",
       "v": "After closing: all revenue, expense, and dividend accounts = $0. The post-closing trial balance lists only permanent (balance sheet) accounts. Verify: Retained Earnings = $30,443.89 ✓"
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Closing Dividends to Income Summary. Dividends are closed DIRECTLY to Retained Earnings because they are not part of net income.",
+        "Closing balance sheet accounts. Only temporary accounts (revenues, expenses, gains, losses and dividends) are closed.",
+        "Getting the net-loss entry backwards. With a net loss, Income Summary has a debit balance, so it is closed with a DEBIT to Retained Earnings.",
+        "Expecting Income Summary to have a balance after closing. It is zero once the closing process is finished."
+      ]
     },
     {
       "t": "ar",
@@ -1154,6 +1294,19 @@
       ]
     },
     {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Mixing up the order of preparation. The income statement comes first because net income is needed for the statement of changes in equity, which feeds the balance sheet.",
+        "Reporting treasury stock as an asset. It is a reduction of stockholders' equity.",
+        "Classifying all long-term debt as non-current. The portion due within the next year is a CURRENT liability.",
+        "Depreciating land. Land has an unlimited useful life and is never depreciated."
+      ]
+    },
+    {
       "t": "ar",
       "v": [
         "تتكون القوائم المالية من قائمة الدخل، وقائمة التغيرات في حقوق الملكية، والميزانية، وقائمة التدفقات النقدية، إضافة إلى الإيضاحات.",
@@ -1232,6 +1385,28 @@
     {
       "t": "tip",
       "v": "The FMAA exam requires the indirect method for operating activities. For investing and financing activities, the method is the same regardless — list actual cash flows for each transaction."
+    },
+    {
+      "t": "h",
+      "v": "Worked Example: Complete Statement of Cash Flows (Indirect Method)"
+    },
+    {
+      "t": "ex",
+      "l": "From Net Income to the Change in Cash",
+      "v": "OPERATING ACTIVITIES\nNet income                                          120,000\n+ Depreciation expense                               30,000\n− Gain on sale of equipment                          (5,000)\n− Increase in accounts receivable                   (15,000)\n+ Decrease in inventory                               8,000\n+ Increase in accounts payable                        6,000\n− Decrease in accrued liabilities                    (2,000)\nNet cash from operating activities                  142,000\n\nINVESTING ACTIVITIES\nProceeds from sale of equipment                      20,000\nPurchase of property, plant & equipment             (60,000)\nNet cash used in investing activities               (40,000)\n\nFINANCING ACTIVITIES\nProceeds from issuing bonds                          50,000\nDividends paid                                      (25,000)\nRepurchase of common stock (treasury)               (10,000)\nNet cash from financing activities                   15,000\n\nNET INCREASE IN CASH                                117,000\n\nNote: the $5,000 gain is removed from operating activities because the full\n$20,000 cash proceeds are reported in investing activities."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Classifying interest paid or dividends received as financing or investing. Under U.S. GAAP both are OPERATING activities.",
+        "Classifying dividends paid as operating. Dividends paid are a FINANCING activity.",
+        "Adding a gain on sale of assets. Gains are SUBTRACTED from net income (and losses added back) because the cash proceeds belong in investing activities.",
+        "Reporting a non-cash transaction in the statement, such as buying land by issuing stock. It is disclosed separately, not shown as a cash flow."
+      ]
     },
     {
       "t": "ar",
@@ -1406,6 +1581,28 @@
       "v": "Key exam phrase: Internal control provides REASONABLE ASSURANCE — not absolute assurance and not a guarantee. The cost-benefit principle applies: the cost of a control should not exceed the expected benefit. Some risk is simply accepted because the cost of controlling it exceeds the potential loss."
     },
     {
+      "t": "h",
+      "v": "Worked Example: Name the COSO Component"
+    },
+    {
+      "t": "ex",
+      "l": "Scenario Practice",
+      "v": "1. The board adopts a code of conduct and the CEO repeatedly stresses integrity.\n   → CONTROL ENVIRONMENT (tone at the top)\n\n2. Before launching a new ERP system, management lists what could go wrong\n   and how likely each problem is.\n   → RISK ASSESSMENT\n\n3. Payments above $10,000 require two authorized signatures.\n   → CONTROL ACTIVITIES\n\n4. Department managers receive a monthly exception report of unusual transactions.\n   → INFORMATION & COMMUNICATION\n\n5. Internal audit tests the purchasing controls every year and reports weaknesses.\n   → MONITORING\n\n6. The cashier who receives customer payments also records them in the ledger.\n   → A SEGREGATION OF DUTIES weakness: custody and recordkeeping are combined."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Believing internal control gives absolute assurance. It provides REASONABLE assurance only.",
+        "Thinking segregation of duties prevents collusion. Two or more employees acting together can defeat it.",
+        "Assuming controls bind senior management. Management override is one of the built-in limitations of any control system.",
+        "Placing Control Activities as the foundation. The CONTROL ENVIRONMENT is the foundation of all other components."
+      ]
+    },
+    {
       "t": "ar",
       "v": [
         "الرقابة الداخلية وفق إطار COSO عملية ينفذها مجلس الإدارة والإدارة والعاملون لتوفير تأكيد معقول بشأن أهداف العمليات والتقارير والالتزام.",
@@ -1459,6 +1656,19 @@
     {
       "t": "p",
       "v": "Terms '2/10 net 30' mean: take a 2% discount if you pay within 10 days; otherwise the full amount is due in 30 days. The effective annual interest rate of NOT taking the discount is high — usually far exceeding bank lending rates — so it is almost always beneficial to take available discounts."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Reading a negative cash conversion cycle as a problem. It is FAVORABLE: the company collects from customers before it pays suppliers.",
+        "Subtracting days in payables from the operating cycle. The operating cycle is inventory days + receivable days only; payables are subtracted to get the CASH conversion cycle.",
+        "Treating the 2% discount as a small cost. Skipping a 2/10 net 30 discount costs about 37% a year — far more than typical bank borrowing.",
+        "Assuming more working capital is always better. Excess current assets tie up money that earns little return."
+      ]
     },
     {
       "t": "ar",
