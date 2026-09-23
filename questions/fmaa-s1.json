@@ -3417,6 +3417,74 @@
         "1": "Recording depreciation increases Depreciation Expense, which decreases net income.",
         "3": "Writing off supplies used increases Supplies Expense, which decreases net income."
       }
+    },
+    {
+      "id": "1-10-21",
+      "q": "At year-end, a company forgot to record $8,000 of depreciation on its equipment. What is the effect on the financial statements?",
+      "o": [
+        "Net income is understated and total assets are understated.",
+        "Net income is overstated and total liabilities are understated.",
+        "Net income is overstated and total assets are overstated.",
+        "Net income is not affected, but total assets are overstated."
+      ],
+      "a": 2,
+      "e": "The omitted entry is Dr Depreciation Expense / Cr Accumulated Depreciation. Without it, expenses are too low (net income overstated) and accumulated depreciation is too low, so net book value and total assets are overstated.",
+      "wrongWhy": {
+        "0": "The missing entry is an expense, so leaving it out makes expenses too low and net income too HIGH, not too low.",
+        "1": "Depreciation is credited to Accumulated Depreciation, a contra-asset. Liabilities are not affected.",
+        "3": "Depreciation is an expense, so omitting it also overstates net income."
+      }
+    },
+    {
+      "id": "1-10-22",
+      "q": "Employees earned $3,000 of wages during the last week of the year, to be paid in January. No entry was made at year-end. What is the effect?",
+      "o": [
+        "Expenses are understated and liabilities are understated.",
+        "Expenses are overstated and liabilities are overstated.",
+        "Expenses are understated and assets are overstated.",
+        "There is no effect until the wages are paid in January."
+      ],
+      "a": 0,
+      "e": "The missing accrual is Dr Wages Expense / Cr Wages Payable. Omitting it understates expenses (overstating net income) and understates liabilities.",
+      "wrongWhy": {
+        "1": "Nothing was recorded, so both amounts are too LOW, not too high.",
+        "2": "The accrual involves an expense and a liability (wages payable); no asset account is affected.",
+        "3": "Under the accrual basis, an expense is recognized in the period it is incurred, regardless of when cash is paid."
+      }
+    },
+    {
+      "id": "1-10-23",
+      "q": "A company received $12,000 in advance for services and credited Unearned Revenue. By year-end, $4,000 of the services had been performed, but no adjusting entry was made. What is the effect?",
+      "o": [
+        "Liabilities are understated by $4,000 and net income is overstated by $4,000.",
+        "Assets are overstated by $4,000 and net income is understated by $4,000.",
+        "Liabilities are overstated by $8,000 and net income is understated by $8,000.",
+        "Liabilities are overstated by $4,000 and net income is understated by $4,000."
+      ],
+      "a": 3,
+      "e": "The missing entry is Dr Unearned Revenue $4,000 / Cr Service Revenue $4,000. Without it, the liability is $4,000 too high and revenue (and net income) is $4,000 too low.",
+      "wrongWhy": {
+        "0": "The unearned revenue balance is still the full $12,000, which is too HIGH; the $4,000 of earned revenue is missing, so net income is too LOW.",
+        "1": "The cash was already correctly recorded. The error is in the liability account, not in assets.",
+        "2": "Only the $4,000 earned portion should have been moved to revenue; the remaining $8,000 correctly stays as a liability."
+      }
+    },
+    {
+      "id": "1-10-24",
+      "q": "Which of the following is always true of year-end adjusting entries?",
+      "o": [
+        "They are recorded only for accruals, never for deferrals.",
+        "They never involve the Cash account.",
+        "They are recorded on the first day of the next period to reverse prior accruals.",
+        "They always increase net income."
+      ],
+      "a": 1,
+      "e": "Adjusting entries allocate revenues and expenses to the correct period. Cash has already been recorded when it moved, so adjustments always pair an income statement account with a balance sheet account other than Cash.",
+      "wrongWhy": {
+        "0": "Adjusting entries are needed for both accruals (e.g. accrued wages) and deferrals (e.g. prepaid insurance, unearned revenue).",
+        "2": "That describes REVERSING entries, an optional step at the start of the next period.",
+        "3": "Adjustments can increase net income (accrued revenue) or decrease it (depreciation, accrued expenses)."
+      }
     }
   ],
   "1-11": [
@@ -6153,6 +6221,74 @@
         "1": "A bank error is a mistake made by the bank. An uncleared check is a normal timing difference.",
         "3": "An NSF check is a customer's check returned due to insufficient funds in the customer's account."
       }
+    },
+    {
+      "id": "1-18-21",
+      "q": "A company asks customers to mail payments to a post office box that its bank empties several times a day, depositing the checks immediately. What is the main purpose of this arrangement?",
+      "o": [
+        "To increase disbursement float on payments to suppliers.",
+        "To reduce collection float so that cash becomes available sooner.",
+        "To reduce the company's bad debt losses.",
+        "To eliminate the need for a monthly bank reconciliation."
+      ],
+      "a": 1,
+      "e": "This is a lockbox system. By cutting mail and processing time, it shortens collection float, so cash from customers is available for use earlier.",
+      "wrongWhy": {
+        "0": "Disbursement float relates to cash going OUT. A lockbox speeds up cash coming IN.",
+        "2": "A lockbox speeds up processing of payments customers have already sent; it does not make customers more likely to pay.",
+        "3": "Bank reconciliations are still required regardless of how deposits are collected."
+      }
+    },
+    {
+      "id": "1-18-22",
+      "q": "Disbursement float is best described as:",
+      "o": [
+        "The time between when a customer sends a payment and when the company can use the cash.",
+        "A cash reserve held for unexpected needs.",
+        "The time between when a company issues a payment and when the funds actually leave its bank account.",
+        "The interest a company earns on idle cash balances."
+      ],
+      "a": 2,
+      "e": "Disbursement float is the delay between writing a check (or initiating a payment) and the cash actually leaving the account. Companies manage it by paying exactly on the due date.",
+      "wrongWhy": {
+        "0": "That is COLLECTION float, which relates to cash coming in.",
+        "1": "That is a precautionary cash balance, not float.",
+        "3": "Float is a timing gap, not an amount of interest earned."
+      }
+    },
+    {
+      "id": "1-18-23",
+      "q": "For next month a company expects: beginning cash $15,000; cash collections $120,000; cash payments $128,000; depreciation expense $6,000. It must keep a minimum cash balance of $10,000. How much must it borrow?",
+      "o": [
+        "$0",
+        "$9,000",
+        "$10,000",
+        "$3,000"
+      ],
+      "a": 3,
+      "e": "Cash available before financing = $15,000 + $120,000 − $128,000 = $7,000. To reach the $10,000 minimum, the company must borrow $10,000 − $7,000 = $3,000. Depreciation is ignored because it involves no cash.",
+      "wrongWhy": {
+        "0": "Cash before financing is $7,000, which is still below the $10,000 minimum, so borrowing is needed.",
+        "1": "This subtracts depreciation, which is a non-cash expense and never appears in a cash budget.",
+        "2": "Only the shortfall below the minimum must be borrowed, not the full minimum balance."
+      }
+    },
+    {
+      "id": "1-18-24",
+      "q": "Which of the following would NOT appear in a cash budget?",
+      "o": [
+        "Depreciation expense",
+        "Proceeds from a bank loan",
+        "Payments to suppliers for last month's purchases",
+        "Cash dividends paid to shareholders"
+      ],
+      "a": 0,
+      "e": "A cash budget includes only actual cash receipts and cash payments. Depreciation is a non-cash expense, so it never appears.",
+      "wrongWhy": {
+        "1": "Loan proceeds are a cash receipt and appear in the financing section of the cash budget.",
+        "2": "Payments on account are cash disbursements and are included.",
+        "3": "Dividends paid are a cash outflow and are included."
+      }
     }
   ],
   "1-19": [
@@ -6836,6 +6972,74 @@
         "0": "During falling prices, FIFO expenses older higher-cost units first — giving higher COGS and lower net income.",
         "2": "Weighted average produces COGS between FIFO and LIFO extremes and would not be the highest-income method.",
         "3": "Specific identification does not systematically produce the highest income in a falling price environment."
+      }
+    },
+    {
+      "id": "1-20-21",
+      "q": "A company uses 18,000 units a year. Each order costs $40 to place, and carrying one unit in inventory for a year costs $4. What is the economic order quantity?",
+      "o": [
+        "600 units",
+        "424 units",
+        "849 units",
+        "300 units"
+      ],
+      "a": 0,
+      "e": "EOQ = √(2 × Annual Demand × Cost per Order ÷ Carrying Cost per Unit) = √(2 × 18,000 × 40 ÷ 4) = √360,000 = 600 units.",
+      "wrongWhy": {
+        "1": "This omits the 2 in the EOQ formula: √(18,000 × 40 ÷ 4).",
+        "2": "This uses half the carrying cost ($2) in the denominator.",
+        "3": "This is the average inventory (EOQ ÷ 2), not the EOQ itself."
+      }
+    },
+    {
+      "id": "1-20-22",
+      "q": "At the economic order quantity, which statement is true?",
+      "o": [
+        "Annual carrying cost is zero.",
+        "Annual ordering cost is at its lowest possible level.",
+        "Safety stock equals half of the order quantity.",
+        "Annual ordering cost equals annual carrying cost."
+      ],
+      "a": 3,
+      "e": "Ordering cost falls and carrying cost rises as order size increases. Total cost is minimized where the two lines cross, so at the EOQ annual ordering cost equals annual carrying cost.",
+      "wrongWhy": {
+        "0": "Carrying cost is zero only if no inventory is held. At the EOQ, carrying cost is significant.",
+        "1": "Ordering cost is lowest with very large, infrequent orders — which would make carrying cost very high.",
+        "2": "Safety stock is set separately based on demand and lead-time uncertainty; it is not part of the EOQ formula."
+      }
+    },
+    {
+      "id": "1-20-23",
+      "q": "If a company's annual demand doubles while ordering and carrying costs per unit stay the same, the economic order quantity will:",
+      "o": [
+        "Double.",
+        "Increase by about 41%.",
+        "Stay the same.",
+        "Decrease by half."
+      ],
+      "a": 1,
+      "e": "EOQ = √(2DS ÷ H). Doubling D multiplies the EOQ by √2 ≈ 1.414, an increase of about 41%.",
+      "wrongWhy": {
+        "0": "Demand sits under a square root, so EOQ rises by √2, not by 2.",
+        "2": "Annual demand is part of the EOQ formula, so a change in demand changes the EOQ.",
+        "3": "Higher demand increases, not decreases, the EOQ."
+      }
+    },
+    {
+      "id": "1-20-24",
+      "q": "A company orders 600 units at a time and keeps a safety stock of 150 units. What is its average inventory?",
+      "o": [
+        "300 units",
+        "750 units",
+        "450 units",
+        "600 units"
+      ],
+      "a": 2,
+      "e": "Average inventory = (Order Quantity ÷ 2) + Safety Stock = 300 + 150 = 450 units.",
+      "wrongWhy": {
+        "0": "This ignores the safety stock, which is always on hand on average.",
+        "1": "This adds the full order quantity to safety stock; on average only half the order quantity is on hand.",
+        "3": "This is the order quantity, not average inventory."
       }
     }
   ]

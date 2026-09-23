@@ -339,6 +339,91 @@
         "2": "The asset is not removed at impairment — it continues to be used. Removal occurs at disposal.",
         "3": "Impairment is a separate loss on the income statement, not simply additional accumulated depreciation."
       }
+    },
+    {
+      "id": "2-1-21",
+      "q": "A company has gross accounts receivable of $250,000 and an allowance for doubtful accounts of $12,000. At what amount are receivables reported on the balance sheet?",
+      "o": [
+        "$238,000",
+        "$250,000",
+        "$262,000",
+        "$12,000"
+      ],
+      "a": 0,
+      "e": "Accounts receivable are reported at net realizable value: $250,000 − $12,000 = $238,000.",
+      "wrongWhy": {
+        "1": "Receivables are reported at net realizable value, so the allowance must be deducted.",
+        "2": "The allowance is deducted from, not added to, gross receivables.",
+        "3": "This is the allowance itself, not the net receivable."
+      }
+    },
+    {
+      "id": "2-1-22",
+      "q": "During a period of FALLING purchase prices, how does LIFO compare with FIFO?",
+      "o": [
+        "LIFO shows higher cost of goods sold and lower ending inventory.",
+        "LIFO shows higher cost of goods sold and higher ending inventory.",
+        "LIFO shows lower cost of goods sold and higher ending inventory.",
+        "LIFO and FIFO give the same results when prices fall."
+      ],
+      "a": 2,
+      "e": "When prices fall, the newest costs are the lowest. LIFO charges those low recent costs to COGS (lower COGS) and leaves the older, higher costs in ending inventory (higher ending inventory).",
+      "wrongWhy": {
+        "0": "That is the result in a period of RISING prices, not falling prices.",
+        "1": "The two methods move COGS and ending inventory in opposite directions.",
+        "3": "The methods give the same result only if prices do not change."
+      }
+    },
+    {
+      "id": "2-1-23",
+      "q": "Equipment costs $50,000, has a salvage value of $5,000 and a 5-year life. Using double-declining balance, what is depreciation in Year 2?",
+      "o": [
+        "$9,000",
+        "$12,000",
+        "$10,800",
+        "$20,000"
+      ],
+      "a": 1,
+      "e": "DDB rate = 2 × (1 ÷ 5) = 40%. Year 1 = 40% × $50,000 = $20,000. Year 2 = 40% × ($50,000 − $20,000) = $12,000.",
+      "wrongWhy": {
+        "0": "This is straight-line depreciation: ($50,000 − $5,000) ÷ 5.",
+        "2": "This wrongly deducts salvage value before applying the DDB rate. DDB ignores salvage until the final years.",
+        "3": "This is Year 1 depreciation (40% × $50,000)."
+      }
+    },
+    {
+      "id": "2-1-24",
+      "q": "How is purchased goodwill accounted for after it is acquired?",
+      "o": [
+        "It is amortized over a maximum of 40 years.",
+        "It is amortized over its estimated useful life.",
+        "It is expensed immediately on acquisition.",
+        "It is not amortized but is tested for impairment at least annually."
+      ],
+      "a": 3,
+      "e": "Goodwill is an indefinite-life intangible asset. It is not amortized; instead it is tested for impairment, and any impairment loss is recognized.",
+      "wrongWhy": {
+        "0": "This was an old rule that no longer applies.",
+        "1": "Only finite-life intangibles are amortized; goodwill has an indefinite life.",
+        "2": "Purchased goodwill is recognized as an asset, not expensed."
+      }
+    },
+    {
+      "id": "2-1-25",
+      "q": "A company's sales for the year were $400,000. It estimates warranty costs at 2% of sales. Actual warranty repairs this year cost $3,000, and there was no beginning warranty liability. What is the year-end warranty liability?",
+      "o": [
+        "$8,000",
+        "$3,000",
+        "$5,000",
+        "$11,000"
+      ],
+      "a": 2,
+      "e": "Warranty expense = 2% × $400,000 = $8,000, which creates the liability. Repairs of $3,000 reduce it: $8,000 − $3,000 = $5,000.",
+      "wrongWhy": {
+        "0": "This is the warranty expense for the year; the $3,000 already paid reduces the liability.",
+        "1": "This is the amount already spent, not the amount still owed.",
+        "3": "The repairs paid reduce the liability; they are not added to it."
+      }
     }
   ],
   "2-2": [
@@ -611,6 +696,176 @@
         "3": "AOCI is a component of stockholders' equity (not retained earnings specifically) — the adjustment affects equity through this dedicated OCI account, not as a direct hit to retained earnings."
       },
       "src": "gawad"
+    },
+    {
+      "id": "2-2-16",
+      "q": "In the five-step revenue recognition model, which is the THIRD step?",
+      "o": [
+        "Determine the transaction price.",
+        "Identify the performance obligations in the contract.",
+        "Allocate the transaction price to the performance obligations.",
+        "Recognize revenue when each performance obligation is satisfied."
+      ],
+      "a": 0,
+      "e": "The five steps are: (1) identify the contract, (2) identify the performance obligations, (3) determine the transaction price, (4) allocate the price, (5) recognize revenue as obligations are satisfied.",
+      "wrongWhy": {
+        "1": "This is the second step.",
+        "2": "This is the fourth step.",
+        "3": "This is the fifth and final step."
+      }
+    },
+    {
+      "id": "2-2-17",
+      "q": "A company sells a laptop together with a two-year support plan for $1,000. Sold separately, the laptop is priced at $900 and the support plan at $300. How much of the $1,000 is allocated to the laptop?",
+      "o": [
+        "$900",
+        "$750",
+        "$700",
+        "$1,000"
+      ],
+      "a": 1,
+      "e": "The price is allocated in proportion to standalone selling prices: $1,000 × $900 ÷ ($900 + $300) = $750.",
+      "wrongWhy": {
+        "0": "The laptop's standalone price is used to allocate the bundle price, not as the allocated amount.",
+        "2": "This assigns the full $300 standalone price to support and the remainder to the laptop, ignoring relative prices.",
+        "3": "Part of the price must be allocated to the support plan, a separate performance obligation."
+      }
+    },
+    {
+      "id": "2-2-18",
+      "q": "On October 1, a gym sells a 12-month membership for $1,200, collected in advance. How much revenue should it recognize for the year ending December 31?",
+      "o": [
+        "$1,200",
+        "$0",
+        "$900",
+        "$300"
+      ],
+      "a": 3,
+      "e": "The performance obligation is satisfied over time. October to December is 3 months: $1,200 × 3 ÷ 12 = $300. The remaining $900 is deferred revenue.",
+      "wrongWhy": {
+        "0": "Revenue is earned as the service is provided over 12 months, not when cash is received.",
+        "1": "Three months of service have already been provided, so part of the revenue has been earned.",
+        "2": "This is the amount still unearned, which remains a liability at year-end."
+      }
+    },
+    {
+      "id": "2-2-19",
+      "q": "When is revenue recognized under the current revenue recognition standard?",
+      "o": [
+        "When the customer pays in cash.",
+        "When the contract is signed.",
+        "When control of the promised goods or services transfers to the customer.",
+        "When the invoice is sent."
+      ],
+      "a": 2,
+      "e": "Revenue is recognized when (or as) a performance obligation is satisfied, which happens when control of the goods or services passes to the customer.",
+      "wrongWhy": {
+        "0": "Cash receipt timing does not determine revenue recognition under the accrual basis.",
+        "1": "Signing the contract is only step one; no revenue is earned until an obligation is satisfied.",
+        "3": "Invoicing is an administrative step and does not by itself satisfy a performance obligation."
+      }
+    },
+    {
+      "id": "2-2-20",
+      "q": "Recording depreciation on a building over its useful life is an example of which expense recognition method?",
+      "o": [
+        "Systematic and rational allocation",
+        "Cause and effect",
+        "Immediate recognition",
+        "Cash basis recognition"
+      ],
+      "a": 0,
+      "e": "A building benefits many periods but cannot be matched to specific sales, so its cost is spread over its useful life using a systematic and rational method.",
+      "wrongWhy": {
+        "1": "Cause and effect applies when an expense is directly linked to specific revenue, such as cost of goods sold.",
+        "2": "Immediate recognition applies when a cost has no future benefit, such as advertising.",
+        "3": "The cash basis is not a GAAP method of recognizing expenses."
+      }
+    },
+    {
+      "id": "2-2-21",
+      "q": "Advertising costs are generally recognized using which expense recognition method?",
+      "o": [
+        "Cause and effect",
+        "Immediate recognition",
+        "Systematic and rational allocation",
+        "They are capitalized as an asset."
+      ],
+      "a": 1,
+      "e": "Costs whose future benefit is uncertain or cannot be measured, such as advertising, are expensed immediately in the period incurred.",
+      "wrongWhy": {
+        "0": "Advertising cannot be linked directly to specific sales transactions.",
+        "2": "The future benefits of advertising are too uncertain to allocate over periods.",
+        "3": "Because future benefits are uncertain, advertising is not capitalized."
+      }
+    },
+    {
+      "id": "2-2-22",
+      "q": "Equipment that cost $80,000, with accumulated depreciation of $55,000, is sold for $30,000 cash. What is the result of the sale?",
+      "o": [
+        "A loss of $50,000",
+        "A gain of $30,000",
+        "A loss of $25,000",
+        "A gain of $5,000"
+      ],
+      "a": 3,
+      "e": "Book value = $80,000 − $55,000 = $25,000. Gain = proceeds − book value = $30,000 − $25,000 = $5,000.",
+      "wrongWhy": {
+        "0": "This compares the proceeds with original cost and ignores accumulated depreciation.",
+        "1": "The full proceeds are not a gain; the book value of the asset must be deducted.",
+        "2": "$25,000 is the book value, not the gain or loss."
+      }
+    },
+    {
+      "id": "2-2-23",
+      "q": "Which of the following is reported in other comprehensive income rather than in net income?",
+      "o": [
+        "A gain on the sale of equipment",
+        "Interest revenue",
+        "A foreign currency translation adjustment",
+        "An inventory write-down"
+      ],
+      "a": 2,
+      "e": "Foreign currency translation adjustments bypass net income and are reported in other comprehensive income, accumulating in equity.",
+      "wrongWhy": {
+        "0": "Gains on the disposal of fixed assets are included in net income.",
+        "1": "Interest revenue is part of net income.",
+        "3": "Inventory write-downs are charged to net income."
+      }
+    },
+    {
+      "id": "2-2-24",
+      "q": "Which of the following would be reported as a discontinued operation?",
+      "o": [
+        "Closing one of a retailer's 60 stores in the same region",
+        "A loss caused by a flood at one factory",
+        "A change from FIFO to the weighted-average inventory method",
+        "The sale of an entire major line of business that represents a strategic shift for the company"
+      ],
+      "a": 3,
+      "e": "A discontinued operation must be a component (such as a major line of business or geographic area) that has been disposed of or held for sale AND represents a strategic shift with a major effect on operations and results.",
+      "wrongWhy": {
+        "0": "A single store is not a separate major line of business, and closing it is not a strategic shift.",
+        "1": "An unusual or infrequent loss is reported within continuing operations, not as a discontinued operation.",
+        "2": "That is a change in accounting principle, not a disposal of a component."
+      }
+    },
+    {
+      "id": "2-2-25",
+      "q": "Where is the result of a discontinued operation reported?",
+      "o": [
+        "Within operating income",
+        "Separately, net of tax, below income from continuing operations",
+        "In other comprehensive income",
+        "As an adjustment to beginning retained earnings"
+      ],
+      "a": 1,
+      "e": "Results of discontinued operations are shown after income from continuing operations, net of their tax effect, so users can separate recurring from non-recurring earnings.",
+      "wrongWhy": {
+        "0": "Discontinued operations are separated from continuing results so users can judge recurring earnings.",
+        "2": "Discontinued operations are part of net income, not OCI.",
+        "3": "Only error corrections are adjusted to beginning retained earnings."
+      }
     }
   ],
   "2-3": [
@@ -953,6 +1208,91 @@
         "1": "A net profit increases Retained Earnings through the closing of the income summary.",
         "3": "Reissuing treasury stock above cost increases APIC — it does not affect Retained Earnings."
       }
+    },
+    {
+      "id": "2-3-21",
+      "q": "A company issues 10,000 shares of $2 par value common stock for $18 per share. How much is credited to Additional Paid-in Capital?",
+      "o": [
+        "$160,000",
+        "$180,000",
+        "$20,000",
+        "$200,000"
+      ],
+      "a": 0,
+      "e": "Cash = 10,000 × $18 = $180,000. Common Stock = 10,000 × $2 = $20,000. APIC = $180,000 − $20,000 = $160,000.",
+      "wrongWhy": {
+        "1": "This is the total cash received; part of it is credited to Common Stock at par.",
+        "2": "This is the amount credited to Common Stock (10,000 × $2 par).",
+        "3": "This adds par value to the total proceeds, double-counting the par amount."
+      }
+    },
+    {
+      "id": "2-3-22",
+      "q": "What journal entry is recorded on the date of record for a cash dividend?",
+      "o": [
+        "Debit Retained Earnings, credit Dividends Payable.",
+        "Debit Dividends Payable, credit Cash.",
+        "No journal entry is recorded.",
+        "Debit Cash, credit Dividends Payable."
+      ],
+      "a": 2,
+      "e": "The date of record only determines WHICH shareholders will receive the dividend. The liability was already recorded at declaration, so no entry is needed.",
+      "wrongWhy": {
+        "0": "This entry is recorded on the declaration date.",
+        "1": "This entry is recorded on the payment date.",
+        "3": "The company pays cash out; it never receives cash for a dividend."
+      }
+    },
+    {
+      "id": "2-3-23",
+      "q": "A company repurchases 1,000 of its own shares for $25 per share and holds them as treasury stock. What is the effect on total stockholders' equity?",
+      "o": [
+        "It decreases by $25,000.",
+        "It increases by $25,000.",
+        "It is not affected.",
+        "It decreases only by the par value of the shares."
+      ],
+      "a": 0,
+      "e": "Treasury stock is recorded at cost and deducted from equity: 1,000 × $25 = $25,000 decrease in total stockholders' equity.",
+      "wrongWhy": {
+        "1": "Buying back shares uses company cash and reduces equity; it does not increase it.",
+        "2": "Treasury stock is a contra-equity account, so total equity falls.",
+        "3": "Treasury stock is recorded at cost ($25 per share), not at par."
+      }
+    },
+    {
+      "id": "2-3-24",
+      "q": "A company with 100,000 shares of $1 par stock outstanding declares a 10% stock dividend when the market price is $15 per share. By how much are retained earnings reduced?",
+      "o": [
+        "$10,000",
+        "$0",
+        "$1,500,000",
+        "$150,000"
+      ],
+      "a": 3,
+      "e": "A 10% dividend is a small stock dividend, recorded at market value: 10,000 new shares × $15 = $150,000 transferred from retained earnings to paid-in capital.",
+      "wrongWhy": {
+        "0": "Par value is used for a LARGE stock dividend. A 10% dividend is small, so market value is used.",
+        "1": "A stock dividend transfers an amount from retained earnings to paid-in capital.",
+        "2": "This applies the market price to all 100,000 shares instead of the 10,000 new shares."
+      }
+    },
+    {
+      "id": "2-3-25",
+      "q": "A company has 500,000 shares authorized, 200,000 shares issued and 15,000 shares held as treasury stock. How many shares are outstanding?",
+      "o": [
+        "200,000",
+        "185,000",
+        "485,000",
+        "215,000"
+      ],
+      "a": 1,
+      "e": "Outstanding shares = issued − treasury = 200,000 − 15,000 = 185,000.",
+      "wrongWhy": {
+        "0": "Issued shares include treasury shares, which are not outstanding.",
+        "2": "Authorized shares that were never issued cannot be outstanding.",
+        "3": "Treasury shares are subtracted from issued shares, not added."
+      }
     }
   ],
   "2-4": [
@@ -1294,6 +1634,91 @@
         "0": "2.0 is not correct — EBIT must first be calculated by adding back interest and taxes.",
         "1": "4.0 results from an incorrect EBIT calculation.",
         "2": "5.0 is not the correct result. ($120,000 + $30,000 + $50,000) / $30,000 = 6.67."
+      }
+    },
+    {
+      "id": "2-4-21",
+      "q": "In a common-size income statement, each line item is expressed as a percentage of:",
+      "o": [
+        "Net sales",
+        "Total assets",
+        "Net income",
+        "The same line item in the base year"
+      ],
+      "a": 0,
+      "e": "Vertical (common-size) analysis of the income statement uses net sales as 100%, so every expense and profit line shows its share of sales.",
+      "wrongWhy": {
+        "1": "Total assets is the base for a common-size BALANCE SHEET.",
+        "2": "Net income is too small and variable to serve as the base.",
+        "3": "That describes horizontal (trend) analysis."
+      }
+    },
+    {
+      "id": "2-4-22",
+      "q": "Net sales were $1,150,000 in Year 1 and $1,300,000 in Year 2. What is the percentage change shown in a horizontal analysis?",
+      "o": [
+        "11.5% increase",
+        "113.0% increase",
+        "13.0% increase",
+        "$150,000 increase"
+      ],
+      "a": 2,
+      "e": "% change = (Year 2 − Year 1) ÷ Year 1 = ($1,300,000 − $1,150,000) ÷ $1,150,000 = 13.0%.",
+      "wrongWhy": {
+        "0": "This divides the change by Year 2 sales; horizontal analysis divides by the BASE year.",
+        "1": "113% is Year 2 as a percentage of the base year; the change is 13%.",
+        "3": "This is the dollar change, not the percentage change."
+      }
+    },
+    {
+      "id": "2-4-23",
+      "q": "Which of the following is an example of window dressing?",
+      "o": [
+        "Using the straight-line depreciation method consistently each year",
+        "Paying off accounts payable just before year-end to improve the current ratio",
+        "Disclosing a pending lawsuit in the notes to the financial statements",
+        "Comparing the company's ratios with the industry average"
+      ],
+      "a": 1,
+      "e": "Window dressing means timing transactions near the balance sheet date to make ratios look better than they normally are.",
+      "wrongWhy": {
+        "0": "Consistent use of an acceptable method is not window dressing.",
+        "2": "Disclosure improves transparency; it does not distort the ratios.",
+        "3": "Benchmarking is part of good analysis, not a way of manipulating results."
+      }
+    },
+    {
+      "id": "2-4-24",
+      "q": "Which of the following is a limitation of ratio analysis?",
+      "o": [
+        "Ratios cannot be calculated for companies with net losses.",
+        "Ratios are based on current market values, which change daily.",
+        "Ratios can only be compared within the same year.",
+        "Companies may use different accounting methods, which reduces comparability."
+      ],
+      "a": 3,
+      "e": "Differences in accounting choices, such as FIFO vs LIFO or depreciation methods, mean the same economic situation can produce different ratios.",
+      "wrongWhy": {
+        "0": "Ratios can be calculated for loss-making companies; the results are simply negative or low.",
+        "1": "Financial statements mainly use historical cost, which is itself a limitation.",
+        "2": "Ratios are often compared across years (trend analysis)."
+      }
+    },
+    {
+      "id": "2-4-25",
+      "q": "When evaluating a company's ratios, which comparison is generally MOST useful?",
+      "o": [
+        "A single year's ratio compared with a general rule of thumb",
+        "The ratio of one competitor of a different size in a different industry",
+        "The ratio alone, without any comparison",
+        "The company's own trend over several years together with the industry average"
+      ],
+      "a": 3,
+      "e": "Ratios are meaningful only in context. Combining trend analysis with industry benchmarks shows both the direction and how the company compares with its peers.",
+      "wrongWhy": {
+        "0": "Rules of thumb ignore industry differences and the company's own trend.",
+        "1": "Companies in different industries have very different normal ratios.",
+        "2": "A ratio has little meaning without a benchmark."
       }
     }
   ],
@@ -1722,6 +2147,57 @@
         "2": "This is total current liabilities of $2,000,000 multiplied by 0.8, the quick ratio. This is not the correct way to calculate the level of inventory. Please see the correct answer explanation for more information.",
         "3": "This is total current liabilities of $2,000,000 minus net working capital of $300,000, multiplied by 0.8, the quick ratio. This is not the correct way to calculate the level of inventory. Please see the correct answer explanation for more information."
       }
+    },
+    {
+      "id": "2-5-26",
+      "q": "A company has current assets of $300,000 and current liabilities of $200,000. It pays $50,000 of accounts payable in cash. What is the effect?",
+      "o": [
+        "The current ratio decreases and working capital is unchanged.",
+        "The current ratio is unchanged and working capital decreases.",
+        "The current ratio increases and working capital is unchanged.",
+        "Both the current ratio and working capital increase."
+      ],
+      "a": 2,
+      "e": "Before: 300 ÷ 200 = 1.50. After: 250 ÷ 150 = 1.67. Working capital: $100,000 before and after.",
+      "wrongWhy": {
+        "0": "With a current ratio above 1, reducing both sides equally raises the ratio (250 ÷ 150 = 1.67).",
+        "1": "Working capital stays at $100,000 because both sides fall by the same amount.",
+        "3": "Working capital does not change when current assets and current liabilities change by the same amount."
+      }
+    },
+    {
+      "id": "2-5-27",
+      "q": "A company has current assets of $160,000 and current liabilities of $200,000. It pays $40,000 of accounts payable in cash. What happens to the current ratio?",
+      "o": [
+        "It increases.",
+        "It decreases.",
+        "It is unchanged.",
+        "It becomes exactly 1.0."
+      ],
+      "a": 1,
+      "e": "Before: 160 ÷ 200 = 0.80. After: 120 ÷ 160 = 0.75. When the ratio is below 1, reducing both sides by the same amount moves it further below 1.",
+      "wrongWhy": {
+        "0": "That is true only when the current ratio is ABOVE 1. Here it is below 1.",
+        "2": "Both sides change, so the ratio changes.",
+        "3": "After the payment the ratio is 120 ÷ 160 = 0.75."
+      }
+    },
+    {
+      "id": "2-5-28",
+      "q": "A company buys inventory for cash. What is the effect on its current ratio and quick ratio?",
+      "o": [
+        "The current ratio is unchanged and the quick ratio decreases.",
+        "Both ratios are unchanged.",
+        "The current ratio decreases and the quick ratio is unchanged.",
+        "Both ratios increase."
+      ],
+      "a": 0,
+      "e": "Cash (a quick asset) is exchanged for inventory (not a quick asset). Total current assets are unchanged, so the current ratio is unchanged, but quick assets fall, so the quick ratio decreases.",
+      "wrongWhy": {
+        "1": "Cash is a quick asset but inventory is not, so the quick ratio changes.",
+        "2": "Total current assets do not change: one current asset replaces another.",
+        "3": "No current asset is added in total, and quick assets fall."
+      }
     }
   ],
   "2-6": [
@@ -2063,6 +2539,125 @@
         "0": "A high debt ratio is the opposite of a strong equity base. Low financial risk would come from a low debt ratio.",
         "2": "Liquidity is measured by current and quick ratios, not the debt-to-total assets ratio.",
         "3": "High leverage can amplify returns when performance is good, but a high debt ratio alone does not guarantee high shareholder returns."
+      }
+    },
+    {
+      "id": "2-6-21",
+      "q": "A company reports EBIT of $300,000, interest expense of $40,000 and annual lease payments of $20,000. What is its fixed-charge coverage ratio?",
+      "o": [
+        "7.50 times",
+        "5.00 times",
+        "8.00 times",
+        "5.33 times"
+      ],
+      "a": 3,
+      "e": "Fixed-charge coverage = (EBIT + fixed charges) ÷ (interest + fixed charges) = ($300,000 + $20,000) ÷ ($40,000 + $20,000) = 5.33 times.",
+      "wrongWhy": {
+        "0": "This is times interest earned (300 ÷ 40), which ignores the lease payments.",
+        "1": "This adds lease payments to the denominator but not back to EBIT in the numerator.",
+        "2": "This adds lease payments to the numerator but leaves them out of the denominator."
+      }
+    },
+    {
+      "id": "2-6-22",
+      "q": "Compared with times interest earned, the fixed-charge coverage ratio for the same company is usually:",
+      "o": [
+        "Lower, because it includes other fixed obligations such as lease payments.",
+        "Higher, because it adds lease payments to earnings.",
+        "Always equal, because both use EBIT.",
+        "Unrelated, because it measures liquidity rather than solvency."
+      ],
+      "a": 0,
+      "e": "Adding the same fixed charges to both the numerator and denominator of a ratio greater than 1 pulls it down, so fixed-charge coverage is a stricter (lower) measure.",
+      "wrongWhy": {
+        "1": "The same fixed charges are also added to the denominator, which has the bigger effect.",
+        "2": "They are equal only if the company has no fixed charges other than interest.",
+        "3": "Both ratios measure the ability to meet fixed financing obligations."
+      }
+    },
+    {
+      "id": "2-6-23",
+      "q": "A company has EBIT of $500,000 and interest expense of $100,000. What is its degree of financial leverage?",
+      "o": [
+        "0.80",
+        "1.25",
+        "5.00",
+        "0.83"
+      ],
+      "a": 1,
+      "e": "DFL = EBIT ÷ (EBIT − interest) = $500,000 ÷ $400,000 = 1.25.",
+      "wrongWhy": {
+        "0": "This inverts the formula: (EBIT − interest) ÷ EBIT.",
+        "2": "This is times interest earned (EBIT ÷ interest).",
+        "3": "This divides EBIT by EBIT plus interest instead of EBIT minus interest."
+      }
+    },
+    {
+      "id": "2-6-24",
+      "q": "A company's degree of financial leverage is 1.25. If EBIT increases by 8%, net income will increase by approximately:",
+      "o": [
+        "8%",
+        "6.4%",
+        "10%",
+        "9.25%"
+      ],
+      "a": 2,
+      "e": "% change in net income = DFL × % change in EBIT = 1.25 × 8% = 10%.",
+      "wrongWhy": {
+        "0": "That would be true only with no debt (DFL of 1.0).",
+        "1": "This divides by the DFL instead of multiplying.",
+        "3": "This adds the DFL to the percentage instead of multiplying."
+      }
+    },
+    {
+      "id": "2-6-25",
+      "q": "A company has total assets of $2,400,000 and total liabilities of $1,500,000. What is its equity multiplier (financial leverage ratio)?",
+      "o": [
+        "1.60",
+        "2.67",
+        "0.63",
+        "1.67"
+      ],
+      "a": 1,
+      "e": "Equity = $2,400,000 − $1,500,000 = $900,000. Equity multiplier = total assets ÷ total equity = $2,400,000 ÷ $900,000 = 2.67.",
+      "wrongWhy": {
+        "0": "This divides total assets by total liabilities instead of by equity.",
+        "2": "This is total liabilities ÷ total assets (the debt ratio).",
+        "3": "This is total liabilities ÷ total equity (the debt-to-equity ratio)."
+      }
+    },
+    {
+      "id": "2-6-26",
+      "q": "A company borrows long-term and uses the cash to buy back its own shares. What is the effect on its debt-to-equity ratio and equity multiplier?",
+      "o": [
+        "Both decrease.",
+        "The debt-to-equity ratio increases; the equity multiplier is unchanged.",
+        "Neither changes, because total assets are unchanged.",
+        "Both increase."
+      ],
+      "a": 3,
+      "e": "Liabilities rise and equity falls (treasury stock). Debt ÷ equity rises, and total assets ÷ equity rises as well.",
+      "wrongWhy": {
+        "0": "Debt rises and equity falls, which pushes both ratios up.",
+        "1": "Total assets are unchanged but equity falls, so the equity multiplier rises.",
+        "2": "Both ratios use equity in the denominator, and equity has decreased."
+      }
+    },
+    {
+      "id": "2-6-27",
+      "q": "A company has total liabilities of $900,000, current liabilities of $300,000 and total equity of $750,000. What is its long-term debt to equity ratio?",
+      "o": [
+        "1.20",
+        "0.40",
+        "0.80",
+        "0.67"
+      ],
+      "a": 2,
+      "e": "Long-term debt = $900,000 − $300,000 = $600,000. Long-term debt to equity = $600,000 ÷ $750,000 = 0.80.",
+      "wrongWhy": {
+        "0": "This uses total liabilities instead of long-term liabilities.",
+        "1": "This uses only current liabilities.",
+        "3": "This divides long-term debt by total liabilities instead of by equity."
       }
     }
   ],
@@ -2525,6 +3120,57 @@
         "1": "The inventory turnover ratio is Cost of Goods Sold ÷ Average Inventory. This is Cost of Goods Sold ÷ Beginning Inventory.",
         "2": "The inventory turnover ratio is Cost of Goods Sold ÷ Average Inventory. This is Cost of Goods Sold ÷ Ending Inventory."
       }
+    },
+    {
+      "id": "2-7-28",
+      "q": "A company has days' sales in receivables of 40, days' sales in inventory of 65 and days' purchases in payables of 35. What is its operating cycle?",
+      "o": [
+        "105 days",
+        "70 days",
+        "140 days",
+        "30 days"
+      ],
+      "a": 0,
+      "e": "Operating cycle = days in inventory + days in receivables = 65 + 40 = 105 days.",
+      "wrongWhy": {
+        "1": "This is the cash conversion cycle, which subtracts days in payables.",
+        "2": "Days in payables are not added to the operating cycle.",
+        "3": "This subtracts receivable days from inventory days."
+      }
+    },
+    {
+      "id": "2-7-29",
+      "q": "Using the same data (receivables 40 days, inventory 65 days, payables 35 days), what is the cash conversion cycle?",
+      "o": [
+        "70 days",
+        "105 days",
+        "140 days",
+        "60 days"
+      ],
+      "a": 0,
+      "e": "Cash conversion cycle = operating cycle − days in payables = 105 − 35 = 70 days.",
+      "wrongWhy": {
+        "1": "This is the operating cycle; payables must be subtracted.",
+        "2": "Payable days are subtracted, not added.",
+        "3": "This subtracts payables from inventory days only and ignores receivables."
+      }
+    },
+    {
+      "id": "2-7-30",
+      "q": "A company's cost of goods sold is $900,000. Inventory was $120,000 at the beginning and $150,000 at the end of the year, and all purchases are on credit. Average accounts payable is $93,000. What is the accounts payable turnover?",
+      "o": [
+        "9.7 times",
+        "10.0 times",
+        "9.4 times",
+        "6.9 times"
+      ],
+      "a": 1,
+      "e": "Credit purchases = COGS + ending inventory − beginning inventory = $900,000 + $150,000 − $120,000 = $930,000. AP turnover = $930,000 ÷ $93,000 = 10.0 times.",
+      "wrongWhy": {
+        "0": "This uses COGS instead of credit purchases.",
+        "2": "This subtracts the inventory increase instead of adding it when calculating purchases.",
+        "3": "This divides credit purchases by average INVENTORY ($135,000) instead of average accounts payable."
+      }
     }
   ],
   "2-8": [
@@ -2866,6 +3512,125 @@
         "0": "Issuing new stock increases equity (denominator) — ROE decreases if net income stays constant.",
         "1": "Decreasing net income reduces the numerator — ROE decreases.",
         "3": "Increasing equity-financed assets raises the equity base (denominator) — ROE decreases if net income does not grow proportionally."
+      }
+    },
+    {
+      "id": "2-8-21",
+      "q": "A company has net income of $450,000, preferred dividends of $50,000 and a weighted average of 160,000 common shares outstanding. What is its earnings per share?",
+      "o": [
+        "$2.81",
+        "$3.13",
+        "$2.50",
+        "$0.31"
+      ],
+      "a": 2,
+      "e": "EPS = (net income − preferred dividends) ÷ weighted-average common shares = ($450,000 − $50,000) ÷ 160,000 = $2.50.",
+      "wrongWhy": {
+        "0": "This does not subtract the preferred dividends.",
+        "1": "This adds the preferred dividends instead of subtracting them.",
+        "3": "This is the preferred dividend divided by common shares, not earnings per share."
+      }
+    },
+    {
+      "id": "2-8-22",
+      "q": "A company's earnings per share is $2.50 and its share price is $30. What is its price-earnings ratio?",
+      "o": [
+        "0.083",
+        "75.0",
+        "27.5",
+        "12.0"
+      ],
+      "a": 3,
+      "e": "P/E ratio = market price per share ÷ EPS = $30 ÷ $2.50 = 12.0.",
+      "wrongWhy": {
+        "0": "This divides EPS by price — the inverse of the P/E ratio.",
+        "1": "This multiplies price by EPS instead of dividing.",
+        "2": "This subtracts EPS from price."
+      }
+    },
+    {
+      "id": "2-8-23",
+      "q": "A price-earnings ratio well above the industry average usually indicates that:",
+      "o": [
+        "The company is very highly leveraged.",
+        "The company pays out most of its earnings as dividends.",
+        "Investors expect above-average future earnings growth.",
+        "The company's current earnings are unusually high."
+      ],
+      "a": 2,
+      "e": "The P/E ratio shows how much investors pay for each dollar of current earnings. A high P/E reflects confidence that earnings will grow.",
+      "wrongWhy": {
+        "0": "The P/E ratio does not measure the level of debt.",
+        "1": "That is shown by the dividend payout ratio, not the P/E ratio.",
+        "3": "Unusually high current earnings would LOWER the P/E ratio, not raise it."
+      }
+    },
+    {
+      "id": "2-8-24",
+      "q": "A company's earnings per share is $2.50 and it pays dividends of $0.90 per share. What is its dividend payout ratio?",
+      "o": [
+        "64%",
+        "36%",
+        "278%",
+        "3%"
+      ],
+      "a": 1,
+      "e": "Dividend payout ratio = dividends per share ÷ EPS = $0.90 ÷ $2.50 = 36%.",
+      "wrongWhy": {
+        "0": "This is the retention ratio (1 − payout ratio).",
+        "2": "This divides EPS by dividends per share.",
+        "3": "This is the dividend yield if the share price were $30, not the payout ratio."
+      }
+    },
+    {
+      "id": "2-8-25",
+      "q": "A company pays dividends of $0.90 per share and its share price is $30. What is its dividend yield?",
+      "o": [
+        "3.0%",
+        "36%",
+        "0.3%",
+        "8.3%"
+      ],
+      "a": 0,
+      "e": "Dividend yield = dividends per share ÷ market price per share = $0.90 ÷ $30 = 3.0%.",
+      "wrongWhy": {
+        "1": "This divides dividends by EPS (the payout ratio).",
+        "2": "This misplaces the decimal: $0.90 ÷ $30 = 0.03, which is 3%.",
+        "3": "This divides EPS of $2.50 by the share price, which is the earnings yield."
+      }
+    },
+    {
+      "id": "2-8-26",
+      "q": "A company's earnings increase this year, but it keeps its total cash dividend the same. What happens to its dividend payout ratio?",
+      "o": [
+        "It increases.",
+        "It is unchanged.",
+        "It cannot be determined.",
+        "It decreases."
+      ],
+      "a": 3,
+      "e": "Payout = dividends ÷ earnings. Higher earnings with the same dividend lowers the ratio, and more earnings are retained.",
+      "wrongWhy": {
+        "0": "The denominator (earnings) grows while the numerator stays the same.",
+        "1": "The payout ratio depends on earnings as well as on dividends.",
+        "2": "With dividends fixed and earnings higher, the ratio must fall."
+      }
+    },
+    {
+      "id": "2-8-27",
+      "q": "A company uses cash to buy back some of its common shares. Net income is unchanged. What is the effect on earnings per share?",
+      "o": [
+        "It decreases.",
+        "It is unchanged.",
+        "It increases.",
+        "It becomes zero until the shares are reissued."
+      ],
+      "a": 2,
+      "e": "EPS = earnings available to common ÷ weighted-average shares outstanding. Treasury shares are not outstanding, so the denominator falls and EPS rises.",
+      "wrongWhy": {
+        "0": "Fewer shares share the same earnings, so EPS rises.",
+        "1": "The share count in the denominator falls, so EPS changes.",
+        "3": "Treasury shares are simply excluded from shares outstanding."
       }
     }
   ]

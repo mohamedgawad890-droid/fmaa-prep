@@ -339,6 +339,176 @@
         "2": "Altering records to prevent harm would itself be an ethical and legal violation.",
         "3": "Doing nothing when facing an unresolved ethical violation is a passive failure that can make the member complicit in the wrongdoing."
       }
+    },
+    {
+      "id": "5-1-21",
+      "q": "An employee discovers evidence of possible fraud by a manager. According to generally accepted ethical practice, what should the employee normally do FIRST?",
+      "o": [
+        "Report it immediately to the news media.",
+        "Confront the manager publicly in a staff meeting.",
+        "Ignore it unless the amount is material.",
+        "Report it through the organization's internal channels, such as an ethics hotline or the audit committee."
+      ],
+      "a": 3,
+      "e": "Codes of conduct generally expect employees to use internal reporting channels first. External reporting is appropriate when internal channels are exhausted, compromised, or there is immediate risk of serious harm.",
+      "wrongWhy": {
+        "0": "External disclosure is normally a last step, after internal channels have failed.",
+        "1": "Public confrontation is unprofessional and may compromise any investigation.",
+        "2": "Suspected fraud should be reported regardless of amount; ignoring it is an ethical failure."
+      }
+    },
+    {
+      "id": "5-1-22",
+      "q": "When is external whistleblowing to a regulator generally considered justified?",
+      "o": [
+        "When internal channels have been exhausted or are compromised, or there is an immediate risk of serious harm",
+        "Whenever an employee disagrees with a management decision",
+        "Only after the employee has resigned from the company",
+        "Only if the employee will receive a financial reward"
+      ],
+      "a": 0,
+      "e": "External reporting is justified when internal routes have failed, are not trustworthy, or waiting would allow serious harm.",
+      "wrongWhy": {
+        "1": "A business disagreement is not illegal or unethical conduct.",
+        "2": "Resignation is not a condition for reporting; many laws protect current employees who report in good faith.",
+        "3": "Ethical justification depends on the conduct, not on a reward."
+      }
+    },
+    {
+      "id": "5-1-23",
+      "q": "Before signing off on a forecast prepared by a colleague, a management accountant checks the key assumptions and supporting documents. This is an example of:",
+      "o": [
+        "Whistleblowing",
+        "Due diligence",
+        "Rationalization",
+        "A conflict of interest"
+      ],
+      "a": 1,
+      "e": "Due diligence is the reasonable investigation a professional performs before relying on or approving information, rather than accepting it at face value.",
+      "wrongWhy": {
+        "0": "Whistleblowing is reporting suspected wrongdoing; nothing is being reported here.",
+        "2": "Rationalization is part of the fraud triangle — a justification for misconduct.",
+        "3": "A conflict of interest arises when personal interests could influence a decision."
+      }
+    },
+    {
+      "id": "5-1-24",
+      "q": "A board member votes to award a major contract to a company she secretly owns. Which fiduciary duty has she breached?",
+      "o": [
+        "The duty of care",
+        "The duty of confidentiality",
+        "The duty of competence",
+        "The duty of loyalty"
+      ],
+      "a": 3,
+      "e": "The duty of loyalty requires avoiding self-dealing and conflicts of interest and putting the interests of the party served ahead of one's own.",
+      "wrongWhy": {
+        "0": "The duty of care concerns making informed, prudent decisions. The issue here is self-dealing.",
+        "1": "No confidential information has been disclosed.",
+        "2": "Competence relates to skills and knowledge, not to personal gain."
+      }
+    },
+    {
+      "id": "5-1-25",
+      "q": "Under the U.S. Foreign Corrupt Practices Act, which of the following is a violation?",
+      "o": [
+        "A U.S. company's agent offers a payment to a foreign government official to win a contract, even though the payment is never made.",
+        "A U.S. company gives a customer a routine volume discount stated in its contract.",
+        "A U.S. company pays a foreign supplier's invoice for goods received.",
+        "A foreign company with no U.S. connection bribes an official of its own government."
+      ],
+      "a": 0,
+      "e": "The FCPA prohibits offering, promising or giving anything of value to a foreign official to obtain business. Offering or authorizing the payment is a violation even if it is never paid, and payments through agents are covered.",
+      "wrongWhy": {
+        "1": "A disclosed commercial discount to a customer is not a bribe to a government official.",
+        "2": "Paying for goods actually received is a normal business transaction.",
+        "3": "The FCPA covers U.S. companies and certain entities with a U.S. connection, not unconnected foreign companies."
+      }
+    },
+    {
+      "id": "5-1-26",
+      "q": "In addition to its anti-bribery rules, the Foreign Corrupt Practices Act requires companies to:",
+      "o": [
+        "Publish their financial statements in every country where they operate.",
+        "Obtain government approval before entering any foreign contract.",
+        "Keep accurate books and records and maintain adequate internal accounting controls.",
+        "Pay all foreign taxes before U.S. taxes."
+      ],
+      "a": 2,
+      "e": "The FCPA's accounting provisions require books and records that accurately reflect transactions and a system of internal accounting controls to prevent and detect improper payments.",
+      "wrongWhy": {
+        "0": "The FCPA contains no such requirement.",
+        "1": "The FCPA does not require pre-approval of contracts.",
+        "3": "Tax ordering is not part of the FCPA."
+      }
+    },
+    {
+      "id": "5-1-27",
+      "q": "An employee with large gambling debts is under strong personal financial strain. Which element of the fraud triangle does this represent?",
+      "o": [
+        "Opportunity",
+        "Pressure",
+        "Rationalization",
+        "Capability"
+      ],
+      "a": 1,
+      "e": "Pressure (incentive) is a financial or personal problem the person feels cannot be shared, such as debt or gambling losses.",
+      "wrongWhy": {
+        "0": "Opportunity refers to weak controls that allow fraud to be committed and hidden.",
+        "2": "Rationalization is the employee's justification, such as 'I'm only borrowing it'.",
+        "3": "Capability is not one of the three elements of the fraud triangle."
+      }
+    },
+    {
+      "id": "5-1-28",
+      "q": "A clerk takes cash and tells herself, 'The company underpays me, so I deserve this.' Which element of the fraud triangle does this represent?",
+      "o": [
+        "Pressure",
+        "Opportunity",
+        "Concealment",
+        "Rationalization"
+      ],
+      "a": 3,
+      "e": "Rationalization is the reasoning a person uses to see the dishonest act as acceptable, such as feeling underpaid or planning to repay the money.",
+      "wrongWhy": {
+        "0": "Pressure is the financial or personal strain; this is the justification the clerk uses.",
+        "1": "Opportunity is a control weakness, not a state of mind.",
+        "2": "Concealment is an action after the fraud and is not one of the three elements."
+      }
+    },
+    {
+      "id": "5-1-29",
+      "q": "Which statement best describes stakeholder theory?",
+      "o": [
+        "A corporation has obligations to employees, customers, suppliers and communities, not only to shareholders.",
+        "A corporation's only responsibility is to maximize value for shareholders.",
+        "A corporation should give priority to government regulators over all other groups.",
+        "A corporation's obligations end once it complies with the law."
+      ],
+      "a": 0,
+      "e": "Stakeholder theory holds that a business must consider the interests of everyone affected by its actions, not just its owners.",
+      "wrongWhy": {
+        "1": "That describes shareholder theory.",
+        "2": "Stakeholder theory balances all affected groups rather than ranking regulators first.",
+        "3": "Stakeholder theory goes beyond legal compliance to ethical obligations to all stakeholders."
+      }
+    },
+    {
+      "id": "5-1-30",
+      "q": "An investment manager pays returns to earlier investors using money deposited by new investors, with no real investment income being earned. This is:",
+      "o": [
+        "Insider trading",
+        "A Ponzi scheme",
+        "Corporate espionage",
+        "A conflict of interest"
+      ],
+      "a": 1,
+      "e": "A Ponzi scheme pays apparent returns to earlier investors out of new investors' money. It collapses when new money stops coming in.",
+      "wrongWhy": {
+        "0": "Insider trading is trading on material non-public information.",
+        "2": "Espionage is theft of proprietary information.",
+        "3": "A conflict of interest is a situation where personal interests may influence decisions; here there is outright fraud."
+      }
     }
   ],
   "5-2": [
