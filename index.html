@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FMAA-BUILD: 2026-09-23-01 phase1-tooltips-appcheck-readiness -->
+<!-- FMAA-BUILD: 2026-09-23-02 phase2-s2-ratios-arabic-formulasheet -->
 <script>
-window.FMAA_BUILD='2026-09-23-01';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
+window.FMAA_BUILD='2026-09-23-02';try{console.log('[FMAA] build',window.FMAA_BUILD);}catch(e){}
 window.__installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__installPrompt=e;if(window.__onInstallReady)window.__onInstallReady();});
 </script>
@@ -215,6 +215,18 @@ body.nav-collapsed .nav-collapse-btn .nav-collapse-arrow{transform:rotate(180deg
 .teach-entry{background:#fff;border:.5px solid #e0e0d8;border-radius:12px;padding:14px;margin-bottom:10px}
 .teach-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
 .teach-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
+.ar-sum{background:#FBF8F1;border:1px solid #E8DCC0;border-radius:12px;padding:14px 16px;margin:16px 0 6px;font-family:'Segoe UI',Tahoma,'Noto Naskh Arabic','Geeza Pro',Arial,sans-serif;text-align:right}
+.ar-sum-lbl{font-size:calc(12px * var(--fs,1));font-weight:700;color:#7E5109;margin-bottom:8px}
+.ar-sum-list{margin:0;padding:0 18px 0 0;list-style:disc}
+.ar-sum-list li{font-size:calc(14.5px * var(--fs,1));line-height:1.95;color:#2c2c2c;margin-bottom:4px}
+@media print{.ar-sum{page-break-inside:avoid}}
+#print-lesson-area .pfs-cols{column-count:2;column-gap:8mm}
+#print-lesson-area .pfs-group{break-inside:avoid-column;margin-bottom:10px}
+#print-lesson-area .pfs-title{font-size:11px;font-weight:700;color:#1A5276;border-bottom:1px solid #1A527650;padding-bottom:2px;margin-bottom:5px}
+#print-lesson-area .pfs-item{break-inside:avoid;margin-bottom:5px}
+#print-lesson-area .pfs-l{font-size:9.5px;font-weight:700;color:#333}
+#print-lesson-area .pfs-f{font-size:10px;color:#154360;white-space:pre-line}
+#print-lesson-area .pfs-n{font-size:8.5px;color:#888}
 #print-lesson-area{display:none}
 #print-lesson-area .print-hdr{margin-bottom:14px}
 #print-lesson-area .print-hdr-sec{font-size:11px;color:#888;margin-bottom:2px}
@@ -691,7 +703,9 @@ const TERM_DICT={
   'Declaration Date':'تاريخ الإعلان','Record Date':'تاريخ الاستحقاق','Payment Date':'تاريخ الدفع',
   'Cost Center':'مركز التكلفة','Profit Center':'مركز الربح','Revenue Center':'مركز الإيراد','Consultative Budgeting':'الموازنة الاستشارية',
   'Plantwide Allocation':'التوزيع على مستوى المصنع','Departmental Allocation':'التوزيع على مستوى الأقسام',
-  'Corruption':'الفساد','Espionage':'التجسس','Ponzi Scheme':'مخطط بونزي'
+  'Corruption':'الفساد','Espionage':'التجسس','Ponzi Scheme':'مخطط بونزي',
+  // BATCH 2026-09-23-02 (#2): Section 2 tooltip coverage
+  'Liquidity':'السيولة','Solvency':'الملاءة المالية','Net Working Capital':'صافي رأس المال العامل','EBIT':'الأرباح قبل الفوائد والضرائب','Operating Cycle':'الدورة التشغيلية','Common-Size':'القوائم ذات الحجم الموحد (نسب مئوية)','Ratio Analysis':'تحليل النسب المالية','Industry Average':'متوسط الصناعة','Marketable Securities':'الأوراق المالية القابلة للتداول','Fixed-Charge Coverage Ratio':'نسبة تغطية الأعباء الثابتة','Fixed Charges':'الأعباء الثابتة','Degree of Financial Leverage':'درجة الرافعة المالية','Financial Leverage Ratio':'نسبة الرافعة المالية','Window Dressing':'تجميل القوائم المالية','Additional Paid-in Capital':'علاوة الإصدار','Net Sales':'صافي المبيعات','Gross Profit':'مجمل الربح','Operating Income':'الدخل التشغيلي','Net Income':'صافي الدخل','Total Assets':'إجمالي الأصول','Current Assets':'الأصول المتداولة','Current Liabilities':'الالتزامات المتداولة','Prepaid Expenses':'المصروفات المدفوعة مقدماً','Operating Cash Flow':'التدفق النقدي التشغيلي','Credit Sales':'المبيعات الآجلة','Credit Purchases':'المشتريات الآجلة','Capital Structure':'هيكل رأس المال','Interest Expense':'مصروف الفوائد','Market Price':'سعر السوق','Payables Turnover':'معدل دوران الذمم الدائنة','Loan Covenant':'شرط عقد القرض','Historical Cost':'التكلفة التاريخية'
 };
 
 // ─── DICTIONARY DATA ──────────────────────────────────────────────────────────
@@ -716,8 +730,14 @@ function _buildTermIndex(){
 }
 function highlightTerms(text){
   if(!_termRx||_termCount!==Object.keys(TERM_DICT).length)_buildTermIndex();
+  // Tooltip only the FIRST occurrence of each term per text block — repeated
+  // dotted underlines on common terms (e.g. "net income") add visual noise
+  // without adding meaning. (BATCH 2026-09-23-02)
+  const seen=new Set();
   return esc(text).replace(_termRx,m=>{
-    const ar=_termMap.get(m.toLowerCase());
+    const key=m.toLowerCase();
+    if(seen.has(key))return m;seen.add(key);
+    const ar=_termMap.get(key);
     return ar?`<span class="ar-term" onclick="toggleTip(this)">${m}<span class="ar-tip">${ar}</span></span>`:m;
   });
 }
@@ -1171,6 +1191,8 @@ function renderBlock(block,sec){
     case's':return`<ol class="slist">${block.v.map((i,j)=>`<li><span class="snum" style="background:${bg};color:${st};border:1px solid ${tx}40">${j+1}</span><span>${highlightTerms(i)}</span></li>`).join('')}</ol>`;
     case'tbl':return`<div class="tbl-wrap"><table class="tbl"><thead><tr>${block.h.map(h=>`<th style="background:${bg};color:${st}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${block.r.map(row=>`<tr>${row.map(c=>`<td>${highlightTerms(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
     case'video':{const vid=block.v;const lbl=block.l?`<div class="formula-lbl" style="color:${tx};margin-bottom:8px">${esc(block.l)}</div>`:'';return`<div style="margin:14px 0">${lbl}<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;background:#000"><iframe src="https://www.youtube.com/embed/${vid}?rel=0&modestbranding=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allowfullscreen loading="lazy"></iframe></div></div>`;}
+    // BATCH 2026-09-23-02 (#15): formal-Arabic unit summary, right-to-left.
+    case'ar':{const items=Array.isArray(block.v)?block.v:[block.v];return`<div class="ar-sum" dir="rtl" lang="ar"><div class="ar-sum-lbl">📝 ${esc(block.l||'الملخص باللغة العربية')}</div><ul class="ar-sum-list">${items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`;}
     default:return'';
   }
 }
@@ -1226,7 +1248,9 @@ function _topicMatchesQuery(g,ql){
 function lessonTopicsHTML(lesson,sec,videoPlaceholder){
   const q=(STATE.lessonSearchQ||'').trim();
   const ql=q.toLowerCase();
-  const groups=groupLessonBlocks(lesson.blocks||[]);
+  const allBlocks=lesson.blocks||[];
+  const arBlocks=allBlocks.filter(b=>b.t==='ar');
+  const groups=groupLessonBlocks(allBlocks.filter(b=>b.t!=='ar'));
   let anyMatch=false;
   const topicsHtml=groups.map((g,gi)=>{
     const key=lesson.id+'::'+gi;
@@ -1246,7 +1270,8 @@ function lessonTopicsHTML(lesson,sec,videoPlaceholder){
   }).join('');
   const expandControls=(!q&&groups.length>1)?`<div style="display:flex;gap:8px;margin-bottom:10px"><button onclick="setAllLessonTopics('${lesson.id}',${groups.length},true)" style="flex:1;padding:8px;border-radius:8px;border:.5px solid ${sec.text}40;background:#fff;color:${sec.strong};font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Expand All</button><button onclick="setAllLessonTopics('${lesson.id}',${groups.length},false)" style="flex:1;padding:8px;border-radius:8px;border:.5px solid #d0d0d0;background:#fff;color:#555;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit">Collapse All</button></div>`:'';
   const noResults=(q&&!anyMatch)?`<div style="text-align:center;padding:24px 10px;color:#aaa;font-size:13px">No matches for "${esc(q)}" in this unit.</div>`:'';
-  return`${expandControls}${noResults}${topicsHtml}${videoPlaceholder}`;
+  const arHtml=(!q&&arBlocks.length)?arBlocks.map(b=>renderBlock(b,sec)).join(''):'';
+  return`${expandControls}${noResults}${topicsHtml}${arHtml}${videoPlaceholder}`;
 }
 // Wraps matched text in <mark> inside the rendered unit body. Reused by the
 // full render() path (via the effects block) and by the live-typing path
@@ -2451,8 +2476,9 @@ function renderQuizMode(){
     <div style="height:20px"></div>
   </div>`;}
 
-function renderFormulaBank(){
-  const groups=[
+// BATCH 2026-09-23-02 (#12): groups hoisted to module scope so the screen and
+// the printable sheet share one source of truth.
+const FORMULA_GROUPS=[
     {title:'📊 Section A — Accounting Cycle',items:[
       {l:'Accounting Equation',f:'Assets = Liabilities + Equity'},
       {l:'Net Income',f:'Revenues − Expenses = Net Income'},
@@ -2487,6 +2513,10 @@ function renderFormulaBank(){
       {l:'Gain/Loss on Disposal',f:'Gain or Loss = Proceeds − Book Value (Cost − Accum. Dep.)'},
       {l:'Issuing Stock Above Par',f:'Cash received = (Par Value × Shares) + Excess to APIC'},
     ]},
+    {title:'📋 Section B — Financial Statement Analysis',items:[
+      {l:'Common-Size (Vertical) %',f:'Line Item ÷ Base Amount × 100',n:'Base = net sales (income statement) or total assets (balance sheet).'},
+      {l:'Horizontal (Trend) % Change',f:'(Current Year − Base Year) ÷ Base Year × 100'},
+    ]},
     {title:'📋 Section B — Liquidity Ratios',items:[
       {l:'Current Ratio',f:'Current Assets ÷ Current Liabilities  [target ≥ 2:1]'},
       {l:'Quick (Acid-Test) Ratio',f:'(Cash + Marketable Securities + Net Receivables) ÷ Current Liabilities  [target ≥ 1:1]'},
@@ -2500,6 +2530,9 @@ function renderFormulaBank(){
       {l:'Long-Term Debt to Equity',f:'(Total Debt − Current Liabilities) ÷ Total Equity'},
       {l:'Debt to Total Assets',f:'Total Liabilities ÷ Total Assets'},
       {l:'Interest Coverage (Times Interest Earned)',f:'EBIT ÷ Interest Expense  [above 3.0 = excellent]'},
+      {l:'Fixed-Charge Coverage',f:'(EBIT + Fixed Charges) ÷ (Interest Expense + Fixed Charges)',n:'Fixed charges beyond interest, e.g. lease payments. Stricter than interest coverage.'},
+      {l:'Financial Leverage Ratio (Equity Multiplier)',f:'Total Assets ÷ Total Equity'},
+      {l:'Degree of Financial Leverage (DFL)',f:'EBIT ÷ (EBIT − Interest Expense)',n:'= % change in net income ÷ % change in EBIT'},
     ]},
     {title:'📋 Section B — Profitability Ratios',items:[
       {l:'Gross Profit Margin',f:'Gross Profit ÷ Net Sales'},
@@ -2508,6 +2541,10 @@ function renderFormulaBank(){
       {l:'Return on Equity (ROE)',f:'Net Income ÷ Average Stockholders\' Equity'},
       {l:'Earnings Per Share (EPS)',f:'(Net Income − Preferred Dividends) ÷ Weighted Avg Common Shares'},
       {l:'Operating Profit Margin',f:'Operating Income ÷ Net Sales'},
+      {l:'Return on Common Equity',f:'(Net Income − Preferred Dividends) ÷ Average Common Equity'},
+      {l:'Price-Earnings (P/E) Ratio',f:'Market Price per Share ÷ Earnings per Share'},
+      {l:'Dividend Payout Ratio',f:'Dividends per Common Share ÷ Earnings per Share'},
+      {l:'Dividend Yield',f:'Dividends per Share ÷ Market Price per Share'},
     ]},
     {title:'📋 Section B — Efficiency Ratios',items:[
       {l:'Receivables Turnover',f:'Net Annual Credit Sales ÷ Average Gross Accounts Receivable'},
@@ -2517,6 +2554,8 @@ function renderFormulaBank(){
       {l:'Asset Turnover',f:'Net Sales ÷ Average Total Assets'},
       {l:'Payables Turnover',f:'Annual Credit Purchases ÷ Average Accounts Payable'},
       {l:"Days' Payables",f:'365 ÷ Payables Turnover'},
+      {l:'Fixed Asset Turnover',f:'Net Sales ÷ Average Net PP&E'},
+      {l:'Credit Purchases',f:'COGS + Ending Inventory − Beginning Inventory',n:'When all purchases are on credit.'},
     ]},
     {title:'📈 Section C — Planning & Budgeting',items:[
       {l:'Production Budget',f:'Units to Produce = Budgeted Sales + Desired Ending FG Inventory − Beginning FG Inventory'},
@@ -2585,7 +2624,19 @@ function renderFormulaBank(){
       {l:'Residual Income (RI)',f:'Operating Income − (Required Rate of Return × Investment)'},
     ]},
   ];
-  return`${renderSubNav(SUB_REFERENCE,'formula-bank')}<div class="sh"><h2>Formula Bank</h2><p>All FMAA formulas in one place</p></div>
+// Printable formula sheet — same offline window.print() approach as the unit
+// PDFs. Two-column, compact layout so the full bank fits on a few pages.
+function printFormulaSheet(){
+  let area=document.getElementById('print-lesson-area');
+  if(!area){area=document.createElement('div');area.id='print-lesson-area';document.body.appendChild(area);}
+  const body=FORMULA_GROUPS.map(g=>`<div class="pfs-group"><div class="pfs-title">${esc(g.title)}</div>${g.items.map(f=>`<div class="pfs-item"><div class="pfs-l">${esc(f.l)}</div><div class="pfs-f">${esc(f.f)}</div>${f.n?`<div class="pfs-n">${esc(f.n)}</div>`:''}</div>`).join('')}</div>`).join('');
+  area.innerHTML=`<div class="print-hdr"><div class="print-hdr-sec">FMAA Prep by Gawad</div><h1 class="print-hdr-title">FMAA Formula Sheet</h1></div><div class="pfs-cols">${body}</div><div class="print-ftr">FMAA Prep by Gawad · Formula Sheet</div>`;
+  const prevTitle=document.title;document.title='FMAA - Formula Sheet';
+  setTimeout(()=>{window.print();setTimeout(()=>{document.title=prevTitle;},500);},50);
+}
+function renderFormulaBank(){
+  const groups=FORMULA_GROUPS;
+  return`${renderSubNav(SUB_REFERENCE,'formula-bank')}<div class="sh" style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px"><div><h2>Formula Bank</h2><p>All FMAA formulas in one place</p></div><button onclick="printFormulaSheet()" style="flex-shrink:0;padding:8px 12px;border-radius:9px;border:.5px solid #1A527640;background:#fff;color:#1A5276;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">⬇️ Print / PDF</button></div>
   <div class="scroll-area pad" style="padding-top:14px">
     ${groups.map(g=>`<div style="margin-bottom:18px"><div style="font-size:12px;font-weight:600;color:#888;letter-spacing:.5px;margin-bottom:8px">${g.title}</div>${g.items.map(f=>`<div class="formula-bank-item"><div class="formula-bank-label">${esc(f.l)}</div><div class="formula-bank-formula">${esc(f.f)}</div>${f.n?`<div class="formula-bank-note">${esc(f.n)}</div>`:''}</div>`).join('')}</div>`).join('')}
     <div style="height:20px"></div>
