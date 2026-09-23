@@ -1,1433 +1,1799 @@
 {
- "1-1": [
-  {
-   "t": "h",
-   "v": "The Role of Accounting"
-  },
-  {
-   "t": "p",
-   "v": "Accounting is the process of recording, summarizing, analyzing, and reporting financial transactions. It serves as the language of business — every investment decision, loan application, and tax filing depends on accurate accounting records."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "",
-    "Financial Accounting",
-    "Management Accounting"
-   ],
-   "r": [
-    [
-     "Users",
-     "External: investors, lenders, regulators",
-     "Internal: managers, decision-makers"
-    ],
-    [
-     "Rules",
-     "Must follow GAAP",
-     "No required format — whatever is useful"
-    ],
-    [
-     "Focus",
-     "Historical reporting",
-     "Future planning and control"
-    ],
-    [
-     "Output",
-     "Financial statements",
-     "Budgets, cost reports, performance analysis"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "For the FMAA exam: Financial accounting = external users + GAAP. Management accounting = internal users + no required format. Both are tested."
-  },
-  {
-   "t": "h",
-   "v": "Types of Business Enterprises"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Type",
-    "Key Characteristic",
-    "Tax Treatment"
-   ],
-   "r": [
-    [
-     "Sole Proprietorship",
-     "One owner, no legal separation from owner",
-     "Owner pays personal income tax on profits"
-    ],
-    [
-     "Partnership",
-     "Two or more owners, shared profits/losses",
-     "Pass-through to partners' personal returns"
-    ],
-    [
-     "Corporation",
-     "Legally separate entity, limited liability",
-     "Corporate tax on profits; dividends taxed again"
-    ],
-    [
-     "Private Company",
-     "Not publicly traded, shares held privately",
-     "Corporate structure without SEC disclosure requirements"
-    ],
-    [
-     "Public Company",
-     "Shares traded on stock exchanges",
-     "Subject to SEC reporting requirements"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Accounting Principles"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Accrual basis (required by GAAP): revenues recognized when earned, expenses recognized when incurred — regardless of cash timing",
-    "Cash basis: revenues and expenses recognized only when cash is received or paid — NOT GAAP",
-    "Matching principle: expenses recognized in the same period as the revenues they helped generate",
-    "Conservatism: recognize losses when probable; recognize gains only when realized",
-    "Consistency: use the same methods period to period to allow comparison"
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Accrual vs Cash Example",
-   "v": "A consulting firm completes a $10,000 project on Dec 28 and gets paid Jan 5.\n• Accrual basis: Revenue recognized Dec 28 (when earned) — reported in current year\n• Cash basis: Revenue recognized Jan 5 (when cash received) — reported in next year\nGAAP requires accrual basis for financial reporting."
-  },
-  {
-   "t": "h",
-   "v": "Key Accounting Terminology"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Term",
-    "Definition"
-   ],
-   "r": [
-    [
-     "Assets",
-     "Present rights to economic benefits — what the company owns (cash, AR, inventory, PP&E)"
-    ],
-    [
-     "Liabilities",
-     "Present obligations to transfer economic benefits — what the company owes (AP, loans, deferred revenue)"
-    ],
-    [
-     "Equity",
-     "Residual interest after deducting liabilities from assets: Assets − Liabilities = Equity"
-    ],
-    [
-     "Revenue",
-     "Inflows from delivering goods or services to customers"
-    ],
-    [
-     "Expenses",
-     "Outflows or using-up of assets in the process of generating revenue"
-    ],
-    [
-     "Gains",
-     "Increases in equity from peripheral transactions (e.g. sale of a fixed asset at a profit)"
-    ],
-    [
-     "Losses",
-     "Decreases in equity from peripheral transactions (e.g. sale of a fixed asset at a loss)"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Permanent vs Temporary Accounts"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Permanent accounts (balance sheet accounts — Assets, Liabilities, Equity): carry balances forward year to year, never reset to zero",
-    "Temporary accounts (income statement accounts — Revenue, Expense, Gains, Losses + Dividends): closed to Retained Earnings at year-end, start at zero each year",
-    "Retained earnings: accumulated net income since inception, minus all dividends ever paid"
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Contra accounts carry a balance opposite to their related account. Accumulated Depreciation is a contra-asset — it has a credit balance and reduces the asset's book value. Dividends is a contra-equity account — debit balance reduces Retained Earnings."
-  }
- ],
- "1-2": [
-  {
-   "t": "h",
-   "v": "Double-Entry Bookkeeping and the Accounting Equation"
-  },
-  {
-   "t": "p",
-   "v": "Every financial transaction affects at least two accounts, keeping the fundamental accounting equation in balance:"
-  },
-  {
-   "t": "f",
-   "l": "The Accounting Equation",
-   "v": "Assets = Liabilities + Equity"
-  },
-  {
-   "t": "p",
-   "v": "Double-entry means every transaction is recorded as both a debit and a credit, and debits must always equal credits. This maintains the equation's balance."
-  },
-  {
-   "t": "h",
-   "v": "How Debits and Credits Work"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Account Type",
-    "Normal Balance",
-    "Increased by",
-    "Decreased by"
-   ],
-   "r": [
-    [
-     "Assets",
-     "Debit",
-     "Debit",
-     "Credit"
-    ],
-    [
-     "Liabilities",
-     "Credit",
-     "Credit",
-     "Debit"
-    ],
-    [
-     "Equity",
-     "Credit",
-     "Credit",
-     "Debit"
-    ],
-    [
-     "Revenue/Gains",
-     "Credit",
-     "Credit",
-     "Debit"
-    ],
-    [
-     "Expenses/Losses",
-     "Debit",
-     "Debit",
-     "Credit"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Memory trick: DEALER — Dividends, Expenses, Assets are increased by Debits (Left side). Liabilities, Equity, and Revenue are increased by Credits (Right side)."
-  },
-  {
-   "t": "ex",
-   "l": "4 Basic Transaction Types",
-   "v": "1. Buy equipment for $10,000 cash: Dr Equipment $10,000 / Cr Cash $10,000 → both assets, no change in total assets\n2. Borrow $15,000 long-term: Dr Cash $15,000 / Cr Long-term Debt $15,000 → assets and liabilities both increase by $15,000\n3. Pay off $20,000 loan: Dr Accounts Payable $20,000 / Cr Cash $20,000 → assets and liabilities both decrease by $20,000\n4. Issue stock for $50,000 cash: Dr Cash $50,000 / Cr Common Stock + APIC $50,000 → assets and equity both increase by $50,000"
-  },
-  {
-   "t": "h",
-   "v": "Chart of Accounts and General Ledger"
-  },
-  {
-   "t": "p",
-   "v": "The chart of accounts is the master list of all ledger accounts, each assigned a number. Accounts are grouped by type: Assets (1xxxx), Liabilities (2xxxx), Equity (3xxxx), Revenue (4xxxx), Expenses (5xxxx). The general ledger holds ALL accounts with their running balances."
-  },
-  {
-   "t": "h",
-   "v": "The Accounting Cycle — 8 Steps"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Step 1: Identify and analyze financial events",
-    "Step 2: Journalize transactions in the General Journal",
-    "Step 3: Post journal entries to ledger accounts",
-    "Step 4: Prepare unadjusted trial balance",
-    "Step 5: Make adjusting entries",
-    "Step 6: Prepare adjusted trial balance",
-    "Step 7: Prepare financial statements",
-    "Step 8: Perform year-end close (then post-closing trial balance)"
-   ]
-  }
- ],
- "1-3": [
-  {
-   "t": "h",
-   "v": "T-Accounts and Journal Entries"
-  },
-  {
-   "t": "p",
-   "v": "A T-account is a simplified representation of a ledger account shaped like the letter T. Debits always go on the LEFT side, credits always go on the RIGHT side. This never changes regardless of account type."
-  },
-  {
-   "t": "h",
-   "v": "Journal Entry Format"
-  },
-  {
-   "t": "p",
-   "v": "Transactions are first recorded in the General Journal. The format is:\n1. Date of transaction\n2. Account(s) to be debited — written flush left with dollar amount in Debit column\n3. Account(s) to be credited — indented, with dollar amount in Credit column\n4. Brief explanation\nDebits are always listed before credits. Total debits must always equal total credits."
-  },
-  {
-   "t": "ex",
-   "l": "Simple vs Compound Journal Entry",
-   "v": "Simple (one debit, one credit):\nPay $5,000 salaries in cash:\n  Dr  Salaries & Wages Expense    5,000\n      Cr  Cash                        5,000\n\nCompound (multiple debits or credits):\nIssue 50,000 shares at $10/share ($1 par value) for cash:\n  Dr  Cash                        500,000\n      Cr  Common Stock ($1 par × 50,000)  50,000\n      Cr  Additional Paid-in Capital     450,000"
-  },
-  {
-   "t": "h",
-   "v": "Posting to Ledger Accounts (Step 3)"
-  },
-  {
-   "t": "p",
-   "v": "After journalizing, each debit and credit is transferred (posted) to the relevant ledger account. The running balance is updated after each posting, labeled Dr or Cr to indicate which side is larger. The reference column in the ledger links back to the journal page for audit purposes."
-  },
-  {
-   "t": "tip",
-   "v": "In the journal entry, credits are indented under debits — this is a visual reminder that 'debits are on the left.' Never indent debits; always indent credits."
-  }
- ],
- "1-4": [
-  {
-   "t": "h",
-   "v": "Greenworks Distribution Company — New Business Transactions"
-  },
-  {
-   "t": "p",
-   "v": "This unit follows Greenworks Distribution Company through its first transactions in May 20X1. Study these journal entries — they are the foundation for everything in Units 5–12."
-  },
-  {
-   "t": "ex",
-   "l": "Transaction 1: Issuing Common Stock",
-   "v": "May 1: Issue 50,000 shares at $10/share ($1 par value) for $500,000 cash.\n  Dr  Cash (asset ↑)                    500,000\n      Cr  Common Stock ($1 par × 50,000)    50,000\n      Cr  Additional Paid-in Capital        450,000\nNote: Common Stock is always credited at par value only. Everything above par goes to APIC."
-  },
-  {
-   "t": "ex",
-   "l": "Transaction 2: Buying Land and Building",
-   "v": "May 2: Purchase land ($100,000) and building ($200,000) for $300,000 cash.\n  Dr  Land (asset ↑)         100,000\n  Dr  Buildings (asset ↑)    200,000\n      Cr  Cash (asset ↓)         300,000\nNote: Two asset accounts increase, one decreases — total assets unchanged."
-  },
-  {
-   "t": "ex",
-   "l": "Transaction 3: Selling Land",
-   "v": "May 15: Sell 25% of the land for $25,000 cash (at cost — no gain/loss).\n  Dr  Cash (asset ↑)     25,000\n      Cr  Land (asset ↓)      25,000"
-  },
-  {
-   "t": "ex",
-   "l": "Transaction 4: Buying Furniture on Credit",
-   "v": "May 16: Purchase furniture and equipment for $55,000 on credit (due June 30).\n  Dr  Furniture & Equipment (asset ↑)     55,000\n      Cr  Accounts Payable (liability ↑)       55,000"
-  },
-  {
-   "t": "ex",
-   "l": "Transaction 5: Buying Inventory on Credit",
-   "v": "May 20: Purchase $50,000 inventory from Half's Wholesale on credit.\n  Dr  Inventory (asset ↑)           50,000\n      Cr  Accounts Payable (liability ↑)   50,000"
-  },
-  {
-   "t": "ex",
-   "l": "Transaction 6: Inventory Return",
-   "v": "May 25: Return $500 of defective inventory.\n  Dr  Accounts Payable (liability ↓)   500\n      Cr  Inventory (asset ↓)               500"
-  },
-  {
-   "t": "h",
-   "v": "Greenworks After May Transactions — Ledger Summary"
-  },
-  {
-   "t": "p",
-   "v": "Cash ledger after all May transactions: +$500,000 (stock) − $300,000 (land+bldg) + $25,000 (land sale) = $225,000 Dr balance. Inventory: $50,000 − $500 = $49,500. Accounts Payable: $55,000 + $50,000 − $500 = $104,500 Cr balance."
-  },
-  {
-   "t": "tip",
-   "v": "Greenworks uses a perpetual inventory system — the Inventory account is updated immediately every time goods are bought or sold. Under periodic inventory, the Inventory account is only updated at period-end."
-  }
- ],
- "1-5": [
-  {
-   "t": "h",
-   "v": "The Unadjusted Trial Balance (Accounting Cycle Step 4)"
-  },
-  {
-   "t": "p",
-   "v": "After all transactions are posted to the ledger, a trial balance is prepared to confirm that total debits equal total credits. 'Unadjusted' means adjusting entries (Step 5) have not yet been posted."
-  },
-  {
-   "t": "p",
-   "v": "If the trial balance doesn't balance, an error exists. Common errors: a transaction posted to only one account (omitted one side), wrong amount, or debiting instead of crediting. Equal totals confirm mathematical accuracy but NOT completeness — a transaction omitted entirely still leaves the trial balance balanced."
-  },
-  {
-   "t": "h",
-   "v": "Purpose and Limitations of the Trial Balance"
-  },
-  {
-   "t": "p",
-   "v": "The trial balance's only real purpose is to confirm that total debits equal total credits after posting. That's a mathematical check, not a completeness or correctness check — several categories of error leave the trial balance perfectly balanced."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Errors the Trial Balance WILL Catch",
-    "Errors the Trial Balance Will NOT Catch"
-   ],
-   "r": [
-    [
-     "A transaction posted with only one side entered (debit or credit omitted)",
-     "A transaction omitted entirely — both sides never recorded, so nothing is out of balance"
-    ],
-    [
-     "A debit and credit posted for different amounts",
-     "A transaction posted to the wrong account, but with equal debit and credit amounts (e.g., debiting Supplies instead of Equipment)"
-    ],
-    [
-     "A single-sided math error in a ledger account",
-     "Two offsetting errors that cancel each other out (e.g., overstating Cash by $500 and overstating Revenue by $500)"
-    ],
-    [
-     "",
-     "A transaction recorded twice, with equal debits and credits both times"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Exam pattern: if a question describes an error and asks 'would this be detected by the trial balance?' — check whether the error breaks the debit-credit EQUALITY. If both sides are still equal (wrong account, omitted entirely, duplicated, or offsetting), the trial balance will NOT catch it, no matter how serious the error is."
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Unadjusted Trial Balance (May 20, 20X1)",
-   "v": "Account                     Debits        Credits\nCash                        225,000\nInventory                    49,500\nLand                         75,000\nBuildings                   200,000\nFurniture & Equipment        55,000\nAccounts Payable                           104,500\nCommon Stock                                50,000\nAdditional Paid-in Capital                 450,000\n                          ─────────      ─────────\nTotals                      604,500        604,500  ✓"
-  },
-  {
-   "t": "tip",
-   "v": "Debits = Credits = $604,500. The accounting equation holds: Assets ($604,500) = Liabilities ($104,500) + Equity ($500,000). Verify this after every trial balance."
-  }
- ],
- "1-6": [
-  {
-   "t": "h",
-   "v": "Comprehensive Income — What Goes Where"
-  },
-  {
-   "t": "p",
-   "v": "Comprehensive income is the total change in equity during a period from non-owner transactions. It has two parts: Net income (reported on the income statement) and Other Comprehensive Income — OCI (reported directly in equity, bypassing the income statement)."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Reported on Income Statement (→ Net Income → Retained Earnings)",
-    "Reported in OCI (→ Accumulated OCI in Equity)"
-   ],
-   "r": [
-    [
-     "Sales revenue, service revenue",
-     "Unrealized gains/losses on certain investments"
-    ],
-    [
-     "Cost of goods sold",
-     "Foreign currency translation adjustments"
-    ],
-    [
-     "Operating expenses (salaries, rent, depreciation)",
-     "Pension liability adjustments"
-    ],
-    [
-     "Interest income, interest expense",
-     "Gains/losses on certain hedging instruments"
-    ],
-    [
-     "Gains/losses on sale of assets",
-     ""
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "The Complete Debits & Credits Table — All Account Types"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Account Type",
-    "Normal Balance",
-    "Debit Effect",
-    "Credit Effect"
-   ],
-   "r": [
-    [
-     "Asset accounts",
-     "Debit",
-     "Increase ↑",
-     "Decrease ↓"
-    ],
-    [
-     "Liability accounts",
-     "Credit",
-     "Decrease ↓",
-     "Increase ↑"
-    ],
-    [
-     "Equity accounts",
-     "Credit",
-     "Decrease ↓",
-     "Increase ↑"
-    ],
-    [
-     "Revenue or gain accounts",
-     "Credit",
-     "Decrease ↓",
-     "Increase ↑"
-    ],
-    [
-     "Expense or loss accounts",
-     "Debit",
-     "Increase ↑",
-     "Decrease ↓"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Revenues and gains INCREASE equity → recorded by credits (same as equity). Expenses and losses DECREASE equity → recorded by debits (opposite of equity). This logical connection removes the need to memorize — just understand the relationship to equity."
-  },
-  {
-   "t": "ex",
-   "l": "Revenue and Expense — Effect on Equity",
-   "v": "Record June 2 sale: $12,600 revenue, $4,800 COGS, $565 shipping expense.\n  Dr  Accounts Receivable    12,600   (asset ↑)\n  Dr  Cost of Goods Sold      4,800   (expense → equity ↓)\n  Dr  Shipping Expense          565   (expense → equity ↓)\n      Cr  Sales Revenue           12,600   (revenue → equity ↑)\n      Cr  Inventory                4,800   (asset ↓)\n      Cr  Cash                       565   (asset ↓)\nNet effect on equity: +$12,600 revenue − $4,800 COGS − $565 shipping = +$7,235"
-  }
- ],
- "1-7": [
-  {
-   "t": "h",
-   "v": "How Subsidiary Ledgers Work"
-  },
-  {
-   "t": "p",
-   "v": "When a control account in the general ledger contains transactions with many different parties (e.g. Accounts Payable with dozens of suppliers), a subsidiary ledger tracks each party separately. The control account balance always equals the sum of all subsidiary account balances."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Control Account",
-    "Subsidiary Ledger",
-    "What It Tracks"
-   ],
-   "r": [
-    [
-     "Accounts Receivable",
-     "Accounts Receivable ledger",
-     "Individual customer balances"
-    ],
-    [
-     "Accounts Payable",
-     "Accounts Payable ledger",
-     "Individual supplier balances"
-    ],
-    [
-     "Inventory",
-     "Inventory ledger",
-     "Individual inventory item balances"
-    ],
-    [
-     "Furniture & Equipment",
-     "Equipment ledger",
-     "Individual asset records with depreciation"
-    ]
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Subsidiary Ledger Reconciliation",
-   "v": "Greenworks has Accounts Payable of $104,500 in the general ledger.\nSubsidiary breakdown:\n  F & E Associates sub-ledger:      $55,000 Cr\n  Half's Wholesale sub-ledger:       $49,500 Cr\n  Total subsidiary ledger balances: $104,500 ✓ = Control account balance\n\nWhen customers A, B, and C pay $100, $200, $300 respectively:\n  Each sub-ledger AR account is credited individually: $100 + $200 + $300\n  Then the AR control account is credited for $600 total\n  Cash is debited $600 in the general ledger"
-  },
-  {
-   "t": "tip",
-   "v": "Subsidiary ledgers are kept in SEPARATE journals — not the general ledger. The control account in the general ledger is the 'total' that must match the sum of all subsidiary accounts. Any difference signals a posting error."
-  }
- ],
- "1-8": [
-  {
-   "t": "h",
-   "v": "Revenue and Expense Transactions — Greenworks Operating Period"
-  },
-  {
-   "t": "p",
-   "v": "Greenworks now begins operating (May–June 20X1). These transactions introduce income statement accounts — revenues and expenses — and show how each transaction affects both the income statement and balance sheet simultaneously."
-  },
-  {
-   "t": "ex",
-   "l": "Salaries Expense — May 31",
-   "v": "Pay $5,000 salaries for May:\n  Dr  Salaries & Wages Expense    5,000\n      Cr  Cash                        5,000\nEffect: Equity decreases (expense), Cash decreases. Income statement: $5,000 expense."
-  },
-  {
-   "t": "ex",
-   "l": "Credit Sale with COGS — June 2",
-   "v": "Sales of $12,600 on credit; inventory cost = $4,800; shipping = $565:\n  Dr  Accounts Receivable    12,600\n  Dr  Cost of Goods Sold      4,800\n  Dr  Shipping-out Expense      565\n      Cr  Sales Revenue           12,600\n      Cr  Inventory                4,800\n      Cr  Cash                       565\nGross profit on this sale: $12,600 − $4,800 = $7,800"
-  },
-  {
-   "t": "ex",
-   "l": "Utility Bill — June 9",
-   "v": "Receive electricity bill for $689, payable June 25:\n  Dr  Utilities Expense    689\n      Cr  Accounts Payable   689\nNote: Even though cash hasn't been paid, the expense is recognized when incurred (accrual basis, matching principle)."
-  },
-  {
-   "t": "ex",
-   "l": "Another Credit Sale — June 12",
-   "v": "Sales of $20,800 on credit; COGS = $7,900; shipping = $690:\n  Dr  Accounts Receivable    20,800\n  Dr  Cost of Goods Sold      7,900\n  Dr  Shipping-out Expense      690\n      Cr  Sales Revenue           20,800\n      Cr  Inventory                7,900\n      Cr  Cash                       690"
-  },
-  {
-   "t": "tip",
-   "v": "Perpetual inventory system: every sale triggers TWO sets of entries simultaneously — (1) the revenue/receivables entry, AND (2) the COGS/inventory entry. Under periodic inventory, COGS is only calculated at period-end."
-  }
- ],
- "1-9": [
-  {
-   "t": "h",
-   "v": "Other Transaction Types — Investing, Financing, Prepaid, Deferred, Dividends"
-  },
-  {
-   "t": "ex",
-   "l": "Investing: Money Market Account",
-   "v": "June 1: Transfer $100,000 excess cash to a money market deposit account (MMDA) at 5% annual interest:\n  Dr  Cash Equivalents    100,000\n      Cr  Cash               100,000\nThe MMDA is a cash equivalent — liquid, < 90-day maturity, minimal risk."
-  },
-  {
-   "t": "ex",
-   "l": "Financing: Equipment Loan",
-   "v": "June 1: Buy warehouse equipment $80,000. Pay 10% down ($8,000), finance $72,000 with 5-year loan at 6% annual interest:\n  Dr  Furniture & Equipment    80,000\n      Cr  Long-term Debt             72,000\n      Cr  Cash                        8,000\nTotal debit = $80,000 = sum of two credits ($72,000 + $8,000) ✓"
-  },
-  {
-   "t": "ex",
-   "l": "Prepaid Expense (Deferred Expense)",
-   "v": "June 1: Pay $24,000 insurance premium for one year (June 1 − May 31):\n  Dr  Prepaid Expense    24,000\n      Cr  Cash               24,000\nThe $24,000 is an ASSET — future benefit. Each month, $2,000 ($24,000 ÷ 12) becomes insurance expense (adjusting entry)."
-  },
-  {
-   "t": "ex",
-   "l": "Deferred Revenue (Unearned Revenue)",
-   "v": "June 10: Receive $5,000 deposit from Pyramid Products for a special order (total price $10,000):\n  Dr  Cash              5,000\n      Cr  Deferred Revenue  5,000\nDeferred Revenue is a LIABILITY — the company owes goods/services. Revenue is recognized only when the obligation is fulfilled (goods delivered)."
-  },
-  {
-   "t": "ex",
-   "l": "Dividend Declaration",
-   "v": "June 30: Declare $0.25/share dividend. 50,000 shares outstanding = $12,500 total:\n  Dr  Dividends (contra-equity)    12,500\n      Cr  Dividends Payable             12,500\nDividends are NOT an expense — they reduce equity directly. Dividends Payable is a current liability until paid."
-  },
-  {
-   "t": "tip",
-   "v": "Prepaid expenses start as assets (benefit not yet used) → become expenses over time. Deferred revenue starts as a liability (obligation not yet fulfilled) → becomes revenue over time. Both require adjusting entries."
-  }
- ],
- "1-10": [
-  {
-   "t": "h",
-   "v": "Adjusting Entries — Why They Are Needed"
-  },
-  {
-   "t": "p",
-   "v": "To prepare accurate financial statements, a precise cutoff of transactions at the end of the accounting period is necessary. Some transactions begin in one period and complete in another. Adjusting entries update accounts so that revenues are recognized when earned and expenses recognized when incurred — regardless of when cash changes hands. This is the accrual basis of accounting."
-  },
-  {
-   "t": "h",
-   "v": "The 6 Types of Adjusting Entries"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Type",
-    "What Happened",
-    "Adjusting Entry Needed",
-    "Balance Sheet Effect"
-   ],
-   "r": [
-    [
-     "Depreciation",
-     "Fixed asset used up over time",
-     "Dr Depreciation Expense / Cr Accumulated Depreciation",
-     "Reduces book value of asset"
-    ],
-    [
-     "Deferred Revenue (Contract Liability)",
-     "Cash received before service performed",
-     "Dr Contract Liabilities / Cr Revenue",
-     "Reduces liability; increases equity"
-    ],
-    [
-     "Accrued Expense",
-     "Expense incurred, not yet paid or recorded",
-     "Dr Expense / Cr Liability (Payable)",
-     "Creates new liability"
-    ],
-    [
-     "Deferred Expense (Prepaid)",
-     "Cash paid before benefit received",
-     "Dr Expense / Cr Prepaid Expense",
-     "Reduces asset"
-    ],
-    [
-     "Accrued Revenue (Contract Asset)",
-     "Revenue earned, cash not yet received",
-     "Dr Receivable (Contract Asset) / Cr Revenue",
-     "Creates new asset"
-    ],
-    [
-     "Asset Valuation Adjustment",
-     "Asset value changes (e.g. allowance for bad debts)",
-     "Dr Bad Debt Expense / Cr Allowance for Doubtful Accounts",
-     "Reduces net asset value"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "The exam tests which type of adjusting entry applies to a given scenario. Key distinction: DEFERRED items involve cash FIRST, recognition LATER. ACCRUED items involve recognition FIRST, cash LATER. Depreciation and asset valuation adjustments do not involve cash at all."
-  },
-  {
-   "t": "ex",
-   "l": "Adjusting Entry Examples — All 4 Common Types",
-   "v": "1. DEPRECIATION\n   Equipment cost $60,000, useful life 5 years, no salvage value.\n   Annual depreciation = $60,000 ÷ 5 = $12,000\n   Dr Depreciation Expense      12,000\n   Cr Accumulated Depreciation              12,000\n\n2. DEFERRED REVENUE (earned during period)\n   Received $3,600 advance for 12 months of service.\n   At month-end, 1 month has been earned: $3,600 ÷ 12 = $300\n   Dr Contract Liabilities      300\n   Cr Service Revenue                  300\n\n3. ACCRUED EXPENSE (incurred, not yet paid)\n   Salaries of $5,000 earned by employees but not yet paid at period end.\n   Dr Salaries Expense          5,000\n   Cr Salaries Payable                 5,000\n\n4. DEFERRED EXPENSE (prepaid, partially used)\n   Paid $1,200 for 12 months of insurance on Jan 1.\n   At June 30, 6 months used: $1,200 × 6/12 = $600\n   Dr Insurance Expense         600\n   Cr Prepaid Insurance                600"
-  }
- ],
- "1-11": [
-  {
-   "t": "h",
-   "v": "Adjusting Entries Example — Greenworks June 30, 20X1"
-  },
-  {
-   "t": "ex",
-   "l": "Depreciation Adjusting Entry",
-   "v": "June 30: Depreciation = $427 on building + $833 on original F&E + $833 on warehouse equipment = $2,093 total.\n  Dr  Depreciation Expense              2,093\n      Cr  Accum. Depreciation-Buildings      427\n      Cr  Accum. Depreciation-F&E          1,666\nBook value after: Building $200,000 − $427 = $199,573; F&E $135,000 − $1,666 = $133,334"
-  },
-  {
-   "t": "ex",
-   "l": "Inventory Adjustment",
-   "v": "June 30: Physical count shows inventory = $7,100 (book says $7,255 — difference of $155 shrinkage):\n  Dr  Cost of Goods Sold    155\n      Cr  Inventory              155"
-  },
-  {
-   "t": "ex",
-   "l": "Prepaid Insurance Adjustment",
-   "v": "June 30: $24,000 policy for 12 months. One month used (June): $24,000 ÷ 12 = $2,000/month.\n  Dr  Insurance Expense    2,000\n      Cr  Prepaid Expense       2,000\nRemaining Prepaid balance: $24,000 − $2,000 = $22,000 (11 months still an asset)"
-  },
-  {
-   "t": "ex",
-   "l": "Accrued Utility Expense",
-   "v": "June 30: Electricity used June 10–30 estimated at $465 (bill arrives in July):\n  Dr  Utilities Expense    465\n      Cr  Accounts Payable   465"
-  },
-  {
-   "t": "ex",
-   "l": "Accrued Income Tax",
-   "v": "June 30: Income tax for the fiscal year estimated at $11,415:\n  Dr  Income Tax Expense      11,415\n      Cr  Income Taxes Payable   11,415"
-  },
-  {
-   "t": "h",
-   "v": "Greenworks Adjusted Trial Balance — June 30, 20X1"
-  },
-  {
-   "t": "p",
-   "v": "After all adjusting entries, totals: Debits = Credits = $759,833.96. Net income = Revenues ($121,560.96) − Expenses ($78,617.07) = $42,943.89. Balance Sheet: Total Assets = $666,623.89 | Total Liabilities = $136,180 | Total Equity = $530,443.89"
-  },
-  {
-   "t": "tip",
-   "v": "The adjusted trial balance is the source for preparing the financial statements. Income statement accounts go to the income statement; balance sheet accounts go to the balance sheet. Retained Earnings on the balance sheet = prior RE ($0 new company) + Net Income ($42,943.89) − Dividends ($12,500) = $30,443.89."
-  }
- ],
- "1-12": [
-  {
-   "t": "h",
-   "v": "Year-End Close (Accounting Cycle Step 8)"
-  },
-  {
-   "t": "p",
-   "v": "Closing entries reset all temporary accounts (revenue, expense, gains, losses, dividends) to zero at year-end. The balances are transferred to Retained Earnings so income statement accounts start fresh next year. Balance sheet accounts (permanent) are NEVER closed."
-  },
-  {
-   "t": "h",
-   "v": "The 2-Step Closing Process"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Step 1: Close ALL income statement accounts to Income Summary\n   - Credit-balance accounts (revenues/gains) are DEBITED to zero\n   - Debit-balance accounts (expenses/losses) are CREDITED to zero\n   - The resulting Income Summary balance = Net Income",
-    "Step 2: Close Income Summary and Dividends to Retained Earnings\n   - Dr Income Summary (if net income) / Cr Retained Earnings\n   - Dr Retained Earnings / Cr Dividends (closes Dividends account)"
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Closing Entry 1 — Close Revenue Accounts",
-   "v": "June 30 — Close credit-balance income statement accounts to Income Summary:\n  Dr  Sales Revenue          121,150.00\n  Dr  Interest Revenue           410.96\n      Cr  Income Summary          121,560.96\n(All revenue accounts zeroed out; Income Summary now has $121,560.96 Cr balance)"
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Closing Entry 2 — Close Expense Accounts",
-   "v": "June 30 — Close debit-balance income statement accounts:\n  Dr  Income Summary              78,617.07\n      Cr  Cost of Goods Sold           46,400.00\n      Cr  Shipping-out Expense          3,800.00\n      Cr  Salaries & Wages Expense     10,000.00\n      Cr  Utilities Expense             1,154.00\n      Cr  Advertising Expenses          1,400.00\n      Cr  Insurance Expense             2,000.00\n      Cr  Depreciation Expense          2,093.00\n      Cr  Interest Expense               355.07\n      Cr  Income Tax Expense           11,415.00\n(Income Summary balance = $121,560.96 − $78,617.07 = $42,943.89 Cr = Net Income ✓)"
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Closing Entry 3 — Close Income Summary to RE",
-   "v": "Dr  Income Summary    42,943.89\n    Cr  Retained Earnings  42,943.89"
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Closing Entry 4 — Close Dividends to RE",
-   "v": "Dr  Retained Earnings    12,500.00\n    Cr  Dividends             12,500.00\nFinal Retained Earnings: $0 (beginning) + $42,943.89 (NI) − $12,500 (dividends) = $30,443.89"
-  },
-  {
-   "t": "tip",
-   "v": "After closing: all revenue, expense, and dividend accounts = $0. The post-closing trial balance lists only permanent (balance sheet) accounts. Verify: Retained Earnings = $30,443.89 ✓"
-  }
- ],
- "1-13": [
-  {
-   "t": "h",
-   "v": "Review of the 8-Step Accounting Cycle"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Step 1: IDENTIFY and analyze financial events (source documents)",
-    "Step 2: JOURNALIZE in the General Journal (debit = credit always)",
-    "Step 3: POST to ledger accounts (update running balances)",
-    "Step 4: UNADJUSTED trial balance (check Dr = Cr before adjustments)",
-    "Step 5: ADJUSTING entries (match revenues/expenses to period)",
-    "Step 6: ADJUSTED trial balance (after adjustments, Dr = Cr again)",
-    "Step 7: FINANCIAL STATEMENTS (income statement → statement of equity → balance sheet → SCF)",
-    "Step 8: YEAR-END CLOSE (reset temporary accounts; post-closing trial balance)"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Reversing Entries — The Optional Step 9"
-  },
-  {
-   "t": "p",
-   "v": "Reversing entries are optional entries made at the START of the next accounting period (e.g. July 1) to reverse certain accruals. They prevent double-counting when the actual invoice arrives later."
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Reversing Entry Example",
-   "v": "June 30: Accrued utility expense $465 (Dr Utilities Expense / Cr AP)\nJuly 1 reversing entry: Dr Accounts Payable $465 / Cr Utilities Expense $465\nNow when the full $750 July bill arrives:\n  Dr  Utilities Expense    750  |  Cr  Cash    750\nNet result: July utilities expense = $750 − $465 reversed = $285 (the July portion only) ✓\nWithout the reversing entry, you would need to split the $750 bill between the two periods manually."
-  },
-  {
-   "t": "tip",
-   "v": "Only accruals that will be fully reversed when the actual cash transaction occurs need reversing entries. Depreciation and prepaid expense adjustments do NOT need reversing entries."
-  }
- ],
- "1-14": [
-  {
-   "t": "h",
-   "v": "The 4 Financial Statements — Structure and Content"
-  },
-  {
-   "t": "p",
-   "v": "Under U.S. GAAP, a full set of financial statements consists of 4 statements plus footnotes. They are prepared in this order: (1) Income Statement → (2) Statement of Changes in Stockholders' Equity → (3) Balance Sheet → (4) Statement of Cash Flows."
-  },
-  {
-   "t": "h",
-   "v": "Users of Financial Statements"
-  },
-  {
-   "t": "p",
-   "v": "Financial statements are prepared for two broad user groups, and this distinction is the same one tested in Study Unit 1 (financial vs. management accounting) — here applied specifically to who reads the 4 statements."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "User Group",
-    "Who",
-    "What They Use the Statements For"
-   ],
-   "r": [
-    [
-     "External users",
-     "Investors/shareholders",
-     "Deciding whether to buy, hold, or sell stock"
-    ],
-    [
-     "",
-     "Lenders and creditors",
-     "Assessing creditworthiness before extending a loan or credit terms"
-    ],
-    [
-     "",
-     "Regulators (e.g., SEC)",
-     "Confirming compliance with reporting and disclosure requirements"
-    ],
-    [
-     "",
-     "Tax authorities",
-     "Verifying reported income for tax purposes"
-    ],
-    [
-     "",
-     "Suppliers and customers",
-     "Evaluating the company's ability to honor long-term contracts"
-    ],
-    [
-     "Internal users",
-     "Management",
-     "Planning, controlling operations, and making resource-allocation decisions"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Exam distinction: external users generally receive only the audited, GAAP-based statements plus footnotes — they don't have access to internal management accounting reports (budgets, cost analyses). Internal users (management) have full access to both."
-  },
-  {
-   "t": "h",
-   "v": "1) The Balance Sheet"
-  },
-  {
-   "t": "p",
-   "v": "Reports assets, liabilities, and equity at a SPECIFIC DATE (a snapshot — like a photograph). Classified balance sheet separates current from non-current:"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Current assets (converted to cash within 1 year): Cash, Cash Equivalents, Accounts Receivable (net), Inventory, Prepaid Expenses",
-    "Non-current assets: Land (never depreciated), Buildings, Equipment (net of accumulated depreciation), Intangibles",
-    "Current liabilities (due within 1 year): Accounts Payable, Current Portion of Long-Term Debt, Deferred Revenue (current), Accrued Liabilities",
-    "Non-current liabilities: Long-term Debt (non-current portion)",
-    "Stockholders' equity: Common Stock (par), APIC, Retained Earnings, AOCI, Treasury Stock"
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Greenworks Balance Sheet Summary (June 30, 20X1)",
-   "v": "ASSETS\nCurrent: Cash+CE $150,517 | AR $79,100 | Inventory $7,100 | Prepaid $22,000 = $258,717\nNon-current: Land $75,000 | Buildings (net) $199,573 | F&E (net) $133,334 = $407,907\nTotal Assets = $666,624\n\nLIABILITIES\nCurrent: AP $53,965 | Taxes Payable $11,415 | Current LTD $14,400 = $79,780\nNon-current: Long-term Debt $56,400\nTotal Liabilities = $136,180\n(Note: the June 1 equipment loan was $72,000; the first month's scheduled principal payment of $1,200 was made on June 30, reducing the loan balance to $70,800 — split $14,400 current / $56,400 non-current above.)\n\nEQUITY\nCommon Stock $50,000 | APIC $450,000 | Retained Earnings $30,444\nTotal Equity = $530,444\nTotal L+E = $666,624 ✓"
-  },
-  {
-   "t": "h",
-   "v": "2) The Income Statement (Multi-Step Format)"
-  },
-  {
-   "t": "p",
-   "v": "Reports revenues, expenses, and net income for a PERIOD OF TIME (a movie — not a snapshot). Multi-step format:"
-  },
-  {
-   "t": "f",
-   "l": "Multi-Step Income Statement Structure",
-   "v": "Net Sales Revenue\n− Cost of Goods Sold\n= Gross Profit\n− Selling, General & Administrative Expenses\n= Operating Income\n+ Non-operating income (interest, dividends earned)\n− Non-operating expenses (interest expense)\n+/− Non-operating gains/losses\n= Income Before Income Tax\n− Income Tax Expense\n= Net Income"
-  },
-  {
-   "t": "h",
-   "v": "6 Components of Stockholders' Equity"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Capital Stock (par value of shares issued)",
-    "Additional Paid-in Capital (proceeds above par)",
-    "Retained Earnings (cumulative net income minus dividends)",
-    "Accumulated Other Comprehensive Income (unrealized gains/losses in OCI)",
-    "Non-controlling Interest (subsidiary ownership not held by parent)",
-    "Treasury Stock (repurchased shares — reduces equity, shown as negative)"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Limitations of Financial Statements"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Assets recorded at historical cost — not current market value",
-    "Human resources, brand value, internally developed intangibles not on balance sheet",
-    "Judgments and estimates used (useful life, allowances) create subjectivity",
-    "Financial statements are backward-looking (historical)",
-    "Not all relevant information can be captured in numbers"
-   ]
-  }
- ],
- "1-15": [
-  {
-   "t": "h",
-   "v": "Statement of Cash Flows (SCF)"
-  },
-  {
-   "t": "p",
-   "v": "The SCF reconciles net income (accrual basis) to actual cash movement. It is required for ALL companies that present a balance sheet and income statement. Cash includes: cash on hand, demand deposits, cash equivalents, restricted cash, and restricted cash equivalents."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Section",
-    "What It Shows",
-    "Key Items"
-   ],
-   "r": [
-    [
-     "Operating Activities",
-     "Cash from core business operations — collecting from customers, paying suppliers, employees, and overhead",
-     "Collections from customers, payments to suppliers, salaries paid, interest paid, taxes paid"
-    ],
-    [
-     "Investing Activities",
-     "Cash from buying/selling long-term assets and investments",
-     "Purchase/sale of PP&E, purchase/sale of investments, loans made"
-    ],
-    [
-     "Financing Activities",
-     "Cash from equity and debt financing",
-     "Issuance/repurchase of stock, borrowings/repayments of debt, dividends paid"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Indirect Method — Operating Activities"
-  },
-  {
-   "t": "p",
-   "v": "Start with net income and adjust for: (1) non-cash items, (2) investing/financing items in net income, (3) changes in working capital accounts. This is the method tested on the FMAA exam."
-  },
-  {
-   "t": "f",
-   "l": "Indirect Method Format",
-   "v": "Net income\n+ Depreciation and amortization (add back — non-cash)\n+ Losses on asset sales (add back)\n− Gains on asset sales (subtract)\n− Increase in Accounts Receivable (or + decrease)\n− Increase in Inventory (or + decrease)\n+ Increase in Accounts Payable (or − decrease)\n= Net Cash from Operating Activities"
-  },
-  {
-   "t": "ex",
-   "l": "SCF Indirect Method — Working Capital Rules",
-   "v": "AR increases → customers bought more on credit → LESS cash collected than revenue → SUBTRACT from NI\nAR decreases → old receivables collected → MORE cash than revenue → ADD to NI\nInventory increases → cash paid for inventory not yet sold → SUBTRACT from NI\nAP increases → bought goods on credit, didn't pay cash → ADD to NI\nAP decreases → paid off more than purchased → SUBTRACT from NI"
-  },
-  {
-   "t": "h",
-   "v": "Direct Method — Cash from Customers"
-  },
-  {
-   "t": "f",
-   "l": "Cash Collected from Customers",
-   "v": "Sales Revenue + Beginning AR − Ending AR = Cash Collected"
-  },
-  {
-   "t": "ex",
-   "l": "Direct Method Example",
-   "v": "Sales revenue $1,500,000; Beginning AR $100,000; Ending AR $125,000:\nCash collected = $1,500,000 + $100,000 − $125,000 = $1,475,000\n(AR increased by $25,000 → $25,000 of revenue not yet collected in cash)"
-  },
-  {
-   "t": "tip",
-   "v": "The FMAA exam requires the indirect method for operating activities. For investing and financing activities, the method is the same regardless — list actual cash flows for each transaction."
-  }
- ],
- "1-16": [
-  {
-   "t": "h",
-   "v": "What Is Internal Control? — The COSO Definition"
-  },
-  {
-   "t": "p",
-   "v": "According to the COSO framework (Internal Control — Integrated Framework), internal control is a process, effected by an entity's board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to three categories: Operations, Reporting, and Compliance."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Objective Category",
-    "What It Means",
-    "Example"
-   ],
-   "r": [
-    [
-     "Operations",
-     "Effectiveness and efficiency of operations; safeguarding of assets against loss",
-     "Production efficiency targets; inventory protection"
-    ],
-    [
-     "Reporting",
-     "Reliability, timeliness, and transparency of financial and non-financial reporting",
-     "Accurate financial statements; timely disclosures"
-    ],
-    [
-     "Compliance",
-     "Adherence to all applicable laws and regulations",
-     "Tax compliance; environmental regulations; SEC reporting"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "5 Fundamental Concepts of Internal Control"
-  },
-  {
-   "t": "b",
-   "v": [
-    "1. Achieves objectives: The purpose is to help the company achieve its objectives in the three categories above.",
-    "2. Ongoing process: Internal control is not a one-time event — it is a journey, a continuous set of tasks and activities, a means to an end.",
-    "3. Effected by people: Internal control is carried out by people at every level — board, management, and staff. Policies written in a manual are not enough; people must implement them.",
-    "4. Reasonable assurance only — NOT absolute assurance: The cost of a control should not exceed its expected benefit. Human error, collusion, and management override mean no control system can guarantee objectives will be met.",
-    "5. Flexible: Internal control must be adaptable to the entity's entire structure or to a specific subsidiary, division, or process."
-   ]
-  },
-  {
-   "t": "h",
-   "v": "COSO Framework — 5 Components of Internal Control"
-  },
-  {
-   "t": "b",
-   "v": [
-    "1. Control Environment: The tone at the top — management's integrity, ethical values, and commitment to competence. The foundation on which all other components rest. Includes the board of directors, organizational structure, and assignment of authority.",
-    "2. Risk Assessment: Identifying and analyzing risks that could prevent the company from achieving its objectives. Includes setting objectives first, then identifying risks related to those objectives, and managing change risk.",
-    "3. Control Activities: The specific policies and procedures that address risks. Examples: segregation of duties, authorizations and approvals, physical controls, reconciliations, information processing controls.",
-    "4. Information & Communication: Systems that capture and communicate relevant, reliable information in a timely manner to those who need it — both internal reporting and external communication to stakeholders.",
-    "5. Monitoring: Ongoing and periodic evaluation of whether the internal control system is functioning effectively. Includes management supervision, internal audits, and separate evaluations."
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "The FMAA exam tests the COSO components by name. Know all five: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring. The Control Environment is always the FOUNDATION — it comes first because all other components are built on it."
-  },
-  {
-   "t": "h",
-   "v": "Internal Control Risk"
-  },
-  {
-   "t": "p",
-   "v": "Internal control risk is the risk that the design or operation of an entity's internal control system will NOT prevent or detect a threat to achieving objectives. Controls can fail because of: (1) human error or faulty judgment, (2) collusion between two or more employees working together to circumvent controls, (3) management override of established controls, (4) controls becoming outdated due to lack of monitoring. Internal control can provide only reasonable assurance — never a guarantee."
-  },
-  {
-   "t": "h",
-   "v": "Segregation of Duties — The Most Critical Control"
-  },
-  {
-   "t": "p",
-   "v": "No single person should have complete control over any transaction from beginning to end. The four functions that must be performed by DIFFERENT people: (1) Authorization, (2) Recordkeeping, (3) Physical Custody, (4) Periodic Reconciliation."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Function",
-    "Who Does It",
-    "Example"
-   ],
-   "r": [
-    [
-     "Authorization",
-     "Manager/Supervisor",
-     "Purchasing manager approves purchase orders"
-    ],
-    [
-     "Recordkeeping",
-     "Accounting Department",
-     "Records transactions in journals and ledgers"
-    ],
-    [
-     "Physical Custody",
-     "Warehouse/Cashier",
-     "Controls physical access to inventory or cash"
-    ],
-    [
-     "Reconciliation",
-     "Independent personnel",
-     "Compares physical count to book records"
-    ]
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Why Segregation Matters — Inventory Example",
-   "v": "If the same person has both recordkeeping (#2) AND physical custody (#3) of inventory:\n→ They could steal inventory AND falsify the records to hide the theft.\n→ No independent check exists to detect the discrepancy.\n\nCorrect structure:\n  Recordkeeper counts what the records say should be there.\n  Custodian controls what is actually there.\n  Reconciler compares the two amounts independently.\n\nNote: Collusion — when two or more people work together — can defeat any segregation of duties. This is why collusion risk is a fundamental limitation of internal control."
-  },
-  {
-   "t": "h",
-   "v": "Safeguarding Assets"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Physical controls: Equipment, inventory, securities, and cash are secured in locked or guarded areas. Access is restricted to authorized personnel. Periodic physical counts are compared to records.",
-    "Software controls (Logical security): All data and programs must be protected from unauthorized access. Authentication methods: Something you KNOW (passwords), Something you ARE (biometrics — fingerprints, retina), Something you HAVE (security fob). Two-factor authentication requires two independent methods simultaneously.",
-    "Other access controls: Automatic logoff after inactivity; logging of all login attempts; accounts that automatically expire after a limited time period."
-   ]
-  },
-  {
-   "t": "h",
-   "v": "What Internal Control Can and Cannot Do"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Internal Control CAN",
-    "Internal Control CANNOT"
-   ],
-   "r": [
-    [
-     "Help the company achieve its performance and profitability goals",
-     "Guarantee objectives will be achieved"
-    ],
-    [
-     "Prevent loss of resources",
-     "Prevent all fraud — human error and collusion remain possible"
-    ],
-    [
-     "Help ensure reliable financial reporting",
-     "Override management — management can and does override controls"
-    ],
-    [
-     "Help ensure compliance with laws and regulations",
-     "Eliminate all risk — it can only provide reasonable assurance"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "Key exam phrase: Internal control provides REASONABLE ASSURANCE — not absolute assurance and not a guarantee. The cost-benefit principle applies: the cost of a control should not exceed the expected benefit. Some risk is simply accepted because the cost of controlling it exceeds the potential loss."
-  }
- ],
- "1-17": [
-  {
-   "t": "h",
-   "v": "Managing a Company's Daily Finances — Working Capital"
-  },
-  {
-   "t": "f",
-   "l": "Net Working Capital",
-   "v": "Current Assets − Current Liabilities"
-  },
-  {
-   "t": "p",
-   "v": "Working capital management balances two competing goals: (1) Have enough current assets to pay liabilities on time, and (2) Don't tie up too much money in current assets that earn little return."
-  },
-  {
-   "t": "h",
-   "v": "Operating Cycle and Cash Conversion Cycle"
-  },
-  {
-   "t": "f",
-   "l": "Operating Cycle",
-   "v": "Days' Sales in Receivables (DSR) + Days' Sales in Inventory (DSI)"
-  },
-  {
-   "t": "f",
-   "l": "Cash Conversion Cycle (Cash Cycle)",
-   "v": "Operating Cycle − Days' Purchases in Accounts Payable"
-  },
-  {
-   "t": "ex",
-   "l": "Operating & Cash Cycle Calculation",
-   "v": "A company has: DSI = 120 days (inventory age), DSR = 40 days (AR collection), Days AP = 100 days.\n\nOperating Cycle = 40 + 120 = 160 days\nCash Cycle = 160 − 100 = 60 days\n\nInterpretation: The company invests cash in inventory 120 days before sale, collects 40 more days after sale (160 days total) but delays paying suppliers 100 days → net cash tied up for only 60 days."
-  },
-  {
-   "t": "tip",
-   "v": "Negative cash cycle = FAVORABLE. It means the company collects cash from customers BEFORE it has to pay its suppliers. Many large retailers achieve this. The shorter the cash cycle, the less working capital financing needed."
-  },
-  {
-   "t": "h",
-   "v": "Trade Credit Terms — 2/10 Net 30"
-  },
-  {
-   "t": "p",
-   "v": "Terms '2/10 net 30' mean: take a 2% discount if you pay within 10 days; otherwise the full amount is due in 30 days. The effective annual interest rate of NOT taking the discount is high — usually far exceeding bank lending rates — so it is almost always beneficial to take available discounts."
-  }
- ],
- "1-18": [
-  {
-   "t": "h",
-   "v": "Why Companies Hold Cash"
-  },
-  {
-   "t": "p",
-   "v": "Companies hold cash for three reasons: (1) as a medium of exchange for transactions, (2) as a precautionary reserve for unexpected needs, and (3) for speculation on investment opportunities."
-  },
-  {
-   "t": "h",
-   "v": "Cash Flow Forecast Format"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Starting cash balance",
-    "+ Collections from customers",
-    "+ Other cash receipts",
-    "= Total cash available",
-    "− Payments to suppliers (AP disbursements)",
-    "− Payroll",
-    "− Manufacturing overhead payments",
-    "− Other disbursements",
-    "= Cash excess (deficit) before financing",
-    "± Borrowings/repayments",
-    "= Ending cash balance"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Collecting Cash Faster — Inflow Management"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Invoice promptly — mail or transmit invoices immediately when goods are delivered",
-    "Offer early payment discounts (2/10 net 30) to incentivize faster payment",
-    "Use Electronic Data Interchange (EDI) and Electronic Funds Transfer (EFT) to eliminate check-clearing delays",
-    "Accept credit cards — merchant pays 1–3% fee but gets cash the next day",
-    "Lockbox banking — customers mail payments directly to a bank PO box; bank processes same day"
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Slowing Cash Outflows — Disbursement Management"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Pay exactly on the due date — don't pay early unless discounts justify it",
-    "Use EFT to control the exact date funds leave the account",
-    "Pay by credit card if vendor accepts it without fee and grace period is available",
-    "Never miss a discount period — the implicit interest cost of missing a discount is very high"
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Trade Discount Example — 2/10 net 30",
-   "v": "Invoice: $10,000. Terms: 2/10 net 30.\nIf you pay within 10 days: Pay $9,800 (save $200)\nIf you wait 30 days: Pay $10,000 (lose $200 for 20 extra days)\nEffective annual rate of not taking discount ≈ 37% — almost always worth paying early."
-  }
- ],
- "1-19": [
-  {
-   "t": "h",
-   "v": "Accounts Receivable & Payable Management"
-  },
-  {
-   "t": "p",
-   "v": "Credit policy has 3 elements: (1) Credit standards — who qualifies for credit; (2) Credit terms — how long and what discounts; (3) Collection efforts — how aggressively to pursue overdue accounts. Relaxing credit standards increases sales but also increases credit losses — always a trade-off."
-  },
-  {
-   "t": "h",
-   "v": "Factoring Receivables"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "",
-    "Without Recourse",
-    "With Recourse"
-   ],
-   "r": [
-    [
-     "Risk of uncollected AR",
-     "Transferred to factor — seller has NO liability",
-     "Stays with seller — must reimburse factor for bad debts"
-    ],
-    [
-     "Cost",
-     "Higher fee/interest — factor bears more risk",
-     "Lower fee/interest — seller bears credit risk"
-    ],
-    [
-     "Off balance sheet?",
-     "Yes — AR is sold",
-     "No — treated as a secured borrowing"
-    ]
-   ]
-  },
-  {
-   "t": "ex",
-   "l": "Factoring Example",
-   "v": "Company has AR of $500 due in 60 days. Factor offers to buy it now for $480.\n• The $20 difference covers the factor's interest and risk premium for 60 days.\n• Without recourse: company receives $480 cash now, factor bears risk of non-collection.\n• With recourse: company receives $480 now, but must repay if customer doesn't pay."
-  },
-  {
-   "t": "h",
-   "v": "Accounts Payable Management — The 5-Step AP Cycle"
-  },
-  {
-   "t": "b",
-   "v": [
-    "Step 1: Department submits purchase requisition (authorized person only)",
-    "Step 2: Purchasing department selects vendor, issues purchase order",
-    "Step 3: Goods received — receiving department creates receiving report",
-    "Step 4: AP department matches purchase order + receiving report + vendor invoice (three-way match)",
-    "Step 5: Payment approved and made — only after three-way match verified"
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "The three-way match is a critical internal control: Purchase Order (what was ordered), Receiving Report (what was actually received), and Vendor Invoice (what is being billed) must all agree before any payment is approved."
-  }
- ],
- "1-20": [
-  {
-   "t": "h",
-   "v": "Why Inventory Needs Active Control"
-  },
-  {
-   "t": "p",
-   "v": "Inventory is often the largest asset on a manufacturer's or retailer's balance sheet. Small changes in inventory cost translate directly to large changes in COGS and net income. Companies must balance having enough inventory (avoid stockouts) against having too much (high carrying costs)."
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "Cost Type",
-    "What It Includes"
-   ],
-   "r": [
-    [
-     "Purchasing costs",
-     "Invoice price + freight-in, minus quantity discounts"
-    ],
-    [
-     "Carrying costs",
-     "Storage, insurance, taxes, obsolescence, spoilage, opportunity cost of capital tied up"
-    ],
-    [
-     "Ordering costs",
-     "Administrative costs of placing, receiving, and recording each order"
-    ],
-    [
-     "Stockout costs",
-     "Lost sales, lost future customers, emergency shipping to fill orders"
-    ],
-    [
-     "Shrinkage",
-     "Theft, damage, spoilage — difference between book and physical count"
-    ]
-   ]
-  },
-  {
-   "t": "h",
-   "v": "Reorder Point and Safety Stock"
-  },
-  {
-   "t": "f",
-   "l": "Reorder Point",
-   "v": "(Average Daily Usage × Average Lead Time) + Safety Stock"
-  },
-  {
-   "t": "f",
-   "l": "Average Inventory",
-   "v": "(Order Quantity ÷ 2) + Safety Stock"
-  },
-  {
-   "t": "ex",
-   "l": "Reorder Point Calculation",
-   "v": "Average daily usage: 20 units/day\nAverage lead time: 10 days\nSafety stock: 100 units\n\nReorder Point = (20 × 10) + 100 = 300 units\n(When inventory falls to 300 units, place the next order)\n\nIf order quantity = 300 units (15-day supply at 20/day):\nAverage Inventory = (300 ÷ 2) + 100 = 250 units"
-  },
-  {
-   "t": "h",
-   "v": "Inventory Management Systems"
-  },
-  {
-   "t": "tbl",
-   "h": [
-    "System",
-    "Philosophy",
-    "Key Benefit"
-   ],
-   "r": [
-    [
-     "Economic Order Quantity (EOQ)",
-     "Mathematical formula minimizing total of ordering + carrying costs",
-     "Optimal order quantity — eliminates guessing"
-    ],
-    [
-     "Just-in-Time (JIT)",
-     "Receive materials exactly when needed for production — minimize inventory",
-     "Eliminates carrying costs; requires reliable suppliers"
-    ],
-    [
-     "Materials Requirements Planning (MRP)",
-     "Use production schedule + bill of materials to plan inventory purchases in advance",
-     "Ties purchasing to actual production demand"
-    ]
-   ]
-  },
-  {
-   "t": "tip",
-   "v": "EOQ minimizes TOTAL inventory cost (ordering cost + carrying cost). As order size increases, carrying cost increases but ordering cost decreases — EOQ is the crossover point where total cost is minimized."
-  }
- ]
+  "1-1": [
+    {
+      "t": "h",
+      "v": "The Role of Accounting"
+    },
+    {
+      "t": "p",
+      "v": "Accounting is the process of recording, summarizing, analyzing, and reporting financial transactions. It serves as the language of business — every investment decision, loan application, and tax filing depends on accurate accounting records."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "",
+        "Financial Accounting",
+        "Management Accounting"
+      ],
+      "r": [
+        [
+          "Users",
+          "External: investors, lenders, regulators",
+          "Internal: managers, decision-makers"
+        ],
+        [
+          "Rules",
+          "Must follow GAAP",
+          "No required format — whatever is useful"
+        ],
+        [
+          "Focus",
+          "Historical reporting",
+          "Future planning and control"
+        ],
+        [
+          "Output",
+          "Financial statements",
+          "Budgets, cost reports, performance analysis"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "For the FMAA exam: Financial accounting = external users + GAAP. Management accounting = internal users + no required format. Both are tested."
+    },
+    {
+      "t": "h",
+      "v": "Types of Business Enterprises"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Type",
+        "Key Characteristic",
+        "Tax Treatment"
+      ],
+      "r": [
+        [
+          "Sole Proprietorship",
+          "One owner, no legal separation from owner",
+          "Owner pays personal income tax on profits"
+        ],
+        [
+          "Partnership",
+          "Two or more owners, shared profits/losses",
+          "Pass-through to partners' personal returns"
+        ],
+        [
+          "Corporation",
+          "Legally separate entity, limited liability",
+          "Corporate tax on profits; dividends taxed again"
+        ],
+        [
+          "Private Company",
+          "Not publicly traded, shares held privately",
+          "Corporate structure without SEC disclosure requirements"
+        ],
+        [
+          "Public Company",
+          "Shares traded on stock exchanges",
+          "Subject to SEC reporting requirements"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Accounting Principles"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Accrual basis (required by GAAP): revenues recognized when earned, expenses recognized when incurred — regardless of cash timing",
+        "Cash basis: revenues and expenses recognized only when cash is received or paid — NOT GAAP",
+        "Matching principle: expenses recognized in the same period as the revenues they helped generate",
+        "Conservatism: recognize losses when probable; recognize gains only when realized",
+        "Consistency: use the same methods period to period to allow comparison"
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Accrual vs Cash Example",
+      "v": "A consulting firm completes a $10,000 project on Dec 28 and gets paid Jan 5.\n• Accrual basis: Revenue recognized Dec 28 (when earned) — reported in current year\n• Cash basis: Revenue recognized Jan 5 (when cash received) — reported in next year\nGAAP requires accrual basis for financial reporting."
+    },
+    {
+      "t": "h",
+      "v": "Key Accounting Terminology"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Term",
+        "Definition"
+      ],
+      "r": [
+        [
+          "Assets",
+          "Present rights to economic benefits — what the company owns (cash, AR, inventory, PP&E)"
+        ],
+        [
+          "Liabilities",
+          "Present obligations to transfer economic benefits — what the company owes (AP, loans, deferred revenue)"
+        ],
+        [
+          "Equity",
+          "Residual interest after deducting liabilities from assets: Assets − Liabilities = Equity"
+        ],
+        [
+          "Revenue",
+          "Inflows from delivering goods or services to customers"
+        ],
+        [
+          "Expenses",
+          "Outflows or using-up of assets in the process of generating revenue"
+        ],
+        [
+          "Gains",
+          "Increases in equity from peripheral transactions (e.g. sale of a fixed asset at a profit)"
+        ],
+        [
+          "Losses",
+          "Decreases in equity from peripheral transactions (e.g. sale of a fixed asset at a loss)"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Permanent vs Temporary Accounts"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Permanent accounts (balance sheet accounts — Assets, Liabilities, Equity): carry balances forward year to year, never reset to zero",
+        "Temporary accounts (income statement accounts — Revenue, Expense, Gains, Losses + Dividends): closed to Retained Earnings at year-end, start at zero each year",
+        "Retained earnings: accumulated net income since inception, minus all dividends ever paid"
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Contra accounts carry a balance opposite to their related account. Accumulated Depreciation is a contra-asset — it has a credit balance and reduces the asset's book value. Dividends is a contra-equity account — debit balance reduces Retained Earnings."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "المحاسبة هي عملية تسجيل المعاملات المالية وتلخيصها وتحليلها والتقرير عنها، وهي لغة الأعمال.",
+        "المحاسبة المالية تخدم المستخدمين الخارجيين وتلتزم بالمبادئ المحاسبية المقبولة عموماً، أما المحاسبة الإدارية فتخدم الإدارة داخلياً دون شكل إلزامي.",
+        "أساس الاستحقاق هو الأساس المعتمد: يُعترف بالإيراد عند اكتسابه وبالمصروف عند تحمّله، بصرف النظر عن توقيت التدفق النقدي.",
+        "الحسابات الدائمة هي حسابات الميزانية وتُرحَّل أرصدتها للفترة التالية، أما الحسابات المؤقتة فهي حسابات قائمة الدخل والتوزيعات وتُقفل في نهاية السنة.",
+        "الحساب المقابل يحمل رصيداً عكس الحساب المرتبط به، مثل مجمع الإهلاك الذي يخفّض القيمة الدفترية للأصل."
+      ]
+    }
+  ],
+  "1-2": [
+    {
+      "t": "h",
+      "v": "Double-Entry Bookkeeping and the Accounting Equation"
+    },
+    {
+      "t": "p",
+      "v": "Every financial transaction affects at least two accounts, keeping the fundamental accounting equation in balance:"
+    },
+    {
+      "t": "f",
+      "l": "The Accounting Equation",
+      "v": "Assets = Liabilities + Equity"
+    },
+    {
+      "t": "p",
+      "v": "Double-entry means every transaction is recorded as both a debit and a credit, and debits must always equal credits. This maintains the equation's balance."
+    },
+    {
+      "t": "h",
+      "v": "How Debits and Credits Work"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Account Type",
+        "Normal Balance",
+        "Increased by",
+        "Decreased by"
+      ],
+      "r": [
+        [
+          "Assets",
+          "Debit",
+          "Debit",
+          "Credit"
+        ],
+        [
+          "Liabilities",
+          "Credit",
+          "Credit",
+          "Debit"
+        ],
+        [
+          "Equity",
+          "Credit",
+          "Credit",
+          "Debit"
+        ],
+        [
+          "Revenue/Gains",
+          "Credit",
+          "Credit",
+          "Debit"
+        ],
+        [
+          "Expenses/Losses",
+          "Debit",
+          "Debit",
+          "Credit"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Memory trick: DEALER — Dividends, Expenses, Assets are increased by Debits (Left side). Liabilities, Equity, and Revenue are increased by Credits (Right side)."
+    },
+    {
+      "t": "ex",
+      "l": "4 Basic Transaction Types",
+      "v": "1. Buy equipment for $10,000 cash: Dr Equipment $10,000 / Cr Cash $10,000 → both assets, no change in total assets\n2. Borrow $15,000 long-term: Dr Cash $15,000 / Cr Long-term Debt $15,000 → assets and liabilities both increase by $15,000\n3. Pay off $20,000 loan: Dr Accounts Payable $20,000 / Cr Cash $20,000 → assets and liabilities both decrease by $20,000\n4. Issue stock for $50,000 cash: Dr Cash $50,000 / Cr Common Stock + APIC $50,000 → assets and equity both increase by $50,000"
+    },
+    {
+      "t": "h",
+      "v": "Chart of Accounts and General Ledger"
+    },
+    {
+      "t": "p",
+      "v": "The chart of accounts is the master list of all ledger accounts, each assigned a number. Accounts are grouped by type: Assets (1xxxx), Liabilities (2xxxx), Equity (3xxxx), Revenue (4xxxx), Expenses (5xxxx). The general ledger holds ALL accounts with their running balances."
+    },
+    {
+      "t": "h",
+      "v": "The Accounting Cycle — 8 Steps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Step 1: Identify and analyze financial events",
+        "Step 2: Journalize transactions in the General Journal",
+        "Step 3: Post journal entries to ledger accounts",
+        "Step 4: Prepare unadjusted trial balance",
+        "Step 5: Make adjusting entries",
+        "Step 6: Prepare adjusted trial balance",
+        "Step 7: Prepare financial statements",
+        "Step 8: Perform year-end close (then post-closing trial balance)"
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "يقوم القيد المزدوج على أن كل معاملة تؤثر في حسابين على الأقل، بحيث يتساوى المدين مع الدائن دائماً.",
+        "معادلة المحاسبة: الأصول = الالتزامات + حقوق الملكية.",
+        "تزيد الأصول والمصروفات والتوزيعات بالجانب المدين، وتزيد الالتزامات وحقوق الملكية والإيرادات بالجانب الدائن.",
+        "دليل الحسابات هو القائمة الرئيسية لجميع الحسابات مرقّمة ومصنّفة حسب نوعها.",
+        "تتكون الدورة المحاسبية من ثماني خطوات تبدأ بتحليل المعاملات وتنتهي بإقفال الحسابات في نهاية السنة."
+      ]
+    }
+  ],
+  "1-3": [
+    {
+      "t": "h",
+      "v": "T-Accounts and Journal Entries"
+    },
+    {
+      "t": "p",
+      "v": "A T-account is a simplified representation of a ledger account shaped like the letter T. Debits always go on the LEFT side, credits always go on the RIGHT side. This never changes regardless of account type."
+    },
+    {
+      "t": "h",
+      "v": "Journal Entry Format"
+    },
+    {
+      "t": "p",
+      "v": "Transactions are first recorded in the General Journal. The format is:\n1. Date of transaction\n2. Account(s) to be debited — written flush left with dollar amount in Debit column\n3. Account(s) to be credited — indented, with dollar amount in Credit column\n4. Brief explanation\nDebits are always listed before credits. Total debits must always equal total credits."
+    },
+    {
+      "t": "ex",
+      "l": "Simple vs Compound Journal Entry",
+      "v": "Simple (one debit, one credit):\nPay $5,000 salaries in cash:\n  Dr  Salaries & Wages Expense    5,000\n      Cr  Cash                        5,000\n\nCompound (multiple debits or credits):\nIssue 50,000 shares at $10/share ($1 par value) for cash:\n  Dr  Cash                        500,000\n      Cr  Common Stock ($1 par × 50,000)  50,000\n      Cr  Additional Paid-in Capital     450,000"
+    },
+    {
+      "t": "h",
+      "v": "Posting to Ledger Accounts (Step 3)"
+    },
+    {
+      "t": "p",
+      "v": "After journalizing, each debit and credit is transferred (posted) to the relevant ledger account. The running balance is updated after each posting, labeled Dr or Cr to indicate which side is larger. The reference column in the ledger links back to the journal page for audit purposes."
+    },
+    {
+      "t": "tip",
+      "v": "In the journal entry, credits are indented under debits — this is a visual reminder that 'debits are on the left.' Never indent debits; always indent credits."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Thinking the debit side depends on the account type. In a T-account the debit is ALWAYS the left side; only the EFFECT (increase or decrease) depends on the account type.",
+        "Indenting the debit line in a journal entry. Credits are indented; debits are written flush left.",
+        "Assuming every journal entry has exactly two lines. A compound journal entry has several debits or credits, but total debits must still equal total credits.",
+        "Confusing journalizing with posting. Journalizing records the entry in the general journal (Step 2); posting transfers it to the ledger accounts (Step 3)."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "حساب حرف T تمثيل مبسّط لحساب الأستاذ: الجانب المدين دائماً على اليسار والجانب الدائن دائماً على اليمين.",
+        "يُسجَّل القيد أولاً في دفتر اليومية العامة بالتاريخ والحساب المدين ثم الحساب الدائن مع إزاحة الدائن إلى الداخل.",
+        "القيد المركّب يتضمن أكثر من حساب مدين أو دائن، ويجب أن يتساوى مجموع المدين مع مجموع الدائن.",
+        "الترحيل هو نقل المبالغ من دفتر اليومية إلى حسابات الأستاذ وتحديث أرصدتها الجارية."
+      ]
+    }
+  ],
+  "1-4": [
+    {
+      "t": "h",
+      "v": "Greenworks Distribution Company — New Business Transactions"
+    },
+    {
+      "t": "p",
+      "v": "This unit follows Greenworks Distribution Company through its first transactions in May 20X1. Study these journal entries — they are the foundation for everything in Units 5–12."
+    },
+    {
+      "t": "ex",
+      "l": "Transaction 1: Issuing Common Stock",
+      "v": "May 1: Issue 50,000 shares at $10/share ($1 par value) for $500,000 cash.\n  Dr  Cash (asset ↑)                    500,000\n      Cr  Common Stock ($1 par × 50,000)    50,000\n      Cr  Additional Paid-in Capital        450,000\nNote: Common Stock is always credited at par value only. Everything above par goes to APIC."
+    },
+    {
+      "t": "ex",
+      "l": "Transaction 2: Buying Land and Building",
+      "v": "May 2: Purchase land ($100,000) and building ($200,000) for $300,000 cash.\n  Dr  Land (asset ↑)         100,000\n  Dr  Buildings (asset ↑)    200,000\n      Cr  Cash (asset ↓)         300,000\nNote: Two asset accounts increase, one decreases — total assets unchanged."
+    },
+    {
+      "t": "ex",
+      "l": "Transaction 3: Selling Land",
+      "v": "May 15: Sell 25% of the land for $25,000 cash (at cost — no gain/loss).\n  Dr  Cash (asset ↑)     25,000\n      Cr  Land (asset ↓)      25,000"
+    },
+    {
+      "t": "ex",
+      "l": "Transaction 4: Buying Furniture on Credit",
+      "v": "May 16: Purchase furniture and equipment for $55,000 on credit (due June 30).\n  Dr  Furniture & Equipment (asset ↑)     55,000\n      Cr  Accounts Payable (liability ↑)       55,000"
+    },
+    {
+      "t": "ex",
+      "l": "Transaction 5: Buying Inventory on Credit",
+      "v": "May 20: Purchase $50,000 inventory from Half's Wholesale on credit.\n  Dr  Inventory (asset ↑)           50,000\n      Cr  Accounts Payable (liability ↑)   50,000"
+    },
+    {
+      "t": "ex",
+      "l": "Transaction 6: Inventory Return",
+      "v": "May 25: Return $500 of defective inventory.\n  Dr  Accounts Payable (liability ↓)   500\n      Cr  Inventory (asset ↓)               500"
+    },
+    {
+      "t": "h",
+      "v": "Greenworks After May Transactions — Ledger Summary"
+    },
+    {
+      "t": "p",
+      "v": "Cash ledger after all May transactions: +$500,000 (stock) − $300,000 (land+bldg) + $25,000 (land sale) = $225,000 Dr balance. Inventory: $50,000 − $500 = $49,500. Accounts Payable: $55,000 + $50,000 − $500 = $104,500 Cr balance."
+    },
+    {
+      "t": "tip",
+      "v": "Greenworks uses a perpetual inventory system — the Inventory account is updated immediately every time goods are bought or sold. Under periodic inventory, the Inventory account is only updated at period-end."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Crediting Common Stock for the full issue price. Only par value goes to Common Stock; the excess goes to Additional Paid-in Capital.",
+        "Recording a gain when an asset is sold at its cost. Proceeds equal to book value produce no gain or loss.",
+        "Treating a purchase on credit as a cash transaction. Buying on account increases a liability (accounts payable), not a decrease in cash.",
+        "Recording a purchase return as revenue. A return to the supplier reduces both inventory and accounts payable."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "عند إصدار الأسهم نقداً تُسجَّل القيمة الاسمية في حساب رأس المال والزيادة عنها في علاوة الإصدار.",
+        "شراء الأصول نقداً يغيّر تركيب الأصول دون تغيير إجماليها، أما الشراء بالأجل فيزيد الأصول والالتزامات معاً.",
+        "بيع الأصل بتكلفته لا ينتج عنه ربح أو خسارة.",
+        "مردودات المشتريات تخفّض المخزون والدائنين معاً.",
+        "في نظام الجرد المستمر يُحدَّث حساب المخزون فور كل عملية شراء أو بيع."
+      ]
+    }
+  ],
+  "1-5": [
+    {
+      "t": "h",
+      "v": "The Unadjusted Trial Balance (Accounting Cycle Step 4)"
+    },
+    {
+      "t": "p",
+      "v": "After all transactions are posted to the ledger, a trial balance is prepared to confirm that total debits equal total credits. 'Unadjusted' means adjusting entries (Step 5) have not yet been posted."
+    },
+    {
+      "t": "p",
+      "v": "If the trial balance doesn't balance, an error exists. Common errors: a transaction posted to only one account (omitted one side), wrong amount, or debiting instead of crediting. Equal totals confirm mathematical accuracy but NOT completeness — a transaction omitted entirely still leaves the trial balance balanced."
+    },
+    {
+      "t": "h",
+      "v": "Purpose and Limitations of the Trial Balance"
+    },
+    {
+      "t": "p",
+      "v": "The trial balance's only real purpose is to confirm that total debits equal total credits after posting. That's a mathematical check, not a completeness or correctness check — several categories of error leave the trial balance perfectly balanced."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Errors the Trial Balance WILL Catch",
+        "Errors the Trial Balance Will NOT Catch"
+      ],
+      "r": [
+        [
+          "A transaction posted with only one side entered (debit or credit omitted)",
+          "A transaction omitted entirely — both sides never recorded, so nothing is out of balance"
+        ],
+        [
+          "A debit and credit posted for different amounts",
+          "A transaction posted to the wrong account, but with equal debit and credit amounts (e.g., debiting Supplies instead of Equipment)"
+        ],
+        [
+          "A single-sided math error in a ledger account",
+          "Two offsetting errors that cancel each other out (e.g., overstating Cash by $500 and overstating Revenue by $500)"
+        ],
+        [
+          "",
+          "A transaction recorded twice, with equal debits and credits both times"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Exam pattern: if a question describes an error and asks 'would this be detected by the trial balance?' — check whether the error breaks the debit-credit EQUALITY. If both sides are still equal (wrong account, omitted entirely, duplicated, or offsetting), the trial balance will NOT catch it, no matter how serious the error is."
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Unadjusted Trial Balance (May 20, 20X1)",
+      "v": "Account                     Debits        Credits\nCash                        225,000\nInventory                    49,500\nLand                         75,000\nBuildings                   200,000\nFurniture & Equipment        55,000\nAccounts Payable                           104,500\nCommon Stock                                50,000\nAdditional Paid-in Capital                 450,000\n                          ─────────      ─────────\nTotals                      604,500        604,500  ✓"
+    },
+    {
+      "t": "tip",
+      "v": "Debits = Credits = $604,500. The accounting equation holds: Assets ($604,500) = Liabilities ($104,500) + Equity ($500,000). Verify this after every trial balance."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "ميزان المراجعة غير المعدّل يُعدّ بعد الترحيل للتحقق من تساوي مجموع الأرصدة المدينة مع مجموع الأرصدة الدائنة.",
+        "توازن ميزان المراجعة يثبت الدقة الحسابية فقط، ولا يثبت صحة القيود أو اكتمالها.",
+        "لا يكشف ميزان المراجعة إغفال معاملة بالكامل، ولا الترحيل إلى حساب خاطئ، ولا الأخطاء المتكافئة، ولا تكرار القيد.",
+        "يكشف ميزان المراجعة الأخطاء التي تُخلّ بتساوي المدين والدائن، مثل ترحيل طرف واحد من القيد."
+      ]
+    }
+  ],
+  "1-6": [
+    {
+      "t": "h",
+      "v": "Comprehensive Income — What Goes Where"
+    },
+    {
+      "t": "p",
+      "v": "Comprehensive income is the total change in equity during a period from non-owner transactions. It has two parts: Net income (reported on the income statement) and Other Comprehensive Income — OCI (reported directly in equity, bypassing the income statement)."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Reported on Income Statement (→ Net Income → Retained Earnings)",
+        "Reported in OCI (→ Accumulated OCI in Equity)"
+      ],
+      "r": [
+        [
+          "Sales revenue, service revenue",
+          "Unrealized gains/losses on certain investments"
+        ],
+        [
+          "Cost of goods sold",
+          "Foreign currency translation adjustments"
+        ],
+        [
+          "Operating expenses (salaries, rent, depreciation)",
+          "Pension liability adjustments"
+        ],
+        [
+          "Interest income, interest expense",
+          "Gains/losses on certain hedging instruments"
+        ],
+        [
+          "Gains/losses on sale of assets",
+          ""
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "The Complete Debits & Credits Table — All Account Types"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Account Type",
+        "Normal Balance",
+        "Debit Effect",
+        "Credit Effect"
+      ],
+      "r": [
+        [
+          "Asset accounts",
+          "Debit",
+          "Increase ↑",
+          "Decrease ↓"
+        ],
+        [
+          "Liability accounts",
+          "Credit",
+          "Decrease ↓",
+          "Increase ↑"
+        ],
+        [
+          "Equity accounts",
+          "Credit",
+          "Decrease ↓",
+          "Increase ↑"
+        ],
+        [
+          "Revenue or gain accounts",
+          "Credit",
+          "Decrease ↓",
+          "Increase ↑"
+        ],
+        [
+          "Expense or loss accounts",
+          "Debit",
+          "Increase ↑",
+          "Decrease ↓"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Revenues and gains INCREASE equity → recorded by credits (same as equity). Expenses and losses DECREASE equity → recorded by debits (opposite of equity). This logical connection removes the need to memorize — just understand the relationship to equity."
+    },
+    {
+      "t": "ex",
+      "l": "Revenue and Expense — Effect on Equity",
+      "v": "Record June 2 sale: $12,600 revenue, $4,800 COGS, $565 shipping expense.\n  Dr  Accounts Receivable    12,600   (asset ↑)\n  Dr  Cost of Goods Sold      4,800   (expense → equity ↓)\n  Dr  Shipping Expense          565   (expense → equity ↓)\n      Cr  Sales Revenue           12,600   (revenue → equity ↑)\n      Cr  Inventory                4,800   (asset ↓)\n      Cr  Cash                       565   (asset ↓)\nNet effect on equity: +$12,600 revenue − $4,800 COGS − $565 shipping = +$7,235"
+    },
+    {
+      "t": "h",
+      "v": "Worked Example: Net Income to Comprehensive Income"
+    },
+    {
+      "t": "ex",
+      "l": "From Net Income to Comprehensive Income",
+      "v": "Net income (from the income statement)                      250,000\nOther comprehensive income items for the year:\n  Unrealized loss on available-for-sale debt securities     (20,000)\n  Foreign currency translation gain                          12,000\n  Pension liability adjustment (loss)                        (5,000)\nOther comprehensive income (OCI)                            (13,000)\nCOMPREHENSIVE INCOME                                        237,000\n\nEquity effect:\n  Net income 250,000 → closed to Retained Earnings\n  OCI (13,000) → Accumulated OCI: beginning 30,000 − 13,000 = ending 17,000"
+    },
+    {
+      "t": "tip",
+      "v": "Comprehensive income excludes transactions with owners. Issuing shares, buying treasury stock and paying dividends change equity, but they are never part of net income or OCI."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Putting unrealized gains or losses on trading securities or equity securities in OCI. Those changes in fair value go through net income; OCI holds items such as available-for-sale DEBT securities.",
+        "Confusing OCI with Accumulated OCI. OCI is the amount for the period; Accumulated OCI is the cumulative balance reported in equity on the balance sheet.",
+        "Including dividends in comprehensive income. Dividends are a distribution to owners, not a result of operations.",
+        "Thinking OCI items never affect equity. They bypass net income and retained earnings, but they still change total equity through Accumulated OCI."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "الدخل الشامل هو إجمالي التغير في حقوق الملكية خلال الفترة من غير المعاملات مع الملاك، ويتكون من صافي الدخل والدخل الشامل الآخر.",
+        "بنود الدخل الشامل الآخر، مثل فروق ترجمة العملات الأجنبية وتسويات المعاشات، لا تمر بقائمة الدخل وإنما تُجمَّع في بند مستقل ضمن حقوق الملكية.",
+        "الإيرادات والمكاسب تزيد حقوق الملكية فتُسجَّل في الجانب الدائن، والمصروفات والخسائر تنقصها فتُسجَّل في الجانب المدين.",
+        "التوزيعات على الملاك وإصدار الأسهم لا تدخل في الدخل الشامل."
+      ]
+    }
+  ],
+  "1-7": [
+    {
+      "t": "h",
+      "v": "How Subsidiary Ledgers Work"
+    },
+    {
+      "t": "p",
+      "v": "When a control account in the general ledger contains transactions with many different parties (e.g. Accounts Payable with dozens of suppliers), a subsidiary ledger tracks each party separately. The control account balance always equals the sum of all subsidiary account balances."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Control Account",
+        "Subsidiary Ledger",
+        "What It Tracks"
+      ],
+      "r": [
+        [
+          "Accounts Receivable",
+          "Accounts Receivable ledger",
+          "Individual customer balances"
+        ],
+        [
+          "Accounts Payable",
+          "Accounts Payable ledger",
+          "Individual supplier balances"
+        ],
+        [
+          "Inventory",
+          "Inventory ledger",
+          "Individual inventory item balances"
+        ],
+        [
+          "Furniture & Equipment",
+          "Equipment ledger",
+          "Individual asset records with depreciation"
+        ]
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Subsidiary Ledger Reconciliation",
+      "v": "Greenworks has Accounts Payable of $104,500 in the general ledger.\nSubsidiary breakdown:\n  F & E Associates sub-ledger:      $55,000 Cr\n  Half's Wholesale sub-ledger:       $49,500 Cr\n  Total subsidiary ledger balances: $104,500 ✓ = Control account balance\n\nWhen customers A, B, and C pay $100, $200, $300 respectively:\n  Each sub-ledger AR account is credited individually: $100 + $200 + $300\n  Then the AR control account is credited for $600 total\n  Cash is debited $600 in the general ledger"
+    },
+    {
+      "t": "tip",
+      "v": "Subsidiary ledgers are kept in SEPARATE journals — not the general ledger. The control account in the general ledger is the 'total' that must match the sum of all subsidiary accounts. Any difference signals a posting error."
+    },
+    {
+      "t": "h",
+      "v": "Worked Example: Finding a Posting Error"
+    },
+    {
+      "t": "ex",
+      "l": "Accounts Receivable Control vs Subsidiary Ledger",
+      "v": "General ledger — Accounts Receivable (control account):   84,000 Dr\n\nSubsidiary ledger balances:\n  Customer A                                               30,000\n  Customer B                                               26,500\n  Customer C                                               27,000\n  Total of subsidiary ledger                               83,500\n\nDifference                                                    500\n\nInvestigation: a $500 credit sale to Customer B was posted to the control\naccount but never posted to Customer B's subsidiary account.\nCorrection: post $500 to Customer B → subsidiary total 84,000 = control account."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Expecting the trial balance to catch a subsidiary ledger error. The trial balance lists only the control account, so it still balances even when a customer's individual account is wrong.",
+        "Listing individual customer or supplier accounts on the trial balance. Only the control account appears there.",
+        "Thinking a subsidiary ledger replaces the control account. Both are kept; the subsidiary ledger provides the detail behind the control account's total.",
+        "Assuming any difference is in the control account. The error can be in either place, so both must be checked."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "يُستخدم دفتر الأستاذ المساعد لتتبّع أرصدة العملاء أو الموردين أو الأصول كلٌّ على حدة.",
+        "يجب أن يتساوى مجموع أرصدة دفتر الأستاذ المساعد مع رصيد الحساب الإجمالي في دفتر الأستاذ العام.",
+        "أي فرق بينهما يدل على خطأ في الترحيل، ولا يكشفه ميزان المراجعة لأنه لا يتضمن إلا الحساب الإجمالي."
+      ]
+    }
+  ],
+  "1-8": [
+    {
+      "t": "h",
+      "v": "Revenue and Expense Transactions — Greenworks Operating Period"
+    },
+    {
+      "t": "p",
+      "v": "Greenworks now begins operating (May–June 20X1). These transactions introduce income statement accounts — revenues and expenses — and show how each transaction affects both the income statement and balance sheet simultaneously."
+    },
+    {
+      "t": "ex",
+      "l": "Salaries Expense — May 31",
+      "v": "Pay $5,000 salaries for May:\n  Dr  Salaries & Wages Expense    5,000\n      Cr  Cash                        5,000\nEffect: Equity decreases (expense), Cash decreases. Income statement: $5,000 expense."
+    },
+    {
+      "t": "ex",
+      "l": "Credit Sale with COGS — June 2",
+      "v": "Sales of $12,600 on credit; inventory cost = $4,800; shipping = $565:\n  Dr  Accounts Receivable    12,600\n  Dr  Cost of Goods Sold      4,800\n  Dr  Shipping-out Expense      565\n      Cr  Sales Revenue           12,600\n      Cr  Inventory                4,800\n      Cr  Cash                       565\nGross profit on this sale: $12,600 − $4,800 = $7,800"
+    },
+    {
+      "t": "ex",
+      "l": "Utility Bill — June 9",
+      "v": "Receive electricity bill for $689, payable June 25:\n  Dr  Utilities Expense    689\n      Cr  Accounts Payable   689\nNote: Even though cash hasn't been paid, the expense is recognized when incurred (accrual basis, matching principle)."
+    },
+    {
+      "t": "ex",
+      "l": "Another Credit Sale — June 12",
+      "v": "Sales of $20,800 on credit; COGS = $7,900; shipping = $690:\n  Dr  Accounts Receivable    20,800\n  Dr  Cost of Goods Sold      7,900\n  Dr  Shipping-out Expense      690\n      Cr  Sales Revenue           20,800\n      Cr  Inventory                7,900\n      Cr  Cash                       690"
+    },
+    {
+      "t": "tip",
+      "v": "Perpetual inventory system: every sale triggers TWO sets of entries simultaneously — (1) the revenue/receivables entry, AND (2) the COGS/inventory entry. Under periodic inventory, COGS is only calculated at period-end."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Recognizing an expense only when it is paid. Under the accrual basis, an expense is recognized when it is incurred; the unpaid amount is recorded as a liability.",
+        "Recording only the sales entry under a perpetual inventory system. Every sale also needs a second entry: debit Cost of Goods Sold, credit Inventory.",
+        "Adding shipping-out cost to inventory. Freight paid to deliver goods to customers is a selling expense; freight-in on purchases is part of inventory cost.",
+        "Treating a credit sale as not yet revenue. Revenue is earned when the goods are delivered, even though cash will be collected later."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "يُعترف بالمصروف عند تحمّله ولو لم يُسدَّد نقداً، ويُسجَّل المبلغ غير المسدد التزاماً.",
+        "في نظام الجرد المستمر تتطلب كل عملية بيع قيدين: قيد الإيراد والذمم المدينة، وقيد تكلفة البضاعة المباعة والمخزون.",
+        "مصروفات الشحن للعملاء مصروفات بيعية، بينما تكاليف نقل المشتريات جزء من تكلفة المخزون.",
+        "المعاملة الواحدة تؤثر في قائمة الدخل والميزانية في الوقت نفسه."
+      ]
+    }
+  ],
+  "1-9": [
+    {
+      "t": "h",
+      "v": "Other Transaction Types — Investing, Financing, Prepaid, Deferred, Dividends"
+    },
+    {
+      "t": "ex",
+      "l": "Investing: Money Market Account",
+      "v": "June 1: Transfer $100,000 excess cash to a money market deposit account (MMDA) at 5% annual interest:\n  Dr  Cash Equivalents    100,000\n      Cr  Cash               100,000\nThe MMDA is a cash equivalent — liquid, < 90-day maturity, minimal risk."
+    },
+    {
+      "t": "ex",
+      "l": "Financing: Equipment Loan",
+      "v": "June 1: Buy warehouse equipment $80,000. Pay 10% down ($8,000), finance $72,000 with 5-year loan at 6% annual interest:\n  Dr  Furniture & Equipment    80,000\n      Cr  Long-term Debt             72,000\n      Cr  Cash                        8,000\nTotal debit = $80,000 = sum of two credits ($72,000 + $8,000) ✓"
+    },
+    {
+      "t": "ex",
+      "l": "Prepaid Expense (Deferred Expense)",
+      "v": "June 1: Pay $24,000 insurance premium for one year (June 1 − May 31):\n  Dr  Prepaid Expense    24,000\n      Cr  Cash               24,000\nThe $24,000 is an ASSET — future benefit. Each month, $2,000 ($24,000 ÷ 12) becomes insurance expense (adjusting entry)."
+    },
+    {
+      "t": "ex",
+      "l": "Deferred Revenue (Unearned Revenue)",
+      "v": "June 10: Receive $5,000 deposit from Pyramid Products for a special order (total price $10,000):\n  Dr  Cash              5,000\n      Cr  Deferred Revenue  5,000\nDeferred Revenue is a LIABILITY — the company owes goods/services. Revenue is recognized only when the obligation is fulfilled (goods delivered)."
+    },
+    {
+      "t": "ex",
+      "l": "Dividend Declaration",
+      "v": "June 30: Declare $0.25/share dividend. 50,000 shares outstanding = $12,500 total:\n  Dr  Dividends (contra-equity)    12,500\n      Cr  Dividends Payable             12,500\nDividends are NOT an expense — they reduce equity directly. Dividends Payable is a current liability until paid."
+    },
+    {
+      "t": "tip",
+      "v": "Prepaid expenses start as assets (benefit not yet used) → become expenses over time. Deferred revenue starts as a liability (obligation not yet fulfilled) → becomes revenue over time. Both require adjusting entries."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "إيداع النقدية الزائدة في حساب سوق نقدي يُعد تحويلاً إلى ما يعادل النقدية ولا يغيّر إجمالي النقدية وما في حكمها.",
+        "المصروف المدفوع مقدماً أصلٌ يتحول إلى مصروف مع انقضاء الفترة المستفيدة.",
+        "الإيراد المقبوض مقدماً التزامٌ يتحول إلى إيراد عند تقديم السلعة أو الخدمة.",
+        "إعلان التوزيعات يُنشئ التزاماً ويخفّض حقوق الملكية، والتوزيعات ليست مصروفاً."
+      ]
+    }
+  ],
+  "1-10": [
+    {
+      "t": "h",
+      "v": "Adjusting Entries — Why They Are Needed"
+    },
+    {
+      "t": "p",
+      "v": "To prepare accurate financial statements, a precise cutoff of transactions at the end of the accounting period is necessary. Some transactions begin in one period and complete in another. Adjusting entries update accounts so that revenues are recognized when earned and expenses recognized when incurred — regardless of when cash changes hands. This is the accrual basis of accounting."
+    },
+    {
+      "t": "h",
+      "v": "The 6 Types of Adjusting Entries"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Type",
+        "What Happened",
+        "Adjusting Entry Needed",
+        "Balance Sheet Effect"
+      ],
+      "r": [
+        [
+          "Depreciation",
+          "Fixed asset used up over time",
+          "Dr Depreciation Expense / Cr Accumulated Depreciation",
+          "Reduces book value of asset"
+        ],
+        [
+          "Deferred Revenue (Contract Liability)",
+          "Cash received before service performed",
+          "Dr Contract Liabilities / Cr Revenue",
+          "Reduces liability; increases equity"
+        ],
+        [
+          "Accrued Expense",
+          "Expense incurred, not yet paid or recorded",
+          "Dr Expense / Cr Liability (Payable)",
+          "Creates new liability"
+        ],
+        [
+          "Deferred Expense (Prepaid)",
+          "Cash paid before benefit received",
+          "Dr Expense / Cr Prepaid Expense",
+          "Reduces asset"
+        ],
+        [
+          "Accrued Revenue (Contract Asset)",
+          "Revenue earned, cash not yet received",
+          "Dr Receivable (Contract Asset) / Cr Revenue",
+          "Creates new asset"
+        ],
+        [
+          "Asset Valuation Adjustment",
+          "Asset value changes (e.g. allowance for bad debts)",
+          "Dr Bad Debt Expense / Cr Allowance for Doubtful Accounts",
+          "Reduces net asset value"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The exam tests which type of adjusting entry applies to a given scenario. Key distinction: DEFERRED items involve cash FIRST, recognition LATER. ACCRUED items involve recognition FIRST, cash LATER. Depreciation and asset valuation adjustments do not involve cash at all."
+    },
+    {
+      "t": "ex",
+      "l": "Adjusting Entry Examples — All 4 Common Types",
+      "v": "1. DEPRECIATION\n   Equipment cost $60,000, useful life 5 years, no salvage value.\n   Annual depreciation = $60,000 ÷ 5 = $12,000\n   Dr Depreciation Expense      12,000\n   Cr Accumulated Depreciation              12,000\n\n2. DEFERRED REVENUE (earned during period)\n   Received $3,600 advance for 12 months of service.\n   At month-end, 1 month has been earned: $3,600 ÷ 12 = $300\n   Dr Contract Liabilities      300\n   Cr Service Revenue                  300\n\n3. ACCRUED EXPENSE (incurred, not yet paid)\n   Salaries of $5,000 earned by employees but not yet paid at period end.\n   Dr Salaries Expense          5,000\n   Cr Salaries Payable                 5,000\n\n4. DEFERRED EXPENSE (prepaid, partially used)\n   Paid $1,200 for 12 months of insurance on Jan 1.\n   At June 30, 6 months used: $1,200 × 6/12 = $600\n   Dr Insurance Expense         600\n   Cr Prepaid Insurance                600"
+    },
+    {
+      "t": "ar",
+      "v": [
+        "تهدف قيود التسوية إلى الفصل الدقيق بين الفترات بحيث تُحمَّل كل فترة بإيراداتها ومصروفاتها.",
+        "المستحقات يُعترف بها أولاً ثم تُحصَّل أو تُسدَّد نقداً لاحقاً، أما المؤجلات فتُحصَّل أو تُسدَّد نقداً أولاً ثم يُعترف بها لاحقاً.",
+        "من أنواع قيود التسوية: الإهلاك، والإيرادات المؤجلة، والمصروفات المستحقة، والمصروفات المدفوعة مقدماً، والإيرادات المستحقة، وتسويات تقييم الأصول.",
+        "لا تتضمن قيود التسوية حساب النقدية عادةً."
+      ]
+    }
+  ],
+  "1-11": [
+    {
+      "t": "h",
+      "v": "Adjusting Entries Example — Greenworks June 30, 20X1"
+    },
+    {
+      "t": "ex",
+      "l": "Depreciation Adjusting Entry",
+      "v": "June 30: Depreciation = $427 on building + $833 on original F&E + $833 on warehouse equipment = $2,093 total.\n  Dr  Depreciation Expense              2,093\n      Cr  Accum. Depreciation-Buildings      427\n      Cr  Accum. Depreciation-F&E          1,666\nBook value after: Building $200,000 − $427 = $199,573; F&E $135,000 − $1,666 = $133,334"
+    },
+    {
+      "t": "ex",
+      "l": "Inventory Adjustment",
+      "v": "June 30: Physical count shows inventory = $7,100 (book says $7,255 — difference of $155 shrinkage):\n  Dr  Cost of Goods Sold    155\n      Cr  Inventory              155"
+    },
+    {
+      "t": "ex",
+      "l": "Prepaid Insurance Adjustment",
+      "v": "June 30: $24,000 policy for 12 months. One month used (June): $24,000 ÷ 12 = $2,000/month.\n  Dr  Insurance Expense    2,000\n      Cr  Prepaid Expense       2,000\nRemaining Prepaid balance: $24,000 − $2,000 = $22,000 (11 months still an asset)"
+    },
+    {
+      "t": "ex",
+      "l": "Accrued Utility Expense",
+      "v": "June 30: Electricity used June 10–30 estimated at $465 (bill arrives in July):\n  Dr  Utilities Expense    465\n      Cr  Accounts Payable   465"
+    },
+    {
+      "t": "ex",
+      "l": "Accrued Income Tax",
+      "v": "June 30: Income tax for the fiscal year estimated at $11,415:\n  Dr  Income Tax Expense      11,415\n      Cr  Income Taxes Payable   11,415"
+    },
+    {
+      "t": "h",
+      "v": "Greenworks Adjusted Trial Balance — June 30, 20X1"
+    },
+    {
+      "t": "p",
+      "v": "After all adjusting entries, totals: Debits = Credits = $759,833.96. Net income = Revenues ($121,560.96) − Expenses ($78,617.07) = $42,943.89. Balance Sheet: Total Assets = $666,623.89 | Total Liabilities = $136,180 | Total Equity = $530,443.89"
+    },
+    {
+      "t": "tip",
+      "v": "The adjusted trial balance is the source for preparing the financial statements. Income statement accounts go to the income statement; balance sheet accounts go to the balance sheet. Retained Earnings on the balance sheet = prior RE ($0 new company) + Net Income ($42,943.89) − Dividends ($12,500) = $30,443.89."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "يُسجَّل الإهلاك الشهري بجعل مصروف الإهلاك مديناً ومجمع الإهلاك دائناً.",
+        "يُسوّى الفرق بين رصيد المخزون الدفتري والجرد الفعلي بتحميله على تكلفة البضاعة المباعة.",
+        "يُحمَّل الجزء المنقضي من التأمين المدفوع مقدماً على المصروفات، وتُثبت المصروفات والضرائب المستحقة التزاماتٍ.",
+        "ميزان المراجعة المعدّل هو المصدر المباشر لإعداد القوائم المالية."
+      ]
+    }
+  ],
+  "1-12": [
+    {
+      "t": "h",
+      "v": "Year-End Close (Accounting Cycle Step 8)"
+    },
+    {
+      "t": "p",
+      "v": "Closing entries reset all temporary accounts (revenue, expense, gains, losses, dividends) to zero at year-end. The balances are transferred to Retained Earnings so income statement accounts start fresh next year. Balance sheet accounts (permanent) are NEVER closed."
+    },
+    {
+      "t": "h",
+      "v": "The 2-Step Closing Process"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Step 1: Close ALL income statement accounts to Income Summary\n   - Credit-balance accounts (revenues/gains) are DEBITED to zero\n   - Debit-balance accounts (expenses/losses) are CREDITED to zero\n   - The resulting Income Summary balance = Net Income",
+        "Step 2: Close Income Summary and Dividends to Retained Earnings\n   - Dr Income Summary (if net income) / Cr Retained Earnings\n   - Dr Retained Earnings / Cr Dividends (closes Dividends account)"
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Closing Entry 1 — Close Revenue Accounts",
+      "v": "June 30 — Close credit-balance income statement accounts to Income Summary:\n  Dr  Sales Revenue          121,150.00\n  Dr  Interest Revenue           410.96\n      Cr  Income Summary          121,560.96\n(All revenue accounts zeroed out; Income Summary now has $121,560.96 Cr balance)"
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Closing Entry 2 — Close Expense Accounts",
+      "v": "June 30 — Close debit-balance income statement accounts:\n  Dr  Income Summary              78,617.07\n      Cr  Cost of Goods Sold           46,400.00\n      Cr  Shipping-out Expense          3,800.00\n      Cr  Salaries & Wages Expense     10,000.00\n      Cr  Utilities Expense             1,154.00\n      Cr  Advertising Expenses          1,400.00\n      Cr  Insurance Expense             2,000.00\n      Cr  Depreciation Expense          2,093.00\n      Cr  Interest Expense               355.07\n      Cr  Income Tax Expense           11,415.00\n(Income Summary balance = $121,560.96 − $78,617.07 = $42,943.89 Cr = Net Income ✓)"
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Closing Entry 3 — Close Income Summary to RE",
+      "v": "Dr  Income Summary    42,943.89\n    Cr  Retained Earnings  42,943.89"
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Closing Entry 4 — Close Dividends to RE",
+      "v": "Dr  Retained Earnings    12,500.00\n    Cr  Dividends             12,500.00\nFinal Retained Earnings: $0 (beginning) + $42,943.89 (NI) − $12,500 (dividends) = $30,443.89"
+    },
+    {
+      "t": "tip",
+      "v": "After closing: all revenue, expense, and dividend accounts = $0. The post-closing trial balance lists only permanent (balance sheet) accounts. Verify: Retained Earnings = $30,443.89 ✓"
+    },
+    {
+      "t": "ar",
+      "v": [
+        "قيود الإقفال تُصفّر الحسابات المؤقتة في نهاية السنة وتنقل أرصدتها إلى الأرباح المحتجزة.",
+        "تُقفل الإيرادات والمصروفات أولاً في حساب ملخص الدخل، ثم يُقفل ملخص الدخل والتوزيعات في الأرباح المحتجزة.",
+        "بعد الإقفال لا يتضمن ميزان المراجعة إلا الحسابات الدائمة.",
+        "الأرباح المحتجزة في نهاية السنة = رصيد أول المدة + صافي الدخل − التوزيعات."
+      ]
+    }
+  ],
+  "1-13": [
+    {
+      "t": "h",
+      "v": "Review of the 8-Step Accounting Cycle"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Step 1: IDENTIFY and analyze financial events (source documents)",
+        "Step 2: JOURNALIZE in the General Journal (debit = credit always)",
+        "Step 3: POST to ledger accounts (update running balances)",
+        "Step 4: UNADJUSTED trial balance (check Dr = Cr before adjustments)",
+        "Step 5: ADJUSTING entries (match revenues/expenses to period)",
+        "Step 6: ADJUSTED trial balance (after adjustments, Dr = Cr again)",
+        "Step 7: FINANCIAL STATEMENTS (income statement → statement of equity → balance sheet → SCF)",
+        "Step 8: YEAR-END CLOSE (reset temporary accounts; post-closing trial balance)"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Reversing Entries — The Optional Step 9"
+    },
+    {
+      "t": "p",
+      "v": "Reversing entries are optional entries made at the START of the next accounting period (e.g. July 1) to reverse certain accruals. They prevent double-counting when the actual invoice arrives later."
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Reversing Entry Example",
+      "v": "June 30: Accrued utility expense $465 (Dr Utilities Expense / Cr AP)\nJuly 1 reversing entry: Dr Accounts Payable $465 / Cr Utilities Expense $465\nNow when the full $750 July bill arrives:\n  Dr  Utilities Expense    750  |  Cr  Cash    750\nNet result: July utilities expense = $750 − $465 reversed = $285 (the July portion only) ✓\nWithout the reversing entry, you would need to split the $750 bill between the two periods manually."
+    },
+    {
+      "t": "tip",
+      "v": "Only accruals that will be fully reversed when the actual cash transaction occurs need reversing entries. Depreciation and prepaid expense adjustments do NOT need reversing entries."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Treating reversing entries as required. They are optional and are recorded on the FIRST day of the next period.",
+        "Reversing depreciation or prepaid-expense adjustments. Reversing entries are used only for accruals that will be settled in cash later.",
+        "Including income statement accounts on the post-closing trial balance. After closing, only permanent (balance sheet) accounts remain.",
+        "Confusing the order of Steps 5 and 6. Adjusting entries come first; the adjusted trial balance is prepared after them."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "الدورة المحاسبية ثماني خطوات: التحليل، ثم التسجيل في اليومية، ثم الترحيل، ثم ميزان المراجعة غير المعدّل، ثم التسويات، ثم الميزان المعدّل، ثم القوائم المالية، ثم الإقفال.",
+        "القيود العكسية خطوة اختيارية تُسجَّل في أول يوم من الفترة التالية لعكس بعض قيود الاستحقاق.",
+        "الهدف من القيود العكسية منع التسجيل المزدوج عند وصول الفاتورة الفعلية.",
+        "لا تُعكس قيود الإهلاك ولا تسويات المصروفات المدفوعة مقدماً."
+      ]
+    }
+  ],
+  "1-14": [
+    {
+      "t": "h",
+      "v": "The 4 Financial Statements — Structure and Content"
+    },
+    {
+      "t": "p",
+      "v": "Under U.S. GAAP, a full set of financial statements consists of 4 statements plus footnotes. They are prepared in this order: (1) Income Statement → (2) Statement of Changes in Stockholders' Equity → (3) Balance Sheet → (4) Statement of Cash Flows."
+    },
+    {
+      "t": "h",
+      "v": "Users of Financial Statements"
+    },
+    {
+      "t": "p",
+      "v": "Financial statements are prepared for two broad user groups, and this distinction is the same one tested in Study Unit 1 (financial vs. management accounting) — here applied specifically to who reads the 4 statements."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "User Group",
+        "Who",
+        "What They Use the Statements For"
+      ],
+      "r": [
+        [
+          "External users",
+          "Investors/shareholders",
+          "Deciding whether to buy, hold, or sell stock"
+        ],
+        [
+          "",
+          "Lenders and creditors",
+          "Assessing creditworthiness before extending a loan or credit terms"
+        ],
+        [
+          "",
+          "Regulators (e.g., SEC)",
+          "Confirming compliance with reporting and disclosure requirements"
+        ],
+        [
+          "",
+          "Tax authorities",
+          "Verifying reported income for tax purposes"
+        ],
+        [
+          "",
+          "Suppliers and customers",
+          "Evaluating the company's ability to honor long-term contracts"
+        ],
+        [
+          "Internal users",
+          "Management",
+          "Planning, controlling operations, and making resource-allocation decisions"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Exam distinction: external users generally receive only the audited, GAAP-based statements plus footnotes — they don't have access to internal management accounting reports (budgets, cost analyses). Internal users (management) have full access to both."
+    },
+    {
+      "t": "h",
+      "v": "1) The Balance Sheet"
+    },
+    {
+      "t": "p",
+      "v": "Reports assets, liabilities, and equity at a SPECIFIC DATE (a snapshot — like a photograph). Classified balance sheet separates current from non-current:"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Current assets (converted to cash within 1 year): Cash, Cash Equivalents, Accounts Receivable (net), Inventory, Prepaid Expenses",
+        "Non-current assets: Land (never depreciated), Buildings, Equipment (net of accumulated depreciation), Intangibles",
+        "Current liabilities (due within 1 year): Accounts Payable, Current Portion of Long-Term Debt, Deferred Revenue (current), Accrued Liabilities",
+        "Non-current liabilities: Long-term Debt (non-current portion)",
+        "Stockholders' equity: Common Stock (par), APIC, Retained Earnings, AOCI, Treasury Stock"
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Greenworks Balance Sheet Summary (June 30, 20X1)",
+      "v": "ASSETS\nCurrent: Cash+CE $150,517 | AR $79,100 | Inventory $7,100 | Prepaid $22,000 = $258,717\nNon-current: Land $75,000 | Buildings (net) $199,573 | F&E (net) $133,334 = $407,907\nTotal Assets = $666,624\n\nLIABILITIES\nCurrent: AP $53,965 | Taxes Payable $11,415 | Current LTD $14,400 = $79,780\nNon-current: Long-term Debt $56,400\nTotal Liabilities = $136,180\n(Note: the June 1 equipment loan was $72,000; the first month's scheduled principal payment of $1,200 was made on June 30, reducing the loan balance to $70,800 — split $14,400 current / $56,400 non-current above.)\n\nEQUITY\nCommon Stock $50,000 | APIC $450,000 | Retained Earnings $30,444\nTotal Equity = $530,444\nTotal L+E = $666,624 ✓"
+    },
+    {
+      "t": "h",
+      "v": "2) The Income Statement (Multi-Step Format)"
+    },
+    {
+      "t": "p",
+      "v": "Reports revenues, expenses, and net income for a PERIOD OF TIME (a movie — not a snapshot). Multi-step format:"
+    },
+    {
+      "t": "f",
+      "l": "Multi-Step Income Statement Structure",
+      "v": "Net Sales Revenue\n− Cost of Goods Sold\n= Gross Profit\n− Selling, General & Administrative Expenses\n= Operating Income\n+ Non-operating income (interest, dividends earned)\n− Non-operating expenses (interest expense)\n+/− Non-operating gains/losses\n= Income Before Income Tax\n− Income Tax Expense\n= Net Income"
+    },
+    {
+      "t": "h",
+      "v": "6 Components of Stockholders' Equity"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Capital Stock (par value of shares issued)",
+        "Additional Paid-in Capital (proceeds above par)",
+        "Retained Earnings (cumulative net income minus dividends)",
+        "Accumulated Other Comprehensive Income (unrealized gains/losses in OCI)",
+        "Non-controlling Interest (subsidiary ownership not held by parent)",
+        "Treasury Stock (repurchased shares — reduces equity, shown as negative)"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Limitations of Financial Statements"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Assets recorded at historical cost — not current market value",
+        "Human resources, brand value, internally developed intangibles not on balance sheet",
+        "Judgments and estimates used (useful life, allowances) create subjectivity",
+        "Financial statements are backward-looking (historical)",
+        "Not all relevant information can be captured in numbers"
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "تتكون القوائم المالية من قائمة الدخل، وقائمة التغيرات في حقوق الملكية، والميزانية، وقائمة التدفقات النقدية، إضافة إلى الإيضاحات.",
+        "الميزانية صورة للمركز المالي في تاريخ محدد، وقائمة الدخل تعرض الأداء خلال فترة زمنية.",
+        "يستخدم المستثمرون والمقرضون والجهات الرقابية القوائم المالية المنشورة، بينما تعتمد الإدارة أيضاً على التقارير الداخلية.",
+        "من حدود القوائم المالية: الاعتماد على التكلفة التاريخية، واستخدام التقديرات، وعدم إظهار بعض الأصول غير الملموسة المطوّرة داخلياً."
+      ]
+    }
+  ],
+  "1-15": [
+    {
+      "t": "h",
+      "v": "Statement of Cash Flows (SCF)"
+    },
+    {
+      "t": "p",
+      "v": "The SCF reconciles net income (accrual basis) to actual cash movement. It is required for ALL companies that present a balance sheet and income statement. Cash includes: cash on hand, demand deposits, cash equivalents, restricted cash, and restricted cash equivalents."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Section",
+        "What It Shows",
+        "Key Items"
+      ],
+      "r": [
+        [
+          "Operating Activities",
+          "Cash from core business operations — collecting from customers, paying suppliers, employees, and overhead",
+          "Collections from customers, payments to suppliers, salaries paid, interest paid, taxes paid"
+        ],
+        [
+          "Investing Activities",
+          "Cash from buying/selling long-term assets and investments",
+          "Purchase/sale of PP&E, purchase/sale of investments, loans made"
+        ],
+        [
+          "Financing Activities",
+          "Cash from equity and debt financing",
+          "Issuance/repurchase of stock, borrowings/repayments of debt, dividends paid"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Indirect Method — Operating Activities"
+    },
+    {
+      "t": "p",
+      "v": "Start with net income and adjust for: (1) non-cash items, (2) investing/financing items in net income, (3) changes in working capital accounts. This is the method tested on the FMAA exam."
+    },
+    {
+      "t": "f",
+      "l": "Indirect Method Format",
+      "v": "Net income\n+ Depreciation and amortization (add back — non-cash)\n+ Losses on asset sales (add back)\n− Gains on asset sales (subtract)\n− Increase in Accounts Receivable (or + decrease)\n− Increase in Inventory (or + decrease)\n+ Increase in Accounts Payable (or − decrease)\n= Net Cash from Operating Activities"
+    },
+    {
+      "t": "ex",
+      "l": "SCF Indirect Method — Working Capital Rules",
+      "v": "AR increases → customers bought more on credit → LESS cash collected than revenue → SUBTRACT from NI\nAR decreases → old receivables collected → MORE cash than revenue → ADD to NI\nInventory increases → cash paid for inventory not yet sold → SUBTRACT from NI\nAP increases → bought goods on credit, didn't pay cash → ADD to NI\nAP decreases → paid off more than purchased → SUBTRACT from NI"
+    },
+    {
+      "t": "h",
+      "v": "Direct Method — Cash from Customers"
+    },
+    {
+      "t": "f",
+      "l": "Cash Collected from Customers",
+      "v": "Sales Revenue + Beginning AR − Ending AR = Cash Collected"
+    },
+    {
+      "t": "ex",
+      "l": "Direct Method Example",
+      "v": "Sales revenue $1,500,000; Beginning AR $100,000; Ending AR $125,000:\nCash collected = $1,500,000 + $100,000 − $125,000 = $1,475,000\n(AR increased by $25,000 → $25,000 of revenue not yet collected in cash)"
+    },
+    {
+      "t": "tip",
+      "v": "The FMAA exam requires the indirect method for operating activities. For investing and financing activities, the method is the same regardless — list actual cash flows for each transaction."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "تُطابق قائمة التدفقات النقدية بين صافي الدخل على أساس الاستحقاق والحركة الفعلية للنقدية.",
+        "تُقسَّم التدفقات النقدية إلى أنشطة تشغيلية واستثمارية وتمويلية.",
+        "في الطريقة غير المباشرة يُضاف الإهلاك إلى صافي الدخل، وتُطرح الزيادة في الذمم المدينة والمخزون، وتُضاف الزيادة في الذمم الدائنة.",
+        "النقدية المحصّلة من العملاء = المبيعات + رصيد الذمم المدينة أول المدة − رصيدها آخر المدة."
+      ]
+    }
+  ],
+  "1-16": [
+    {
+      "t": "h",
+      "v": "What Is Internal Control? — The COSO Definition"
+    },
+    {
+      "t": "p",
+      "v": "According to the COSO framework (Internal Control — Integrated Framework), internal control is a process, effected by an entity's board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to three categories: Operations, Reporting, and Compliance."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Objective Category",
+        "What It Means",
+        "Example"
+      ],
+      "r": [
+        [
+          "Operations",
+          "Effectiveness and efficiency of operations; safeguarding of assets against loss",
+          "Production efficiency targets; inventory protection"
+        ],
+        [
+          "Reporting",
+          "Reliability, timeliness, and transparency of financial and non-financial reporting",
+          "Accurate financial statements; timely disclosures"
+        ],
+        [
+          "Compliance",
+          "Adherence to all applicable laws and regulations",
+          "Tax compliance; environmental regulations; SEC reporting"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "5 Fundamental Concepts of Internal Control"
+    },
+    {
+      "t": "b",
+      "v": [
+        "1. Achieves objectives: The purpose is to help the company achieve its objectives in the three categories above.",
+        "2. Ongoing process: Internal control is not a one-time event — it is a journey, a continuous set of tasks and activities, a means to an end.",
+        "3. Effected by people: Internal control is carried out by people at every level — board, management, and staff. Policies written in a manual are not enough; people must implement them.",
+        "4. Reasonable assurance only — NOT absolute assurance: The cost of a control should not exceed its expected benefit. Human error, collusion, and management override mean no control system can guarantee objectives will be met.",
+        "5. Flexible: Internal control must be adaptable to the entity's entire structure or to a specific subsidiary, division, or process."
+      ]
+    },
+    {
+      "t": "h",
+      "v": "COSO Framework — 5 Components of Internal Control"
+    },
+    {
+      "t": "b",
+      "v": [
+        "1. Control Environment: The tone at the top — management's integrity, ethical values, and commitment to competence. The foundation on which all other components rest. Includes the board of directors, organizational structure, and assignment of authority.",
+        "2. Risk Assessment: Identifying and analyzing risks that could prevent the company from achieving its objectives. Includes setting objectives first, then identifying risks related to those objectives, and managing change risk.",
+        "3. Control Activities: The specific policies and procedures that address risks. Examples: segregation of duties, authorizations and approvals, physical controls, reconciliations, information processing controls.",
+        "4. Information & Communication: Systems that capture and communicate relevant, reliable information in a timely manner to those who need it — both internal reporting and external communication to stakeholders.",
+        "5. Monitoring: Ongoing and periodic evaluation of whether the internal control system is functioning effectively. Includes management supervision, internal audits, and separate evaluations."
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The FMAA exam tests the COSO components by name. Know all five: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring. The Control Environment is always the FOUNDATION — it comes first because all other components are built on it."
+    },
+    {
+      "t": "h",
+      "v": "Internal Control Risk"
+    },
+    {
+      "t": "p",
+      "v": "Internal control risk is the risk that the design or operation of an entity's internal control system will NOT prevent or detect a threat to achieving objectives. Controls can fail because of: (1) human error or faulty judgment, (2) collusion between two or more employees working together to circumvent controls, (3) management override of established controls, (4) controls becoming outdated due to lack of monitoring. Internal control can provide only reasonable assurance — never a guarantee."
+    },
+    {
+      "t": "h",
+      "v": "Segregation of Duties — The Most Critical Control"
+    },
+    {
+      "t": "p",
+      "v": "No single person should have complete control over any transaction from beginning to end. The four functions that must be performed by DIFFERENT people: (1) Authorization, (2) Recordkeeping, (3) Physical Custody, (4) Periodic Reconciliation."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Function",
+        "Who Does It",
+        "Example"
+      ],
+      "r": [
+        [
+          "Authorization",
+          "Manager/Supervisor",
+          "Purchasing manager approves purchase orders"
+        ],
+        [
+          "Recordkeeping",
+          "Accounting Department",
+          "Records transactions in journals and ledgers"
+        ],
+        [
+          "Physical Custody",
+          "Warehouse/Cashier",
+          "Controls physical access to inventory or cash"
+        ],
+        [
+          "Reconciliation",
+          "Independent personnel",
+          "Compares physical count to book records"
+        ]
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Why Segregation Matters — Inventory Example",
+      "v": "If the same person has both recordkeeping (#2) AND physical custody (#3) of inventory:\n→ They could steal inventory AND falsify the records to hide the theft.\n→ No independent check exists to detect the discrepancy.\n\nCorrect structure:\n  Recordkeeper counts what the records say should be there.\n  Custodian controls what is actually there.\n  Reconciler compares the two amounts independently.\n\nNote: Collusion — when two or more people work together — can defeat any segregation of duties. This is why collusion risk is a fundamental limitation of internal control."
+    },
+    {
+      "t": "h",
+      "v": "Safeguarding Assets"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Physical controls: Equipment, inventory, securities, and cash are secured in locked or guarded areas. Access is restricted to authorized personnel. Periodic physical counts are compared to records.",
+        "Software controls (Logical security): All data and programs must be protected from unauthorized access. Authentication methods: Something you KNOW (passwords), Something you ARE (biometrics — fingerprints, retina), Something you HAVE (security fob). Two-factor authentication requires two independent methods simultaneously.",
+        "Other access controls: Automatic logoff after inactivity; logging of all login attempts; accounts that automatically expire after a limited time period."
+      ]
+    },
+    {
+      "t": "h",
+      "v": "What Internal Control Can and Cannot Do"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Internal Control CAN",
+        "Internal Control CANNOT"
+      ],
+      "r": [
+        [
+          "Help the company achieve its performance and profitability goals",
+          "Guarantee objectives will be achieved"
+        ],
+        [
+          "Prevent loss of resources",
+          "Prevent all fraud — human error and collusion remain possible"
+        ],
+        [
+          "Help ensure reliable financial reporting",
+          "Override management — management can and does override controls"
+        ],
+        [
+          "Help ensure compliance with laws and regulations",
+          "Eliminate all risk — it can only provide reasonable assurance"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "Key exam phrase: Internal control provides REASONABLE ASSURANCE — not absolute assurance and not a guarantee. The cost-benefit principle applies: the cost of a control should not exceed the expected benefit. Some risk is simply accepted because the cost of controlling it exceeds the potential loss."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "الرقابة الداخلية وفق إطار COSO عملية ينفذها مجلس الإدارة والإدارة والعاملون لتوفير تأكيد معقول بشأن أهداف العمليات والتقارير والالتزام.",
+        "المكونات الخمسة للرقابة الداخلية: بيئة الرقابة، وتقييم المخاطر، وأنشطة الرقابة، والمعلومات والاتصال، والمتابعة.",
+        "الفصل بين المهام أهم أدوات الرقابة: التفويض، والتسجيل، والحيازة الفعلية للأصل، والمطابقة يجب أن يتولاها أشخاص مختلفون.",
+        "توفر الرقابة الداخلية تأكيداً معقولاً لا مطلقاً، ويجب ألا تتجاوز تكلفة الرقابة المنفعة المتوقعة منها."
+      ]
+    }
+  ],
+  "1-17": [
+    {
+      "t": "h",
+      "v": "Managing a Company's Daily Finances — Working Capital"
+    },
+    {
+      "t": "f",
+      "l": "Net Working Capital",
+      "v": "Current Assets − Current Liabilities"
+    },
+    {
+      "t": "p",
+      "v": "Working capital management balances two competing goals: (1) Have enough current assets to pay liabilities on time, and (2) Don't tie up too much money in current assets that earn little return."
+    },
+    {
+      "t": "h",
+      "v": "Operating Cycle and Cash Conversion Cycle"
+    },
+    {
+      "t": "f",
+      "l": "Operating Cycle",
+      "v": "Days' Sales in Receivables (DSR) + Days' Sales in Inventory (DSI)"
+    },
+    {
+      "t": "f",
+      "l": "Cash Conversion Cycle (Cash Cycle)",
+      "v": "Operating Cycle − Days' Purchases in Accounts Payable"
+    },
+    {
+      "t": "ex",
+      "l": "Operating & Cash Cycle Calculation",
+      "v": "A company has: DSI = 120 days (inventory age), DSR = 40 days (AR collection), Days AP = 100 days.\n\nOperating Cycle = 40 + 120 = 160 days\nCash Cycle = 160 − 100 = 60 days\n\nInterpretation: The company invests cash in inventory 120 days before sale, collects 40 more days after sale (160 days total) but delays paying suppliers 100 days → net cash tied up for only 60 days."
+    },
+    {
+      "t": "tip",
+      "v": "Negative cash cycle = FAVORABLE. It means the company collects cash from customers BEFORE it has to pay its suppliers. Many large retailers achieve this. The shorter the cash cycle, the less working capital financing needed."
+    },
+    {
+      "t": "h",
+      "v": "Trade Credit Terms — 2/10 Net 30"
+    },
+    {
+      "t": "p",
+      "v": "Terms '2/10 net 30' mean: take a 2% discount if you pay within 10 days; otherwise the full amount is due in 30 days. The effective annual interest rate of NOT taking the discount is high — usually far exceeding bank lending rates — so it is almost always beneficial to take available discounts."
+    },
+    {
+      "t": "ar",
+      "v": [
+        "رأس المال العامل = الأصول المتداولة − الالتزامات المتداولة، وتسعى إدارته إلى التوازن بين السيولة والعائد.",
+        "الدورة التشغيلية = أيام تحصيل الذمم المدينة + أيام الاحتفاظ بالمخزون.",
+        "دورة التحويل النقدي = الدورة التشغيلية − أيام سداد الذمم الدائنة، والدورة السالبة وضع مفضّل.",
+        "شروط الائتمان 2/10 صافي 30 تعني خصماً بنسبة 2% عند السداد خلال عشرة أيام، وإلا يُسدَّد المبلغ كاملاً خلال ثلاثين يوماً، وتكلفة عدم الاستفادة من الخصم مرتفعة."
+      ]
+    }
+  ],
+  "1-18": [
+    {
+      "t": "h",
+      "v": "Why Companies Hold Cash"
+    },
+    {
+      "t": "p",
+      "v": "Companies hold cash for three reasons: (1) as a medium of exchange for transactions, (2) as a precautionary reserve for unexpected needs, and (3) for speculation on investment opportunities."
+    },
+    {
+      "t": "h",
+      "v": "Cash Flow Forecast Format"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Starting cash balance",
+        "+ Collections from customers",
+        "+ Other cash receipts",
+        "= Total cash available",
+        "− Payments to suppliers (AP disbursements)",
+        "− Payroll",
+        "− Manufacturing overhead payments",
+        "− Other disbursements",
+        "= Cash excess (deficit) before financing",
+        "± Borrowings/repayments",
+        "= Ending cash balance"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Collecting Cash Faster — Inflow Management"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Invoice promptly — mail or transmit invoices immediately when goods are delivered",
+        "Offer early payment discounts (2/10 net 30) to incentivize faster payment",
+        "Use Electronic Data Interchange (EDI) and Electronic Funds Transfer (EFT) to eliminate check-clearing delays",
+        "Accept credit cards — merchant pays 1–3% fee but gets cash the next day",
+        "Lockbox banking — customers mail payments directly to a bank PO box; bank processes same day"
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Slowing Cash Outflows — Disbursement Management"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Pay exactly on the due date — don't pay early unless discounts justify it",
+        "Use EFT to control the exact date funds leave the account",
+        "Pay by credit card if vendor accepts it without fee and grace period is available",
+        "Never miss a discount period — the implicit interest cost of missing a discount is very high"
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Trade Discount Example — 2/10 net 30",
+      "v": "Invoice: $10,000. Terms: 2/10 net 30.\nIf you pay within 10 days: Pay $9,800 (save $200)\nIf you wait 30 days: Pay $10,000 (lose $200 for 20 extra days)\nEffective annual rate of not taking discount ≈ 37% — almost always worth paying early."
+    },
+    {
+      "t": "h",
+      "v": "Float — the Timing Gap in Cash"
+    },
+    {
+      "t": "p",
+      "v": "Float is the time between when a payment is started and when the cash is actually available or actually leaves the account. Collection float (mail, processing and bank clearing time) delays cash coming in, so companies try to REDUCE it — for example with lockboxes and electronic funds transfer. Disbursement float delays cash going out, so companies try to make good use of it by paying exactly on the due date rather than early."
+    },
+    {
+      "t": "h",
+      "v": "Worked Example: Monthly Cash Budget"
+    },
+    {
+      "t": "ex",
+      "l": "Cash Budget with a Minimum Balance",
+      "v": "Beginning cash balance                        20,000\n+ Collections from customers                 150,000\n= Total cash available                       170,000\n− Payments to suppliers                      (90,000)\n− Payroll                                    (40,000)\n− Overhead paid in cash                      (15,000)\n= Cash excess before financing                25,000\nMinimum cash balance required                 30,000\nBorrowing needed                               5,000\nEnding cash balance                           30,000\n\nNote: depreciation is NOT a cash payment and never appears in a cash budget."
+    },
+    {
+      "t": "f",
+      "l": "Annual Cost of Not Taking a Cash Discount",
+      "v": "[Discount % ÷ (100% − Discount %)] × [365 ÷ (Days in credit period − Days in discount period)]\n\n2/10 net 30: (2 ÷ 98) × (365 ÷ 20) = 37.2%"
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Using sales instead of cash collections in a cash budget. Only cash actually received is included.",
+        "Including depreciation as a cash outflow. It is a non-cash expense.",
+        "Using the full 30 days in the discount-cost formula. The relevant period is the extra days gained by waiting: 30 − 10 = 20 days.",
+        "Thinking more cash is always better. Idle cash has an opportunity cost because it earns little or no return."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "تحتفظ المنشآت بالنقدية لثلاثة دوافع: المعاملات، والاحتياط للطوارئ، والمضاربة على فرص الاستثمار.",
+        "الموازنة النقدية تبدأ برصيد أول المدة وتضيف المتحصلات وتطرح المدفوعات لتحديد الفائض أو العجز والحاجة إلى الاقتراض، ولا يدخل الإهلاك فيها.",
+        "تُسرَّع المتحصلات بالفوترة الفورية وخصومات السداد المبكر والتحويلات الإلكترونية وصناديق البريد المصرفية.",
+        "تُضبط المدفوعات بالسداد في تاريخ الاستحقاق تماماً مع عدم تفويت خصومات السداد المبكر."
+      ]
+    }
+  ],
+  "1-19": [
+    {
+      "t": "h",
+      "v": "Accounts Receivable & Payable Management"
+    },
+    {
+      "t": "p",
+      "v": "Credit policy has 3 elements: (1) Credit standards — who qualifies for credit; (2) Credit terms — how long and what discounts; (3) Collection efforts — how aggressively to pursue overdue accounts. Relaxing credit standards increases sales but also increases credit losses — always a trade-off."
+    },
+    {
+      "t": "h",
+      "v": "Factoring Receivables"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "",
+        "Without Recourse",
+        "With Recourse"
+      ],
+      "r": [
+        [
+          "Risk of uncollected AR",
+          "Transferred to factor — seller has NO liability",
+          "Stays with seller — must reimburse factor for bad debts"
+        ],
+        [
+          "Cost",
+          "Higher fee/interest — factor bears more risk",
+          "Lower fee/interest — seller bears credit risk"
+        ],
+        [
+          "Off balance sheet?",
+          "Yes — AR is sold",
+          "No — treated as a secured borrowing"
+        ]
+      ]
+    },
+    {
+      "t": "ex",
+      "l": "Factoring Example",
+      "v": "Company has AR of $500 due in 60 days. Factor offers to buy it now for $480.\n• The $20 difference covers the factor's interest and risk premium for 60 days.\n• Without recourse: company receives $480 cash now, factor bears risk of non-collection.\n• With recourse: company receives $480 now, but must repay if customer doesn't pay."
+    },
+    {
+      "t": "h",
+      "v": "Accounts Payable Management — The 5-Step AP Cycle"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Step 1: Department submits purchase requisition (authorized person only)",
+        "Step 2: Purchasing department selects vendor, issues purchase order",
+        "Step 3: Goods received — receiving department creates receiving report",
+        "Step 4: AP department matches purchase order + receiving report + vendor invoice (three-way match)",
+        "Step 5: Payment approved and made — only after three-way match verified"
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "The three-way match is a critical internal control: Purchase Order (what was ordered), Receiving Report (what was actually received), and Vendor Invoice (what is being billed) must all agree before any payment is approved."
+    },
+    {
+      "t": "h",
+      "v": "Worked Example: Evaluating a Change in Credit Policy"
+    },
+    {
+      "t": "ex",
+      "l": "Should the Company Relax Its Credit Standards?",
+      "v": "Proposed change: sell to riskier customers.\n  Additional annual sales                          100,000\n  Contribution margin ratio                            30%\n  Bad debts on the new sales                            3%\n  Days' sales in receivables for new customers    45 days\n  Variable cost ratio                                  70%\n  Required return (cost of capital)                    10%\n\nAdditional contribution margin  = 100,000 × 30%                 = 30,000\nAdditional bad debts            = 100,000 × 3%                  = (3,000)\nAdditional receivables          = 100,000 × 45 ÷ 365            = 12,329\nInvestment in those receivables = 12,329 × 70% variable cost    =  8,630\nCarrying cost                   = 8,630 × 10%                   =   (863)\nNet benefit of the change                                         26,137\n\nDecision: relax the standards — the benefit exceeds the added costs."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Treating factoring WITH recourse as a sale. With recourse the seller keeps the credit risk, so it is a secured borrowing and the liability stays on the balance sheet.",
+        "Looking only at additional sales when evaluating credit policy. Relaxing standards also increases bad debts and the investment in receivables.",
+        "Including the purchase requisition in the three-way match. The match is purchase order, receiving report and vendor invoice.",
+        "Assuming tighter credit is always safer for profit. Standards that are too strict lose profitable customers."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "لسياسة الائتمان ثلاثة عناصر: معايير منح الائتمان، وشروط الائتمان، وجهود التحصيل.",
+        "تخفيف معايير الائتمان يزيد المبيعات لكنه يزيد أيضاً الديون المعدومة والاستثمار في الذمم المدينة.",
+        "بيع الذمم المدينة دون حق الرجوع يُعد بيعاً، أما مع حق الرجوع فيُعامل قرضاً مضموناً.",
+        "المطابقة الثلاثية بين أمر الشراء وتقرير الاستلام وفاتورة المورد شرط لاعتماد السداد."
+      ]
+    }
+  ],
+  "1-20": [
+    {
+      "t": "h",
+      "v": "Why Inventory Needs Active Control"
+    },
+    {
+      "t": "p",
+      "v": "Inventory is often the largest asset on a manufacturer's or retailer's balance sheet. Small changes in inventory cost translate directly to large changes in COGS and net income. Companies must balance having enough inventory (avoid stockouts) against having too much (high carrying costs)."
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "Cost Type",
+        "What It Includes"
+      ],
+      "r": [
+        [
+          "Purchasing costs",
+          "Invoice price + freight-in, minus quantity discounts"
+        ],
+        [
+          "Carrying costs",
+          "Storage, insurance, taxes, obsolescence, spoilage, opportunity cost of capital tied up"
+        ],
+        [
+          "Ordering costs",
+          "Administrative costs of placing, receiving, and recording each order"
+        ],
+        [
+          "Stockout costs",
+          "Lost sales, lost future customers, emergency shipping to fill orders"
+        ],
+        [
+          "Shrinkage",
+          "Theft, damage, spoilage — difference between book and physical count"
+        ]
+      ]
+    },
+    {
+      "t": "h",
+      "v": "Reorder Point and Safety Stock"
+    },
+    {
+      "t": "f",
+      "l": "Reorder Point",
+      "v": "(Average Daily Usage × Average Lead Time) + Safety Stock"
+    },
+    {
+      "t": "f",
+      "l": "Average Inventory",
+      "v": "(Order Quantity ÷ 2) + Safety Stock"
+    },
+    {
+      "t": "ex",
+      "l": "Reorder Point Calculation",
+      "v": "Average daily usage: 20 units/day\nAverage lead time: 10 days\nSafety stock: 100 units\n\nReorder Point = (20 × 10) + 100 = 300 units\n(When inventory falls to 300 units, place the next order)\n\nIf order quantity = 300 units (15-day supply at 20/day):\nAverage Inventory = (300 ÷ 2) + 100 = 250 units"
+    },
+    {
+      "t": "h",
+      "v": "Inventory Management Systems"
+    },
+    {
+      "t": "tbl",
+      "h": [
+        "System",
+        "Philosophy",
+        "Key Benefit"
+      ],
+      "r": [
+        [
+          "Economic Order Quantity (EOQ)",
+          "Mathematical formula minimizing total of ordering + carrying costs",
+          "Optimal order quantity — eliminates guessing"
+        ],
+        [
+          "Just-in-Time (JIT)",
+          "Receive materials exactly when needed for production — minimize inventory",
+          "Eliminates carrying costs; requires reliable suppliers"
+        ],
+        [
+          "Materials Requirements Planning (MRP)",
+          "Use production schedule + bill of materials to plan inventory purchases in advance",
+          "Ties purchasing to actual production demand"
+        ]
+      ]
+    },
+    {
+      "t": "tip",
+      "v": "EOQ minimizes TOTAL inventory cost (ordering cost + carrying cost). As order size increases, carrying cost increases but ordering cost decreases — EOQ is the crossover point where total cost is minimized."
+    },
+    {
+      "t": "h",
+      "v": "Economic Order Quantity (EOQ)"
+    },
+    {
+      "t": "f",
+      "l": "Economic Order Quantity",
+      "v": "EOQ = √(2 × Annual Demand × Cost per Order ÷ Annual Carrying Cost per Unit)"
+    },
+    {
+      "t": "ex",
+      "l": "EOQ Calculation",
+      "v": "Annual demand (D)                 12,000 units\nCost of placing one order (S)     $50\nCarrying cost per unit per year (H)  $3\n\nEOQ = √(2 × 12,000 × 50 ÷ 3) = √400,000 ≈ 632 units\n\nOrders per year      = 12,000 ÷ 632           ≈ 19\nAnnual ordering cost = (12,000 ÷ 632) × $50   ≈ $949\nAnnual carrying cost = (632 ÷ 2) × $3        ≈ $949\n\nAt the EOQ, annual ordering cost equals annual carrying cost — that is why\ntotal inventory cost is at its minimum."
+    },
+    {
+      "t": "h",
+      "v": "Common Traps"
+    },
+    {
+      "t": "b",
+      "v": [
+        "Leaving safety stock out of the reorder point. Reorder point = (daily usage × lead time) + safety stock.",
+        "Mixing up the cost directions. Larger orders RAISE carrying costs and LOWER ordering costs.",
+        "Using the full order quantity as average inventory. Average inventory = order quantity ÷ 2, plus safety stock.",
+        "Assuming JIT has no downside. It cuts carrying costs but raises the risk of stockouts if suppliers are unreliable."
+      ]
+    },
+    {
+      "t": "ar",
+      "v": [
+        "تشمل تكاليف المخزون تكاليف الشراء، وتكاليف الاحتفاظ، وتكاليف إصدار الطلبيات، وتكاليف نفاد المخزون.",
+        "نقطة إعادة الطلب = (متوسط الاستخدام اليومي × متوسط فترة التوريد) + مخزون الأمان.",
+        "الكمية الاقتصادية للطلب تقلّل مجموع تكاليف الطلب والاحتفاظ، وعندها تتساوى التكلفتان.",
+        "نظام الإنتاج في الوقت المحدد يخفّض تكاليف الاحتفاظ لكنه يزيد مخاطر نفاد المخزون."
+      ]
+    }
+  ]
 }
